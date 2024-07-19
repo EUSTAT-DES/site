@@ -22,8 +22,8 @@ breadcrumbs:
 cookie_consent_form:
   enabled: false
 country:
-  name: Australia
-  adjective: Australian
+  name: Euskadi
+  adjective: Vasco
 create_goals:
   previous_next_links: false
   goals: []
@@ -49,7 +49,16 @@ data_edit_url: data
 data_fields:
   units: ''
   series: ''
-date_formats: []
+date_formats: 
+  - type: standard
+    language: en
+    format: '%B %d, %Y'
+  - type: standard
+    language: es
+    format: '%d de %B de %Y'
+  - type: standard
+    language: eu
+    format: '%Y %B %d'
 disclaimer:
   phase: ''
   message: ''
@@ -138,8 +147,9 @@ indicator_tabs:
   tab_3: ''
   tab_4: ''
 languages:
-  - en
   - es
+  - eu
+  - en
 languages_public: []
 logos: []
 map_layers: []
@@ -223,7 +233,7 @@ reporting_status:
       label: status.not_applicable
       hide_on_goal_pages: false
 repository_url_data: 'https://github.com/EUSTAT-DES/data'
-repository_url_site: ''
+repository_url_site: 'https://github.com/EUSTAT-DES/site'
 search_index_boost: []
 search_index_extra_fields: []
 site_config_form:
