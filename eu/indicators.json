@@ -1,0 +1,2121 @@
+[
+  {
+    "goal": {
+      "id": "1",
+      "title": "Pobrezia mota guztiak desagertzea mundu osoan",
+      "indicators": [
+        
+        {
+          "id": "1-1-1",
+          "title": "Nazioarteko pobrezia-atalasearen azpitik bizi den biztanleriaren proportzioa, sexuaren, adinaren, lan-egoeraren eta kokapen geografikoaren (hiri- edo landa-eremua) arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-2-1",
+          "title": "Pobrezia-atalase nazionalaren azpitik bizi den biztanleriaren proportzioa, sexuaren eta adinaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-2-2",
+          "title": "Definizio nazionalen arabera pobrezian, bere dimentsio guztietan, bizi diren gizon, emakume eta adin guztietako haurren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-3-1",
+          "title": "Babes sozialeko sistema baten edo gutxieneko maila baten estaldura duen biztanleriaren proportzioa, sexuaren arabera banatuta, eta honako hauek bereiziz: haurrak, langabetuak, adinekoak, desgaitasunen bat duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-4-1",
+          "title": "Oinarrizko zerbitzuetara sarbidea duten etxebizitzetan bizi den biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-4-2",
+          "title": "Biztanle heldu guztietatik lurrak edukitzeko eskubide seguruak dituztenen proportzioa, sexuaren eta edukitza-motaren banatuta; kontuan hartuko dira a) xede horretarako legez onartutako dokumentazioa dutenak eta b) eskubide horiek segurutzat jotzen dituztenak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-5-1",
+          "title": "Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutako pertsonen kopurua 100.000 biztanleko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-5-2",
+          "title": "Hondamendiekin zuzenean lotutako galera ekonomikoak munduko barne produktu gordinari (BPG) dagokionez",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-5-3",
+          "title": "Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-5-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-5-4",
+          "title": "Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-5-4/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-a-1",
+          "title": "Pobrezia murrizten jarduten duten emaile guztien garapenerako babes ofizialeko dirulaguntzen guztizkoa, herrialde hartzailearen nazio-errenta gordinaren ehuneko gisa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-a-2",
+          "title": "Guztizko gastu publikotik oinarrizko zerbitzuetara (hezkuntza, osasuna eta babes soziala) bideratzen den proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-a-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "1-b-1",
+          "title": "Pobreen aldeko gastu sozial publikoa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/1-b-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "2",
+      "title": "Gosea amaitzea, elikagai-segurtasuna eta elikadura hobea lortzea, eta nekazaritza jasangarria bultzatzea",
+      "indicators": [
+        
+        {
+          "id": "2-1-1",
+          "title": "Azpielikaduraren prebalentzia",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-1-2",
+          "title": "Elikaduran segurtasun falta moderatu edo larria duten biztanleen prebalentzia, elikadura-segurtasunaren esperientzia-eskalaren arabera",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-2-1",
+          "title": "Hazkundearen atzerapenaren prebalentzia 5 urtetik beherako umeen artean (adin bakoitzeko altueran, desbideratze tipikoa gutxienez OME Osasunaren Mundu Erakundeak finkatutako haurren hazkunde-patroien erdiko balioa baino 2 puntu txikiagoa denean)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-2-2",
+          "title": "Malnutrizioaren prebalentzia 5 urtetik beherako umeen artean (adin bakoitzeko pisuan, desbideratze tipikoa gutxienez OMEren hazkunde-patroien erdiko balioa baino 2 puntu handiagoa edo txikiagoa denean), motaren arabera (ahultasuna eta gehiegizko pisua) banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-2-3",
+          "title": "Anemiaren prebalentzia 15 eta 49 urte bitarteko emakumeen artean, haurdunaldien arabera banatuta (ehunekoa)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-2-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-3-1",
+          "title": "Ekoizpen-bolumena lan-unitateko, ustiapenaren tamainaren eta motaren (nekazaritza/abeltzaina/basogintza) arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-3-2",
+          "title": "Eskala txikian elikagai-ekoizle direnen diru-sarreren batezbestekoa, sexuaren eta herri indigenaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-4-1",
+          "title": "Nekazaritza emankor eta jasangarria lantzen duten laborantza-lurren azaleraren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-5-1",
+          "title": "Epe ertain eta luzerako kontserbazio-instalazioetan kontserbatutako a) landare-baliabide genetikoen kopurua eta b) elikadurarako eta nekazaritzarako animalien kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-5-2",
+          "title": "Galtzeko bidean dauden tokiko arraza eta barietateen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-a-1",
+          "title": "Gastu publikoko nekazaritza bideratzeko indizea",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-a-2",
+          "title": "Nekazaritza-sektorera bideratutako baliabide-korronte ofizialen guztizkoa (garapenerako babes ofiziala gehi beste korronte ofizial batzuk)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-a-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-b-1",
+          "title": "Nekazaritzako eta abeltzaintzako produktuen esportazioari laguntzak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "2-c-1",
+          "title": "Elikagaien prezioetako anomalien adierazlea",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "3",
+      "title": "Guztiontzat eta adin guztietan bizimodu osasungarria bermatzea eta ongizatea sustatzea",
+      "indicators": [
+        
+        {
+          "id": "3-1-1",
+          "title": "Amen heriotza-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-1-2",
+          "title": "Osasun-langile espezializatuek artatutako erditzeen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-2-1",
+          "title": "5 urtetik beherako umeen heriotza-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-2-2",
+          "title": "Jaioberrien heriotza-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-3-1",
+          "title": "GIBaren infekzio berrien kopurua GIBik ez duten 1.000 biztanleko, sexuaren, adinaren eta funtsezko gizataldeen arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-3-2",
+          "title": "Tuberkulosiaren intzidentzia 100.000 biztanleko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-3-3",
+          "title": "Malariaren intzidentzia 1.000 biztanleko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-3-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-3-4",
+          "title": "B hepatitisaren intzidentzia 100.000 biztanleko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-3-4/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-3-5",
+          "title": "Artatu gabeko gaixotasun tropikalen aurkako esku-hartzeak behar dituzten pertsonen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-3-5/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-4-1",
+          "title": "Gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei egotzitako heriotza-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-4-2",
+          "title": "Suizidioen heriotza-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-5-1",
+          "title": "Mendekotasuna sortzen duten substantzien abusuak eragindako nahasmenduentzako tratamenduen estaldura (farmakologikoak, psikosozialak eta errehabilitazio eta postratamendu-zerbitzuak)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-5-2",
+          "title": "Per capita alkohol-kontsumoa (15 urtetik gora) urte zibil bakoitzeko, alkohol puruaren litrotan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-6-1",
+          "title": "Trafiko istripuetan izandako lesioen ondoriozko heriotza-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-7-1",
+          "title": "Haurra izateko adinean dauden emakumeen artean (15-49 urte), familia-plangintzako beharrei metodo modernoekin erantzuten dietenen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-7-2",
+          "title": "Emakume nerabeen ugalkortasuna (10 eta 14 urte artean eta 15 eta 19 urte artean), adin-talde horretako 1.000 emakumeko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-7-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-8-1",
+          "title": "Funtsezko osasun-zerbitzuen estaldura",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-8-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-8-2",
+          "title": "Etxebizitzan osasun-gastu handiak dituen biztanleriaren proportzioa, etxebizitzetako gastu eta diru-sarrera guztien ehuneko gisa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-8-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-9-1",
+          "title": "Heriotza-tasa, etxebizitzen eta horien inguruko airearen kutsadurari egozten zaiena",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-9-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-9-2",
+          "title": "Ur osasungaitzari, saneamendu eskasari eta higiene-faltari egotzitako heriotza-tasa (ur osasungaitzaren zerbitzuekiko esposizioa, saneamendua eta higienea guztiontzat (WASH))",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-9-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-9-3",
+          "title": "Nahi gabeko intoxikazioei egotzitako heriotza-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-9-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-a-1",
+          "title": "Tabako-kontsumoaren prebalentzia 15 urtetik gora (adinka banatuta)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-b-1",
+          "title": "Programa nazional bakoitzean sartzen diren txerto guztiekin immunizatutako biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-b-2",
+          "title": "Osasun-ikerketako sektoreen eta funtsezko osasun-arretaren garapenera bideratutako laguntza ofizialen guztizko garbia",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-b-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-b-3",
+          "title": "Modu iraunkorrean eskuratu daitezkeen funtsezko medikamentuen oinarrizko sorta bat duten osasun-zentroen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-b-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-c-1",
+          "title": "Osasun-langileen dentsitatea eta banaketa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-c-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-d-1",
+          "title": "Nazioarteko Osasun Araudian (IHR) ezarritako gaitasuna eta osasun-larrialdietarako prestakuntza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-d-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "3-d-2",
+          "title": "Antimikrobianoekiko erresistenteak diren organismo jakin batzuek eragindako odol-uharkako infekzioen ehunekoa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-d-2/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "4",
+      "title": "Guztiontzako kalitatezko hezkuntza inklusiboa nahiz bidezkoa bermatzea eta etengabeko ikaskuntzarako aukerak bultzatzea",
+      "indicators": [
+        
+        {
+          "id": "4-1-1",
+          "title": "i) Irakurketan eta ii) matematikan gutxieneko gaitasun-maila lortu duten haurren eta nerabeen proportzioa, sexuaren arabera banatuta, honako maila hauetan: a) bigarren eta hirugarren mailetan, b) lehen hezkuntzaren amaieran eta c) bigarren hezkuntzako lehen zikloaren amaieran",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-1-2",
+          "title": "Ikasketak amaitzearen indizea (lehen hezkuntza, bigarren hezkuntzako lehen zikloa eta bigarren hezkuntzako bigarren zikloa)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-2-1",
+          "title": "24 eta 59 hilabete bitarteko haurren artean, osasunean, ikaskuntzan eta ongizate psikosozialean garapen egokia dutenen proportzioa, sexuaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-2-2",
+          "title": "Ikaskuntza antolatuan (lehen hezkuntzan hasteko adin ofiziala baino urtebete lehenago) dagoen parte-hartzearen tasa, sexuaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-3-1",
+          "title": "Gazteek eta helduek prestakuntza akademikoan zein ez-akademikoan azken 12 hilabeteetan izan duten parte-hartzearen tasa, sexuaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-4-1",
+          "title": "Informazio eta komunikazio teknologietan (IKT) gaitasunak dituzten gazte eta helduen proportzioa, duten gaitasun motaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-5-1",
+          "title": "Zerrenda honetan xehatu daitezkeen hezkuntza-adierazle guztietarako parekidetasun-indizeak: gizon-emakumeen artean, landa eta hiri eremuen artean, aberastasun handiagoko eta txikiagoko kintilen artean, eta hainbat taldetan, hala nola desgaitasunen bat dutenetan, herri indigenetan eta gatazken ondorioak jasan dituztenetan, datuak eskuratu ahala)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-6-1",
+          "title": "a) Alfabetizazioan eta b) aritmetikan gutxieneko gaitasun funtzionala lortu duen adin-talde jakin bateko biztanleriaren proportzioa, sexuaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-7-1",
+          "title": "Munduko herritartasunerako hezkuntzak eta garapen jasangarrirako hezkuntzak esparru hauetan duten txertatze-maila: a) hezkuntza-politika nazionaletan, b) hezkuntza-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-a-1",
+          "title": "Oinarrizko zerbitzuak eskaintzen dituzten ikastetxeen proportzioa, zerbitzu-moten arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-b-1",
+          "title": "Beketara bideratutako garapenerako laguntza ofizialaren bolumena, sektoreen eta ikasketa-moten arabera",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "4-c-1",
+          "title": "Gutxieneko kalifikazioak dituzten irakasleen proportzioa, hezkuntza-mailaka banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "5",
+      "title": "Genero berdintasuna lortzea eta emakume nahiz neska guztiak ahalduntzea",
+      "indicators": [
+        
+        {
+          "id": "5-1-1",
+          "title": "Berdintasuna eta sexuagatiko diskriminaziorik eza sustatzeko, betearazteko eta gainbegiratzeko esparru juridikorik dagoen ala ez zehaztea",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-2-1",
+          "title": "Azken 12 hilabeteetan egungo bikotekidearen edo bikotekide ohiaren indarkeria fisiko, sexual edo psikologikoa pairatu duten 15 urtetik gorako neskato eta emakumeen proportzioa, indarkeria-motaren eta adinaren arabera",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-2-2",
+          "title": "Azken 12 hilabeteetan bikotekidea ez den norbaiten indarkeria sexuala pairatu duten 15 urtetik gorako neskato eta emakumeen proportzioa, adinaren eta gertalekuaren arabera",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-3-1",
+          "title": "15 urte bete aurretik eta 18 urte bete aurretik ezkonduta zeuden edo harreman egonkor bat zuten 20 eta 24 urte bitarteko emakumeen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-3-2",
+          "title": "Emakumeen genitalen mutilazioa jasan duten 15 eta 49 urte bitarteko neskato eta emakumeen proportzioa, adinaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-4-1",
+          "title": "Ordaindu gabeko etxeko lanetan eta zaintza-lanetan emandako denboraren proportzioa, sexuaren, adinaren eta lekuaren arabera",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-5-1",
+          "title": "Emakumeen eskuetan dauden jarlekuen proportzioa, a) parlamentu nazionaletan eta b) tokiko gobernuetan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-5-2",
+          "title": "Emakumeen proportzioa zuzendaritza-karguetan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-6-1",
+          "title": "Sexu-harremanei, antisorgailuen erabilerari eta ugaltze-osasunari buruzko erabaki propio eta informatuak hartzen dituzten 15 eta 49 urte bitarteko emakumeen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-6-2",
+          "title": "15 urtetik aurrerako gizon-emakumeei sexu- eta ugalketa-arloko osasun-zerbitzuetarako sarbide oso eta parekidea bermatzeko, bai eta horri buruzko informazioa eta heziketa ere, legeak eta araudiak dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-6-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-a-1",
+          "title": "a) Nekazaritza-lurren jabetza-eskubideak edo eskubide seguruak dituzten biztanle nekazari guztien proportzioa, sexuaren arabera banatuta; eta b) nekazaritza-lurren jabeen edo eskubideen titularren artean dauden emakumeen proportzioa, edukitza-motaren arabera banakatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-a-2",
+          "title": "Ordenamendu juridikoan (ohiturazko zuzenbidea barne) emakumeei lurraren jabetzarako eta kontrolerako eskubide-berdintasuna bermatzen dieten herrialdeen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-a-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-b-1",
+          "title": "Telefono mugikorra duten pertsonen proportzioa, sexuaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "5-c-1",
+          "title": "Genero-berdintasunaren eta emakumeen ahalduntzearen jarraipena egiteko sistemak dituzten eta funts publikoak horretara bideratzen dituzten herrialdeen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "6",
+      "title": "Uraren eskuragarritasuna eta kudeaketa jasangarria nahiz guztiontzako saneamendua bermatzea",
+      "indicators": [
+        
+        {
+          "id": "6-1-1",
+          "title": "Arriskurik gabe kudeatzen diren ura hornitzeko zerbitzuak erabiltzen dituen biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-2-1",
+          "title": "Honako hauek erabiltzen dituen biztanleriaren proportzioa: a) arriskurik gabe kudeatzen diren saneamendu-zerbitzuak eta b) eskuak urez eta xaboiz garbitzeko instalazioak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-3-1",
+          "title": "Behar bezala tratatu gabeko etxeko eta industriako hondakin-uren fluxuen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-3-2",
+          "title": "Kalitate oneko ur-masen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-4-1",
+          "title": "Aldaketak denboran zehar baliabide hidrikoen erabilera eraginkorrean",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-4-2",
+          "title": "Estres hidrikoaren maila: eskuragarri dauden ur-baliabideetatik erauzten den ur gezaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-5-1",
+          "title": "Baliabide hidrikoen kudeaketa integratuaren maila",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-5-2",
+          "title": "Uren arloko lankidetzarako ekintzekin lotuta dauden arro mugakideen azaleraren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-6-1",
+          "title": "Aldaketak denboran zehar urarekin lotura duten ekosistemen hedaduran",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-a-1",
+          "title": "Ur eta saneamendu arlora bideratutako garapenerako laguntza ofizialaren bolumena, gobernuak kudeatzen duen gastuen plan baten zati gisa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "6-b-1",
+          "title": "Tokiko komunitateek ur- eta saneamendu-kudeaketan parte hartzeko politikak eta prozedura operatiboak finkatu dituzten tokiko administrazio-sailen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/6-b-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "7",
+      "title": "Energia eskuragarria, fidagarria, jasangarria eta modernoa bermatzea guztiontzat",
+      "indicators": [
+        
+        {
+          "id": "7-1-1",
+          "title": "Elektrizitaterako sarbidea duen biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/7-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "7-1-2",
+          "title": "Energia-iturri nagusi gisa erregai eta teknologia garbiak erabiltzen dituen biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/7-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "7-2-1",
+          "title": "Energia berriztagarrien proportzioa energiaren azken osoko kontsumoan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/7-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "7-3-1",
+          "title": "Energia-intentsitatea, energia primarioaren eta BPGaren arabera neurtuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/7-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "7-a-1",
+          "title": "Nazioarteko finantza-korronteak garapen-bidean dauden herrialdeetara, energia garbien ikerketa eta garapena babesteko eta energia berriztagarrien ekoizpena sustatzeko, sistema hibridoak barne",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/7-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "7-b-1",
+          "title": "Energia berriztagarriak sortzeko gaitasun instalatua garapen-bidean dauden herrialdeetan eta herrialde garatuetan (watt per capita)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/7-b-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "8",
+      "title": "Guztiontzako hazkunde ekonomiko jarraitua, inklusiboa eta jasangarria, osoko enplegu produktiboa eta lan duina sustatzea",
+      "indicators": [
+        
+        {
+          "id": "8-1-1",
+          "title": "Per capita BPG errealaren urte arteko hazkunde-tasa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-2-1",
+          "title": "BPG errealaren urte arteko hazkunde-tasa pertsona landuneko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-3-1",
+          "title": "Enplegu informalaren proportzioa guztizko enplegutik, sektoreen eta sexuen arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-4-1",
+          "title": "Aztarna materiala balio absolututan, per capita aztarna materiala eta BPGaren araberako azatarna materiala kontuan hartuz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-4-2",
+          "title": "Barne-kontsumo materiala balio absolututan, per capita barne-kontsumo materiala eta barne-kontsumo materiala BPGaren arabera",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-5-1",
+          "title": "Pertsona enplegatuen orduko diru-sarrerak, sexuaren, adinaren eta lanbidearen arabera, eta desgaitasunen bat dutenak kontuan hartuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-5-2",
+          "title": "Langabezia-tasa, sexuaren eta adinaren arabera eta desgaitasunen bat dutenak kontuan hartuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-6-1",
+          "title": "Ikasten edo gaitzen ari ez diren eta enplegurik ez duten gazteen (15 eta 24 urte bitartean) proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-7-1",
+          "title": "5 eta 17 urte bitarteko haurren lanaren proportzioa eta lan egiten duten haurren kopurua, sexuaren eta adinaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-8-1",
+          "title": "Heriotza eragin duten zein eragin ez duten laneko lesioak 100.000 langileko, sexuaren eta migrazio-estatusaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-8-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-8-2",
+          "title": "Lan-eskubideen (elkartzeko eta negoziazio kolektiborako askatasuna) betetze-maila nazionala, Lanaren Nazioarteko Erakundearen (LANE) testuen eta barne-legediaren arabera, sexuaren eta migrazio-estatusaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-8-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-9-1",
+          "title": "Zuzenean turismoak sortzen duen BPGa, BPG osoarekiko eta hazkunde-tasarekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-9-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-10-1",
+          "title": "a) Banku komertzialen kopurua 100.000 pertsona helduko, eta b) kutxazain automatikoen kopurua 100.000 pertsona helduko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-10-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-10-2",
+          "title": "Banku batean, beste finantza-erakunde batean edo mugikorreko diruaren zerbitzu-hornitzaile batean kontu bat duten helduen (15 urtetik gora) proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-10-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-a-1",
+          "title": "Konpromisoak eta gastuak merkataritzari laguntzeko ekimenekin lotuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "8-b-1",
+          "title": "Gazteek enplegua lortzeko estrategia nazional antolatu bat izatea eta martxan egotea, estrategia burujabe gisa edo lan-estrategia nazional baten barnean",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/8-b-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "9",
+      "title": "Azpiegitura erresilienteak eraikitzea, industrializazio inklusibo eta jasangarria bultzatzea eta berrikuntza sustatzea",
+      "indicators": [
+        
+        {
+          "id": "9-1-1",
+          "title": "Urte osoan ibiltzeko moduko errepide batetik 2 km baino gutxiagora bizi den landa-biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-1-2",
+          "title": "Bidaiari- eta karga-garraioaren bolumena, garraiobideen arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-2-1",
+          "title": "Manufaktura-sektorearen balio erantsia, BPGarekiko proportzioan eta per capita",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-2-2",
+          "title": "Manufaktura-sektoreko enplegua, enplegu osoarekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-3-1",
+          "title": "Industria txikien proportzioa, industria sektoreko balio erantsi osoan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-3-2",
+          "title": "Mailegu bat edo kreditu-lerro bat lortu duten industria txikien proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-4-1",
+          "title": "CO2 emisioak, balio erantsiko unitateko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-5-1",
+          "title": "Ikerketaren eta garapenaren alorreko gastua, BPGarekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-5-2",
+          "title": "Ikertzaile-kopurua (lanaldi osoei dagokien kopurua), milioi biztanletik",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-a-1",
+          "title": "Azpiegituretara bideratutako nazioarteko babes ofizial osoa (garapenerako laguntza ofiziala eta bestelako baliabide-korronte ofizialak)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-b-1",
+          "title": "Goi- eta erdi-mailako teknologiako industriaren balio erantsiaren proportzioa, balio erantsi osoarekiko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "9-c-1",
+          "title": "Sare mugikorraren estaldura duen biztanleriaren proportzioa, teknologiaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/9-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "10",
+      "title": "Herrialde bakoitzaren barneko eta herrialdeen arteko desberdintasunak murriztea",
+      "indicators": [
+        
+        {
+          "id": "10-1-1",
+          "title": "Etxeetako gastuen eta diru-sarreren hazkunde-tasak, per capita, bai biztanle pobreenen % 40an, bai biztanleria osoan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-2-1",
+          "title": "Diru-sarreren medianaren % 50 baino gutxiagorekin bizi diren pertsonen proportzioa, sexua, adina eta desgaitasunak kontuan izanda",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-3-1",
+          "title": "Azken 12 hilabeteetan, giza eskubideen nazioarteko legeek debekatzen dituzten diskriminazio-moduren bat dela eta diskriminatuta edo erasotuta sentitu den biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-4-1",
+          "title": "Enpleguak sortutako BPGaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-4-2",
+          "title": "Zergei lotutako politiken birbanaketa-efektua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-5-1",
+          "title": "Finantza-sendotasunaren adierazleak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-6-1",
+          "title": "Garapen-bidean dauden herrialdeek nazioarteko erakundeetan dituzten ordezkarien eta boto-eskubideen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-7-1",
+          "title": "Enplegatuak ordaindutako kontratazio-kostua, helmugako herrialdean jasotako hilabeteko diru-sarrerekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-7-2",
+          "title": "Migrazio-politika ondo kudeatuak aplikatu dituzten herrialdeen kopurua, pertsonen migrazio eta mugikortasun ordenatua, segurua, arautua eta arduratsua ahalbidetzeko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-7-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-7-3",
+          "title": "Nazioarteko helmuga baterako migrazio-prozesuan hil edo desagertu diren pertsonen kopurua 1",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-7-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-7-4",
+          "title": "Errefuxiatuek osatzen duten biztanleriaren proportzioa, jatorrizko herrialdeen arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-7-4/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-a-1",
+          "title": "Aurrerapen txikieneko herrialdeen eta muga-zergarik ez duten garapen-bideko herrialdeetako inportazioei aplikatzen zaizkien muga-zergen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-b-1",
+          "title": "Garapenerako baliabide-korronteen guztizkoa, herrialde hartzaileen eta emaileen arabera eta korronte-motaren arabera banatuta (adibidez, garapenerako laguntza ofiziala, atzerriko inbertsio zuzena eta beste korronte batzuk)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "10-c-1",
+          "title": "Migratzaile-taldeen kostuak, bidalitako kopuruen proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/10-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "11",
+      "title": "Hiriak eta giza kokaguneak inklusiboak, seguruak, erresilienteak eta jasangarriak izatea lortzea",
+      "indicators": [
+        
+        {
+          "id": "11-1-1",
+          "title": "Auzo marjinaletan, kokaleku informaletan edo etxebizitza desegokietan bizi den hiri-biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-2-1",
+          "title": "Garraio publikora sarbide egokia duen biztanleriaren proportzioa, sexua, adina eta desgaitasuna kontuan izanda",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-3-1",
+          "title": "Lur-kontsumoaren tasaren eta biztanleria-hazkundearen tasaren arteko erlazioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-3-2",
+          "title": "Gizarte zibilak hiri-antolamenduan eta -kudeaketan zuzenean parte hartzeko egitura bat duten eta erregulartasunez eta modu demokratikoan jokatzen duten hirien proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-4-1",
+          "title": "Kultura- eta natura-ondare guztia babestera eta zaintzera bideratutako per capita gastuak, finantzaketa-iturriaren (publikoa edo pribatua), ondare-motaren (kultura- edo natura-ondarea) eta gobernu-motaren (nazionala, eskualdekoa, udalerrikoa) arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-5-1",
+          "title": "Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutakoen kopurua 100.000 pertsonako",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-5-2",
+          "title": "Hondamendien eraginezko zuzeneko galera ekonomikoak munduko BPGarekin alderatuta, funtsezko azpiegituran izandako kalteak eta oinarrizko zerbitzuetan izandako eten-kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-5-3",
+          "title": "(a) Damage to critical infrastructure and (b) number of disruptions to basic services, attributed to disasters",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-5-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-6-1",
+          "title": "Kontrolatutako instalazioetan kudeatzen diren udal-hondakin solidoak, udal-hondakin guztiekiko proportzioan, hirien arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-6-2",
+          "title": "Hirietan esekita dauden partikula finen urteko batez besteko mailak (adibidez, PM2.5 eta PM10), biztanleriaren arabera haztatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-6-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-7-1",
+          "title": "Hirietako azalera eraikitik guztiontzako espazio ireki eta publikoetara bideratzen den proportzioa, sexuaren, adinaren eta desgaitasunen bat duten pertsonen arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-7-2",
+          "title": "Azken 12 hilabeteetan eraso fisiko edo sexualen biktima izan diren pertsonen proportzioa, sexuaren, adinaren, desgaitasun-mailaren eta gertalekuaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-7-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-a-1",
+          "title": "a) Biztanleen dinamikari erantzuten dioten, b) lurralde-garapen orekatua bermatzen duten eta c) tokiko zerga-marjina handitzen duten hiri-politika nazionalak edo eskualdeko garapen-planak dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-b-1",
+          "title": "Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "11-b-2",
+          "title": "Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/11-b-2/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "12",
+      "title": "Kontsumo eta ekoizpen modalitate jasangarriak bermatzea",
+      "indicators": [
+        
+        {
+          "id": "12-1-1",
+          "title": "Kontsumo- eta ekoizpen-modalitate jasangarriak lortzera bideratutako tresna politikoak sortzen, ezartzen eta aplikatzen dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-2-1",
+          "title": "Aztarna materiala balio absolututan, per capita aztarna materiala eta BPGaren araberako azatarna materiala kontuan hartuz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-2-2",
+          "title": "Barne-kontsumo materiala balio absolututan, per capita barne-kontsumo materiala eta barne-kontsumo materiala BPGaren araber",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-3-1",
+          "title": "a) Elikagai-galeraren indizea eta b) Alferrik galtzen diren elikagaien indizea",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-4-1",
+          "title": "Hondakin arriskutsuei eta bestelako produktu kimikoei buruzko nazioarteko ingurumen-hitzarmen multilateraletan informazioa transmititzeko konpromisoak eta eginbeharrak betetzen dituzten atalen kopurua, hitzarmen horietako bakoitzean eskatzen den bezala",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-4-2",
+          "title": "a) Per capita sortutako hondakin arriskutsuak eta b) tratatutako hondakin arriskutsuen proportzioa, tratamendu-motaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-5-1",
+          "title": "Birziklatze-tasa nazionala, birziklatutako materialaren tonatan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-6-1",
+          "title": "Jasangarritasunari buruzko txostenak argitaratzen dituzten enpresen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-7-1",
+          "title": "Erosketa publikoen arloan politika eta ekintza-plan iraunkorrak aplikatzen dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-8-1",
+          "title": "Zer mailatan sartzen diren i) munduko hiritartasunerako hezkuntza eta ii) garapen iraunkorrerako hezkuntza a) hezkuntza-politika nazionaletan, b) ikasketa-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-8-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-a-1",
+          "title": "Energia berriztagarriak ekoizteko ahalmen instalatua garapen-bidean dauden herrialdeetan (per capita watt)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-b-1",
+          "title": "Turismoaren jasangarritasunak dituen ekonomia- eta ingurumen-alderdien jarraipena egiteko kontabilitate-tresna normalizatuen aplikazioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "12-c-1",
+          "title": "Erregai fosilentzako diru-laguntzen zenbatekoa (ekoizpena eta kontsumoa) BPGaren unitate bakoitzeko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/12-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "13",
+      "title": "Neurri urgenteak hartzea klima-aldaketaren eta haren ondorioen aurka egiteko",
+      "indicators": [
+        
+        {
+          "id": "13-1-1",
+          "title": "Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutako pertsonen kopurua 100.000 pertsonako",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "13-1-2",
+          "title": "Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "13-1-3",
+          "title": "Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-1-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "13-2-1",
+          "title": "Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "13-2-2",
+          "title": "Berotegi-efektuko gasen isurpena guztira, urteka",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "13-3-1",
+          "title": "Munduko herritartasunerako hezkuntzak eta garapen jasangarrirako hezkuntzak esparru hauetan duten txertatze-maila: a) hezkuntza-politika nazionaletan, b) hezkuntza-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "13-a-1",
+          "title": "Hornitutako eta mobilizatutako kantitateak Estatu Batuetako dolarretan, gaur egun ezarritako helburuari dagokionez (hemendik 2025era denon artean 100.000 milioi dolar mobilizatzea)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "13-b-1",
+          "title": "Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak  dituzten aurrerapen txikieneko herrialdeen eta garapen-bidean dauden uharte-estatu txikien kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/13-b-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "14",
+      "title": "Ozeanoak, itsasoak eta itsas baliabideak mantentzea eta modu jasangarrian erabiltzea, garapen jasangarriari begira",
+      "indicators": [
+        
+        {
+          "id": "14-1-1",
+          "title": "a) Kostaldeko eutrofizazioaren indizea; eta b) hondakin plastikoen dentsitatea",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-2-1",
+          "title": "Itsas eremuak kudeatzean, ekosistemetan oinarritutako ikuspegiak aplikatzen dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-3-1",
+          "title": "Itsasoaren batezbesteko azidotasuna (pH), lagin adierazgarrien multzo adostu batean neurtuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-4-1",
+          "title": "Ezaugarri biologikoen arabera maila jasangarriak dituzten arrain-populazioen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-5-1",
+          "title": "Babestutako eremuen hedadura, itsas eremuei dagokienez",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-6-1",
+          "title": "Legez kanpoko arrantza, aitortu gabekoa eta arautu gabekoa kentzea helburu duten nazioarteko tresnen aplikazio-maila",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-7-1",
+          "title": "Garapen-bidean dauden uharte-estatu txikietako, aurrerapen txikieneko herrialdeetako eta gainerako herrialdeetako BPGan arrantzaren kudeaketa jasangarriak duen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-a-1",
+          "title": "Ikerketarako aurrekontu osotik itsas teknologiaren esparruko ikerketara bideratutako proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-b-1",
+          "title": "Eskala txikiko arrantzan sartzeko eskubideak aitortu eta babestuko dituen esparru juridiko, arauemaile edo instituzional baten aplikazio-maila",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "14-c-1",
+          "title": "Esparru juridiko, arautzaile eta instituzionalen bidez, ozeanoekin zerikusia duten tresnak berresten, onartzen eta inplementatzen aurrera egiten duten herrialdeen kopurua, ozeanoak eta bertako baliabideak zaintzeko eta jasangarritasunez erabiltzeko Itsas Zuzenbideari buruzko Nazio Batuen Konbentzioan jasotako nazioarteko zuzenbidea aplikatuz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/14-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "15",
+      "title": "Lehorreko bizitza babestea, lehengoratzea eta modu jasangarrian erabili dadila sustatzea, basoak modu jasangarrian kudeatzea, basamortutzearen aurka borrokatzea, lurren degradazioa gelditzea eta lehengoratzea, eta biodibertsitatearen galera gelditzea",
+      "indicators": [
+        
+        {
+          "id": "15-1-1",
+          "title": "Basoen azalera, azalera osoarekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-1-2",
+          "title": "Gune babestuetan dauden eta lurreko ekosistementzat eta ur gezarentzat garrantzitsuak diren lekuen proportzioa, ekosistema-motaren arabera",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-2-1",
+          "title": "Aurrerapenak basoen kudeaketa jasangarrirantz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-3-1",
+          "title": "Lurzoru degradatuak, azalera osoarekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-4-1",
+          "title": "Gune babestuetan dauden eta mendietako biodibertsitatearentzat garrantzitsuak diren lekuak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-4-2",
+          "title": "Mendien eremu berdearen indizea eta b) lur menditsu degradatuaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-5-1",
+          "title": "Zerrenda gorriaren indizea",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-6-1",
+          "title": "Irabazien banaketa bidezko eta zuzena egiten dela ziurtatzeko lege-, administrazio- eta arau-esparruak ezarri dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-7-1",
+          "title": "Ezkutuko ehizatik edo legez kontrako trafikotik lortuta merkaturatu diren flora- eta fauna-aleen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-8-1",
+          "title": "Dagokien legeria nazionala onartu duten eta espezie exotiko inbaditzaileak sar daitezela prebenitzeko edo kontrolatzeko baliabide nahikoa bideratu dituzten herrialdeen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-8-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-9-1",
+          "title": "a) Dibertsitate biologikorako 2011-2020 Estrategia-planarekin eta Aichiko bigarren xedearekin bat datozen helburu nazionalak edo dibertsitate biologikoaren arloko estrategietan eta ekintza-planetan antzeko helburuak ezarri dituzten eta helburu horiek lortzeko egindako aurrerapenen berri eman duten herrialdeen kopurua; eta b) biodibertsitatearen integrazioa kontabilitateko sistema nazionaletan eta txostenen aurkezpenean, Ekonomia eta Ingurumen Kontabilitateko Sistema inplementatuz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-9-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-a-1",
+          "title": "a) Garapenerako laguntza ofiziala, zehazki biodibertsitatea kontserbatzera eta modu jasangarrian erabiltzera bideratua, eta b) biodibertsitaterako egokiak diren tresna ekonomikoen bidez sortutako diru-sarrerak mugiarazitako finantzaketa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-b-1",
+          "title": "a) Garapenerako laguntza ofiziala, zehazki biodibertsitatea kontserbatzera eta modu jasangarrian erabiltzera bideratua, eta b) biodibertsitaterako egokiak diren tresna ekonomikoen bidez sortutako diru-sarrerak mugiarazitako finantzaketa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-b-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "15-c-1",
+          "title": "Ezkutuko ehizatik edo legez kontrako trafikotik lortuta merkaturatu diren flora- eta fauna-aleen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/15-c-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "16",
+      "title": "Garapen jasangarrirako gizarte baketsu eta inklusiboak sustatzea, guztioi justiziarako sarbidea erraztea, eta euren jarduerak eta kontuak azaltzen dituzten erakunde eraginkorrak eta inklusiboak sortzea maila guztietan",
+      "indicators": [
+        
+        {
+          "id": "16-1-1",
+          "title": "Nahita eginiko hilketen biktimen kopurua 100.000 biztanleko, sexuaren eta adinaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-1-2",
+          "title": "Gatazkekin lotura duten heriotzak 100.000 biztanleko, sexuaren, adinaren eta kausaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-1-3",
+          "title": "Azken 12 hilabeteetan a) indarkeria fisikoa, b) indarkeria psikologikoa edo c) sexu-indarkeria pairatu duen biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-1-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-1-4",
+          "title": "Ilundu ondoren bere bizilekuan bakarrik ibiltzean seguru sentitzen den biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-1-4/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-2-1",
+          "title": "Azken hilabetean beren zaintzaileen zigor fisiko edo eraso psikologikoren bat jaso duten 1 eta 17 urte bitarteko haurren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-2-2",
+          "title": "Pertsonen salerosketaren biktimen kopurua 100.000 biztanleko, sexuaren, adinaren eta esplotazio-motaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-2-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-2-3",
+          "title": "18 urte bete aurretik sexu-indarkeria pairatu zuten 18 eta 29 urte bitarteko emakumeen eta gizonen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-2-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-3-1",
+          "title": "Azken 12 hilabeteetan indarkeria pairatu duten eta biktimizazioa agintari eskudunei edo gatazkak konpontzeko ofizialki onartutako beste mekanismo batzuei jakinarazi dieten biktimen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-3-2",
+          "title": "Preso dauden biztanle guztien artean kondenatuak izan ez diren atxilotuen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-3-3",
+          "title": "Azken bi urteetan gatazkaren batean parte hartu duten eta gatazkak konpontzeko mekanismo ofizial zein ez-ofizial batean sartu diren biztanleen proportzioa, mekanismo-motaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-3-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-4-1",
+          "title": "Sartzen eta irteten diren legez kanpoko finantza-korronteen guztizko balioa (Estatu Batuetako indarreko dolarretan)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-4-2",
+          "title": "Konfiskatutako, aurkitutako edo entregatutako armen proportzioa, haien legez kanpoko jatorria edo testuingurua agintari eskudun batek zehaztu edo ezarri badu, nazioarteko tresnekin bat etorriz",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-4-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-5-1",
+          "title": "Azken 12 hilabeteetan, funtzionario publiko batekin gutxienez harremana izan eta hari eskupekoa ordaindu dioten edo funtzionario publiko batek eskupekoa eskatu dien pertsonen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-5-2",
+          "title": "Azken 12 hilabeteetan, funtzionario publiko batekin gutxienez harremana izan eta hari eskupekoa ordaindu dioten edo funtzionario publiko batek eskupekoa eskatu dien negozioen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-5-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-6-1",
+          "title": "Gobernuaren oinarrizko gastuak, hasieran onartutako aurrekontuarekiko proportzioan, sektorearen arabera banatuta (edo aurrekontu-kodeen edo antzeko elementuen arabera)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-6-2",
+          "title": "Oinarrizko zerbitzuekin izandako azken esperientziarekin pozik gelditu diren biztanleen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-6-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-7-1",
+          "title": "Tokiko zein estatuko erakundeetako plazen proportzioak, besteak beste, a) legebiltzarretan, b) administrazio publikoan eta c) botere judizialean, banaketa nazionalarekin alderatuta, eta sexuaren, adinaren, desgaitasunen bat duten pertsonen eta biztanle-taldeen arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-7-2",
+          "title": "Erabakiak modu inklusiboan hartzen direla eta horrek bere beharrei erantzuten diola uste duen biztanleriaren proportzioa, sexuaren, adinaren, desgaitasunen bat duten pertsonen eta biztanle-taldeen arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-7-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-8-1",
+          "title": "Garapen-bidean dauden herrialdeek nazioarteko erakundeetan dituzten ordezkarien eta boto-eskubideen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-8-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-9-1",
+          "title": "Jaiotza erakunde zibil batean erregistratuta duten 5 urtetik beherako haurren proportzioa, adinaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-9-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-10-1",
+          "title": "Azken 12 hilabeteetan egiaztatu diren kazetarien, komunikabideetako kideen, sindikalisten eta giza eskubideen defendatzaileen hilketen, bahiketen, bortxazko desagerpenen, atxiloketa arbitrarioen eta torturen kasuen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-10-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-10-2",
+          "title": "Zenbat herrialdek hartzen eta aplikatzen dituzten konstituzio-, lege- eta arau-bermeak informaziorako sarbide publikorako",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-10-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-a-1",
+          "title": "Giza eskubideen aldeko erakunde nazional independenteak izatea, Parisko Printzipioak betez",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-a-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "16-b-1",
+          "title": "Azken 12 hilabeteetan, giza eskubideen nazioarteko legeek debekatzen dituzten diskriminazio-moduren bat dela eta diskriminatuta edo erasotuta sentitu den biztanleriaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/16-b-1/",
+          "status": "notstarted"
+        }]
+    }
+  },
+  {
+    "goal": {
+      "id": "17",
+      "title": "Garapen Jasangarrirako Mundu Aliantza inplementatzeko eta biziberritzeko tresnak sendotzea",
+      "indicators": [
+        
+        {
+          "id": "17-1-1",
+          "title": "Gobernuaren diru-sarrerak guztira, BPGarekiko proportzioan, iturriaren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-1-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-1-2",
+          "title": "Barneko zergen bidez finantzatzen den aurrekontu nazionalaren proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-1-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-2-1",
+          "title": "Garapenerako laguntza ofizial garbi eta osoa gutxien aurreratutako herrialdeetarako, Ekonomia Lankidetza eta Garapenerako Antolakundeko (ELGA) Garapenerako Laguntza Batzordeko emaileen nazio-errenta gordinarekiko (NEG) proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-2-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-3-1",
+          "title": "Hainbat iturritatik datozen garapen-bidean dauden herrialdeentzako finantza-baliabide gehigarriak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-3-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-3-2",
+          "title": "Igorpenen bolumena (Estatu Batuetako dolarretan), BPG osoarekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-3-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-4-1",
+          "title": "Zorraren itzulketa, ondasun eta zerbitzuen esportazioekiko proportzioan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-4-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-5-1",
+          "title": "Garapen-bidean dauden herrialdeentzat (aurrerapen txikieneko herrialdeak barne) inbertsioak sustatzeko sistemak ezarri eta aplikatzen dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-5-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-6-1",
+          "title": "Banda zabal finkoko Internet-zerbitzura harpidetutakoen kopurua 100 biztanleko, abiaduraren arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-6-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-7-1",
+          "title": "Ekologikoki arrazoizkoak diren teknologiak garatzera eta horiek garapen-bidean dauden herrialdeetara transferitu eta hedatzera bideratutako funtsen guztizkoa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-7-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-8-1",
+          "title": "Internet erabiltzen duten pertsonen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-8-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-9-1",
+          "title": "Garapen-bidean dauden herrialdeei hitzemandako laguntza finantzario eta teknikoak (Iparralde-Hegoalde eta Hegoalde-Hegoalde lankidetzaren bitartez, eta baita lankidetza triangeluarraren bitartez ere) duen balioa, dolarretan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-9-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-10-1",
+          "title": "Muga-zergen munduko batezbesteko haztatua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-10-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-11-1",
+          "title": "Garapen-bidean dauden herrialdeen eta aurrerapen txikieneko herrialdeen parte-hartzea mundu-mailako esportazioetan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-11-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-12-1",
+          "title": "Garapen-bidean dauden herrialdeek, aurrerapen txikieneko herrialdeek eta garapen-bidean dauden uharte-estatu txikiek dituzten muga-zergen batezbesteko haztatua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-12-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-13-1",
+          "title": "Taula makroekonomikoa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-13-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-14-1",
+          "title": "Garapen jasangarrirako politiken koherentzia hobetzeko mekanismoak dituzten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-14-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-15-1",
+          "title": "Garapenerako lankidetzaren hornitzaileek herrialde bakoitzeko emaitzen esparruak eta plangintza-tresnak zenbateraino erabiltzen dituzten",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-15-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-16-1",
+          "title": "Hainbat interesdunen artean Garapen Jasangarriko Helburuak lortzera bideratutako garapen-jardueren eraginkortasuna aztertzean, aurrerapenen berri eman duten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-16-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-17-1",
+          "title": "Azpiegituran arreta jartzen duten aliantza publiko-pribatuei hitzemandako zenbatekoa, Estatu Batuetako dolarretan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-17-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-18-1",
+          "title": "Ahalmen estatistikoaren adierazlea, Garapen Jasangarriko Helburuen jarraipena egiteko",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-18-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-18-2",
+          "title": "Estatistikei buruzko legedi nazionala Estatistika Ofizialen Oinarrizko Printzipioen araberakoa duten herrialdeen kopurua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-18-2/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-18-3",
+          "title": "Guztiz finantzatuta eta aplikatzeko bidean dagoen Estatistika Plan Nazional bat duten herrialdeen kopurua, finantzaketa-iturrien arabera banatuta",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-18-3/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-19-1",
+          "title": "Garapen-bidean dauden herrialdeetako ahalmen estatistikoa indartzera bideratutako baliabide guztien balioa, dolarretan",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-19-1/",
+          "status": "notstarted"
+        },
+        {
+          "id": "17-19-2",
+          "title": "Azken hamar urteetan a) biztanleria eta etxebizitza errolda bat (gutxienez) egin duten eta b) jaiotzen % 100 eta heriotzen % 80 erregistratuta dituzten herrialdeen proportzioa",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/17-19-2/",
+          "status": "notstarted"
+        }]
+    }
+  }]

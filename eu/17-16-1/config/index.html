@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="eu" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://eustat-des.github.io/data/eu',
+
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
+  },
+
+  // A hook which can be replaced to alter whether/how the values that are
+  // displayed on indicator tables/graphs get rounded. A "context" parameter
+  // is also passed which contains additional information.
+  dataRounding: function(value, context) {
+    // Alterations go here.
+    return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
+  language: 'eu',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
+};
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data !== null && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+
+        
+    <title>Konfigurazioa editatu: 17.16.1 - Garapen Jasangarrirako Helburuen adierazleak</title>
+
+
+
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+
+        <!--[if IE 9]>
+        <script src="/site/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/site/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/site/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/site/assets/img/favicons/favicon.ico" />
+
+        
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240719121537">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
+
+        
+
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/site/assets/css/ie.css">
+        <![endif]-->
+
+        
+
+    </head>
+<body class="language-eu
+layout-config-builder
+">
+<!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"Alfa","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago. Eskerrik asko zure <a href=\"mailto:%email_contacts.suggestions\">iruzkinengatik</a>.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Eduki nagusira joan</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">Interneteko nabigatzaile hau jada ez da bateragarria</h2>
+    <p class="internet-explorer-message-body">webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.</p>
+</div>
+<div id="disclaimer">
+    
+<div class="container">
+  <div class="disclaimer-alert">
+    <strong class="phase-tag">Alfa</strong>
+    
+    Webgune hau garapen egoeran dago. Eskerrik asko zure <a href="mailto:test@example.com">iruzkinengatik</a>.
+    
+  </div>
+</div>
+
+</div>
+
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/site/eu/" id="home" aria-label="Joan hasierako orrira" title="Joan hasierako orrira">
+    <img src="/site/assets/img/SDG_logo.png" alt="Garapen Jasangarriko Helburuak - Gure mundua eraldatzeko 17 helburu" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Erakutsi nabigazio-menua">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/">Hasiera</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/goals">Helburuak</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/reporting-status">Informazioaren egoera</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/news">Eguneratzeak</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/faq">FAQ</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/about">Honi buruz</a>
+</li></ul>
+    
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/site/eu/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Bilatu</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Bilatu">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Bilatu web-orrian" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Euskera
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/17-16-1/config/">
+              Español
+            </a>
+          </li><li>
+            <a class="dropdown-item" href="/site/en/17-16-1/config/">
+              English
+            </a>
+          </li></ul>
+  </div>
+</div>
+
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/17-16-1/config/">
+                Español
+            </a>
+        </li><li class="language-option-eu list-inline-item">
+            <span class="language-toggle-active-language">
+                Euskera
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/site/en/17-16-1/config/">
+                English
+            </a>
+        </li></ul>
+</div></span><a title="" aria-label=""
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="top" tabindex=-1></div>
+
+
+<div id="main-content" class="container" role="main">
+  <div class="row">
+    <div class="col-md-12"><h1>Konfigurazioa editatu: 17.16.1</h1></div>
+  </div>
+  <div class="config-widgets row">
+    <div class="col-md-6" id="search_holder">
+      <label for="config-search">Filter settings</label>
+      <input id="config-search" />
+      <input id="config-search-button" type="button" value="Filter">
+      <input id="config-reset-button" type="button" value="Reset">
+    </div>
+    <div class="col-md-6" id="button_holder">
+      <button class="config-download-button btn btn-primary btn-download" id="export">Download configuration</button>
+      
+      
+      
+      
+      
+      <a class="config-repository-button btn btn-primary btn-download" target="_blank" href="https://github.com/EUSTAT-DES/data/tree/develop/indicator-config">
+        Go to repository
+      </a>
+      
+    </div>
+  </div>
+  <div class="row" id="results-status" role="status"></div>
+  <div class="row" id="editor_holder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@2.6.1/dist/jsoneditor.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@3.14.0/dist/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
+  <script>
+    // For this page, it is helpful to have every single translation.
+    var allTranslations = {"calendar":{"April":"apirila","August":"abuztua","December":"abendua","February":"otsaila","January":"urtarrila","July":"uztaila","June":"ekaina","March":"martxoa","May":"maiatza","November":"azaroa","October":"urria","September":"iraila"},"cookies":{"acceptAll":"Onartu dena","acceptSelected":"Onartu autatua","all_required_notice":"Funtsezko cookie batzuk erabiltzen ditugu zerbitzu honek funtziona dezan. Beti piztuta egon behar dute.","all_required_ok":"OK","close":"Itxi","consentModal_description":"Hemen alda dezakezu zein cookie erabili nahi dituzun","consentModal_title":"Cookien konfigurazioa","consentNotice_changeDescription":"Gune honetan erabiltzen diren cookieak aldatu egin dira azken aldiz bisitatu zinenetik.","consentNotice_description":"Funtsezko cookie batzuk erabiltzen ditugu zerbitzu honek funtziona dezan. Era berean, {purposes} erabili nahi genuke, ulertu ahal izateko nola erabiltzen duzun zerbitzua eta hobekuntzak egiteko.","consentNotice_learnMore":"Ikusi cookieak","consentNotice_testing":"Testatzen!","contextualConsent_acceptAlways":"Beti","contextualConsent_acceptOnce":"Bai","contextualConsent_description":"hornitutako kanpoko edukiak kargatu nahi dituzu?","contrast_description":"Irisgarritasun-zerbitzuen egoera aktiboa mantentzen du","contrast_title":"Irisgarritasun modua","cookie_settings":"Cookieen konfigurazioa","cookie_settings_description":"Gorde zure cookie baimen konfigurazioa","decline":"Baztertu cookie gehigarriak","google_analytics_description":"Orrialde-bisitei buruzko informazioa biltzen du, Google Analytics erabiliz.","google_analytics_title":"Google Analytics","ok":"Onartu cookie gehiago.","poweredBy":"Klaro!rekin egina","privacyPolicy_name":"pribatutasun politika","privacyPolicy_text":"Gehiago jakiteko, irakurri gure pribatutasun politika.","purposeItem_service":"zerbitzua","purposeItem_services":"zerbitzuak","purposes_analytics_description":"Zerbitzu hauek webgunearen erabilerari buruzko informazioa biltzen dute. Datu hauek web orria hobetzen laguntzeko erabiltzen ditugu.","purposes_analytics_title":"Cookie analitikoak","purposes_functional_description":"Funtsezko cookieek zure informazioa ziurtatuta mantentzen dute, eta zure lehentasunak eta web orria erabiltzen duzun bitartean egiten dituzun aukeraketak gogoratzen dituzte. Beti egon behar dute.","purposes_functional_title":"Funtsezko cookieak","purposes_performance_description":"Zerbitzu hauek informazio pertsonala prozesatzen dute webgune honek eskaintzen duen zerbitzua optimizatzeko.","purposes_performance_title":"Errendimenduaren optimizazioa","save":"Gorde","service_disableAll_description":"Erabili etengailu hau zerbitzu guztiak gaitzeko edo desaktibatzeko.","service_disableAll_title":"Zerbitzu guztiak gaitu edo desgaitu","service_optOut_description":"Zerbitzu hauek akatsez kargatuta daude (baina aukera dezakezu)","service_optOut_title":"(opt-out)","service_purpose":"xedea","service_purposes":"helburuak","service_required_description":"Zerbitzu hau beti behar da.","service_required_title":"(beti beharrezkoa)"},"data":{"Year":"Urtea"},"frontpage":{"download_all":"Deskargatu datu guztiak (.zip)","file_size":"Tamaina","heading":"%country.adjective Garapen Jasangarrirako adierazleen datuak","heading_short":"%country.adjective Garapen Jasangarrirako Helburuen datuak","instructions":"Egin klik helburu batean edo erabili %before_link bilaketa %after_link garapen jasangarrirako helburuen %country.adjective adierazle mundialetara sartzeko.","instructions_short":"Egin klik helburu batean Garapen Iraunkorreko Helburuen adierazle mundialen %country.adjective datuak ikusteko.","instructions_shorter":"Hautatu helburu bat adierazleen datuak ikusteko.","intro_body":"<a href=\"https://www.un.org/sustainabledevelopment/es\">Garapen Jasangarrirako Helburuak (GJH)</a> pobreziarekin amaitzeko, planeta babesteko eta guztion bizitzak eta ikuspegiak hobetzeko dei unibertsala dira, mundu osoan emandako ekintzen bitartez. Nazio Batuetako estatu kide guztiek onartu zituzten 17 helburuak 2015ean, <a href=\"https://sdgs.un.org/es/2030agenda\">2030 Agendaren</a> barruan.","intro_title":"Gure mundua eraldatzeko 17 helburu","zip_file":"zip fitxategia"},"general":{"back_to_top":"Gora itzuli","built_using_open_sdg":"Open SDGrekin eraikia","facebook":"Facebook","goal":"Helburua","goals":"Helburuak","hide":"Ezkutatu","home":"Hasiera","indicator":"Adierazlea","indicators":"Adierazleak","label_warning":"Abisua:","loading":"Bilaketa-emaitzak kargatzen","opens_new_window":"Beste leiho batean irekiko da","page":"web-orria","pages":"web-orriak","sdg":"Garapen Jasangarriko Helburuak","site_title":"Garapen Jasangarrirako Helburuen adierazleak","target":"Helmuga","targets":"Helmugak","targets_and_indicators":"Helmugak eta adierazleak","twitter":"Twitter"},"global_goals":{"1-short":"Pobreziaren amaiera","1-title":"Pobrezia mota guztiak desagertzea mundu osoan","10-short":"Desberdintasunak murriztea","10-title":"Herrialde bakoitzaren barneko eta herrialdeen arteko desberdintasunak murriztea","11-short":"Hiri eta komunitate jasangarriak","11-title":"Hiriak eta giza kokaguneak inklusiboak, seguruak, erresilienteak eta jasangarriak izatea lortzea","12-short":"Ekoizpen eta kontsumo arduratsuak","12-title":"Kontsumo eta ekoizpen modalitate jasangarriak bermatzea","13-short":"Klimaren aldeko ekintza","13-title":"Neurri urgenteak hartzea klima-aldaketaren eta haren ondorioen aurka egiteko","14-short":"Itsaspeko bizitza","14-title":"Ozeanoak, itsasoak eta itsas baliabideak mantentzea eta modu jasangarrian erabiltzea, garapen jasangarriari begira","15-short":"Lehorreko ekosistemetako bizitza","15-title":"Lehorreko bizitza babestea, lehengoratzea eta modu jasangarrian erabili dadila sustatzea, basoak modu jasangarrian kudeatzea, basamortutzearen aurka borrokatzea, lurren degradazioa gelditzea eta lehengoratzea, eta biodibertsitatearen galera gelditzea","16-short":"Bakea, justizia eta instituzio sendoak","16-title":"Garapen jasangarrirako gizarte baketsu eta inklusiboak sustatzea, guztioi justiziarako sarbidea erraztea, eta euren jarduerak eta kontuak azaltzen dituzten erakunde eraginkorrak eta inklusiboak sortzea maila guztietan","17-short":"Helburuak lortzeko aliantzak","17-title":"Garapen Jasangarrirako Mundu Aliantza inplementatzeko eta biziberritzeko tresnak sendotzea","2-short":"Goserik ez","2-title":"Gosea amaitzea, elikagai-segurtasuna eta elikadura hobea lortzea, eta nekazaritza jasangarria bultzatzea","3-short":"Osasuna eta ongizatea","3-title":"Guztiontzat eta adin guztietan bizimodu osasungarria bermatzea eta ongizatea sustatzea","4-short":"Kalitatezko hezkuntza","4-title":"Guztiontzako kalitatezko hezkuntza inklusiboa nahiz bidezkoa bermatzea eta etengabeko ikaskuntzarako aukerak bultzatzea","5-short":"Genero berdintasuna","5-title":"Genero berdintasuna lortzea eta emakume nahiz neska guztiak ahalduntzea","6-short":"Ur garbia eta saneamendua","6-title":"Uraren eskuragarritasuna eta kudeaketa jasangarria nahiz guztiontzako saneamendua bermatzea","7-short":"Energia eskuragarria eta garbia","7-title":"Energia eskuragarria, fidagarria, jasangarria eta modernoa bermatzea guztiontzat","8-short":"Lan duina eta hazkunde ekonomikoa","8-title":"Guztiontzako hazkunde ekonomiko jarraitua, inklusiboa eta jasangarria, osoko enplegu produktiboa eta lan duina sustatzea","9-short":"Industria, berrikuntza eta azpiegiturak","9-title":"Azpiegitura erresilienteak eraikitzea, industrializazio inklusibo eta jasangarria bultzatzea eta berrikuntza sustatzea"},"global_indicators":{"1-1-1-title":"Nazioarteko pobrezia-atalasearen azpitik bizi den biztanleriaren proportzioa, sexuaren, adinaren, lan-egoeraren eta kokapen geografikoaren (hiri- edo landa-eremua) arabera banatuta","1-2-1-title":"Pobrezia-atalase nazionalaren azpitik bizi den biztanleriaren proportzioa, sexuaren eta adinaren arabera banatuta","1-2-2-title":"Definizio nazionalen arabera pobrezian, bere dimentsio guztietan, bizi diren gizon, emakume eta adin guztietako haurren proportzioa","1-3-1-title":"Babes sozialeko sistema baten edo gutxieneko maila baten estaldura duen biztanleriaren proportzioa, sexuaren arabera banatuta, eta honako hauek bereiziz: haurrak, langabetuak, adinekoak, desgaitasunen bat duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak","1-4-1-title":"Oinarrizko zerbitzuetara sarbidea duten etxebizitzetan bizi den biztanleriaren proportzioa","1-4-2-title":"Biztanle heldu guztietatik lurrak edukitzeko eskubide seguruak dituztenen proportzioa, sexuaren eta edukitza-motaren banatuta; kontuan hartuko dira a) xede horretarako legez onartutako dokumentazioa dutenak eta b) eskubide horiek segurutzat jotzen dituztenak","1-5-1-title":"Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutako pertsonen kopurua 100.000 biztanleko","1-5-2-title":"Hondamendiekin zuzenean lotutako galera ekonomikoak munduko barne produktu gordinari (BPG) dagokionez","1-5-3-title":"Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua","1-5-4-title":"Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz","1-a-1-title":"Pobrezia murrizten jarduten duten emaile guztien garapenerako babes ofizialeko dirulaguntzen guztizkoa, herrialde hartzailearen nazio-errenta gordinaren ehuneko gisa","1-a-2-title":"Guztizko gastu publikotik oinarrizko zerbitzuetara (hezkuntza, osasuna eta babes soziala) bideratzen den proportzioa","1-b-1-title":"Pobreen aldeko gastu sozial publikoa","10-1-1-title":"Etxeetako gastuen eta diru-sarreren hazkunde-tasak, per capita, bai biztanle pobreenen % 40an, bai biztanleria osoan","10-2-1-title":"Diru-sarreren medianaren % 50 baino gutxiagorekin bizi diren pertsonen proportzioa, sexua, adina eta desgaitasunak kontuan izanda","10-3-1-title":"Azken 12 hilabeteetan, giza eskubideen nazioarteko legeek debekatzen dituzten diskriminazio-moduren bat dela eta diskriminatuta edo erasotuta sentitu den biztanleriaren proportzioa","10-4-1-title":"Enpleguak sortutako BPGaren proportzioa","10-4-2-title":"Zergei lotutako politiken birbanaketa-efektua","10-5-1-title":"Finantza-sendotasunaren adierazleak","10-6-1-title":"Garapen-bidean dauden herrialdeek nazioarteko erakundeetan dituzten ordezkarien eta boto-eskubideen proportzioa","10-7-1-title":"Enplegatuak ordaindutako kontratazio-kostua, helmugako herrialdean jasotako hilabeteko diru-sarrerekiko proportzioan","10-7-2-title":"Migrazio-politika ondo kudeatuak aplikatu dituzten herrialdeen kopurua, pertsonen migrazio eta mugikortasun ordenatua, segurua, arautua eta arduratsua ahalbidetzeko","10-7-3-title":"Nazioarteko helmuga baterako migrazio-prozesuan hil edo desagertu diren pertsonen kopurua 1","10-7-4-title":"Errefuxiatuek osatzen duten biztanleriaren proportzioa, jatorrizko herrialdeen arabera banatuta","10-a-1-title":"Aurrerapen txikieneko herrialdeen eta muga-zergarik ez duten garapen-bideko herrialdeetako inportazioei aplikatzen zaizkien muga-zergen proportzioa","10-b-1-title":"Garapenerako baliabide-korronteen guztizkoa, herrialde hartzaileen eta emaileen arabera eta korronte-motaren arabera banatuta (adibidez, garapenerako laguntza ofiziala, atzerriko inbertsio zuzena eta beste korronte batzuk)","10-c-1-title":"Migratzaile-taldeen kostuak, bidalitako kopuruen proportzioan","11-1-1-title":"Auzo marjinaletan, kokaleku informaletan edo etxebizitza desegokietan bizi den hiri-biztanleriaren proportzioa","11-2-1-title":"Garraio publikora sarbide egokia duen biztanleriaren proportzioa, sexua, adina eta desgaitasuna kontuan izanda","11-3-1-title":"Lur-kontsumoaren tasaren eta biztanleria-hazkundearen tasaren arteko erlazioa","11-3-2-title":"Gizarte zibilak hiri-antolamenduan eta -kudeaketan zuzenean parte hartzeko egitura bat duten eta erregulartasunez eta modu demokratikoan jokatzen duten hirien proportzioa","11-4-1-title":"Kultura- eta natura-ondare guztia babestera eta zaintzera bideratutako per capita gastuak, finantzaketa-iturriaren (publikoa edo pribatua), ondare-motaren (kultura- edo natura-ondarea) eta gobernu-motaren (nazionala, eskualdekoa, udalerrikoa) arabera banatuta","11-5-1-title":"Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutakoen kopurua 100.000 pertsonako","11-5-2-title":"Hondamendien eraginezko zuzeneko galera ekonomikoak munduko BPGarekin alderatuta, funtsezko azpiegituran izandako kalteak eta oinarrizko zerbitzuetan izandako eten-kopurua","11-5-3-title":"Hondamendiei egotzitako a) azpiegitura kritikoan izandako kalteak eta b)  oinarrizko zerbitzuen etenduren kopurua","11-6-1-title":"Kontrolatutako instalazioetan kudeatzen diren udal-hondakin solidoak, udal-hondakin guztiekiko proportzioan, hirien arabera banatuta","11-6-2-title":"Hirietan esekita dauden partikula finen urteko batez besteko mailak (adibidez, PM2.5 eta PM10), biztanleriaren arabera haztatuta","11-7-1-title":"Hirietako azalera eraikitik guztiontzako espazio ireki eta publikoetara bideratzen den proportzioa, sexuaren, adinaren eta desgaitasunen bat duten pertsonen arabera banatuta","11-7-2-title":"Azken 12 hilabeteetan eraso fisiko edo sexualen biktima izan diren pertsonen proportzioa, sexuaren, adinaren, desgaitasun-mailaren eta gertalekuaren arabera banatuta","11-a-1-title":"a) Biztanleen dinamikari erantzuten dioten, b) lurralde-garapen orekatua bermatzen duten eta c) tokiko zerga-marjina handitzen duten hiri-politika nazionalak edo eskualdeko garapen-planak dituzten herrialdeen kopurua","11-b-1-title":"Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua","11-b-2-title":"Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz","12-1-1-title":"Kontsumo- eta ekoizpen-modalitate jasangarriak lortzera bideratutako tresna politikoak sortzen, ezartzen eta aplikatzen dituzten herrialdeen kopurua","12-2-1-title":"Aztarna materiala balio absolututan, per capita aztarna materiala eta BPGaren araberako azatarna materiala kontuan hartuz","12-2-2-title":"Barne-kontsumo materiala balio absolututan, per capita barne-kontsumo materiala eta barne-kontsumo materiala BPGaren araber","12-3-1-title":"a) Elikagai-galeraren indizea eta b) Alferrik galtzen diren elikagaien indizea","12-4-1-title":"Hondakin arriskutsuei eta bestelako produktu kimikoei buruzko nazioarteko ingurumen-hitzarmen multilateraletan informazioa transmititzeko konpromisoak eta eginbeharrak betetzen dituzten atalen kopurua, hitzarmen horietako bakoitzean eskatzen den bezala","12-4-2-title":"a) Per capita sortutako hondakin arriskutsuak eta b) tratatutako hondakin arriskutsuen proportzioa, tratamendu-motaren arabera banatuta","12-5-1-title":"Birziklatze-tasa nazionala, birziklatutako materialaren tonatan","12-6-1-title":"Jasangarritasunari buruzko txostenak argitaratzen dituzten enpresen kopurua","12-7-1-title":"Erosketa publikoen arloan politika eta ekintza-plan iraunkorrak aplikatzen dituzten herrialdeen kopurua","12-8-1-title":"Zer mailatan sartzen diren i) munduko hiritartasunerako hezkuntza eta ii) garapen iraunkorrerako hezkuntza a) hezkuntza-politika nazionaletan, b) ikasketa-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan","12-a-1-title":"Energia berriztagarriak ekoizteko ahalmen instalatua garapen-bidean dauden herrialdeetan (per capita watt)","12-b-1-title":"Turismoaren jasangarritasunak dituen ekonomia- eta ingurumen-alderdien jarraipena egiteko kontabilitate-tresna normalizatuen aplikazioa","12-c-1-title":"Erregai fosilentzako diru-laguntzen zenbatekoa (ekoizpena eta kontsumoa) BPGaren unitate bakoitzeko","13-1-1-title":"Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutako pertsonen kopurua 100.000 pertsonako","13-1-2-title":"Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua","13-1-3-title":"Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz","13-2-1-title":"Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak dituzten herrialdeen kopurua","13-2-2-title":"Berotegi-efektuko gasen isurpena guztira, urteka","13-3-1-title":"Munduko herritartasunerako hezkuntzak eta garapen jasangarrirako hezkuntzak esparru hauetan duten txertatze-maila: a) hezkuntza-politika nazionaletan, b) hezkuntza-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan","13-a-1-title":"Hornitutako eta mobilizatutako kantitateak Estatu Batuetako dolarretan, gaur egun ezarritako helburuari dagokionez (hemendik 2025era denon artean 100.000 milioi dolar mobilizatzea)","13-b-1-title":"Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak  dituzten aurrerapen txikieneko herrialdeen eta garapen-bidean dauden uharte-estatu txikien kopurua","14-1-1-title":"a) Kostaldeko eutrofizazioaren indizea; eta b) hondakin plastikoen dentsitatea","14-2-1-title":"Itsas eremuak kudeatzean, ekosistemetan oinarritutako ikuspegiak aplikatzen dituzten herrialdeen kopurua","14-3-1-title":"Itsasoaren batezbesteko azidotasuna (pH), lagin adierazgarrien multzo adostu batean neurtuta","14-4-1-title":"Ezaugarri biologikoen arabera maila jasangarriak dituzten arrain-populazioen proportzioa","14-5-1-title":"Babestutako eremuen hedadura, itsas eremuei dagokienez","14-6-1-title":"Legez kanpoko arrantza, aitortu gabekoa eta arautu gabekoa kentzea helburu duten nazioarteko tresnen aplikazio-maila","14-7-1-title":"Garapen-bidean dauden uharte-estatu txikietako, aurrerapen txikieneko herrialdeetako eta gainerako herrialdeetako BPGan arrantzaren kudeaketa jasangarriak duen proportzioa","14-a-1-title":"Ikerketarako aurrekontu osotik itsas teknologiaren esparruko ikerketara bideratutako proportzioa","14-b-1-title":"Eskala txikiko arrantzan sartzeko eskubideak aitortu eta babestuko dituen esparru juridiko, arauemaile edo instituzional baten aplikazio-maila","14-c-1-title":"Esparru juridiko, arautzaile eta instituzionalen bidez, ozeanoekin zerikusia duten tresnak berresten, onartzen eta inplementatzen aurrera egiten duten herrialdeen kopurua, ozeanoak eta bertako baliabideak zaintzeko eta jasangarritasunez erabiltzeko Itsas Zuzenbideari buruzko Nazio Batuen Konbentzioan jasotako nazioarteko zuzenbidea aplikatuz","15-1-1-title":"Basoen azalera, azalera osoarekiko proportzioan","15-1-2-title":"Gune babestuetan dauden eta lurreko ekosistementzat eta ur gezarentzat garrantzitsuak diren lekuen proportzioa, ekosistema-motaren arabera","15-2-1-title":"Aurrerapenak basoen kudeaketa jasangarrirantz","15-3-1-title":"Lurzoru degradatuak, azalera osoarekiko proportzioan","15-4-1-title":"Gune babestuetan dauden eta mendietako biodibertsitatearentzat garrantzitsuak diren lekuak","15-4-2-title":"Mendien eremu berdearen indizea eta b) lur menditsu degradatuaren proportzioa","15-5-1-title":"Zerrenda gorriaren indizea","15-6-1-title":"Irabazien banaketa bidezko eta zuzena egiten dela ziurtatzeko lege-, administrazio- eta arau-esparruak ezarri dituzten herrialdeen kopurua","15-7-1-title":"Ezkutuko ehizatik edo legez kontrako trafikotik lortuta merkaturatu diren flora- eta fauna-aleen proportzioa","15-8-1-title":"Dagokien legeria nazionala onartu duten eta espezie exotiko inbaditzaileak sar daitezela prebenitzeko edo kontrolatzeko baliabide nahikoa bideratu dituzten herrialdeen proportzioa","15-9-1-title":"a) Dibertsitate biologikorako 2011-2020 Estrategia-planarekin eta Aichiko bigarren xedearekin bat datozen helburu nazionalak edo dibertsitate biologikoaren arloko estrategietan eta ekintza-planetan antzeko helburuak ezarri dituzten eta helburu horiek lortzeko egindako aurrerapenen berri eman duten herrialdeen kopurua; eta b) biodibertsitatearen integrazioa kontabilitateko sistema nazionaletan eta txostenen aurkezpenean, Ekonomia eta Ingurumen Kontabilitateko Sistema inplementatuz","15-a-1-title":"a) Garapenerako laguntza ofiziala, zehazki biodibertsitatea kontserbatzera eta modu jasangarrian erabiltzera bideratua, eta b) biodibertsitaterako egokiak diren tresna ekonomikoen bidez sortutako diru-sarrerak mugiarazitako finantzaketa","15-b-1-title":"a) Garapenerako laguntza ofiziala, zehazki biodibertsitatea kontserbatzera eta modu jasangarrian erabiltzera bideratua, eta b) biodibertsitaterako egokiak diren tresna ekonomikoen bidez sortutako diru-sarrerak mugiarazitako finantzaketa","15-c-1-title":"Ezkutuko ehizatik edo legez kontrako trafikotik lortuta merkaturatu diren flora- eta fauna-aleen proportzioa","16-1-1-title":"Nahita eginiko hilketen biktimen kopurua 100.000 biztanleko, sexuaren eta adinaren arabera banatuta","16-1-2-title":"Gatazkekin lotura duten heriotzak 100.000 biztanleko, sexuaren, adinaren eta kausaren arabera banatuta","16-1-3-title":"Azken 12 hilabeteetan a) indarkeria fisikoa, b) indarkeria psikologikoa edo c) sexu-indarkeria pairatu duen biztanleriaren proportzioa","16-1-4-title":"Ilundu ondoren bere bizilekuan bakarrik ibiltzean seguru sentitzen den biztanleriaren proportzioa","16-10-1-title":"Azken 12 hilabeteetan egiaztatu diren kazetarien, komunikabideetako kideen, sindikalisten eta giza eskubideen defendatzaileen hilketen, bahiketen, bortxazko desagerpenen, atxiloketa arbitrarioen eta torturen kasuen kopurua","16-10-2-title":"Zenbat herrialdek hartzen eta aplikatzen dituzten konstituzio-, lege- eta arau-bermeak informaziorako sarbide publikorako","16-2-1-title":"Azken hilabetean beren zaintzaileen zigor fisiko edo eraso psikologikoren bat jaso duten 1 eta 17 urte bitarteko haurren proportzioa","16-2-2-title":"Pertsonen salerosketaren biktimen kopurua 100.000 biztanleko, sexuaren, adinaren eta esplotazio-motaren arabera banatuta","16-2-3-title":"18 urte bete aurretik sexu-indarkeria pairatu zuten 18 eta 29 urte bitarteko emakumeen eta gizonen proportzioa","16-3-1-title":"Azken 12 hilabeteetan indarkeria pairatu duten eta biktimizazioa agintari eskudunei edo gatazkak konpontzeko ofizialki onartutako beste mekanismo batzuei jakinarazi dieten biktimen kopurua","16-3-2-title":"Preso dauden biztanle guztien artean kondenatuak izan ez diren atxilotuen proportzioa","16-3-3-title":"Azken bi urteetan gatazkaren batean parte hartu duten eta gatazkak konpontzeko mekanismo ofizial zein ez-ofizial batean sartu diren biztanleen proportzioa, mekanismo-motaren arabera banatuta","16-4-1-title":"Sartzen eta irteten diren legez kanpoko finantza-korronteen guztizko balioa (Estatu Batuetako indarreko dolarretan)","16-4-2-title":"Konfiskatutako, aurkitutako edo entregatutako armen proportzioa, haien legez kanpoko jatorria edo testuingurua agintari eskudun batek zehaztu edo ezarri badu, nazioarteko tresnekin bat etorriz","16-5-1-title":"Azken 12 hilabeteetan, funtzionario publiko batekin gutxienez harremana izan eta hari eskupekoa ordaindu dioten edo funtzionario publiko batek eskupekoa eskatu dien pertsonen proportzioa","16-5-2-title":"Azken 12 hilabeteetan, funtzionario publiko batekin gutxienez harremana izan eta hari eskupekoa ordaindu dioten edo funtzionario publiko batek eskupekoa eskatu dien negozioen proportzioa","16-6-1-title":"Gobernuaren oinarrizko gastuak, hasieran onartutako aurrekontuarekiko proportzioan, sektorearen arabera banatuta (edo aurrekontu-kodeen edo antzeko elementuen arabera)","16-6-2-title":"Oinarrizko zerbitzuekin izandako azken esperientziarekin pozik gelditu diren biztanleen proportzioa","16-7-1-title":"Tokiko zein estatuko erakundeetako plazen proportzioak, besteak beste, a) legebiltzarretan, b) administrazio publikoan eta c) botere judizialean, banaketa nazionalarekin alderatuta, eta sexuaren, adinaren, desgaitasunen bat duten pertsonen eta biztanle-taldeen arabera banatuta","16-7-2-title":"Erabakiak modu inklusiboan hartzen direla eta horrek bere beharrei erantzuten diola uste duen biztanleriaren proportzioa, sexuaren, adinaren, desgaitasunen bat duten pertsonen eta biztanle-taldeen arabera banatuta","16-8-1-title":"Garapen-bidean dauden herrialdeek nazioarteko erakundeetan dituzten ordezkarien eta boto-eskubideen proportzioa","16-9-1-title":"Jaiotza erakunde zibil batean erregistratuta duten 5 urtetik beherako haurren proportzioa, adinaren arabera banatuta","16-a-1-title":"Giza eskubideen aldeko erakunde nazional independenteak izatea, Parisko Printzipioak betez","16-b-1-title":"Azken 12 hilabeteetan, giza eskubideen nazioarteko legeek debekatzen dituzten diskriminazio-moduren bat dela eta diskriminatuta edo erasotuta sentitu den biztanleriaren proportzioa","17-1-1-title":"Gobernuaren diru-sarrerak guztira, BPGarekiko proportzioan, iturriaren arabera banatuta","17-1-2-title":"Barneko zergen bidez finantzatzen den aurrekontu nazionalaren proportzioa","17-10-1-title":"Muga-zergen munduko batezbesteko haztatua","17-11-1-title":"Garapen-bidean dauden herrialdeen eta aurrerapen txikieneko herrialdeen parte-hartzea mundu-mailako esportazioetan","17-12-1-title":"Garapen-bidean dauden herrialdeek, aurrerapen txikieneko herrialdeek eta garapen-bidean dauden uharte-estatu txikiek dituzten muga-zergen batezbesteko haztatua","17-13-1-title":"Taula makroekonomikoa","17-14-1-title":"Garapen jasangarrirako politiken koherentzia hobetzeko mekanismoak dituzten herrialdeen kopurua","17-15-1-title":"Garapenerako lankidetzaren hornitzaileek herrialde bakoitzeko emaitzen esparruak eta plangintza-tresnak zenbateraino erabiltzen dituzten","17-16-1-title":"Hainbat interesdunen artean Garapen Jasangarriko Helburuak lortzera bideratutako garapen-jardueren eraginkortasuna aztertzean, aurrerapenen berri eman duten herrialdeen kopurua","17-17-1-title":"Azpiegituran arreta jartzen duten aliantza publiko-pribatuei hitzemandako zenbatekoa, Estatu Batuetako dolarretan","17-18-1-title":"Ahalmen estatistikoaren adierazlea, Garapen Jasangarriko Helburuen jarraipena egiteko","17-18-2-title":"Estatistikei buruzko legedi nazionala Estatistika Ofizialen Oinarrizko Printzipioen araberakoa duten herrialdeen kopurua","17-18-3-title":"Guztiz finantzatuta eta aplikatzeko bidean dagoen Estatistika Plan Nazional bat duten herrialdeen kopurua, finantzaketa-iturrien arabera banatuta","17-19-1-title":"Garapen-bidean dauden herrialdeetako ahalmen estatistikoa indartzera bideratutako baliabide guztien balioa, dolarretan","17-19-2-title":"Azken hamar urteetan a) biztanleria eta etxebizitza errolda bat (gutxienez) egin duten eta b) jaiotzen % 100 eta heriotzen % 80 erregistratuta dituzten herrialdeen proportzioa","17-2-1-title":"Garapenerako laguntza ofizial garbi eta osoa gutxien aurreratutako herrialdeetarako, Ekonomia Lankidetza eta Garapenerako Antolakundeko (ELGA) Garapenerako Laguntza Batzordeko emaileen nazio-errenta gordinarekiko (NEG) proportzioan","17-3-1-title":"Hainbat iturritatik datozen garapen-bidean dauden herrialdeentzako finantza-baliabide gehigarriak","17-3-2-title":"Igorpenen bolumena (Estatu Batuetako dolarretan), BPG osoarekiko proportzioan","17-4-1-title":"Zorraren itzulketa, ondasun eta zerbitzuen esportazioekiko proportzioan","17-5-1-title":"Garapen-bidean dauden herrialdeentzat (aurrerapen txikieneko herrialdeak barne) inbertsioak sustatzeko sistemak ezarri eta aplikatzen dituzten herrialdeen kopurua","17-6-1-title":"Banda zabal finkoko Internet-zerbitzura harpidetutakoen kopurua 100 biztanleko, abiaduraren arabera banatuta","17-7-1-title":"Ekologikoki arrazoizkoak diren teknologiak garatzera eta horiek garapen-bidean dauden herrialdeetara transferitu eta hedatzera bideratutako funtsen guztizkoa","17-8-1-title":"Internet erabiltzen duten pertsonen proportzioa","17-9-1-title":"Garapen-bidean dauden herrialdeei hitzemandako laguntza finantzario eta teknikoak (Iparralde-Hegoalde eta Hegoalde-Hegoalde lankidetzaren bitartez, eta baita lankidetza triangeluarraren bitartez ere) duen balioa, dolarretan","2-1-1-title":"Azpielikaduraren prebalentzia","2-1-2-title":"Elikaduran segurtasun falta moderatu edo larria duten biztanleen prebalentzia, elikadura-segurtasunaren esperientzia-eskalaren arabera","2-2-1-title":"Hazkundearen atzerapenaren prebalentzia 5 urtetik beherako umeen artean (adin bakoitzeko altueran, desbideratze tipikoa gutxienez OME Osasunaren Mundu Erakundeak finkatutako haurren hazkunde-patroien erdiko balioa baino 2 puntu txikiagoa denean)","2-2-2-title":"Malnutrizioaren prebalentzia 5 urtetik beherako umeen artean (adin bakoitzeko pisuan, desbideratze tipikoa gutxienez OMEren hazkunde-patroien erdiko balioa baino 2 puntu handiagoa edo txikiagoa denean), motaren arabera (ahultasuna eta gehiegizko pisua) banatuta","2-2-3-title":"Anemiaren prebalentzia 15 eta 49 urte bitarteko emakumeen artean, haurdunaldien arabera banatuta (ehunekoa)","2-3-1-title":"Ekoizpen-bolumena lan-unitateko, ustiapenaren tamainaren eta motaren (nekazaritza/abeltzaina/basogintza) arabera banatuta","2-3-2-title":"Eskala txikian elikagai-ekoizle direnen diru-sarreren batezbestekoa, sexuaren eta herri indigenaren arabera banatuta","2-4-1-title":"Nekazaritza emankor eta jasangarria lantzen duten laborantza-lurren azaleraren proportzioa","2-5-1-title":"Epe ertain eta luzerako kontserbazio-instalazioetan kontserbatutako a) landare-baliabide genetikoen kopurua eta b) elikadurarako eta nekazaritzarako animalien kopurua","2-5-2-title":"Galtzeko bidean dauden tokiko arraza eta barietateen proportzioa","2-a-1-title":"Gastu publikoko nekazaritza bideratzeko indizea","2-a-2-title":"Nekazaritza-sektorera bideratutako baliabide-korronte ofizialen guztizkoa (garapenerako babes ofiziala gehi beste korronte ofizial batzuk)","2-b-1-title":"Nekazaritzako eta abeltzaintzako produktuen esportazioari laguntzak","2-c-1-title":"Elikagaien prezioetako anomalien adierazlea","3-1-1-title":"Amen heriotza-tasa","3-1-2-title":"Osasun-langile espezializatuek artatutako erditzeen proportzioa","3-2-1-title":"5 urtetik beherako umeen heriotza-tasa","3-2-2-title":"Jaioberrien heriotza-tasa","3-3-1-title":"GIBaren infekzio berrien kopurua GIBik ez duten 1.000 biztanleko, sexuaren, adinaren eta funtsezko gizataldeen arabera banatuta","3-3-2-title":"Tuberkulosiaren intzidentzia 100.000 biztanleko","3-3-3-title":"Malariaren intzidentzia 1.000 biztanleko","3-3-4-title":"B hepatitisaren intzidentzia 100.000 biztanleko","3-3-5-title":"Artatu gabeko gaixotasun tropikalen aurkako esku-hartzeak behar dituzten pertsonen kopurua","3-4-1-title":"Gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei egotzitako heriotza-tasa","3-4-2-title":"Suizidioen heriotza-tasa","3-5-1-title":"Mendekotasuna sortzen duten substantzien abusuak eragindako nahasmenduentzako tratamenduen estaldura (farmakologikoak, psikosozialak eta errehabilitazio eta postratamendu-zerbitzuak)","3-5-2-title":"Per capita alkohol-kontsumoa (15 urtetik gora) urte zibil bakoitzeko, alkohol puruaren litrotan","3-6-1-title":"Trafiko istripuetan izandako lesioen ondoriozko heriotza-tasa","3-7-1-title":"Haurra izateko adinean dauden emakumeen artean (15-49 urte), familia-plangintzako beharrei metodo modernoekin erantzuten dietenen proportzioa","3-7-2-title":"Emakume nerabeen ugalkortasuna (10 eta 14 urte artean eta 15 eta 19 urte artean), adin-talde horretako 1.000 emakumeko","3-8-1-title":"Funtsezko osasun-zerbitzuen estaldura","3-8-2-title":"Etxebizitzan osasun-gastu handiak dituen biztanleriaren proportzioa, etxebizitzetako gastu eta diru-sarrera guztien ehuneko gisa","3-9-1-title":"Heriotza-tasa, etxebizitzen eta horien inguruko airearen kutsadurari egozten zaiena","3-9-2-title":"Ur osasungaitzari, saneamendu eskasari eta higiene-faltari egotzitako heriotza-tasa (ur osasungaitzaren zerbitzuekiko esposizioa, saneamendua eta higienea guztiontzat (WASH))","3-9-3-title":"Nahi gabeko intoxikazioei egotzitako heriotza-tasa","3-a-1-title":"Tabako-kontsumoaren prebalentzia 15 urtetik gora (adinka banatuta)","3-b-1-title":"Programa nazional bakoitzean sartzen diren txerto guztiekin immunizatutako biztanleriaren proportzioa","3-b-2-title":"Osasun-ikerketako sektoreen eta funtsezko osasun-arretaren garapenera bideratutako laguntza ofizialen guztizko garbia","3-b-3-title":"Modu iraunkorrean eskuratu daitezkeen funtsezko medikamentuen oinarrizko sorta bat duten osasun-zentroen proportzioa","3-c-1-title":"Osasun-langileen dentsitatea eta banaketa","3-d-1-title":"Nazioarteko Osasun Araudian (IHR) ezarritako gaitasuna eta osasun-larrialdietarako prestakuntza","3-d-2-title":"Antimikrobianoekiko erresistenteak diren organismo jakin batzuek eragindako odol-uharkako infekzioen ehunekoa","4-1-1-title":"i) Irakurketan eta ii) matematikan gutxieneko gaitasun-maila lortu duten haurren eta nerabeen proportzioa, sexuaren arabera banatuta, honako maila hauetan: a) bigarren eta hirugarren mailetan, b) lehen hezkuntzaren amaieran eta c) bigarren hezkuntzako lehen zikloaren amaieran","4-1-2-title":"Ikasketak amaitzearen indizea (lehen hezkuntza, bigarren hezkuntzako lehen zikloa eta bigarren hezkuntzako bigarren zikloa)","4-2-1-title":"24 eta 59 hilabete bitarteko haurren artean, osasunean, ikaskuntzan eta ongizate psikosozialean garapen egokia dutenen proportzioa, sexuaren arabera banatuta","4-2-2-title":"Ikaskuntza antolatuan (lehen hezkuntzan hasteko adin ofiziala baino urtebete lehenago) dagoen parte-hartzearen tasa, sexuaren arabera banatuta","4-3-1-title":"Gazteek eta helduek prestakuntza akademikoan zein ez-akademikoan azken 12 hilabeteetan izan duten parte-hartzearen tasa, sexuaren arabera banatuta","4-4-1-title":"Informazio eta komunikazio teknologietan (IKT) gaitasunak dituzten gazte eta helduen proportzioa, duten gaitasun motaren arabera banatuta","4-5-1-title":"Zerrenda honetan xehatu daitezkeen hezkuntza-adierazle guztietarako parekidetasun-indizeak: gizon-emakumeen artean, landa eta hiri eremuen artean, aberastasun handiagoko eta txikiagoko kintilen artean, eta hainbat taldetan, hala nola desgaitasunen bat dutenetan, herri indigenetan eta gatazken ondorioak jasan dituztenetan, datuak eskuratu ahala)","4-6-1-title":"a) Alfabetizazioan eta b) aritmetikan gutxieneko gaitasun funtzionala lortu duen adin-talde jakin bateko biztanleriaren proportzioa, sexuaren arabera banatuta","4-7-1-title":"Munduko herritartasunerako hezkuntzak eta garapen jasangarrirako hezkuntzak esparru hauetan duten txertatze-maila: a) hezkuntza-politika nazionaletan, b) hezkuntza-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan","4-a-1-title":"Oinarrizko zerbitzuak eskaintzen dituzten ikastetxeen proportzioa, zerbitzu-moten arabera banatuta","4-b-1-title":"Beketara bideratutako garapenerako laguntza ofizialaren bolumena, sektoreen eta ikasketa-moten arabera","4-c-1-title":"Gutxieneko kalifikazioak dituzten irakasleen proportzioa, hezkuntza-mailaka banatuta","5-1-1-title":"Berdintasuna eta sexuagatiko diskriminaziorik eza sustatzeko, betearazteko eta gainbegiratzeko esparru juridikorik dagoen ala ez zehaztea","5-2-1-title":"Azken 12 hilabeteetan egungo bikotekidearen edo bikotekide ohiaren indarkeria fisiko, sexual edo psikologikoa pairatu duten 15 urtetik gorako neskato eta emakumeen proportzioa, indarkeria-motaren eta adinaren arabera","5-2-2-title":"Azken 12 hilabeteetan bikotekidea ez den norbaiten indarkeria sexuala pairatu duten 15 urtetik gorako neskato eta emakumeen proportzioa, adinaren eta gertalekuaren arabera","5-3-1-title":"15 urte bete aurretik eta 18 urte bete aurretik ezkonduta zeuden edo harreman egonkor bat zuten 20 eta 24 urte bitarteko emakumeen proportzioa","5-3-2-title":"Emakumeen genitalen mutilazioa jasan duten 15 eta 49 urte bitarteko neskato eta emakumeen proportzioa, adinaren arabera banatuta","5-4-1-title":"Ordaindu gabeko etxeko lanetan eta zaintza-lanetan emandako denboraren proportzioa, sexuaren, adinaren eta lekuaren arabera","5-5-1-title":"Emakumeen eskuetan dauden jarlekuen proportzioa, a) parlamentu nazionaletan eta b) tokiko gobernuetan","5-5-2-title":"Emakumeen proportzioa zuzendaritza-karguetan","5-6-1-title":"Sexu-harremanei, antisorgailuen erabilerari eta ugaltze-osasunari buruzko erabaki propio eta informatuak hartzen dituzten 15 eta 49 urte bitarteko emakumeen proportzioa","5-6-2-title":"15 urtetik aurrerako gizon-emakumeei sexu- eta ugalketa-arloko osasun-zerbitzuetarako sarbide oso eta parekidea bermatzeko, bai eta horri buruzko informazioa eta heziketa ere, legeak eta araudiak dituzten herrialdeen kopurua","5-a-1-title":"a) Nekazaritza-lurren jabetza-eskubideak edo eskubide seguruak dituzten biztanle nekazari guztien proportzioa, sexuaren arabera banatuta; eta b) nekazaritza-lurren jabeen edo eskubideen titularren artean dauden emakumeen proportzioa, edukitza-motaren arabera banakatuta","5-a-2-title":"Ordenamendu juridikoan (ohiturazko zuzenbidea barne) emakumeei lurraren jabetzarako eta kontrolerako eskubide-berdintasuna bermatzen dieten herrialdeen proportzioa","5-b-1-title":"Telefono mugikorra duten pertsonen proportzioa, sexuaren arabera banatuta","5-c-1-title":"Genero-berdintasunaren eta emakumeen ahalduntzearen jarraipena egiteko sistemak dituzten eta funts publikoak horretara bideratzen dituzten herrialdeen proportzioa","6-1-1-title":"Arriskurik gabe kudeatzen diren ura hornitzeko zerbitzuak erabiltzen dituen biztanleriaren proportzioa","6-2-1-title":"Honako hauek erabiltzen dituen biztanleriaren proportzioa: a) arriskurik gabe kudeatzen diren saneamendu-zerbitzuak eta b) eskuak urez eta xaboiz garbitzeko instalazioak","6-3-1-title":"Behar bezala tratatu gabeko etxeko eta industriako hondakin-uren fluxuen proportzioa","6-3-2-title":"Kalitate oneko ur-masen proportzioa","6-4-1-title":"Aldaketak denboran zehar baliabide hidrikoen erabilera eraginkorrean","6-4-2-title":"Estres hidrikoaren maila: eskuragarri dauden ur-baliabideetatik erauzten den ur gezaren proportzioa","6-5-1-title":"Baliabide hidrikoen kudeaketa integratuaren maila","6-5-2-title":"Uren arloko lankidetzarako ekintzekin lotuta dauden arro mugakideen azaleraren proportzioa","6-6-1-title":"Aldaketak denboran zehar urarekin lotura duten ekosistemen hedaduran","6-a-1-title":"Ur eta saneamendu arlora bideratutako garapenerako laguntza ofizialaren bolumena, gobernuak kudeatzen duen gastuen plan baten zati gisa","6-b-1-title":"Tokiko komunitateek ur- eta saneamendu-kudeaketan parte hartzeko politikak eta prozedura operatiboak finkatu dituzten tokiko administrazio-sailen proportzioa","7-1-1-title":"Elektrizitaterako sarbidea duen biztanleriaren proportzioa","7-1-2-title":"Energia-iturri nagusi gisa erregai eta teknologia garbiak erabiltzen dituen biztanleriaren proportzioa","7-2-1-title":"Energia berriztagarrien proportzioa energiaren azken osoko kontsumoan","7-3-1-title":"Energia-intentsitatea, energia primarioaren eta BPGaren arabera neurtuta","7-a-1-title":"Nazioarteko finantza-korronteak garapen-bidean dauden herrialdeetara, energia garbien ikerketa eta garapena babesteko eta energia berriztagarrien ekoizpena sustatzeko, sistema hibridoak barne","7-b-1-title":"Energia berriztagarriak sortzeko gaitasun instalatua garapen-bidean dauden herrialdeetan eta herrialde garatuetan (watt per capita)","8-1-1-title":"Per capita BPG errealaren urte arteko hazkunde-tasa","8-10-1-title":"a) Banku komertzialen kopurua 100.000 pertsona helduko, eta b) kutxazain automatikoen kopurua 100.000 pertsona helduko","8-10-2-title":"Banku batean, beste finantza-erakunde batean edo mugikorreko diruaren zerbitzu-hornitzaile batean kontu bat duten helduen (15 urtetik gora) proportzioa","8-2-1-title":"BPG errealaren urte arteko hazkunde-tasa pertsona landuneko","8-3-1-title":"Enplegu informalaren proportzioa guztizko enplegutik, sektoreen eta sexuen arabera banatuta","8-4-1-title":"Aztarna materiala balio absolututan, per capita aztarna materiala eta BPGaren araberako azatarna materiala kontuan hartuz","8-4-2-title":"Barne-kontsumo materiala balio absolututan, per capita barne-kontsumo materiala eta barne-kontsumo materiala BPGaren arabera","8-5-1-title":"Pertsona enplegatuen orduko diru-sarrerak, sexuaren, adinaren eta lanbidearen arabera, eta desgaitasunen bat dutenak kontuan hartuta","8-5-2-title":"Langabezia-tasa, sexuaren eta adinaren arabera eta desgaitasunen bat dutenak kontuan hartuta","8-6-1-title":"Ikasten edo gaitzen ari ez diren eta enplegurik ez duten gazteen (15 eta 24 urte bitartean) proportzioa","8-7-1-title":"5 eta 17 urte bitarteko haurren lanaren proportzioa eta lan egiten duten haurren kopurua, sexuaren eta adinaren arabera banatuta","8-8-1-title":"Heriotza eragin duten zein eragin ez duten laneko lesioak 100.000 langileko, sexuaren eta migrazio-estatusaren arabera banatuta","8-8-2-title":"Lan-eskubideen (elkartzeko eta negoziazio kolektiborako askatasuna) betetze-maila nazionala, Lanaren Nazioarteko Erakundearen (LANE) testuen eta barne-legediaren arabera, sexuaren eta migrazio-estatusaren arabera banatuta","8-9-1-title":"Zuzenean turismoak sortzen duen BPGa, BPG osoarekiko eta hazkunde-tasarekiko proportzioan","8-a-1-title":"Konpromisoak eta gastuak merkataritzari laguntzeko ekimenekin lotuta","8-b-1-title":"Gazteek enplegua lortzeko estrategia nazional antolatu bat izatea eta martxan egotea, estrategia burujabe gisa edo lan-estrategia nazional baten barnean","9-1-1-title":"Urte osoan ibiltzeko moduko errepide batetik 2 km baino gutxiagora bizi den landa-biztanleriaren proportzioa","9-1-2-title":"Bidaiari- eta karga-garraioaren bolumena, garraiobideen arabera banatuta","9-2-1-title":"Manufaktura-sektorearen balio erantsia, BPGarekiko proportzioan eta per capita","9-2-2-title":"Manufaktura-sektoreko enplegua, enplegu osoarekiko proportzioan","9-3-1-title":"Industria txikien proportzioa, industria sektoreko balio erantsi osoan","9-3-2-title":"Mailegu bat edo kreditu-lerro bat lortu duten industria txikien proportzioa","9-4-1-title":"CO2 emisioak, balio erantsiko unitateko","9-5-1-title":"Ikerketaren eta garapenaren alorreko gastua, BPGarekiko proportzioan","9-5-2-title":"Ikertzaile-kopurua (lanaldi osoei dagokien kopurua), milioi biztanletik","9-a-1-title":"Azpiegituretara bideratutako nazioarteko babes ofizial osoa (garapenerako laguntza ofiziala eta bestelako baliabide-korronte ofizialak)","9-b-1-title":"Goi- eta erdi-mailako teknologiako industriaren balio erantsiaren proportzioa, balio erantsi osoarekiko","9-c-1-title":"Sare mugikorraren estaldura duen biztanleriaren proportzioa, teknologiaren arabera banatuta"},"global_targets":{"1-1-title":"2030. urterako, muturreko pobrezia errotik kentzea mundu osoan (gaur egun ulertzen da muturreko pobrezian daudela egunean Ameriketako Estatu Batuetako 1,25 dolar baino gutxiagorekin bizi direnak)","1-2-title":"2030. urterako, gutxienez erdira jaistea pobrezian, bere dimentsio guztietan (definizio nazionalen arabera), bizi diren gizon, emakume eta adin guztietako haurren proportzioa","1-3-title":"Nazio‐mailan guztiontzako babes sozialeko sistema eta neurri egokiak ezartzea, gutxieneko mailak barne, eta, 2030. urterako, pertsona pobre eta kalteberen babes zabala lortzea","1-4-title":"2030. urterako, gizon eta emakume guztiek, bereziki pobre eta kalteberek, baliabide ekonomikoetarako eskubide berberak dituztela bermatzea, bai eta hauek irispidean izango dituztela ere: oinarrizko zerbitzuak, lurraren eta beste ondasun batzuen jabetza eta kontrola, herentzia, natura-baliabideak, teknologia berri egokiak eta finantza-zerbitzuak, mikrofinantzaketa barne","1-5-title":"2030. urterako, pobreen eta ahultasun‐egoeretan dauden pertsonen erresilientzia sustatzea, eta haien esposizioa eta ahultasuna murriztea muturreko fenomeno hauekiko: klimarekin eta beste asaldura eta hondamen ekonomiko, sozial eta ingurumeneko batzuekin zerikusia dutenekiko","1-a-title":"Zenbait iturritatik datozen baliabideen mobilizazio esanguratsua bermatzea, baita garapenerako lankidetza hobetuz ere, aurreikusteko moduko nahikoa baliabide emateko garapen‐bidean dauden herrialdeei, aurrerapen txikienekoei bereziki, pobreziari dimentsio guztietan amaiera emateko programa eta politikak ezartzeko","1-b-title":"Araudi-esparru sendoak sortzea nazio, eskualde‐ eta nazioarte-mailan, oinarritzat hartuta pobreen alde egiten duten eta genero kontuak aintzat hartzen dituzten garapen estrategiak, inbertsioa azeleratzeko pobrezia errotik kentzeko neurrietan","10-1-title":"2030. urterako, biztanle pobreenen % 40ren diru‐sarrerek pixkanaka batezbesteko nazionala igaro dezatela eta kopuru horietan jarrai dezala lortzea","10-2-title":"2030. urterako, pertsona guztien gizarte‐, ekonomia‐ eta politika‐inklusioa indartzea eta sustatzea, beren adina, sexua, desgaitasuna, arraza, etnia, jatorria, erlijioa, egoera ekonomikoa edo beste edozein egoera edonolakoa izanda ere","10-3-title":"Aukera‐berdintasuna bermatzea eta emaitzen desberdintasuna murriztea, baita horretarako diskriminaziozko legeak, politikak eta praktikak kendu egin behar badira ere, alde horretatik egokiak diren legeak, politikak eta neurriak ezartzeko","10-4-title":"Politikak ezartzea (bereziki, zergei, soldatei eta gizarte‐babesari lotutakoak), eta pixkanaka gero eta berdintasun handiagoa lortzea","10-5-title":"Erakundeen eta munduko finantza‐merkatuen araudia eta zaintza hobetzea, eta araudi horien aplikazioa sendotzea","10-6-title":"Garapen‐bidean dauden herrialdeen ordezkaritza eta esku‐hartze handiagoa bermatzea nazioarteko ekonomia‐ eta finantza‐erakundeek hartutako erabakietan, erakunde horien eraginkortasuna, fidagarritasuna, kontuak eta legitimotasuna hobetzeko","10-7-title":"Pertsonen migrazio eta mugikortasun ordenatua, segurua, arautua eta arduratsua ahalbidetzea, baita migrazio‐politika planifikatuak eta ondo kudeatuak aplikatuta ere","10-a-title":"Tratu berezi eta bereiziaren printzipioa aplikatzea garapen‐bidean dauden herrialdeentzat, bereziki aurrerapen txikieneko herrialdeentzat, bat etorriz Munduko Merkataritza Antolakundean hitzarmenekin","10-b-title":"Garapenerako laguntza ofiziala eta finantza-korronteak sustatzea, atzerriko inbertsio zuzena barne, behar handienak dituzten estatuentzat; bereziki, aurrerapen txikieneko herrialdeentzat, Afrikako herrialdeentzat, garapen‐bidean dauden uharte‐estatu txikientzat eta garapen‐bidean dauden kostalderik gabeko herrialdeentzat, beren plan eta programa nazionalekin bat etorriz","10-c-title":"2030. urterako, % 3tik behera murriztea migratzaile‐taldeen transakzio‐kostuak eta % 5etik goragoko kostua duten migratzaileen igarobideak","11-1-title":"2030. urterako, pertsona guztiek etxebizitza eta oinarrizko zerbitzu egokiak, seguruak eta arrazoizkoak izan ditzatela bermatzea, eta auzo marjinalak hobetzea","11-2-title":"2030. urterako, pertsona guztientzako garraio‐sistema seguru, arrazoizko, irisgarri eta jasangarria izateko aukera ematea, batez ere, garraio publikoa areagotuz eta ahultasun‐egoeran dauden pertsonen beharrei arreta berezia eskainiz (emakumeak, haurrak, desgaitasunen bat dutenak eta adineko pertsonak)","11-3-title":"2030. urterako, hirigintza inklusiboa eta jasangarria areagotzea, eta baita giza kokaguneen kudeaketa parte‐hartzailea, integratua eta jasangarria ere, herrialde guztietan","11-4-title":"Munduko kultura‐ eta natura‐ondarea babesteko eta zaintzeko ahaleginak bikoiztea","11-5-title":"2030. urterako, nabarmen murriztea hondamendien ondorioz (urarekin zerikusia dutenak barne) sortutako heriotzen eta horien eraginak jasaten dituzten pertsonen kopurua, eta nabarmen murriztea hondamendiek sortutako zuzeneko galera ekonomikoak, munduko barne‐ produktu gordinarekin alderatuta, arreta berezia emanez pobreei eta ahultasun‐egoeran dauden pertsonei","11-6-title":"2030. urterako, hirietako per capita ingurumen‐inpaktu negatiboa murriztea, eta arreta berezia eskaintzea airearen kalitateari eta udal‐hondakinen eta beste hondakin batzuen kudeaketari","11-7-title":"2030. urterako, berdegune eta espazio publiko seguru, inklusibo eta irisgarriak edukitzeko aukera unibertsala izatea, bereziki, emakumeentzat, haurrentzat, adinekoentzat eta desgaitasunen bat duten pertsonentzat","11-a-title":"Hiriguneen, hiri‐inguruen eta landa‐eremuen arteko ekonomia‐, gizarte‐ eta ingurumen‐lotura positiboak babestea, garapen nazionalaren eta eskualdekoaren plangintza sendotuz","11-b-title":"2020. urterako, nabarmen areagotzea politika eta plan integratuak bereganatzen eta ezartzen dituzten hirien eta giza kokaguneen kopurua, horren helburua izanik inklusioa, baliabideen erabilera eraginkorra, klima‐aldaketaren arintzea, klima‐aldaketarako egokitzapena eta hondamendien aurkako erresilientzia hobetzea; horrez gain, hondamendi‐arriskuen kudeaketa integrala egitea eta martxan jartzea, maila guztietan, Hondamendien Arriskua Murrizteko 2015‑2030 aldirako Sendaiko Esparruarekin bat etorriz","11-c-title":"Babesa ematea aurrerapen txikieneko herrialdeei, laguntza finantzario eta teknikoaren bidez, eraikin jasangarriak eta sendoak eraiki ahal izan ditzaten, tokiko materiala erabiliz","12-1-title":"Kontsumo eta Ekoizpen Modalitate Jasangarriei buruzko Programen Hamar Urterako Esparrua aplikatzea, herrialde guztien parte‐hartzearekin eta garatutako herrialdeek gidatuta, kontuan izanda garapen‐bidean dauden herrialdeen garapen‐maila eta ahalmenak","12-2-title":"2030. urterako, baliabide naturalen kudeaketa jasangarria eta erabilera eraginkorra egin dadila lortzea","12-3-title":"2030. urterako, munduan, txikizkako salmentan eta kontsumitzaileen artean per capita alferrik galtzen diren elikagaien kopurua erdira murriztea, eta ekoizpen‐ eta horniketa‐kateetako elikagai‐galerak murriztea, uztaren ondorengo galerak barne","12-4-title":"2020. urterako, produktu kimikoak eta hondakin guztiak ekologikoki arrazoizkoa den moduren batean kudeatzea beren bizi‐zikloan, hitzartutako nazioarteko esparruekin bat etorriz; eta nabarmen murriztea atmosferara, urera eta lurrera egiten dituzten isuriak, horiek giza osasunean eta ingurumenean dituzten eragin kaltegarriak arintze aldera","12-5-title":"2030. urterako, nabarmen murriztea hondakinen sorrera, prebentzio‐, murrizketa‐, birziklatze‐ eta berrerabilpen‐jardueren bitartez","12-6-title":"Enpresak animatzea, bereziki enpresa handiak eta transnazionalak, jardunbide jasangarriak erabiltzera eta jasangarritasunari buruzko informazioa sartzera beren txostenen aurkezpen‐zikloan","12-7-title":"Erosketa publikoko jardunbide jasangarriak sustatzea, politika eta lehentasun nazionalekin bat etorriz","12-8-title":"2030. urterako, mundu osoko pertsonek beharrezko informazioa eta ezagutzak badituztela bermatzea, garapen jasangarrirako eta naturarekin bat datorren bizi‐estiloa edukitzeko","12-a-title":"Garapen‐bidean dauden herrialdeei laguntzea beren zientzia‐ eta teknologia‐ahalmena sendotzen, kontsumo‐ eta ekoizpen‐modalitate jasangarriagoetarantz aurrera egiteko","12-b-title":"Garapen jasangarriaren inpaktuen jarraipena egiteko tresnak sortu eta aplikatzea, lanpostuak sortuko dituen eta tokiko kultura eta produktuak sustatuko dituen turismo jasangarria lortzeko","12-c-title":"Kontsumo antiekonomikoak sustatzen dituzten erregai fosilentzako diru‐laguntza ez-eraginkorrak arrazionalizatzea, eta horretarako, merkatuaren desitxuratzeekin amaitzea, egoera nazionalekin bat etorriz. Horretarako, zerga‐sistemak berregituratu beharko dira eta diru‐laguntza kaltegarriak pixkanaka kendu beharko dira (halakorik balego), ingurumenean duten eragina agerian gera dadin; eta erabat kontuan izan beharko dira garapen‐bidean dauden herrialdeen behar eta baldintza zehatzak, eta beren garapenean sor ditzaketen eragin kaltegarriak murriztu beharko dira, pobreak eta komunitate kaltetuak babesteko","13-1-title":"Klimarekin eta hondamendi naturalekin lotutako arriskuekiko erresilientzia eta horietara egokitzeko ahalmena sendotzea herrialde guztietan","13-2-title":"Klima‐aldaketarekin lotutako neurriak sartzea politika, estrategia eta plan nazionaletan","13-3-title":"Hezkuntza, sentsibilizazioa eta giza ahalmena eta erakundeena hobetzea, klima‐aldaketa murrizteko, horretara egokitzeko, dituen eraginak arintzeko eta garaiz ohartarazteko","13-a-title":"Klima Aldaketari buruzko Nazio Batuen Esparru Konbentzioan parte hartzen duten garatutako herrialdeen konpromisoa betetzea; hau da, 2020rako iturri guztietatik jasotako 100-000 milioi dolar (urtean) erabiltzea, denen artean, garapen‐bidean dauden herrialdeen beharrei erantzuteko, klima‐aldaketa arintzeko neurri zehatzak hartzeko eta horiek gardentasunez aplikatzeko; eta martxan jartzea Klimarako Funts Berdea, ahalik eta azkarren kapitalizatuta","13-b-title":"Plangintza eta kudeaketa eraginkorrerako ahalmena areagotzeko mekanismoak sustatzea, klima‐aldaketarekin lotuta, aurrerapen txikieneko herrialdeetan eta garapen‐bidean dauden uharte‐estatu txikietan; arreta berezia eskainiz emakumeei, gazteei, tokiko komunitateei eta komunitate marjinatuei","14-1-title":"2025. urterako, mota guztietako itsas kutsadura aurreikustea eta nabarmen murriztea, bereziki, lurrean eginiko jardueren bidez sortutakoa (itsas detrituak eta elikagaien bidezko kutsadura barne)","14-2-title":"2020. urterako, itsasoko eta kostaldeko ekosistemak modu jasangarrian kudeatzea eta babestea, eragin kaltegarri esanguratsuak saihesteko. Horretarako, sendotu egin beharko dira eta horiek leheneratzeko neurriak hartu beharko dira, ozeanoen osasuna eta produktibitatea berreskuratze aldera","14-3-title":"Ozeanoak azidotzearen eraginak murriztea eta horiei aurre egitea, baita maila guztietan lankidetza zientifiko handiagoa martxan jarriz ere","14-4-title":"2020. urterako, modu eraginkorrean arautzea arrantza‐ustiapena eta amaiera ematea gehiegizko arrantzari, legez kanpokoari, aitortu gabekoari eta arautu gabekoari, baita arrantza‐jardunbide suntsitzaileei ere; horrez gain, oinarri zientifikoa duten kudeaketa‐planak aplikatzea, arrain-populazioak berrezartze aldera ahalik eta epe motzenean, beren ezaugarri biologikoen arabera ahalik eta errendimendu jasangarriena eman dezaketen mailetara iritsiz","14-5-title":"2020. urterako, kostaldeen eta itsas eremuen % 10, gutxienez, kontserbatzea, lege nazionalekin eta nazioarteko zuzenbidearekin bat etorriz eta oinarri gisa erabilgarri dagoen informazio zientifiko hoberena erabiliz","14-6-title":"2020. urterako, arrantzari emateko diru‐laguntza mota batzuk debekatzea, ahalmenen gaineko arrantza eta gehiegizko arrantza ahalbidetzen dituztelako; kentzea, halaber, legez kanpoko arrantza, aitortu gabekoa eta arautu gabekoa ahalbidetzen duten diru‐laguntzak; eta mota horretako diru‐laguntza gehiago ez sortzea. Ildo horretan, Munduko Merkataritza Antolakundearen esparruan egiten diren arrantzarako diru‐laguntzei buruzko negoziazioek barne hartu behar dute tratu berezi eta bereizi bat, garapen‐bidean dauden eta aurrerapen txikienekoak diren herrialdeentzako egokia eta eraginkorra","14-7-title":"2030. urterako, areagotzea garapen‐bidean dauden uharte‐estatu txikiek eta aurrerapen txikieneko herrialdeek beren itsas baliabideak jasangarritasunez erabiltzean lortzen dituzten irabazi ekonomikoak, bereziki, arrantzaren, akuikulturaren eta turismoaren kudeaketa jasangarriaren bidez lortzen dituztenak","14-a-title":"Ezagutza zientifikoak areagotzea, ikerketa‐ahalmena garatzea eta itsas teknologia transferitzea, Gobernu Arteko Ozeanografia Batzordearen Itsas Teknologia Transferitzeko Irizpideak eta Gidalerroak kontuan hartuz, ozeanoen osasuna hobetzeko eta itsas biodibertsitateak garapen‐bidean dauden herrialdeei egiten dien ekarpena areagotzea, bereziki, garapen‐bidean dauden uharte‐estatu txikiei eta aurrerapen txikieneko herrialdeei","14-b-title":"Artisau-arrantzaleek itsas baliabideak eskuratzeko eta merkatuetara sartzeko dituzten aukerak areagotzea","14-c-title":"Ozeanoen eta horien baliabideen kontserbazioa eta erabilera jasangarria hobetzea, Itsas Zuzenbideari buruzko Nazio Batuen Konbentzioan jasotako nazioarteko zuzenbidea aplikatuz; hain zuzen ere, zuzenbide horrek osatzen du ozeanoak eta bertako baliabideak zaintzeari eta jasangarritasunez erabiltzeari dagokion esparru juridikoa, “Nahi dugun etorkizuna” agiriko 158. paragrafoak zehazten duen moduan","15-1-title":"2020. urterako, lurreko ekosistemen eta ur gezaren barne‐ekosistemen eta horien zerbitzuen zaintza, berrezarpena eta erabilera jasangarria bermatzea, bereziki hauena: basoak, hezeguneak, mendiak eta gune lehorrak; hori guztia, bat etorriz nazioarteko hitzarmenen bidez ezarritako betebeharrekin","15-2-title":"2020. urterako, martxan jartzea baso‐mota guztien kudeaketa jasangarria, deforestazioa geldiaraztea, degradatutako basoak berreskuratzea eta baso-sartzea nahiz basoberritzea nabarmen areagotzea mundu‐mailan","15-3-title":"2030. urterako, desertifikazioari aurka egitea, lur eta lurzoru degradatuak birgaitzea (desertifikazioek, lehorteek eta uholdeek kaltetutako lurrak barne) eta lurzoruaren degradazioan eragin neutroa izango duen mundu bat lortzen saiatzea","15-4-title":"2030. urterako, ekosistema menditsuen kontserbazioa bermatzea, horien dibertsitate biologikoa barne, garapen jasangarrirako funtsezko onurak emateko duten ahalmena hobetze aldera","15-5-title":"Neurri premiazko eta esanguratsuak hartzea, habitat naturalen degradazioa murrizteko, biodibertsitatearen galera geldiarazteko eta, 2020. urterako, mehatxatutako espezieak babesteko eta desagertu daitezela saihesteko","15-6-title":"Parte-hartze zuzena eta bidezkoa sustatzea baliabide genetikoak erabiltzearen ondoriozko irabazietan, eta baliabide horietarako sarbide egokia sustatzea, nazioartean hitzartutakoaren arabera","15-7-title":"Premiazko neurriak hartzea ezkutuko ehizari eta flora‐ eta fauna‐espezie babestuen trafikoari amaiera emateko, eta flora‐ eta fauna‐produktu basatien legez kanpoko eskari nahiz eskaintzari aurre egiteko","15-8-title":"2020. urterako, espezie exotiko inbaditzaileak sar daitezela prebenitzeko eta horiek lurreko nahiz uretako ekosistemetan dituzten eraginak nabarmen murrizteko neurriak hartzea, eta lehentasunezko espezieak kontrolatzea edo desagerraraztea","15-9-title":"2020. urterako, ekosistemen eta biodibertsitatearen balioak sartzea plangintzan, garapen‐prozesuetan, pobrezia murrizteko estrategietan eta kontabilitate nazionaletan eta tokikoetan","15-a-title":"Iturri guztietatik datozen finantza‐baliabideak mobilizatzea eta nabarmen areagotzea, biodibertsitatea eta ekosistemak zaintzeko eta jasangarritasunez erabiltzeko","15-b-title":"Iturri guztietako eta maila guztietako baliabide esanguratsuak mobilizatzea, baso‐kudeaketa jasangarria finantzatzeko eta garapen‐ bidean dauden herrialdeei pizgarri egokiak emateko, kudeaketa hori susta dezaten; bereziki, kontserbazioari eta basoberritzeari dagokienez","15-c-title":"Ezkutuko ehizaren eta babestutako espezieen trafikoaren aurkako borrokari mundu‐mailan ematen zaion babesa areagotzea, tokiko komunitateen ahalmena areagotuz, iraupen‐aukera jasangarriak lor ditzaten","16-1-title":"Nabarmen murriztea indarkeria‐mota guztiak, eta horiei lotutako heriotza‐tasak, mundu guztian","16-10-title":"Informaziorako sarbide publikoa bermatzea eta oinarrizko askatasunak babestea, lege nazionalekin eta nazioarteko hitzarmenekin bat etorriz","16-2-title":"Amaiera ematea haurren kontrako tratu txarrei, esplotazioari eta indarkeria‐ eta tortura‐mota guztiei","16-3-title":"Zuzenbidezko estatua sustatzea maila nazionalean eta nazioartean, eta justizia eskuragarri izateko aukera‐berdintasuna bermatzea denontzat","16-4-title":"2030. urterako, nabarmen murriztea finantza‐korronteak eta legez kanpoko armenak, lapurtutako aktiboen berreskurapena eta itzulera sendotzea, eta antolatutako delinkuentzia‐mota guztien aurka borroka egitea","16-5-title":"Nabarmen murriztea ustelkeria eta eroskeria, bere forma guztietan","16-6-title":"Kontuak emango dituzten erakunde eraginkorrak eta gardenak sortzea maila guztietan","16-7-title":"Beharrei erantzungo dieten erabaki inklusiboak, parte‐hartzaileak eta esanguratsuak hartuko direla bermatzea maila guztietan","16-8-title":"Garapen‐bidean dauden herrialdeen parte‐hartzea areagotzea eta sendotzea mundu‐mailako gobernamendu‐erakundeetan","16-9-title":"2030. urterako, denok nortasun juridikoa izan dezagula ahalbidetzea, batez ere jaiotzak erregistratzearen bidez","16-a-title":"Nazioarteko erakunde egokiak indartzea, baita nazioarteko lankidetzaren bidez ere, indarkeria prebenitzeko eta terrorismoari eta delinkuentziari aurka egiteko ahalmena sortzeko, maila guztietan, bereziki garapen‐bidean dauden herrialdeetan","16-b-title":"Diskriminaziozkoak ez diren legeak eta politikak sustatzea eta aplikatzea, garapen jasangarriaren alde","17-1-title":"Barneko baliabideen mugikortasuna indartzea, nazioarteko babesa emanez garapen‐bidean dauden herrialdeei, diru‐sarrera fiskalak eta beste era batekoak biltzeko ahalmena hobetze aldera","17-10-title":"Alde anitzeko merkataritza‐sistema unibertsal bat sustatzea, arauetan oinarritua, irekia, diskriminaziorik gabea eta bidezkoa, Munduko Merkataritza Antolakundearen esparruan, baita Garapenerako Dohako Programaren esparruko negoziazioak itxiz ere","17-11-title":"Garapen bidean dauden herrialdeen esportazioak nabarmen areagotzea, bereziki, aurrerapen txikieneko herrialdeen parte‐hartzea bikoizteko munduko esportazioetan, 2020. urterako","17-12-title":"Zergarik eta kuotarik gabe merkatuetara sartzea behar bezala eta modu jasangarrian lortzea aurrerapen txikieneko herrialde guztientzat, bat etorriz Munduko Merkataritza Antolakundearen erabakiekin; horretarako, aurrerapen txikieneko herrialdeen inportazioei aplika dakizkiekeen lehentasunezko eta jatorrizko arauak gardenak eta errazak izan daitezela zainduko da, eta merkatuetarako sarbidea erraztu dezatela","17-13-title":"Munduko egonkortasun makroekonomikoa areagotzea, baita politiken arteko koordinazioaren eta koherentziaren bidez ere","17-14-title":"Garapen jasangarrirako politiken koherentzia hobetzea","17-15-title":"Herrialde bakoitzaren araudi‐marjina eta lidergoa errespetatzea, pobrezia desagerrarazteko eta garapen jasangarrirako politikak ezartzeko eta aplikatzeko","17-16-title":"Garapen Jasangarrirako Munduko Ituna hobetzea, eta horren osagarri izango diren hainbat interesdunen arteko aliantzak ezartzea, ezagutzak, espezializazioa, teknologia eta finantza‐baliabideak mobilizatzeko eta trukatzeko, herrialde guztietan, bereziki garapen‐bideetan daudenetan, Garapen Jasangarrirako Helburuak lortzeko babesa emate aldera","17-17-title":"Esfera publikoan, publiko‐pribatuan eta gizarte zibilean aliantza eraginkorrak sor daitezela sustatzea, aliantzen bidez baliabideak lortzeko esperientzia eta estrategiez baliatuz","17-18-title":"2020. urterako, garapen‐bidean dauden herrialdeei (aurrerapen txikieneko herrialdeak eta garapen‐bidean dauden uharte‐estatu txikiak barne) ahalmena sortzeko emandako babesa hobetzea, datu egokien, fidagarrien eta kalitatezkoen erabilgarritasuna nabarmen areagotzeko; datu horiek honela banakatuta egon beharko dute: diru-sarrerak, sexua, adina, arraza, jatorri etnikoa, migrazio‐estatusa, desgaitasuna, kokapen geografikoa eta testuinguru nazionaletan egokitzat jotzen diren beste ezaugarri batzuk","17-19-title":"2030. urterako, martxan dauden ekimenak aprobetxatzea garapen jasangarriaren arloan egindako aurrerapenak neurtzea ahalbidetuko duten zenbait adierazle sortzeko; adierazle horiek, halaber, barne produktu gordinaren osagarri izango dira, eta garapen bidean dauden herrialdeetan ahalmen estatistikoa sortzen lagunduko dute","17-2-title":"Garatutako herrialdeek garapenerako laguntza ofizialarekin lotutako beren konpromisoak erabat betetzen dituztela zaintzea, hainbat herrialdek hartutako konpromiso hau barne: nazio-errenta gordinaren % 0,7 garapen bidean dauden herrialdeen garapenerako laguntza ofizialera bideratzea, eta nazio-errenta gordinaren % 0,15 eta % 0,20 artean aurrerapen txikieneko herrialdeen garapenerako laguntza ofizialera bideratzea. Garapenerako laguntza ofizialaren emaileak bultzatu dira honako hau betetzeko helburua ezar dezaten: nazio-errenta gordinaren % 0,20, gutxienez, aurrerapen txikieneko herrialdeen garapenerako laguntza ofizialera bideratzea","17-3-title":"Hainbat iturritako finantza‐baliabide gehigarriak mobilizatzea, garapen‐bidean dauden herrialdeentzat","17-4-title":"Garapen‐bidean dauden herrialdeei laguntza ematea epe luzerako zorra jasangarria izan dadin lortzeko, finantzaketa sustatzera bideratutako politika koordinatuen bidez, zorra arinduz eta berregituratuz (dagokion moduan) eta oso zorpetuta dauden herrialde pobreen kanpoko zorrari aurre eginez, gehiegizko zorpetzea murrizte aldera","17-5-title":"Aurrerapen txikieneko herrialdeen aldeko inbertsioak sustatzeko sistemak ezartzea eta aplikatzea","17-6-title":"Eskualde‐mailako eta nazioarteko Iparralde‐Hegoalde eta Hegoalde‐Hegoalde lankidetza hobetzea, baita lankidetza triangeluarra ere, honako arlo hauetan: zientzia, teknologia, berrikuntza eta horietarako sarbidea; eta ezagutzen trukea areagotzea bi aldeen artean hitzartutako baldintzetan, egungo mekanismoen arteko koordinazioa hobetuz (bereziki, Nazio Batuei dagokienez) eta teknologiaren erabilera erraztuko duen mundu‐mailako mekanismo baten bidez","17-7-title":"Ekologikoki arrazoizkoak diren teknologien garapena sustatzea, eta horiek garapen‐bidean dauden herrialdeetara transferitzea, dibulgatzea eta hedatzea, baldintza onetan, baita emakida‐ eta lehentasun‐baldintzetan ere, aldeen artean hitzartutakoaren arabera","17-8-title":"Martxan jartzea, beranduenez 2017an, teknologia‐bankua eta zientziaren, teknologiaren eta berrikuntzaren arloko ahalmena sortzeko babes‐mekanismoa, aurrerapen txikieneko herrialdeentzat; eta teknologia instrumentalen erabilera areagotzea, bereziki, informazioaren eta komunikazioen teknologiarena","17-9-title":"Garapen bidean dauden herrialdeetan ahalmena sortzeko jarduera eraginkorrak eta espezifikoak gauzatzeko nazioarteko babesa areagotzea, Garapen Jasangarrirako Helburu guztiak ezartzeko plan nazionalak babesteko, Iparralde‐Hegoalde eta Hegoalde‐Hegoalde lankidetzaren bitartez, eta baita lankidetza triangeluarraren bitartez ere","2-1-title":"2030. urterako, gosea desagerrarazi, eta pertsona guztiei ziurtatzea, bereziki pobreei eta ahultasun‐egoeran daudenei, bularreko haurrak barne, elikadura osasuntsua, nutritiboa eta nahikoa, urte osoan zehar","2-2-title":"2030. urterako, malnutrizioaren modu guztiekin amaitzea, eta, beranduenez 2025ean, nazioartean hazkundearen atzerapenaren eta 5 urtetik beherako umeen ahultasunaren gainean hitzartutako erronkak lortzea, eta nerabeen, haurdun daudenen eta bular‐emaile diren emakumeen eta adineko pertsonen nutrizio‐beharrei erantzutea","2-3-title":"2030. urterako, nekazaritza‐ustiapena eta eskala txikian elikagai-ekoizle direnen diru‐sarrerak bikoiztea (bereziki, emakume, herri indigena, familiako nekazari, abeltzain eta arrantzaleenak), besteak beste, lurretara sarbide segurua eta bidezkoa edukiz, bai eta beste ekoizpen‐baliabide eta input batzuetara eta ezagutza, finantza‐zerbitzu, merkatu eta balioa eransteko aukeretara ere, eta nekazaritzakoak ez diren enpleguak lortzea","2-4-title":"2030. urterako, elikagaien ekoizpen‐sistemen jasangarritasuna ziurtatzea eta produktibitatea eta ekoizpena areagotzen duten, ekosistemei eusten laguntzen duten, klima‐aldaketara, muturreko fenomeno meteorologikoetara, lehorte, uholde eta beste hondamendi batzuetara egokitzeko gaitasuna indartzen duten eta lurraren eta lurzoruaren kalitatea pixkanaka hobetzen duten nekazaritza‐praktika indartsuak aplikatzea","2-5-title":"2020. urterako, hazien, landutako landareen eta granjako eta etxeko animalien eta dagozkien baso‐espezieen aniztasun genetikoari eustea, besteak beste, kudeaketa egokiaren eta hazi‐ eta landare‐bankuen dibertsifikazioaren bidez, nazio‐, eskualde‐ eta nazioarte‐mailan, eta baliabide genetikoak erabiltzearen eta ezagutza tradizional konexuen eta banaketa bidezko eta zuzenaren bidez, nazioarte‐mailan hitzartutakoaren arabera","2-a-title":"Landako azpiegiturako, ikerketako eta nekazaritza‐eremuko zerbitzuetako, garapen teknologikoko eta ganaduaren eta landareen gene‐bankuetako inbertsioa areagotzea, baita nazioarteko lankidetza handiagoaren bidez ere, nekazaritza‐ eta abeltzaintza‐ekoizpenaren gaitasuna hobetzeko garapen‐bidean dauden herrialdeetan, batez ere aurrerapen txikieneko herrialdeetan","2-b-title":"Munduko nekazaritzako eta abeltzaintzako merkatuetan, merkataritza‐murrizketak eta ‐desitxuratzeak zuzentzea eta prebenitzea, nekazaritza‐ustiapenei diruz laguntzeko modu guztien eta eragin bera duten esportazio‐neurri guztien ezabatze paraleloaren bidez, Garapenerako Dohako Programaren aginduarekin bat","2-c-title":"Elikadurako oinarrizko produktuen eta eratorrien merkatuak ondo dabiltzala ziurtatzeko neurriak hartzea, eta merkatuei buruzko informaziorako sarbide egokia bideratzea, baita elikaduren erreserben gainean ere, elikagaien prezioen muturreko lurrunkortasuna mugatzen laguntzeko","3-1-title":"2030. urterako, munduko amen heriotza‐tasa murriztea, bizirik jaiotako 100.000 umeko hiltzen diren amak 70 baino gutxiago izan daitezen","3-2-title":"2030. urterako, jaioberrien eta 5 urtetik beherako umeen heriotza saihesgarriei amaiera ematea; horrela, herrialde guztiek jaioberrien heriotza‐tasa gutxienez bizirik jaiotako 1.000 bakoitzeko 12ra jaisteko eta 5 urtetik beherako haurren heriotza‐tasa gutxienez 1.000 bakoitzeko 25era jaisteko ahalegina egin dezaten lortzea","3-3-title":"2030. urterako, HIESaren, tuberkulosiaren eta malariaren izurriekin eta aintzat hartu ez diren beste gaixotasun tropikal batzuekin amaitzea eta hepatitisari, uraren bidez transmititutako gaixotasunei eta transmiti daitezkeen beste gaixotasun batzuei aurre egitea","3-4-title":"2030. urterako, heren batera murriztea transmititu ezin diren gaixotasunen ondoriozko heriotza‐tasa goiztiarra, prebentzioaren eta tratamenduaren bidez, eta osasun mentala eta ongizatea sustatzea","3-5-title":"Mendekotasuna sortzen duten substantzien prebentzioa eta tratamendua indartzea, estupefazienteen erabilera desegokia eta alkoholaren kontsumo kaltegarria barne","3-6-title":"2020. urterako, erdira murriztea munduan trafiko‐istripuen ondorioz eragindako heriotza‐ eta lesio‐kopurua","3-7-title":"2030. urterako, sexu‐ eta ugalketa‐osasuneko zerbitzuetarako sarbidea bermatzea, familia‐plangintzakoak, informaziokoak eta hezkuntzakoak barne, eta ugalketa‐osasuna sartzea estrategia eta programa nazionaletan","3-8-title":"Osasun‐estaldura unibertsala lortzea, finantza‐arriskuen aurkako babesa barne, kalitatezko funtsezko osasun‐zerbitzuetarako sarbidea barne, eta kaltegarriak ez diren eta guztiontzako eraginkorrak, eskuragarriak eta kalitatezkoak diren medikamentu eta txertoak eskuratzeko aukera barne","3-9-title":"2030. urterako, nabarmen jaistea produktu kimiko arriskutsuen eta airearen, uraren eta lurraren poluzioaren eta kutsaduraren ondorioz eragindako heriotzak eta gaixotasunak","3-a-title":"Osasunaren Mundu Erakundearen Tabakoaren Kontrolerako Esparru Hitzarmenaren aplikazioa indartzea herrialde guztietan, hala badagokie","3-b-title":"Batez ere garapen‐bidean dauden herrialdeei eragiten dieten gaixotasun transmitigarrien eta ez‐transmitigarrien aurkako txertoak eta medikamentuak ikertzeko eta garatzeko jarduerak bultzatzea eta funtsezko medikamentu eta txerto eskuragarrietara jotzeko bideak erraztea. Hori guztia, Merkataritzarekin eta Osasun Publikoarekin lotutako Jabetza Intelektualeko Eskubideen alderdiei buruzko Hitzarmenean Osasun publikoa babesteko eta, bereziki, guztiontzako medikamentuak eskuratzeko malgutasunari buruz adierazten diren xedapenak ahalik eta gehien erabiltzeko eskubidea dutela","3-c-title":"Nabarmen areagotzea osasunaren finantzaketa eta osasun‐langileen kontratazioa, hobekuntza eta gaikuntza, eta horiei eustea garapen‐bidean dauden herrialdeetan, bereziki, aurrerapen txikieneko herrialdeetan eta garapen‐bidean dauden uharte‐estatuetan","3-d-title":"Herrialde guztiek eta, batez ere, garapen‐bidean dauden herrialdeek alerta goiztiarrerako, arriskuak murrizteko eta nazio‐ eta mundu‐mailako osasunerako arriskuak kudeatzeko duten gaitasuna indartzea","4-1-title":"2030. urterako, haur guztiek lehen eta bigarren hezkuntzako irakaskuntza amaitzen dutela ziurtatzea; doakoa, bidezkoa eta kalitatezkoa izan behar du, eta ikaskuntza‐emaitza egokiak eta eraginkorrak ekarri behar ditu","4-2-title":"2030. urterako, haur guztiek lehen haurtzaroan eta eskolaurreko hezkuntzan arretarako eta garapenerako kalitatezko zerbitzuak eskura ditzaketela ziurtatzea, lehen hezkuntzarako prest egon daitezen","4-3-title":"2030. urterako, gizon eta emakume guztiek kalitatezko prestakuntza tekniko, profesional eta goi-mailakoa eskuratzeko berdintasunezko sarbidea dutela ziurtatzea, unibertsitate‐irakaskuntzakoa barne","4-4-title":"2030. urterako, nabarmen areagotzea enplegua eta lan duina eskuratzeko eta ekintzailetzarako beharrezko gaitasunak, batez ere teknikoak eta lanbidekoak, dituzten gazte eta helduen kopurua","4-5-title":"2030. urterako, genero‐desberdintasunak ezabatzea hezkuntzan, eta berdintasunean oinarritzen den sarbidea ematea irakaskuntzako maila guztietan eta lanbide‐prestakuntzan pertsona ahulenei, desgaitasunen bat duten pertsonei, herri indigenei eta ahultasun‐egoeran dauden haurrei barne","4-6-title":"2030. urterako, gazte guztiak eta helduen proportzio handi bat, bai gizonak bai emakumeak, alfabetatuta daudela eta aritmetikako oinarrizko ezagutzak dituztela ziurtatzea","4-7-title":"2030. urterako, ikasle guztiek garapen jasangarria sustatzeko beharrezkoak diren ezagutza teorikoak eta praktikoak eskuratzen dituztela ziurtatzea, besteak beste, garapen jasangarrirako eta bizi‐estilo jasangarrietarako, giza eskubideetarako, genero‐berdintasunerako, bakearen eta indarkeriarik ezaren kulturaren sustapenerako, munduko herritartasunerako eta kultura‐aniztasunaren baloraziorako eta kulturak garapen jasangarriari laguntzeko, hezkuntzaren bidez","4-a-title":"Haurren eta desgaitasunen bat duten pertsonen beharrak eta genero‐desberdintasunak kontuan hartzen dituzten eta ikaskuntza‐ingurune seguruak, indarkeria gabeak, inklusiboak eta guztiontzako eraginkorrak eskaintzen dituzten hezkuntzako instalazioak eraikitzea eta egokitzea","4-b-title":"2020. urterako, nabarmen areagotzea, mundu‐mailan, garapen‐bidean dauden herrialdeetarako eskuragarri dagoen beka‐kopurua, zehazki, aurrerapen txikieneko herrialdeetarako, garapen‐bidean dauden uharte‐estatuetarako eta Afrikako herrialdeetarako daudenak, bertako ikasleak herrialde garatuetako edo garapen‐bidean dauden beste herrialde batzuetako goi‐mailako irakaskuntza‐programetan matrikulatu ahal izateko, lanbide‐prestakuntzako programak eta programa teknikoak, zientifikoak, ingeniaritzakoak eta informazioaren eta komunikazioen teknologiari buruzko programak barne","4-c-title":"2030. urterako, nabarmen areagotzea goi‐prestakuntza duten irakasleen eskaintza, bai eta garapen‐bidean dauden herrialdeetan, aurrerapen txikieneko herrialdeetan eta garapen‐bidean dauden uharte‐estatuetan irakasleen prestakuntzarako nazioarteko lankidetzaren bidez ere","5-1-title":"Mundu guztian emakume eta neskatoen aurkako diskriminazio-modu guztiekin amaitzea","5-2-title":"Emakume eta neskato guztien aurkako indarkeria-modu guztiak ezabatzea eremu publiko eta pribatuetan, sexu‐salerosketa eta sexu‐esplotazioa eta beste esplotazio-mota batzuk barne","5-3-title":"Praktika kaltegarri guztiak ezabatzea, besteak beste, haurren ezkontza, goiztiarra eta behartua, eta emakumeen genitalen mutilazioa","5-4-title":"Ordaindu gabeko zaintzak eta etxeko lana aitortzea eta baloratzea zerbitzu publiko, azpiegitura eta gizarte‐babeseko politiken bidez, eta etxean eta familian partekatutako erantzukizuna sustatuz, herrialde bakoitzean dagokionaren arabera","5-5-title":"Emakumeen parte‐hartze osoa eta eraginkorra ziurtatzea, baita lidergoko aukera‐berdintasuna ere, bizitza politikoko, ekonomikoko eta publikoko maila erabakitzaile guztietan","5-6-title":"Sexu‐ eta ugalketa‐osasunerako sarbide unibertsala ziurtatzea, bai eta ugalketa‐eskubideak ere, Populazioari eta Garapenari buruzko Nazioarteko Hitzarmenaren Ekintza Programarekin, Pekineko Ekintza Plataformarekin eta haien berrikuspen-konferentzien azken dokumentuekin bat adostutakoaren arabera","5-a-title":"Emakumeei baliabide ekonomikoetarako eskubide‐berdintasuna eta lurraren jabetza eta kontrolerako eta ondasunak, finantza‐zerbitzuak, herentzia eta natura‐baliabideak eduki ahal izateko eskubide‐berdintasuna ematen dieten erreformei ekitea, lege nazionalekin bat etorriz","5-b-title":"Teknologia instrumentalaren erabilera hobetzea, bereziki, informazioaren eta komunikazioen teknologiarena, emakumeen ahalduntzea sustatzeko","5-c-title":"Politika zuzenak eta genero‐berdintasuna sustatzeko lege aplikagarriak onestea eta indartzea, emakume eta neskato guztien genero‐berdintasuna eta ahalduntzea sustatzeko, maila guztietan","6-1-title":"2030. urterako, ur edangarria lortzeko aukera unibertsala eta bidezkoa izan dadila lortzea, denontzako prezio egokian","6-2-title":"2030. urterako, saneamendu‐ eta higiene‐zerbitzu egoki eta bidezkoetarako sarbidea lortzea denontzat, eta amaiera ematea aire zabalean sabelusteari. Arreta berezia eskainiko zaie emakumeen eta neskatoen beharrei, eta ahultasun‐egoeran dauden pertsonenei","6-3-title":"2030. urterako, uraren kalitatea hobetzea, alegia: kutsadura murriztea; hondakin, produktu kimiko eta material arriskutsurik ez isurtzea; tratatu gabeko hondakin‐uren ehunekoa erdira murriztea; eta arriskurik gabeko birziklatzea eta berrerabilera nabarmen areagotzea mundu osoan","6-4-title":"2030. urterako, nabarmen areagotzea baliabide hidrikoen erabilera eraginkorra sektore guztietan, eta bermatzea ur gezaren erauzketaren eta horniduraren jasangarritasuna, ur‐gabeziari aurre egiteko eta urik ez duten pertsonen kopurua nabarmen murrizteko","6-5-title":"2030. urterako, baliabide hidrikoen kudeaketa integratua ezartzea maila guztietan, baita mugaz gaindiko lankidetzaren bidez ere, hala badagokio","6-6-title":"2020. urterako, babestea eta berrezartzea urarekin lotura duten ekosistemak, basoak, mendiak, hezeguneak, ibaiak, akuiferoak eta lakuak","6-a-title":"2030. urterako, nazioarteko lankidetza eta garapen‐bidean dauden herrialdeei emandako laguntza areagotzea, uraren eta saneamenduaren arloko jarduera eta programetan ahalmena sortzeko; esaterako, honako hauetan: ura jasotzea, gatzgabetzea, baliabide hidrikoak modu eraginkorrean erabiltzea, hondakin‐urak tratatzea, birziklatzea eta berrerabiltzeko teknologiak erabiltzea","6-b-title":"Tokiko komunitateek ur‐ eta saneamendu‐kudeaketaren hobekuntzan duten parte‐hartzea babestea eta sendotzea","7-1-title":"2030. urterako, energia‐zerbitzu arrazoizko, fidagarri eta modernoetarako sarbide unibertsala bermatzea","7-2-title":"2030. urterako, nabarmen areagotzea energia berriztagarrien proportzioa, energia‐iturri guztien artean","7-3-title":"2030. urterako, energia‐eraginkortasunaren hobekuntzaren munduko tasa bikoiztea","7-a-title":"2030. urterako, nazioarteko lankidetza areagotzea, energia garbiari lotutako ikerketarako eta teknologiarako sarbidea ahalbidetzeko. Hemen sartuko dira iturri berriztagarriak, energia‐eraginkortasuna eta erregai fosilen teknologia aurreratu eta ez horren kutsakorrak- Hemen sartzen da, halaber, energia‐azpiegituretako eta teknologia garbietako inbertsioa sustatzea","7-b-title":"2030. urterako, energia‐zerbitzu modernoak eta jasangarriak emateko azpiegitura areagotzea eta teknologia berritzea, garapen‐bidean dauden herrialde guztietan; bereziki, aurrerapen txikieneko herrialdeetan, garapen‐bidean dauden uharte‐estatu txikietan eta garapen‐bidean dauden kostalderik gabeko herrialdeetan, betiere, bat etorriz beren laguntza‐programekin","8-1-title":"Bere horretan eustea per capita hazkuntza ekonomikoari, ezaugarri nazionalen arabera, eta barne‐produktu gordina urtean gutxienez % 7 haz dadila bermatzea aurrerapen txikieneko herrialdeetan","8-10-title":"Finantza‐erakunde nazionalek pertsona guztientzako banku‐, finantza‐ eta aseguru‐zerbitzuetarako sarbidea sustatzeko eta zabaltzeko duten ahalmena areagotzea","8-2-title":"Produktibitate ekonomikoaren maila handiagoak lortzea, dibertsifikazioaren, modernizazio teknologikoaren eta berrikuntzaren bidez, besteak beste, balio erantsi handia duten eta eskulan asko erabiltzen duten sektoreei arreta eskainiz","8-3-title":"Garapenera bideratutako politikak sustatzea, honako alderdi hauei babesa emango dietenak: ekoizpen‐jarduerak, lanpostu egokien sorrera, ekintzailetza, sormena eta berrikuntza; eta mikroenpresen eta enpresa txiki eta ertainen eraketa eta hazkuntza sustatzea, baita finantza‐zerbitzuak eskuratzearen bidez ere","8-4-title":"2030. urterako, pixkanaka hobetzea munduko baliabideen ekoizpen eta kontsumo eraginkorra, eta hazkunde ekonomikoa ingurumenaren degradaziotik bereizten saiatzea, Kontsumo eta Ekoizpen Modalitate Jasangarriei buruzko Programen Hamar Urterako Esparruarekin bat etorriz, garatutako herrialdeetatik hasita","8-5-title":"2030. urterako, enplegu osoa eta produktiboa eta lan egokia lortzea emakume eta gizon guztientzat, gazteak eta desgaitasunen bat dutenak barne; eta balio bereko lanarengatik soldata berdina eman dadila lortzea","8-6-title":"2020. urterako, nabarmen murriztea enplegurik ez duten eta ikasten edo gaitzen ari ez diren gazteen proportzioa","8-7-title":"Berehalako neurri eraginkorrak hartzea ezinbesteko lanarekin amaitzeko, amaiera ematea egungo esklabotasun‐moduei eta pertsonen salerosketari, eta haurren lanaren forma okerrenak (errekrutatzea eta haur soldaduak barne) debekatu eta kenduko direla bermatzea; eta, hemendik 2025era, amaiera ematea haurren lanari, bere forma guztietan","8-8-title":"Lan‐eskubideak babestea eta lan‐ingurune segurua eta arriskurik gabea sustatzea langile guztientzat, migratzaileentzat barne, eta, bereziki, emakume migratzaileentzat eta enplegu prekarioak dituztenentzat","8-9-title":"2030. urterako, turismo jasangarria sustatzera bideratutako politikak egitea eta martxan jartzea, lanpostuak sor ditzan eta tokiko kultura eta produktuak susta ditzan","8-a-title":"Merkataritzari laguntzeko ekimenarentzako babesa areagotzea garapen‐bidean dauden herrialdeetan, bereziki, aurrerapen txikieneko herrialdeetan, baita Aurrerapen Txikieneko Herrialdeetan Merkataritzaren Arloko Laguntza Teknikorako Esparru Integratu Hobetuaren bitartez ere","8-b-title":"2020. urterako, gazteek enplegua lortzeko mundu‐mailako estrategia bat garatzea eta martxan jartzea, eta Lanaren Nazioarteko Erakundearen Enplegurako Munduko Ituna aplikatzea","9-1-title":"Azpiegitura fidagarriak, jasangarriak, sendoak eta kalitatezkoak egitea, eskualde‐mailako eta mugaz gaindiko azpiegiturak barne, garapen ekonomikoa eta giza garapena babesteko, arreta berezia eskainiz pertsona guztiek horiek modu arrazoizko eta bidezkoan erabiltzeko aukera izateari","9-2-title":"Industrializazio inklusiboa eta jasangarria sustatzea eta, hemendik 2030era, nabarmen areagotzea industriak enpleguari eta barne‐produktu gordinari egiten dion ekarpena, bat etorriz egoera nazionalekin, eta ekarpen hori bikoiztea aurrerapen txikieneko herrialdeetan","9-3-title":"Industria txikiek eta beste enpresa batzuek finantza‐zerbitzuak, arrazoizko kredituak barne, lortzeko dituzten aukerak areagotzea, bereziki garapen‐bidean dauden herrialdeetan, eta industria edo enpresa horiek balio‐kateetan eta merkatuetan sar daitezela ahalbidetzea","9-4-title":"2030. urterako, azpiegiturak modernizatzea eta industriak eraldatzea, jasangarriak izan daitezen. Horretarako, eraginkortasun handiagoko baliabideak erabili behar dira eta teknologia eta industria‐prozesu garbiak eta ingurumenaren ikuspegitik arrazoizkoak erabiltzen direla bermatu behar da, eta herrialde guztiek dagozkien ahalmenen araberako neurriak har ditzatela lortu behar da","9-5-title":"Ikerketa zientifikoa areagotzea eta herrialde guztietako industria‐sektoreen ahalmen teknologikoa hobetzea, bereziki garapen‐bidean dauden herrialdeetan. Horretarako, berrikuntza sustatu behar da eta nabarmen areagotu behar da, hemendik 2030era, ikerketan eta garapenean lan egiten duten pertsonen kopurua (milioi biztanletik), baita sektore publikoek eta pribatuek ikerketan eta garapenean egiten duten gastua ere","9-a-title":"Garapen‐bidean dauden herrialdeetan azpiegitura jasangarriak eta sendoak egin daitezela ahalbidetzea, babes finantzario, teknologiko eta tekniko handiagoa emanez Afrikako herrialdeei, aurrerapen txikieneko herrialdeei, kostalderik gabeko garapen‐bideko herrialdeei eta garapen‐bidean dauden uharte‐estatu txikiei","9-b-title":"Teknologia, ikerketa eta berrikuntza nazionalen garapenari babesa ematea garapen‐bidean dauden herrialdeetan, baita industria‐dibertsifikazioa eta oinarrizko produktuei balioa ematea ahalbidetuko duen araudi‐esparru bat bermatuz ere, besteak beste","9-c-title":"Nabarmen areagotzea informazioaren eta komunikazioen teknologiarako sarbidea, eta, 2020rako, aurrerapen txikieneko herrialdeei Interneterako sarbide unibertsala eta arrazoizkoa emateko ahalegina egitea"},"goal":{"description":"Egin klik helburu bakoitzean %country.adjective Garapen Iraunkorreko Helburuen adierazleen estatistikak ikusteko.","goal":"Helburua","indicators_for_goal":"Ikusi Helburuaren helmugak eta adierazleak","next":"Hurrengo helburua","previous":"Aurreko helburua"},"header":{"alpha":"Alfa","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago. Eskerrik asko zure <a href=\"mailto:%email_contacts.suggestions\">iruzkinengatik</a>.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."},"indicator":{"annotation_2030_target":"2030erako adierazlearen helburua","annotation_series_break":"Seriearen haustura","announce_data_added":"Grafiko eta taula eguneratuak datuak sartzeko.","announce_data_not_available":"Taulak eta grafikoak ez dute daturik erakusten.","announce_data_removed":"Grafiko eta taula eguneratuak datuak kentzeko.","announce_series_switched":"Grafiko eta taula eguneratuak serie desberdin bat erakusteko.","announce_unit_switched":"Grafiko eta taula eguneratuak, unitate desberdin bat erakusteko.","apply":"Aplikatu","cancel":"Ezeztatu","change_breakdowns":"Desagregazioak aldatu","chart":"Grafikoa","chart_annotation":"Grafiko batean idaztea","clear_all":"Dena garbitu","clear_selections":"Ezabatu aukeraketak","data_keyboard_navigation":"Sakatu Enter datu-puntuetan ezkerreko eta eskuineko gezi-teklekin.","data_not_available":"Informazio hau ez dago eskuragarri. Aukeratu datu alternatiboak erakusteko.","data_tabular_alternative":"Datuak taula forman ikusteko, joan Taula pestañara.","dataset_size_warning":"Datu gehiegi daude grafikoan erakusteko. Dena ez da erakutsiko selekzio batzuk kendu arte.","download_chart":"Deskargatu grafikoko datuak (.csv)","download_chart_image":"Deskargatu grafikoaren irudia (.png)","download_chart_image_title":"Deskargatu grafikoaren irudia PNG gisa","download_csv":"Deskargatu datuak (.csv)","download_csv_title":"Deskargatu CSV datuak","download_geojson":"Deskargatu mapako datuak (.geojson)","download_geojson_title":"Deskargatu mapako datuak GeoJSON bezala","download_headline":"Deskargatu titularren datuak (.csv)","download_headline_title":"Deskargatu datu mundialak CSV gisa","download_source":"Jatorrizko datuak deskargatu (.csv)","download_source_for_disaggregations":"Deskargatu desagregazioen jatorrizko datuak (.csv)","download_source_sdmx":"SDMX iturburu-kodea deskargatu (.xml)","download_source_sdmx_title":"Deskargatu iturburu-datuak SDMX bezala","download_source_title":"Iturri-datuak deskargatu CSV gisa","download_table":"Deskargatu taulako datuak (.csv)","edit":"Adierazlea editatu","edit_configuration":"Konfigurazioa editatu","edit_data":"Datuak editatu","edit_metadata":"Metadatuak editatu","empty_metadata_placeholder":"Ez dago eskuragarri adierazle honetarako","empty_metadata_placeholder_sources":"Ez dago eskuragarri iturri honetarako","footnote":"Oharra","geographical_area":"Eremu geografikoa","global_metadata":"Metadatu mundialak","global_metadata_blurb":"Taula honek GJHen adierazleen metadatuei buruzko informazioa ematen du, NBEko Estatistika Batzordeak definitzen dituen moduan.  <a href=\"https://unstats.un.org/sdgs/metadata/\">Metadatu osoagoak</a> NBEko Estatistika Dibisioak ematen ditu.","headline_data":"Datu nagusiak","legend_help":"Egin klik legendan grafikotik banakako lerroak ezabatzeko.","loading":"Kargatzen","loading_map":"Mapa kargatzen","map":"Mapa","map_fullscreen":"Ikusi mapa pantaila osoan","map_fullscreen_exit":"Mapatik pantaila osora ateratzea","map_search":"Bilaketa mapan","map_search_cancel":"Ezabatu bilaketa mapan","map_search_hide":"Mapan bilaketa ezkutatzea","map_search_show":"Mapan bilaketa erakutsi","map_slider_back":"Ikusi aurreko denbora-tarterako maparen datuak","map_slider_forward":"Ikusi hurrengo denbora-tarterako maparen datuak","map_slider_keyboard":"Ikusi maparen datuak denbora-tarte osoan, ezkerreko eta eskuineko gezi-teklak erabilita","map_slider_mouse":"Mapako datuetan zehar nabigatu, denbora-tartearen arabera","map_year_slider":"Urteko irristagailua","map_zoom_home":"Maparen zoom lehenetsia berrezartzea","map_zoom_in":"Zoom mapan","map_zoom_out":"Mapa murriztea","national_metadata":"Metadatu nazionalak","national_metadata_blurb":"Taula honek GJHen adierazletik hurbilen dagoen eta eskuragarria den %country.adjective adierazle errealerako metadatuak ematen ditu. Kontuan izan %country.adjective GJHen adierazle globala guztiz eskuragarri denean ere, taula hau kontsultatu daitekeela metodologia nazionalari eta metadatu espezifikoei buruzko informazioa lortzeko.","next":"Hurrengo adierazlea","no_data_hint":"Ez dago aukerarik eskuragarri aurreko aukeraketak direla eta","no_headline_data":"Ez dago datu nagusirik","note":"oharra","plot_legend_description":"Grafikoaren legenda: grafikoan sartutako lerroen zerrenda","previous":"Aurreko adierazlea","proxy":"Proxy","proxy_description":"Adierazle honek Nazio Batuen Erakundeak (NBE) zehaztutako adierazleaz bestelako datu batzuk ditu. Adierazle hau da gaur egun aurkitu den estatistiketatik egokiena dena.","select_all":"Dena hautatu","series":"Seriea","series_help":"Datuen desagregazioak ikusteko, aukeratu jarraian goitibeherako zerrenden kategoriak. Batzuk ez dira erabilgarri egongo goragoko mailan kategoriaren bat aukeratu arte","source":"Iturria","sources":"Iturriak","status":"adierazlearen egoera","sub_categories":"Azpikategoriak","sub_categories_show":"Azpikategoriak erakutsi:","table":"Taula","table_column_sort":"Sakatu zutabe honen bidez ordenatzeko","tags":"Etiketak","total":"Guztira","unit":"Unitatea","unit_of_measurement":"Neurri-unitatea","units_type":"Unitate mota","variable_hint":"«%field» hautatzen denean eskuragarri","view_indicator_list":"Ikusi helburu honetako adierazleen zerrenda"},"languages":{"ar":"العربية","ca":"Català","cs":"Ćeština","de":"Deutsch","en":"English","es":"Español","eu":"Euskera","fo":"Føroyskt","fr":"Français","hy":"ՀԱՅԵՐԵՆ","it":"Italiano","kk":"Қазақ","km":"ភាសាខ្មែរ","lo":"ພາສາລາວ","my":"မြန်မာ","nb_NO":"Bokmål","ne":"नेपाली","ru":"Pусский","tg":"Тоҷикӣ","tk":"Türkmençe","tr":"Türk","uk":"Українська","zh-Hans":"中文"},"menu":{"about":"Honi buruz","contact_us":"Kontaktatu","cookies":"Cookieak","faq":"FAQ","guidance":"Gida","menua":"Menua","publications":"Argitalpenak","reporting_status":"Informazioaren egoera","updates":"Eguneratzeak"},"metadata_fields":{"ADJUSTMENT":"Doikuntzak","CLASS_SYSTEM":"Sailkapenak","COLL_METHOD":"Datuak biltzeko metodoa","COMPARABILITY":"Nazioarteko arauen alderagarritasuna","COMPILING_ORG":"Datu-konpiladoreak","CONTACT":"Datu-erreportaria","CONTACT_EMAIL":"Harremanetarako posta elektronikoa","CONTACT_FUNCT":"Harremanetarako pertsonaren funtzioa","CONTACT_MAIL":"Harremanetarako helbide elektronikoa","CONTACT_NAME":"Harremanetarako pertsona (k)","CONTACT_ORGANISATION":"Antolaketa","CONTACT_PHONE":"Harremanetarako telefonoa","COVERAGE":"Datuen erabilgarritasuna eta banakapena","DATA_KONP":"Kalkulu-metodoa","DATA_SOURCE":"Datu-hornitzaileak","DATA_VALIDATION":"Balidazioa","DOC_METHOD":"Herrialdeen eskura dauden metodoak eta orientabideak, datuak nazio-mailan lortzeko","FREQ_COLL":"Datuak biltzeko egutegia","IMPUTATION":"Galdutako balioen tratamendua (i) herrialde mailan eta (ii) lurralde mailan","IND_DEF_CON_CLASS":"Definizioa, kontzeptuak eta sailkapenak","INST_MANDATE":"Agintaldi instituzionala","META_LAST_UPDATE":"Metadatuak eguneratzea","ORGANISATION_UNIT":"Kontaktuak antolatzeko unitatea","OTHER_DOC":"Erreferentziak eta dokumentazioa","OTHER_METHOD":"Beste kontsiderazio metodologiko batzuk","QUALITY_ASSMNT":"Kalitatearen ebaluazioa","QUALITY_ASSURE":"Kalitate-asegurua","QUALITY_MGMNT":"Kalitatearen kudeaketa","RATIONALE":"Justifikazioa","REC_USE_LIM":"Iruzkinak eta mugak","REG_AGG":"Lurralde-agregazioak","REL_CAL_POLICY":"Datuak argitaratzeko egutegia","SDG_CUSTODIAN_AGENCIES":"Mundu mailako jarraipenaz arduratzen diren nazioarteko erakundeak","SDG_GOAL":"Helburua","SDG_INDICATOR":"Adierazlea","SDG_INDICATOR_INFO":"Adierazlearen informazioa","SDG_RELATED_INDICATORS":"Erlazionatutako adierazleak","SDG_SERIES_DESCR":"Serieak","SDG_TARGET":"Helmuga","SOURCE_TYPE":"Datu-iturriak","SRC_TYPE_COLL_METHOD":"Datu-iturri mota eta biltzeko metodoa","STAT_CONC_DEF":"Definizioa eta kontzeptuak","UNIT_MEASURE":"Neurri-unitatea","comments_limitations":"Iruzkinak eta mugak","computation_calculations":"Kalkuluak","computation_definitions":"Definizioak","computation_units":"Neurri-unitatea","copyright":"Egile eskubideak","goal_meta_link":"NBEko metadatuetarako esteka","indicator":"Adierazlearen zenbakia","indicator_definition":"Adierazle mundialaren deskribapena","indicator_name":"adierazlearen izena","indicator_sort_order":"Adierazlea bistaratzeko agindua (helburua)","international_comparability":"Nazioarteko datuekin alderagarritasuna","national_data_update_url":"Azken aldiz eguneratutako datuak","national_geographical_coverage":"Estaldura geografikoa","national_indicator_available":"Adierazle erabilgarria","national_indicator_description":"Adierazlearen deskribapena","national_metadata_update_url":"Azken aldiz eguneratutako metadatuak","other_info":"Bestelako informazioa","quality_assurance":"Kalitate-bermea","rational_interpretation":"Arrazionaltasuna eta interpretazioa","rationale_interpretation":"Arrazionaltasuna eta interpretazioa","source_contact_1":"Harremanetarako xehetasunak","source_contact_2":"Harremanetarako xehetasunak","source_contact_3":"Harremanetarako xehetasunak","source_contact_4":"Harremanetarako xehetasunak","source_contact_5":"Harremanetarako xehetasunak","source_contact_6":"Harremanetarako xehetasunak","source_earliest_available_1":"Datu erabilgarri zaharrenak","source_earliest_available_2":"Datu erabilgarri zaharrenak","source_earliest_available_3":"Datu erabilgarri zaharrenak","source_earliest_available_4":"Datu erabilgarri zaharrenak","source_earliest_available_5":"Datu erabilgarri zaharrenak","source_earliest_available_6":"Datu erabilgarri zaharrenak","source_geographical_coverage_1":"Estaldura geografikoa","source_geographical_coverage_2":"Estaldura geografikoa","source_geographical_coverage_3":"Estaldura geografikoa","source_geographical_coverage_4":"Estaldura geografikoa","source_geographical_coverage_5":"Estaldura geografikoa","source_geographical_coverage_6":"Estaldura geografikoa","source_next_release_1":"Hurrengo argitalpena","source_next_release_2":"Hurrengo argitalpena","source_next_release_3":"Hurrengo argitalpena","source_next_release_4":"Hurrengo argitalpena","source_next_release_5":"Hurrengo argitalpena","source_next_release_6":"Hurrengo argitalpena","source_organisation_1":"Erakundea","source_organisation_2":"Erakundea","source_organisation_3":"Erakundea","source_organisation_4":"Erakundea","source_organisation_5":"Erakundea","source_organisation_6":"Erakundea","source_other_info_1":"Bestelako informazioa","source_other_info_2":"Bestelako informazioa","source_other_info_3":"Bestelako informazioa","source_other_info_4":"Bestelako informazioa","source_other_info_5":"Bestelako informazioa","source_other_info_6":"Bestelako informazioa","source_periodicity_1":"Aldizkakotasuna","source_periodicity_2":"Aldizkakotasuna","source_periodicity_3":"Aldizkakotasuna","source_periodicity_4":"Aldizkakotasuna","source_periodicity_5":"Aldizkakotasuna","source_periodicity_6":"Aldizkakotasuna","source_release_date_1":"Argitalpen-data","source_release_date_2":"Argitalpen-data","source_release_date_3":"Argitalpen-data","source_release_date_4":"Argitalpen-data","source_release_date_5":"Argitalpen-data","source_release_date_6":"Argitalpen-data","source_statistical_classification_1":"Sailkapen estatistikoa","source_statistical_classification_2":"Sailkapen estatistikoa","source_statistical_classification_3":"Sailkapen estatistikoa","source_statistical_classification_4":"Sailkapen estatistikoa","source_statistical_classification_5":"Sailkapen estatistikoa","source_statistical_classification_6":"Sailkapen estatistikoa","source_url_1":"Datu-iturrirako esteka","source_url_2":"Datu-iturrirako esteka","source_url_3":"Datu-iturrirako esteka","source_url_4":"Datu-iturrirako esteka","source_url_5":"Datu-iturrirako esteka","source_url_6":"Datu-iturrirako esteka","target":"Helmugaren izena","target_id":"Helmugaren zenbakia","un_custodian_agency":"NBEko Zaintza Agentzia","un_designated_tier":"NBEk izendatutako maila"},"post":{"posts_by_category":"Argitalpenak kategoriaren arabera","view_all_in_category":"Ikusi argitalpen guztiak %category_name kategorian"},"search":{"adjust_your_search":"Saia zaitez zure bilaketa doitzen bilatzen ari zarena aurkitzeko.","did_you_mean":"esan nahi zenuen","found_in":"Non aurkitua","indicator_search":"Adierazlearen bilaketa","keywords":"Hitz gakoak","no_results":"Ez dago emaitzarik","results_found":"Aurkitutako emaitzak","search":"Bilatu","search_results_for":"Bilaketaren emaitzak","site_search":"Bilatu web-orrian"},"status":{"description":"Informazioaren egoerak %country.adjective Garapen Iraunkorreko Helburuei (GJH) buruzko datu kantitatearen deskribapen orokorra ematen du.","disaggregation_status":"Desagregazio-egoera","disaggregation_status_by_field":"Desagregazioa %field bidez","disaggregation_status_complete":"Erabat bereizita","disaggregation_status_inprogress":"Partzialki bereizita","disaggregation_status_notapplicable":"Ez da aplikagarria","disaggregation_status_notstarted":"Bereizi gabea","disaggregation_status_overall":"Desagregazioaren egoera orokorra","exploring_data_sources":"Datu-iturriak arakatzen","no_data_available":"Eskuragarri ez dauden datuak","not_applicable":"Ez aplikagarria","not_specified":"Ez da zehazten","overall_reporting_status":"Txostenen egoera orokorra","progress_approaching_target":"Helmugara hurbilduz","progress_challenges_remain":"Erronkek jarraitzen dute","progress_help":"Nola goaz 2030eko helburuari dagokionez?","progress_not_available":"Ez dago daturik","progress_status":"Aurrerapenaren egoera","progress_target_achieved":"Helmugara iritsita","reported":"Informatua","reported_online":"Online informatua","reporting_status":"Informazioaren egoera","statistics_in_progress":"Lanean","status_by_field":"egoera %field-en arabera","status_by_goal":"Helburuen araberako egoera"}};
+
+    // Dynamic filtering functionality.
+    var configSearch = document.getElementById('config-search');
+    var configSearchButton = document.getElementById('config-search-button');
+    var configResetButton = document.getElementById('config-reset-button');
+    var resultsStatus = document.getElementById('results-status');
+    var itemSelector = 'div[data-schemapath="root"] > .well > div > div > .row';
+    configSearchButton.addEventListener('click', performSearch);
+    configSearch.addEventListener('keyup', function(e) {
+      if (e.key === "Enter") {
+        performSearch();
+      }
+    });
+    configResetButton.addEventListener('click', resetSearch);
+    function performSearch() {
+      var keywords = configSearch.value.toLowerCase();
+      var numResults = 0;
+      if (keywords.length > 0) {
+        var noMatches = true;
+        $(itemSelector).each(function(item) {
+          var title = $(this).find('label').first().text().toLowerCase();
+          if (title.includes(keywords)) {
+            noMatches = false;
+            $(this).show();
+            numResults += 1;
+          }
+          else {
+            $(this).hide();
+          }
+        });
+        if (noMatches) {
+          $(resultsStatus).text('There are no settings that match those keywords.');
+        }
+        else {
+          var settingsText = (numResults > 1) ? 'settings' : 'setting';
+          $(resultsStatus).text(numResults + ' matching ' + settingsText + ' found.');
+        }
+      }
+      else {
+        resetSearch();
+      }
+    };
+    function resetSearch() {
+      configSearch.value = '';
+      $(resultsStatus).text('');
+      $(itemSelector).show();
+    }
+
+    
+    
+    var schema = {"type":"object","title":"Open SDG indicator configuration","description":"This form will produce an indicator's configuration for your Open SDG implementation.","properties":{"composite_breakdown_label":{"type":"string","title":"Composite breakdown label","description":"Used as a label for the COMPOSITE_BREAKDOWN column, if it appears in the indicator data.","links":[{"rel":"More information on the composite breakdown label setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#composite-breakdown-label"}]},"computation_units":{"type":"string","title":"Unit of measurement","description":"Unit of measurement which displays below the indicator chart.","links":[{"rel":"More information on the units of measurement setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#recommended-special-fields"}]},"copyright":{"type":"string","title":"Copyright","description":"Copyright which displays below the indicator chart.","links":[{"rel":"More information on the copyright setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#footer"}]},"data_footnote":{"type":"string","format":"markdown","title":"Footnote","description":"Footnote which displays below the indicator chart.","links":[{"rel":"More information on the footnote setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#footer"}]},"data_non_statistical":{"title":"Non-statistical data","type":"boolean","description":"Whether the indicator is statistical (can be charted/graphed) or not.","format":"checkbox","links":[{"rel":"More information the non-statistical setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#mandatory-fields"}]},"data_notice_class":{"title":"Data notice - class","type":"string","description":"A CSS class to apply to the data notice for this indicator.","links":[{"rel":"More information on the data notice setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#data-notice"}]},"data_notice_heading":{"title":"Data notice - heading","type":"string","description":"A title to display above the data notice for this indicator.","links":[{"rel":"More information on the data notice heading setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#data-notice"}]},"data_notice_text":{"title":"Data notice - text","type":"string","format":"markdown","description":"Text to display as a data notice for this indicator, intended to contain very important information which site viewers must keep in mind when using the data provided.","links":[{"rel":"More information on the data notice text setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#data-notice"}]},"data_show_map":{"title":"Show map","type":"boolean","description":"Whether the indicator should display a Map tab.","format":"checkbox","links":[{"rel":"More information on the map setting","href":"https://open-sdg.readthedocs.io/en/latest/maps/#metadata-field-data_show_map"}]},"data_start_values":{"options":{"collapsed":true},"type":"array","title":"Starting values","description":"Disaggregation values for a an indicator to start with already selected","items":{"type":"object","title":"Starting value","properties":{"field":{"type":"string","minLength":1,"title":"Field","description":"The field (column) name."},"value":{"type":"string","minLength":1,"title":"Value","description":"The value in that field to pre-select."}}},"links":[{"rel":"More information on the starting values setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#starting-values"}]},"embedded_feature_footer":{"type":"string","format":"markdown","title":"Embedded feature - Footer","description":"A footer that displays below the embedded feature. Only used with either embedded_feature_url or embedded_feature_html.","links":[{"rel":"More information on the embed footer setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#embedded-feature-metadata"}]},"embedded_feature_html":{"type":"string","format":"textarea","title":"Embedded feature - HTML","description":"Any HTML to display in another tab, after Chart/Table/etc.","links":[{"rel":"More information on the embed HTML setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#embedded-feature-metadata"}]},"embedded_feature_tab_title":{"type":"string","title":"Embedded feature - Tab Title","description":"A title for the embedded feature tab (ie, Chart/Table/[this]). Only used with either embedded_feature_url or embedded_feature_html.","links":[{"rel":"More information on the embed tab title setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#embedded-feature-metadata"}]},"embedded_feature_title":{"type":"string","title":"Embedded feature - Title","description":"A title that displays above the embedded feature. Only used with either embedded_feature_url or embedded_feature_html.","links":[{"rel":"More information on the embed title setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#embedded-feature-metadata"}]},"embedded_feature_url":{"type":"string","format":"url","title":"Embedded feature - URL","description":"Any URL to display as an iframe in another tab, after Chart/Table/etc.","links":[{"rel":"More information on the embed URL setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#embedded-feature-metadata"}]},"expected_disaggregations":{"options":{"collapsed":true},"type":"array","title":"Expected disaggregations","description":"An optional list of disaggregations (ie, data column names) to use when calculating the disaggregation status statistics.","items":{"type":"string","title":"Expected disaggregation"},"links":[{"rel":"More information on the expected disaggregation setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#recommended-special-fields"}]},"footer_fields":{"options":{"collapsed":true},"type":"array","title":"Footer fields","description":"Additional arbitrary information to display beneath the graph/table.","items":{"type":"object","title":"Footer field","allOf":[{"$ref":"#/definitions/series_unit_constraint"},{"properties":{"label":{"type":"string","title":"Label","description":"The label for the field"},"value":{"type":"string","title":"Value","description":"The value/content for the field"}}}]}},"graph_annotations":{"options":{"collapsed":true},"type":"array","title":"Graph annotations","description":"This can be used to add line annotations to the graph, such as target lines to show the progress towards the 2030 goal for an indicator.","items":{"type":"object","title":"Graph annotation","allOf":[{"$ref":"#/definitions/series_unit_constraint"},{"properties":{"value":{"type":"number","minimum":0,"title":"Value","description":"The value at which to draw the line. For horizontal lines, this number corresponds to your actual data. For vertical lines, this number should be between 0 (the left side of the chart) and the number of years minus 1 (the right side of the chart)."},"endValue":{"type":"number","title":"End value","description":"Optionally add a different ending value for the line."},"description":{"type":"string","title":"Description","description":"A description of the annotation to be read by screenreaders."},"mode":{"type":"string","title":"Mode","description":"Whether the line will be vertical or horizontal.","enum":["horizontal","vertical"]},"borderColor":{"type":"string","format":"color","title":"Line color","default":"#949494","description":"The color of the line.","links":[{"rel":"More information on the border color setting","href":"https://github.com/chartjs/chartjs-plugin-annotation/blob/master/README.md"}]},"borderDash":{"type":"array","title":"Line dash type","description":"The type of line dash.","default":[10,5],"items":{"type":"number"},"minItems":2,"links":[{"rel":"More information on the line dash setting","href":"https://github.com/chartjs/chartjs-plugin-annotation/blob/master/README.md"}]},"label":{"type":"object","title":"Label","description":"A text label for the annotation.","properties":{"position":{"type":"string","title":"Position","description":"Placement of the label along the line.","enum":["start","end","top","bottom","left","right","center"]},"content":{"type":"string","minLength":1,"title":"Content","description":"Text of the line label."},"fontColor":{"type":"string","format":"color","title":"Label color (do not use)","description":"[DEPRECATED: USE 'Label color (use this)' INSTEAD]","default":"#000000"},"color":{"type":"string","format":"color","title":"Label color (use this)","description":"Color for the label text.","default":"#000000"},"backgroundColor":{"type":"string","format":"color","default":"#ffffff","title":"Background color","description":"Background color for the label text."}}},"highContrast":{"type":"object","title":"High contrast options","description":"High-contrast overrides of certain color.","properties":{"borderColor":{"type":"string","format":"color","default":"#ffffff","title":"High-contrast line color","description":"The color of the line in high-contrast mode."},"label":{"type":"object","title":"High contrast label","description":"High-contrast version of the label.","properties":{"fontColor":{"type":"string","format":"color","default":"#ffffff","title":"High-contrast label color (do not use)","description":"[DEPRECATED: USE 'High-contrast label color (use this)' INSTEAD]"},"color":{"type":"string","format":"color","default":"#ffffff","title":"High-contrast label color (use this)","description":"Color for the label text in high-contrast mode."},"backgroundColor":{"type":"string","format":"color","default":"#000000","title":"High-contrast background color","description":"Background color for the label text in high-contrast mode."}}}}}}}]},"links":[{"rel":"More information on the graph annotations setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#graph-metadata"}]},"graph_limits":{"options":{"collapsed":true},"type":"array","title":"Graph limits","description":"A list of min/max limits controlling the lowest/highest values to be shown on the y-axis.","items":{"type":"object","title":"Graph limit","allOf":[{"$ref":"#/definitions/series_unit_constraint"},{"properties":{"minimum":{"type":"number","minimum":0,"title":"Minimum","description":"Minimum value for the y axis."},"maximum":{"type":"number","minimum":0,"title":"Maximum","description":"Maximum value for the y axis."}}}]},"links":[{"rel":"More information on the graph limits setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#graph-metadata"}]},"graph_series_breaks":{"options":{"collapsed":true},"type":"array","title":"Graph series breaks","description":"A list of series break (ie, a gap among the years) lines to display on the graph.","items":{"type":"object","title":"Series break","allOf":[{"$ref":"#/definitions/series_unit_constraint"},{"properties":{"label_content":{"type":"string","title":"Label content","default":"indicator.annotation_series_break","description":"The text to display for this series break."},"value":{"type":"number","title":"Value","description":"The numeric value at which to place the series break. This number should be between 0 (the left side of the chart) and the number of years minus 1 (the right side of the chart)."}}}]},"links":[{"rel":"More information on the graph target lines setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#graph_series_breaks"}]},"graph_stacked_disaggregation":{"type":"string","title":"Stacked disaggregation","description":"This can be used with the bar graph type to place a certain disaggregation into the same stacked bars.","links":[{"rel":"More information on the stacked disaggregation setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#recommended-special-fields"}]},"graph_target_lines":{"options":{"collapsed":true},"type":"array","title":"Graph target lines","description":"A list of target lines to display on the graph.","items":{"type":"object","title":"Target line","allOf":[{"$ref":"#/definitions/series_unit_constraint"},{"properties":{"label_content":{"type":"string","title":"Label content","default":"indicator.annotation_2030_target","description":"The text to display for this target line."},"value":{"type":"number","title":"Value","description":"The numeric value at which to place the target line."}}}]},"links":[{"rel":"More information on the graph target lines setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#graph_target_lines"}]},"graph_title":{"type":"string","title":"Graph title","description":"The title that displays above the graph/chart.","links":[{"rel":"More information on the graph title setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#mandatory-for-statistical-indicators"}]},"graph_titles":{"options":{"collapsed":true},"type":"array","title":"Graph titles","description":"As an alternative to `graph_title`, this can be used to set specific titles for particular units and/or series.","items":{"type":"object","title":"Graph title","allOf":[{"$ref":"#/definitions/series_unit_constraint"},{"properties":{"title":{"type":"string","minLength":1,"title":"Title","description":"The graph title."}}}]}},"graph_type":{"type":"string","title":"Graph type","description":"What type of graph to use for the indicator.","enum":["line","bar","binary"],"links":[{"rel":"More information on the graph titles setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#mandatory-for-statistical-indicators"}]},"indicator_available":{"type":"string","title":"Indicator available","description":"An optional sub-title for the indicator, which displays below the indicator name. Intended for cases where the available data is slightly different than the indicator name.","links":[{"rel":"More information on the indicator available setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#recommended-special-fields"}]},"indicator_name":{"type":"string","title":"Indicator name","description":"The name for the indicator, which displays at the top of the indicator page.","links":[{"rel":"More information on the indicator name setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#mandatory-fields"}]},"indicator_number":{"type":"string","title":"Indicator number","description":"The number (or 'id') for the indicator.","links":[{"rel":"More information on the indicator number setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#mandatory-fields"}]},"indicator_tabs":{"options":{"collapsed":true},"type":"object","title":"Indicator tabs","description":"Assign content for the indicator tabs, if the override box is checked. Otherwise this indicator will use the assignments set in your site configuration.","properties":{"override":{"type":"boolean","title":"Override site configuration","description":"If checked, the site-wide indicator tab configuration will be ignored for this indicator.","format":"checkbox"},"tab_1":{"type":"string","title":"Tab 1","description":"What to display in the first tab","$ref":"#/definitions/indicator_tabs_options"},"tab_2":{"type":"string","title":"Tab 2","description":"What to display in the second tab","$ref":"#/definitions/indicator_tabs_options"},"tab_3":{"type":"string","title":"Tab 3","description":"What to display in the third tab","$ref":"#/definitions/indicator_tabs_options"},"tab_4":{"type":"string","title":"Tab 4","description":"What to display in the fourth tab","$ref":"#/definitions/indicator_tabs_options"}}},"national_geographical_coverage":{"type":"string","title":"National geographical coverage","description":"A label used in the absence of any disaggregation.","links":[{"rel":"More information on the geographical coverage setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#mandatory-for-statistical-indicators"}]},"page_content":{"type":"string","format":"markdown","title":"Page content","description":"Content which displays in the main content area of the indicator page."},"permalink":{"type":"string","title":"Permalink","description":"Overrides the normal path of the indicator page. Not recommended, execpt for 'standalone' indicators.","links":[{"rel":"More information the permalink setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#standalone-indicators"}]},"placeholder":{"title":"Placeholder indicator","type":"string","description":"Entering text here identifies this as a 'placeholder' indicator. The text will be displayed on the goal page, in place of a link to the indicator page.","format":"textarea","links":[{"rel":"More information the placeholder setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#placeholder"}]},"precision":{"options":{"collapsed":true},"type":"array","title":"Precision rules","description":"Control the number of decimal places for data in this indicator.","items":{"type":"object","title":"Precision rule","allOf":[{"$ref":"#/definitions/series_unit_constraint"},{"properties":{"decimals":{"type":"number","title":"Decimals","description":"The number of decimal places"}}}]}},"progress_status":{"type":"string","title":"Progress status","enum":["not_available","challenges_remain","approaching_target","target_achieved"],"description":"The progress status of the indicator.","links":[{"rel":"More information on the progress status setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#progress-status"}]},"proxy":{"title":"Proxy indicator","type":"string","description":"Whether the indicator is a 'proxy' (meaning that it is somehow different than the globally-defined SDG indicator).","enum":["","proxy","both"],"options":{"enum_titles":["Not a proxy indicator (default)","Proxy indicator","Both (contains both a proxy series and a non-proxy series)"]},"links":[{"rel":"More information the proxy setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#proxy"}]},"proxy_series":{"options":{"collapsed":true},"type":"array","title":"Proxy indicator - per series","description":"A list of each series within this indicator that should be considered a proxy (meaning that it is different somehow from the globally-defined series). Only needed if you chose 'Mixed series' above.","items":{"type":"string","title":"Series"},"links":[{"rel":"More information on the proxy_series setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#proxy_series"}]},"publications":{"options":{"collapsed":true},"type":"array","title":"Publications","description":"This setting controls the content of the 'Related publications' tab. It can contain any number of publications. You may have much of this information in the indicator metadata, but this configuration is available to supplement the metadata with a more structured way to list multiple publications.","items":{"type":"object","title":"Publication","properties":{"title":{"type":"string","title":"Title"},"link":{"type":"string","title":"Link"},"description":{"type":"string","title":"description","format":"markdown"},"date":{"type":"string","title":"Date"}}},"links":[{"rel":"More information on the publications setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#publications"}]},"related_indicators":{"options":{"collapsed":true},"type":"array","title":"Related indicators","description":"This setting controls the 'Related indicators' tab. Specify indicators by using their indicator numbers, such as: 1.1.1","items":{"type":"string","title":"Related indicator"},"links":[{"rel":"More information on the related_indicators setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#related_indicators"}]},"reporting_status":{"type":"string","title":"Reporting status","enum":["complete","inprogress","notstarted","notapplicable"],"description":"The reporting status of the indicator.","links":[{"rel":"More information on the reporting status setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#mandatory-fields"}]},"sort":{"type":"string","title":"Sort order","description":"Override the default order in which this indicator is displayed in lists. This can be left blank, and it will be automatically determined.","links":[{"rel":"More information on the sort setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#sorting-in-lists"}]},"sources":{"options":{"collapsed":true},"type":"array","title":"Sources","description":"This setting controls the content of the 'Sources' tab. It can contain any number sources. You may have much of this information in the metadata, but this configuration is available to supplement the metadata with a more structured way to list multiple sources.","items":{"type":"object","title":"Source","properties":{"organisation":{"type":"string","title":"Organisation"},"periodicity":{"type":"string","title":"Periodicity"},"earliest_available":{"type":"string","title":"Earliest available data"},"geographical_coverage":{"type":"string","title":"Geographical coverage"},"url":{"type":"string","title":"URL"},"url_text":{"type":"string","title":"URL text"},"release_date":{"type":"string","title":"Release date"},"next_release":{"type":"string","title":"Next release"},"statistical_classification":{"type":"string","title":"Statistical classification"},"contact":{"type":"string","title":"Contact"},"other_info":{"type":"string","title":"Other information","format":"markdown"},"logo":{"type":"string","title":"Path to logo image"}}},"links":[{"rel":"More information on the sources setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#sources"}]},"standalone":{"title":"Standalone indicator","type":"boolean","description":"Whether the indicator is standalone (separate from the SDGs) or not.","format":"checkbox","links":[{"rel":"More information the standalone setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#standalone-indicators"}]},"tags":{"options":{"collapsed":true},"type":"array","title":"Tags","description":"An optional list of 'tags' to display under an indicator when it is listed on its goal page.","items":{"type":"string","title":"Tag"},"links":[{"rel":"More information on the tags setting","href":"https://open-sdg.readthedocs.io/en/latest/metadata-format/#recommended-special-fields"}]},"x_axis_label":{"type":"string","title":"X axis label","description":"A label beneath the X axis on charts. This overrides the same site configuration setting.","links":[{"rel":"More information on the X axis label setting","href":"https://open-sdg.readthedocs.io/en/latest/indicator-configuration/#x_axis_label"}]}},"additionalProperties":true,"definitions":{"series_unit_constraint":{"type":"object","properties":{"series":{"type":"string","title":"Series","description":"Limit to this particular series"},"unit":{"type":"string","title":"Unit","description":"Limit to this particular unit"}}},"indicator_tabs_options":{"enum":["","chart","table","map","embed","hide"],"options":{"enum_titles":["","Chart","Table","Map","Embed","Hide this tab"]}}}};
+    
+      
+        
+      
+    
+
+    function normalizeCurrentValue(key, value) {
+      // This space for backwards-compat fixes.
+      return value;
+    }
+
+    // Change the theme to create div instead of H3 elements for headers.
+    JSONEditor.defaults.themes.bootstrap3.prototype.getHeader = function(text) {
+      var el = document.createElement('div')
+      if (typeof text === 'string') {
+        el.textContent = text;
+      } else {
+        el.appendChild(text);
+      }
+      el.classList.add('je-header');
+      return el;
+    }
+
+    var editor = new JSONEditor(document.getElementById('editor_holder'), {
+      theme: 'bootstrap3',
+      iconlib: 'fontawesome4',
+      disable_array_delete_all_rows: true,
+      disable_array_delete_last_row: true,
+      disable_array_reorder: true,
+      disable_edit_json: true,
+      disable_properties: true,
+      required_by_default: true,
+
+      // The schema for the editor
+      schema: schema
+    });
+
+    function collapseButtonClick() {
+      var title = this.getAttribute('title');
+      this.setAttribute('aria-expanded', title === 'Collapse');
+      var ariaLabel = this.getAttribute('aria-label');
+      if (title === 'Collapse') {
+        ariaLabel = ariaLabel.replace('Expand', 'Collapse');
+      }
+      else {
+        ariaLabel = ariaLabel.replace('Collapse', 'Expand');
+      }
+      this.setAttribute('aria-label', ariaLabel);
+    }
+
+    function propertyEditorTranslationLinks(propertyEditor) {
+      try {
+        if (typeof propertyEditor.value === 'undefined') {
+          return;
+        }
+        switch (propertyEditor.schema.type) {
+          case 'string':
+            if (isTranslationKey(propertyEditor.value)) {
+              addTranslationLink(propertyEditor);
+            }
+            break;
+          case 'array':
+          case 'object':
+            if (typeof propertyEditor.editors !== 'undefined') {
+              var editorKeys = Object.keys(propertyEditor.editors);
+              for (var i = 0; i < editorKeys.length; i++) {
+                var editorKey = editorKeys[i];
+                propertyEditorTranslationLinks(propertyEditor.editors[editorKey]);
+              }
+            }
+            if (typeof propertyEditor.rows !== 'undefined') {
+              for (var i = 0; i < propertyEditor.rows.length; i++) {
+                propertyEditorTranslationLinks(propertyEditor.rows[i]);
+              }
+            }
+            break;
+        }
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to add translation links: ' + propertyEditor.formname);
+      }
+    }
+
+    function propertyEditorAccessibilityFixes(propertyEditor) {
+      try {
+        // Variety of accessibility fixes.
+        switch (propertyEditor.schema.type) {
+          case 'string':
+          case 'integer':
+          case 'boolean':
+          case 'number':
+            propertyEditor.input.setAttribute('id', propertyEditor.formname);
+            propertyEditor.label.setAttribute('for', propertyEditor.formname);
+            if (typeof propertyEditor.description !== 'undefined') {
+              var descriptionId = propertyEditor.formname + '-description';
+              propertyEditor.description.setAttribute('id', descriptionId);
+              propertyEditor.input.setAttribute('aria-describedby', descriptionId);
+            }
+            break;
+          case 'array':
+          case 'object':
+            var toggleButton = (propertyEditor.schema.type === 'array') ? propertyEditor.toggle_button : propertyEditor.collapse_control;
+            var headerId = propertyEditor.formname + '-header';
+            propertyEditor.header.setAttribute('id', headerId);
+            var headerText = propertyEditor.header.innerHTML;
+            if (typeof propertyEditor.description !== 'undefined') {
+              var descriptionId = propertyEditor.formname + '-description';
+              propertyEditor.description.setAttribute('id', descriptionId);
+            }
+            if (typeof toggleButton !== 'undefined') {
+              toggleButton.setAttribute('aria-label', 'Activate to Collapse the ' + headerText + ' section.')
+              collapseButtonClick.call(toggleButton);
+              toggleButton.addEventListener('click', collapseButtonClick);
+              if (typeof propertyEditor.description !== 'undefined') {
+                toggleButton.setAttribute('aria-describedby', descriptionId);
+              }
+            }
+            if (typeof propertyEditor.editors !== 'undefined') {
+              var editorKeys = Object.keys(propertyEditor.editors);
+              for (var i = 0; i < editorKeys.length; i++) {
+                var editorKey = editorKeys[i];
+                propertyEditorAccessibilityFixes(propertyEditor.editors[editorKey]);
+              }
+            }
+            if (typeof propertyEditor.rows !== 'undefined') {
+              for (var i = 0; i < propertyEditor.rows.length; i++) {
+                propertyEditorAccessibilityFixes(propertyEditor.rows[i]);
+              }
+            }
+            break;
+        }
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to do accessibility fixes: ' + propertyEditor.formname);
+      }
+    }
+
+    // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('composite_breakdown_label', "");
+        var propertyEditor = editor.getEditor('root.composite_breakdown_label');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: composite_breakdown_label');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.composite_breakdown_label'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('computation_units', "");
+        var propertyEditor = editor.getEditor('root.computation_units');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: computation_units');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.computation_units'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('copyright', "");
+        var propertyEditor = editor.getEditor('root.copyright');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: copyright');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.copyright'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('data_footnote', "");
+        var propertyEditor = editor.getEditor('root.data_footnote');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: data_footnote');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.data_footnote'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.data_non_statistical'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('data_notice_class', "");
+        var propertyEditor = editor.getEditor('root.data_notice_class');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: data_notice_class');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.data_notice_class'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('data_notice_heading', "");
+        var propertyEditor = editor.getEditor('root.data_notice_heading');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: data_notice_heading');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.data_notice_heading'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('data_notice_text', "");
+        var propertyEditor = editor.getEditor('root.data_notice_text');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: data_notice_text');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.data_notice_text'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.data_show_map'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('data_start_values', []);
+        var propertyEditor = editor.getEditor('root.data_start_values');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: data_start_values');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.data_start_values'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('embedded_feature_footer', "");
+        var propertyEditor = editor.getEditor('root.embedded_feature_footer');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: embedded_feature_footer');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.embedded_feature_footer'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('embedded_feature_html', "");
+        var propertyEditor = editor.getEditor('root.embedded_feature_html');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: embedded_feature_html');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.embedded_feature_html'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('embedded_feature_tab_title', "");
+        var propertyEditor = editor.getEditor('root.embedded_feature_tab_title');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: embedded_feature_tab_title');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.embedded_feature_tab_title'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('embedded_feature_title', "");
+        var propertyEditor = editor.getEditor('root.embedded_feature_title');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: embedded_feature_title');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.embedded_feature_title'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('embedded_feature_url', "");
+        var propertyEditor = editor.getEditor('root.embedded_feature_url');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: embedded_feature_url');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.embedded_feature_url'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('expected_disaggregations', []);
+        var propertyEditor = editor.getEditor('root.expected_disaggregations');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: expected_disaggregations');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.expected_disaggregations'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.footer_fields'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('graph_annotations', []);
+        var propertyEditor = editor.getEditor('root.graph_annotations');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: graph_annotations');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_annotations'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('graph_limits', []);
+        var propertyEditor = editor.getEditor('root.graph_limits');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: graph_limits');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_limits'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_series_breaks'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('graph_stacked_disaggregation', "");
+        var propertyEditor = editor.getEditor('root.graph_stacked_disaggregation');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: graph_stacked_disaggregation');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_stacked_disaggregation'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_target_lines'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('graph_title', "global_indicators.17-16-1-title");
+        var propertyEditor = editor.getEditor('root.graph_title');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: graph_title');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_title'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('graph_titles', []);
+        var propertyEditor = editor.getEditor('root.graph_titles');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: graph_titles');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_titles'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('graph_type', "line");
+        var propertyEditor = editor.getEditor('root.graph_type');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: graph_type');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_type'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.indicator_available'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicator_name', "global_indicators.17-16-1-title");
+        var propertyEditor = editor.getEditor('root.indicator_name');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicator_name');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.indicator_name'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicator_number', "17.16.1");
+        var propertyEditor = editor.getEditor('root.indicator_number');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicator_number');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.indicator_number'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.indicator_tabs'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_geographical_coverage', "");
+        var propertyEditor = editor.getEditor('root.national_geographical_coverage');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_geographical_coverage');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.national_geographical_coverage'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('page_content', "");
+        var propertyEditor = editor.getEditor('root.page_content');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: page_content');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.page_content'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('permalink', "");
+        var propertyEditor = editor.getEditor('root.permalink');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: permalink');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.permalink'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.placeholder'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('precision', []);
+        var propertyEditor = editor.getEditor('root.precision');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: precision');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.precision'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.progress_status'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.proxy'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.proxy_series'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.publications'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.related_indicators'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('reporting_status', "notstarted");
+        var propertyEditor = editor.getEditor('root.reporting_status');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: reporting_status');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.reporting_status'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('sort', "");
+        var propertyEditor = editor.getEditor('root.sort');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: sort');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.sort'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.sources'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.standalone'));
+
+    
+      try {
+        var currentValue = normalizeCurrentValue('tags', []);
+        var propertyEditor = editor.getEditor('root.tags');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: tags');
+      }
+    propertyEditorAccessibilityFixes(editor.getEditor('root.tags'));
+
+    propertyEditorAccessibilityFixes(editor.getEditor('root.x_axis_label'));
+
+    
+
+    function isTranslationKey(text) {
+      var parts = text.split('.');
+      if (parts.length !== 2) {
+        return false;
+      }
+      if (typeof allTranslations[parts[0]] === 'undefined') {
+        return false;
+      }
+      if (typeof allTranslations[parts[0]][parts[1]] === 'undefined') {
+        return false;
+      }
+      return true;
+    }
+
+    function addTranslationLink(propertyEditor) {
+      var parts = propertyEditor.value.split('.');
+      var translationLink = '';
+      translationLink = translationLink.replace('[id]', '17-16-1');
+      translationLink = translationLink.replace('[group]', parts[0]);
+      translationLink = translationLink.replace('[key]', parts[1]);
+      translationLink = translationLink.replace('[language]', 'eu');
+      var element = document.createElement('a');
+      element.setAttribute('target', '_blank');
+      element.setAttribute('href', translationLink);
+      element.setAttribute('class', 'translation-link');
+      element.innerHTML = 'Go to translation for ' + propertyEditor.key;
+      propertyEditor.addLink(element);
+    }
+
+    function SaveAsFile(t,f,m) {
+      try {
+        var b = new Blob([t],{type:m});
+        saveAs(b, f);
+      } catch (e) {
+        window.open("data:"+m+"," + encodeURIComponent(t), '_blank','');
+      }
+    }
+
+    document.getElementById('export').addEventListener('click', function() {
+      var errors = editor.validate();
+      if (errors.length) {
+        var alertText = 'Please correct the errors listed below';
+        var fieldNames = []
+        for (i = 0; i < errors.length; i++) {
+          var error = errors[i];
+          fieldNames.push(error.path.replace('root.', ''));
+        }
+        alert(alertText + ' (' + fieldNames.join(', ') + ').');
+      }
+      else {
+        var config = editor.getValue();
+        var yaml = jsyaml.safeDump(config);
+        SaveAsFile(yaml, '17-16-1.yml', 'text/plain;charset=utf-8');
+      }
+    });
+
+    function addNewTabMessage(link) {
+      if (!link.querySelector('.sr-only')) {
+        link.insertAdjacentHTML('beforeend', ' <span>(opens in a new tab)</span>');
+      }
+    }
+
+    document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+      addNewTabMessage(link);
+    });
+  </script>
+</div>
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Open SDGrekin eraikia</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/site/eu/contact-us">Kontaktatu</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank">Twitter</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">Facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/eu/about/cookies-and-privacy/">Cookieak</a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/site/eu/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'Ezkutatu';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Bilatu';</script>
+
+<script src='/site/assets/js/sdg.js?v=20240719121537'></script>
+
+
+    
+    
+    <script src="/site/assets/js/custom.js?v=20240719121537"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
+</script>
+
+
+</body>
+</html>
