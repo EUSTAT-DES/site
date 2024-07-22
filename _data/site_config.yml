@@ -151,7 +151,16 @@ languages:
   - eu
   - en
 languages_public: []
-logos: []
+logos: 
+  - language: es
+    src: assets/img/SDG_logo.png
+    alt: Ir a la página de inicio
+  - language: eu
+    src: assets/img/eu/SDG_logo.png
+    alt: Joan hasierako orrira
+  - language: en
+    src: assets/img/en/SDG_logo.png
+    alt: Go to homepage
 map_layers: []
 map_options:
   disaggregation_controls: false
