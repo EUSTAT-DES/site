@@ -161,9 +161,15 @@ logos:
   - language: en
     src: assets/img/en/SDG_logo.png
     alt: Go to homepage
-map_layers: []
+map_layers:
+  - subfolder: regions
+    label: indicator.regions
+    min_zoom: 5
+    max_zoom: 10
+    staticBorders: false
+  
 map_options:
-  disaggregation_controls: false
+  disaggregation_controls: true
   minZoom: 5
   maxZoom: 10
   tileURL: ''
