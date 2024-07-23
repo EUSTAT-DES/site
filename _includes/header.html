@@ -1,9 +1,7 @@
 {% include multilingual-js.html key="header" %}
 <a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">{{ page.t.header.skip_link }}</a>
 {% include components/header/internet-explorer-message.html %}
-<div id="disclaimer">
-    {% include components/dev-disclaimer.html %}
-</div>
+
 
 <header role="banner" class="">
     <div class="barra_azul_cab">
@@ -18,6 +16,9 @@
         <div id="lateralD_ham">
           <img src="https://www.eustat.eus/cwImages/2015/euskadieus.png" alt="euskadi.eus" id="logoEuskadiEus">
         </div>
+      </div>
+      <div id="disclaimer">
+        {% include components/dev-disclaimer.html %}
       </div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
