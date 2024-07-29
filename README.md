@@ -7,7 +7,7 @@ This is a starter repository to help in implementing the [Open SDG](https://gith
 
 ## EUSTAT - Euskal Estatistika Erakundea / Instituto Vasco de Estadística
 
-[Eustat] (https://en.eustat.eus/indice.html) is the public organization that develops, produces and distributes official statistical information of the Basque Country (Spain)
+[Eustat](https://en.eustat.eus/indice.html) is the public organization that develops, produces and distributes official statistical information of the Basque Country (Spain)
 
 
 
