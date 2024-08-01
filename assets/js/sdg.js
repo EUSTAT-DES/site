@@ -3282,7 +3282,7 @@ var mapView = function () {
     $('#map').sdgMap({
       indicatorId: indicatorId,
       mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":10,"tileURL":"","tileOptions":{"id":"","accessToken":"","attribution":""},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":""}},
-      mapLayers: [{"subfolder":"regions","label":"indicator.regions","min_zoom":5,"max_zoom":10,"staticBorders":false}],
+      mapLayers: [{"subfolder":"Territorio","label":"general.Territorio","min_zoom":2,"max_zoom":6,"staticBorders":true},{"subfolder":"Comarca","label":"general.Comarca","min_zoom":7,"max_zoom":8,"staticBorders":true},{"subfolder":"Municipio","label":"general.Municipio","min_zoom":9,"max_zoom":14,"staticBorders":true}],
       precision: precision,
       precisionItems: precisionItems,
       decimalSeparator: decimalSeparator,
