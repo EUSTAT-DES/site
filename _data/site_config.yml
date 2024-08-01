@@ -22,8 +22,8 @@ breadcrumbs:
 cookie_consent_form:
   enabled: false
 country:
-  name: Euskadi
-  adjective: Vasco
+  name: general.pais
+  adjective: general.adjetivo
 create_goals:
   previous_next_links: false
   goals: []
@@ -130,7 +130,7 @@ indicator_metadata_form:
     - national
     - global
   exclude_fields: []
-  translated: false
+  translated: true
 indicator_tabs:
   tab_1: ''
   tab_2: ''
@@ -152,12 +152,22 @@ logos:
     src: assets/img/en/SDG_logo.png
     alt: Go to homepage
 map_layers:
-  - subfolder: regions
-    label: indicator.regions
-    min_zoom: 5
-    max_zoom: 10
-    staticBorders: false
-  
+map_layers:
+  - subfolder: Territorio
+    label: general.Territorio
+    min_zoom: 2
+    max_zoom: 6
+    staticBorders: true
+  - subfolder: Comarca
+    label: general.Comarca
+    min_zoom: 7
+    max_zoom: 8
+    staticBorders: true
+  - subfolder: Municipio
+    label: general.Municipio
+    min_zoom: 9
+    max_zoom: 14
+    staticBorders: true
 map_options:
   disaggregation_controls: true
   minZoom: 5
