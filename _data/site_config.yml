@@ -152,7 +152,6 @@ logos:
     src: assets/img/en/SDG_logo.png
     alt: Go to homepage
 map_layers:
-map_layers:
   - subfolder: Territorio
     label: general.Territorio
     min_zoom: 2
