@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240802120050">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240802122450">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -310,11 +310,11 @@ layout-indicator-iframe
   data-charttitles="[]"
   data-measurementunit=""
   data-xaxislabel=""
-  data-showdata="false"
+  data-showdata="true"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap="false"
+  data-showmap="true"
   data-startvalues="[]"
   data-graphlimits="[]"
   data-stackeddisaggregation=""
@@ -322,14 +322,653 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Urtea&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;1.0&quot;,&quot;20.0&quot;,&quot;48.0&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Lurraldea&quot;},{&quot;name&quot;:&quot;Comarca&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;101.0&quot;,&quot;102.0&quot;,&quot;103.0&quot;,&quot;104.0&quot;,&quot;105.0&quot;,&quot;106.0&quot;,&quot;2001.0&quot;,&quot;2002.0&quot;,&quot;2003.0&quot;,&quot;2004.0&quot;,&quot;2005.0&quot;,&quot;2006.0&quot;,&quot;2007.0&quot;,&quot;4801.0&quot;,&quot;4802.0&quot;,&quot;4803.0&quot;,&quot;4804.0&quot;,&quot;4805.0&quot;,&quot;4806.0&quot;,&quot;4807.0&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Eskualdea&quot;},{&quot;name&quot;:&quot;Municipio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;1001.0&quot;,&quot;1002.0&quot;,&quot;1003.0&quot;,&quot;1004.0&quot;,&quot;1006.0&quot;,&quot;1008.0&quot;,&quot;1009.0&quot;,&quot;1010.0&quot;,&quot;1011.0&quot;,&quot;1013.0&quot;,&quot;1014.0&quot;,&quot;1016.0&quot;,&quot;1017.0&quot;,&quot;1018.0&quot;,&quot;1019.0&quot;,&quot;1020.0&quot;,&quot;1021.0&quot;,&quot;1022.0&quot;,&quot;1023.0&quot;,&quot;1027.0&quot;,&quot;1028.0&quot;,&quot;1030.0&quot;,&quot;1031.0&quot;,&quot;1032.0&quot;,&quot;1033.0&quot;,&quot;1034.0&quot;,&quot;1036.0&quot;,&quot;1037.0&quot;,&quot;1039.0&quot;,&quot;1041.0&quot;,&quot;1042.0&quot;,&quot;1043.0&quot;,&quot;1044.0&quot;,&quot;1046.0&quot;,&quot;1047.0&quot;,&quot;1049.0&quot;,&quot;1051.0&quot;,&quot;1052.0&quot;,&quot;1053.0&quot;,&quot;1054.0&quot;,&quot;1055.0&quot;,&quot;1056.0&quot;,&quot;1057.0&quot;,&quot;1058.0&quot;,&quot;1059.0&quot;,&quot;1060.0&quot;,&quot;1061.0&quot;,&quot;1062.0&quot;,&quot;1063.0&quot;,&quot;1901.0&quot;,&quot;1902.0&quot;,&quot;20001.0&quot;,&quot;20002.0&quot;,&quot;20003.0&quot;,&quot;20004.0&quot;,&quot;20005.0&quot;,&quot;20006.0&quot;,&quot;20007.0&quot;,&quot;20008.0&quot;,&quot;20009.0&quot;,&quot;20010.0&quot;,&quot;20011.0&quot;,&quot;20012.0&quot;,&quot;20013.0&quot;,&quot;20014.0&quot;,&quot;20015.0&quot;,&quot;20016.0&quot;,&quot;20017.0&quot;,&quot;20018.0&quot;,&quot;20019.0&quot;,&quot;20020.0&quot;,&quot;20021.0&quot;,&quot;20022.0&quot;,&quot;20023.0&quot;,&quot;20024.0&quot;,&quot;20025.0&quot;,&quot;20026.0&quot;,&quot;20027.0&quot;,&quot;20028.0&quot;,&quot;20029.0&quot;,&quot;20030.0&quot;,&quot;20031.0&quot;,&quot;20032.0&quot;,&quot;20033.0&quot;,&quot;20034.0&quot;,&quot;20035.0&quot;,&quot;20036.0&quot;,&quot;20037.0&quot;,&quot;20038.0&quot;,&quot;20039.0&quot;,&quot;20040.0&quot;,&quot;20041.0&quot;,&quot;20042.0&quot;,&quot;20043.0&quot;,&quot;20044.0&quot;,&quot;20045.0&quot;,&quot;20046.0&quot;,&quot;20047.0&quot;,&quot;20048.0&quot;,&quot;20049.0&quot;,&quot;20050.0&quot;,&quot;20051.0&quot;,&quot;20052.0&quot;,&quot;20053.0&quot;,&quot;20054.0&quot;,&quot;20055.0&quot;,&quot;20056.0&quot;,&quot;20057.0&quot;,&quot;20058.0&quot;,&quot;20059.0&quot;,&quot;20060.0&quot;,&quot;20061.0&quot;,&quot;20062.0&quot;,&quot;20063.0&quot;,&quot;20064.0&quot;,&quot;20065.0&quot;,&quot;20066.0&quot;,&quot;20067.0&quot;,&quot;20068.0&quot;,&quot;20069.0&quot;,&quot;20070.0&quot;,&quot;20071.0&quot;,&quot;20072.0&quot;,&quot;20073.0&quot;,&quot;20074.0&quot;,&quot;20075.0&quot;,&quot;20076.0&quot;,&quot;20077.0&quot;,&quot;20078.0&quot;,&quot;20079.0&quot;,&quot;20080.0&quot;,&quot;20081.0&quot;,&quot;20901.0&quot;,&quot;20902.0&quot;,&quot;20903.0&quot;,&quot;20904.0&quot;,&quot;20905.0&quot;,&quot;20906.0&quot;,&quot;20907.0&quot;,&quot;48001.0&quot;,&quot;48002.0&quot;,&quot;48003.0&quot;,&quot;48004.0&quot;,&quot;48005.0&quot;,&quot;48006.0&quot;,&quot;48007.0&quot;,&quot;48008.0&quot;,&quot;48009.0&quot;,&quot;48010.0&quot;,&quot;48011.0&quot;,&quot;48012.0&quot;,&quot;48013.0&quot;,&quot;48014.0&quot;,&quot;48015.0&quot;,&quot;48016.0&quot;,&quot;48017.0&quot;,&quot;48018.0&quot;,&quot;48019.0&quot;,&quot;48020.0&quot;,&quot;48021.0&quot;,&quot;48022.0&quot;,&quot;48023.0&quot;,&quot;48024.0&quot;,&quot;48025.0&quot;,&quot;48026.0&quot;,&quot;48027.0&quot;,&quot;48028.0&quot;,&quot;48029.0&quot;,&quot;48030.0&quot;,&quot;48031.0&quot;,&quot;48032.0&quot;,&quot;48033.0&quot;,&quot;48034.0&quot;,&quot;48035.0&quot;,&quot;48036.0&quot;,&quot;48037.0&quot;,&quot;48038.0&quot;,&quot;48039.0&quot;,&quot;48040.0&quot;,&quot;48041.0&quot;,&quot;48042.0&quot;,&quot;48043.0&quot;,&quot;48044.0&quot;,&quot;48045.0&quot;,&quot;48046.0&quot;,&quot;48047.0&quot;,&quot;48048.0&quot;,&quot;48049.0&quot;,&quot;48050.0&quot;,&quot;48051.0&quot;,&quot;48052.0&quot;,&quot;48053.0&quot;,&quot;48054.0&quot;,&quot;48055.0&quot;,&quot;48056.0&quot;,&quot;48057.0&quot;,&quot;48058.0&quot;,&quot;48059.0&quot;,&quot;48060.0&quot;,&quot;48061.0&quot;,&quot;48062.0&quot;,&quot;48063.0&quot;,&quot;48064.0&quot;,&quot;48065.0&quot;,&quot;48066.0&quot;,&quot;48067.0&quot;,&quot;48068.0&quot;,&quot;48069.0&quot;,&quot;48070.0&quot;,&quot;48071.0&quot;,&quot;48072.0&quot;,&quot;48073.0&quot;,&quot;48074.0&quot;,&quot;48075.0&quot;,&quot;48076.0&quot;,&quot;48077.0&quot;,&quot;48078.0&quot;,&quot;48079.0&quot;,&quot;48080.0&quot;,&quot;48081.0&quot;,&quot;48082.0&quot;,&quot;48083.0&quot;,&quot;48084.0&quot;,&quot;48085.0&quot;,&quot;48086.0&quot;,&quot;48087.0&quot;,&quot;48088.0&quot;,&quot;48089.0&quot;,&quot;48090.0&quot;,&quot;48091.0&quot;,&quot;48092.0&quot;,&quot;48093.0&quot;,&quot;48094.0&quot;,&quot;48095.0&quot;,&quot;48096.0&quot;,&quot;48097.0&quot;,&quot;48901.0&quot;,&quot;48902.0&quot;,&quot;48903.0&quot;,&quot;48904.0&quot;,&quot;48905.0&quot;,&quot;48906.0&quot;,&quot;48907.0&quot;,&quot;48908.0&quot;,&quot;48909.0&quot;,&quot;48910.0&quot;,&quot;48911.0&quot;,&quot;48912.0&quot;,&quot;48913.0&quot;,&quot;48914.0&quot;,&quot;48915.0&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Udalerria&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Ehunekoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unitateak&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Balioa&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Urtea&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Gipuzkoa&quot;,&quot;Bizkaia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Lurraldea&quot;},{&quot;name&quot;:&quot;Comarca&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Añana (comarca)&quot;,&quot;Arabako Lautada / Llanada Alavesa&quot;,&quot;Arabako Mendialdea / Montaña Alavesa&quot;,&quot;Arabako Errioxa / Rioja Alavesa&quot;,&quot;Gorbeialdea / Estribaciones del Gorbea&quot;,&quot;Arabako Kantaurialdea / Cantábrica Alavesa&quot;,&quot;Bidasoa Beherea / Bajo Bidasoa&quot;,&quot;Debabarrena / Bajo Deba&quot;,&quot;Debagoiena / Alto Deba&quot;,&quot;Donostialdea&quot;,&quot;Goierri&quot;,&quot;Tolosaldea&quot;,&quot;Urola Kosta&quot;,&quot;Arratia Nerbioi / Arratia-Nervión&quot;,&quot;Bilbo Handia / Gran Bilbao&quot;,&quot;Durangaldea / Duranguesado&quot;,&quot;Enkartazioak / Encartaciones&quot;,&quot;Gernika-Bermeo&quot;,&quot;Markina-Ondarroa&quot;,&quot;Plentzia-Mungia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Eskualdea&quot;},{&quot;name&quot;:&quot;Municipio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Alegría-Dulantzi&quot;,&quot;Amurrio&quot;,&quot;Aramaio&quot;,&quot;Artziniega&quot;,&quot;Armiñón&quot;,&quot;Arratzua-Ubarrundia&quot;,&quot;Asparrena&quot;,&quot;Ayala/Aiara&quot;,&quot;Baños de Ebro/Mañueta&quot;,&quot;Barrundia&quot;,&quot;Berantevilla&quot;,&quot;Bernedo&quot;,&quot;Campezo/Kanpezu&quot;,&quot;Zigoitia&quot;,&quot;Kripan&quot;,&quot;Kuartango&quot;,&quot;Elburgo/Burgelu&quot;,&quot;Elciego&quot;,&quot;Elvillar/Bilar&quot;,&quot;Iruraiz-Gauna&quot;,&quot;Labastida/Bastida&quot;,&quot;Lagrán&quot;,&quot;Laguardia&quot;,&quot;Lanciego/Lantziego&quot;,&quot;Lapuebla de Labarca&quot;,&quot;Leza&quot;,&quot;Laudio/Llodio&quot;,&quot;Arraia-Maeztu&quot;,&quot;Moreda de Álava/Moreda Araba&quot;,&quot;Navaridas&quot;,&quot;Okondo&quot;,&quot;Oyón-Oion&quot;,&quot;Peñacerrada-Urizaharra&quot;,&quot;Erriberagoitia/Ribera Alta&quot;,&quot;Ribera Baja/Erribera Beitia&quot;,&quot;Añana&quot;,&quot;Agurain/Salvatierra&quot;,&quot;Samaniego&quot;,&quot;San Millán/Donemiliaga&quot;,&quot;Urkabustaiz&quot;,&quot;Valdegovía/Gaubea&quot;,&quot;Harana/Valle de Arana&quot;,&quot;Villabuena de Álava/Eskuernaga&quot;,&quot;Legutio&quot;,&quot;Vitoria-Gasteiz&quot;,&quot;Yécora/Iekora&quot;,&quot;Zalduondo&quot;,&quot;Zambrana&quot;,&quot;Zuia&quot;,&quot;Iruña Oka/Iruña de Oca&quot;,&quot;Lantarón&quot;,&quot;Abaltzisketa&quot;,&quot;Aduna&quot;,&quot;Aizarnazabal&quot;,&quot;Albiztur&quot;,&quot;Alegia&quot;,&quot;Alkiza&quot;,&quot;Altzo&quot;,&quot;Amezketa&quot;,&quot;Andoain&quot;,&quot;Anoeta&quot;,&quot;Antzuola&quot;,&quot;Arama&quot;,&quot;Aretxabaleta&quot;,&quot;Asteasu&quot;,&quot;Ataun&quot;,&quot;Aia&quot;,&quot;Azkoitia&quot;,&quot;Azpeitia&quot;,&quot;Beasain&quot;,&quot;Beizama&quot;,&quot;Belauntza&quot;,&quot;Berastegi&quot;,&quot;Berrobi&quot;,&quot;Bidania-Goiatz&quot;,&quot;Zegama&quot;,&quot;Zerain&quot;,&quot;Zestoa&quot;,&quot;Zizurkil&quot;,&quot;Deba&quot;,&quot;Eibar&quot;,&quot;Elduain&quot;,&quot;Elgoibar&quot;,&quot;Elgeta&quot;,&quot;Eskoriatza&quot;,&quot;Ezkio-Itsaso&quot;,&quot;Hondarribia&quot;,&quot;Gaintza&quot;,&quot;Gabiria&quot;,&quot;Getaria&quot;,&quot;Hernani&quot;,&quot;Hernialde&quot;,&quot;Ibarra&quot;,&quot;Idiazabal&quot;,&quot;Ikaztegieta&quot;,&quot;Irun&quot;,&quot;Irura&quot;,&quot;Itsasondo&quot;,&quot;Larraul&quot;,&quot;Lazkao&quot;,&quot;Leaburu&quot;,&quot;Legazpi&quot;,&quot;Legorreta&quot;,&quot;Lezo&quot;,&quot;Lizartza&quot;,&quot;Arrasate/Mondragón&quot;,&quot;Mutriku&quot;,&quot;Mutiloa&quot;,&quot;Olaberria&quot;,&quot;Oñati&quot;,&quot;Orexa&quot;,&quot;Orio&quot;,&quot;Ormaiztegi&quot;,&quot;Oiartzun&quot;,&quot;Pasaia&quot;,&quot;Soraluze/Placencia de las Armas&quot;,&quot;Errezil&quot;,&quot;Errenteria&quot;,&quot;Leintz-Gatzaga&quot;,&quot;Donostia / San Sebastián&quot;,&quot;Segura&quot;,&quot;Tolosa&quot;,&quot;Urnieta&quot;,&quot;Usurbil&quot;,&quot;Bergara&quot;,&quot;Villabona&quot;,&quot;Ordizia&quot;,&quot;Urretxu&quot;,&quot;Zaldibia&quot;,&quot;Zarautz&quot;,&quot;Zumarraga&quot;,&quot;Zumaia&quot;,&quot;Mendaro&quot;,&quot;Lasarte-Oria&quot;,&quot;Astigarraga&quot;,&quot;Baliarrain&quot;,&quot;Orendain&quot;,&quot;Altzaga&quot;,&quot;Gaztelu&quot;,&quot;Abadiño&quot;,&quot;Abanto y Ciérvana-Abanto Zierbena&quot;,&quot;Amorebieta-Etxano&quot;,&quot;Amoroto&quot;,&quot;Arakaldo&quot;,&quot;Arantzazu&quot;,&quot;Munitibar-Arbatzegi Gerrikaitz&quot;,&quot;Artzentales&quot;,&quot;Arrankudiaga-Zollo&quot;,&quot;Arrieta&quot;,&quot;Arrigorriaga&quot;,&quot;Bakio&quot;,&quot;Barakaldo&quot;,&quot;Barrika&quot;,&quot;Basauri&quot;,&quot;Berango&quot;,&quot;Bermeo&quot;,&quot;Berriatua&quot;,&quot;Berriz&quot;,&quot;Bilbao&quot;,&quot;Busturia&quot;,&quot;Karrantza Harana/Valle de Carranza&quot;,&quot;Artea&quot;,&quot;Zeanuri&quot;,&quot;Zeberio&quot;,&quot;Dima&quot;,&quot;Durango&quot;,&quot;Ea&quot;,&quot;Etxebarri&quot;,&quot;Etxebarria&quot;,&quot;Elantxobe&quot;,&quot;Elorrio&quot;,&quot;Ereño&quot;,&quot;Ermua&quot;,&quot;Fruiz&quot;,&quot;Galdakao&quot;,&quot;Galdames&quot;,&quot;Gamiz-Fika&quot;,&quot;Garai&quot;,&quot;Gatika&quot;,&quot;Gautegiz Arteaga&quot;,&quot;Gordexola&quot;,&quot;Gorliz&quot;,&quot;Getxo&quot;,&quot;Güeñes&quot;,&quot;Gernika-Lumo&quot;,&quot;Gizaburuaga&quot;,&quot;Ibarrangelu&quot;,&quot;Ispaster&quot;,&quot;Izurtza&quot;,&quot;Lanestosa&quot;,&quot;Larrabetzu&quot;,&quot;Laukiz&quot;,&quot;Leioa&quot;,&quot;Lemoa&quot;,&quot;Lemoiz&quot;,&quot;Lekeitio&quot;,&quot;Mallabia&quot;,&quot;Mañaria&quot;,&quot;Markina-Xemein&quot;,&quot;Maruri-Jatabe&quot;,&quot;Mendata&quot;,&quot;Mendexa&quot;,&quot;Meñaka&quot;,&quot;Ugao-Miraballes&quot;,&quot;Morga&quot;,&quot;Muxika&quot;,&quot;Mundaka&quot;,&quot;Mungia&quot;,&quot;Aulesti&quot;,&quot;Muskiz&quot;,&quot;Otxandio&quot;,&quot;Ondarroa&quot;,&quot;Urduña/Orduña&quot;,&quot;Orozko&quot;,&quot;Sukarrieta&quot;,&quot;Plentzia&quot;,&quot;Portugalete&quot;,&quot;Errigoiti&quot;,&quot;Valle de Trápaga-Trapagaran&quot;,&quot;Lezama&quot;,&quot;Santurtzi&quot;,&quot;Ortuella&quot;,&quot;Sestao&quot;,&quot;Sopela&quot;,&quot;Sopuerta&quot;,&quot;Trucios-Turtzioz&quot;,&quot;Ubide&quot;,&quot;Urduliz&quot;,&quot;Balmaseda&quot;,&quot;Atxondo&quot;,&quot;Bedia&quot;,&quot;Areatza&quot;,&quot;Igorre&quot;,&quot;Zaldibar&quot;,&quot;Zalla&quot;,&quot;Zaratamo&quot;,&quot;Derio&quot;,&quot;Erandio&quot;,&quot;Loiu&quot;,&quot;Sondika&quot;,&quot;Zamudio&quot;,&quot;Forua&quot;,&quot;Kortezubi&quot;,&quot;Murueta&quot;,&quot;Nabarniz&quot;,&quot;Iurreta&quot;,&quot;Ajangiz&quot;,&quot;Alonsotegi&quot;,&quot;Zierbena&quot;,&quot;Arratzu&quot;,&quot;Ziortza-Bolibar&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Udalerria&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Ehunekoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unitateak&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Balioa&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
   data-proxyseries="null"
 >
   
-  <div id="indicator-main" class="indicator-main col-md-12">
+  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
+  <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
+    <div id="serieses"></div>
+<div id="units"></div>
+<div id="toolbar">
+  <span id="series-help">
+    <h4>Azpikategoriak</h4>
+    <p>Datuen desagregazioak ikusteko, aukeratu jarraian goitibeherako zerrenden kategoriak. Batzuk ez dira erabilgarri egongo goragoko mailan kategoriaren bat aukeratu arte</p>
+  </span>
+  <div id="fields">
+    <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+  </div>
+</div>
+
+  </div>
+  <div id="indicator-main" class="indicator-main col-md-9">
+    
+
+
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    
+    <a role="button" href="https://eustat-des.github.io/data/eu/headline/2-a-1.csv" class="btn btn-primary btn-download" download="indicator_2-a-1.csv" tabindex="0" role="button">Deskargatu titularren datuak (.csv)</a>
+    
+    <a role="button" href="https://eustat-des.github.io/data/eu/data/2-a-1.csv" class="btn btn-primary btn-download" download='indicator_2-a-1.csv' tabindex='0' role='button'>Jatorrizko datuak deskargatu (.csv)</a>
+
+    <p class="no-js-disaggregation-hint">Deskargatu desagregazioen jatorrizko datuak (.csv)</p>
+
+    
+    <h3>Datu nagusiak</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Gastu publikoko nekazaritza bideratzeko indizea</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">GeoCode</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>0.6</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>0.7</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>0.8</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>0.8</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>0.7</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>0.7</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>0.7</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>0.9</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>0.8</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>0.8</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>0.7</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>0.8</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>0.9</td>
+          
+          
+          
+          <td>Ehunekoa</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    
+  </div>
+
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Eremu geografikoa: </p>
+    
+    
+    <p>Neurri-unitatea: </p>
+    
+    
+    <p>Oharra: </p>
+    
+  </div>
+  
+
+</div>
+
+
+<section>
+
+  <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+
+  <div class="async-loaded mt-4" style="display:none;">
+
+    <div style="display: none;">
+    <span id="table-alternative">Datuak taula forman ikusteko, joan Taula pestañara.</span>
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+
+        
+      >Grafikoa</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+
+        
+      >Taula</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        map
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-mapview"
+          data-bs-target="#mapview"
+          aria-controls="mapview"
+          data-no-disagg="true"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
+
+        
+      >Mapa</button>
+    </li>
+    
+  </ul>
+  
+    <div class="tab-content data-view">
+    
+      
+        <div role="tabpanel" class="tab-pane active" id="chartview">
+          
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only">Abisua:</span></i>
+      Datu gehiegi daude grafikoan erakusteko. Dena ez da erakutsiko selekzio batzuk kendu arte.
+    </div>
+
+    
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">
+            Gastu publikoko nekazaritza bideratzeko indizea
+          </h4>
+          <div id="chart" class="plot-container">
+            <canvas
+    role="img"
+    aria-labelledby="chart-heading"
+    aria-describedby="table-alternative chart-annotations"
+    tabindex="0"
+ ></canvas>
+
+          </div>
+          <div id="plotLegend"></div>
+          
+
+
+
+<div id="selectionChartFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Neurri-unitatea:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Oharra:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Azken aldiz eguneratutako datuak:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button
+          id="btnSave"
+          title="Deskargatu grafikoaren irudia PNG gisa"
+          aria-label="Deskargatu grafikoaren irudia PNG gisa"
+          class='btn btn-primary btn-download'>
+          Deskargatu grafikoaren irudia (.png)
+        </button><!--
+   --></div>
+    </div>
+
+
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="tableview">
+          <div style="display: none;">
+            <span id="column-sort-info">Sakatu zutabe honen bidez ordenatzeko</span>
+          </div>
+          <div id="selectionsTable"></div>
+<dl id="tableTargetLines" class="clearfix"></dl>
+
+
+
+
+<div id="selectionTableFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Neurri-unitatea:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Oharra:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Azken aldiz eguneratutako datuak:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+<div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
+<h4 id="map-heading" class="map-title">Gastu publikoko nekazaritza bideratzeko indizea</h4>
+<div id="map" aria-describedby="table-alternative">
+  <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Mapa kargatzen" />
+</div>
+
+
+
+
+<div id="mapFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Neurri-unitatea:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Oharra:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Azken aldiz eguneratutako datuak:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+
+        </div>
+      
+    
+  </div>
+  
+
+  </div>
+
+</section>
+
   
   <div class="mt-4">
 <ul class="nav nav-tabs" role="tablist">
@@ -969,6 +1608,15 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/torfsen/leaflet.zoomhome@master/dist/leaflet.zoomhome.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
@@ -985,12 +1633,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240802120050'></script>
+<script src='/site/assets/js/sdg.js?v=20240802122450'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240802120050"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240802122450"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
