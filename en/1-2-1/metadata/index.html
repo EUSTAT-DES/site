@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240807072956">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240807112607">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1009,7 +1009,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('DATA_COMP', "$\\frac{\\text{PobRPR\\_NAC}}{\\text{Pob\\_NAC}} \\times 100$ población en riesgo de pobreza relativa considerando el umbral nacional de pobreza (60% de la mediana nacional de los ingresos por unidad de consumo (escala OCDE modificada)) en el año t");
+        var currentValue = normalizeCurrentValue('DATA_COMP', "$$\\left( \\sum_{k=1}^n a_k b_k \\right)^2 \\leq \\left( \\sum_{k=1}^n a_k^2 \\right) \\left( \\sum_{k=1}^n b_k^2 \\right)$$");
         var propertyEditor = editor.getEditor('root.DATA_COMP');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1093,7 +1093,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('COVERAGE', "");
+        var currentValue = normalizeCurrentValue('COVERAGE', "<iframe width=\"800\" height=\"600\" src=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&seriesCode=SI_POV_DAY1&areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=4&table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\"></iframe>");
         var propertyEditor = editor.getEditor('root.COVERAGE');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1107,7 +1107,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('COMPARABILITY', "");
+        var currentValue = normalizeCurrentValue('COMPARABILITY', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SeriesChart?indicators=1.1.1&seriesCode=SI_POV_DAY1&areaCode=1,202,14,17,18,11,747,15\" target=\"_blank\">Abrir Chart en nueva ventana</a>");
         var propertyEditor = editor.getEditor('root.COMPARABILITY');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1149,7 +1149,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-22");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-08-07");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1347,12 +1347,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240807072956'></script>
+<script src='/site/assets/js/sdg.js?v=20240807112607'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240807072956"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240807112607"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
