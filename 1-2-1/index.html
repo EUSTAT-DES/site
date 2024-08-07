@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240807151227">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240807160011">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -461,12 +461,12 @@ data-event-label="high"
         <div class="progress-status">
         
             <div class="progress-status-label">
-                No hay datos
+                Siguen los desafíos
             </div>
         
         
             <div class="progress-status-image">
-                <img src="/site/assets/img/progress/not-available.png" alt="No hay datos" />
+                <img src="/site/assets/img/progress/challenges-remain.png" alt="Siguen los desafíos" />
             </div>
         
         </div>
@@ -499,11 +499,11 @@ data-event-label="high"
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="&quot;&quot;"
-  data-graphlimits="[{&quot;value&quot;:9.25}]"
+  data-graphlimits="[]"
   data-stackeddisaggregation=""
   data-graphannotations="[]"
-  data-graphtargetlines="[]"
-  data-graphseriesbreaks="[{&quot;value&quot;:8.5}]"
+  data-graphtargetlines="[{&quot;series&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;label_content&quot;:&quot;Objetivo del indicador para 2030&quot;,&quot;value&quot;:9}]"
+  data-graphseriesbreaks="[{&quot;series&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;label_content&quot;:&quot;Ruptura de la serie&quot;,&quot;value&quot;:4}]"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Sexo&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Hombre&quot;,&quot;Mujer&quot;,&quot;Total&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sexo&quot;},{&quot;name&quot;:&quot;Edad&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 años y más&quot;,&quot;Total&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Edad&quot;},{&quot;name&quot;:&quot;Umbral&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Autonómico&quot;,&quot;Nacional&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Umbral de la pobreza&quot;},{&quot;name&quot;:&quot;Ingreso&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Ingresos con alquiler imputado&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Ingresos&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Gipuzkoa&quot;,&quot;Bizkaia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Porcentaje&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
@@ -870,6 +870,8 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  
+  
       
       
       
@@ -1064,7 +1066,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Proveedores de datos </th>
         <td>
           
-            <p>Departamento de Igualdad, Justicia y Políticas Sociales, Gobierno Vasco</p>
+            <p>Departamento de Bienestar, juventud y reto demográfico, Gobierno Vasco</p>
 
           
         </td>
@@ -1132,21 +1134,6 @@ data-event-label="Change to indicator.sources tab"
       
         
           
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Comparabilidad/desviación de las normas internacionales </th>
-        <td>
-          
-            <iframe width="600" height="600" src="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-
-          
-        </td>
-        </tr>
-        
-      
   
       
       
@@ -1280,6 +1267,11 @@ data-event-label="Change to indicator.sources tab"
       
       
       
+        
+          
+      
+      
+      
       
       <tr>
         <th scope="row">Indicador </th>
@@ -1357,6 +1349,21 @@ data-event-label="Change to indicator.sources tab"
         
       
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Justificación </th>
+        <td>
+          
+            <p>Monitoring national poverty is important for country-specific development agendas. National poverty lines are used to make more accurate estimates of poverty consistent with the country&#x2019;s specific economic and social circumstances, and are not intended for international comparisons of poverty rates. </p>
+
+          
+        </td>
+        </tr>
+        
+      
   
   
   
@@ -1394,6 +1401,22 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comparabilidad/desviación de las normas internacionales </th>
+        <td>
+          
+            <iframe width="600" height="600" src="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+
+          
+        </td>
+        </tr>
+        
+      
   
   
   
@@ -1641,12 +1664,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240807151227'></script>
+<script src='/site/assets/js/sdg.js?v=20240807160011'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240807151227"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240807160011"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
