@@ -130,7 +130,6 @@ indicator_metadata_form:
   scopes:
     - national
     - global
-    - sources_alt
   exclude_fields: []
   translated: true
 indicator_tabs:
@@ -157,16 +156,16 @@ map_layers:
   - subfolder: Territorio
     label: Territorio
     min_zoom: 2
-    max_zoom: 6
+    max_zoom: 7
     staticBorders: true
   - subfolder: Comarca
     label: Comarca
-    min_zoom: 7
-    max_zoom: 8
+    min_zoom: 8
+    max_zoom: 9
     staticBorders: true
   - subfolder: Municipio
     label: Municipio
-    min_zoom: 9
+    min_zoom: 10
     max_zoom: 14
     staticBorders: true
 map_options:
