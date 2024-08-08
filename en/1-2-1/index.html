@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240808112604">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240808140255">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -479,6 +479,13 @@ data-event-label="high"
 
   
 
+<div class="row" id="page-content">
+  <div class="col-xs-12">
+    <p>El análisis del progreso solo considera los datos a nivel autonómico para el total de la población. El valor objetivo marcado en el gráfico solo es aplicable al total de la población.</p>
+
+  </div>
+</div>
+
 
   
 
@@ -502,10 +509,10 @@ data-event-label="high"
   data-graphlimits="[]"
   data-stackeddisaggregation=""
   data-graphannotations="[]"
-  data-graphtargetlines="[{&quot;series&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;label_content&quot;:&quot;2030 indicator target&quot;,&quot;value&quot;:7.25}]"
+  data-graphtargetlines="[{&quot;series&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;label_content&quot;:&quot;2030 indicator target&quot;,&quot;value&quot;:9.25}]"
   data-graphseriesbreaks="[{&quot;series&quot;:&quot;&quot;,&quot;unit&quot;:&quot;&quot;,&quot;label_content&quot;:&quot;Series break&quot;,&quot;value&quot;:5.5}]"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Sexo&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Male&quot;,&quot;Female&quot;,&quot;Total&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;Edad&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 and over&quot;,&quot;Total&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Edad&quot;},{&quot;name&quot;:&quot;Umbral&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Autonomic&quot;,&quot;National&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Poverty treshold&quot;},{&quot;name&quot;:&quot;Ingreso&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Income with imputed rental&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Income&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Gipuzkoa&quot;,&quot;Bizkaia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Province&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Sexo&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Male&quot;,&quot;Female&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;Edad&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 and over&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Edad&quot;},{&quot;name&quot;:&quot;Umbral&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Autonomic&quot;,&quot;National&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Poverty treshold&quot;},{&quot;name&quot;:&quot;Ingreso&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Income with imputed rental&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Income&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Gipuzkoa&quot;,&quot;Bizkaia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Province&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -865,22 +872,15 @@ data-event-label="Change to indicator.sources tab"
                 <table class="table metadata-content">
   <tbody>
   
-  
-  
-  
-  
-  
-  
-  
       
       
       
       
       <tr>
-        <th scope="row">Indicator information </th>
+        <th scope="row">Available indicator name </th>
         <td>
           
-            <p>El porcentaje de personas que viven en hogares considerados en riesgo de pobreza en el contexto nacional. Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza</p>
+            <p>Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico y nacional de la pobreza</p>
 
           
         </td>
@@ -893,10 +893,10 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Goal </th>
+        <th scope="row">Indicator </th>
         <td>
           
-            <p>End poverty in all its forms everywhere</p>
+            <p>Proportion of population living below the national poverty line, by sex and age</p>
 
           
         </td>
@@ -925,225 +925,26 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Indicator </th>
+        <th scope="row">Goal </th>
         <td>
           
-            <p>Proportion of population living below the national poverty line, by sex and age</p>
+            <p>End poverty in all its forms everywhere</p>
 
           
         </td>
         </tr>
         
       
-  
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Related indicators </th>
-        <td>
-          
-            <p>Proportion of the population living below the international poverty line by sex, age, employment status and geographic location (urban/rural)</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Definition, concepts, and classifications </th>
-        <td>
-          
-            <p>Ingreso del hogar: el ingreso disponible total de un hogar se calcula sumando el ingreso personal recibido por todos los miembros del hogar más los ingresos recibidos a nivel del hogar. La medida de ingresos utilizada es antes de los costos de vivienda. Se imputa la información de ingresos faltante</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Data providers </th>
-        <td>
-          
-            <p>Department of Equality, Justice and Social Policies, Basque Government</p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
   
       
       
       
       
       <tr>
-        <th scope="row">References and Documentation </th>
+        <th scope="row">Definition </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX" target="_blank">UNSTAT, 1.2.1</a></p>
+            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica y nacional de los ingresos por unidad de consumo (escala OCDE modificada)</p>
 
           
         </td>
@@ -1151,6 +952,288 @@ data-event-label="Change to indicator.sources tab"
         
       
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Theoretical formula </th>
+        <td>
+          
+            <p>$\frac{\text{PobRPR_NAC}}{\text{Pob_NAC}} \times 100$ población en riesgo de pobreza relativa considerando el umbral nacional de pobreza (60% de la mediana nacional de los ingresos por unidad de consumo (escala OCDE modificada)) en el año t</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Frequency </th>
+        <td>
+          
+            <p>meta.FREQ_A</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Observations </th>
+        <td>
+          
+            <p>Los ingresos que se utilizan en el cálculo de este indicador corresponden al año anterior al de la encuesta. El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">OCECA indicator </th>
+        <td>
+          
+            <p>true</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">OCECA text </th>
+        <td>
+          
+            <p>Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+      
+      
+      
+        
+          
       
       
       
@@ -1159,7 +1242,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Data last updated </th>
         <td>
           
-            August 07, 2024
+            August 08, 2024
           
         </td>
         </tr>
@@ -1275,6 +1358,104 @@ data-event-label="Change to indicator.sources tab"
                 <table class="table metadata-content">
   <tbody>
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Description </th>
+        <td>
+          
+            <p>El porcentaje de personas que viven en hogares considerados en riesgo de pobreza en el contexto nacional.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Rationale </th>
+        <td>
+          
+            <p>meta.1-2-1-justificacion</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Link to UN metadata </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-04-01.pdf" target="_blank">
+                Link <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">International data </th>
+        <td>
+          
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX" target="_blank">1.2.1 UNSTAT</a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Note on comparability </th>
+        <td>
+          
+            <p>Datos comparables a nivel europeo</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1360,75 +1541,48 @@ data-event-label="Change to indicator.sources tab"
         
       
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
       
       
       
-      
-      <tr>
-        <th scope="row">Rationale </th>
-        <td>
-          
-            <p>Monitoring national poverty is important for country-specific development agendas. National poverty lines are used to make more accurate estimates of poverty consistent with the country&#x2019;s specific economic and social circumstances, and are not intended for international comparisons of poverty rates. </p>
-
-          
-        </td>
-        </tr>
         
-      
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Comparability/deviation from international standards </th>
-        <td>
           
-            <iframe width="600" height="600" src="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-
-          
-        </td>
-        </tr>
-        
-      
-  
   
   
   
@@ -1735,12 +1889,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240808112604'></script>
+<script src='/site/assets/js/sdg.js?v=20240808140255'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240808112604"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240808140255"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
