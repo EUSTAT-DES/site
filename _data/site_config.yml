@@ -130,6 +130,7 @@ indicator_metadata_form:
   scopes:
     - national
     - global
+    - sources_alt
   exclude_fields: []
   translated: true
 indicator_tabs:
