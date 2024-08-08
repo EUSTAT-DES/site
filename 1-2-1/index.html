@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240808144611">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240808165934">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -452,7 +452,7 @@ data-event-label="high"
   
 <div class="row indicator-progress">
     <div class="col-sm-2 progress-status-heading">
-        Estado del progreso
+        Progreso
     </div>
     <div class="col-sm-10">
         
@@ -461,12 +461,12 @@ data-event-label="high"
         <div class="progress-status">
         
             <div class="progress-status-label">
-                Siguen los desafíos
+                Insuficiente
             </div>
         
         
             <div class="progress-status-image">
-                <img src="/site/assets/img/progress/challenges-remain.png" alt="Siguen los desafíos" />
+                <img src="/site/assets/img/progress/challenges-remain.png" alt="Insuficiente" />
             </div>
         
         </div>
@@ -481,7 +481,7 @@ data-event-label="high"
 
 <div class="row" id="page-content">
   <div class="col-xs-12">
-    <p>El análisis del progreso solo considera los datos a nivel autonómico para el total de la población. El valor objetivo marcado en el gráfico solo es aplicable al total de la población.</p>
+    <p>La meta es la reducción a la mitad de la población que vive en la pobreza. La evaluación del progreso se ha realizado de acuerdo con la <a href="https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf">nota técnica</a> de UNSTAT, considerando los datos a nivel autonómico para el total de la población. El valor objetivo marcado en el gráfico solo es aplicable al total de la población.</p>
 
   </div>
 </div>
@@ -496,7 +496,7 @@ data-event-label="high"
   data-indicatorid='indicator_1-2-1'
   data-id="1-2-1"
   data-country="C.A. de Euskadi"
-  data-charttitle="Proporción de la población que vive por debajo del umbral nacional de pobreza, desglosada por sexo y edad"
+  data-charttitle="Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico y nacional de la pobreza"
   data-charttitles="[]"
   data-measurementunit=""
   data-xaxislabel=""
@@ -639,7 +639,7 @@ data-event-label="Change to Table tab"
       <figure role="group">
         <div id="chart-canvas">
           <h4 id="chart-heading" class="chart-title">
-            Proporción de la población que vive por debajo del umbral nacional de pobreza, desglosada por sexo y edad
+            Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico y nacional de la pobreza
           </h4>
           <div id="chart" class="plot-container">
             <canvas
@@ -1392,7 +1392,7 @@ data-event-label="Change to indicator.sources tab"
             
             
             
-              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-04-01.pdf" target="_blank">
+              <a href="<a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf">Metadatos del indicador 1-2-1</a>" target="_blank">
                 Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
               </a>
             
@@ -1411,7 +1411,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Datos internacionales </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX" target="_blank">1.2.1 UNSTAT</a></p>
+            <p>Eurostat <a href="https://ec.europa.eu/eurostat/databrowser/bookmark/7d6a8537-b602-4526-aff8-4fcbd2b48dee?lang=en">(ilc_li02)</a> UNSTAT<a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX" target="_blank">(1.2.1)</a></p>
 
           
         </td>
@@ -1624,14 +1624,14 @@ data-event-label="Change to indicator.sources tab"
             
             
             <tr>
-                <td colspan="2"><img alt="Departamento de Bienestar, juventud y reto demográfico, Gobierno Vasco" src="https://www.eustat.eus/cwImages/2015/euskadieus.png" /></td>
+                <td colspan="2"><img alt="Departamento de Bienestar, Juventud y Reto Demográfico" src="https://www.eustat.eus/cwImages/2015/euskadieus.png" /></td>
             </tr>
             
             
             
             <tr>
                 <th scope="row">Organización</th>
-                <td>Departamento de Bienestar, juventud y reto demográfico, Gobierno Vasco</td>
+                <td>Departamento de Bienestar, Juventud y Reto Demográfico</td>
             </tr>
             
             
@@ -1652,7 +1652,7 @@ data-event-label="Change to indicator.sources tab"
             <tr>
                 <th scope="row">Enlace a la fuente de datos</th>
                 
-                <td><a href="https://www.euskadi.eus/gobierno-vasco/departamento-bienestar-juventud-reto-demografico">Departamento de Bienestar, juventud y reto demográfico, Gobierno Vasco</a></td>
+                <td><a href="https://www.euskadi.eus/encuesta-de-pobreza-y-desigualdades-sociales-epds/web01-s2enple/es/">Encuesta de Pobreza y Desigualdades Sociales (EPDS)</a></td>
                 
             </tr>
             
@@ -1815,12 +1815,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240808144611'></script>
+<script src='/site/assets/js/sdg.js?v=20240808165934'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240808144611"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240808165934"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
