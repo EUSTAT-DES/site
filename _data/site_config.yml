@@ -156,16 +156,16 @@ map_layers:
   - subfolder: Territorio
     label: Territorio
     min_zoom: 2
-    max_zoom: 7
+    max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
     label: Comarca
-    min_zoom: 8
-    max_zoom: 9
+    min_zoom: 7
+    max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
     label: Municipio
-    min_zoom: 10
+    min_zoom: 9
     max_zoom: 14
     staticBorders: true
 map_options:
