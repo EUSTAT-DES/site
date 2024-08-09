@@ -48,8 +48,8 @@ custom_js:
   - /assets/js/custom.js
 data_edit_url: data
 data_fields:
-  units: ''
-  series: ''
+  units: Unidad
+  series: Serie
 date_formats: 
   - type: standard
     language: en
