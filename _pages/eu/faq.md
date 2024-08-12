@@ -1,67 +1,69 @@
 ---
-title: Ohiko galderak (FAQ)
+title: Frequently Asked Questions (FAQ)
+language: eu
 permalink: /eu/faq/
 layout: page
-language: eu
 ---
-# #Eduki-taula
-- [Zein maiztasunekin erantsiko zaizkio datu berriak gune honi?] (#zein maiztasunekin-ere-berriro-datu-este-gunea)
 
-- [Nola iradokitzen ditut datu-iturri berriak edo desberdinak?] (#Nola Iradokitzen Dituenak-datuak-berriak-desberdinak)
+## Table of contents
+- [How often will new data be added to this site?](#how-often-will-new-data-be-added-to-this-site)
 
-- [Zer egiten ari zara datu-hutsuneak betetzeko?] (#Zer egiten ari zara datu-hutsak betetzeko?)
+- [How do I suggest new or different data sources?](#how-do-i-suggest-new-or-different-data-sources)
 
-- [Zer esan nahi du txostenaren egoerak?] (#que-significa-el-estatua-del-informe)
+- [What are you doing to fill data gaps?](#what-are-you-doing-to-fill-data-gaps)
 
-- [Beste herrialde batzuek kopiatu dezakete webgune hau?] (#ahal dute-besteak-herrialdeak-kopiatu-este-web)
+- [What does the reporting status mean?](#what-does-the-reporting-status-mean)
 
-- [Zein da webgune honen erabilerraztasuna?] (#qué-accesible-es-este-sitio-web)
+- [Can other countries copy this website?](#can-other-countries-copy-this-website)
 
-- [Zein nabigatzaile erabil ditzaket webgune hau ikusteko?] (#qué-navegadores-puedo-usar-para-ver-este-sitio-web)
+- [How accessible is this website?](#how-accessible-is-this-website)
 
-- [Zer esan nahi du hiru mailetako bakoitzak?] (#qué-significa-cada-uno-de-tres-nivel)
+- [What browsers can I use to view this website?](#what-browsers-can-i-use-to-view-this-website)
 
-# #Zein maiztasunekin gehituko zaizkio datu berriak gune honi?
-Datuak lortu eta egiaztatu bezain laster gehituko ditugu. Horrek datu berriak eta dagoeneko argitaratu ditugun datuen eguneratzeak biltzen ditu. Ahal den guztietan, dauden iturrietatik datuak biltzen jarraituko dugu.
+- [What do each of the three tiers mean?](#what-do-each-of-the-three-tiers-mean)
 
-# #Nola iradokitzen ditut datu-iturri berriak edo desberdinak?
-Erabili ditugun datu-iturriei buruzko iruzkinak badituzu edo datu-iturri berrietarako iradokizunak badituzu, bidali mezu elektroniko bat {{site.email_contacts.questions}} helbidera .
+## How often will new data be added to this site?
+We will add data as soon as it has been sourced and checked. This includes new data as well as updates to data we have already published. We will continue to collect data from existing sources where possible.
 
-Zer egiten ari zara datu hutsak betetzeko?
-Adierazle batzuetarako, nahiz eta nazio mailako datuak izan ditzakegun, gure datu-iturriek ez digute beti talde nagusi guztietan banakatzeko aukera ematen.
+## How do I suggest new or different data sources?
+If you have feedback on the data sources we have used or have suggestions for new data sources then please email us at <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>.
 
-Horrek esan nahi du datu-iturri berriak bilatu behar ditugula, daudenak lotu edo datuak modelatu.
+## What are you doing to fill data gaps?
+For some indicators, although we may have data at the national level, our existing data sources don’t always allow us to disaggregate by all main groups.
 
-# #Zer esan nahi du txostenaren egoerak?
-Hiru txosten-egoera mota erabili ditugu adierazle baterako, eta horiek ere koloreen arabera kodetuta daude:
+This means we need to look for new data sources, link existing ones, or model data.
 
--** Jakinarazia (beltza):** Gutxienez, adierazle honetarako datu nazional nagusiak webgune honetan daude eskuragarri, baina litekeena da datuak oraindik erabat banakatuta ez egotea. Banakapen gehigarriak lortzen jarraitzen dugu.
+## What does the reporting status mean?
+We have used three different types of reporting status for an indicator, which are also colour coded:
 
--** Aurreratzen ari diren estatistikak (grisa):** Adierazle edo proxy garrantzitsu honetarako datu-iturri egokia aurkitu dugu estatuan. Gaur egun, datuen kalitatea bermatzen ari gara, eta argitaratzeko prestatzen.
+- **Reported (black):** As a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.
 
--** Ez dago daturik eskuragarri (zuria):** Adierazle honetarako datu-iturri egokia bilatzen ari gara oraindik.
+- **Statistics in progress (grey):** We have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.
 
--** Ez du aplikatzen (marratua):** Adierazle hau ez da testuinguru nazionalean aplikagarria.
+- **No data available (white):** We are still looking for a suitable data source for this indicator.
 
-# #Beste herrialde batzuek kopiatu dezakete webgune hau?
-Bai. Kontsultatu [Open SDGren hasierako gida azkarra] (https://open-sdg.readthedocs.io/en/latest/quick-start /), Open SDG plataformaren kopia bat funtzionamenduan izateko modurik azkarrenari buruzko jarraibide teknikoak lortzeko.
+- **Not applicable (striped):** This indicator is not applicable in the national context.
 
-# #Zein da webgune honen irisgarritasuna?
-Open SDGk ahalik eta erabilerrazena eta erabilerrazena izan nahi du erabiltzaile guztientzat, eta AA maila lortzeko lan egiten du [Web-edukirako erabilerraztasun-jarraibideak (WCAG 2.0)] (https://www.gov.uk/zerbitzu-eskuliburua/helping-people- usar-su-servicio/comprender-wcag-20).
 
-# #Zer nabigatzaile erabil ditzaket webgune hau ikusteko?
-Gure web gehien erabiltzen diren nabigatzaileen azken bertsio gehienekin funtzionatzen du.
+## Can other countries copy this website?
+Yes. See the [Open SDG Quick Start guide](https://open-sdg.readthedocs.io/en/latest/quick-start/) for technical instructions on the quickest way to get a copy of the Open SDG platform up and running.
 
-# #Zer esan nahi du hiru mailetako bakoitzak?
-GJHen adierazle bakoitza honako maila hauetako bati (edo gehiagori) esleituta dago:
--** 1. maila:** Adierazlea kontzeptualki argia da, nazioartean ezarritako metodologia du eta estandarrak daude eskuragarri, eta herrialdeek datuak ekoizten dituzte aldizka adierazlea garrantzitsua den eskualde bakoitzeko herrialdeen eta biztanleriaren ehuneko 50entzat, gutxienez.
+## How accessible is this website?
+Open SDG aims to be as accessible and usable as possible for every user and works towards meeting AA level of [Web Content Accessibility Guidelines (WCAG 2.0)](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20).
 
--** 2. maila:** Adierazlea kontzeptualki argia da, nazioartean ezarritako metodologia du eta estandarrak daude eskuragarri, baina herrialdeek ez dute aldizka daturik ekoizten.
+## What browsers can I use to view this website?
+Our website works with most of the latest versions of the commonly used browsers.
 
--** 3. maila:** Oraindik ez dago nazioartean ezarritako metodologia edo estandarrik eskuragarri adierazlearentzat, baina metodologia/estandarrak garatuak edo frogatuak izaten ari dira (edo izango dira) (Nazio Batuetako Estatistika Batzordearen 51. bilkura-alditik aurrera, esparru-adierazle globalak ez du III. mailako adierazlerik).
+## What do each of the three tiers mean?
+Each of the SDG indicators are assigned to one (or more) of the following tiers:
+ - **Tier 1:** Indicator is conceptually clear, has an internationally established methodology and standards are available, and data are regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.
 
-** 2020ko abenduaren 28an:** Eguneratutako mailen sailkapenak*** I. mailako 130 adierazle**,** II. mailako 97 adierazle** eta******* maila anitzeko 4 adierazle ditu (adierazlearen osagaiak maila desberdinetan sailkatzen dira).
+ - **Tier 2:** Indicator is conceptually clear, has an internationally established methodology and standards are available, but data are not regularly produced by countries.
 
-Informazio gehiago lortzeko, [kontsultatu GIHen adierazle globaletarako IAEG-SDGren mailen sailkapena] (https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification /)
+ - **Tier 3:** No internationally established methodology or standards are yet available for the indicator, but methodology/standards are being (or will be) developed or tested (As of the 51st session of the UN Statistical Commission, the global indicator framework does not contain any Tier III indicators)
 
-[Hasierara itzuli] (#top)
+**As of 28 December 2020:** The updated tier classification contains **130 Tier I indicators**, **97 Tier II indicators** and **4 indicators that have multiple tiers** (different components of the indicator are classified into different tiers).
+
+For more information, [see the IAEG-SDGs Tier Classification for Global SDG Indicators](https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/)
+
+[Back to top](#top)
