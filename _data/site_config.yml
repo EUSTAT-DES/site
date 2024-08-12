@@ -46,8 +46,8 @@ custom_js:
   - /assets/js/custom.js
 data_edit_url: data
 data_fields:
-  units: Unidad
-  series: Serie
+  units: Units
+  series: Series
 date_formats: 
   - type: standard
     language: en
@@ -142,13 +142,13 @@ languages:
 languages_public: []
 logos: 
   - language: es
-    src: assets/img/SDG_logo.png
+    src: assets/img/logo/SDG_logo_es.png
     alt: Ir a la página de inicio
   - language: eu
-    src: assets/img/eu/SDG_logo.png
+    src: assets/img/logo/SDG_logo_eus.png
     alt: Joan hasierako orrira
   - language: en
-    src: assets/img/en/SDG_logo.png
+    src: assets/img/logo/SDG_logo_en.png
     alt: Go to homepage
 map_layers:
   - subfolder: Territorio
