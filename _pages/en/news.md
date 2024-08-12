@@ -1,7 +1,7 @@
 ---
 
 title: News and publications
-permalink: /en/novedades/
+permalink: /en/news/
 layout: page
 language: en
 ---
