@@ -1,7 +1,7 @@
 ---
 
 title: Berriak eta publikazioak
-permalink: /eu/novedades/
+permalink: /eu/news/
 language: eu
 layout: page
 ---
