@@ -145,7 +145,7 @@ logos:
     src: assets/img/logo/SDG_logo_es.png
     alt: Ir a la página de inicio
   - language: eu
-    src: assets/img/logo/SDG_logo_eus.png
+    src: assets/img/logo/SDG_logo_eu.png
     alt: Joan hasierako orrira
   - language: en
     src: assets/img/logo/SDG_logo_en.png
@@ -153,23 +153,23 @@ logos:
 map_layers:
   - subfolder: Territorio
     label: Territorio
-    min_zoom: 1
-    max_zoom: 4
+    min_zoom: 4
+    max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
     label: Comarca
-    min_zoom: 5
-    max_zoom: 6
+    min_zoom: 7
+    max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
     label: Municipio
-    min_zoom: 7
-    max_zoom: 11
+    min_zoom: 9
+    max_zoom: 12
     staticBorders: true
 map_options:
   disaggregation_controls: true
-  minZoom: 1
-  maxZoom: 11
+  minZoom: 4
+  maxZoom: 10
   tileURL: ''
   tileOptions:
     id: ''
