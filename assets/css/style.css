@@ -1703,8 +1703,8 @@ body.contrast-high #main-content .nav-tabs {
     margin-top: 20px; } }
 
 .layout-indicator #page-content {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  border-top: 1px solid #dce0e3;
+  border-bottom: 1px solid #dce0e3;
   padding-top: 10px; }
 .layout-indicator.contrast-high canvas,
 .layout-indicator canvas {
