@@ -2,17 +2,19 @@
 This space intended for custom third-party javascript.
 {% endcomment %}
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [
-        ['$', '$'],
-        ['\\(', '\\)']
-      ]
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: { autoNumber: "all" },
+      tagSide: "right"
     },
-    svg: {
-      fontCache: 'global'
-    },
-  };
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
 </script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/gh/mathjax/MathJax@legacy-v2-develop/unpacked/MathJax.js?config=TeX-AMS_CHTML">
+</script>
