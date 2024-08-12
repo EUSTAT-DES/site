@@ -12,8 +12,6 @@ breadcrumbs:
   indicator:
     - path: /
       label: general.home
-    - path: /goals
-      label: general.goals
   post:
     - path: /
       label: general.home
@@ -201,9 +199,6 @@ menu:
   - path: /
     translation_key: general.home
     dropdown: []
-  - path: /goals
-    translation_key: general.goals
-    dropdown: []
   - path: /reporting-status
     translation_key: menu.reporting_status
     dropdown: []
@@ -212,9 +207,6 @@ menu:
     dropdown: []
   - path: /faq
     translation_key: menu.faq
-    dropdown: []  
-  - path: /about
-    translation_key: menu.about
     dropdown: []    
 metadata_edit_url: metadata
 metadata_tabs:
@@ -283,6 +275,3 @@ time_series_attributes:
   - field: DATA_LAST_UPDATE
     label: metadata_fields.national_data_update_url
 use_new_config_forms: true
-validate_indicator_config: false
-validate_site_config: false
-x_axis_label: ''
