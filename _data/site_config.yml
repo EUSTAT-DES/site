@@ -161,7 +161,7 @@ map_layers:
 map_options:
   disaggregation_controls: true
   minZoom: 5
-  maxZoom: 14
+  maxZoom: 13
   tileURL: ''
   tileOptions:
     id: ''
