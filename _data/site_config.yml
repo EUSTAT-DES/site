@@ -75,23 +75,15 @@ frontpage_cards:
     include: components/download-all-data.html
     button_label: ''
     button_link: ''
-    rule_color: ''
-  - title: Lorem ipsum
-    content: |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis
-      cursus est sed dapibus.
+    rule_color: '#a5a7a8'
+  - title: frontpage.oceca_title
+    content: frontpage.oceca_content
     include: ''
-    button_label: Read more
-    button_link: 'https://example.com'
-    rule_color: ''
-  - title: Nam vestibulum
-    content: |
-      Nam vestibulum, purus quis porttitor imperdiet, nisl sem mollis nisl, a
-      interdum risus enim vitae tortor. Donec feugiat accumsan rutrum.
+    rule_color: '#a5a7a8'
+  - title: frontpage.lehendakaritza_title
+    content: frontpage.lehendakaritza_content
     include: ''
-    button_label: Read more
-    button_link: 'https://example.com'
-    rule_color: ''
+    rule_color: '#a5a7a8'
 frontpage_goals_grid:
   title: frontpage.heading_short
   description: frontpage.instructions_shorter
@@ -153,7 +145,7 @@ logos:
 map_layers:
   - subfolder: Territorio
     label: Territorio
-    min_zoom: 4
+    min_zoom: 2
     max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
@@ -164,12 +156,12 @@ map_layers:
   - subfolder: Municipio
     label: Municipio
     min_zoom: 9
-    max_zoom: 12
+    max_zoom: 14
     staticBorders: true
 map_options:
   disaggregation_controls: true
-  minZoom: 4
-  maxZoom: 10
+  minZoom: 5
+  maxZoom: 13
   tileURL: ''
   tileOptions:
     id: ''
