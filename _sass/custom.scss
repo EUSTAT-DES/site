@@ -112,19 +112,7 @@ ul.iconillo {
 
 // Estados de progreso y reporting
 
-.alcanzado {
-    background-color: $status-backgroundColor-alcanzado;
-    background: $status-backgroundColor-alcanzado;
-}
-.en_progreso {
-    background-color: $status-backgroundColor-en_progreso;
-    background: $status-backgroundColor-en_progreso;
-}
-.retroceso {
-    background-color: $status-backgroundColor-retroceso;
-    background: $status-backgroundColor-retroceso;
-}
-.no_evaluado {
-    background-color: $status-backgroundColor-no_evaluado;
-    background: $status-backgroundColor-no_evaluado;
-}
+.alcanzado { background-color: #5cb85c; }
+.en_progreso { background-color: #f5a327; }
+.retroceso { background-color: #E27874; }
+.no_evaluado { background-color: #B7B7B7; }
