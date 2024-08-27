@@ -105,3 +105,22 @@ ul.iconillo {
 .tag-europeo{
     background-color: #91c77b!important;
 }
+
+// Estados de progreso y reporting
+
+.alcanzado {
+    background-color: $status-backgroundColor-alcanzado;
+    background: $status-backgroundColor-alcanzado;
+}
+.en_progreso {
+    background-color: $status-backgroundColor-en_progreso;
+    background: $status-backgroundColor-en_progreso;
+}
+.retroceso {
+    background-color: $status-backgroundColor-retroceso;
+    background: $status-backgroundColor-retroceso;
+}
+.no_evaluado {
+    background-color: $status-backgroundColor-no_evaluado;
+    background: $status-backgroundColor-no_evaluado;
+}
