@@ -13,4 +13,19 @@
 //$footer-text-color: #000000;
 $indicatorContent-horizontalRule-color: #dce0e3;
 
+$status-backgroundColor-alcanzado: #5cb85c;
+$status-backgroundColor-en_progreso: #f5a327;
+$status-backgroundColor-retroceso: #E27874;
+$status-backgroundColor-no_evaluado: #B7B7B7;
+
+$status-color-alcanzado: black;
+$status-color-en_progreso: black;
+$status-color-retroceso: black;
+$status-color-no_evaluado: black;
+
+$status-border-alcanzado: none;
+$status-border-en_progreso: none;
+$status-border-retroceso: none;
+$status-border-no_evaluado: none;
+
 $fontFamily: 'Open Sans', sans-serif !default;
