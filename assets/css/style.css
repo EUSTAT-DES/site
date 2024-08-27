@@ -2901,10 +2901,10 @@ ul.iconillo {
   background-color: #5cb85c; }
 
 .en_progreso {
-  background-color: #f5a327; }
+  background-color: orange; }
 
 .retroceso {
-  background-color: #E27874; }
+  background-color: red; }
 
 .no_evaluado {
-  background-color: #B7B7B7; }
+  background-color: grey; }
