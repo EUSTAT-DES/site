@@ -237,6 +237,26 @@ progress_status:
       image: assets/img/progress/approaching-target.png
       alt: status.progress_approaching_target
       hide_on_goal_pages: false
+    - value: alcanzado
+      label: status.alcanzado
+      image: assets/img/progress/alcanzado.png
+      alt: status.alcanzado
+      hide_on_goal_pages: false
+    - value: en_progreso
+      label: status.en_progreso
+      image: assets/img/progress/en_progreso.png
+      alt: status.en_progreso
+      hide_on_goal_pages: false
+    - value: retroceso
+      label: status.retroceso
+      image: assets/img/progress/retroceso.png
+      alt: status.retroceso
+      hide_on_goal_pages: false
+    - value: no_evaluado
+      label: status.no_evaluado
+      image: assets/img/progress/no_evaluado.png
+      alt: status.no_evaluado
+      hide_on_goal_pages: false
 remote_data_prefix: 'https://eustat-des.github.io/data/'
 reporting_status:
   title: status.reporting_status
@@ -251,6 +271,18 @@ reporting_status:
       hide_on_goal_pages: false
     - value: notapplicable
       label: status.not_applicable
+      hide_on_goal_pages: false
+    - value: alcanzado
+      label: status.alcanzado
+      hide_on_goal_pages: false
+    - value: en_progreso
+      label: status.en_progreso
+      hide_on_goal_pages: false
+    - value: retroceso
+      label: status.retroceso
+      hide_on_goal_pages: false
+    - value: no_evaluado
+      label: status.no_evaluado
       hide_on_goal_pages: false
 repository_url_data: 'https://github.com/EUSTAT-DES/data'
 repository_url_site: 'https://github.com/EUSTAT-DES/site'
