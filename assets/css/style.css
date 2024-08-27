@@ -2898,17 +2898,13 @@ ul.iconillo {
   background-color: #f5d81d !important; }
 
 .alcanzado {
-  background-color: #5cb85c;
-  background: #5cb85c; }
+  background-color: #5cb85c; }
 
 .en_progreso {
-  background-color: #f5a327;
-  background: #f5a327; }
+  background-color: #f5a327; }
 
 .retroceso {
-  background-color: #E27874;
-  background: #E27874; }
+  background-color: #E27874; }
 
 .no_evaluado {
-  background-color: #B7B7B7;
-  background: #B7B7B7; }
+  background-color: #B7B7B7; }
