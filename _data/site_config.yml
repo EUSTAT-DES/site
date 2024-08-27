@@ -145,23 +145,23 @@ logos:
 map_layers:
   - subfolder: Territorio
     label: Territorio
-    min_zoom: 4
-    max_zoom: 6
+    min_zoom: 0
+    max_zoom: 3
     staticBorders: true
   - subfolder: Comarca
     label: Comarca
-    min_zoom: 6
-    max_zoom: 8
+    min_zoom: 4
+    max_zoom: 6
     staticBorders: true
   - subfolder: Municipio
     label: Municipio
-    min_zoom: 9
+    min_zoom: 7
     max_zoom: 12
     staticBorders: true
 map_options:
   disaggregation_controls: true
-  minZoom: 4
-  maxZoom: 10
+  minZoom: 1
+  maxZoom: 12
   tileURL: ''
   tileOptions:
     id: ''
