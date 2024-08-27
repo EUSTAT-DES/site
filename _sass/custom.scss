@@ -113,6 +113,6 @@ ul.iconillo {
 // Estados de progreso y reporting
 
 .alcanzado { background-color: #5cb85c; }
-.en_progreso { background-color: #f5a327; }
-.retroceso { background-color: #E27874; }
-.no_evaluado { background-color: #B7B7B7; }
+.en_progreso { background-color: orange; }
+.retroceso { background-color: red; }
+.no_evaluado { background-color: grey; }
