@@ -242,7 +242,7 @@ progress_status:
       image: assets/img/progress/alcanzado.png
       alt: status.alcanzado
       hide_on_goal_pages: false
-    - value: en_progreso
+    - value: progreso
       label: status.en_progreso
       image: assets/img/progress/en_progreso.png
       alt: status.en_progreso
@@ -252,7 +252,7 @@ progress_status:
       image: assets/img/progress/retroceso.png
       alt: status.retroceso
       hide_on_goal_pages: false
-    - value: no_evaluado
+    - value: noevaluado
       label: status.no_evaluado
       image: assets/img/progress/no_evaluado.png
       alt: status.no_evaluado
@@ -275,13 +275,13 @@ reporting_status:
     - value: alcanzado
       label: status.alcanzado
       hide_on_goal_pages: true
-    - value: en_progreso
+    - value: progreso
       label: status.en_progreso
       hide_on_goal_pages: true
     - value: retroceso
       label: status.retroceso
       hide_on_goal_pages: true
-    - value: no_evaluado
+    - value: noevaluado
       label: status.no_evaluado
       hide_on_goal_pages: true
 repository_url_data: 'https://github.com/EUSTAT-DES/data'
