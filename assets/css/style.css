@@ -2900,11 +2900,11 @@ ul.iconillo {
 .alcanzado {
   background-color: #5cb85c; }
 
-.en_progreso {
+.progreso {
   background-color: orange; }
 
 .retroceso {
   background-color: red; }
 
-.no_evaluado {
+.noevaluado {
   background-color: grey; }
