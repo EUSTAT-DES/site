@@ -206,6 +206,14 @@
           "status": "alcanzado"
         },
         {
+          "id": "2-4-E2",
+          "title": "global_indicators.2-4-E2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-4-E2/",
+          "status": "complete"
+        },
+        {
           "id": "2-5-1",
           "title": "Epe ertain eta luzerako kontserbazio-instalazioetan kontserbatutako a) landare-baliabide genetikoen kopurua eta b) elikadurarako eta nekazaritzarako animalien kopurua",
           "description": "",
@@ -348,6 +356,22 @@
           "keywords": "",
           "href": "/site/eu/3-4-2/",
           "status": "notstarted"
+        },
+        {
+          "id": "3-4-E1",
+          "title": "global_indicators.3-4-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-4-E1/",
+          "status": "complete"
+        },
+        {
+          "id": "3-4-E2",
+          "title": "global_indicators.3-4-E2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/3-4-E2/",
+          "status": "complete"
         },
         {
           "id": "3-5-1",
@@ -510,6 +534,22 @@
           "status": "notstarted"
         },
         {
+          "id": "4-1-E1",
+          "title": "global_indicators.4-1-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-1-E1/",
+          "status": "complete"
+        },
+        {
+          "id": "4-1-E2",
+          "title": "global_indicators.4-1-E2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-1-E2/",
+          "status": "complete"
+        },
+        {
           "id": "4-2-1",
           "title": "24 eta 59 hilabete bitarteko haurren artean, osasunean, ikaskuntzan eta ongizate psikosozialean garapen egokia dutenen proportzioa, sexuaren arabera banatuta",
           "description": "",
@@ -534,6 +574,14 @@
           "status": "notstarted"
         },
         {
+          "id": "4-3-E1",
+          "title": "global_indicators.4-3-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-3-E1/",
+          "status": "complete"
+        },
+        {
           "id": "4-4-1",
           "title": "Informazio eta komunikazio teknologietan (IKT) gaitasunak dituzten gazte eta helduen proportzioa, duten gaitasun motaren arabera banatuta",
           "description": "",
@@ -556,6 +604,14 @@
           "keywords": "",
           "href": "/site/eu/4-6-1/",
           "status": "notstarted"
+        },
+        {
+          "id": "4-6-E1",
+          "title": "global_indicators.4-6-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/4-6-E1/",
+          "status": "complete"
         },
         {
           "id": "4-7-1",

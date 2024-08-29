@@ -206,6 +206,14 @@
           "status": "alcanzado"
         },
         {
+          "id": "2-4-E2",
+          "title": "global_indicators.2-4-E2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/2-4-E2/",
+          "status": "complete"
+        },
+        {
           "id": "2-5-1",
           "title": "Número de recursos genéticos vegetales y animales para la alimentación y la agricultura preservados en instalaciones de conservación a medio y largo plazo",
           "description": "",
@@ -348,6 +356,22 @@
           "keywords": "",
           "href": "/site/3-4-2/",
           "status": "notstarted"
+        },
+        {
+          "id": "3-4-E1",
+          "title": "global_indicators.3-4-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/3-4-E1/",
+          "status": "complete"
+        },
+        {
+          "id": "3-4-E2",
+          "title": "global_indicators.3-4-E2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/3-4-E2/",
+          "status": "complete"
         },
         {
           "id": "3-5-1",
@@ -510,6 +534,22 @@
           "status": "notstarted"
         },
         {
+          "id": "4-1-E1",
+          "title": "global_indicators.4-1-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/4-1-E1/",
+          "status": "complete"
+        },
+        {
+          "id": "4-1-E2",
+          "title": "global_indicators.4-1-E2-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/4-1-E2/",
+          "status": "complete"
+        },
+        {
           "id": "4-2-1",
           "title": "Proporción de niños de 24 a 59 meses cuyo desarrollo es adecuado en cuanto a la salud, el aprendizaje y el bienestar psicosocial, desglosada por sexo",
           "description": "",
@@ -534,6 +574,14 @@
           "status": "notstarted"
         },
         {
+          "id": "4-3-E1",
+          "title": "global_indicators.4-3-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/4-3-E1/",
+          "status": "complete"
+        },
+        {
           "id": "4-4-1",
           "title": "Proporción de jóvenes y adultos con competencias en tecnología de la información y las comunicaciones (TIC), desglosada por tipo de competencia técnica",
           "description": "",
@@ -556,6 +604,14 @@
           "keywords": "",
           "href": "/site/4-6-1/",
           "status": "notstarted"
+        },
+        {
+          "id": "4-6-E1",
+          "title": "global_indicators.4-6-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/4-6-E1/",
+          "status": "complete"
         },
         {
           "id": "4-7-1",
