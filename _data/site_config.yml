@@ -70,19 +70,10 @@ environment: staging
 footer_language_toggle: none
 footer_menu:
 frontpage_cards:
-  - title: frontpage.download_all
-    content: ''
+  - content: ''
     include: components/download-all-data.html
     button_label: ''
     button_link: ''
-    rule_color: '#a5a7a8'
-  - title: frontpage.oceca_title
-    content: frontpage.oceca_content
-    include: ''
-    rule_color: '#a5a7a8'
-  - title: frontpage.lehendakaritza_title
-    content: frontpage.lehendakaritza_content
-    include: ''
     rule_color: '#a5a7a8'
 frontpage_goals_grid:
   title: frontpage.heading_short
