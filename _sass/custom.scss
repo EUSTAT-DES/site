@@ -94,25 +94,16 @@ ul.iconillo {
     border-left: 1px solid white;
 }
 
-.tag-municipal{
-    background-color: #f5d81d!important;
-}
+// Etiquetas
 
-.tag-territorial{
-    background-color: #dda045!important;
-}
-
-.tag-europeo{
-    background-color: #91c77b!important;
-}
-
-.tag-sexo{
-    background-color: #f5d81d!important;
-}
+.tag-municipal{ background-color: #f5d81d!important; }
+.tag-territorial{ background-color: #dda045!important; }
+.tag-europeo{ background-color: #91c77b!important; }
+.tag-sexo{ background-color: #f5d81d!important; }
 
 // Estados de progreso y reporting
 
 .alcanzado { background-color: #5cb85c; }
-.progreso { background-color: orange; }
-.retroceso { background-color: red; }
-.noevaluado { background-color: grey; }
+.progreso { background-color: #f59038; }
+.retroceso { background-color: #ff6047; }
+.noevaluado { background-color: #cecfcc; }
