@@ -239,9 +239,6 @@ reporting_status:
   description: status.description
   disaggregation_tabs: false
   status_types:
-    - value: complete
-      label: status.reported_online
-      hide_on_goal_pages: true
     - value: alcanzado
       label: status.alcanzado
       hide_on_goal_pages: true
@@ -257,6 +254,9 @@ reporting_status:
     - value: notstarted
       label: status.no_data_available
       hide_on_goal_pages: false
+    - value: complete
+      label: status.reported_online
+      hide_on_goal_pages: true
 repository_url_data: 'https://github.com/EUSTAT-DES/data'
 repository_url_site: 'https://github.com/EUSTAT-DES/site'
 search_index_boost: []
