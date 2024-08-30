@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240829154505">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240830065612">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -873,7 +873,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Nombre del indicador disponible </th>
         <td>
           
-            <p>Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico y nacional de la pobreza</p>
+            <p>Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico de la pobreza</p>
 
           
         </td>
@@ -937,7 +937,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definición </th>
         <td>
           
-            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica y nacional de los ingresos por unidad de consumo (escala OCDE modificada).</p>
+            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica  de los ingresos por unidad de consumo (escala OCDE modificada).</p>
 
           
         </td>
@@ -953,10 +953,10 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Fórmula teórica </th>
         <td>
           
-            <p>\(PPRPR_{CCAA}^{t} = \frac{PRPR_{CCAA}^{t}}{P^{t}} \cdot 100\) <br />
-donde: <br />
-$PRPR_{CCAA}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ <br />
-$P^{t} =$ población total en el año $t$</p>
+            <p>$$PPRPR_{CCAA}^{t} = \frac{PRPR_{CCAA}^{t}}{P^{t}} \cdot 100$$ </p>
+<p>donde: </p>
+<p>$PRPR_{CCAA}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>
+<p>$P^{t} =$ población total en el año $t$</p>
 
           
         </td>
@@ -1213,33 +1213,13 @@ $P^{t} =$ población total en el año $t$</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Datos actualizados por última vez </th>
-        <td>
-          
-            27 de agosto de 2024
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadatos actualizados por última vez </th>
-        <td>
           
-            13 de agosto de 2024
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   
   
   
@@ -1383,7 +1363,7 @@ $P^{t} =$ población total en el año $t$</p>
         <th scope="row">metadata_fields.indicador_meta_enlace </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf">Metadata 1-2-1 PDF</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf">Metadatos del indicador 1-2-1 PDF</a></p>
 
           
         </td>
@@ -1700,7 +1680,7 @@ $P^{t} =$ población total en el año $t$</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240829154505'></script>
+<script src='/site/assets/js/sdg.js?v=20240830065612'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1722,7 +1702,7 @@ $P^{t} =$ población total en el año $t$</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240829154505"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240830065612"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
