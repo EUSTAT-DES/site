@@ -1,0 +1,9 @@
+{% if page.goal or page.indicator %}
+<div class="ods-navigation d-flex justify-content-center">
+    {% for goal in page.goals %}
+        <a href="{{ goal.url }}" class="ods-item {% if page.goal and page.goal.number == goal.number or page.indicator and page.indicator.goal_number == goal.number %} ods-selected {% endif %}">
+            <img src="{{ goal.icon }}" alt="{{ page.t.general.goal }} {{ goal.number }} - {{ goal.short | escape }}" class="goal-icon-image"/>
+        </a>
+    {% endfor %}
+</div>
+{% endif %}
