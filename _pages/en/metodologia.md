@@ -1,7 +1,7 @@
 ---
 title: Progress Measurement for Sustainable Development Goals
 language: en
-permalink: /metodologia/
+permalink: /en/metodologia/
 layout: page
 ---
 
