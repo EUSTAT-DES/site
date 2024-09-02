@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240830152853">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240902082857">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -308,16 +308,18 @@ layout-indicator-iframe
     
     
         <div class="progress-status">
-        
-            <div class="progress-status-label">
-                Progreso razonable, pero es necesario acelerarlo
-            </div>
-        
-        
-            <div class="progress-status-image">
-                <img src="/site/assets/img/progress/en_progreso.png" alt="Progreso razonable, pero es necesario acelerarlo" />
-            </div>
-        
+            
+                
+                    <div class="progress-status-label">
+                        Progreso razonable, pero es necesario acelerarlo
+                    </div>
+                
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/en_progreso.png" alt="Progreso razonable, pero es necesario acelerarlo" />
+                </div>
+            
         </div>
     
 
@@ -870,10 +872,10 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Nombre del indicador disponible </th>
+        <th scope="row">Indicador disponible </th>
         <td>
           
-            <p>Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico de la pobreza</p>
+            <p>Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico de pobreza.</p>
 
           
         </td>
@@ -886,10 +888,10 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Indicador </th>
+        <th scope="row">Indicador de Naciones Unidas </th>
         <td>
           
-            <p>Proporción de la población que vive por debajo del umbral nacional de pobreza, desglosada por sexo y edad</p>
+            <p>1.2.1 Proporción de la población que vive por debajo del umbral nacional de pobreza, desglosada por sexo y edad</p>
 
           
         </td>
@@ -905,7 +907,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Meta </th>
         <td>
           
-            <p>De aquí a 2030, reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones con arreglo a las definiciones nacionales</p>
+            <p>1.2 De aquí a 2030, reducir al menos a la mitad la proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza en todas sus dimensiones con arreglo a las definiciones nacionales</p>
 
           
         </td>
@@ -921,7 +923,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Objetivo </th>
         <td>
           
-            <p>Poner fin a la pobreza en todas sus formas y en todo el mundo</p>
+            <p>1 Poner fin a la pobreza en todas sus formas y en todo el mundo</p>
 
           
         </td>
@@ -934,10 +936,10 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Definición </th>
+        <th scope="row">Definición del indicador </th>
         <td>
           
-            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica  de los ingresos por unidad de consumo (escala OCDE modificada).</p>
+            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada).</p>
 
           
         </td>
@@ -953,10 +955,26 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Fórmula teórica </th>
         <td>
           
-            <p>$$PPRPR_{CCAA}^{t} = \frac{PRPR_{CCAA}^{t}}{P^{t}} \cdot 100$$ </p>
+            <p>$$PPRPR_{CAE}^{t} = \frac{PRPR_{CAE}^{t}}{P^{t}} \cdot 100$$ </p>
 <p>donde: </p>
-<p>$PRPR_{CCAA}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>
+<p>$PRPR_{CAE}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>
 <p>$P^{t} =$ población total en el año $t$</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">metadata_fields.desagregaciones </th>
+        <td>
+          
+            <p>Datos desagregados por sexo, correspondientes a la proporción de hombres y mujeres con ingresos inferiores al 60% de la mediana autonómica, situada en el año 2022 en 12.983 € anuales.</p>
 
           
         </td>
@@ -1071,13 +1089,33 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Datos actualizados por última vez </th>
+        <td>
           
-      
-      
-      
-        
+            30 de agosto de 2024
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadatos actualizados por última vez </th>
+        <td>
+          
+            02 de septiembre de 2024
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -1108,6 +1146,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  
       
       
       
@@ -1116,7 +1155,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Descripción </th>
         <td>
           
-            <p>El porcentaje de personas que viven en hogares considerados en riesgo de pobreza en el contexto nacional.</p>
+            <p>Según la definición de Eurostat, la tasa de riesgo de pobreza es la proporción de personas con una renta disponible equivalente  (después de transferencias sociales) inferior al umbral de riesgo de pobreza, que está fijada por convención en la UE en el  60 % de la mediana nacional de la renta disponible equivalente después de transferencias sociales. Este indicador no mide ni la riqueza ni la pobreza, sino bajos ingresos en comparación con otros  residentes del país, lo que no necesariamente implica un bajo nivel de vida.</p>
 
           
         </td>
@@ -1132,7 +1171,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Justificación </th>
         <td>
           
-            <p>Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza</p>
+            <p>Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza.</p>
 
           
         </td>
@@ -1145,10 +1184,10 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Comparabilidad entre el indicador disponible y el indicador ONU </th>
+        <th scope="row">Comparabilidad entre el indicador disponible y el indicador de Naciones Unidas </th>
         <td>
           
-            <p>Datos comparables a nivel europeo</p>
+            <p>La serie temporal cumple con los metadatos del indicador de Naciones Unidas. Para el cálculo de la tasa de pobreza de la Comunidad Autónoma de Euskadi se aplica el umbral de la pobreza del territorio de referencia.</p>
 
           
         </td>
@@ -1164,7 +1203,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Resultados internacionales </th>
         <td>
           
-            <p>Eurostat <a href="https://ec.europa.eu/eurostat/databrowser/bookmark/7d6a8537-b602-4526-aff8-4fcbd2b48dee?lang=en">(ilc_li02)</a><br /> UNSTAT<a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX">(1.2.1)</a></p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/bookmark/7d6a8537-b602-4526-aff8-4fcbd2b48dee?lang=en">Tasa de riesgo de pobreza por umbral de pobreza, edad y sexo (ilc_li02)</a>, Eurostat</p>
 
           
         </td>
@@ -1177,10 +1216,10 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Enlace a los metadatos de la ONU </th>
+        <th scope="row">Metadatos del indicador de Naciones Unidas </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf">Metadatos del indicador 1-2-1 PDF</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf">Metadata 1-2-1 PDF</a></p>
 
           
         </td>
@@ -1328,7 +1367,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240830152853'></script>
+<script src='/site/assets/js/sdg.js?v=20240902082857'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1350,7 +1389,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240830152853"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240902082857"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
