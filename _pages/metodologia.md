@@ -1,5 +1,5 @@
 ---
-title: Progress Measurement for Sustainable Development Goals
+title: Medición del progreso en los Objetivos de Desarrollo Sostenible
 language: es
 permalink: /metodologia/
 layout: page
@@ -9,7 +9,6 @@ layout: page
 The [2030 Agenda for Sustainable Development](https://www.un.org/sustainabledevelopment/development-agenda/), adopted by all United Nations Member States in 2015, provides a blueprint for improving the economy, society, and the environment in a sustainable manner. At its heart, the 17 Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure that all people globally can enjoy peace and prosperity.  
 
 The goals are underpinned by a framework of global indicators that allow BC and other countries to monitor and report on progress. They cover a broad range of social, environmental, and economic issues with a focus on the most vulnerable and a commitment to “leave no one behind”. To complement the global goals, countries are encouraged to develop a national implementation plan that focuses on country-developed indicators to address specific national contexts and priorities to achieve the SDGs.  
-
 
 
 ## Measuring Progress   
