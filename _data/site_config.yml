@@ -182,12 +182,12 @@ menu:
   - path: /
     translation_key: general.home
     dropdown: []
-  - path: /reporting-status
-    translation_key: menu.reporting_status
-    dropdown: []
-  - path: /news
-    translation_key: menu.updates
-    dropdown: []
+  - translation_key: menu.seguimiento
+    dropdown:
+      - path: /reporting-status
+        translation_key: menu.reporting_status
+      - path: /metodologia
+        translation_key: menu.metodologia
   - path: /faq
     translation_key: menu.faq
     dropdown: []    
