@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240902121749">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240902123102">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -510,7 +510,7 @@ data-event-label="high"
     // Set values according to this site's configuration.
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_disponible', "Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico de pobreza.");
+        var currentValue = normalizeCurrentValue('indicador_disponible', "Proporción de la población que vive por debajo del umbral de pobreza");
         var propertyEditor = editor.getEditor('root.indicador_disponible');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -554,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada).");
+        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas con ingresos por unidad de consumo por debajo del  60% de la mediana de la C.A. de Euskadi (escala OCDE modificada)");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<p>$$PPRPR_{CAE}^{t} = \\frac{PRPR_{CAE}^{t}}{P^{t}} \\cdot 100$$ </p>\n<p>donde: </p>\n<p>$PRPR_{CAE}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>\n<p>$P^{t} =$ población total en el año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "<p>$$PPRPR_{CAE}^{t} = \\frac{PRPR_{CAE}^{t}}{P^{t}} \\cdot 100$$ </p>\n<p>donde: </p>\n<p>$PRPR_{CAE}^{t} =$ población en riesgo de pobreza relativa considerando el umbral de pobreza de la CAE (60% de la mediana de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>\n<p>$P^{t} =$ población total en el año $t$</p>\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Datos desagregados por sexo, correspondientes a la proporción de hombres y mujeres con ingresos inferiores al 60% de la mediana autonómica, situada en el año 2022 en 12.983 € anuales.");
+        var currentValue = normalizeCurrentValue('desagregacion', "Datos desagregados por sexo, correspondientes a la proporción de hombres y mujeres con ingresos inferiores al 60% de la mediana de la C.A. de Euskadi, situada en el año 2022 en 12.983 € anuales.");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -610,7 +610,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "Los ingresos que se utilizan en el cálculo de este indicador corresponden al año anterior al de la encuesta. El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.");
+        var currentValue = normalizeCurrentValue('observaciones', "<p>Los ingresos que se utilizan en el cálculo de este indicador corresponden al año anterior al de la encuesta. </p> <p>El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.</p>");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('descripcion_global', "Según la definición de Eurostat, la tasa de riesgo de pobreza es la proporción de personas con una renta disponible equivalente  (después de transferencias sociales) inferior al umbral de riesgo de pobreza, que está fijada por convención en la UE en el  60 % de la mediana nacional de la renta disponible equivalente después de transferencias sociales. Este indicador no mide ni la riqueza ni la pobreza, sino bajos ingresos en comparación con otros  residentes del país, lo que no necesariamente implica un bajo nivel de vida.");
+        var currentValue = normalizeCurrentValue('descripcion_global', "<p>Según la definición de Eurostat, la tasa de riesgo de pobreza es la proporción de personas\n con una renta disponible equivalente (después de transferencias sociales) inferior al \numbral de riesgo de pobreza, que está fijada por convención en la UE en el  60 % de la mediana nacional de la renta disponible equivalente después de transferencias  sociales.</p>\n<p>Este indicador no mide ni la riqueza ni la pobreza, sino bajos ingresos en comparación con otros  residentes del país, lo que no necesariamente implica un bajo nivel de vida.</p>");
         var propertyEditor = editor.getEditor('root.descripcion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza.");
+        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza.</p>\n<p>El indicador de pobreza monetaria o riesgo de pobreza relativa (At-Risk-of-Poverty Rate) es uno de los indicadores clave para hacer el seguimiento de la pobreza en la UE.</p>\n<p>Para tener en cuenta el impacto de las diferencias en el tamaño y la composición del hogar, el ingreso disponible de un hogar (ingreso total, después de impuestos y otras deducciones, que está  disponible para gastar o ahorrar) se divide por el número de miembros del hogar convertidos en adultos  equivalentes (unidades de consumo). En la UE se aplica un factor de equivalencia calculado según  la escala modificada de la OCDE propuesta en 1994.</p>");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -929,7 +929,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240902121749'></script>
+<script src='/site/assets/js/sdg.js?v=20240902123102'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -951,7 +951,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240902121749"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240902123102"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

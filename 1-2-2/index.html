@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240902121749">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240902123102">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1085,7 +1085,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Indicador disponible </th>
         <td>
           
-            <p>Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico de pobreza.</p>
+            <p>Proporción de personas en riesgo de pobreza o exclusión social (Tasa AROPE)</p>
 
           
         </td>
@@ -1149,7 +1149,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definición del indicador </th>
         <td>
           
-            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada).</p>
+            <p>Proporción de personas que están en al menos uno de los tres criterios del riesgo de pobreza   o exclusión social (en riesgo de pobreza relativa, en situación de carencia material y social  severa o viviendo en hogares con baja intensidad de trabajo)</p>
 
           
         </td>
@@ -1165,9 +1165,9 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Fórmula teórica </th>
         <td>
           
-            <p>$$PPRPR_{CAE}^{t} = \frac{PRPR_{CAE}^{t}}{P^{t}} \cdot 100$$ </p>
-<p>donde: </p>
-<p>$PRPR_{CAE}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>
+            <p>$$AROPE_{CAE}^{t} = \frac{PRPES_{CAE}^{t}}{P^{t}} \cdot 100$$</p>
+<p>donde:</p>
+<p>$PRPES_{CAE}^{t} =$ población en riesgo de pobreza o exclusión social el año $t$</p>
 <p>$P^{t} =$ población total en el año $t$</p>
 
           
@@ -1184,7 +1184,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Desagregaciones disponibles </th>
         <td>
           
-            <p>Datos desagregados por sexo, correspondientes a la proporción de hombres y mujeres con ingresos inferiores al 60% de la mediana autonómica, situada en el año 2022 en 12.983 € anuales.</p>
+            <p>Datos desagregados por sexo</p>
 
           
         </td>
@@ -1216,7 +1216,31 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Observaciones </th>
         <td>
           
-            <p>Los ingresos que se utilizan en el cálculo de este indicador corresponden al año anterior al de la encuesta. El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.</p>
+            <p>El indicador mide la pobreza según los tres aspectos siguientes:<br /> &lt;p&gt;<b>Personas en riesgo de pobreza relativa:</b> personas con ingresos por unidad de consumo por debajo del 60% de la mediana nacional (escala OCDE modificada). &lt;p&gt;El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada,  que asigna un peso de 1 a la primera  persona de 14 o más años, un peso de 0,5 al resto de personas de  14 o más años y un peso de 0,3 a las personas de menos de 14 años.&lt;/p&gt;</p>
+<p><b>Personas en situación de carencia material y social severa:</b> personas que padecen al menos  siete de la siguiente lista de trece limitaciones (siete definidas a nivel de hogar y seis a nivel de persona):</p>
+<p>A nivel de hogar:<br /></p>
+<ol>
+  <li>No puede permitirse ir de vacaciones al menos una semana al año.<br /></li>
+  <li>No puede permitirse una comida de carne, pollo o pescado al menos cada dos días.<br /></li>
+  <li>No puede permitirse mantener la vivienda con una temperatura adecuada.<br /></li>
+  <li>No tiene capacidad para afrontar gastos imprevistos.<br /></li>
+  <li>Ha tenido retrasos en el pago de gastos relacionados con la vivienda principal 
+(hipoteca o alquiler, recibos de gas, comunidad, etc) o en compras a plazos en los últimos 12 meses.<br /></li>
+  <li>No puede permitirse disponer de un automóvil.<br /></li>
+  <li>No puede sustituir muebles estropeados o viejos.<br /></li>
+</ol>
+<p> A nivel de persona:<br />
+ 8. No puede permitirse sustituir ropa estropeada por otra nueva.<br />
+ 9. No puede permitirse tener dos pares de zapatos en buenas condiciones.<br />
+ 10. No puede permitirse reunirse con amigos/familia para comer o tomar algo al menos una vez al mes.<br />
+ 11. No puede permitirse participar regularmente en actividades de ocio.<br />
+ 12. No puede permitirse gastar una pequeña cantidad de dinero en sí mismo.<br />
+ 13. No puede permitirse conexión a internet.<br />
+
+<p>En el caso de menores de 16 años no se dispone de los seis conceptos enumerados anteriormente a  nivel de persona. Para estos menores los valores de esos elementos se imputan a partir de los valores recogidos para los miembros de su hogar con 16 o más años.</p>
+<p><b>Baja intensidad en el empleo:</b> son los hogares en los que sus miembros en edad de trabajar  (personas de 18 a 64 años, excluyendo los estudiantes de 18 a 24 años, los jubilados o retirados,  así como las personas inactivas entre 60 y 64 cuya fuente principal de ingresos del hogar sean las pensiones) lo hicieron menos del 20% del total de su potencial de trabajo durante el año de referencia. Esta variable no se aplica en el caso de las personas de 65 y más años.</p>
+<p>Los datos a partir del 2022 del Indicador de pobreza y exclusion AROPE se calculan con la nueva  definicion de la tasa (metodología Eurostat del año 2021), mientras que los datos anteriores corresponden  a la definición antigua.</p>
+</p>
 
           
         </td>
@@ -1365,7 +1389,10 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Descripción </th>
         <td>
           
-            <p>Según la definición de Eurostat, la tasa de riesgo de pobreza es la proporción de personas con una renta disponible equivalente  (después de transferencias sociales) inferior al umbral de riesgo de pobreza, que está fijada por convención en la UE en el  60 % de la mediana nacional de la renta disponible equivalente después de transferencias sociales. Este indicador no mide ni la riqueza ni la pobreza, sino bajos ingresos en comparación con otros  residentes del país, lo que no necesariamente implica un bajo nivel de vida.</p>
+            
+<p>Tradicionalmente se ha definido la pobreza como la falta de dinero.  Sin embargo, los propios pobres consideran su experiencia de pobreza de manera mucho más amplia. Una persona pobre puede sufrir múltiples desventajas al mismo tiempo; por ejemplo, puede  tener mala salud o desnutrición, falta de agua potable o electricidad, mala calidad del  trabajo o poca escolaridad. Centrarse en un solo factor, como el ingreso, no es  suficiente para captar la verdadera realidad de la pobreza.</p>
+
+<p>Según la metodología Eurostat, en riesgo de pobreza o exclusión social, abreviado como AROPE,  corresponde a la suma de personas que están en riesgo de pobreza, o gravemente desfavorecidas  material y socialmente o que viven en un hogar con una intensidad laboral muy baja.  Las personas se incluyen sólo una vez incluso si se encuentran en más de una de las  situaciones mencionadas anteriormente. La tasa AROPE es la proporción de la población total  que está en riesgo de pobreza o exclusión social </p>
 
           
         </td>
@@ -1381,7 +1408,8 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Justificación </th>
         <td>
           
-            <p>Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza.</p>
+            
+<p>. La tasa AROPE es el principal indicador para hacer el seguimiento del objetivo de pobreza y exclusión social de la UE para 2030 y fue el indicador principal  para hacer el seguimiento del objetivo de pobreza de la Estrategia UE 2020.</p>
 
           
         </td>
@@ -1397,7 +1425,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Comparabilidad entre el indicador disponible y el indicador de Naciones Unidas </th>
         <td>
           
-            <p>La serie temporal cumple con los metadatos del indicador de Naciones Unidas. Para el cálculo de la tasa de pobreza de la Comunidad Autónoma de Euskadi se aplica el umbral de la pobreza del territorio de referencia.</p>
+            <p>La serie temporal cumple con los metadatos del indicador de Naciones Unidas.</p>
 
           
         </td>
@@ -1413,7 +1441,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Resultados internacionales </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/databrowser/bookmark/7d6a8537-b602-4526-aff8-4fcbd2b48dee?lang=en">Tasa de riesgo de pobreza por umbral de pobreza, edad y sexo (ilc_li02)</a>, Eurostat</p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en"> Personas en riesgo de pobreza o exclusión social por edad y sexo (ilc_peps01n)</a>, Eurostat</p>
 
           
         </td>
@@ -1621,7 +1649,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240902121749'></script>
+<script src='/site/assets/js/sdg.js?v=20240902123102'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1643,7 +1671,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240902121749"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240902123102"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
