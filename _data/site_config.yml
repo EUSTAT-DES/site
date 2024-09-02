@@ -225,10 +225,10 @@ progress_status:
       image: assets/img/progress/no_evaluado.png
       alt: status.no_evaluado
       hide_on_goal_pages: false
-    - value: not_available
-      label: status.progress_not_available
-      image: assets/img/progress/not-available.png
-      alt: status.progress_not_available
+    - value: notstarted
+      label: status.no_data_available
+      image: assets/img/progress/notstarted.png
+      alt: status.no_data_available
       hide_on_goal_pages: false
 remote_data_prefix: 'https://eustat-des.github.io/data/'
 reporting_status:
