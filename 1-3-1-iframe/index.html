@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240903093544">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240903102053">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1499,7 +1499,12 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definición del indicador </th>
         <td>
           
-            <p>Series disponibles:<br /> Número de personas beneficiarias de la Renta de Garantía de Ingresos en el mes de diciembre del año de referencia,  por cada mil habitantes<br /> Proporción de la población que es perceptora de pensiones contributivas (% habitantes)<br /> Plazas en centros residenciales para personas mayores y personas con discapacidad Plazas en centros de día para personas mayores y personas con discapacidad</p>
+            
+<p>Series disponibles:</p>
+<p><b>Proporción de personas perceptoras de pensiones contributivas:</b> Proporción de la población que es perceptora de pensiones contributivas (% habitantes)</p>
+<p><b>Personas beneficiarias de Renta de Garantía de Ingresos por cada mil habitantes:</b> Número de personas beneficiarias de la Renta de Garantía de Ingresos en el mes de diciembre del año de referencia,  por cada mil habitantes</p>
+<p><b>Plazas en centros residenciales</b> Plazas en centros residenciales para personas mayores por cada mil personas mayores</p>
+<p><b>Plazas en centros de día</b> Plazas en centro de día para personas mayores por cada mil personas mayores</p>
 
           
         </td>
@@ -1515,10 +1520,15 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Fórmula teórica </th>
         <td>
           
-            <p><b>Proporción de la población que es perceptora de pensiones contributivas</b> </p>
+            <p><b>Proporción de la población que es perceptora de pensiones
+contributivas</b> </p>
+
 <p>$$PPPC^{t} = \frac{PPC^{t}}{P^{t}} \cdot 100$$ </p>
+
 <p>donde: </p>
+
 <p>$PPC^{t} =$ población perceptora de pensiones contributivas en el año $t$ </p>
+
 <p>$P^{t} =$ población a 1 de julio del año $t$</p>
 
           
@@ -1535,7 +1545,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Desagregaciones disponibles </th>
         <td>
           
-            <p>Sexo. Municipio</p>
+            <p>Sexo <br />  Municipio</p>
 
           
         </td>
@@ -1737,7 +1747,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Comparabilidad entre el indicador disponible y el indicador de Naciones Unidas </th>
         <td>
           
-            <p>El indicador disponible en la C.A de Euskadi no cumple con los metadatos del indicador de Naciones Unidas,  pero aporta información complementaria</p>
+            <p>El indicador disponible en la C.A de Euskadi no cumple con los metadatos de Naciones Unidas,  pero aporta información complementaria</p>
 
           
         </td>
@@ -1753,7 +1763,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Resultados internacionales </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&amp;seriesCode=SI_COV_CHLD&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX">Proporción de niños que reciben prestaciones en efectivo por familia, por sexo (%) SI_COV_CHLD</a>, UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&amp;seriesCode=SI_COV_CHLD&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX"> Proporción de niños/hogares que reciben prestaciones en efectivo por hijo/familia, por sexo(%) SI_COV_CHLD</a> UNSTATS</p>
 
           
         </td>
@@ -1866,7 +1876,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240903093544'></script>
+<script src='/site/assets/js/sdg.js?v=20240903102053'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1888,7 +1898,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240903093544"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240903102053"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

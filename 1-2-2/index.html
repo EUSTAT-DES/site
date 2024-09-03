@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240903093544">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240903102053">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1098,7 +1098,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Indicador disponible </th>
         <td>
           
-            <p>Proporción de personas en riesgo de pobreza o exclusión social (Tasa AROPE)</p>
+            <p>Tasa AROPE. Proporción de personas en riesgo de pobreza o exclusión social</p>
 
           
         </td>
@@ -1151,7 +1151,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definición del indicador </th>
         <td>
           
-            <p>Proporción de personas que están en al menos uno de los tres criterios del riesgo de pobreza   o exclusión social (en riesgo de pobreza relativa, en situación de carencia material y social  severa o viviendo en hogares con baja intensidad de trabajo)</p>
+            <p>Proporción de personas que cumplen al menos uno de los tres criterios del riesgo de pobreza   o exclusión social (estar en riesgo de pobreza relativa, en situación de carencia material y social  severa o viviendo en hogares con baja intensidad de trabajo)</p>
 
           
         </td>
@@ -1181,19 +1181,8 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Desagregaciones disponibles </th>
-        <td>
-          
-            <p>Datos desagregados por sexo</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1218,7 +1207,9 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Observaciones </th>
         <td>
           
-            <p>El indicador mide la pobreza según los tres aspectos siguientes: &lt;p&gt;<b>Personas en riesgo de pobreza relativa:</b> personas con ingresos por unidad de consumo por debajo del 60% de la mediana nacional (escala OCDE modificada).&lt;/p&gt; &lt;p&gt;El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada,  que asigna un peso de 1 a la primera  persona de 14 o más años, un peso de 0,5 al resto de personas de  14 o más años y un peso de 0,3 a las personas de menos de 14 años.&lt;/p&gt;</p>
+            <p>El indicador mide la pobreza según los tres aspectos siguientes:</p>
+<p><b>Personas en riesgo de pobreza relativa:</b> personas con ingresos por unidad de consumo por debajo del 60% de la mediana nacional (escala OCDE modificada).</p>
+<p>El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada,  que asigna un peso de 1 a la primera  persona de 14 o más años, un peso de 0,5 al resto de personas de  14 o más años y un peso de 0,3 a las personas de menos de 14 años.</p>
 <p><b>Personas en situación de carencia material y social severa:</b> personas que padecen al menos  siete de la siguiente lista de trece limitaciones (siete definidas a nivel de hogar y seis a nivel de persona):</p>
 <p>A nivel de hogar:<br /></p>
 <ol>
@@ -1231,6 +1222,7 @@ data-event-label="Change to indicator.sources tab"
   <li>No puede permitirse disponer de un automóvil.<br /></li>
   <li>No puede sustituir muebles estropeados o viejos.<br /></li>
 </ol>
+
 <p> A nivel de persona:</p>
 <ol>
   <li>No puede permitirse sustituir ropa estropeada por otra nueva.<br /></li>
@@ -1395,7 +1387,7 @@ data-event-label="Change to indicator.sources tab"
             
 <p>Tradicionalmente se ha definido la pobreza como la falta de dinero.  Sin embargo, los propios pobres consideran su experiencia de pobreza de manera mucho más amplia. Una persona pobre puede sufrir múltiples desventajas al mismo tiempo; por ejemplo, puede  tener mala salud o desnutrición, falta de agua potable o electricidad, mala calidad del  trabajo o poca escolaridad. Centrarse en un solo factor, como el ingreso, no es  suficiente para captar la verdadera realidad de la pobreza.</p>
 
-<p>Según la metodología Eurostat, en riesgo de pobreza o exclusión social, abreviado como AROPE,  corresponde a la suma de personas que están en riesgo de pobreza, o gravemente desfavorecidas  material y socialmente o que viven en un hogar con una intensidad laboral muy baja.  Las personas se incluyen sólo una vez incluso si se encuentran en más de una de las  situaciones mencionadas anteriormente. La tasa AROPE es la proporción de la población total  que está en riesgo de pobreza o exclusión social </p>
+<p>Según la metodología Eurostat, la población en riesgo de pobreza o exclusión social,  abreviado como AROPE,  corresponde a la suma de personas que están en riesgo de pobreza, o gravemente desfavorecidas  material y socialmente o que viven en un hogar con una intensidad laboral muy baja.  Las personas se incluyen sólo una vez incluso si se encuentran en más de una de las  situaciones mencionadas anteriormente. La tasa AROPE es la proporción de la población total  que está en riesgo de pobreza o exclusión social. </p>
 
           
         </td>
@@ -1412,7 +1404,9 @@ data-event-label="Change to indicator.sources tab"
         <td>
           
             
-<p>. La tasa AROPE es el principal indicador para hacer el seguimiento del objetivo de pobreza y exclusión social de la UE para 2030 y fue el indicador principal  para hacer el seguimiento del objetivo de pobreza de la Estrategia UE 2020.</p>
+<p>La tasa AROPE es el principal indicador para hacer el seguimiento del objetivo de pobreza y exclusión social de la UE para 2030 y fue el indicador principal  para hacer el seguimiento del objetivo de pobreza de la Estrategia UE 2020.</p>
+
+<p>El <a href="https://ec.europa.eu/social/main.jsp?catId=1606&amp;langId=es">Pilar  Europeo de Derechos Sociales</a> propone tres objetivos a nivel  de la UE que deben alcanzarse de aquí a 2030 en los ámbitos del empleo,  las capacidades y la protección social. La pobreza y la exclusión social  es uno de los objetivos. El número de personas en riesgo de pobreza o exclusión social debería reducirse en al menos 15 millones de aquí a 2030, y de ellas,  al menos 5 millones deberían ser niños.</p>
 
           
         </td>
@@ -1428,7 +1422,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Comparabilidad entre el indicador disponible y el indicador de Naciones Unidas </th>
         <td>
           
-            <p>El indicador cumple con los metadatos del indicador de Naciones Unidas.</p>
+            <p>El indicador disponible en la C.A. de Euskadi cumple con los metadatos de Naciones Unidas.</p>
 
           
         </td>
@@ -1444,7 +1438,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Resultados internacionales </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en"> Personas en riesgo de pobreza o exclusión social por edad y sexo (ilc_peps01n)</a>, Eurostat</p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en"> Personas en riesgo de pobreza o exclusión social por edad y sexo (ilc_peps01n)</a> Eurostat</p>
 
           
         </td>
@@ -1712,7 +1706,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240903093544'></script>
+<script src='/site/assets/js/sdg.js?v=20240903102053'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1734,7 +1728,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240903093544"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240903102053"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
