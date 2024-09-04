@@ -22,7 +22,8 @@ Medir de cerca el progreso de cada indicador no solo ilustra dónde se está pro
  
 ## Metodología  
    
-Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la [nota técnica sobre la de medición del progreso] (https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) utilizada por al Unidad de Estadística de Naciones Unidas.  
+Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
+[nota técnica sobre la medición del progreso](https://www.un.org/sustainabledevelopment/es/) utilizada por al Unidad de Estadística de Naciones Unidas.  
 
 Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.
 
