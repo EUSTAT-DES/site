@@ -40,24 +40,18 @@ $$v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}$$
 
 Por último, se asigna una puntuación a la serie según los siguientes criterios:
 
-\[
-\text{Puntaje} =
-\begin{cases} 
-3 & \text{si } \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} \geq 0.95 \\
-2 & \text{si } 0.10 \leq \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.95 \\
-1 & \text{si } \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.10 \\
-\end{cases}
-\]
+3   si   𝑣2030𝑒−𝑣𝑏 𝑣2030−𝑣𝑏 ≥0.95  
+2   si  0.10≤𝑣2030𝑒−𝑣𝑏 𝑣2030−𝑣𝑏 
+1   si  𝑣2030𝑒−𝑣𝑏 𝑣2030−𝑣𝑏 
 
-\text{Donde:}
-\begin{itemize}
-    \item $b$ es el año base (por ejemplo, 2015)
-    \item $t$ es el último año con datos disponibles (por ejemplo, 2022)
-    \item $v_{b}$ es el valor en el año base $b$
-    \item $v_{t}$ es el valor actual en el año $t$
-    \item $v_{2030}$ es el valor objetivo para el año 2030
-    \item $v_{2030}^{e}$ es el valor esperado para el año 2030
-\end{itemize}
+Donde:
+
+<0.10 <0.95 𝑏 es el año base (normalmente 2015, y si no hay dato para ese año, el año más cercano al 2015 que permita tener al menos 3 valores en la serie)
+𝑡 es el último año para el que hay dato (por ejemplo: 2022) 
+𝑣𝑏 es el valor base en el año b 
+𝑣𝑡 es el valor del último año 𝑡 
+𝑣2030 es el valor objetivo para 2030 
+𝑣2030𝑒 es el valor esperado para 2030 
 
 
 #### Indicadores sin valores objetivo numéricos 
@@ -67,17 +61,15 @@ Se asigna una puntuación a los indicadores que no tienen valores objetivo para 
 $$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1$$
 
 A continuación, se asigna una puntuación al indicador según los siguientes criterios:
-\[
-\text{Puntaje} =
-\begin{cases} 
-3 & \text{si } CAGR_{a} \geq 0.02 \quad (\text{cuando un aumento es deseable}) \\
-2 & \text{si } 0.005 \leq CAGR_{a} < 0.02 \\
-1 & \text{si } CAGR_{a} < 0.005 \\
-3 & \text{si } CAGR_{a} \leq -0.02 \quad (\text{cuando una disminución es deseable}) \\
-2 & \text{si } -0.02 < CAGR_{a} \leq -0.005 \\
-1 & \text{si } CAGR_{a} > -0.005 \\
-\end{cases}
-\]
+Si el aumento es deseable:
+3 si CAGR_{a}  ≥0.02
+2 si  0.005≤𝐶𝐴𝐺𝑅𝑎 <0.02 
+1 si 𝐶𝐴𝐺𝑅𝑎 <0.005 
+
+Si el descenso es deseable:
+3 si  𝐶𝐴𝐺𝑅𝑎 ≤−0.02  
+2 si  −0.005≥𝐶𝐴𝐺𝑅𝑎 >−0.02 
+1 si 𝐶𝐴𝐺𝑅𝑎 >−0.005  
 
 
 El progreso se mide utilizando el crecimiento durante el período observado y se calcula mediante una tasa de crecimiento anual compuesta,[^1].  
@@ -85,52 +77,16 @@ El progreso se mide utilizando el crecimiento durante el período observado y se
 
 En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
 
+Las categorías de progreso asignadas se describen a continuación:
 
-Las categorías de progreso asignadas se describen a continuación:  
-  
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Tasa de crecimiento observado</th>
-    <th class="tg-fymr">Categoría</th>
-    <th class="tg-fymr">Símbolo</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
-    <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
-    <td class="tg-0pky"><img src=/assets/img/progress/alcanzado.png?raw=true" width="150" height="150"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">R<sub>o/r</sub> ≥ 95%</td>
-    <td class="tg-0pky">Progreso razonable, pero es necesario acelerarlo</td>
-    <td class="tg-0pky"><img src=/assets/img/progress/en_progreso.png?raw=true" alt="Icono de tamaño con tres segmentos de color del mismo tamaño (de izquierda a derecha): rojo, naranja y verde" width="150" height="150"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">60% ≤ R<sub>o/r</sub> &lt; 95%</td>
-    <td class="tg-0pky">Retroceso</td>
-    <td class="tg-0pky"><img src=/assets/img/progress/retroceso.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the yellow segment." width="150" height="150"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">R<sub>o/r</sub> &lt; 0%</td>
-    <td class="tg-0pky">No evaluado</td>
-    <td class="tg-0pky"><img src="/assets/img/progress/no_evaluado.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the red segment." width="150" height="150"></td>
-  </tr>
-</tbody>
-</table>
+| **Tasa de crecimiento observado** | **Categoría**                                        | **Símbolo**                                                                 |
+|:----------------------------------|:----------------------------------------------------|:---------------------------------------------------------------------------:|
+| 3                                 | Meta alcanzada o en vías de alcanzarla               | ![Alcanzado](https://ruta_al_recurso/alcanzado.png)                         |
+| 2                                 | Progreso razonable, pero es necesario acelerarlo     | ![En progreso](https://ruta_al_recurso/en_progreso.png)                     |
+| 1                                 | Retroceso                                            | ![Retroceso](https://ruta_al_recurso/retroceso.png)                         |
+| -                                 | No evaluado                                          | ![No evaluado](https://ruta_al_recurso/no_evaluado.png)                     |
 
-<br><br>  
-  
+
 
 ### Considerations and Exceptions    
 Due to the nature of the data, a series of considerations and exceptions have been defined:  
