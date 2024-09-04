@@ -23,7 +23,7 @@ Medir de cerca el progreso de cada indicador no solo ilustra dónde se está pro
 ## Metodología  
    
 Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
-[nota técnica sobre la medición del progreso](https://www.un.org/sustainabledevelopment/es/) utilizada por al Unidad de Estadística de Naciones Unidas.  
+[nota técnica sobre la medición del progreso]([https://www.un.org/sustainabledevelopment/es/](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf)) utilizada por al Unidad de Estadística de Naciones Unidas.  
 
 Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.
 
@@ -92,10 +92,10 @@ Las categorías de progreso asignadas se describen a continuación:
 
 | **Tasa de crecimiento observado** | **Categoría**                                        | **Símbolo**                                                                 |
 |:----------------------------------|:----------------------------------------------------|:---------------------------------------------------------------------------:|
-| 3                                 | Meta alcanzada o en vías de alcanzarla               | <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png" alt="Alcanzado" width="50"/>  |
-| 2                                 | Progreso razonable, pero es necesario acelerarlo     | <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png" alt="En progreso" width="50"/> |
-| 1                                 | Estancamiento o retroceso                            | <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png" alt="Retroceso" width="50"/>    |
-| -                                 | No evaluado                                          | <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png" alt="No evaluado" width="50"/>  |
+| 3                                 | Meta alcanzada o en vías de alcanzarla               | <img src="https://github.com/EUSTAT-DES/site/assets/img/progress/alcanzado.png" alt="Alcanzado">  |
+| 2                                 | Progreso razonable, pero es necesario acelerarlo     | <img src="https://github.com/EUSTAT-DES/site/assets/img/progress/en_progreso.png" alt="En progreso" |
+| 1                                 | Estancamiento o retroceso                            | <img src="https://github.com/EUSTAT-DES/site/assets/img/progress/retroceso.png" alt="Retroceso">    |
+| -                                 | No evaluado                                          | <img src="https://github.com/EUSTAT-DES/site/assets/img/progress/no_evaluado.png" alt="No evaluado">  |
 
 
 ### Excepciones    
