@@ -85,8 +85,8 @@ Donde:
 𝑡 es el último año para el que hay dato (por ejemplo: 2022)<br>
 𝑣𝑏 es el valor base en el año b<br>
 𝑣𝑡 es el valor del último año 𝑡<br>
-𝑣_{2030} es el valor objetivo para 2030<br>
-𝑣_{2030}^{e} es el valor esperado para 2030
+$𝑣_{2030}$ es el valor objetivo para 2030<br>
+$𝑣_{2030}^{e}$ es el valor esperado para 2030
 
 <br><br> 
 #### Indicadores sin valores objetivo numéricos 
@@ -123,15 +123,6 @@ Si el aumento es deseable:
 </table>
 
 
-
-| **Puntuación** | **Condición**                          |
-|----------------|----------------------------------------|
-| 3              |  $\text{CAGR}_{a} \geq 0.02$           |
-| 2              |  $0.005 \leq \text{CAGR}_{a} < 0.02$   |
-| 1              |  $\text{CAGR}_{a} < 0.005$             |
-
-
-
 Si el descenso es deseable:
 
 
@@ -159,26 +150,10 @@ Si el descenso es deseable:
 </table>
 
 
-| **Puntuación** | **Condición**                                    |
-|----------------|--------------------------------------------------|
-| 3              |  $\text{CAGR}_{a} \leq -0.02$                    |
-| 2              |  $-0.02 < \text{CAGR}_{a} \leq -0.005$           |
-| 1              |  $\text{CAGR}_{a} > -0.005$                      |
-
-
 En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
 
 
 Las categorías de progreso asignadas se describen a continuación:
-
-| **Tasa de crecimiento observado** | **Categoría**                                        | **Símbolo**                                                                 |
-|:----------------------------------|:----------------------------------------------------|:------------------------------------------------------------------------------:|
-| 3                                 | Meta alcanzada o en vías de alcanzarla               | ![Alcanzado](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true)  |
-| 2                                 | Progreso razonable, pero es necesario acelerarlo     | ![En progreso](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true) |
-| 1                                 | Estancamiento o retroceso                            | ![Retroceso](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true)    |
-| -                                 | No evaluado                                          | ![No evaluado](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true) |
-
- 
 
 <table class="tg">
 <thead>
@@ -205,7 +180,7 @@ Las categorías de progreso asignadas se describen a continuación:
     <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150"></td>
   </tr>
   <tr>
-    <td class="tg-0pky"> "-" </td>
+    <td class="tg-0pky"> - </td>
     <td class="tg-0pky"> No evaluado </td>
     <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150"></td>
   </tr>
