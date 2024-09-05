@@ -43,12 +43,41 @@ $$v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}$$
 
 Por último, se asigna una puntuación a la serie según los siguientes criterios:
 
-| **Puntuación** | **Condición**                                                     |
-|----------------|--------------------------------------------------------------------|
-| 3              |    $\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} \geq 0.95$       |
-| 2              |    $0.10 \leq \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.95$|
-| 1              |    $\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.10$         |
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Condición</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} \geq 0.95$</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">$0.10 \leq \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.95$</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.10$</td>
+  </tr>
+</tbody>
+</table>
+
+<br><br>  
 
 Donde:
 <br><br> 
@@ -70,6 +99,31 @@ A continuación, se asigna una puntuación al indicador según los siguientes cr
 
 Si el aumento es deseable:
 
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Condición</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} \geq 0.02$ </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">$0.005 \leq \text{CAGR}_{a} < 0.02$</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} < 0.005$</td>
+  </tr>
+</tbody>
+</table>
+
+
+
 | **Puntuación** | **Condición**                          |
 |----------------|----------------------------------------|
 | 3              |  $\text{CAGR}_{a} \geq 0.02$           |
@@ -79,6 +133,31 @@ Si el aumento es deseable:
 
 
 Si el descenso es deseable:
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Condición</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} \leq -0.02$ </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">$-0.02 < \text{CAGR}_{a} \leq -0.005$ </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} > -0.005$</td>
+  </tr>
+</tbody>
+</table>
+
 
 | **Puntuación** | **Condición**                                    |
 |----------------|--------------------------------------------------|
@@ -100,48 +179,35 @@ Las categorías de progreso asignadas se describen a continuación:
 | -                                 | No evaluado                                          | ![No evaluado](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true) |
 
  
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
+
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-fymr">Ratio of observed over required growth rate</th>
-    <th class="tg-fymr">Category</th>
-    <th class="tg-fymr">Symbol</th>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Categoría</th>
+    <th class="tg-fymr">Símbolo</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">R<sub>o/r</sub> ≥ 95%</td>
-    <td class="tg-0pky">Target achieved</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" width="100"></td>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" alt="Alcanzado" width="150"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">R<sub>o/r</sub> ≥ 95%</td>
-    <td class="tg-0pky">On track</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the green segment." width="100"></td>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">Progreso razonable, pero es necesario acelerarlo</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="En progreso" width="150"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">60% ≤ R<sub>o/r</sub> &lt; 95%</td>
-    <td class="tg-0pky">Progress made but acceleration needed</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the yellow segment." width="100"></td>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">Estancamiento o retroceso</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">0% ≤ R<sub>o/r</sub> &lt; 60%</td>
-    <td class="tg-0pky">Limited progress</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the orange segment." width="100"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">R<sub>o/r</sub> &lt; 0%</td>
-    <td class="tg-0pky">Deterioration</td>
-    <td class="tg-0pky"><img src="https://github.com/sdg-data-canada-odd-donnees/cif-cic_dev/blob/develop/assets/img/progress/red-gauge.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the red segment." width="150" height="150"></td>
+    <td class="tg-0pky"> "-" </td>
+    <td class="tg-0pky"> No evaluado </td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150"></td>
   </tr>
 </tbody>
 </table>
