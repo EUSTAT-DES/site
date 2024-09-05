@@ -318,3 +318,42 @@ ul.iconillo {
             font-size: 0.75em;
         }
     }
+
+// Estilo de las tablas para la página Metodología
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.custom-table th, .custom-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.custom-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.custom-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.custom-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.custom-table img {
+    width: 60px; /* Tamaño del ícono */
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.custom-table tr:hover img {
+    filter: grayscale(0); /* Quita el filtro en hover */
+}
