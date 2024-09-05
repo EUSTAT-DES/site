@@ -98,6 +98,46 @@ Las categorías de progreso asignadas se describen a continuación:
 | -                                 | No evaluado                                          | ![No evaluado](https://github.com/EUSTAT-DES/site/assets/img/progress/no_evaluado.png) |
                             
 
+<table class="custom-table">
+  <thead>
+    <tr>
+      <th>Ratio of observed over required growth rate</th>
+      <th>Category</th>
+      <th>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CAGR<sub>o</sub> ≥ 1.5%</td>
+      <td>On track</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png" alt="Symbol 1">
+      </td>
+    </tr>
+    <tr>
+      <td>0.5% ≤ CAGR<sub>o</sub> &lt; 1.5%</td>
+      <td>Progress made but acceleration needed</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/progreso.png" alt="Symbol 2">
+      </td>
+    </tr>
+    <tr>
+      <td>0% ≤ CAGR<sub>o</sub> &lt; 0.5%</td>
+      <td>Limited progress</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png" alt="Symbol 3">
+      </td>
+    </tr>
+    <tr>
+      <td>CAGR<sub>o</sub> &lt; 0%</td>
+      <td>Deterioration</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png" alt="Symbol 4">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Excepciones    
 Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:  
