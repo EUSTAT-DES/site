@@ -50,7 +50,8 @@ Por último, se asigna una puntuación a la serie según los siguientes criterio
 | 1              |    $\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.10$         |
 
 
-Donde:<br>
+Donde:
+<br><br> 
 𝑏 es el año base (normalmente 2015)<br>
 𝑡 es el último año para el que hay dato (por ejemplo: 2022)<br>
 𝑣𝑏 es el valor base en el año b<br>
@@ -58,7 +59,7 @@ Donde:<br>
 𝑣_{2030} es el valor objetivo para 2030<br>
 𝑣_{2030}^{e} es el valor esperado para 2030
 
-
+<br><br> 
 #### Indicadores sin valores objetivo numéricos 
 
 Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:
@@ -98,45 +99,54 @@ Las categorías de progreso asignadas se describen a continuación:
 | -                                 | No evaluado                                          | ![No evaluado](https://github.com/EUSTAT-DES/site/assets/img/progress/no_evaluado.png) |
                             
 
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>Ratio of observed over required growth rate</th>
-      <th>Category</th>
-      <th>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CAGR<sub>o</sub> ≥ 1.5%</td>
-      <td>On track</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png" alt="Symbol 1">
-      </td>
-    </tr>
-    <tr>
-      <td>0.5% ≤ CAGR<sub>o</sub> &lt; 1.5%</td>
-      <td>Progress made but acceleration needed</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/progreso.png" alt="Symbol 2">
-      </td>
-    </tr>
-    <tr>
-      <td>0% ≤ CAGR<sub>o</sub> &lt; 0.5%</td>
-      <td>Limited progress</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png" alt="Symbol 3">
-      </td>
-    </tr>
-    <tr>
-      <td>CAGR<sub>o</sub> &lt; 0%</td>
-      <td>Deterioration</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png" alt="Symbol 4">
-      </td>
-    </tr>
-  </tbody>
+ 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Ratio of observed over required growth rate</th>
+    <th class="tg-fymr">Category</th>
+    <th class="tg-fymr">Symbol</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">R<sub>o/r</sub> ≥ 95%</td>
+    <td class="tg-0pky">Target achieved</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" width="100"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">R<sub>o/r</sub> ≥ 95%</td>
+    <td class="tg-0pky">On track</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the green segment." width="100"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">60% ≤ R<sub>o/r</sub> &lt; 95%</td>
+    <td class="tg-0pky">Progress made but acceleration needed</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the yellow segment." width="100"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">0% ≤ R<sub>o/r</sub> &lt; 60%</td>
+    <td class="tg-0pky">Limited progress</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the orange segment." width="100"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">R<sub>o/r</sub> &lt; 0%</td>
+    <td class="tg-0pky">Deterioration</td>
+    <td class="tg-0pky"><img src="https://github.com/sdg-data-canada-odd-donnees/cif-cic_dev/blob/develop/assets/img/progress/red-gauge.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the red segment." width="150" height="150"></td>
+  </tr>
+</tbody>
 </table>
+
+<br><br>  
 
 
 ### Excepciones    
