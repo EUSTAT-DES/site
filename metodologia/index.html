@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240905094213">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240905100110">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -361,7 +361,8 @@ incluye indicadores diseñados en coordinación con los organismos de estadísti
   </tbody>
 </table>
 
-<p>Donde:<br />
+<p>Donde:
+<br /><br /> 
 𝑏 es el año base (normalmente 2015)<br />
 𝑡 es el último año para el que hay dato (por ejemplo: 2022)<br />
 𝑣𝑏 es el valor base en el año b<br />
@@ -369,6 +370,7 @@ incluye indicadores diseñados en coordinación con los organismos de estadísti
 𝑣_{2030} es el valor objetivo para 2030<br />
 𝑣_{2030}^{e} es el valor esperado para 2030</p>
 
+<p><br /><br /></p>
 <h4 id="indicadores-sin-valores-objetivo-numéricos">Indicadores sin valores objetivo numéricos</h4>
 
 <p>Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:</p>
@@ -463,45 +465,54 @@ incluye indicadores diseñados en coordinación con los organismos de estadísti
   </tbody>
 </table>
 
-<table class="custom-table">
-  <thead>
-    <tr>
-      <th>Ratio of observed over required growth rate</th>
-      <th>Category</th>
-      <th>Symbol</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CAGR<sub>o</sub> ≥ 1.5%</td>
-      <td>On track</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png" alt="Symbol 1" />
-      </td>
-    </tr>
-    <tr>
-      <td>0.5% ≤ CAGR<sub>o</sub> &lt; 1.5%</td>
-      <td>Progress made but acceleration needed</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/progreso.png" alt="Symbol 2" />
-      </td>
-    </tr>
-    <tr>
-      <td>0% ≤ CAGR<sub>o</sub> &lt; 0.5%</td>
-      <td>Limited progress</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png" alt="Symbol 3" />
-      </td>
-    </tr>
-    <tr>
-      <td>CAGR<sub>o</sub> &lt; 0%</td>
-      <td>Deterioration</td>
-      <td>
-        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png" alt="Symbol 4" />
-      </td>
-    </tr>
-  </tbody>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Ratio of observed over required growth rate</th>
+    <th class="tg-fymr">Category</th>
+    <th class="tg-fymr">Symbol</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">R<sub>o/r</sub> ≥ 95%</td>
+    <td class="tg-0pky">Target achieved</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" width="100" /></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">R<sub>o/r</sub> ≥ 95%</td>
+    <td class="tg-0pky">On track</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the green segment." width="100" /></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">60% ≤ R<sub>o/r</sub> &lt; 95%</td>
+    <td class="tg-0pky">Progress made but acceleration needed</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the yellow segment." width="100" /></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">0% ≤ R<sub>o/r</sub> &lt; 60%</td>
+    <td class="tg-0pky">Limited progress</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the orange segment." width="100" /></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">R<sub>o/r</sub> &lt; 0%</td>
+    <td class="tg-0pky">Deterioration</td>
+    <td class="tg-0pky"><img src="https://github.com/sdg-data-canada-odd-donnees/cif-cic_dev/blob/develop/assets/img/progress/red-gauge.png?raw=true" alt="Guage icon with four equally sized colour segments (from left to right): red, orange, yellow, green. A black needle points at the middle of the red segment." width="150" height="150" /></td>
+  </tr>
+</tbody>
 </table>
+
+<p><br /><br /></p>
 
 <h3 id="excepciones">Excepciones</h3>
 <p>Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:</p>
@@ -630,7 +641,7 @@ a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240905094213'></script>
+<script src='/site/assets/js/sdg.js?v=20240905100110'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -652,7 +663,7 @@ a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240905094213"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240905100110"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
