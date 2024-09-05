@@ -89,15 +89,15 @@ Si el descenso es deseable:
 
 En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
 
+
 Las categorías de progreso asignadas se describen a continuación:
 
 | **Tasa de crecimiento observado** | **Categoría**                                        | **Símbolo**                                                                 |
-|:----------------------------------|:----------------------------------------------------|:---------------------------------------------------------------------------:|
-| 3                                 | Meta alcanzada o en vías de alcanzarla               | ![Alcanzado](https://github.com/EUSTAT-DES/site/assets/img/progress/alcanzado.png)  |
-| 2                                 | Progreso razonable, pero es necesario acelerarlo     | ![En progreso](https://github.com/EUSTAT-DES/site/assets/img/progress/en_progreso.png) |
-| 1                                 | Estancamiento o retroceso                            | ![Retroceso](https://github.com/EUSTAT-DES/site/assets/img/progress/retroceso.png)    |
-| -                                 | No evaluado                                          | ![No evaluado](https://github.com/EUSTAT-DES/site/assets/img/progress/no_evaluado.png) |
-                            
+|:----------------------------------|:----------------------------------------------------|:------------------------------------------------------------------------------:|
+| 3                                 | Meta alcanzada o en vías de alcanzarla               | ![Alcanzado](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true)  |
+| 2                                 | Progreso razonable, pero es necesario acelerarlo     | ![En progreso](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true) |
+| 1                                 | Estancamiento o retroceso                            | ![Retroceso](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true)    |
+| -                                 | No evaluado                                          | ![No evaluado](https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true) |
 
  
 <style type="text/css">
