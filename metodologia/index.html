@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240904164714">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240905094213">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -463,6 +463,46 @@ incluye indicadores diseñados en coordinación con los organismos de estadísti
   </tbody>
 </table>
 
+<table class="custom-table">
+  <thead>
+    <tr>
+      <th>Ratio of observed over required growth rate</th>
+      <th>Category</th>
+      <th>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CAGR<sub>o</sub> ≥ 1.5%</td>
+      <td>On track</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png" alt="Symbol 1" />
+      </td>
+    </tr>
+    <tr>
+      <td>0.5% ≤ CAGR<sub>o</sub> &lt; 1.5%</td>
+      <td>Progress made but acceleration needed</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/progreso.png" alt="Symbol 2" />
+      </td>
+    </tr>
+    <tr>
+      <td>0% ≤ CAGR<sub>o</sub> &lt; 0.5%</td>
+      <td>Limited progress</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png" alt="Symbol 3" />
+      </td>
+    </tr>
+    <tr>
+      <td>CAGR<sub>o</sub> &lt; 0%</td>
+      <td>Deterioration</td>
+      <td>
+        <img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png" alt="Symbol 4" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="excepciones">Excepciones</h3>
 <p>Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:</p>
 
@@ -590,7 +630,7 @@ a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240904164714'></script>
+<script src='/site/assets/js/sdg.js?v=20240905094213'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -612,7 +652,7 @@ a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240904164714"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240905094213"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
