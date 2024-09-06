@@ -323,7 +323,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/3-4-1/",
-          "status": "alcanzado"
+          "status": "progreso"
         },
         {
           "id": "3-4-2",
@@ -499,7 +499,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-1-1/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "4-1-2",
@@ -507,7 +507,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-1-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "4-2-1",
@@ -523,7 +523,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-2-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "4-3-1",
@@ -531,7 +531,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-3-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "4-4-1",
@@ -539,7 +539,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-4-1/",
-          "status": "alcanzado"
+          "status": "progreso"
         },
         {
           "id": "4-5-1",
@@ -547,7 +547,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-5-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "4-6-1",
@@ -555,7 +555,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-6-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "4-7-1",
@@ -571,7 +571,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-a-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "4-b-1",
@@ -587,7 +587,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/4-c-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         }]
     }
   },
