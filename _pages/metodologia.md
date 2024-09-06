@@ -31,13 +31,13 @@ Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas par
 
 La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.  
 
-#### Indicadores con valores objetivo para 2030 
+### Indicadores con valores objetivo para 2030
 
 Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:
 
 $$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1$$
 
-A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:
+<p>A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:</p>
 
 $$v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}$$
 
@@ -89,7 +89,7 @@ $𝑣_{2030}$ es el valor objetivo para 2030<br>
 $𝑣_{2030}^{e}$ es el valor esperado para 2030
 
 <br><br> 
-#### Indicadores sin valores objetivo numéricos 
+### Indicadores sin valores objetivo numéricos 
 
 Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:
 
