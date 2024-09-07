@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240907141152">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240907152537">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -391,7 +391,7 @@ $𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
 
 <p>A continuación, se asigna una puntuación al indicador según los siguientes criterios:</p>
 
-<p>Si el aumento es deseable:</p>
+<p>Si el aumento es deseable:<br /></p>
 
 <table class="tg">
 <thead>
@@ -416,7 +416,7 @@ $𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
 </tbody>
 </table>
 
-<p>Si el descenso es deseable:</p>
+<p>Si el descenso es deseable:<br /></p>
 
 <table class="tg">
 <thead>
@@ -441,7 +441,8 @@ $𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
 </tbody>
 </table>
 
-<p>En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.</p>
+<p><br /><br />
+En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.</p>
 
 <p>Las categorías de progreso asignadas se describen a continuación:</p>
 
@@ -483,19 +484,42 @@ $𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
 <p>Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:</p>
 
 <ol>
+  <li>Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.</li>
+  <li>Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta.</li>
   <li>Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.</li>
   <li>A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.</li>
   <li>Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (<em>y</em>).</li>
   <li>Se requiere un mínimo de dos años de datos para calcular la medida de progreso.</li>
   <li>Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.</li>
   <li>Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.</li>
-  <li>La medida de progreso para los indicadores que comienzan por encima de la meta en su año base y cuyo progreso luego disminuye se evaluará automáticamente como “Estancamiento o retroceso”.</li>
   <li>A los indicadores binarios se les asignará una de estas 2 categorías:<br />
 a. “Meta alcanzada” en caso afirmativo. <br />
 b. “Estancamiento o retroceso” si es “no”.</li>
-  <li>Excepciones específicas:
-a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y de cuidados no remunerado: informa la proporción de días dedicados al trabajo doméstico y de cuidados no remunerado, por sexo. Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, el indicador se modificará antes del cálculo. Se utilizará una relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1.</li>
+  <li>Excepciones específicas:</li>
 </ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>nº indicador</th>
+      <th>Título del indicador</th>
+      <th>Excepción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.a.2</td>
+      <td>Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)</td>
+      <td>Se ha considerado como meta la media de de la OCDE para el indicador</td>
+    </tr>
+    <tr>
+      <td>5.4.1</td>
+      <td>Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación</td>
+      <td>Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 
@@ -606,7 +630,7 @@ a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240907141152'></script>
+<script src='/site/assets/js/sdg.js?v=20240907152537'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -628,7 +652,7 @@ a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240907141152"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240907152537"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
