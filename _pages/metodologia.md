@@ -97,7 +97,7 @@ $$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1$$
 
 A continuación, se asigna una puntuación al indicador según los siguientes criterios:
 
-Si el aumento es deseable:
+Si el aumento es deseable:<br>
 
 <table class="tg">
 <thead>
@@ -123,7 +123,7 @@ Si el aumento es deseable:
 </table>
 
 
-Si el descenso es deseable:
+Si el descenso es deseable:<br>
 
 
 <table class="tg">
@@ -149,7 +149,7 @@ Si el descenso es deseable:
 </tbody>
 </table>
 
-
+<br><br>
 En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
 
 
@@ -193,15 +193,22 @@ Las categorías de progreso asignadas se describen a continuación:
 ### Excepciones    
 Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:  
 
-1. Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.   
-2. A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.   
-3. Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (*y*).  
-4. Se requiere un mínimo de dos años de datos para calcular la medida de progreso. 
-5. Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.  
-6. Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.  
-7. La medida de progreso para los indicadores que comienzan por encima de la meta en su año base y cuyo progreso luego disminuye se evaluará automáticamente como "Estancamiento o retroceso".
-8. A los indicadores binarios se les asignará una de estas 2 categorías:  
+1. Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.
+2. Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta. 
+3. Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.   
+4. A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.   
+5. Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (*y*).  
+6. Se requiere un mínimo de dos años de datos para calcular la medida de progreso. 
+7. Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.  
+8. Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.  
+9. A los indicadores binarios se les asignará una de estas 2 categorías:  
    a. “Meta alcanzada” en caso afirmativo.   
    b. “Estancamiento o retroceso” si es “no”.  
-9. Excepciones específicas:
-   a. Indicador CIF 5.3.1 - Proporción de tiempo dedicado al trabajo doméstico y de cuidados no remunerado: informa la proporción de días dedicados al trabajo doméstico y de cuidados no remunerado, por sexo. Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, el indicador se modificará antes del cálculo. Se utilizará una relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1.
+10. Excepciones específicas:
+
+
+| nº indicador | Título del indicador                                                                                                                                                      | Excepción |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| 1.a.2        | Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)                                                           | Se ha considerado como meta la media de de la OCDE para el indicador |
+| 5.4.1        | Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación                                                    | Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1 |
+
