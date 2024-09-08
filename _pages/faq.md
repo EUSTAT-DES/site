@@ -1,69 +1,147 @@
 ---
-title: Frequently Asked Questions (FAQ)
+title: Sistema de Indicadores
 language: es
 permalink: /faq/
 layout: page
 ---
 
-## Table of contents
-- [How often will new data be added to this site?](#how-often-will-new-data-be-added-to-this-site)
+## Contenido
 
-- [How do I suggest new or different data sources?](#how-do-i-suggest-new-or-different-data-sources)
+- [Introducción](#introducción)
+- [Indicadores disponibles en la C.A. de Euskadi](#indicadores-disponibles-en-la-ca-de-euskadi)
+- [Presentación de los indicadores](#presentación-de-los-indicadores)
+- [Metadatos y fuentes de datos para el indicador disponible e indicadores mundiales y europeos](#metadatos-y-fuentes-de-datos-para-el-indicador-disponible-e-indicadores-mundiales-y-europeos)
+- [Acerca de este sitio web](#acerca-de-este-sitio-web)
+- [¿Cada cuánto tiempo se actualizan los datos?](#cada-cuánto-tiempo-se-actualizan-los-datos)
+- [¿A quién está dirigido este sitio web?](#a-quién-está-dirigido-este-sitio-web)
+- [Uso de APIs](#uso-de-apis)
+- [Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030](#comunidades-autónomas-que-informan-sobre-los-indicadores-de-la-agenda-2030)
+- [Países que informan sobre los indicadores de la Agenda 2030](#países-que-informan-sobre-los-indicadores-de-la-agenda-2030)
+- [¿Se puede copiar este sitio web?](#se-puede-copiar-este-sitio-web)
+- [¿Es accesible este sitio web?](#es-accesible-este-sitio-web)
 
-- [What are you doing to fill data gaps?](#what-are-you-doing-to-fill-data-gaps)
+## Introducción
 
-- [What does the reporting status mean?](#what-does-the-reporting-status-mean)
+La [Agenda 2030 para el Desarrollo Sostenible](https://www.un.org/sustainabledevelopment/es/), adoptada por todos los Estados miembros de las Naciones Unidas en 2015, proporciona un programa para mejorar la economía, la sociedad y el medio ambiente de una forma sostenible. En esencia, los 17 Objetivos de Desarrollo Sostenible (ODS) son un llamamiento universal a la acción para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas en todo el mundo puedan disfrutar de paz y prosperidad.  
 
-- [Can other countries copy this website?](#can-other-countries-copy-this-website)
+## Indicadores disponibles en la C.A. de Euskadi
 
-- [How accessible is this website?](#how-accessible-is-this-website)
+Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores específico que incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos por el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
 
-- [What browsers can I use to view this website?](#what-browsers-can-i-use-to-view-this-website)
+Se intenta que los indicadores disponibles en la C.A. de Euskadi sean comparables con los indicadores definidos en el [marco de indicadores mundiales de Naciones Unidas](https://unstats.un.org/sdgs/metadata) o con los [indicadores de Desarrollo Sostenible de la Unión Europea](https://ec.europa.eu/eurostat/web/sdi). En el caso de que el indicador disponible en la C.A. de Euskadi no sea comparable con el indicador mundial o europeo, así se indica en los metadatos del indicador.
 
-- [What do each of the three tiers mean?](#what-do-each-of-the-three-tiers-mean)
+## Presentación de los indicadores
 
-## How often will new data be added to this site?
-We will add data as soon as it has been sourced and checked. This includes new data as well as updates to data we have already published. We will continue to collect data from existing sources where possible.
+Los datos relevantes para cada indicador se presentan en un gráfico y una tabla. Esta presentación se complementa para algunos indicadores con un mapa interactivo que muestra los datos de las comarcas o municipios vascos. Sin embargo, algunos indicadores no pueden representarse a partir de datos. Cuando sucede esto, se muestran textos explicativos con enlaces a información temáticamente relevante sobre los indicadores.
 
-## How do I suggest new or different data sources?
-If you have feedback on the data sources we have used or have suggestions for new data sources then please email us at <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>.
+## Metadatos y fuentes de datos para el indicador disponible e indicadores mundiales y europeos
 
-## What are you doing to fill data gaps?
-For some indicators, although we may have data at the national level, our existing data sources don’t always allow us to disaggregate by all main groups.
+En la parte inferior de las páginas de los indicadores se encuentran las pestañas "Ficha metodológica", "Descripción del indicador" y "Fuentes de datos".
 
-This means we need to look for new data sources, link existing ones, or model data.
+## Acerca de este sitio web
 
-## What does the reporting status mean?
-We have used three different types of reporting status for an indicator, which are also colour coded:
+Eustat ha desarrollado esta plataforma de visualización de indicadores de desarrollo sostenible interactivo utilizando la [Plataforma Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para la difusión de indicadores de ODS.
 
-- **Reported (black):** As a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.
+## ¿Cada cuánto tiempo se actualizan los datos?
 
-- **Statistics in progress (grey):** We have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.
+Se agregan datos tan pronto como se hayan obtenido y verificado. Esto incluye datos nuevos y actualizaciones de los datos que ya están publicados.
 
-- **No data available (white):** We are still looking for a suitable data source for this indicator.
+## ¿A quién está dirigido este sitio web?
 
-- **Not applicable (striped):** This indicator is not applicable in the national context.
+Este sitio está dirigido a administraciones para la toma de decisiones sobre políticas públicas, ciudadanos interesados en políticas públicas, y analistas de datos.
 
+## Uso de APIs
 
-## Can other countries copy this website?
-Yes. See the [Open SDG Quick Start guide](https://open-sdg.readthedocs.io/en/latest/quick-start/) for technical instructions on the quickest way to get a copy of the Open SDG platform up and running.
+Los datos y metadatos de la plataforma están disponibles en rutas predecibles y documentadas y, por lo tanto, se puede acceder a ellos mediante programación como se describe a continuación:
 
-## How accessible is this website?
-Open SDG aims to be as accessible and usable as possible for every user and works towards meeting AA level of [Web Content Accessibility Guidelines (WCAG 2.0)](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20).
+datos: https://eustat-des.github.io/data/lenguaje]/data/codigodelindicador.json   (por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json)
+metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigodelindicador.json  (por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json)
 
-## What browsers can I use to view this website?
-Our website works with most of the latest versions of the commonly used browsers.
+## Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030
+La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
 
-## What do each of the three tiers mean?
-Each of the SDG indicators are assigned to one (or more) of the following tiers:
- - **Tier 1:** Indicator is conceptually clear, has an internationally established methodology and standards are available, and data are regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.
+- Andalucía: [Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sistema-de-indicadores-de-desarrollo- 
+  sostenible- de-andalucia-para-la-agenda-20), Instituto de Estadística y Cartografía de Andalucía <br>
+- Aragón: [Indicadores de los ODS](https://www.aragon.es/-/instituto-aragones-de-estadistica-iaest) <br>
+- Asturias, Principado de: [Indicadores de los ODS](https://www.asturias.es/webasturias/sobre_asturias/sostenibilidad/agenda-2030) <br>
+- Baleares, Islas: [Indicadores de los ODS](http://www.caib.es/sites/estadistiques/ca/pagina-21596/) <br>
+- Canarias: [Indicadores de los ODS](https://www.gobiernodecanarias.org/istac/) <br>
+- Cantabria: [Indicadores de los ODS](http://www.icane.es/web/icane/estadisticas/ods) <br>
+- Castilla-La Mancha: [Indicadores de los ODS](https://www.castillalamancha.es/gobierno/haciendayadministracionespublicas/estructura/dgfondoseuropeos/actuaciones/objetivos-de-desarrollo-sostenible-ods) <br>
+- Castilla y León: [Indicadores de los ODS](http://www.estadistica.jcyl.es/web/jcyl/Estadistica/es/Plantilla100/1284377204315/_/_/_) <br>
+- Cataluña: [Indicadores de los ODS](https://www.idescat.cat/tema/ODS) <br>
+- Comunidad Valenciana: [Indicadores de los ODS](http://www.ceice.gva.es/es/web/estadistica/objetivos-de-desarrollo-sostenible) <br>
+- Extremadura: [Indicadores de los ODS](https://www.juntaex.es/con02/observatorio-sostenibilidad-extremadura) <br>
+- Galicia: [Indicadores de los ODS](https://www.ige.eu/web/objetivos_desarrollo_sostenible/index.jsp) <br>
+- La Rioja: [Indicadores de los ODS](https://www.larioja.org/larioja-client/cm/estadistica-rioja) <br>
+- Madrid, Comunidad de: [Indicadores de los ODS](https://www.comunidad.madrid/servicios/estadistica/objetivos-desarrollo-sostenible) <br>
+- Murcia, Región de: [Indicadores de los ODS](https://www.carm.es/web/pagina?IDCONTENIDO=6338&IDTIPO=160&RASTRO=c$m122,70) <br>
+- Navarra, Comunidad Foral de: [Indicadores de los ODS](http://www.navarra.es/home_es/Temas/Estadistica/ODS.htm) <br>
+- País Vasco: [Indicadores de los ODS](https://www.eustat.eus/ods/) <br>
+- Ceuta, Ciudad Autónoma de: [Indicadores de los ODS](https://www.ceuta.es/ceuta/indicadores-de-los-objetivos-de-desarrollo-sostenible) <br>
+- Melilla, Ciudad Autónoma de: [Indicadores de los ODS](https://www.melilla.es/melillaportal/contenedor.jsp?seccion=ficha_contenedor.jsp&codbusqueda=420&language=es&codResi=1&codMenuPN=1&codMenuSN=24&codMenu=48) <br>
 
- - **Tier 2:** Indicator is conceptually clear, has an internationally established methodology and standards are available, but data are not regularly produced by countries.
+## Países que informan sobre los indicadores de la Agenda 2030
+La siguiente lista muestra algunas de las plataformas globales de presentación de informes existentes sobre los ODS. La lista no es exhaustiva:
 
- - **Tier 3:** No internationally established methodology or standards are yet available for the indicator, but methodology/standards are being (or will be) developed or tested (As of the 51st session of the UN Statistical Commission, the global indicator framework does not contain any Tier III indicators)
+- Albania: [http://www.instat.gov.al/en/sdgs/](http://www.instat.gov.al/en/sdgs/) <br>
+- Armenia: [https://sdg.armstat.am/](https://sdg.armstat.am/) <br>
+- Australia: [https://www.sdgdata.gov.au/](https://www.sdgdata.gov.au/) <br>
+- Austria: [https://www.statistik.at/services/tools/services/indikatorensysteme/sdgs](https://www.statistik.at/services/tools/services/indikatorensysteme/sdgs) <br>
+- Azerbaijan: [http://sdg.azstat.org/](http://sdg.azstat.org/) <br>
+- Bielorrusia: [http://sdgplatform.belstat.gov.by/en/sites/belstatfront/home.html](http://sdgplatform.belstat.gov.by/en/sites/belstatfront/home.html) <br>
+- Bélgica: [http://www.indicators.be/en/t/SDG/](http://www.indicators.be/en/t/SDG/) <br>
+- Bosnia y Herzegovina: [https://sdg.bhas.gov.ba/](https://sdg.bhas.gov.ba/) <br>
+- Brasil: [https://odsbrasil.gov.br/](https://odsbrasil.gov.br/) <br>
+- Canadá: [https://www144.statcan.gc.ca/sdg-odd/index-eng.htm](https://www144.statcan.gc.ca/sdg-odd/index-eng.htm) <br>
+- Croacia: [https://croatianbureauofstatistics.github.io/sdg-indicators/](https://croatianbureauofstatistics.github.io/sdg-indicators/) <br>
+- Chequia: [https://www.sdg-data.cz/en](https://www.sdg-data.cz/en) <br>
+- República Democrática del Congo: [https://odd-dashboard.cd/en/](https://odd-dashboard.cd/en/) <br>
+- Dinamarca: [https://dst.dk/en/Statistik/Sdg](https://dst.dk/en/Statistik/Sdg) <br>
+- Eslovaquia: [https://agenda2030.statistics.sk/Agenda2030/en/home/](https://agenda2030.statistics.sk/Agenda2030/en/home/) <br>
+- Eslovenia: [http://www.stat.si/Pages/en/goals](http://www.stat.si/Pages/en/goals) <br>
+- España: [http://ine.es/dynt3/ODS/en/index.htm](http://ine.es/dynt3/ODS/en/index.htm) <br>
+- Estados Unidos: [https://sdg.data.gov/](https://sdg.data.gov/) <br>
+- Estonia: [https://www.stat.ee/en/find-statistics/statistics-theme/sustainable-development](https://www.stat.ee/en/find-statistics/statistics-theme/sustainable-development) <br>
+- Francia: [https://www.insee.fr/fr/statistiques/2654964](https://www.insee.fr/fr/statistiques/2654964) <br>
+- Georgia: [https://sdg.gov.ge/intro](https://sdg.gov.ge/intro) <br>
+- Ghana: [https://sustainabledevelopment-ghana.github.io/](https://sustainabledevelopment-ghana.github.io/) <br>
+- Grecia: [http://www.statistics.gr/en/sdgs](http://www.statistics.gr/en/sdgs) <br>
+- Hungría: [http://www.ksh.hu/sdg](http://www.ksh.hu/sdg) <br>
+- Islandia: [https://visar.hagstofa.is/heimsmarkmidin/en/](https://visar.hagstofa.is/heimsmarkmidin/en/) <br>
+- Islas Feroe: [https://sdg.hagstova.fo/sdg-site/en/](https://sdg.hagstova.fo/sdg-site/en/) <br>
+- Irlanda: [https://irelandsdg.geohive.ie/](https://irelandsdg.geohive.ie/) <br>
+- Israel: [https://www.cbs.gov.il/en/subjects/Pages/Sustainable-Development.aspx](https://www.cbs.gov.il/en/subjects/Pages/Sustainable-Development.aspx) <br>
+- Italia: [https://www.istat.it/en/well-being-and-sustainability/sustainable-development-goals](https://www.istat.it/en/well-being-and-sustainability/sustainable-development-goals) <br>
+- Japón: [https://www.mofa.go.jp/mofaj/gaiko/oda/sdgs/statistics/index.html](https://www.mofa.go.jp/mofaj/gaiko/oda/sdgs/statistics/index.html) <br>
+- Kazajistán: [https://kazstat.github.io/sdg-site-kazstat/en/](https://kazstat.github.io/sdg-site-kazstat/en/) <br>
+- Kirguistán: [https://sustainabledevelopment-kyrgyzstan.github.io/](https://sustainabledevelopment-kyrgyzstan.github.io/) <br>
+- Laos: [https://www.lsb.gov.la/sdg/en/](https://www.lsb.gov.la/sdg/en/) <br>
+- Liechtenstein: [https://www.statistikportal.li/de/uebersichten-indikatoren/indikatoren-nachhaltige-entwicklung](https://www.statistikportal.li/de/uebersichten-indikatoren/indikatoren-nachhaltige-entwicklung) <br>
+- Lituania: [https://osp.stat.gov.lt/en/darnaus-vystymosi-rodikliai](https://osp.stat.gov.lt/en/darnaus-vystymosi-rodikliai) <br>
+- Luxemburgo: [https://statistiques.public.lu/en/donnees/themes/odd.html](https://statistiques.public.lu/en/donnees/themes/odd.html) <br>
+- México: [http://www.agenda2030.mx/](http://www.agenda2030.mx/) <br>
+- Mongolia: [http://sdg.1212.mn/EN/Home/Information](http://sdg.1212.mn/EN/Home/Information) <br>
+- Montenegro: [https://www.sdgmontenegro.me/](https://www.sdgmontenegro.me/) <br>
+- Países Bajos: [https://www.sdgnederland.nl/sdgs/](https://www.sdgnederland.nl/sdgs/) <br>
+- Polonia: [https://sdg.gov.pl/en/](https://sdg.gov.pl/en/) <br>
+- Portugal: [https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_perfsdg&xlang=en](https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_perfsdg&xlang=en) <br>
+- Reino Unido: [https://sustainabledevelopment-uk.github.io/](https://sustainabledevelopment-uk.github.io/) <br>
+- República de Moldavia: [https://statistica.gov.md/en/sustainable-development-goals-183.html](https://statistica.gov.md/en/sustainable-development-goals-183.html) <br>
+- Rumanía: [http://www.insse.ro/cms/files/Web_IDD_BD_en/index.htm](http://www.insse.ro/cms/files/Web_IDD_BD_en/index.htm) <br>
+- Rusia: [https://eng.rosstat.gov.ru/sdg](https://eng.rosstat.gov.ru/sdg) <br>
+- Ruanda: [https://sustainabledevelopment-rwanda.github.io/](https://sustainabledevelopment-rwanda.github.io/) <br>
+- Serbia: [http://sdg.indikatori.rs/en-us/](http://sdg.indikatori.rs/en-us/) <br>
+- Sudáfrica: [http://www.statssa.gov.za/MDG/SDG_Baseline_Report_2017.pdf](http://www.statssa.gov.za/MDG/SDG_Baseline_Report_2017.pdf) <br>
+- Suiza: [https://www.bfs.admin.ch/bfs/en/home/statistics/sustainable-development.html](https://www.bfs.admin.ch/bfs/en/home/statistics/sustainable-development.html) <br>
+- Tayikistán: [https://www.stat.tj/tj/targets](https://www.stat.tj/tj/targets) <br>
+- Turquía: [https://statswiki.unece.org/sdg.tuik.gov.tr/en/](https://statswiki.unece.org/sdg.tuik.gov.tr/en/) <br>
+- Ucrania: [http://www.sdg.ukrstat.gov.ua/](http://www.sdg.ukrstat.gov.ua/) <br>
 
-**As of 28 December 2020:** The updated tier classification contains **130 Tier I indicators**, **97 Tier II indicators** and **4 indicators that have multiple tiers** (different components of the indicator are classified into different tiers).
+## ¿Se puede copiar este sitio web?
+Sí. Consulte la [Guía de inicio rápido de Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para obtener instrucciones técnicas sobre la forma más rápida de tener una copia de la plataforma Open SDG en funcionamiento.
 
-For more information, [see the IAEG-SDGs Tier Classification for Global SDG Indicators](https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/)
+## ¿Es accesible este sitio web?
+Open SDG pretende ser lo más accesible y utilizable posible para todos los usuarios y trabaja para alcanzar el nivel AA de Pautas de accesibilidad al contenido web (WCAG 2.0).
 
 [Back to top](#top)
