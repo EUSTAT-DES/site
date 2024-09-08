@@ -5,67 +5,210 @@ permalink: /en/metodologia/
 layout: page
 ---
 
-## Introduction   
-The [2030 Agenda for Sustainable Development](https://www.un.org/sustainabledevelopment/development-agenda/), adopted by all United Nations Member States in 2015, provides a blueprint for improving the economy, society, and the environment in a sustainable manner. At its heart, the 17 Sustainable Development Goals (SDGs) are a universal call to action to end poverty, protect the planet, and ensure that all people globally can enjoy peace and prosperity.  
 
-The goals are underpinned by a framework of global indicators that allow BC and other countries to monitor and report on progress. They cover a broad range of social, environmental, and economic issues with a focus on the most vulnerable and a commitment to “leave no one behind”. To complement the global goals, countries are encouraged to develop a national implementation plan that focuses on country-developed indicators to address specific national contexts and priorities to achieve the SDGs.  
+## Introducción
 
+La [Agenda 2030 para el Desarrollo Sostenible](https://www.un.org/sustainabledevelopment/es/), adoptada por todos los Estados miembros de las Naciones Unidas en 2015, proporciona un programa para mejorar la economía, la sociedad y el medio ambiente de una forma sostenible. En esencia, los 17 Objetivos de Desarrollo Sostenible (ODS) son una llamada universal a la acción para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas en todo el mundo puedan disfrutar de paz y prosperidad.  
 
+Los objetivos están respaldados por un marco de indicadores mundiales que permiten hacer el seguimiento e informar sobre el progreso. Cubren una amplia gama de cuestiones sociales, ambientales y económicas con un enfoque en las personas más vulnerables y el compromiso de “no dejar a nadie atrás”. Para complementar los objetivos mundiales, se alienta a los distintos gobiernos a desarrollar un plan de implementación propio que se centre en indicadores que aborden contextos y prioridades específicos para lograr los ODS.  
 
-## Measuring Progress   
-Measuring and monitoring progress with reliable information is key to understanding how the BC advances toward the achievement of the SDGs.  
+Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores específico que 
+incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos dentro del Foro Multiagente de Transición Social y Agenda 2030 en Euskadi.
 
-Closely monitoring the progress of each indicator not only illustrates where BC is making progress or areas where progress is not being made and BC can focus its efforts, but also communicates how BC is doing in an open and transparent manner. A robust measure of progress quantifies an indicator’s progress towards reaching the target in a scientific manner and can used as a tool to better understand success of policies and actions taken to achieve those targets. It can also act as a clear signal to decision-makers to re-adjust or develop effective evidence-based policies to help ensure Canada achieves its targets.  
+## Medición del progreso  
+
+Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.  
+
+Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar sus esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.
  
+## Metodología  
+   
+Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
+[nota técnica sobre la medición del progreso](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) utilizada por al Unidad de Estadística de Naciones Unidas.  
+
+Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.
+
+Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas para el conjunto del mundo. 
+
+La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.  
+
+### Indicadores con valores objetivo para 2030
+
+Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:
+
+$$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1$$
+
+<p>A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:</p>
+
+$$v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}$$
+
+Por último, se asigna una puntuación a la serie según los siguientes criterios:
 
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
 
-## Methodology Adopted   
-The  Indicator Framework System lays the foundation for BC to measure and report its progress on the 17 SDGs within the BC context. The CIF focuses on BC priorities for sustainable development and can be considered a complement to the Global Indicator Framework. In the CIF the 17 Sustainable Development Goals are complemented by 31 ambitions and 76 indicators that are specific. However, unlike the Global Indicator Framework where every indicator has a target, less than half of the indicators in the CIF currently have a defined target, either quantitative (e.g., target 11.5 *By 2030, 22% of commuters adopt shared or active transportation*) or aspirational (e.g., target 5.2 *Greater representation of women in leadership roles*).  
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Condición</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} \geq 0.95$</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">$0.10 \leq \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.95$</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} < 0.10$</td>
+  </tr>
+</tbody>
+</table>
 
-To complement the CIF, Statistics BC has developed a robust and simple method of measuring progress which can be reported using visualizations that allow data users to easily see areas of progress or weakness. Even in the absence of specific quantitative targets, an estimate of progress can inform whether undesired trends are being observed by reporting progress deterioration. In essence, this measure of progress provides a simplified illustration of Canada’s progress toward achieving the SDGs, assuming that the current trends are maintained.  
+<br><br>  
 
-
-
-### Requirements   
-Eustat identified essential requirements for the adopted methodology. The guiding principle for the methodology was the necessity of a consistent and easily interpretable measure that could reach a broad audience while maintaining scientific integrity.  
-
-More specifically, the methodology must:  
-
-1. Allow for different data periodicity and timeliness: Data series available in BC have various collection calendars and reference periods. Some are collected every year while others every few years. Furthermore, the time required between the collection of data and release of official statistics varies greatly between programs.  
-2. Provide a calculation for measuring progress in the absence of a quantitative target: To gain a greater understanding of policy impacts and progress towards the achievements of the SDGs, it is crucial to be able to assess progress in the absence of a specific numerical target.  
-3. Allow for the calculation of an aggregate measure, whether at the target, ambition, or goal level: When used appropriately, a composite measure of progress is valuable to leaders and policymakers to help steer policy and actions towards making progress to achieve the SDGs.  
-
-  
-The adopted methodology cannot rely on:  
-
-1. The need to create a target when there is none. As a statistical agency, we remain politically neutral. Therefore, it is outside the scope of our mandate to assign targets. Thus, the methodology must be valid even in the absence of a target.  
-2. Indicator-specific thresholds for progress categories: It was assessed that using different criteria for each indicator would put too much emphasis on the method rather than the message and overall progress. Therefore, the methodology developed uses a straightforward and consistent method across all indicators.  
-3.	The existence of extended time-series: Many issues covered in the SDGs haven’t been measured for an extended period. Opting for a methodology that is robust despite a shorter time-series allows for a considerable increase in the number of indicators for which progress can be calculated.  
-4.	Modelling: Similar to item 3, modelling usually requires a longer time-series which will reduce the number of indicators eligible for calculation of the progress measure.  
-
-
-### Methodology   
-The progress measure consists of a measure of observed growth compared to an evaluation of the proximity to achieving the target under current conditions. In situations where no quantitative target is provided, the time series is evaluated on the apparent trend of the data.  
-  
-Keeping in mind the limited number of data points in each time series and a desire to keep the methodology simple and transparent, the optimal methodology for measuring progress closely mirrors the progress methodology used by Eurostat[^1].  
-
-Progress is measured using the growth over the observed period and is calculated by a compound annual growth rate,  
-
-
-where  
-*CAGR*<sub>o</sub> is the observed compound annual growth rate between *t<sub>0</sub>* and *t<sub>i</sub>*     
-*y<sub>ti</sub>* is the value of the indicator at time *t<sub>i</sub>*    
-*t<sub>i</sub>* is the most recent year where data is available, and    
-*t<sub>0</sub>* is the base year, 2015, unless otherwise specified.    
+Donde:
+<br><br> 
+𝑏 es el año base (normalmente 2015)<br>
+𝑡 es el último año para el que hay dato (por ejemplo: 2022)<br>
+𝑣𝑏 es el valor base en el año b<br>
+𝑣𝑡 es el valor del último año 𝑡<br>
+$𝑣_{2030}$ es el valor objetivo para 2030<br>
+$𝑣_{2030}^{e}$ es el valor esperado para 2030
 
 <br><br> 
+### Indicadores sin valores objetivo numéricos 
 
-#### Indicators with quantitative targets  
-In the case where a quantitative target for the indicator is provided, the observed *CAGR<sub>o</sub>* is compared to the theoretical *CAGR<sub>r</sub>*, which represents the growth required to achieve the target, by calculating the ratio (*R<sub>o/r</sub>*) as follows:   
+Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:
+
+$$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1$$
+
+A continuación, se asigna una puntuación al indicador según los siguientes criterios:
+
+Si el aumento es deseable:<br>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Condición</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} \geq 0.02$ </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">$0.005 \leq \text{CAGR}_{a} < 0.02$</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} < 0.005$</td>
+  </tr>
+</tbody>
+</table>
 
 
-where   
-  
+Si el descenso es deseable:<br>
 
-*x<sub>tT</sub>* is the target value of the indicator in the target year, *t<sub>T</sub>*.   
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Condición</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} \leq -0.02$ </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">$-0.02 < \text{CAGR}_{a} \leq -0.005$ </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">$\text{CAGR}_{a} > -0.005$</td>
+  </tr>
+</tbody>
+</table>
+
+<br><br>
+En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
+
+
+Las categorías de progreso asignadas se describen a continuación:
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Puntuación</th>
+    <th class="tg-fymr">Categoría</th>
+    <th class="tg-fymr">Símbolo</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">3</td>
+    <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" alt="Alcanzado" width="150"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2</td>
+    <td class="tg-0pky">Progreso razonable, pero es necesario acelerarlo</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="En progreso" width="150"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1</td>
+    <td class="tg-0pky">Estancamiento o retroceso</td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"> - </td>
+    <td class="tg-0pky"> No evaluado </td>
+    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150"></td>
+  </tr>
+</tbody>
+</table>
+
+<br><br>  
+
+
+### Excepciones    
+Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:  
+
+1. Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.
+2. Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta. 
+3. Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.   
+4. A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.   
+5. Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (*y*).  
+6. Se requiere un mínimo de dos años de datos para calcular la medida de progreso. 
+7. Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.  
+8. Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.  
+9. A los indicadores binarios se les asignará una de estas 2 categorías:  
+   a. “Meta alcanzada” en caso afirmativo.   
+   b. “Estancamiento o retroceso” si es “no”.  
+10. Excepciones específicas:
+
+
+| nº indicador | Título del indicador                                                                                                                                                      | Excepción |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| 1.a.2        | Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)                                                           | Se ha considerado como meta la media de de la OCDE para el indicador |
+| 5.4.1        | Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación                                                    | Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1 |
