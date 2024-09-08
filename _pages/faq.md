@@ -24,6 +24,8 @@ layout: page
 
 La [Agenda 2030 para el Desarrollo Sostenible](https://www.un.org/sustainabledevelopment/es/), adoptada por todos los Estados miembros de las Naciones Unidas en 2015, proporciona un programa para mejorar la economía, la sociedad y el medio ambiente de una forma sostenible. En esencia, los 17 Objetivos de Desarrollo Sostenible (ODS) son un llamamiento universal a la acción para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas en todo el mundo puedan disfrutar de paz y prosperidad.  
 
+Los objetivos se sustentan en un marco de indicadores mundiales que permiten hacer el seguimiento e informar sobre los avances. Abarcan una amplia gama de cuestiones sociales, ambientales y económicas, que incluyen, entre otras, la pobreza, el hambre, la salud, la educación, la igualdad social, la innovación, el cambio climático, la biodiversidad y la justicia, con un enfoque en los más vulnerables y un compromiso de no dejar a nadie atrás. También se alienta a los distintos gobiernos a desarrollar un plan de implementación que pueda incluir indicadores desarrollados para abordar contextos y prioridades específicos para lograr los ODS.
+
 ## Indicadores disponibles en la C.A. de Euskadi
 
 Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores específico que incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos por el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
