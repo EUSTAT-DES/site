@@ -10,12 +10,13 @@ layout: page
 - [Introducción](#introducción)
 - [Indicadores disponibles en la C.A. de Euskadi](#indicadores-disponibles-en-la-ca-de-euskadi)
 - [Presentación de los indicadores](#presentación-de-los-indicadores)
-- [Metadatos y fuentes de datos para el indicador disponibles en la C.A. de Euskadi e indicadores mundiales/europeos](#metadatos-y-fuentes-de-datos-para-el-indicador-disponibles-en-la-ca-de-euskadi-e-indicadores-mundialeseuropeos)
+- [Metadatos y fuentes de datos para el indicador disponible e indicadores mundiales y europeos](#metadatos-y-fuentes-de-datos-para-el-indicador-disponible-e-indicadores-mundiales-y-europeos)
 - [Acerca de este sitio web](#acerca-de-este-sitio-web)
 - [¿Cada cuánto tiempo se actualizan los datos?](#cada-cuánto-tiempo-se-actualizan-los-datos)
 - [¿A quién está dirigido este sitio web?](#a-quién-está-dirigido-este-sitio-web)
 - [Uso de APIs](#uso-de-apis)
-- [¿Cómo se mide el progreso en la consecución de los objetivos de desarrollo sostenible en la C.A. de Euskadi?](#cómo-se-mide-el-progreso-en-la-consecución-de-los-objetivos-de-desarrollo-sostenible-en-la-ca-de-euskadi)
+- [¿Cómo se mide el progreso en la consecución de los objetivos de desarrollo sostenible en la Comunidad Autónoma de Euskadi?](#cómo-se-mide-el-progreso-en-la-consecución-de-los-objetivos-de-desarrollo-sostenible-en-la- 
+  Comunidad-Autónoma-de-Euskadi)
 - [Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030](#comunidades-autónomas-que-informan-sobre-los-indicadores-de-la-agenda-2030)
 - [Países que informan sobre los indicadores de la Agenda 2030](#países-que-informan-sobre-los-indicadores-de-la-agenda-2030)
 - [¿Se puede copiar este sitio web?](#se-puede-copiar-este-sitio-web)
@@ -43,7 +44,7 @@ Los datos relevantes para cada indicador se presentan en un gráfico y una tabla
 Los botones verdes debajo del gráfico se pueden usar para descargar los datos en formato CSV o el gráfico como archivo PNG.
 
 
-## Metadatos y fuentes de datos para el indicador disponibles en la C.A. de Euskadi e indicadores mundiales/europeos
+## Metadatos y fuentes de datos para el indicador disponible en la C.A. de Euskadi e indicadores mundiales y europeos
 
 En la parte inferior de las páginas de los indicadores se encuentran las pestañas "Ficha metodológica", "Descripción del indicador" y "Fuentes de datos".
 
@@ -74,15 +75,11 @@ Los usuarios a los que se dirige esta plataforma de visualización de datos son:
 ## Uso de APIs
 Los datos y metadatos de la plataforma están disponibles en rutas predecibles y documentadas y, por lo tanto, se puede acceder a ellos mediante programación como se describe a continuación:
 
-datos: https://eustat-des.github.io/data/[LANGUAGE_CODE]/data/[INDICATOR CODE].json
+datos: https://eustat-des.github.io/data/lenguaje]/data/codigodelindicador.json   (por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json)
 
-por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json
+metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigodelindicador.json  (por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json)
 
-metadatos: https://eustat-des.github.io/data/[LANGUAGE_CODE]/meta/[INDICATOR CODE].json
-
-por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json
-
-## ¿Cómo se mide el progreso en la consecución de los objetivos de desarrollo sostenible en la C.A. de Euskadi?
+## ¿Cómo se mide el progreso en la consecución de los objetivos de desarrollo sostenible en la Comunidad Autónoma de Euskadi?
 
   El informe de seguimiento proporciona una descripción general del progreso en la consecución de los Objetivos de Desarrollo Sostenible (ODS) en la Comunidad Autónoma de Euskadi.
 
@@ -92,78 +89,26 @@ por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json
 ## Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
 
-Andalucía: [Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sistema-de-indicadores-de-desarrollo-sostenible-de-andalucia-para-la-agenda-20), Instituto de Estadística y Cartografía de Andalucía
-
-Aragón: [Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030](Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030), Instituto Aragonés de Estadística
-Asturias, Principado de: Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Gobierno del Principado de Asturias
-Planes y estrategias elaborados por la CCAA
-Baleares, Islas
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto de Estadística de las Islas Baleares
-Planes y estrategias elaborados por la CCAA
-Canarias
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto Canario de Estadística
-Planes y estrategias elaborados por la CCAA
-Cantabria
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto Cántabro de Estadística
-Planes y estrategias elaborados por la CCAA
-Castilla-La Mancha
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Planes y estrategias elaborados por la CCAA
-Castilla y León
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Gobierno de Castilla y León
-Planes y estrategias elaborados por la CCAA
-Directrices de implementación de la Agenda 2030
-Cataluña
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto de Estadística de Cataluña
-Planes y estrategias elaborados por la CCAA
-Agenda 2030: transform Catalonia, improve de world
-Comunidad Valenciana
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Generalitat Valenciana
-Planes y estrategias elaborados por la CCAA
-Estrategia ODS de la Comunidad Valenciana
-Extremadura
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto de Estadística de Extremadura
-Planes y estrategias elaborados por la CCAA
-Extremadura 2030: Estrategia de economía verde y circular
-Galicia
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto Gallego de Estadística
-Planes y estrategias elaborados por la CCAA
-La Rioja
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto de Estadística de La Rioja
-Planes y estrategias elaborados por la CCAA
-Madrid, Comunidad de
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Comunidad de Madrid
-Planes y estrategias elaborados por la CCAA
-Murcia, Región de
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Planes y estrategias elaborados por la CCAA
-Navarra, Comunidad Foral de
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto de Estadística de Navarra
-Planes y estrategias elaborados por la CCAA
-Plan de acción 2018 para desarrollar en Navarra la Agenda 2030
-País Vasco
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Instituto Vasco de Estadística
-Planes y estrategias elaborados por la CCAA
-Agenda Euskadi Basque Country 2030
-Ceuta, Ciudad Autónoma de
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Planes y estrategias elaborados por la CCAA
-Melilla, Ciudad Autónoma de
-Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030
-Planes y estrategias elaborados por la CCAA
+- Andalucía: [Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sistema-de-indicadores-de-desarrollo- 
+  sostenible- de-andalucia-para-la-agenda-20), Instituto de Estadística y Cartografía de Andalucía
+- Aragón: [Indicadores de los ODS](https://www.aragon.es/-/instituto-aragones-de-estadistica-iaest)
+- Asturias, Principado de: [Indicadores de los ODS](https://www.asturias.es/webasturias/sobre_asturias/sostenibilidad/agenda-2030)
+- Baleares, Islas: [Indicadores de los ODS](http://www.caib.es/sites/estadistiques/ca/pagina-21596/)
+- Canarias: [Indicadores de los ODS](https://www.gobiernodecanarias.org/istac/)
+- Cantabria: [Indicadores de los ODS](http://www.icane.es/web/icane/estadisticas/ods)
+- Castilla-La Mancha: [Indicadores de los ODS](https://www.castillalamancha.es/gobierno/haciendayadministracionespublicas/estructura/dgfondoseuropeos/actuaciones/objetivos-de-desarrollo-sostenible-ods)
+- Castilla y León: [Indicadores de los ODS](http://www.estadistica.jcyl.es/web/jcyl/Estadistica/es/Plantilla100/1284377204315/_/_/_)
+- Cataluña: [Indicadores de los ODS](https://www.idescat.cat/tema/ODS)
+- Comunidad Valenciana: [Indicadores de los ODS](http://www.ceice.gva.es/es/web/estadistica/objetivos-de-desarrollo-sostenible)
+- Extremadura: [Indicadores de los ODS](https://www.juntaex.es/con02/observatorio-sostenibilidad-extremadura)
+- Galicia: [Indicadores de los ODS](https://www.ige.eu/web/objetivos_desarrollo_sostenible/index.jsp)
+- La Rioja: [Indicadores de los ODS](https://www.larioja.org/larioja-client/cm/estadistica-rioja)
+- Madrid, Comunidad de: [Indicadores de los ODS](https://www.comunidad.madrid/servicios/estadistica/objetivos-desarrollo-sostenible)
+- Murcia, Región de: [Indicadores de los ODS](https://www.carm.es/web/pagina?IDCONTENIDO=6338&IDTIPO=160&RASTRO=c$m122,70)
+- Navarra, Comunidad Foral de: [Indicadores de los ODS](http://www.navarra.es/home_es/Temas/Estadistica/ODS.htm)
+- País Vasco: [Indicadores de los ODS](https://www.eustat.eus/ods/)
+- Ceuta, Ciudad Autónoma de: [Indicadores de los ODS](https://www.ceuta.es/ceuta/indicadores-de-los-objetivos-de-desarrollo-sostenible)
+- Melilla, Ciudad Autónoma de: [Indicadores de los ODS](https://www.melilla.es/melillaportal/contenedor.jsp?seccion=ficha_contenedor.jsp&codbusqueda=420&language=es&codResi=1&codMenuPN=1&codMenuSN=24&codMenu=48)
 
 ## Países que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra algunas de las plataformas globales de presentación de informes existentes sobre los ODS. La lista no es exhaustiva:
