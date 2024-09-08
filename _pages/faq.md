@@ -11,14 +11,16 @@ layout: page
 - [Indicadores disponibles en la C.A. de Euskadi](#indicadores-disponibles-en-la-ca-de-euskadi)
 - [Presentación de los indicadores](#presentación-de-los-indicadores)
 - [Metadatos y fuentes de datos para el indicador disponible e indicadores mundiales y europeos](#metadatos-y-fuentes-de-datos-para-el-indicador-disponible-e-indicadores-mundiales-y-europeos)
-- [Acerca de este sitio web](#acerca-de-este-sitio-web)
+- [Evaluación del progreso en los ODS](#evaluación-del-progreso-en-los-ods)
 - [¿Cada cuánto tiempo se actualizan los datos?](#cada-cuánto-tiempo-se-actualizan-los-datos)
 - [¿A quién está dirigido este sitio web?](#a-quién-está-dirigido-este-sitio-web)
-- [Uso de APIs](#uso-de-apis)
 - [Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030](#comunidades-autónomas-que-informan-sobre-los-indicadores-de-la-agenda-2030)
 - [Países que informan sobre los indicadores de la Agenda 2030](#países-que-informan-sobre-los-indicadores-de-la-agenda-2030)
+- [Acerca de este sitio web](#acerca-de-este-sitio-web)
+- [Uso de APIs](#uso-de-apis)
 - [¿Se puede copiar este sitio web?](#se-puede-copiar-este-sitio-web)
 - [¿Es accesible este sitio web?](#es-accesible-este-sitio-web)
+
 
 ## Introducción
 
@@ -46,9 +48,11 @@ La pestaña "Descripción del indicador" contiene la descripción y la justifica
 
 En "Fuentes de datos" se encuentran enlaces a la organización u organizaciones que proporcionaron los datos para el indicador y, cuando es posible, enlaces directos a las fuentes de datos específicas.
 
-## Acerca de este sitio web
 
-Eustat ha desarrollado esta plataforma de visualización de indicadores de desarrollo sostenible interactivo utilizando la [Plataforma Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para la difusión de indicadores de ODS.
+## Evaluación del progreso en los ODS
+
+La plataforma incorpora un informe de seguimiento que proporciona una descripción general del progreso en la consecución de los Objetivos de Desarrollo Sostenible (ODS) en la Comunidad Autónoma de Euskadi. 
+Para saber más sobre el procedimiento para evaluar el progreso, ver  [Metodología para la medición del progreso](https://eustat-des.github.io/site/metodologia/).
 
 ## ¿Cada cuánto tiempo se actualizan los datos?
 
@@ -58,33 +62,25 @@ Se agregan datos tan pronto como se hayan obtenido y verificado. Esto incluye da
 
 Este sitio está dirigido a administraciones para la toma de decisiones sobre políticas públicas, ciudadanos interesados en políticas públicas, y analistas de datos.
 
-## Uso de APIs
-
-Los datos y metadatos de la plataforma están disponibles en rutas predecibles y documentadas y, por lo tanto, se puede acceder a ellos mediante programación como se describe a continuación:
-
-datos: https://eustat-des.github.io/data/lenguaje]/data/codigodelindicador.json   (por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json)
-metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigodelindicador.json  (por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json)
-
 ## Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
 
-- Andalucía: [Indicadores de los objetivos de desarrollo sostenible de Andalucía](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sistema-de-indicadores-de-desarrollo- 
-  sostenible- de-andalucia-para-la-agenda-20), Instituto de Estadística y Cartografía de Andalucía <br>
-- Aragón: [Indicadores de los ODS de Aragón](https://www.aragon.es/-/instituto-aragones-de-estadistica-iaest) <br>
-- Asturias, Principado de: [Indicadores de los ODS de Asturias](https://www.asturias.es/webasturias/sobre_asturias/sostenibilidad/agenda-2030) <br>
-- Baleares, Islas: [Indicadores de los ODS de las Islas Baleares](http://www.caib.es/sites/estadistiques/ca/pagina-21596/) <br>
-- Canarias: [Indicadores de los ODS de Canarias](https://www.gobiernodecanarias.org/istac/) <br>
-- Cantabria: [Indicadores de los ODS de Cantabria](http://www.icane.es/web/icane/estadisticas/ods) <br>
-- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Mancha](https://www.castillalamancha.es/gobierno/haciendayadministracionespublicas/estructura/dgfondoseuropeos/actuaciones/objetivos-de-desarrollo-sostenible-ods) <br>
-- Castilla y León: [Indicadores de los ODS de Castilla y León](http://www.estadistica.jcyl.es/web/jcyl/Estadistica/es/Plantilla100/1284377204315/_/_/_) <br>
-- Cataluña: [Indicadores de los ODS de Cataluña](https://www.idescat.cat/tema/ODS) <br>
-- Comunidad Valenciana: [Indicadores de los ODS de la Comunidad Valenciana](http://www.ceice.gva.es/es/web/estadistica/objetivos-de-desarrollo-sostenible) <br>
-- Extremadura: [Indicadores de los ODS de Extremadura](https://www.juntaex.es/con02/observatorio-sostenibilidad-extremadura) <br>
-- Galicia: [Indicadores de los ODS de Galicia](https://www.ige.eu/web/objetivos_desarrollo_sostenible/index.jsp) <br>
-- La Rioja: [Indicadores de los ODS  de La Rioja](https://www.larioja.org/larioja-client/cm/estadistica-rioja) <br>
-- Madrid, Comunidad de: [Indicadores de los ODS de la Comunidad de Madrid](https://www.comunidad.madrid/servicios/estadistica/objetivos-desarrollo-sostenible) <br>
-- Murcia, Región de: [Indicadores de los ODS de Murcia](https://www.carm.es/web/pagina?IDCONTENIDO=6338&IDTIPO=160&RASTRO=c$m122,70) <br>
-- Navarra, Comunidad Foral de: [Indicadores de los ODS de Navarra](http://www.navarra.es/home_es/Temas/Estadistica/ODS.htm) <br>
+- Andalucía: [Indicadores de los objetivos de desarrollo sostenible de Andalucía](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm), Instituto de Estadística y Cartografía de Andalucía <br>
+- Aragón: [Indicadores de los ODS de Aragón](https://ods-aragon.github.io/) <br>
+- Asturias, Principado de: [Indicadores de los ODS de Asturias](https://sadeiasturias.github.io/indicadores-ods-asturias/) <br>
+- Baleares, Islas: [Indicadores de los ODS de las Islas Baleares](https://ibestat.es/edatos/apps/ods/) <br>
+- Canarias: [Indicadores de los ODS de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/) <br>
+- Cantabria: [Indicadores de los ODS de Cantabria](https://ods-cantabria.github.io/ods-cantabria/) <br>
+- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Mancha](https://estadistica.castillalamancha.es/agenda-2030) <br>
+- Castilla y León: [Indicadores de los ODS de Castilla y León]([http](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html) <br>
+- Cataluña: [Indicadores de los ODS de Cataluña](https://www.idescat.cat/dades/ods/nu/?lang=es) <br>
+- Comunidad Valenciana: [Indicadores de los ODS de la Comunidad Valenciana](https://pegv.gva.es/es/ods) <br>
+- Extremadura: [Indicadores de los ODS de Extremadura](https://www.juntaex.es/ieex/agenda-2030) <br>
+- Galicia: [Indicadores de los ODS de Galicia](https://www.ige.gal/Shiny/Agenda2030/) <br>
+- La Rioja: [Indicadores de los ODS  de La Rioja](https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja) <br>
+- Madrid, Comunidad de: [Indicadores de los ODS de la Comunidad de Madrid](https://www.madrid.org/iestadis/ODS/ODS_CM.htm) <br>
+- Murcia, Región de: [Indicadores de los ODS de Murcia](https://transparencia.carm.es/agenda-2030#gsc.tab=0) <br>
+- Navarra, Comunidad Foral de: [Indicadores de los ODS de Navarra](https://nastat.navarra.es/es/indicadores/indicadores-ods) <br>
 
 ## Países que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra algunas de las plataformas globales de presentación de informes existentes sobre los ODS. La lista no es exhaustiva:
@@ -142,6 +138,17 @@ La siguiente lista muestra algunas de las plataformas globales de presentación 
 - Tayikistán: [https://www.stat.tj/tj/targets](https://www.stat.tj/tj/targets) <br>
 - Turquía: [https://statswiki.unece.org/sdg.tuik.gov.tr/en/](https://statswiki.unece.org/sdg.tuik.gov.tr/en/) <br>
 - Ucrania: [http://www.sdg.ukrstat.gov.ua/](http://www.sdg.ukrstat.gov.ua/) <br>
+
+## Acerca de este sitio web
+
+Eustat ha desarrollado esta plataforma de visualización de indicadores de desarrollo sostenible interactivo utilizando la [Plataforma Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para la difusión de indicadores de ODS.
+
+## Uso de APIs
+
+Los datos y metadatos de la plataforma están disponibles en rutas predecibles y documentadas y, por lo tanto, se puede acceder a ellos mediante programación como se describe a continuación:
+
+datos: https://eustat-des.github.io/data/lenguaje]/data/codigodelindicador.json   (por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json)
+metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigodelindicador.json  (por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json)
 
 ## ¿Se puede copiar este sitio web?
 Sí. Consulte la [Guía de inicio rápido de Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para obtener instrucciones técnicas sobre la forma más rápida de tener una copia de la plataforma Open SDG en funcionamiento.
