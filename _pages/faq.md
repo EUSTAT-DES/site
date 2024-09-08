@@ -43,7 +43,7 @@ Los datos relevantes para cada indicador se presentan en un gráfico y una tabla
 Los botones verdes debajo del gráfico se pueden usar para descargar los datos en formato CSV o el gráfico como archivo PNG.
 
 
-##   Metadatos y fuentes de datos para el indicador disponibles en la C.A. de Euskadi e indicadores mundiales/europeos
+## Metadatos y fuentes de datos para el indicador disponibles en la C.A. de Euskadi e indicadores mundiales/europeos
 
 En la parte inferior de las páginas de los indicadores se encuentran las pestañas "Ficha metodológica", "Descripción del indicador" y "Fuentes de datos".
 
@@ -58,10 +58,10 @@ Eustat ha desarrollado esta plataforma de visualización de indicadores de desar
 Eustat continúa examinando fuentes de datos que pueden ser útiles para informar sobre los indicadores y durante los próximos meses seguirá agregando más desgloses de datos, estadísticas y visualización de datos para mejorar la comunicación con los usuarios de la plataforma
 
 
-## ¿Cada cuanto tiempo se actualizan los datos?
+## ¿Cada cuánto tiempo se actualizan los datos?
 Se agregan datos tan pronto como se hayan obtenido y verificado. Esto incluye datos nuevos y actualizaciones de los datos que ya están publicados. 
 
-## ¿A quien está dirigido este sitio web?
+## ¿A quién está dirigido este sitio web?
 
 Los usuarios a los que se dirige esta plataforma de visualización de datos son:
 
@@ -168,60 +168,59 @@ Planes y estrategias elaborados por la CCAA
 ## Países que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra algunas de las plataformas globales de presentación de informes existentes sobre los ODS. La lista no es exhaustiva:
 
-Albania: http://www.instat.gov.al/en/sdgs/
-Armenia: https://sdg.armstat.am/
-Australia: https://www.sdgdata.gov.au/
-Austria: https://www.statistik.at/services/tools/services/indikatorensysteme/sdgs
-Azerbaijan: http://sdg.azstat.org/
-Bielorrusia: http://sdgplatform.belstat.gov.by/en/sites/belstatfront/home.html
-Bálgica: http://www.indicators.be/en/t/SDG/
-Bosnia y Herzegovina: https://sdg.bhas.gov.ba/
-Brasil: https://odsbrasil.gov.br/
-Canadá: https://www144.statcan.gc.ca/sdg-odd/index-eng.htm
-Croacia: https://croatianbureauofstatistics.github.io/sdg-indicators/
-Chequia: https://www.sdg-data.cz/en
-República democrática del Congo: https://odd-dashboard.cd/en/
-Dinamarca: https://dst.dk/en/Statistik/Sdg
-Eslovaquia: https://agenda2030.statistics.sk/Agenda2030/en/home/
-Eslovenia: http://www.stat.si/Pages/en/goals
-España: http://ine.es/dynt3/ODS/en/index.htm
-Estados Unidos: https://sdg.data.gov/
-Estonia: https://www.stat.ee/en/find-statistics/statistics-theme/sustainable-development
-Francia: https://www.insee.fr/fr/statistiques/2654964
-Georgia: https://sdg.gov.ge/intro
-Ghana: https://sustainabledevelopment-ghana.github.io/
-Grecia: http://www.statistics.gr/en/sdgs
-Hungría: http://www.ksh.hu/sdg
-Islandia: https://visar.hagstofa.is/heimsmarkmidin/en/
-Islas Feroe: https://sdg.hagstova.fo/sdg-site/en/
-Irlands: https://irelandsdg.geohive.ie/
-Israel: https://www.cbs.gov.il/en/subjects/Pages/Sustainable-Development.aspx
-Italia: https://www.istat.it/en/well-being-and-sustainability/sustainable-development-goals
-Japon: https://www.mofa.go.jp/mofaj/gaiko/oda/sdgs/statistics/index.html
-Kazakhstan: https://kazstat.github.io/sdg-site-kazstat/en/
-Kyrgyzstan: https://sustainabledevelopment-kyrgyzstan.github.io/
-Laos: https://www.lsb.gov.la/sdg/en/
-Liechtenstein: https://www.statistikportal.li/de/uebersichten-indikatoren/indikatoren-nachhaltige-entwicklung
-Lituania: https://osp.stat.gov.lt/en/darnaus-vystymosi-rodikliai
-Luxemburgo: https://statistiques.public.lu/en/donnees/themes/odd.html
-México: http://www.agenda2030.mx/
-Mongolia: http://sdg.1212.mn/EN/Home/Information
-Montenegro: https://www.sdgmontenegro.me/
-Países Bajos: https://www.sdgnederland.nl/sdgs/
-Polonia: https://sdg.gov.pl/en/
-Portugal: https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_perfsdg&xlang=en
-Reino Unido: https://sustainabledevelopment-uk.github.io/
-República de Moldavia: https://statistica.gov.md/en/sustainable-development-goals-183.html
-Rumanía: http://www.insse.ro/cms/files/Web_IDD_BD_en/index.htm
-Rusia: https://eng.rosstat.gov.ru/sdg
-Ruanda: https://sustainabledevelopment-rwanda.github.io/
-Serbia: http://sdg.indikatori.rs/en-us/
-Sudáfrica: http://www.statssa.gov.za/MDG/SDG_Baseline_Report_2017.pdf
-Suiza: https://www.bfs.admin.ch/bfs/en/home/statistics/sustainable-development.html
-Tajikistan: https://www.stat.tj/tj/targets
-Turquía: https://statswiki.unece.org/sdg.tuik.gov.tr/en/
-Ucrania: http://www.sdg.ukrstat.gov.ua/
-
+- Albania: [http://www.instat.gov.al/en/sdgs/](http://www.instat.gov.al/en/sdgs/) <br>
+- Armenia: [https://sdg.armstat.am/](https://sdg.armstat.am/) <br>
+- Australia: [https://www.sdgdata.gov.au/](https://www.sdgdata.gov.au/) <br>
+- Austria: [https://www.statistik.at/services/tools/services/indikatorensysteme/sdgs](https://www.statistik.at/services/tools/services/indikatorensysteme/sdgs) <br>
+- Azerbaijan: [http://sdg.azstat.org/](http://sdg.azstat.org/) <br>
+- Bielorrusia: [http://sdgplatform.belstat.gov.by/en/sites/belstatfront/home.html](http://sdgplatform.belstat.gov.by/en/sites/belstatfront/home.html) <br>
+- Bélgica: [http://www.indicators.be/en/t/SDG/](http://www.indicators.be/en/t/SDG/) <br>
+- Bosnia y Herzegovina: [https://sdg.bhas.gov.ba/](https://sdg.bhas.gov.ba/) <br>
+- Brasil: [https://odsbrasil.gov.br/](https://odsbrasil.gov.br/) <br>
+- Canadá: [https://www144.statcan.gc.ca/sdg-odd/index-eng.htm](https://www144.statcan.gc.ca/sdg-odd/index-eng.htm) <br>
+- Croacia: [https://croatianbureauofstatistics.github.io/sdg-indicators/](https://croatianbureauofstatistics.github.io/sdg-indicators/) <br>
+- Chequia: [https://www.sdg-data.cz/en](https://www.sdg-data.cz/en) <br>
+- República Democrática del Congo: [https://odd-dashboard.cd/en/](https://odd-dashboard.cd/en/) <br>
+- Dinamarca: [https://dst.dk/en/Statistik/Sdg](https://dst.dk/en/Statistik/Sdg) <br>
+- Eslovaquia: [https://agenda2030.statistics.sk/Agenda2030/en/home/](https://agenda2030.statistics.sk/Agenda2030/en/home/) <br>
+- Eslovenia: [http://www.stat.si/Pages/en/goals](http://www.stat.si/Pages/en/goals) <br>
+- España: [http://ine.es/dynt3/ODS/en/index.htm](http://ine.es/dynt3/ODS/en/index.htm) <br>
+- Estados Unidos: [https://sdg.data.gov/](https://sdg.data.gov/) <br>
+- Estonia: [https://www.stat.ee/en/find-statistics/statistics-theme/sustainable-development](https://www.stat.ee/en/find-statistics/statistics-theme/sustainable-development) <br>
+- Francia: [https://www.insee.fr/fr/statistiques/2654964](https://www.insee.fr/fr/statistiques/2654964) <br>
+- Georgia: [https://sdg.gov.ge/intro](https://sdg.gov.ge/intro) <br>
+- Ghana: [https://sustainabledevelopment-ghana.github.io/](https://sustainabledevelopment-ghana.github.io/) <br>
+- Grecia: [http://www.statistics.gr/en/sdgs](http://www.statistics.gr/en/sdgs) <br>
+- Hungría: [http://www.ksh.hu/sdg](http://www.ksh.hu/sdg) <br>
+- Islandia: [https://visar.hagstofa.is/heimsmarkmidin/en/](https://visar.hagstofa.is/heimsmarkmidin/en/) <br>
+- Islas Feroe: [https://sdg.hagstova.fo/sdg-site/en/](https://sdg.hagstova.fo/sdg-site/en/) <br>
+- Irlanda: [https://irelandsdg.geohive.ie/](https://irelandsdg.geohive.ie/) <br>
+- Israel: [https://www.cbs.gov.il/en/subjects/Pages/Sustainable-Development.aspx](https://www.cbs.gov.il/en/subjects/Pages/Sustainable-Development.aspx) <br>
+- Italia: [https://www.istat.it/en/well-being-and-sustainability/sustainable-development-goals](https://www.istat.it/en/well-being-and-sustainability/sustainable-development-goals) <br>
+- Japón: [https://www.mofa.go.jp/mofaj/gaiko/oda/sdgs/statistics/index.html](https://www.mofa.go.jp/mofaj/gaiko/oda/sdgs/statistics/index.html) <br>
+- Kazajistán: [https://kazstat.github.io/sdg-site-kazstat/en/](https://kazstat.github.io/sdg-site-kazstat/en/) <br>
+- Kirguistán: [https://sustainabledevelopment-kyrgyzstan.github.io/](https://sustainabledevelopment-kyrgyzstan.github.io/) <br>
+- Laos: [https://www.lsb.gov.la/sdg/en/](https://www.lsb.gov.la/sdg/en/) <br>
+- Liechtenstein: [https://www.statistikportal.li/de/uebersichten-indikatoren/indikatoren-nachhaltige-entwicklung](https://www.statistikportal.li/de/uebersichten-indikatoren/indikatoren-nachhaltige-entwicklung) <br>
+- Lituania: [https://osp.stat.gov.lt/en/darnaus-vystymosi-rodikliai](https://osp.stat.gov.lt/en/darnaus-vystymosi-rodikliai) <br>
+- Luxemburgo: [https://statistiques.public.lu/en/donnees/themes/odd.html](https://statistiques.public.lu/en/donnees/themes/odd.html) <br>
+- México: [http://www.agenda2030.mx/](http://www.agenda2030.mx/) <br>
+- Mongolia: [http://sdg.1212.mn/EN/Home/Information](http://sdg.1212.mn/EN/Home/Information) <br>
+- Montenegro: [https://www.sdgmontenegro.me/](https://www.sdgmontenegro.me/) <br>
+- Países Bajos: [https://www.sdgnederland.nl/sdgs/](https://www.sdgnederland.nl/sdgs/) <br>
+- Polonia: [https://sdg.gov.pl/en/](https://sdg.gov.pl/en/) <br>
+- Portugal: [https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_perfsdg&xlang=en](https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_perfsdg&xlang=en) <br>
+- Reino Unido: [https://sustainabledevelopment-uk.github.io/](https://sustainabledevelopment-uk.github.io/) <br>
+- República de Moldavia: [https://statistica.gov.md/en/sustainable-development-goals-183.html](https://statistica.gov.md/en/sustainable-development-goals-183.html) <br>
+- Rumanía: [http://www.insse.ro/cms/files/Web_IDD_BD_en/index.htm](http://www.insse.ro/cms/files/Web_IDD_BD_en/index.htm) <br>
+- Rusia: [https://eng.rosstat.gov.ru/sdg](https://eng.rosstat.gov.ru/sdg) <br>
+- Ruanda: [https://sustainabledevelopment-rwanda.github.io/](https://sustainabledevelopment-rwanda.github.io/) <br>
+- Serbia: [http://sdg.indikatori.rs/en-us/](http://sdg.indikatori.rs/en-us/) <br>
+- Sudáfrica: [http://www.statssa.gov.za/MDG/SDG_Baseline_Report_2017.pdf](http://www.statssa.gov.za/MDG/SDG_Baseline_Report_2017.pdf) <br>
+- Suiza: [https://www.bfs.admin.ch/bfs/en/home/statistics/sustainable-development.html](https://www.bfs.admin.ch/bfs/en/home/statistics/sustainable-development.html) <br>
+- Tayikistán: [https://www.stat.tj/tj/targets](https://www.stat.tj/tj/targets) <br>
+- Turquía: [https://statswiki.unece.org/sdg.tuik.gov.tr/en/](https://statswiki.unece.org/sdg.tuik.gov.tr/en/) <br>
+- Ucrania: [http://www.sdg.ukrstat.gov.ua/](http://www.sdg.ukrstat.gov.ua/) <br>
 
 ## ¿Se puede copiar este sitio web?
 Sí. Consulte la [Guía de inicio rápido de Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para obtener instrucciones técnicas sobre la forma más rápida de tener una copia de la plataforma Open SDG en funcionamiento.
