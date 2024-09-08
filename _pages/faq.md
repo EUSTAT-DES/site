@@ -38,6 +38,12 @@ Los datos relevantes para cada indicador se presentan en un gráfico y una tabla
 
 En la parte inferior de las páginas de los indicadores se encuentran las pestañas "Ficha metodológica", "Descripción del indicador" y "Fuentes de datos".
 
+La pestaña "Ficha metodológica" aporta información sobre el indicador disponible en la C.A. de Euskadi y su forma de cálculo.
+
+La pestaña "Descripción del indicador" contiene la descripción y la justificación del indicador mundial o europeo, una evaluación de si el indicador disponible en la C.A. de Euskadi cumple o no los requisitos del indicador de Naciones Unidas (o Unión Europea en su caso), y los resultados a nivel internacional. En "Descripción del indicador" también se encuentra un documento PDF para cada indicador que contiene información sobre el cálculo del indicador mundial.
+
+En "Fuentes de datos" se encuentran enlaces a la organización u organizaciones que proporcionaron los datos para el indicador y, cuando es posible, enlaces directos a las fuentes de datos específicas.
+
 ## Acerca de este sitio web
 
 Eustat ha desarrollado esta plataforma de visualización de indicadores de desarrollo sostenible interactivo utilizando la [Plataforma Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para la difusión de indicadores de ODS.
@@ -60,26 +66,23 @@ metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigodelindicador.js
 ## Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
 
-- Andalucía: [Indicadores de los objetivos de desarrollo sostenible en la CC.AA para la Agenda 2030](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sistema-de-indicadores-de-desarrollo- 
+- Andalucía: [Indicadores de los objetivos de desarrollo sostenible de Andalucía](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sistema-de-indicadores-de-desarrollo- 
   sostenible- de-andalucia-para-la-agenda-20), Instituto de Estadística y Cartografía de Andalucía <br>
-- Aragón: [Indicadores de los ODS](https://www.aragon.es/-/instituto-aragones-de-estadistica-iaest) <br>
-- Asturias, Principado de: [Indicadores de los ODS](https://www.asturias.es/webasturias/sobre_asturias/sostenibilidad/agenda-2030) <br>
-- Baleares, Islas: [Indicadores de los ODS](http://www.caib.es/sites/estadistiques/ca/pagina-21596/) <br>
-- Canarias: [Indicadores de los ODS](https://www.gobiernodecanarias.org/istac/) <br>
-- Cantabria: [Indicadores de los ODS](http://www.icane.es/web/icane/estadisticas/ods) <br>
-- Castilla-La Mancha: [Indicadores de los ODS](https://www.castillalamancha.es/gobierno/haciendayadministracionespublicas/estructura/dgfondoseuropeos/actuaciones/objetivos-de-desarrollo-sostenible-ods) <br>
-- Castilla y León: [Indicadores de los ODS](http://www.estadistica.jcyl.es/web/jcyl/Estadistica/es/Plantilla100/1284377204315/_/_/_) <br>
-- Cataluña: [Indicadores de los ODS](https://www.idescat.cat/tema/ODS) <br>
-- Comunidad Valenciana: [Indicadores de los ODS](http://www.ceice.gva.es/es/web/estadistica/objetivos-de-desarrollo-sostenible) <br>
-- Extremadura: [Indicadores de los ODS](https://www.juntaex.es/con02/observatorio-sostenibilidad-extremadura) <br>
-- Galicia: [Indicadores de los ODS](https://www.ige.eu/web/objetivos_desarrollo_sostenible/index.jsp) <br>
-- La Rioja: [Indicadores de los ODS](https://www.larioja.org/larioja-client/cm/estadistica-rioja) <br>
-- Madrid, Comunidad de: [Indicadores de los ODS](https://www.comunidad.madrid/servicios/estadistica/objetivos-desarrollo-sostenible) <br>
-- Murcia, Región de: [Indicadores de los ODS](https://www.carm.es/web/pagina?IDCONTENIDO=6338&IDTIPO=160&RASTRO=c$m122,70) <br>
-- Navarra, Comunidad Foral de: [Indicadores de los ODS](http://www.navarra.es/home_es/Temas/Estadistica/ODS.htm) <br>
-- País Vasco: [Indicadores de los ODS](https://www.eustat.eus/ods/) <br>
-- Ceuta, Ciudad Autónoma de: [Indicadores de los ODS](https://www.ceuta.es/ceuta/indicadores-de-los-objetivos-de-desarrollo-sostenible) <br>
-- Melilla, Ciudad Autónoma de: [Indicadores de los ODS](https://www.melilla.es/melillaportal/contenedor.jsp?seccion=ficha_contenedor.jsp&codbusqueda=420&language=es&codResi=1&codMenuPN=1&codMenuSN=24&codMenu=48) <br>
+- Aragón: [Indicadores de los ODS de Aragón](https://www.aragon.es/-/instituto-aragones-de-estadistica-iaest) <br>
+- Asturias, Principado de: [Indicadores de los ODS de Asturias](https://www.asturias.es/webasturias/sobre_asturias/sostenibilidad/agenda-2030) <br>
+- Baleares, Islas: [Indicadores de los ODS de las Islas Baleares](http://www.caib.es/sites/estadistiques/ca/pagina-21596/) <br>
+- Canarias: [Indicadores de los ODS de Canarias](https://www.gobiernodecanarias.org/istac/) <br>
+- Cantabria: [Indicadores de los ODS de Cantabria](http://www.icane.es/web/icane/estadisticas/ods) <br>
+- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Mancha](https://www.castillalamancha.es/gobierno/haciendayadministracionespublicas/estructura/dgfondoseuropeos/actuaciones/objetivos-de-desarrollo-sostenible-ods) <br>
+- Castilla y León: [Indicadores de los ODS de Castilla y León](http://www.estadistica.jcyl.es/web/jcyl/Estadistica/es/Plantilla100/1284377204315/_/_/_) <br>
+- Cataluña: [Indicadores de los ODS de Cataluña](https://www.idescat.cat/tema/ODS) <br>
+- Comunidad Valenciana: [Indicadores de los ODS de la Comunidad Valenciana](http://www.ceice.gva.es/es/web/estadistica/objetivos-de-desarrollo-sostenible) <br>
+- Extremadura: [Indicadores de los ODS de Extremadura](https://www.juntaex.es/con02/observatorio-sostenibilidad-extremadura) <br>
+- Galicia: [Indicadores de los ODS de Galicia](https://www.ige.eu/web/objetivos_desarrollo_sostenible/index.jsp) <br>
+- La Rioja: [Indicadores de los ODS  de La Rioja](https://www.larioja.org/larioja-client/cm/estadistica-rioja) <br>
+- Madrid, Comunidad de: [Indicadores de los ODS de la Comunidad de Madrid](https://www.comunidad.madrid/servicios/estadistica/objetivos-desarrollo-sostenible) <br>
+- Murcia, Región de: [Indicadores de los ODS de Murcia](https://www.carm.es/web/pagina?IDCONTENIDO=6338&IDTIPO=160&RASTRO=c$m122,70) <br>
+- Navarra, Comunidad Foral de: [Indicadores de los ODS de Navarra](http://www.navarra.es/home_es/Temas/Estadistica/ODS.htm) <br>
 
 ## Países que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra algunas de las plataformas globales de presentación de informes existentes sobre los ODS. La lista no es exhaustiva:
