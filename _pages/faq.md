@@ -60,12 +60,12 @@ Se agregan datos tan pronto como se hayan obtenido y verificado. Esto incluye da
 
 ## ¿A quién está dirigido este sitio web?
 
-Este sitio está dirigido a administraciones para la toma de decisiones sobre políticas públicas, ciudadanos interesados en políticas públicas, y analistas de datos.
+Este sitio está dirigido a las distintas administraciones para la toma de decisiones sobre políticas públicas, a los ciudadanos interesados, y analistas de datos.
 
 ## Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
 
-- Andalucía: [Indicadores de los objetivos de desarrollo sostenible de Andalucía](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm), Instituto de Estadística y Cartografía de Andalucía <br>
+- Andalucía: [Indicadores de los objetivos de desarrollo sostenible de Andalucía](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm) <br>
 - Aragón: [Indicadores de los ODS de Aragón](https://ods-aragon.github.io/) <br>
 - Asturias, Principado de: [Indicadores de los ODS de Asturias](https://sadeiasturias.github.io/indicadores-ods-asturias/) <br>
 - Baleares, Islas: [Indicadores de los ODS de las Islas Baleares](https://ibestat.es/edatos/apps/ods/) <br>
@@ -83,7 +83,7 @@ La siguiente lista muestra las Comunidades Autónomas que informan sobre los ind
 - Navarra, Comunidad Foral de: [Indicadores de los ODS de Navarra](https://nastat.navarra.es/es/indicadores/indicadores-ods) <br>
 
 ## Países que informan sobre los indicadores de la Agenda 2030
-La siguiente lista muestra algunas de las plataformas globales de presentación de informes existentes sobre los ODS. La lista no es exhaustiva:
+La siguiente lista muestra algunas de las plataformas sobre los ODS de los distintos países. La lista no es exhaustiva:
 
 - Albania: [http://www.instat.gov.al/en/sdgs/](http://www.instat.gov.al/en/sdgs/) <br>
 - Armenia: [https://sdg.armstat.am/](https://sdg.armstat.am/) <br>
@@ -147,8 +147,8 @@ Eustat ha desarrollado esta plataforma de visualización de indicadores de desar
 
 Los datos y metadatos de la plataforma están disponibles en rutas predecibles y documentadas y, por lo tanto, se puede acceder a ellos mediante programación como se describe a continuación:
 
-datos: https://eustat-des.github.io/data/lenguaje]/data/codigodelindicador.json   (por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json)
-metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigodelindicador.json  (por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json)
+datos: https://eustat-des.github.io/data/lenguaje/data/codigoindicador.json   (por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json)<br>
+metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigoindicador.json  (por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json)<br>
 
 ## ¿Se puede copiar este sitio web?
 Sí. Consulte la [Guía de inicio rápido de Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para obtener instrucciones técnicas sobre la forma más rápida de tener una copia de la plataforma Open SDG en funcionamiento.
