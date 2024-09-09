@@ -5,6 +5,7 @@ permalink: /faq/
 layout: page
 ---
 
+
 ## Contenido
 
 - [Introducción](#introducción)
