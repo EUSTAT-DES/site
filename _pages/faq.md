@@ -71,7 +71,7 @@ La siguiente lista muestra las Comunidades Autónomas que informan sobre los ind
 - Baleares, Islas: [Indicadores de los ODS de las Islas Baleares](https://ibestat.es/edatos/apps/ods/) <br>
 - Canarias: [Indicadores de los ODS de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/) <br>
 - Cantabria: [Indicadores de los ODS de Cantabria](https://ods-cantabria.github.io/ods-cantabria/) <br>
-- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Manchhttps://estadistica.castillalamancha.es/agenda-2030) <br>
+- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Mancha](https://estadistica.castillalamancha.es/agenda-2030) <br>
 - Castilla y León: [Indicadores de los ODS de Castilla y León](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html) <br>
 - Cataluña: [Indicadores de los ODS de Cataluña](https://www.idescat.cat/dades/ods/nu/?lang=es) <br>
 - Comunidad Valenciana: [Indicadores de los ODS de la Comunidad Valenciana](https://pegv.gva.es/es/ods) <br>
