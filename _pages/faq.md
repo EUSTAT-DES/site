@@ -30,9 +30,9 @@ Los objetivos se sustentan en un marco de indicadores mundiales que permiten hac
 
 ## Indicadores disponibles en la C.A. de Euskadi
 
-Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores específico que incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos por el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
+Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos por el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
 
-Se intenta que los indicadores disponibles en la C.A. de Euskadi sean comparables con los indicadores definidos en el [marco de indicadores mundiales de Naciones Unidas](https://unstats.un.org/sdgs/metadata) o con los [indicadores de Desarrollo Sostenible de la Unión Europea](https://ec.europa.eu/eurostat/web/sdi). En el caso de que el indicador disponible en la C.A. de Euskadi no sea comparable con el indicador mundial o europeo, así se indica en los metadatos del indicador.
+Se intenta que los indicadores disponibles en la C.A. de Euskadi sean comparables con los indicadores del [marco de indicadores mundiales de Naciones Unidas](https://unstats.un.org/sdgs/metadata) o con los [indicadores de Desarrollo Sostenible de la Unión Europea](https://ec.europa.eu/eurostat/web/sdi). En el caso de que el indicador disponible en la C.A. de Euskadi no sea comparable con el indicador mundial o europeo, así se indica en sus metadatos.
 
 ## Presentación de los indicadores
 
@@ -71,8 +71,8 @@ La siguiente lista muestra las Comunidades Autónomas que informan sobre los ind
 - Baleares, Islas: [Indicadores de los ODS de las Islas Baleares](https://ibestat.es/edatos/apps/ods/) <br>
 - Canarias: [Indicadores de los ODS de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/) <br>
 - Cantabria: [Indicadores de los ODS de Cantabria](https://ods-cantabria.github.io/ods-cantabria/) <br>
-- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Mancha](https://estadistica.castillalamancha.es/agenda-2030) <br>
-- Castilla y León: [Indicadores de los ODS de Castilla y León]([http](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html) <br>
+- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Manchhttps://estadistica.castillalamancha.es/agenda-2030) <br>
+- Castilla y León: [Indicadores de los ODS de Castilla y León](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html) <br>
 - Cataluña: [Indicadores de los ODS de Cataluña](https://www.idescat.cat/dades/ods/nu/?lang=es) <br>
 - Comunidad Valenciana: [Indicadores de los ODS de la Comunidad Valenciana](https://pegv.gva.es/es/ods) <br>
 - Extremadura: [Indicadores de los ODS de Extremadura](https://www.juntaex.es/ieex/agenda-2030) <br>
