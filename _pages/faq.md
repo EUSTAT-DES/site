@@ -156,4 +156,4 @@ Sí. Consulte la [Guía de inicio rápido de Open SDG](https://open-sdg.readthed
 ## ¿Es accesible este sitio web?
 Open SDG pretende ser lo más accesible y utilizable posible para todos los usuarios y trabaja para alcanzar el nivel AA de Pautas de accesibilidad al contenido web (WCAG 2.0).
 
-[Back to top](#top)
+[Volver arriba](#top)
