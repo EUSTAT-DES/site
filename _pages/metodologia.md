@@ -198,8 +198,25 @@ Debido a la naturaleza de los datos, se han definido una serie de consideracione
 10. Excepciones específicas:
 
 
-| nº indicador | Título del indicador                                                                                                                                                      | Excepción |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| 1.a.2        | Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)                                                           | Se ha considerado como meta la media de de la OCDE para el indicador |
-| 5.4.1        | Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación                                                    | Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1 |
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">nº indicador</th>
+    <th class="tg-fymr">Título del indicador</th>
+    <th class="tg-fymr">Meta</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">1.a.2</td>
+    <td class="tg-0pky">Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)   </td>
+    <td class="tg-0pky">Se ha considerado como meta la media de de la UE para el indicador </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">5.4.1 </td>
+    <td class="tg-0pky">Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación </td>
+    <td class="tg-0pky">Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1</td>
+  </tr>
+</tbody>
+</table>
 
