@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240911070907">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240911132020">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -394,10 +394,14 @@ data-event-label="high"
 
 
 
-  <div class="container g-0 ">
+  <div class="container g-0 goal-showing-progress">
     <div class="row align-items-end">
       <div class="col">
         <h2 class="goal-page-heading">Helmugak eta adierazleak</h2>
+      </div>
+      
+      <div class="col-lg-2 d-none d-lg-block progress-column-header">
+        <span aria-hidden="true">Aurrerapena</span>
       </div>
       
     </div>
@@ -413,6 +417,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">2030. urterako, ur edangarria lortzeko aukera unibertsala eta bidezkoa izan dadila lortzea, denontzako prezio egokian</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -437,18 +443,23 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
-        
 
-
-
-<span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
-</span>
-
-
-        </li></ul>
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="Helburua lortuta edo lortzeko bidean" />
+                </div>
+            
+        </div>
+    
 
 
             </div>
@@ -468,6 +479,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">2030. urterako, saneamendu‐ eta higiene‐zerbitzu egoki eta bidezkoetarako sarbidea lortzea denontzat, eta amaiera ematea aire zabalean sabelusteari. Arreta berezia eskainiko zaie emakumeen eta neskatoen beharrei, eta ahultasun‐egoeran dauden pertsonenei</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -508,6 +521,12 @@ data-event-label="high"
 
             </div>
             
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+
+            </div>
+            
             
           </div>
         
@@ -523,6 +542,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">2030. urterako, uraren kalitatea hobetzea, alegia: kutsadura murriztea; hondakin, produktu kimiko eta material arriskutsurik ez isurtzea; tratatu gabeko hondakin‐uren ehunekoa erdira murriztea; eta arriskurik gabeko birziklatzea eta berrerabilera nabarmen areagotzea mundu osoan</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -563,6 +584,12 @@ data-event-label="high"
 
             </div>
             
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+
+            </div>
+            
             
           </div>
         
@@ -587,18 +614,23 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
-        
 
-
-
-<span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
-</span>
-
-
-        </li></ul>
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/retroceso.png" alt="Geldialdia edo atzerakada" />
+                </div>
+            
+        </div>
+    
 
 
             </div>
@@ -618,6 +650,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">2030. urterako, nabarmen areagotzea baliabide hidrikoen erabilera eraginkorra sektore guztietan, eta bermatzea ur gezaren erauzketaren eta horniduraren jasangarritasuna, ur‐gabeziari aurre egiteko eta urik ez duten pertsonen kopurua nabarmen murrizteko</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -655,6 +689,12 @@ data-event-label="high"
 
         </li></ul>
 
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
 
             </div>
             
@@ -698,6 +738,12 @@ data-event-label="high"
 
             </div>
             
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+
+            </div>
+            
             
           </div>
         
@@ -713,6 +759,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">2030. urterako, baliabide hidrikoen kudeaketa integratua ezartzea maila guztietan, baita mugaz gaindiko lankidetzaren bidez ere, hala badagokio</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -750,6 +798,12 @@ data-event-label="high"
 
         </li></ul>
 
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
 
             </div>
             
@@ -793,6 +847,12 @@ data-event-label="high"
 
             </div>
             
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+
+            </div>
+            
             
           </div>
         
@@ -808,6 +868,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">2020. urterako, babestea eta berrezartzea urarekin lotura duten ekosistemak, basoak, mendiak, hezeguneak, ibaiak, akuiferoak eta lakuak</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -848,6 +910,12 @@ data-event-label="high"
 
             </div>
             
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+
+            </div>
+            
             
           </div>
         
@@ -863,6 +931,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">2030. urterako, nazioarteko lankidetza eta garapen‐bidean dauden herrialdeei emandako laguntza areagotzea, uraren eta saneamenduaren arloko jarduera eta programetan ahalmena sortzeko; esaterako, honako hauetan: ura jasotzea, gatzgabetzea, baliabide hidrikoak modu eraginkorrean erabiltzea, hondakin‐urak tratatzea, birziklatzea eta berrerabiltzeko teknologiak erabiltzea</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -903,6 +973,12 @@ data-event-label="high"
 
             </div>
             
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+
+            </div>
+            
             
           </div>
         
@@ -918,6 +994,8 @@ data-event-label="high"
           <div class="col goal-page-target-name">
             <span class="target-name">Tokiko komunitateek ur‐ eta saneamendu‐kudeaketaren hobekuntzan duten parte‐hartzea babestea eta sendotzea</span>
           </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
       </div>
         
@@ -942,18 +1020,23 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" aria-label="Etiketak"><li class="list-inline-item">
-        <span class="visually-hidden">adierazlearen egoera</span>
-        
 
-
-
-<span class="status notstarted">
-    <span class="status-inner">Eskuragarri ez dauden datuak</span>
-</span>
-
-
-        </li></ul>
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="Helburua lortuta edo lortzeko bidean" />
+                </div>
+            
+        </div>
+    
 
 
             </div>
@@ -1015,7 +1098,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240911070907'></script>
+<script src='/site/assets/js/sdg.js?v=20240911132020'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1037,7 +1120,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240911070907"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240911132020"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

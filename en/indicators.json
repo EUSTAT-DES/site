@@ -603,7 +603,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-1-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "5-2-1",
@@ -611,7 +611,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-2-1/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "5-2-2",
@@ -619,7 +619,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-2-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "5-3-1",
@@ -627,7 +627,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-3-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "5-3-2",
@@ -643,7 +643,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-4-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "5-5-1",
@@ -651,7 +651,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-5-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "5-5-2",
@@ -659,7 +659,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-5-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "5-6-1",
@@ -683,7 +683,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-a-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "5-a-2",
@@ -691,7 +691,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-a-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "5-b-1",
@@ -699,7 +699,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/5-b-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "5-c-1",
@@ -723,7 +723,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/6-1-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "6-2-1",
@@ -747,7 +747,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/6-3-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "6-4-1",
@@ -803,7 +803,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/6-b-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         }]
     }
   },
@@ -819,7 +819,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/7-1-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "7-1-2",
@@ -835,7 +835,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/7-2-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "7-3-1",
@@ -843,7 +843,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/7-3-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "7-a-1",
@@ -859,7 +859,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/7-b-1/",
-          "status": "notstarted"
+          "status": "progreso"
         }]
     }
   },
@@ -875,7 +875,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/8-1-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "8-2-1",
@@ -883,7 +883,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/8-2-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "8-3-1",
@@ -907,7 +907,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/8-4-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "8-5-1",
@@ -915,7 +915,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/8-5-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "8-5-2",
@@ -926,12 +926,28 @@
           "status": "notstarted"
         },
         {
+          "id": "8-5-E1",
+          "title": "national_indicators.8-5-E1-titulo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/8-5-E1/",
+          "status": "progreso"
+        },
+        {
+          "id": "8-5-E2",
+          "title": "national_indicators.8-5-E2-titulo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/8-5-E2/",
+          "status": "progreso"
+        },
+        {
           "id": "8-6-1",
           "title": "Proportion of youth (aged 15–24 years) not in education, employment or training",
           "description": "",
           "keywords": "",
           "href": "/site/en/8-6-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "8-7-1",
@@ -963,7 +979,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/8-9-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "8-10-1",
@@ -971,7 +987,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/8-10-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "8-10-2",
@@ -979,7 +995,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/8-10-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "8-a-1",
@@ -996,6 +1012,14 @@
           "keywords": "",
           "href": "/site/en/8-b-1/",
           "status": "notstarted"
+        },
+        {
+          "id": "8-b-E1",
+          "title": "national_indicators.8-b-E1-titulo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/8-b-E1/",
+          "status": "noevaluado"
         }]
     }
   },
@@ -1027,7 +1051,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-2-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "9-2-2",
@@ -1043,7 +1067,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-3-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "9-3-2",
@@ -1059,7 +1083,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-4-1/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "9-5-1",
@@ -1067,7 +1091,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-5-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "9-5-2",
@@ -1075,7 +1099,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-5-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "9-a-1",
@@ -1091,7 +1115,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-b-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "9-c-1",
@@ -1099,7 +1123,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-c-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         }]
     }
   },
@@ -1115,7 +1139,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/10-1-1/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "10-2-1",
@@ -1123,7 +1147,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/10-2-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "10-3-1",
@@ -1139,7 +1163,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/10-4-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "10-4-2",
@@ -1147,7 +1171,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/10-4-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "10-5-1",
@@ -1235,7 +1259,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/11-1-1/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "11-2-1",
@@ -1259,7 +1283,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/11-3-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "11-4-1",
@@ -1267,7 +1291,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/11-4-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "11-5-1",
@@ -1299,7 +1323,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/11-6-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "11-6-2",
@@ -1307,7 +1331,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/11-6-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "11-7-1",
@@ -1331,7 +1355,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/11-a-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "11-b-1",
@@ -1363,7 +1387,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/12-1-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "12-2-1",
@@ -1379,7 +1403,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/12-2-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "12-3-1",
@@ -1403,7 +1427,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/12-4-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "12-5-1",
@@ -1411,7 +1435,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/12-5-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "12-6-1",
@@ -1419,7 +1443,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/12-6-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "12-7-1",
@@ -1507,7 +1531,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/13-2-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "13-3-1",
@@ -1635,7 +1659,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/15-1-1/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "15-1-2",
@@ -1651,7 +1675,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/15-2-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "15-3-1",
@@ -1659,7 +1683,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/15-3-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "15-4-1",
@@ -1707,7 +1731,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/15-8-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "15-9-1",
@@ -1779,7 +1803,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/16-1-4/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "16-2-1",
@@ -1795,7 +1819,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/16-2-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "16-2-3",
@@ -1819,7 +1843,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/16-3-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "16-3-3",
@@ -1875,7 +1899,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/16-6-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "16-7-1",
@@ -1883,7 +1907,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/16-7-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "16-7-2",
@@ -1955,7 +1979,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-1-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "17-1-2",
@@ -1963,7 +1987,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-1-2/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "17-2-1",
@@ -2067,7 +2091,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-13-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "17-14-1",
@@ -2115,7 +2139,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-18-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "17-18-3",
@@ -2123,7 +2147,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-18-3/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "17-19-1",
@@ -2139,7 +2163,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-19-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         }]
     }
   },

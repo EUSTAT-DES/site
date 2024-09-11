@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240911070907">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240911132020">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -512,6 +512,34 @@ data-event-label="high"
   
 
   
+<div class="row indicator-progress">
+    <div class="col-sm-2 progress-status-heading">
+        Progress
+    </div>
+    <div class="col-sm-10">
+        
+    
+    
+        <div class="progress-status">
+            
+                
+                    <div class="progress-status-label">
+                        Stagnation or regression
+                    </div>
+                
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/retroceso.png" alt="Stagnation or regression" />
+                </div>
+            
+        </div>
+    
+
+
+    </div>
+</div>
+
 
   
 
@@ -529,7 +557,7 @@ data-event-label="high"
   data-charttitles="[]"
   data-measurementunit=""
   data-xaxislabel=""
-  data-showdata="false"
+  data-showdata="true"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -541,14 +569,700 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Consumo de agua&quot;,&quot;Consumo de agua por habitante y día&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Comarca&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Añana (comarca)&quot;,&quot;Arabako Errioxa / Rioja Alavesa&quot;,&quot;Arabako Kantaurialdea / Cantábrica Alavesa&quot;,&quot;Arabako Lautada / Llanada Alavesa&quot;,&quot;Arabako Mendialdea / Montaña Alavesa&quot;,&quot;Arratia Nerbioi / Arratia-Nervión&quot;,&quot;Bidasoa Beherea / Bajo Bidasoa&quot;,&quot;Bilbo Handia / Gran Bilbao&quot;,&quot;Debabarrena / Bajo Deba&quot;,&quot;Debagoiena / Alto Deba&quot;,&quot;Donostialdea&quot;,&quot;Durangaldea / Duranguesado&quot;,&quot;Enkartazioak / Encartaciones&quot;,&quot;Gernika-Bermeo&quot;,&quot;Goierri&quot;,&quot;Gorbeialdea / Estribaciones del Gorbea&quot;,&quot;Markina-Ondarroa&quot;,&quot;Plentzia-Mungia&quot;,&quot;Tolosaldea&quot;,&quot;Urola Kosta&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Comarca&quot;},{&quot;name&quot;:&quot;Municipio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Abadiño&quot;,&quot;Abaltzisketa&quot;,&quot;Abanto y Ciérvana-Abanto Zierbena&quot;,&quot;Aduna&quot;,&quot;Agurain/Salvatierra&quot;,&quot;Aia&quot;,&quot;Aizarnazabal&quot;,&quot;Ajangiz&quot;,&quot;Albiztur&quot;,&quot;Alegia&quot;,&quot;Alegría-Dulantzi&quot;,&quot;Alkiza&quot;,&quot;Alonsotegi&quot;,&quot;Altzaga&quot;,&quot;Altzo&quot;,&quot;Amezketa&quot;,&quot;Amorebieta-Etxano&quot;,&quot;Amoroto&quot;,&quot;Amurrio&quot;,&quot;Andoain&quot;,&quot;Anoeta&quot;,&quot;Antzuola&quot;,&quot;Añana&quot;,&quot;Arakaldo&quot;,&quot;Arama&quot;,&quot;Aramaio&quot;,&quot;Arantzazu&quot;,&quot;Areatza&quot;,&quot;Aretxabaleta&quot;,&quot;Armiñón&quot;,&quot;Arraia-Maeztu&quot;,&quot;Arrankudiaga-Zollo&quot;,&quot;Arrasate/Mondragón&quot;,&quot;Arratzu&quot;,&quot;Arratzua-Ubarrundia&quot;,&quot;Arrieta&quot;,&quot;Arrigorriaga&quot;,&quot;Artea&quot;,&quot;Artzentales&quot;,&quot;Artziniega&quot;,&quot;Asparrena&quot;,&quot;Asteasu&quot;,&quot;Astigarraga&quot;,&quot;Ataun&quot;,&quot;Atxondo&quot;,&quot;Aulesti&quot;,&quot;Ayala/Aiara&quot;,&quot;Azkoitia&quot;,&quot;Azpeitia&quot;,&quot;Bakio&quot;,&quot;Baliarrain&quot;,&quot;Balmaseda&quot;,&quot;Baños de Ebro/Mañueta&quot;,&quot;Barakaldo&quot;,&quot;Barrika&quot;,&quot;Barrundia&quot;,&quot;Basauri&quot;,&quot;Beasain&quot;,&quot;Bedia&quot;,&quot;Beizama&quot;,&quot;Belauntza&quot;,&quot;Berango&quot;,&quot;Berantevilla&quot;,&quot;Berastegi&quot;,&quot;Bergara&quot;,&quot;Bermeo&quot;,&quot;Bernedo&quot;,&quot;Berriatua&quot;,&quot;Berriz&quot;,&quot;Berrobi&quot;,&quot;Bidania-Goiatz&quot;,&quot;Bilbao&quot;,&quot;Busturia&quot;,&quot;Campezo/Kanpezu&quot;,&quot;Deba&quot;,&quot;Derio&quot;,&quot;Dima&quot;,&quot;Donostia / San Sebastián&quot;,&quot;Durango&quot;,&quot;Ea&quot;,&quot;Eibar&quot;,&quot;Elantxobe&quot;,&quot;Elburgo/Burgelu&quot;,&quot;Elciego&quot;,&quot;Elduain&quot;,&quot;Elgeta&quot;,&quot;Elgoibar&quot;,&quot;Elorrio&quot;,&quot;Elvillar/Bilar&quot;,&quot;Erandio&quot;,&quot;Ereño&quot;,&quot;Ermua&quot;,&quot;Errenteria&quot;,&quot;Errezil&quot;,&quot;Erriberagoitia/Ribera Alta&quot;,&quot;Errigoiti&quot;,&quot;Eskoriatza&quot;,&quot;Etxebarri&quot;,&quot;Etxebarria&quot;,&quot;Ezkio-Itsaso&quot;,&quot;Forua&quot;,&quot;Fruiz&quot;,&quot;Gabiria&quot;,&quot;Gaintza&quot;,&quot;Galdakao&quot;,&quot;Galdames&quot;,&quot;Gamiz-Fika&quot;,&quot;Garai&quot;,&quot;Gatika&quot;,&quot;Gautegiz Arteaga&quot;,&quot;Gaztelu&quot;,&quot;Gernika-Lumo&quot;,&quot;Getaria&quot;,&quot;Getxo&quot;,&quot;Gizaburuaga&quot;,&quot;Gordexola&quot;,&quot;Gorliz&quot;,&quot;Güeñes&quot;,&quot;Harana/Valle de Arana&quot;,&quot;Hernani&quot;,&quot;Hernialde&quot;,&quot;Hondarribia&quot;,&quot;Ibarra&quot;,&quot;Ibarrangelu&quot;,&quot;Idiazabal&quot;,&quot;Igorre&quot;,&quot;Ikaztegieta&quot;,&quot;Irun&quot;,&quot;Iruña Oka/Iruña de Oca&quot;,&quot;Irura&quot;,&quot;Iruraiz-Gauna&quot;,&quot;Ispaster&quot;,&quot;Itsasondo&quot;,&quot;Iurreta&quot;,&quot;Izurtza&quot;,&quot;Karrantza Harana/Valle de Carranza&quot;,&quot;Kortezubi&quot;,&quot;Kripan&quot;,&quot;Kuartango&quot;,&quot;Labastida/Bastida&quot;,&quot;Lagrán&quot;,&quot;Laguardia&quot;,&quot;Lanciego/Lantziego&quot;,&quot;Lanestosa&quot;,&quot;Lantarón&quot;,&quot;Lapuebla de Labarca&quot;,&quot;Larrabetzu&quot;,&quot;Larraul&quot;,&quot;Lasarte-Oria&quot;,&quot;Laudio/Llodio&quot;,&quot;Laukiz&quot;,&quot;Lazkao&quot;,&quot;Leaburu&quot;,&quot;Legazpi&quot;,&quot;Legorreta&quot;,&quot;Legutio&quot;,&quot;Leintz-Gatzaga&quot;,&quot;Leioa&quot;,&quot;Lekeitio&quot;,&quot;Lemoa&quot;,&quot;Lemoiz&quot;,&quot;Leza&quot;,&quot;Lezama&quot;,&quot;Lezo&quot;,&quot;Lizartza&quot;,&quot;Loiu&quot;,&quot;Mallabia&quot;,&quot;Mañaria&quot;,&quot;Markina-Xemein&quot;,&quot;Maruri-Jatabe&quot;,&quot;Mendaro&quot;,&quot;Mendata&quot;,&quot;Mendexa&quot;,&quot;Meñaka&quot;,&quot;Moreda de Álava/Moreda Araba&quot;,&quot;Morga&quot;,&quot;Mundaka&quot;,&quot;Mungia&quot;,&quot;Munitibar-Arbatzegi Gerrikaitz&quot;,&quot;Murueta&quot;,&quot;Muskiz&quot;,&quot;Mutiloa&quot;,&quot;Mutriku&quot;,&quot;Muxika&quot;,&quot;Nabarniz&quot;,&quot;Navaridas&quot;,&quot;Oiartzun&quot;,&quot;Okondo&quot;,&quot;Olaberria&quot;,&quot;Ondarroa&quot;,&quot;Oñati&quot;,&quot;Ordizia&quot;,&quot;Orendain&quot;,&quot;Orexa&quot;,&quot;Orio&quot;,&quot;Ormaiztegi&quot;,&quot;Orozko&quot;,&quot;Ortuella&quot;,&quot;Otxandio&quot;,&quot;Oyón-Oion&quot;,&quot;Pasaia&quot;,&quot;Peñacerrada-Urizaharra&quot;,&quot;Plentzia&quot;,&quot;Portugalete&quot;,&quot;Ribera Baja/Erriberabeitia&quot;,&quot;Samaniego&quot;,&quot;San Millán/Donemiliaga&quot;,&quot;Santurtzi&quot;,&quot;Segura&quot;,&quot;Sestao&quot;,&quot;Sondika&quot;,&quot;Sopela&quot;,&quot;Sopuerta&quot;,&quot;Soraluze-Placencia de las Armas&quot;,&quot;Sukarrieta&quot;,&quot;Tolosa&quot;,&quot;Trucios-Turtzioz&quot;,&quot;Ubide&quot;,&quot;Ugao-Miraballes&quot;,&quot;Urduliz&quot;,&quot;Urduña/Orduña&quot;,&quot;Urkabustaiz&quot;,&quot;Urnieta&quot;,&quot;Urretxu&quot;,&quot;Usurbil&quot;,&quot;Valdegovía/Gaubea&quot;,&quot;Valle de Trápaga-Trapagaran&quot;,&quot;Villabona&quot;,&quot;Villabuena de Álava/Eskuernaga&quot;,&quot;Vitoria-Gasteiz&quot;,&quot;Yécora/Iekora&quot;,&quot;Zaldibar&quot;,&quot;Zaldibia&quot;,&quot;Zalduondo&quot;,&quot;Zalla&quot;,&quot;Zambrana&quot;,&quot;Zamudio&quot;,&quot;Zaratamo&quot;,&quot;Zarautz&quot;,&quot;Zeanuri&quot;,&quot;Zeberio&quot;,&quot;Zegama&quot;,&quot;Zerain&quot;,&quot;Zestoa&quot;,&quot;Zierbena&quot;,&quot;Zigoitia&quot;,&quot;Ziortza-Bolibar&quot;,&quot;Zizurkil&quot;,&quot;Zuia&quot;,&quot;Zumaia&quot;,&quot;Zumarraga&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Municipio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Litros&quot;,&quot;Litros per cápita diario&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
   data-proxyseries="null"
 >
   
-  <div id="indicator-main" class="indicator-main col-md-12">
+  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
+  <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
+    <div id="serieses"></div>
+<div id="units"></div>
+<div id="toolbar">
+  <span id="series-help">
+    <h4>Sub-categories</h4>
+    <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+  </span>
+  <div id="fields">
+    <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+  </div>
+</div>
+
+  </div>
+  <div id="indicator-main" class="indicator-main col-md-9">
+    
+
+
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    
+    <a role="button" href="https://eustat-des.github.io/data/en/headline/6-3-2.csv" class="btn btn-primary btn-download" download="indicator_6-3-2.csv" tabindex="0" role="button">Download headline data (.csv)</a>
+    
+    <a role="button" href="https://eustat-des.github.io/data/en/data/6-3-2.csv" class="btn btn-primary btn-download" download='indicator_6-3-2.csv' tabindex='0' role='button'>Download source data (.csv)</a>
+
+    <p class="no-js-disaggregation-hint">Download source data for disaggregations (.csv)</p>
+
+    
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Proportion of bodies of water with good ambient water quality</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col">Series</th>
+        
+        
+        
+        <th scope="col" class="table-value">GeoCode</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>177555343.0</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>178506380.3</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>176421751.0</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>180637435.0</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>163675650.5</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>180334331.0</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>179965484.0</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>178194263.7</td>
+          
+          
+          
+          <td>Litros</td>
+          
+          
+          
+          <td>Consumo de agua</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>177.6</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>179.3</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>178.1</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>179.7</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>179.4</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>184.4</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>184.4</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>180.8</td>
+          
+          
+          
+          <td>Litros per cápita diario</td>
+          
+          
+          
+          <td>Consumo de agua por habitante y día</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    
+  </div>
+
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Geographical Area: </p>
+    
+    
+    <p>Unit of Measurement: </p>
+    
+    
+    <p>Footnote: </p>
+    
+  </div>
+  
+
+</div>
+
+
+<section>
+
+  <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+
+  <div class="async-loaded mt-4" style="display:none;">
+
+    <div style="display: none;">
+    <span id="table-alternative">For tabular data alternative see Table tab.</span>
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+
+        
+      >Table</button>
+    </li>
+    
+  </ul>
+  
+    <div class="tab-content data-view">
+    
+      
+        <div role="tabpanel" class="tab-pane active" id="chartview">
+          
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only">Warning:</span></i>
+      There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">
+            Proportion of bodies of water with good ambient water quality
+          </h4>
+          <div id="chart" class="plot-container">
+            <canvas
+    role="img"
+    aria-labelledby="chart-heading"
+    aria-describedby="table-alternative chart-annotations"
+    tabindex="0"
+ ></canvas>
+
+          </div>
+          <div id="plotLegend"></div>
+          
+
+
+
+<div id="selectionChartFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Footnote:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Data last updated:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button
+          id="btnSave"
+          title="Download chart image as PNG"
+          aria-label="Download chart image as PNG"
+          class='btn btn-primary btn-download'>
+          Download chart image (.png)
+        </button><!--
+   --></div>
+    </div>
+
+
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="tableview">
+          <div style="display: none;">
+            <span id="column-sort-info">Click to sort by this column</span>
+          </div>
+          <div id="selectionsTable"></div>
+<dl id="tableTargetLines" class="clearfix"></dl>
+
+
+
+
+<div id="selectionTableFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Footnote:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Data last updated:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+<div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+  </div>
+  
+
+  </div>
+
+</section>
+
   
   <div class="mt-4">
 <ul class="nav nav-tabs" role="tablist">
@@ -942,7 +1656,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240911070907'></script>
+<script src='/site/assets/js/sdg.js?v=20240911132020'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -964,7 +1678,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240911070907"></script><script>
+    <script src="/site/assets/js/custom.js?v=20240911132020"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
