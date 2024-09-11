@@ -766,6 +766,14 @@
           "status": "notstarted"
         },
         {
+          "id": "6-4-E1",
+          "title": "Consumo de agua",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/6-4-E1/",
+          "status": "progreso"
+        },
+        {
           "id": "6-5-1",
           "title": "Degree of integrated water resources management",
           "description": "",
@@ -927,7 +935,7 @@
         },
         {
           "id": "8-5-E1",
-          "title": "national_indicators.8-5-E1-titulo",
+          "title": "Renta personal y brecha de género",
           "description": "",
           "keywords": "",
           "href": "/site/en/8-5-E1/",
@@ -935,7 +943,7 @@
         },
         {
           "id": "8-5-E2",
-          "title": "national_indicators.8-5-E2-titulo",
+          "title": "Tasa de ocupación de la población",
           "description": "",
           "keywords": "",
           "href": "/site/en/8-5-E2/",
@@ -1015,7 +1023,7 @@
         },
         {
           "id": "8-b-E1",
-          "title": "national_indicators.8-b-E1-titulo",
+          "title": "national_indicators.8-b-E1-title",
           "description": "",
           "keywords": "",
           "href": "/site/en/8-b-E1/",
@@ -1995,7 +2003,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-2-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "17-3-1",
@@ -2003,7 +2011,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-3-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "17-3-2",
@@ -2011,7 +2019,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-3-2/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "17-4-1",
@@ -2035,7 +2043,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-6-1/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "17-7-1",
@@ -2051,7 +2059,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/17-8-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "17-9-1",
