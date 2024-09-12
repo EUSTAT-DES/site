@@ -855,7 +855,7 @@
         },
         {
           "id": "7-3-E1",
-          "title": "national_indicators.7-3-1-title",
+          "title": "Consumo de energía eléctrica",
           "description": "",
           "keywords": "",
           "href": "/site/7-3-E1/",
@@ -2179,7 +2179,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/17-19-2/",
-          "status": "alcanzado"
+          "status": "complete"
         }]
     }
   },
