@@ -3292,7 +3292,7 @@ var mapView = function () {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
-      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":14,"tileURL":"https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_KARTO/MapServer/WMTS/tile/1.0.0/U11_WMTS_KARTO/{Style}/GoogleMapsCompatible/{z}/{y}/{x}.png","tileOptions":{"id":"","accessToken":"","attribution":""},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":""}},
+      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":14,"tileURL":"https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_KARTO/MapServer/WMTS/tile/1.0.0/U11_WMTS_KARTO/{Style}/GoogleMapsCompatible/{z}/{x}/{y}.png","tileOptions":{"id":"","accessToken":"","attribution":""},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":""}},
       mapLayers: [{"subfolder":"Territorio","label":"Territorio","min_zoom":5,"max_zoom":6,"staticBorders":true},{"subfolder":"Comarca","label":"Comarca","min_zoom":7,"max_zoom":8,"staticBorders":true},{"subfolder":"Municipio","label":"Municipio","min_zoom":9,"max_zoom":14,"staticBorders":true}],
       precision: precision,
       precisionItems: precisionItems,
