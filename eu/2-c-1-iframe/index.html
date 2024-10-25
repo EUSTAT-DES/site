@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240913165455">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241025112439">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -721,7 +721,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">metadata_fields.indicador_disponible </th>
         <td>
           
-            <p>xxx</p>
+            <p>Índice de precios de los alimentos</p>
 
           
         </td>
@@ -774,7 +774,8 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>xxx</p>
+            <p>Índice de precios de consumo de los alimentos y tasa de variación interanual</p>
+<p>Este indicador se compone de dos series temporales:<br /> - Índice de precios de consumo de los alimentos<br /> - Tasa de variación interanual de precios de consumo de los alimentos</p>
 
           
         </td>
@@ -790,7 +791,25 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Formula teorikoa </th>
         <td>
           
-            <p>xxx</p>
+            
+<p><b>Índice de precios de consumo de los alimentos</b> </p>
+
+<p>$$IPC_{alimentos}^{t} = \frac{1}{12} \cdot \sum_{m=1}^{12} IPC_{alimentos,m}^{t}$$</p>
+
+<p>donde: </p>
+
+<p>$IPC_{alimentos,m}^{t}$ índice de precios de consumo de los alimentos del mes $m$ del año $t$ </p>
+
+<p><b>Tasa de variación interanual de precios de consumo de los alimentos</b> </p>
+
+<p>$$TVIPC_{t} = \left( \frac{IPC_{alimentos}^{t}}{IPC_{alimentos}^{t-1}} - 1 \right) \cdot 100$$</p>
+
+<p>$IPC_{alimentos,m}^{t}$ índice de precios de consumo de los alimentos del año $t$ </p>
+
+<p>$IPC_{alimentos,m}^{t-1}$ índice de precios de consumo de los alimentos del año $t-1$ </p>
+
+<p>teniendo en cuenta que los índices de precios de consumo anuales se calculan 
+como la media aritmética de los índices de precios de consumo mensuales</p>
 
           
         </td>
@@ -806,7 +825,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">metadata_fields.desagregacion </th>
         <td>
           
-            <p>xxx</p>
+            <p>Territorio histórico</p>
 
           
         </td>
@@ -930,7 +949,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2024 iraila 04
+            2024 urria 25
           
         </td>
         </tr>
@@ -976,7 +995,8 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Deskribapena </th>
         <td>
           
-            <p>xxx</p>
+            <p>El indicador de anomalías de los precios de los alimentos (IFPA)  identifica los precios de mercado que son anormalmente altos. La IFPA  se basa en una tasa de crecimiento compuesta ponderada que representa el crecimiento  de los precios tanto dentro del año como a lo largo del año. </p>
+<p>El indicador evalúa directamente  el crecimiento de los precios durante un mes particular durante muchos años, teniendo  en cuenta la estacionalidad en los mercados agrícolas y la inflación, lo que permite  responder a la pregunta de si un cambio en el precio es anormal o no para un período determinado.</p>
 
           
         </td>
@@ -992,7 +1012,9 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Justifikazioa </th>
         <td>
           
-            <p>xxx</p>
+            <p>El indicador es sólo una guía para comprender la dinámica del mercado.  Como tal, no se puede confiar en él como único elemento para determinar si el  precio de un alimento en un mercado particular en un momento dado es anormalmente
+ alto o bajo debido a los efectos directos de las políticas locales. Los resultados 
+deben sopesarse con otra información disponible sobre los fundamentos del mercado,  el contexto macroeconómico y los shocks externos.</p>
 
           
         </td>
@@ -1003,13 +1025,35 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko alderagarritasuna </th>
+        <td>
           
-      
-      
-      
-        
+            <p>El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas, pero aporta información complementaria.</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Nazioarteko emaitzak </th>
+        <td>
+          
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.c.1&amp;seriesCode=AG_FPA_HMFP&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ABNORMAL">Proporción de países que registran precios de los alimentos anormalmente altos o moderadamente altos, según el Indicador de anomalías de los precios de los alimentos (%) AG_FPA_HMFP</a> UNSTATS</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1018,7 +1062,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-0C-01.pdf">Metadata 2-c-1.pdf</a><br /></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-0C-01.pdf">Metadata 2-c-1.pdf (solo en inglés)</a><br /></p>
 
           
         </td>
@@ -1166,7 +1210,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240913165455'></script>
+<script src='/site/assets/js/sdg.js?v=20241025112439'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1188,7 +1232,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240913165455"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241025112439"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

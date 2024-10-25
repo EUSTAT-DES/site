@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240913165455">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241025112439">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -216,9 +216,9 @@ layout-indicator
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/eu/">Hasiera</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/eu/reporting-status">Informazioaren egoera</a>
-</li><li class="nav-item ">
     <a class="nav-link" href="/site/eu/faq">FAQ</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/reporting-status">Informazioaren egoera</a>
 </li></ul>
     
                 </div>
@@ -1177,7 +1177,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>xxx</p>
+            <p>Proporción del gasto de las administraciones públicas en la C.A. de Euskadi que se dedica a servicios esenciales (educación, salud y protección social -  grupos funcionales 09, 07 y 10 de la Clasificación  de Funciones del Gobierno (COFOG), utilizada a nivel  internacional para clasificar los propósitos de las actividades gubernamentales)</p>
 
           
         </td>
@@ -1193,7 +1193,12 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Formula teorikoa </th>
         <td>
           
-            <p>xxx</p>
+            
+<p>$$PG_{servicios}^{t} = \frac{G_{servicios}^{t}}{G^{t}} \cdot 100$$</p>
+<p>donde: </p>
+<p>$G_{servicios}^{t} =$ gasto de las administraciones públicas que se dedica a servicios esenciales, grupos funcionales 07, 09 y 10 de la 
+Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
+<p>$G^{t} =$ gasto total de las administraciones públicas en el año $t$</p>
 
           
         </td>
@@ -1225,19 +1230,8 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Oharra </th>
-        <td>
-          
-            <p>xxx</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1333,7 +1327,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2024 iraila 03
+            2024 urria 25
           
         </td>
         </tr>
@@ -1379,7 +1373,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Deskribapena </th>
         <td>
           
-            <p>xxx</p>
+            <p>El indicador mide el gasto total del gobierno en educación,  salud y protección social expresado como porcentaje del gasto total del gobierno.</p>
 
           
         </td>
@@ -1395,7 +1389,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Justifikazioa </th>
         <td>
           
-            <p>xxx</p>
+            <p>El indicador se utiliza para evaluar el gasto del gobierno en servicios esenciales  (educación, salud y protección social) en relación con el monto del gasto gubernamental  total. Dado que proviene de un marco internacional, el Manual de estadísticas de finanzas públicas  (MEFP 2014), proporciona a los analistas un conjunto de datos comparable entre países y garantiza  el establecimiento de conclusiones analíticas sólidas para respaldar el seguimiento de los ODS utilizando datos fiscales.</p>
 
           
         </td>
@@ -1406,8 +1400,19 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko alderagarritasuna </th>
+        <td>
           
+            <p>El indicador disponible en la C.A de Euskadi utiliza la clasificación COFOG,  que no cumple con los metadatos del indicador de Naciones Unidas. El indicador mundial utiliza el  manual de estadísticas de finanzas gubernamentales (MEFP) donde el concepto de gasto se  aplica de manera ligeramente diferente.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1416,7 +1421,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p>xxx</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&amp;seriesCode=SG_XPD_ESSRV&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Proporción del gasto público total en servicios esenciales (%) SG_XPD_ESSRV</a> UNSTATS</p>
 
           
         </td>
@@ -1432,7 +1437,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf">Metadata 1-a-2 (1).pdf</a><br /> <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf">Metadata 1-a-2 (2).pdf</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf">Metadata 1-a-2 (1).pdf (solo en inglés)</a><br /> <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf">Metadata 1-a-2 (2).pdf (solo en inglés)</a></p>
 
           
         </td>
@@ -1847,7 +1852,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240913165455'></script>
+<script src='/site/assets/js/sdg.js?v=20241025112439'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1869,7 +1874,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240913165455"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241025112439"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

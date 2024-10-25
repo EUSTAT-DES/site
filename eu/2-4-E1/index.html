@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20240913165455">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241025112439">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -216,9 +216,9 @@ layout-indicator
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/eu/">Hasiera</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/eu/reporting-status">Informazioaren egoera</a>
-</li><li class="nav-item ">
     <a class="nav-link" href="/site/eu/faq">FAQ</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/eu/reporting-status">Informazioaren egoera</a>
 </li></ul>
     
                 </div>
@@ -1470,7 +1470,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">metadata_fields.indicador_disponible </th>
         <td>
           
-            <p>xxx</p>
+            <p>Emisiones de amoníaco de la agricultura y ganadería</p>
 
           
         </td>
@@ -1523,7 +1523,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>xxx</p>
+            <p>Emisiones de amoníaco (NH3) de la agricultura y ganadería</p>
 
           
         </td>
@@ -1539,7 +1539,10 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Formula teorikoa </th>
         <td>
           
-            <p>xxx</p>
+            <p>$$ENH3_{agricultura\, y\, ganadería}^{t} = ENH3_{agricultura}^{t} + ENH3_{ganadería}^{t}$$ </p>
+<p>donde: </p>
+<p>$$ENH3_{agricultura}^{t}$ emisiones de NH3 de la agricultura en el año $t$  </p>
+<p>$ENH3_{ganadería}^{t}$ emisiones de NH3 de la ganadería en el año $t$</p>
 
           
         </td>
@@ -1550,19 +1553,8 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row">metadata_fields.desagregacion </th>
-        <td>
-          
-            <p>xxx</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1582,8 +1574,19 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Oharra </th>
+        <td>
           
+            <p>Las emisiones de amoníaco asignadas a la agricultura son las  correspondientes a las actividades con códigos NFR (Nomenclature for Reporting):  3Da1, 3Da2a, 3Da2b, 3Da2c, 3Da3, 3Da4, 3Db, 3Dc, 3Dd, 3De, 3Df, 3F y 3I.<br /> Las emisiones de amoníaco asignadas a la ganadería son las correspondientes a  las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,  3B2, 3B3, 3B4a, 3B4d, 3B4e, 3B4f, 3B4gi, 3B4gii, 3B4giii, 3B4giv y 3B4h.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1679,7 +1682,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2024 iraila 04
+            2024 urria 25
           
         </td>
         </tr>
@@ -1725,7 +1728,10 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Deskribapena </th>
         <td>
           
-            <p>xxx</p>
+            <p>El indicador mide las emisiones de amoniaco (NH3) como resultado de 
+la producción agrícola. Estas emisiones resultan del manejo del estiércol, 
+las aplicaciones de fertilizantes nitrogenados inorgánicos y estiércol animal 
+aplicado al suelo, así como la orina y el estiércol depositados por los animales en pastoreo.</p>
 
           
         </td>
@@ -1741,7 +1747,10 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Justifikazioa </th>
         <td>
           
-            <p>xxx</p>
+            <p>El indicador forma parte del conjunto de indicadores de los Objetivos de Desarrollo Sostenible (ODS) de la UE. Se utiliza para hacer el seguimiento del progreso hacia el ODS 2 sobre poner fin al hambre y la desnutrición, y está  integrado en las prioridades de la Comisión Europea en el marco del Acuerdo Verde Europeo</p>
+<p>El amoníaco (NH3) es un gas incoloro, de olor acre y corrosivo que se produce por la descomposición  de la materia orgánica vegetal y de los excrementos de humanos y animales. Cuando se libera a la atmósfera,  el amoníaco contribuye al nivel de contaminación del aire. El sector agrícola sigue siendo el mayor contribuyente  a las emisiones de amoníaco en la UE.</p>
+<p>Las medidas implementadas en el marco de la Política Agrícola Común (PAC) y la  Directiva Marco del Agua han llevado a la UE a reducir las emisiones de  amoníaco procedentes de la agricultura desde la década de 1990. En concreto, las  medidas para cambiar las prácticas agrícolas provocaron reducciones en el uso de  fertilizantes nitrogenados y una reducción de la densidad ganadera por hectárea en toda la UE-15.</p>
+<p>La Directiva sobre Compromisos Nacionales de Reducción de Emisiones (Directiva NEC)  establece compromisos nacionales de reducción de emisiones para los Estados miembros y la UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
 
           
         </td>
@@ -1752,13 +1761,35 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko alderagarritasuna </th>
+        <td>
           
-      
-      
-      
-        
+            <p>El indicador disponible en la C.A. de Euskadi es comparable con el indicador europeo.</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Nazioarteko emaitzak </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_02_60/default/table?lang=en&amp;category=sdg.sdg_02"> Emisiones de amoníaco de la agricultura (sdg_02_60)</a> Eurostat</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1767,7 +1798,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_60_esmsip2.htm">Metadata sdg_20_60.pdf</a><br /></p>
+            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_60_esmsip2.htm">Metadata sdg_20_60.pdf (solo en inglés)</a><br /></p>
 
           
         </td>
@@ -1962,7 +1993,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20240913165455'></script>
+<script src='/site/assets/js/sdg.js?v=20241025112439'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1984,7 +2015,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20240913165455"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241025112439"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
