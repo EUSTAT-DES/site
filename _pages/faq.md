@@ -66,22 +66,22 @@ Este sitio está dirigido a las distintas administraciones para la toma de decis
 ## Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
 
-- Andalucía: [Indicadores de los objetivos de desarrollo sostenible de Andalucía](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm) <br>
-- Aragón: [Indicadores de los ODS de Aragón](https://ods-aragon.github.io/) <br>
-- Asturias, Principado de: [Indicadores de los ODS de Asturias](https://sadeiasturias.github.io/indicadores-ods-asturias/) <br>
-- Baleares, Islas: [Indicadores de los ODS de las Islas Baleares](https://ibestat.es/edatos/apps/ods/) <br>
-- Canarias: [Indicadores de los ODS de Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/) <br>
-- Cantabria: [Indicadores de los ODS de Cantabria](https://ods-cantabria.github.io/ods-cantabria/) <br>
-- Castilla-La Mancha: [Indicadores de los ODS de Castilla-La Mancha](https://estadistica.castillalamancha.es/agenda-2030) <br>
-- Castilla y León: [Indicadores de los ODS de Castilla y León](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html) <br>
-- Cataluña: [Indicadores de los ODS de Cataluña](https://www.idescat.cat/dades/ods/nu/?lang=es) <br>
-- Comunidad Valenciana: [Indicadores de los ODS de la Comunidad Valenciana](https://pegv.gva.es/es/ods) <br>
-- Extremadura: [Indicadores de los ODS de Extremadura](https://www.juntaex.es/ieex/agenda-2030) <br>
-- Galicia: [Indicadores de los ODS de Galicia](https://www.ige.gal/Shiny/Agenda2030/) <br>
-- La Rioja: [Indicadores de los ODS  de La Rioja](https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja) <br>
-- Madrid, Comunidad de: [Indicadores de los ODS de la Comunidad de Madrid](https://www.madrid.org/iestadis/ODS/ODS_CM.htm) <br>
-- Murcia, Región de: [Indicadores de los ODS de Murcia](https://transparencia.carm.es/agenda-2030#gsc.tab=0) <br>
-- Navarra, Comunidad Foral de: [Indicadores de los ODS de Navarra](https://nastat.navarra.es/es/indicadores/indicadores-ods) <br>
+- Andalucía: [https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm) <br>
+- Aragón: [https://ods-aragon.github.io/](https://ods-aragon.github.io/) <br>
+- Asturias, Principado de: [https://sadeiasturias.github.io/indicadores-ods-asturias/](https://sadeiasturias.github.io/indicadores-ods-asturias/) <br>
+- Baleares, Islas: [https://ibestat.es/edatos/apps/ods/](https://ibestat.es/edatos/apps/ods/) <br>
+- Canarias: [https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/) <br>
+- Cantabria: [https://ods-cantabria.github.io/ods-cantabria/](https://ods-cantabria.github.io/ods-cantabria/) <br>
+- Castilla-La Mancha: [https://estadistica.castillalamancha.es/agenda-2030](https://estadistica.castillalamancha.es/agenda-2030) <br>
+- Castilla y León: [https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html) <br>
+- Cataluña: [https://www.idescat.cat/dades/ods/nu/?lang=es](https://www.idescat.cat/dades/ods/nu/?lang=es) <br>
+- Comunidad Valenciana: [https://pegv.gva.es/es/ods](https://pegv.gva.es/es/ods) <br>
+- Extremadura: [https://www.juntaex.es/ieex/agenda-2030](https://www.juntaex.es/ieex/agenda-2030) <br>
+- Galicia: [https://www.ige.gal/web/mostrar_marco.jsp?idioma=es&app=ODS](https://www.ige.gal/web/mostrar_marco.jsp?idioma=es&app=ODS) <br>
+- La Rioja: [https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja](https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja) <br>
+- Madrid, Comunidad de: [https://www.madrid.org/iestadis/ODS/ODS_CM.htm](https://www.madrid.org/iestadis/ODS/ODS_CM.htm) <br>
+- Murcia, Región de: [https://transparencia.carm.es/agenda-2030#gsc.tab=0](https://transparencia.carm.es/agenda-2030#gsc.tab=0) <br>
+- Navarra, Comunidad Foral: [https://nastat.navarra.es/es/indicadores/indicadores-ods](https://nastat.navarra.es/es/indicadores/indicadores-ods) <br>
 
 ## Países que informan sobre los indicadores de la Agenda 2030
 La siguiente lista muestra algunas de las plataformas sobre los ODS de los distintos países. La lista no es exhaustiva:
