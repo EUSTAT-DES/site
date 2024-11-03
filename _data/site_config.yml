@@ -269,6 +269,6 @@ time_series_attributes:
   - field: DATA_LAST_UPDATE
     label: metadata_fields.national_data_update_url
 observation_attributes: 
-  - field: COMMENT_OBS 
-    label: indicator.footnote
+  - field: COMMENT_OBS
+    label: ''
 use_new_config_forms: true
