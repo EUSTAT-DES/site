@@ -264,8 +264,11 @@ site_config_form:
   repository_link: /tree/develop/_data
   translation_link: ''
 time_series_attributes:
-  - field: COMMENT_OBS
+  - field: COMMENT_TS
     label: indicator.footnote
   - field: DATA_LAST_UPDATE
     label: metadata_fields.national_data_update_url
+observation_attributes: 
+  - field: COMMENT_OBS 
+    label: indicator.footnote
 use_new_config_forms: true
