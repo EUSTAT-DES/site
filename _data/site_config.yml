@@ -182,12 +182,12 @@ menu:
   - path: /
     translation_key: general.home
     dropdown: []
-  - path: /faq
-    translation_key: menu.faq
-    dropdown: [] 
   - path: /reporting-status
     translation_key: menu.reporting_status
     dropdown: []
+  - path: /faq
+    translation_key: menu.faq
+    dropdown: []     
 metadata_edit_url: metadata
 metadata_tabs:
   - scope: national
