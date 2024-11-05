@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241103161329">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241105093955">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1838,8 +1838,6 @@ data-event-label="Change to Table tab"
         
     </dl>
     
-    <dl class="observation-attribute-list"></dl>
-    
 </div>
 
         </div>
@@ -1909,8 +1907,6 @@ data-event-label="Change to Table tab"
         
         
     </dl>
-    
-    <dl class="observation-attribute-list"></dl>
     
 </div>
 
@@ -2023,58 +2019,18 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Available indicator </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Mortality rate attributed to unintentional poisoning</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-  
-  
-  
-  
-  
   
       
       
@@ -2084,6 +2040,135 @@ data-event-label="Change to indicator.sources tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>3.9 By 2030, substantially reduce the number of deaths and illnesses from hazardous chemicals and air, water and soil pollution and contamination</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Goal </th>
+        <td>
+          
+            <p>3 Ensure healthy lives and promote well-being for all at all ages</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Defunciones atribuidas a intoxicaciones involuntarias por cada 100.000 habitantes</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Theoretical formula </th>
+        <td>
+          
+            
+<p>$$TM_{\text{intoxicaciones involuntarias}}^{t} = \frac{D_{\text{intoxicaciones involuntarias}}^{t}}{P^{t}} \cdot 100.000$$</p>
+
+<p>donde: </p>
+
+<p> $D_{\text{intoxicaciones involuntarias}}^{t} =$ defunciones atribuidas a intoxicaciones involuntarias (códigos X40, X43, X44 y X46-X49 de la CIE-10) en el año $t$</p>
+<p>$P^{t} =$ población a 1 de julio del año $t$</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Available disaggregations </th>
+        <td>
+          
+            <p>Sexo <br /> Territorio histórico</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Frequency </th>
+        <td>
+          
+            <p>Anual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">OCECA </th>
+        <td>
+          
+            <p><img src="/site/assets/img/oceca/ocecas_image.png" style="width: 200px; float: left; margin-right: 10px;" alt="Logotipo OCECAS" /> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
         
           
       
@@ -2134,8 +2219,33 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            August 29, 2024
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            November 04, 2024
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -2170,28 +2280,84 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Description </th>
+        <td>
           
-      
-      
-      
-        
+            <p>La tasa de mortalidad atribuida a envenenamiento no intencional se define como el número de muertes por envenenamiento  no intencional en un año, dividido por la población y multiplicado por 100.000.Incluye los códigos de la  Clasificación Internacional de Enfermedades, Décima Revisión (CIE-10) X40, X43, X46-X48 y X49.</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Rationale </th>
+        <td>
           
-      
-      
-      
+            <p>La medición de la tasa de mortalidad por envenenamientos no intencionales proporciona una indicación del  grado de gestión inadecuada de los productos químicos peligrosos y la contaminación, y de la eficacia del sistema de  salud de un país.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comparability between the available indicator and the UN indicator </th>
+        <td>
           
-      
-      
-      
+            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">International results </th>
+        <td>
           
+            
+<p>&lt;a https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.9.3&amp;seriesCode=SH_STA_POISN&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX”&gt; Tasa de mortalidad atribuida a intoxicaciones no intencionales, por sexo (muertes por cada 100.000 habitantes) SH_STA_POISN&lt;/a&gt; UNSTATS</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Link to UN metadata </th>
+        <td>
+          
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-09-03.pdf">Metadata 3-9-3.pdf (solo en inglés)</a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -2379,7 +2545,7 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241103161329'></script>
+<script src='/site/assets/js/sdg.js?v=20241105093955'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -2401,7 +2567,7 @@ data-event-label="Change to indicator.sources tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241103161329"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241105093955"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241103161329">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241105093955">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -508,34 +508,202 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "Consumo anual de alcohol en litros de alcohol puro por persona de 15 y más años");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "3.5 Mendekotasuna sortzen duten substantzien prebentzioa eta tratamendua indartzea, estupefazienteen erabilera desegokia eta alkoholaren kontsumo kaltegarria barne");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "3 Guztiontzat eta adin guztietan bizimodu osasungarria bermatzea eta ongizatea sustatzea");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "\nConsumo anual de alcohol registrado en litros de alcohol puro (bebidas destiladas, vino y cerveza) por persona de 15 y más años");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "\n<p>$$ECAR^{t} = \\frac{CAR_{bebidas\\, destiladas}^{t}+CAR_{vino}^{t}+CAR_{cerveza}^{t}}{P_{15+}^{t}}$$  </p>\n<p>donde: </p>\n<p>$CAR_{bebidas\\, destiladas}^{t} =$ consumo de alcohol registrado en bebidas destiladas en el año $t$</p>\n<p>$CAR_{vino}^{t} =$ consumo de alcohol registrado en vino en el año $t$</p>\n<p>$$CAR_{cerveza}^{t} =$ consumo de alcohol registrado en cerveza en el año $t$</p>\n<p>$P_{15+}^{t} =$ población de 15 y más años a 1 de julio del año $t$</p>\n");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('desagregacion', "");
+        var propertyEditor = editor.getEditor('root.desagregacion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: desagregacion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('observaciones', "");
+        var propertyEditor = editor.getEditor('root.observaciones');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: observaciones');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('texto_oceca', "<img src=\"/site/assets/img/oceca/ocecas_image.png\" style=\"width: 200px; float: left; margin-right: 10px;\" alt=\"Logotipo OCECAS\"> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
+        var propertyEditor = editor.getEditor('root.texto_oceca');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: texto_oceca');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('descripcion_global', "<p>Uso nocivo de alcohol, definido según el contexto nacional como el consumo de alcohol  per cápita (personas de 15 años o más) en un año calendario en litros de alcohol puro.</p>");
+        var propertyEditor = editor.getEditor('root.descripcion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: descripcion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "\n<p>El consumo de alcohol puede tener un impacto no sólo en la incidencia de enfermedades, lesiones y  otras condiciones de salud, sino también en la evolución de los trastornos y sus consecuencias en las personas.</p>\n<p>El consumo de alcohol se ha identificado como una causa componente de más de 200 enfermedades, lesiones y otros problemas de salud. El consumo de alcohol per cápita es ampliamente aceptado como el mejor indicador posible de la exposición al alcohol en las poblaciones y el indicador clave para la estimación de la carga de enfermedades atribuibles al alcohol y las muertes atribuibles al alcohol. </p>\n<p>Su correcta interpretación requiere el uso de indicadores poblacionales adicionales, como la prevalencia del consumo de  alcohol, y, como resultado, estimula el desarrollo de sistemas nacionales de vigilancia del alcohol y la salud que  involucran contribuciones de una amplia gama de partes interesadas, incluidos los sectores de producción y comercio de alcohol.</p>");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos del indicador de  Naciones Unidas, pero aporta información similar.");
+        var propertyEditor = editor.getEditor('root.comparabilidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: comparabilidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dato_global', "<a https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.5.2&seriesCode=SH_ALC_CONSPT&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=15%2B%20%7C%20BOTHSEX\">Consumo de alcohol per cápita (mayores de 15 años) en un año calendario (litros de alcohol puro) SH_ALC_CONSPT UNSTATS</a>");
+        var propertyEditor = editor.getEditor('root.dato_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dato_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-02.pdf\">Metadata 3-5-2.pdf (solo en inglés)</a>");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -560,8 +728,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-08-29");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-04");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -680,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241103161329'></script>
+<script src='/site/assets/js/sdg.js?v=20241105093955'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -702,7 +894,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241103161329"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241105093955"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
