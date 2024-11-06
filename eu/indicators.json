@@ -1307,7 +1307,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/11-4-1/",
-          "status": "noevaluado"
+          "status": "alcanzado"
         },
         {
           "id": "11-5-1",
@@ -1315,7 +1315,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/11-5-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "11-5-2",
@@ -1323,7 +1323,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/11-5-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "11-5-3",
@@ -1443,7 +1443,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/12-4-2/",
-          "status": "progreso"
+          "status": "alcanzado"
         },
         {
           "id": "12-5-1",
@@ -1459,7 +1459,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/12-6-1/",
-          "status": "progreso"
+          "status": "alcanzado"
         },
         {
           "id": "12-7-1",
@@ -1515,7 +1515,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/13-1-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "13-1-2",
