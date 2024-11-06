@@ -662,6 +662,14 @@
           "status": "retroceso"
         },
         {
+          "id": "5-5-E1",
+          "title": "Renta personal y brecha de género",
+          "description": "",
+          "keywords": "",
+          "href": "/site/5-5-E1/",
+          "status": "progreso"
+        },
+        {
           "id": "5-6-1",
           "title": "Proporción de mujeres de entre 15 y 49 años que toman sus propias decisiones informadas sobre las relaciones sexuales, el uso de anticonceptivos y la atención de la salud reproductiva",
           "description": "",
@@ -871,7 +879,7 @@
         },
         {
           "id": "7-b-1",
-          "title": "Capacidad instalada de generación de energía renovable en los países en desarrollo (expresada en vatios per cápita)",
+          "title": "Capacidad instalada de generación de energía renovable en los países en desarrollo y en los países desarrollados (en vatios per cápita) en desarrollo (expresada en vatios per cápita)",
           "description": "",
           "keywords": "",
           "href": "/site/7-b-1/",
@@ -943,18 +951,10 @@
         },
         {
           "id": "8-5-E1",
-          "title": "Renta personal y brecha de género",
-          "description": "",
-          "keywords": "",
-          "href": "/site/8-5-E1/",
-          "status": "progreso"
-        },
-        {
-          "id": "8-5-E2",
           "title": "Tasa de ocupación de la población",
           "description": "",
           "keywords": "",
-          "href": "/site/8-5-E2/",
+          "href": "/site/8-5-E1/",
           "status": "progreso"
         },
         {
@@ -1067,7 +1067,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/9-2-1/",
-          "status": "noevaluado"
+          "status": "progreso"
         },
         {
           "id": "9-2-2",
@@ -1075,7 +1075,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/9-2-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "9-3-1",
@@ -1083,7 +1083,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/9-3-1/",
-          "status": "noevaluado"
+          "status": "retroceso"
         },
         {
           "id": "9-3-2",

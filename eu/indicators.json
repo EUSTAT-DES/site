@@ -662,6 +662,14 @@
           "status": "retroceso"
         },
         {
+          "id": "5-5-E1",
+          "title": "national_indicators.5-5-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-5-E1/",
+          "status": "progreso"
+        },
+        {
           "id": "5-6-1",
           "title": "Sexu-harremanei, antisorgailuen erabilerari eta ugaltze-osasunari buruzko erabaki propio eta informatuak hartzen dituzten 15 eta 49 urte bitarteko emakumeen proportzioa",
           "description": "",
@@ -950,14 +958,6 @@
           "status": "progreso"
         },
         {
-          "id": "8-5-E2",
-          "title": "Tasa de ocupación de la población",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/8-5-E2/",
-          "status": "progreso"
-        },
-        {
           "id": "8-6-1",
           "title": "Ikasten edo gaitzen ari ez diren eta enplegurik ez duten gazteen (15 eta 24 urte bitartean) proportzioa",
           "description": "",
@@ -1067,7 +1067,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/9-2-1/",
-          "status": "noevaluado"
+          "status": "progreso"
         },
         {
           "id": "9-2-2",
@@ -1075,7 +1075,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/9-2-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "9-3-1",
@@ -1083,7 +1083,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/9-3-1/",
-          "status": "noevaluado"
+          "status": "retroceso"
         },
         {
           "id": "9-3-2",

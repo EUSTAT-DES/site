@@ -662,6 +662,14 @@
           "status": "retroceso"
         },
         {
+          "id": "5-5-E1",
+          "title": "national_indicators.5-5-E1-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/5-5-E1/",
+          "status": "progreso"
+        },
+        {
           "id": "5-6-1",
           "title": "Proportion of women aged 15–49 years who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care",
           "description": "",
@@ -950,14 +958,6 @@
           "status": "progreso"
         },
         {
-          "id": "8-5-E2",
-          "title": "Tasa de ocupación de la población",
-          "description": "",
-          "keywords": "",
-          "href": "/site/en/8-5-E2/",
-          "status": "progreso"
-        },
-        {
           "id": "8-6-1",
           "title": "Proportion of youth (aged 15–24 years) not in education, employment or training",
           "description": "",
@@ -1067,7 +1067,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-2-1/",
-          "status": "noevaluado"
+          "status": "progreso"
         },
         {
           "id": "9-2-2",
@@ -1075,7 +1075,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-2-2/",
-          "status": "notstarted"
+          "status": "progreso"
         },
         {
           "id": "9-3-1",
@@ -1083,7 +1083,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/9-3-1/",
-          "status": "noevaluado"
+          "status": "retroceso"
         },
         {
           "id": "9-3-2",
