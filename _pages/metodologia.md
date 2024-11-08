@@ -72,10 +72,10 @@ Por último, se asigna una puntuación a la serie según los siguientes criterio
 
 Donde:
 <br><br> 
-𝑏 es el año base (normalmente 2015)<br>
-𝑡 es el último año para el que hay dato (por ejemplo: 2022)<br>
-𝑣𝑏 es el valor base en el año b<br>
-𝑣𝑡 es el valor del último año 𝑡<br>
+$𝑏$ es el año base (normalmente 2015)<br>
+$𝑡$ es el último año para el que hay dato (por ejemplo: 2022)<br>
+$𝑣_{b}$ es el valor base en el año b<br>
+$𝑣_{𝑡}$ es el valor del último año 𝑡<br>
 $𝑣_{2030}$ es el valor objetivo para 2030<br>
 $𝑣_{2030}^{e}$ es el valor esperado para 2030
 
@@ -88,7 +88,7 @@ $$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1$$
 
 A continuación, se asigna una puntuación al indicador según los siguientes criterios:
 
-Si el aumento es deseable:<br>
+<p>Si el aumento es deseable:</p>
 
 <table class="tg">
 <thead>
@@ -114,7 +114,7 @@ Si el aumento es deseable:<br>
 </table>
 
 
-Si el descenso es deseable:<br>
+<p>Si el descenso es deseable:</p>
 
 
 <table class="tg">
