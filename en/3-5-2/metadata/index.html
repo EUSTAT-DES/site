@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110103820">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110125651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -510,7 +510,7 @@ data-event-label="high"
     // Set values according to this site's configuration.
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_disponible', "Consumo anual de alcohol en litros de alcohol puro por persona de 15 y más años");
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.3-5-2-titulo");
         var propertyEditor = editor.getEditor('root.indicador_disponible');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<p>$$ECAR^{t} = \\frac{CAR_{bebidas\\, destiladas}^{t}+CAR_{vino}^{t}+CAR_{cerveza}^{t}}{P_{15+}^{t}}$$  </p>\n<p>donde: </p>\n<p>$CAR_{bebidas\\, destiladas}^{t} =$ consumo de alcohol registrado en bebidas destiladas en el año $t$</p>\n<p>$CAR_{vino}^{t} =$ consumo de alcohol registrado en vino en el año $t$</p>\n<p>$$CAR_{cerveza}^{t} =$ consumo de alcohol registrado en cerveza en el año $t$</p>\n<p>$P_{15+}^{t} =$ población de 15 y más años a 1 de julio del año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<p>$$ECAR^{t} = \\frac{CAR_{bebidas\\, destiladas}^{t}+CAR_{vino}^{t}+CAR_{cerveza}^{t}}{P_{15+}^{t}}$$  </p>\n<p>donde: </p>\n<p>$CAR_{bebidas\\, destiladas}^{t} =$ consumo de alcohol registrado en bebidas destiladas en el año $t$</p>\n<p>$CAR_{vino}^{t} =$ consumo de alcohol registrado en vino en el año $t$</p>\n<p>$CAR_{cerveza}^{t} =$ consumo de alcohol registrado en cerveza en el año $t$</p>\n<p>$P_{15+}^{t} =$ población de 15 y más años a 1 de julio del año $t$</p>\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -636,23 +636,11 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('descripcion_global', "<p>Uso nocivo de alcohol, definido según el contexto nacional como el consumo de alcohol  per cápita (personas de 15 años o más) en un año calendario en litros de alcohol puro.</p>");
-        var propertyEditor = editor.getEditor('root.descripcion_global');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: descripcion_global');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\n<p>El consumo de alcohol puede tener un impacto no sólo en la incidencia de enfermedades, lesiones y  otras condiciones de salud, sino también en la evolución de los trastornos y sus consecuencias en las personas.</p>\n<p>El consumo de alcohol se ha identificado como una causa componente de más de 200 enfermedades, lesiones y otros problemas de salud. El consumo de alcohol per cápita es ampliamente aceptado como el mejor indicador posible de la exposición al alcohol en las poblaciones y el indicador clave para la estimación de la carga de enfermedades atribuibles al alcohol y las muertes atribuibles al alcohol. </p>\n<p>Su correcta interpretación requiere el uso de indicadores poblacionales adicionales, como la prevalencia del consumo de  alcohol, y, como resultado, estimula el desarrollo de sistemas nacionales de vigilancia del alcohol y la salud que  involucran contribuciones de una amplia gama de partes interesadas, incluidos los sectores de producción y comercio de alcohol.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\n<p>El indicador de Nciones Unidas mide el uso nocivo de alcohol, definido  según el contexto nacional como el consumo de alcohol  per cápita (personas de 15 años o más) en un año calendario en litros de alcohol puro.</p>\n<p>El consumo de alcohol puede tener un impacto no sólo en la incidencia de enfermedades, lesiones y  otras condiciones de salud, sino también en la evolución de los trastornos y sus consecuencias en las personas.</p>\n<p>El consumo de alcohol se ha identificado como una causa componente de más de 200 enfermedades, lesiones y otros problemas de salud. El consumo de alcohol per cápita es ampliamente aceptado como el mejor indicador posible de la exposición al alcohol en las poblaciones y el indicador clave para la estimación de la carga de enfermedades atribuibles al alcohol y las muertes atribuibles al alcohol. </p>\n<p>Su correcta interpretación requiere el uso de indicadores poblacionales adicionales, como la prevalencia del consumo de  alcohol, y, como resultado, estimula el desarrollo de sistemas nacionales de vigilancia del alcohol y la salud que  involucran contribuciones de una amplia gama de partes interesadas, incluidos los sectores de producción y comercio de alcohol.</p>");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-02.pdf\">Metadata 3-5-2.pdf (solo en inglés)</a>");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-02.pdf\">Metadata 3-5-2.pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-05");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241110103820'></script>
+<script src='/site/assets/js/sdg.js?v=20241110125651'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -894,7 +882,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241110103820"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241110125651"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

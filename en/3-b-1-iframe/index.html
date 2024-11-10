@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110103820">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110125651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -798,7 +798,6 @@ data-event-label="Change to indicator.global_metadata tab"
 <p> ${vacuna}=$ tipo de vacuna</p>
 <p> ${c}=$ el intervalo de años que define la cohorte específica para cada vacuna
  (c=1 o cohorte nacida en t-1 para DTPa y VNC, c=5 para SRP y c=13 para VPH)</p>
-<p> $PPV_{\text{vacuna}}^{t} =$ proporción de población vacunada con el tipo de vacuna especificado en el año $t$</p>
 <p> $PV_{\text{vacuna}}^{\text{cohorte}\, t - c}=$ es la población vacunada con el tipo de vacuna especificado, 
 perteneciente a la cohorte nacida en $t-c$</p>
 <p> $P^{\text{cohorte}\, t - c}=$ es la población total de la cohorte nacida en $t-c$</p>
@@ -817,7 +816,14 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Sexo <br /> Tipo de vacuna: vacunación de recuerdo contra difteria, tétanos y tosferina en la población infantil (DTPa),  vacunación de recuerdo contra neumococo en la población infantil (VNC), segunda dosis de la vacuna frente  a sarampión, rubeola y parotiditis en la población infantil (SRP) y segunda dosis de la vacuna frente  al virus del papiloma humano (VPH) en adolescentes.</p>
+            <p>Sexo
+Tipo de vacuna:</p>
+<ul>
+  <li>vacunación de recuerdo contra difteria, tétanos y tosferina en la población infantil (DTPa)</li>
+  <li>vacunación de recuerdo contra neumococo en la población infantil (VNC),</li>
+  <li>segunda dosis de la vacuna frente a sarampión, rubeola y parotiditis en la población infantil (SRP)</li>
+  <li>segunda dosis de la vacuna frente al virus del papiloma humano (VPH) en adolescentes.</li>
+</ul>
 
           
         </td>
@@ -850,7 +856,8 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <td>
           
             
-<p>Los resultados facilitados se obtienen utilizando las definiciones propuestas por la Ponencia de Programa y Registro de Vacunaciones y acordadas por la Comisión de Salud Pública en octubre de 2017. Desde entonces,  las coberturas de vacunación se calculan por cohortes de nacimiento de la población. No se incluyen las vacunas  adquiridas en oficinas de farmacia ni las administradas por el sector sanitario privado.</p>
+<p>Los resultados facilitados se obtienen utilizando las definiciones propuestas por la  Ponencia de Programa y Registro de Vacunaciones y acordadas por la Comisión de Salud  Pública en octubre de 2017. Desde entonces, las coberturas de vacunación se calculan  por cohortes de nacimiento de la población.</p>
+<p>No se incluyen las vacunas adquiridas en oficinas de farmacia ni las  administradas por el sector sanitario privado.</p>
 
           
         </td>
@@ -953,7 +960,7 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            November 05, 2024
+            November 10, 2024
           
         </td>
         </tr>
@@ -1074,23 +1081,8 @@ perteneciente a la cohorte nacida en $t-c$</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Description </th>
-        <td>
-          
-            <p>Cobertura de la vacuna DTP (tercera dosis): porcentaje de lactantes supervivientes que recibieron  las 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina en un año determinado.</p>
-<p>Cobertura de la vacuna contra el sarampión (segunda dosis): porcentaje de niños que recibieron dos dosis de la vacuna contra el sarampión según el calendario recomendado a nivel nacional a través de los servicios de vacunación de rutina
- en un año determinado.</p>
-<p>Cobertura de la vacuna antineumocócica conjugada (última dosis del calendario): porcentaje de lactantes  supervivientes que recibieron las dosis de vacuna antineumocócica conjugada recomendadas a nivel nacional en un año determinado.</p>
-<p>Cobertura de la vacuna contra el VPH (última dosis del calendario): porcentaje de niñas de 15 años que recibieron  las dosis recomendadas de la vacuna contra el VPH. Actualmente se utiliza el desempeño del programa en el año  calendario anterior en función del grupo de edad objetivo.</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1099,7 +1091,17 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <th scope="row">Rationale </th>
         <td>
           
-            <p>Este indicador tiene por objeto medir el acceso a las vacunas, incluidas las vacunas recientemente  disponibles o las que se utilizan de forma insuficiente, a nivel nacional. En las últimas décadas, todos los países  han añadido numerosas vacunas nuevas y que se utilizan de forma insuficiente a sus calendarios nacionales de  vacunación y hay varias vacunas en la fase final de desarrollo que se introducirán de aquí a 2030. Para supervisar el  control de enfermedades y el impacto de las vacunas, es importante medir la cobertura de cada vacuna del calendario nacional  de vacunación. Ya existe un sistema para supervisar la cobertura de vacunación de todos los programas nacionales, pero  la medición directa de la proporción de la población cubierta con todas las vacunas del programa solo es posible  si el país cuenta con un registro electrónico nacional de vacunación que funcione bien y permita estimar  fácilmente la cobertura por cohorte. Si bien los países desarrollarán y fortalecerán los registros de vacunación,  es necesario contar con una medición alternativa.</p>
+            <p>Este indicador tiene por objeto medir el acceso a las vacunas, incluidas las vacunas recientemente  disponibles o las que se utilizan de forma insuficiente, a nivel nacional.</p>
+
+<p>En las últimas décadas, todos los países  han añadido numerosas vacunas nuevas y que se utilizan de forma insuficiente a sus calendarios nacionales de  vacunación y hay varias vacunas en la fase final de desarrollo que se introducirán de aquí a 2030. Para supervisar el  control de enfermedades y el impacto de las vacunas, es importante medir la cobertura de cada vacuna del calendario nacional  de vacunación.</p>
+
+<p>Ya existe un sistema para supervisar la cobertura de vacunación de todos los programas nacionales, pero  la medición directa de la proporción de la población cubierta con todas las vacunas del programa solo es posible  si el país cuenta con un registro electrónico nacional de vacunación que funcione bien y permita estimar  fácilmente la cobertura por cohorte.</p>
+<p>Se miden las siguientes vacunas:</p>
+<p>Cobertura de la vacuna DTP (tercera dosis): porcentaje de lactantes supervivientes que recibieron  las 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina en un año determinado.</p>
+<p>Cobertura de la vacuna contra el sarampión (segunda dosis): porcentaje de niños que recibieron dos dosis de la vacuna contra el sarampión según el calendario recomendado a nivel nacional a través de los servicios de vacunación de rutina
+ en un año determinado.</p>
+<p>Cobertura de la vacuna antineumocócica conjugada (última dosis del calendario): porcentaje de lactantes  supervivientes que recibieron las dosis de vacuna antineumocócica conjugada recomendadas a nivel nacional en un año determinado.</p>
+<p>Cobertura de la vacuna contra el VPH (última dosis del calendario): porcentaje de niñas de 15 años que recibieron  las dosis recomendadas de la vacuna contra el VPH. Actualmente se utiliza el desempeño del programa en el año  calendario anterior en función del grupo de edad objetivo.</p>
 
           
         </td>
@@ -1151,7 +1153,7 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-0b-01.pdf">Metadata 3-b-1.pdf (solo en inglés)</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-0b-01.pdf">Metadata 3-b-1.pdf</a> (solo en inglés)</p>
 
           
         </td>
@@ -1219,7 +1221,7 @@ perteneciente a la cohorte nacida en $t-c$</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241110103820'></script>
+<script src='/site/assets/js/sdg.js?v=20241110125651'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1241,7 +1243,7 @@ perteneciente a la cohorte nacida en $t-c$</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241110103820"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241110125651"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

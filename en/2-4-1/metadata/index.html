@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110103820">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110125651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -510,7 +510,7 @@ data-event-label="high"
     // Set values according to this site's configuration.
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_disponible', "Proporción de la superficie agrícola en que se practica una agricultura productiva y sostenible");
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.2-4-1-titulo");
         var propertyEditor = editor.getEditor('root.indicador_disponible');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -636,23 +636,11 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('descripcion_global', "<p>El indicador 2.4.1 de los ODS se basa en un conjunto de subindicadores \nque cubren las tres dimensiones de la sostenibilidad:<br>\n- Valor de la producción agrícola por hectárea <br>\n- Ingresos agrícolas netos <br>\n- Mecanismos de mitigación de riesgos <br>\n- Prevalencia de la degradación del suelo <br>\n- Variación en la disponibilidad de agua <br>\n- Gestión de fertilizantes <br>\n- Gestión de pesticidas <br>\n- Uso de prácticas que apoyan la agrobiodiversidad <br>\n- Salarios en la agricultura <br>\n- Escala de experiencia (FIES) <br>\n- Tenencia de la tierra <br>\n- Derechos de tenencia seguros de la tierra</p>\n\n<p>El indicador \"Superficie dedicada a la agricultura ecológica\" forma parte del \nconjunto de indicadores de los Objetivos de Desarrollo Sostenible (ODS) \nde la UE, y está incluido en las Prioridades de la Comisión Europea bajo el Acuerdo Verde Europeo. \nEl indicador mide la proporción del área agrícola utilizada (SAU) total ocupada por la \nagricultura orgánica (áreas existentes cultivadas orgánicamente y áreas en proceso de conversión).</p>\n");
-        var propertyEditor = editor.getEditor('root.descripcion_global');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: descripcion_global');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Los enfoques para definir la agricultura sostenible varían  en términos de su cobertura de las tres dimensiones principales de la  sostenibilidad, es decir, económica, ambiental y social, y en términos  de la escala que se utiliza para evaluar la sostenibilidad, es decir, desde  escalas de campo y granja hasta escalas nacional y global. Algunos enfoques consideran diferentes características de la sostenibilidad, por ejemplo,  si las prácticas actuales son económicamente viables, respetuosas con el  medio ambiente y socialmente deseables. Otros enfoques se centran en prácticas particulares como la agricultura orgánica, regenerativa o de bajos insumos y  pueden equipararlas con la agricultura sostenible.</p>\n<p>Si bien la agricultura orgánica no se menciona explícitamente en la  Agenda 2030, la UE considera la agricultura orgánica como un método de  producción que pone el mayor énfasis en la protección del medio ambiente  y la vida silvestre y, con respecto a la producción ganadera, en consideraciones  de bienestar animal. Evita o reduce en gran medida el uso de insumos químicos  sintéticos como fertilizantes, pesticidas, aditivos y productos médicos.  Está prohibida la producción de organismos genéticamente modificados (OGM) y  su uso en la alimentación animal.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\n<p>Los enfoques para definir la agricultura sostenible varían  en términos de su cobertura de las tres dimensiones principales de la  sostenibilidad, es decir, económica, ambiental y social, y en términos  de la escala que se utiliza para evaluar la sostenibilidad, es decir, desde  escalas de campo y granja hasta escalas nacional y global. Algunos enfoques consideran diferentes características de la sostenibilidad, por ejemplo,  si las prácticas actuales son económicamente viables, respetuosas con el  medio ambiente y socialmente deseables. Otros enfoques se centran en prácticas particulares como la agricultura orgánica, regenerativa o de bajos insumos y  pueden equipararlas con la agricultura sostenible.</p>\n\n<p>El indicador 2.4.1 de los ODS se basa en un conjunto de subindicadores  que cubren las tres dimensiones de la sostenibilidad:<br> - Valor de la producción agrícola por hectárea <br> - Ingresos agrícolas netos <br> - Mecanismos de mitigación de riesgos <br> - Prevalencia de la degradación del suelo <br> - Variación en la disponibilidad de agua <br> - Gestión de fertilizantes <br> - Gestión de pesticidas <br> - Uso de prácticas que apoyan la agrobiodiversidad <br> - Salarios en la agricultura <br> - Escala de experiencia (FIES) <br> - Tenencia de la tierra <br> - Derechos de tenencia seguros de la tierra</p>\n<p>Si bien la agricultura orgánica no se menciona explícitamente en la  Agenda 2030, la UE considera la agricultura orgánica como un método de  producción que pone el mayor énfasis en la protección del medio ambiente  y la vida silvestre y, con respecto a la producción ganadera, en consideraciones  de bienestar animal. Evita o reduce en gran medida el uso de insumos químicos  sintéticos como fertilizantes, pesticidas, aditivos y productos médicos.  Está prohibida la producción de organismos genéticamente modificados (OGM) y  su uso en la alimentación animal.</p>\n<p>El indicador \"Superficie dedicada a la agricultura ecológica\" forma parte del  conjunto de indicadores de los Objetivos de Desarrollo Sostenible (ODS)  de la UE, y está incluido en las Prioridades de la Comisión Europea bajo el Acuerdo Verde Europeo.  El indicador mide la proporción del área agrícola utilizada (SAU) total ocupada por la  agricultura orgánica (áreas existentes cultivadas orgánicamente y áreas en proceso de conversión).</p>");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01.pdf\">Metadata 2-4-1 (1).pdf (solo en inglés)</a><br> <a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01proxy.pdf\">Metadata 2-4-1 (2).pdf (solo en inglés)</a>");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01.pdf\">Metadata 2-4-1 (1).pdf</a> (solo en inglés)<br> <a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01proxy.pdf\">Metadata 2-4-1 (2).pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-25");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241110103820'></script>
+<script src='/site/assets/js/sdg.js?v=20241110125651'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -894,7 +882,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241110103820"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241110125651"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

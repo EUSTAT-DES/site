@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110103820">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110125651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -636,23 +636,11 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('descripcion_global', "<p>La tasa de mortalidad de menores de cinco años es la probabilidad de que un niño nacido en un año o período específico muera antes alcanzar la edad de 5 años, si está sujeto a las tasas de mortalidad específicas por edad de ese período, expresadas como defunciones por 1.000 nacidos vivos.</p>");
-        var propertyEditor = editor.getEditor('root.descripcion_global');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: descripcion_global');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Las tasas de mortalidad entre los niños pequeños son un indicador clave de resultados para la salud y el bienestar infantil y, en términos más generales, para el desarrollo social y económico. Es un indicador de salud pública muy seguido porque refleja el acceso de los niños y las comunidades a intervenciones sanitarias básicas como vacunación, tratamiento médico de enfermedades infecciosas y nutrición adecuada.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Las tasas de mortalidad entre los niños pequeños son un indicador clave de resultados para la salud y el bienestar infantil y, en términos más generales, para el desarrollo social y económico. Es un indicador de salud pública muy seguido porque refleja el acceso de los niños y las comunidades a intervenciones sanitarias básicas como vacunación, tratamiento médico de enfermedades infecciosas y nutrición adecuada.</p>\n<p>La tasa de mortalidad de menores de cinco años es la probabilidad de que un niño nacido en un año o período específico muera antes alcanzar la edad de 5 años, si está sujeto a las tasas de mortalidad específicas por edad de ese período, expresadas como defunciones por 1.000 nacidos vivos.</p>");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-02-01.pdf\">Metadata 3-2-1.pdf (solo en inglés)</a>");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-02-01.pdf\">Metadata 3-2-1.pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-31");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241110103820'></script>
+<script src='/site/assets/js/sdg.js?v=20241110125651'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -894,7 +882,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241110103820"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241110125651"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

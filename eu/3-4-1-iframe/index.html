@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110103820">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241110125651">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -804,15 +804,21 @@ data-event-label="Change to indicator.global_metadata tab"
             
 <p><b>Tasa de mortalidad prematura atribuida a las enfermedades no transmisibles</b> </p>
 
-<p>$$^{5}M_x = \frac{\text{Muertes totales por cuatro causas de NCD entre la edad exacta } x \text{ y la edad exacta } x+5}{\text{Población total entre la edad exacta } x \text{ y la edad exacta } x+5}$$ </p>
+<p>$$^{5}M_x = \frac{DENT_{x,x+5}^{t}}{PENT_{x,x+5}^{t}}$$ </p>
+
+<p>donde: </p>
+<p>$DENT_{x,x+5}^{t} =$ defunciones atribuidas a las 4 enfermedades no transmisibles
+entre la edad exacta $x$ y la edad exacta $x+5$ en el año $t$</p>
+<p>$P^{t} =$ población entre la edad exacta $x$ y la edad exacta $x+5$ del año $t$</p>
 
 <p><b>Tasa de mortalidad atribuida a las enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias 
 crónicas por cada 100.000 habitantes</b> </p>
 
-<p>$$TM_{NCD}^{t} = \frac{D_{NCD}^{t}}{P^{t}} \cdot 100.000$$  </p>
+<p>$$TM_{ENT}^{t} = \frac{D_{ENT}^{t}}{P^{t}} \cdot 100.000$$  </p>
+
 <p>donde: </p>
-<p>$D_{NCD}^{t} =$ defunciones atribuidas a enfermedades no transmisibles en el año $t$</p>
-<p>P^{t} =$ población a 1 de julio del año $t$</p>
+<p>$D_{ENT}^{t} =$ defunciones atribuidas a enfermedades no transmisibles en el año $t$</p>
+<p>$P^{t} =$ población a 1 de julio del año $t$</p>
 
           
         </td>
@@ -828,7 +834,7 @@ crónicas por cada 100.000 habitantes</b> </p>
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Sexo <br /> Enfermedad no transmisible (NCD): enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias  crónicas</p>
+            <p>Sexo <br /> Enfermedad no transmisible (ENT): enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias  crónicas</p>
 
           
         </td>
@@ -970,7 +976,7 @@ crónicas por cada 100.000 habitantes</b> </p>
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2024 azaroa 04
+            2024 azaroa 10
           
         </td>
         </tr>
@@ -1091,19 +1097,8 @@ crónicas por cada 100.000 habitantes</b> </p>
       
       
       
-      
-      <tr>
-        <th scope="row">Deskribapena </th>
-        <td>
-          
-            <p>Tasa de mortalidad atribuida a enfermedades cardiovasculares, cáncer, diabetes o enfermedades respiratorias crónicas. Probabilidad de morir entre los 30 y los 70 años por enfermedades cardiovasculares, cáncer, diabetes o enfermedades respiratorias crónicas, definida como el porcentaje de personas de 30 años que morirían antes de cumplir  70 años por enfermedades cardiovasculares, cáncer, diabetes o enfermedades respiratorias crónicas, suponiendo que experimentaría  las tasas de mortalidad actuales a cualquier edad y no moriría por ninguna otra causa de muerte (por ejemplo, lesiones o VIH/SIDA).</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1118,6 +1113,8 @@ crónicas por cada 100.000 habitantes</b> </p>
  enfermedades respiratorias crónicas son las cuatro causas principales de la carga de NCD. Medir el riesgo de morir 
 por estas cuatro causas principales es importante para evaluar el alcance de la carga de mortalidad prematura por NCD en  una población, suponiendo que experimentaría las tasas de mortalidad actuales a cualquier edad y no moriría por ninguna
  otra causa de muerte (por ejemplo, lesiones o VIH/SIDA).</p>
+
+<p>La tasa de mortalidad atribuida a enfermedades cardiovasculares, cáncer, diabetes o  enfermedades respiratorias crónicas es la probabilidad de morir entre los 30 y los 70 años  por enfermedades cardiovasculares, cáncer, diabetes o enfermedades respiratorias crónicas, definida como el porcentaje de personas de 30 años que morirían antes de cumplir  70 años por enfermedades cardiovasculares, cáncer, diabetes o enfermedades respiratorias crónicas, suponiendo que experimentaría  las tasas de mortalidad actuales a cualquier edad y no moriría por ninguna otra causa de muerte (por ejemplo, lesiones o VIH/SIDA).</p>
 
           
         </td>
@@ -1165,7 +1162,7 @@ por estas cuatro causas principales es importante para evaluar el alcance de la 
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-01.pdf">Metadata 3-4-1.pdf (solo en inglés)</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-01.pdf">Metadata 3-4-1.pdf</a> (solo en inglés)</p>
 
           
         </td>
@@ -1233,7 +1230,7 @@ por estas cuatro causas principales es importante para evaluar el alcance de la 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241110103820'></script>
+<script src='/site/assets/js/sdg.js?v=20241110125651'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1255,7 +1252,7 @@ por estas cuatro causas principales es importante para evaluar el alcance de la 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241110103820"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241110125651"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
