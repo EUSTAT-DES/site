@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241111091047">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241111100027">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -510,7 +510,7 @@ data-event-label="high"
     // Set values according to this site's configuration.
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_disponible', "Emisiones de amoníaco de la agricultura y ganadería");
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.2-4-E1-titulo");
         var propertyEditor = editor.getEditor('root.indicador_disponible');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<p>$$ENH_3_{agricultura y ganadería} = ENH_3_{agricultura}^{t} + ENH_3_{ganadería}^{t} $$ </p>\n<p>donde: </p>\n<p>$ENH_3_{agricultura}^{t} =$ emisiones de $NH_3$ de la agricultura en el año $t$  </p>\n<p>$ENH_3_{ganadería}^{t} =$ emisiones de $NH_3$ de la ganadería en el año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "<p>$$ ENH_3^{t}_{\\text{agricultura y ganadería}} = ENH_3^{t}_{\\text{agricultura}} + ENH_3^{t}_{\\text{ganadería}} $$ </p>\n<p>donde: </p>\n<p>$ENH_3^{t}_{\\text{agricultura}} =$ emisiones de $NH_3$ de la agricultura en el año $t$  </p>\n<p>$ENH_3^{t}_{\\text{ganadería}} =$ emisiones de $NH_3$ de la ganadería en el año $t$</p>\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Actividad agrícola_ agricultura y ganadería");
+        var currentValue = normalizeCurrentValue('desagregacion', "Actividad agrícola: agricultura y ganadería");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241111091047'></script>
+<script src='/site/assets/js/sdg.js?v=20241111100027'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -882,7 +882,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241111091047"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241111100027"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
