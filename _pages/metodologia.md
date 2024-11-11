@@ -113,7 +113,7 @@ A continuación, se asigna una puntuación al indicador según los siguientes cr
 </tbody>
 </table>
 
-
+<br><br> 
 <p>Si el descenso es deseable:</p>
 
 
