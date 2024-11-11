@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241111172345">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241111191425">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1014,12 +1014,12 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>$$MPL_{t,n,s} = \frac{MP_{n,s,t}}{P_{15,t}}$$</p>
+<p>$$PPN2_{competencia}^{t} = \frac{PN2_{competencia}^{t}}{P_{15}^{t}}$$</p>
 
 <p>donde:</p>
 
-<p> $MP_{t,n,s} =$ número de personas de 15 años que han alcanzado o superado el 
-nivel mínimo de competencia del nivel de educación $n$ en la materia $s$ en el año $t$</p>
+<p> $PN2_{competencia}^{t} =$ número de personas de 15 años que han alcanzado o superado el 
+nivel mínimo de competencia del nivel de educación 2 en la materia o competencia en el año $t$</p>
 <p> $P_{15}^{t} =$ población de 15 años en el año $t$</p>
 
           
@@ -1036,7 +1036,7 @@ nivel mínimo de competencia del nivel de educación $n$ en la materia $s$ en el
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Sexo <br /> Tipo de competencia (materia): Comprensión lectora y matemáticas.</p>
+            <p>Sexo <br /> Tipo de competencia (materia): Comprensión lectora, matemáticas</p>
 
           
         </td>
@@ -1068,14 +1068,36 @@ nivel mínimo de competencia del nivel de educación $n$ en la materia $s$ en el
         <th scope="row">Observations </th>
         <td>
           
-            <p>El Programa para la evaluación internacional de los estudiantes utiliza un sistema de puntuaciones, donde no hay una puntuación máxima ni mínima. Los resultados se escalan de manera que respondan a una distribución normal con una media de 500 puntos y una desviación típica de 100 puntos. Para ayudar a interpretar esas puntuaciones, se establecen categorías de competencia en lectura:</p>
+            
+<p>El Programa para la evaluación internacional de los estudiantes utiliza un sistema de puntuaciones, donde no hay una puntuación máxima ni mínima. Los resultados se escalan de manera que respondan a una distribución normal con una media de 500 puntos y una desviación típica de 100 puntos. Para ayudar a interpretar esas puntuaciones, se establecen categorías de competencia en lectura:</p>
+
 <ul>
-  <li>Inferior al nivel 1c: puntuación inferior a 189,33 - Nivel 1c: puntuación entre 189,33 y 262,03 - Nivel 1b: puntuación entre 262,04 y 334,74 - Nivel 1a: puntuación entre 334,75 y 407,46 - Nivel 2: puntuación entre 407,47 y 480,17 - Nivel 3: puntuación entre 480,18 y 552,88 - Nivel 4: puntuación entre 552,89 y 625,60 - Nivel 5: puntuación entre 625,61 y 698,31 - Nivel 6: puntuación superior a 698,31
-Una persona alcanza al menos el nivel 2 de competencia en lectura cuando, para un texto de extensión media, puede identificar la idea principal, entender las relaciones entre sus partes, interpretar el significado de una parte limitada del texto a través de inferencias básicas, localizar uno o más fragmentos de información atendiendo a múltiples criterios parcialmente implícitos, reflexionar sobre el propósito general o específico del texto, comparar afirmaciones y evaluar los razonamientos en que estas se apoyan estableciendo conexiones entre el texto y el conocimiento externo.
-Se establecen categorías de competencia en matemáticas:</li>
-  <li>Inferior al nivel 1: puntuación inferior a 357,77 - Nivel 1: puntuación entre 357,77 y 420,06 - Nivel 2: puntuación entre 420,07 y 482,37 - Nivel 3: puntuación entre 482,38 y 544,67 - Nivel 4: puntuación entre 544,68 y 606,98 - Nivel 5: puntuación entre 606,99 y 669,29 - Nivel 6: puntuación superior a 669,29
-Una persona alcanza al menos el nivel 2 de competencia en matemáticas cuando sabe interpretar y reconocer situaciones en contextos que solo requieren una inferencia directa, extraer información pertinente de una sola fuente y hacer uso de un único modo de representación, utilizar algoritmos, fórmulas, procedimientos o convenciones elementales para resolver problemas relacionados con números enteros y efectuar razonamientos directos e interpretaciones literales de los resultados.</li>
+  <li>Inferior al nivel 1c: puntuación inferior a 189,33</li>
+  <li>Nivel 1c: puntuación entre 189,33 y 262,03</li>
+  <li>Nivel 1b: puntuación entre 262,04 y 334,74</li>
+  <li>Nivel 1a: puntuación entre 334,75 y 407,46</li>
+  <li>Nivel 2: puntuación entre 407,47 y 480,17</li>
+  <li>Nivel 3: puntuación entre 480,18 y 552,88</li>
+  <li>Nivel 4: puntuación entre 552,89 y 625,60</li>
+  <li>Nivel 5: puntuación entre 625,61 y 698,31</li>
+  <li>Nivel 6: puntuación superior a 698,31</li>
 </ul>
+
+<p>Una persona alcanza al menos el nivel 2 de competencia en lectura cuando, para un texto de extensión media, puede identificar la idea principal, entender las relaciones entre sus partes, interpretar el significado de una parte limitada del texto a través de inferencias básicas, localizar uno o más fragmentos de información atendiendo a múltiples criterios parcialmente implícitos, reflexionar sobre el propósito general o específico del texto, comparar afirmaciones y evaluar los razonamientos en que estas se apoyan estableciendo conexiones entre el texto y el conocimiento externo.</p>
+
+<p>Se establecen categorías de competencia en matemáticas:</p>
+
+<ul>
+  <li>Inferior al nivel 1: puntuación inferior a 357,77</li>
+  <li>Nivel 1: puntuación entre 357,77 y 420,06</li>
+  <li>Nivel 2: puntuación entre 420,07 y 482,37</li>
+  <li>Nivel 3: puntuación entre 482,38 y 544,67</li>
+  <li>Nivel 4: puntuación entre 544,68 y 606,98</li>
+  <li>Nivel 5: puntuación entre 606,99 y 669,29</li>
+  <li>Nivel 6: puntuación superior a 669,29</li>
+</ul>
+
+<p>Una persona alcanza al menos el nivel 2 de competencia en matemáticas cuando sabe interpretar y reconocer situaciones en contextos que solo requieren una inferencia directa, extraer información pertinente de una sola fuente y hacer uso de un único modo de representación, utilizar algoritmos, fórmulas, procedimientos o convenciones elementales para resolver problemas relacionados con números enteros y efectuar razonamientos directos e interpretaciones literales de los resultados.</p>
 
           
         </td>
@@ -1179,7 +1201,7 @@ Una persona alcanza al menos el nivel 2 de competencia en matemáticas cuando sa
         <th scope="row">Metadata last updated </th>
         <td>
           
-            November 09, 2024
+            November 11, 2024
           
         </td>
         </tr>
@@ -1483,7 +1505,7 @@ Una persona alcanza al menos el nivel 2 de competencia en matemáticas cuando sa
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241111172345'></script>
+<script src='/site/assets/js/sdg.js?v=20241111191425'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1505,7 +1527,7 @@ Una persona alcanza al menos el nivel 2 de competencia en matemáticas cuando sa
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241111172345"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241111191425"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
