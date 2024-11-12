@@ -1,5 +1,5 @@
 ---
-title: Sistema de Indicadores
+title: Indicadores de Desarrollo Sostenible
 language: es
 permalink: /faq/
 layout: page
