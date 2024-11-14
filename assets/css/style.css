@@ -2886,17 +2886,20 @@ ul.iconillo {
 .barritaizquierda {
   border-left: 1px solid white; }
 
-.tag-municipal {
-  background-color: #f5d81d !important; }
+.tag-municipio {
+  background-color: #f5c92a !important; }
 
-.tag-territorial {
-  background-color: #dda045 !important; }
+.tag-territorio-historico {
+  background-color: #f5c92a !important; }
 
-.tag-europeo {
-  background-color: #42b015 !important; }
+.tag-indicador-europeo {
+  background-color: #2B2B2B !important; }
+
+.tag-indicador-gobierno-vasco {
+  background-color: #2B2B2B !important; }
 
 .tag-sexo {
-  background-color: #f5d81d !important; }
+  background-color: #f5c92a !important; }
 
 .alcanzado {
   background-color: #45ba80; }
