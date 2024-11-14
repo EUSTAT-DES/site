@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241114094605">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241114105503">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -508,36 +508,192 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "Arriskurik gabe kudeatzen diren ura hornitzeko zerbitzuak erabiltzen dituen biztanleriaren proportzioa");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "6.1 2030. urterako, ur edangarria lortzeko aukera unibertsala eta bidezkoa izan dadila lortzea, denontzako prezio egokian");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "6 Uraren eskuragarritasuna eta kudeaketa jasangarria nahiz guztiontzako saneamendua bermatzea");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "La proporción de la población que utiliza servicios de agua potable gestionados  de forma segura se define como la proporción de la población que utiliza una  fuente de agua potable mejorada a la que se puede acceder en las instalaciones,  está disponible cuando se la necesita y está libre de contaminación fecal y  química prioritaria. Las fuentes de agua potable “mejoradas” incluyen: suministro  por tuberías, pozos perforados y entubados, pozos excavados protegidos,  manantiales protegidos, agua de lluvia, quioscos de agua y agua envasada y  entregada a domicilio.");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPC^{t} = \\frac{PC^{t}}{P^{t}} \\cdot 100$$\ndonde:\n$PC^{t} =$ población que recibe suministro de agua con cobertura del  Sistema Nacional de Aguas de Consumo en el año $t$\n$P{t} =$ población a 1 de enero del año $t$");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('desagregacion', "");
+        var propertyEditor = editor.getEditor('root.desagregacion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: desagregacion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('observaciones', "");
+        var propertyEditor = editor.getEditor('root.observaciones');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: observaciones');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('texto_oceca', "<img src=\"/site/assets/img/oceca/ocecas_image.png\" style=\"width: 200px; float: left; margin-right: 10px;\" alt=\"Logotipo OCECAS\"> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
+        var propertyEditor = editor.getEditor('root.texto_oceca');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: texto_oceca');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl acceso al agua potable es esencial para la buena salud, el bienestar y  la productividad y es ampliamente reconocido como un derecho humano. El  agua potable puede estar contaminada con heces humanas o animales que  contienen patógenos o con contaminantes químicos y físicos, lo que  produce efectos nocivos para la salud. \nSi bien mejorar la calidad del agua es fundamental para prevenir  la transmisión de muchas enfermedades (como la diarrea, que exacerba la  malnutrición y sigue siendo una de las principales causas mundiales de  muerte infantil), mejorar la accesibilidad y disponibilidad del agua potable  es igualmente importante para la salud y el bienestar, en particular para  las mujeres y las niñas, que a menudo son las principales responsables de  recoger agua potable de fuentes distantes.\nEl indicador 6.1.1 de los ODS está diseñado para abordar la gestión segura  de los servicios de agua potable, incluidas las dimensiones de  accesibilidad, disponibilidad y calidad.");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var propertyEditor = editor.getEditor('root.comparabilidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: comparabilidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.1.1&seriesCode=SH_H2O_SAFE&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAREA\">Proporción de la población que utiliza servicios de agua potable gestionados de forma segura(%) SH_H2O_SAFE</a> UNSTATS");
+        var propertyEditor = editor.getEditor('root.dato_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dato_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-06-01-01.pdf\">Metadata 6-1-1.pdf</a> (solo en inglés)");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -562,8 +718,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-09-11");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-14");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -682,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241114094605'></script>
+<script src='/site/assets/js/sdg.js?v=20241114105503'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -704,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241114094605"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241114105503"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

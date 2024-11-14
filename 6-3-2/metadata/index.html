@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241114094605">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241114105503">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -508,36 +508,192 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "Proporción de masas de agua de buena calidad");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "6.3 De aquí a 2030, mejorar la calidad del agua reduciendo la contaminación, eliminando el vertimiento y minimizando la emisión de productos químicos y materiales peligrosos, reduciendo a la mitad el porcentaje de aguas residuales sin tratar y aumentando considerablemente el reciclado y la reutilización sin riesgos a nivel mundial");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "6 Garantizar la disponibilidad y la gestión sostenible del agua y el saneamiento para todos");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "\nEl indicador se define como la proporción de cuerpos de agua en un territorio que \ntienen una buena calidad ambiental del agua. La calidad ambiental del agua \nse refiere al agua natural, no tratada, en ríos, lagos y aguas subterráneas \ny representa una combinación de influencias naturales junto con los impactos \nde todas las actividades antropogénicas.\n\nEl indicador se basa en datos de calidad del agua derivados de mediciones \nin situ y el análisis de muestras recolectadas de aguas superficiales y \nsubterráneas. La calidad del agua se evalúa por medio de parámetros \nfísicos y químicos básicos que reflejan la calidad natural del agua \nrelacionada con factores climatológicos y geológicos, junto con los \nprincipales impactos en la calidad del agua.\n");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "\n$$PMABC^{t} = \\frac{MBC_{agua^{t}}{M_{agua}^{t}} \\cdot 100$$\n\ndonde:\n\n$MBC_{agua^{t} =$ masas de agua de buena calidad en el año $t$\n\n$M_{agua}^{t} =$ masas de agua en el año $t$\n");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('desagregacion', "");
+        var propertyEditor = editor.getEditor('root.desagregacion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: desagregacion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('observaciones', "");
+        var propertyEditor = editor.getEditor('root.observaciones');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: observaciones');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('texto_oceca', "<img src=\"/site/assets/img/oceca/ocecas_image.png\" style=\"width: 200px; float: left; margin-right: 10px;\" alt=\"Logotipo OCECAS\"> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
+        var propertyEditor = editor.getEditor('root.texto_oceca');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: texto_oceca');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa buena calidad del agua ambiental es esencial para proteger los \necosistemas acuáticos y los servicios que prestan, entre ellos: \nla preservación de la biodiversidad; la protección de la salud humana \ndurante el uso recreativo y mediante el suministro de agua potable; \nel apoyo a la nutrición humana mediante el suministro de peces y agua \npara riego; la facilitación de una variedad de actividades económicas; \ny el fortalecimiento de la resiliencia de las personas frente a los \ndesastres relacionados con el agua. Por lo tanto, la buena calidad del agua \nambiental está estrechamente vinculada al logro de muchos otros \nObjetivos de Desarrollo Sostenible.\n\nLa meta 6.3 tiene por objeto mejorar la calidad del agua y el \nindicador 6.3.2 proporciona un mecanismo para determinar si las medidas de \ngestión de la calidad del agua están contribuyendo a la mejora de la calidad \ndel agua a lo largo del tiempo y en qué medida. El indicador también \nestá directamente vinculado con el indicador 6.3.1 sobre el tratamiento \nde aguas residuales porque el tratamiento inadecuado de las aguas \nresiduales conduce a la degradación de la calidad de las aguas que \nreciben los efluentes de aguas residuales. \n\nInforma directamente sobre el progreso hacia la meta 6.3 y \nestá fuertemente vinculada a la meta 6.6 sobre ecosistemas relacionados \ncon el agua, así como a la meta 14.1 sobre contaminación \nmarina (eutrofización costera).\n");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var propertyEditor = editor.getEditor('root.comparabilidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: comparabilidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.3.2&seriesCode=EN_H2O_OPAMBQ&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de cuerpos de agua abiertos con buena calidad de agua ambiental (%) EN_H2O_OPAMBQ</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.3.2&seriesCode=EN_H2O_RVAMBQ&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de cuerpos de agua fluviales con buena calidad ambiental del agua (%) EN_H2O_RVAMBQ</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.3.2&seriesCode=EN_H2O_GRAMBQ&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de masas de agua subterránea con buena calidad de agua ambiental (%) EN_H2O_GRAMBQ</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.3.2&seriesCode=EN_H2O_WBAMBQ&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de masas de agua con buena calidad ambiental del agua (%) EN_H2O_WBAMBQ</a> UNSTATS\n");
+        var propertyEditor = editor.getEditor('root.dato_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dato_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-06-03-02.pdf\">Metadata 6-3-2.pdf</a> (solo en inglés)");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -562,8 +718,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-09-11");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-14");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -682,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241114094605'></script>
+<script src='/site/assets/js/sdg.js?v=20241114105503'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -704,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241114094605"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241114105503"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
