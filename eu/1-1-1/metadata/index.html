@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241118120529">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241118123154">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -554,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas con ingresos por unidad de consumo por debajo del  umbral internacional de la pobreza, actualmente fijada en 2,15 dólares al día  a precios internacionales de 2017 ");
+        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas con ingresos por unidad de consumo por debajo del \numbral internacional de la pobreza, actualmente fijada en 2,15 dólares al día \na precios internacionales de 2017 \n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<p>$$PP_{UIP}^{t} = \\frac{P_{UIP}^{t}}{P^{t}} \\cdot 100$$ </p>\n\n\n<p>donde: </p>\n<p>$P_{UIP}^{t} =$ población con ingresos por debajo del umbral internacional de la pobreza en el año $t$ </p>\n<p>$P^{t} =$ población total en el año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PP_{UIP}^{t} = \\frac{P_{UIP}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$P_{UIP}^{t} =$ población con ingresos por debajo del umbral internacional de la pobreza en el año $t$\n\n$P^{t} =$ población total en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -610,7 +610,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "<p>El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.</p>");
+        var currentValue = normalizeCurrentValue('observaciones', "El número de unidades de consumo de un hogar\nse calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la\nprimera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o\nmás años y un peso de 0,3 a las personas de menos de 14 años.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -628,7 +628,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Las líneas de pobreza nacionales varían en términos de su poder adquisitivo  y tienen un fuerte gradiente económico, de modo que los países más ricos tienden  a adoptar estándares de vida más altos al definir la pobreza. </p>\n<p>En cambio, las líneas de pobreza internacionales intentan  mantener constante el valor real de la línea de pobreza en todos los países  y a lo largo del tiempo. Para el Informe sobre el desarrollo mundial de 1990  se eligió el estándar comúnmente utilizado de 1 dólar por día, medido en  precios internacionales de 1985 y ajustado a la moneda local utilizando  tipos de cambio de paridad del poder adquisitivo (PPA), porque era  típico de las líneas de pobreza en los países de bajos ingresos en ese momento.</p>\n<p>A medida que evolucionan las diferencias en el coste de vida en todo el mundo, la línea internacional de pobreza debe actualizarse periódicamente utilizando nuevos datos de precios PPA para reflejar estos cambios.  El último cambio se produjo en septiembre de 2022, cuando el Banco Mundial  adoptó 2,15 dólares como umbral de pobreza internacional utilizando la PPA de 2017.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Las líneas de pobreza nacionales varían en términos de su poder adquisitivo \ny tienen un fuerte gradiente económico, de modo que los países más ricos tienden \na adoptar estándares de vida más altos al definir la pobreza.\n\nEn cambio, las líneas de pobreza internacionales intentan \nmantener constante el valor real de la línea de pobreza en todos los países \ny a lo largo del tiempo. Para el Informe sobre el desarrollo mundial de 1990 \nse eligió el estándar comúnmente utilizado de 1 dólar por día, medido en \nprecios internacionales de 1985 y ajustado a la moneda local utilizando \ntipos de cambio de paridad del poder adquisitivo (PPA), porque era \ntípico de las líneas de pobreza en los países de bajos ingresos en ese momento.\n\nA medida que evolucionan las diferencias en el coste de vida en todo el mundo,\nla línea internacional de pobreza debe actualizarse periódicamente\nutilizando nuevos datos de precios PPA para reflejar estos cambios. \nEl último cambio se produjo en septiembre de 2022, cuando el Banco Mundial \nadoptó 2,15 dólares como umbral de pobreza internacional utilizando la PPA de 2017.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -660,7 +660,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-01-01a.pdf\">Metadata 1-1-1 (1).pdf</a> (solo en inglés) <br> <a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-01-01b.pdf\">Metadata 1-1-1 (2).pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-01-01a.pdf\">Metadata 1-1-1 (1).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-01-01b.pdf\">Metadata 1-1-1 (2).pdf</a> (solo en inglés)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -710,7 +710,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-18");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -838,7 +838,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241118120529'></script>
+<script src='/site/assets/js/sdg.js?v=20241118123154'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -860,7 +860,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241118120529"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241118123154"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

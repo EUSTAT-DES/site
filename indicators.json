@@ -2236,6 +2236,38 @@
           "keywords": "",
           "href": "/site/OCECA-1-2-1-1/",
           "status": "progreso"
+        },
+        {
+          "id": "OCECA-010201-1A",
+          "title": "Proporción de personas en riesgo de pobreza relativa, considerando el umbral nacional de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-010201-1A/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-010201-2A",
+          "title": "Proporción de personas en riesgo de pobreza relativa con alquiler imputado, considerando el umbral nacional de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-010201-2A/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-010201-2B",
+          "title": "Proporción de personas en riesgo de pobreza relativa con alquiler imputado, considerando el umbral autonómico de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-010201-2B/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-010202-1A",
+          "title": "Proporción de personas en riesgo de pobreza o exclusión social: indicador AROPE, considerando el umbral nacional de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-010202-1A/",
+          "status": "complete"
         }]
     }
   }]
