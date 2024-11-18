@@ -25,7 +25,13 @@ country:
 create_goals:
   layout: goal-with-progress
   previous_next_links: true
-  goals: []
+  goals:
+  goals:
+    - goal: 1
+      content: >-
+        Los indicadores desglosados por ámbito territorial o por sexo se muestran en etiquetas amarillas. Se indica el máximo desglose territorial, si existen
+        datos a nivel territorial inferior a la C.A. de Euskadi (territorio histórico, comarca, municipio). 
+        Se indican por medio de etiquetas verdes los indicadores europeos y del gobierno vasco.
 create_indicators:
   previous_next_links: true
 create_pages:
