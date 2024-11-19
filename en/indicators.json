@@ -2225,8 +2225,8 @@
   },
   {
     "goal": {
-      "id": "OCECA",
-      "title": "global_goals.OCECA-title",
+      "id": "",
+      "title": "",
       "indicators": [
         
         {
@@ -2283,22 +2283,6 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/OCECA-010A01-02/",
-          "status": "complete"
-        },
-        {
-          "id": "OCECA-010A201-01",
-          "title": "global_indicators.OCECA-010A201-01-title",
-          "description": "",
-          "keywords": "",
-          "href": "/site/en/OCECA-010A201-01/",
-          "status": "complete"
-        },
-        {
-          "id": "OCECA-010A201-02",
-          "title": "global_indicators.OCECA-010A201-02-title",
-          "description": "",
-          "keywords": "",
-          "href": "/site/en/OCECA-010A201-02/",
           "status": "complete"
         }]
     }
