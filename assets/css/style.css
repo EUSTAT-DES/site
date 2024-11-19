@@ -2887,10 +2887,10 @@ ul.iconillo {
   border-left: 1px solid white; }
 
 .tag-municipio {
-  background-color: #802287 !important; }
+  background-color: #f2d338 !important; }
 
 .tag-territorio {
-  background-color: #802287 !important; }
+  background-color: #f2d338 !important; }
 
 .tag-europeo {
   background-color: #2B2B2B !important; }
@@ -2899,7 +2899,10 @@ ul.iconillo {
   background-color: #2B2B2B !important; }
 
 .tag-sexo {
-  background-color: #802287 !important; }
+  background-color: #f2d338 !important; }
+
+.tag-territorial {
+  background-color: #f2d338 !important; }
 
 .alcanzado {
   background-color: #45ba80; }
