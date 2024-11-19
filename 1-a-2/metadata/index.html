@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119120827">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119122014">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<p>$$PG_{servicios}^{t} = \\frac{G_{servicios}^{t}}{G^{t}} \\cdot 100$$</p>\n<p>donde: </p>\n<p>$G_{servicios}^{t} =$ gasto de las administraciones públicas que se dedica a servicios esenciales, grupos funcionales 07, 09 y 10 de la \nClasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>\n<p>$G^{t} =$ gasto total de las administraciones públicas en el año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PG_{servicios\\, esenciales}^{t} = \\frac{G_{servicios\\, esenciales}^{t}}{G^{t}} \\cdot 100$$\n\ndonde:\n\n$G_{servicios\\, esenciales}^{t} =$ gasto de las administraciones públicas que se dedica a servicios esenciales, grupos funcionales 07, 09 y 10 de la \nClasificación de Funciones del Gobierno (COFOG), en el año $t$\n\n$G^{t} =$ gasto total de las administraciones públicas en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "");
+        var currentValue = normalizeCurrentValue('desagregacion', "Servicios esenciales: educación, salud, protección social");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>El indicador se utiliza para evaluar el gasto del gobierno en servicios esenciales  (educación, salud y protección social) en relación con el monto del gasto gubernamental  total. Dado que proviene de un marco internacional, el Manual de estadísticas de finanzas públicas  (MEFP 2014), proporciona a los analistas un conjunto de datos comparable entre países y garantiza  el establecimiento de conclusiones analíticas sólidas para respaldar el seguimiento de los ODS utilizando datos fiscales.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "El indicador se utiliza para evaluar el gasto del gobierno en servicios esenciales \n(educación, salud y protección social) en relación con el monto del gasto gubernamental \ntotal. Dado que proviene de un marco internacional, el Manual de estadísticas de finanzas públicas \n(MEFP 2014), proporciona a los analistas un conjunto de datos comparable entre países y garantiza \nel establecimiento de conclusiones analíticas sólidas para respaldar el seguimiento de los ODS utilizando\ndatos fiscales.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -684,7 +684,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf\">Metadata 1-a-2 (1).pdf</a> (solo en inglés)<br> <a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf\">Metadata 1-a-2 (2).pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf\">Metadata 1-a-2 (1).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf\">Metadata 1-a-2 (2).pdf</a> (solo en inglés)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-19");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241119120827'></script>
+<script src='/site/assets/js/sdg.js?v=20241119122014'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241119120827"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241119122014"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

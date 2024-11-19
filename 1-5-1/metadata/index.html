@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119120827">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119122014">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<p>$$TM_{desastres}^{t} = \\frac{D_{desastres}^{t}}{P^{t}} \\cdot 100$$ </p>\n<p>donde: </p>\n<p>$D_{desastres}^{t} =$ defunciones atribuidas a desastres naturales (códigos X30-X39 de la CIE-10) en el año $t$ </p>\n<p>$P^{t} =$ población a 1 de julio del año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$TM_{desastres}^{t} = \\frac{D_{desastres}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$D_{desastres}^{t} =$ defunciones atribuidas a desastres naturales (códigos X30-X39 de la CIE-10) en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo <br> Territorio histórico/Comarca/Municipio");
+        var currentValue = normalizeCurrentValue('desagregacion', "Sexo\nTerritorio histórico/Comarca/Municipio\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>El Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030 fue  adoptado por los Estados miembros de las Naciones Unidas en marzo de 2015  como una política global de reducción del riesgo de desastres. </p>\n<p>Entre sus metas se encuentran: </p> <p> Meta A: Reducir sustancialmente la mortalidad global por desastres para  2030, con el objetivo de reducir el promedio de mortalidad global por cada 100.000 habitantes entre  2020-2030 en comparación con 2005-2015</p>\n<p>Meta B: Reducir sustancialmente el número de personas afectadas a nivel mundial para 2030 , con el objetivo de reducir la cifra promedio  mundial por cada 100.000 habitantes  entre 2020 y 2030 en comparación con el período 2005-2015.</p>\n<p>La consecución de sus metas contribuirá al desarrollo sostenible y fortalecerá la  resiliencia económica, social, sanitaria y ambiental.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "El Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030 fue \nadoptado por los Estados miembros de las Naciones Unidas en marzo de 2015 \ncomo una política global de reducción del riesgo de desastres.\n\nEntre sus metas se encuentran:\n\nMeta A: Reducir sustancialmente la mortalidad global por desastres para \n2030, con el objetivo de reducir el promedio de mortalidad global por cada 100.000 habitantes entre \n2020-2030 en comparación con 2005-2015\n\nMeta B: Reducir sustancialmente el número de personas afectadas\na nivel mundial para 2030 , con el objetivo de reducir la cifra promedio \nmundial por cada 100.000 habitantes \nentre 2020 y 2030 en comparación con el período 2005-2015.\n\nLa consecución de sus metas contribuirá al desarrollo sostenible y fortalecerá la \nresiliencia económica, social, sanitaria y ambiental.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -722,7 +722,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-19");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -850,7 +850,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241119120827'></script>
+<script src='/site/assets/js/sdg.js?v=20241119122014'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -872,7 +872,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241119120827"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241119122014"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

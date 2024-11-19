@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119120827">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119122014">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -554,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\n<p>Series disponibles:</p> \n<p><b>Proporción de personas perceptoras de pensiones contributivas:</b> Proporción de la población que es perceptora de pensiones contributivas (% habitantes)</p>\n<p><b>Personas beneficiarias de Renta de Garantía de Ingresos por cada mil habitantes:</b> Número de personas beneficiarias de la Renta de Garantía de Ingresos en el mes de diciembre del año de referencia,  por cada mil habitantes</p> \n<p><b>Plazas en centros residenciales:</b> Plazas en centros residenciales para personas mayores por cada mil personas mayores</p>  \n<p><b>Plazas en centros de día:</b> Plazas en centro de día para personas mayores por cada mil personas mayores</p> ");
+        var currentValue = normalizeCurrentValue('definicion', "\nSeries disponibles: \n\n<b>Proporción de personas perceptoras de pensiones contributivas:</b>\nProporción de la población que es perceptora de pensiones contributivas (% habitantes)\n\n<b>Personas beneficiarias de Renta de Garantía de Ingresos por cada mil habitantes:</b>\nNúmero de personas beneficiarias de la Renta\nde Garantía de Ingresos en el mes de diciembre del año de referencia,  por\ncada mil habitantes\n\n<b>Plazas en centros residenciales:</b>\nPlazas en centros residenciales para personas mayores por cada mil personas mayores \n\n<b>Plazas en centros de día:</b>\nPlazas en centro de día para personas mayores por cada mil personas mayores\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<p><b>Proporción de la población que es perceptora de pensiones\ncontributivas</b> </p>\n\n<p>$$PPPC^{t} = \\frac{PPC^{t}}{P^{t}} \\cdot 100$$ </p>\n\n<p>donde: </p>\n\n<p>$PPC^{t} =$ población perceptora de pensiones contributivas en el año $t$ </p>\n\n<p>$P^{t} =$ población a 1 de julio del año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Proporción de la población que es perceptora de pensiones\ncontributivas</b>\n\n$$PPPC^{t} = \\frac{PPC^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$PPC^{t} =$ población perceptora de pensiones contributivas en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo <br>  Territorio histórico/Comarca/Municipio");
+        var currentValue = normalizeCurrentValue('desagregacion', "Sexo \n\nTerritorio histórico/Comarca/Municipio\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -628,7 +628,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>El indicador de Naciones Unidas pretende reflejar la proporción de personas efectivamente cubiertas por un sistema de protección social,  incluidos los niveles mínimos de protección social. También refleja los principales componentes de la protección social (prestaciones infantiles y de maternidad, apoyo a las personas desempleadas, personas con discapacidad, víctimas  de accidentes laborales y personas mayores). La cobertura efectiva de la protección social se mide por el número  de personas que contribuyen activamente a un plan de seguro social o reciben prestaciones (contributivas o no contributivas).</p>\n<p>El acceso a al menos un nivel básico de protección social durante todo el ciclo de vida es un derecho humano. El principio de universalidad de la protección social evidencia la importancia de los sistemas de protección social  para garantizar condiciones de vida dignas a toda la población, durante toda su vida. La proporción de la población  cubierta por sistemas de protección social proporciona una indicación de hasta qué punto se logra la universalidad  y, por tanto, de cuán seguras son las condiciones de vida de la población.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl indicador de Naciones Unidas pretende reflejar la proporción de personas\nefectivamente cubiertas por un sistema de protección social,  incluidos los\nniveles mínimos de protección social. También refleja los principales\ncomponentes de la protección social (prestaciones infantiles y de maternidad,\napoyo a las personas desempleadas, personas con discapacidad, víctimas  de\naccidentes laborales y personas mayores). La cobertura efectiva de la\nprotección social se mide por el número  de personas que contribuyen\nactivamente a un plan de seguro social o reciben prestaciones (contributivas o\nno contributivas).\n\nEl acceso a al menos un nivel básico de protección social\ndurante todo el ciclo de vida es un derecho humano. El principio de\nuniversalidad de la protección social evidencia la importancia de los sistemas\nde protección social  para garantizar condiciones de vida dignas a toda la\npoblación, durante toda su vida. La proporción de la población  cubierta por\nsistemas de protección social proporciona una indicación de hasta qué punto se\nlogra la universalidad  y, por tanto, de cuán seguras son las condiciones de\nvida de la población.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -656,7 +656,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&seriesCode=SI_COV_CHLD&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX\"> Proporción de niños/hogares que reciben prestaciones en efectivo por hijo/familia, por sexo(%) SI_COV_CHLD</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&seriesCode=SI_COV_CHLD&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX\"> Proporción de niños/hogares que reciben prestaciones en efectivo por hijo/familia, por sexo(%) SI_COV_CHLD</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -672,7 +672,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01a.pdf\">Metadata 1-3-1 (1).pdf</a> (solo en inglés)<br> <a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01b.pdf\">Metadata 1-3-1 (2).pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01a.pdf\">Metadata 1-3-1 (1).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01b.pdf\">Metadata 1-3-1 (2).pdf</a> (solo en inglés)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -722,7 +722,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-19");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -850,7 +850,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241119120827'></script>
+<script src='/site/assets/js/sdg.js?v=20241119122014'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -872,7 +872,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241119120827"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241119122014"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

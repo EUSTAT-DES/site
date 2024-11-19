@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119120827">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241119122014">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -971,10 +971,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>$$PG_{servicios}^{t} = \frac{G_{servicios}^{t}}{G^{t}} \cdot 100$$</p>
-<p>donde: </p>
-<p>$G_{servicios}^{t} =$ gasto de las administraciones públicas que se dedica a servicios esenciales, grupos funcionales 07, 09 y 10 de la 
-Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
+\[PG_{servicios\, esenciales}^{t} = \frac{G_{servicios\, esenciales}^{t}}{G^{t}} \cdot 100\]
+
+<p>donde:</p>
+
+<p>$G_{servicios\, esenciales}^{t} =$ gasto de las administraciones públicas que se dedica a servicios esenciales, grupos funcionales 07, 09 y 10 de la 
+Clasificación de Funciones del Gobierno (COFOG), en el año $t$</p>
+
 <p>$G^{t} =$ gasto total de las administraciones públicas en el año $t$</p>
 
           
@@ -986,8 +989,19 @@ Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Available disaggregations </th>
+        <td>
           
+            <p>Servicios esenciales: educación, salud, protección social</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1105,7 +1119,7 @@ Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            November 10, 2024
+            November 19, 2024
           
         </td>
         </tr>
@@ -1456,7 +1470,12 @@ Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
         <th scope="row">Rationale </th>
         <td>
           
-            <p>El indicador se utiliza para evaluar el gasto del gobierno en servicios esenciales  (educación, salud y protección social) en relación con el monto del gasto gubernamental  total. Dado que proviene de un marco internacional, el Manual de estadísticas de finanzas públicas  (MEFP 2014), proporciona a los analistas un conjunto de datos comparable entre países y garantiza  el establecimiento de conclusiones analíticas sólidas para respaldar el seguimiento de los ODS utilizando datos fiscales.</p>
+            <p>El indicador se utiliza para evaluar el gasto del gobierno en servicios esenciales 
+(educación, salud y protección social) en relación con el monto del gasto gubernamental 
+total. Dado que proviene de un marco internacional, el Manual de estadísticas de finanzas públicas 
+(MEFP 2014), proporciona a los analistas un conjunto de datos comparable entre países y garantiza 
+el establecimiento de conclusiones analíticas sólidas para respaldar el seguimiento de los ODS utilizando
+datos fiscales.</p>
 
           
         </td>
@@ -1509,7 +1528,9 @@ Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf">Metadata 1-a-2 (1).pdf</a> (solo en inglés)<br /> <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf">Metadata 1-a-2 (2).pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf">Metadata 1-a-2 (1).pdf</a> (solo en inglés)</p>
+
+<p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf">Metadata 1-a-2 (2).pdf</a> (solo en inglés)</p>
 
           
         </td>
@@ -1577,7 +1598,7 @@ Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241119120827'></script>
+<script src='/site/assets/js/sdg.js?v=20241119122014'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1599,7 +1620,7 @@ Clasificación de Funciones del Gobierno (COFOG), en el año $t$ </p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241119120827"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241119122014"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

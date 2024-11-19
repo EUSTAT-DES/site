@@ -2225,8 +2225,8 @@
   },
   {
     "goal": {
-      "id": "",
-      "title": "",
+      "id": "OCECA",
+      "title": "global_goals.OCECA-title",
       "indicators": [
         
         {
@@ -2267,6 +2267,38 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-010202-1A/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-010A02-01",
+          "title": "national_indicators.OCECA-010A01-01",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/OCECA-010A01-01/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-010A02-02",
+          "title": "national_indicators.OCECA-010A01-02",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/OCECA-010A01-02/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-010A201-01",
+          "title": "global_indicators.OCECA-010A201-01-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/OCECA-010A201-01/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-010A201-02",
+          "title": "global_indicators.OCECA-010A201-02-title",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/OCECA-010A201-02/",
           "status": "complete"
         }]
     }
