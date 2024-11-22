@@ -947,7 +947,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/8-5-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "8-5-E1",
@@ -1027,15 +1027,15 @@
           "description": "",
           "keywords": "",
           "href": "/site/8-b-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "8-b-E1",
-          "title": "Gasto de las administraciones públicas autonómicas en fomento del empleo",
+          "title": "global_indicators.8-b-E1-title",
           "description": "",
           "keywords": "",
           "href": "/site/8-b-E1/",
-          "status": "noevaluado"
+          "status": "complete"
         }]
     }
   },
