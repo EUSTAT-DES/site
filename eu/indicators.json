@@ -947,7 +947,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/8-5-2/",
-          "status": "alcanzado"
+          "status": "progreso"
         },
         {
           "id": "8-5-E1",
@@ -1028,14 +1028,6 @@
           "keywords": "",
           "href": "/site/eu/8-b-1/",
           "status": "noevaluado"
-        },
-        {
-          "id": "8-b-E1",
-          "title": "global_indicators.8-b-E1-title",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/8-b-E1/",
-          "status": "complete"
         }]
     }
   },
@@ -1051,7 +1043,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/9-1-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "9-1-2",
