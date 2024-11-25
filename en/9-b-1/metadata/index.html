@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241125145722">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241125194242">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -610,7 +610,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nSe consideran actividades manufactureras de media-alta y alta tecnología las actividades \ncon CNAE-2009:\nMedia-alta tecnología\n- 20: Industria química\n- 25.4: Fabricación de armas y municiones\n- 27 a 29: Fabricación de material y equipo eléctrico; Fabricación de maquinaria \ny equipo n.c.o.p;   Fabricación de vehículos de motor, remolques y semirremolques\n- 30 excepto 30.1 y 30.3: Fabricación de otro material de transporte excepto \nconstrucción naval, construcción aeronáutica y espacial y su maquinaria\n- 32.5: Fabricación de instrumentos y suministros médicos y odontológicos\nAlta tecnología\n- 21: Fabricación de productos farmaceúticos\n- 26: Fabricación de productos informáticos, electrónicos y ópticos\n- 30.3: Construcción aeronáutica y espacial y su maquinaria\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nSe consideran actividades manufactureras de media-alta y alta tecnología las actividades \ncon CNAE-2009:\nMedia-alta tecnología\n- 20: Industria química\n- 25.4: Fabricación de armas y municiones\n- 27 a 29: Fabricación de material y equipo eléctrico; Fabricación de maquinaria \ny equipo n.c.o.p;   Fabricación de vehículos de motor, remolques y semirremolques\n- 30 excepto 30.1 y 30.3: Fabricación de otro material de transporte excepto \nconstrucción naval, construcción aeronáutica y espacial y su maquinaria\n- 32.5: Fabricación de instrumentos y suministros médicos y odontológicos\n\nAlta tecnología\n- 21: Fabricación de productos farmaceúticos\n- 26: Fabricación de productos informáticos, electrónicos y ópticos\n- 30.3: Construcción aeronáutica y espacial y su maquinaria\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl desarrollo industrial generalmente implica una transición estructural desde \nactividades basadas en recursos y de baja tecnología a actividades manufactureras de MHT. \n\nUna estructura de producción moderna y altamente compleja ofrece mejores oportunidades \npara el desarrollo de habilidades y la innovación tecnológica. Las actividades \nde MHT generalmente corresponden a las industrias con mayor valor agregado y \nproductividad laboral. El aumento de la participación de los sectores de MHT \ntambién refleja el impacto de la innovación.\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl desarrollo industrial generalmente implica una transición estructural desde \nactividades basadas en recursos y de baja tecnología a actividades manufactureras de MAT. \n\nUna estructura de producción moderna y altamente compleja ofrece mejores oportunidades \npara el desarrollo de habilidades y la innovación tecnológica. Las actividades \nde MHT generalmente corresponden a las industrias con mayor valor agregado y \nproductividad laboral. El aumento de la participación de los sectores de MAT \ntambién refleja el impacto de la innovación.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241125145722'></script>
+<script src='/site/assets/js/sdg.js?v=20241125194242'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241125145722"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241125194242"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
