@@ -843,7 +843,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/7-1-2/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "7-2-1",
@@ -2235,7 +2235,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010201-1A/",
-          "status": "complete"
+          "status": "noevaluado"
         },
         {
           "id": "OCECA-010201-2A",
@@ -2243,7 +2243,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010201-2A/",
-          "status": "complete"
+          "status": "noevaluado"
         },
         {
           "id": "OCECA-010201-2B",
@@ -2251,7 +2251,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010201-2B/",
-          "status": "complete"
+          "status": "noevaluado"
         },
         {
           "id": "OCECA-010202-1A",
@@ -2259,7 +2259,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010202-1A/",
-          "status": "complete"
+          "status": "noevaluado"
         },
         {
           "id": "OCECA-010A02-01",
@@ -2267,7 +2267,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010A02-01/",
-          "status": "complete"
+          "status": "noevaluado"
         },
         {
           "id": "OCECA-010A02-02",
@@ -2275,7 +2275,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010A02-02/",
-          "status": "complete"
+          "status": "noevaluado"
         }]
     }
   }]
