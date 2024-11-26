@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241125194242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241126155425">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -508,36 +508,168 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "Gizarte zibilak hiri-antolamenduan eta -kudeaketan zuzenean parte hartzeko egitura bat duten eta erregulartasunez eta modu demokratikoan jokatzen duten hirien proportzioa");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "11.3 2030. urterako, hirigintza inklusiboa eta jasangarria areagotzea, eta baita giza kokaguneen kudeaketa parte‐hartzailea, integratua eta jasangarria ere, herrialde guztietan");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "11 Hiriak eta giza kokaguneak inklusiboak, seguruak, erresilienteak eta jasangarriak izatea lortzea");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "Proporción de ciudades que cuentan con una estructura de participación directa de la sociedad civil en la planificación y la gestión urbana que funcione con regularidad y democráticamente");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "\n$$PCPD^{t} = \\frac{CPD^{t}}{C^{t}} \\cdot 100$$\n\ndonde: \n\n$CPD^{t} =$ ciudades con una estructura de participación directa de la sociedad civil en la planificación y gestión urbana en el año $t$ \n\n$C^{t} =$ ciudades en el año $t$\n");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('observaciones', "El indicador es del 100% dada la legislación estatal del suelo, de aplicación general a todas las ciudades");
+        var propertyEditor = editor.getEditor('root.observaciones');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: observaciones');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('texto_oceca', "<img src=\"/site/assets/img/oceca/ocecas_image.png\" style=\"width: 200px; float: left; margin-right: 10px;\" alt=\"Logotipo OCECAS\"> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
+        var propertyEditor = editor.getEditor('root.texto_oceca');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: texto_oceca');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEste indicador mide el progreso y la voluntad de los funcionarios electos, \nlos administradores urbanos y los planificadores para integrar la participación de \nlos residentes y la sociedad civil en la planificación y la gestión urbanas \na distintos niveles.\n\nLas autoridades locales y los gobiernos, junto con la comunidad internacional, \nreconocen cada vez más el valor de la participación de la sociedad civil y los \nresidentes en el fortalecimiento de los procesos de desarrollo urbano.\n\nEste enfoque centrado en las personas es clave para orientar los procesos de \ndesarrollo urbano hacia la propiedad local y la implementación de proyectos comunitarios a \nnivel de toda la ciudad o local.\n\nLa sociedad civil y la participación pública fomentan una relación positiva \nentre el gobierno y el público mediante la comunicación eficaz y la solución de los \nconflictos de manera cooperativa. En muchos casos, cuando las decisiones de planificación \nurbana se toman sin consulta, no se logran los resultados deseados y hay \nun impacto negativo en la sociedad, debido a la asignación y el uso ineficientes de \nlos recursos. Garantizar que se tengan en cuenta amplias variedades de opiniones ayuda \na los encargados de la toma de decisiones a comprender las interrelaciones y la naturaleza de \nlos problemas y las posibles soluciones que enfrentan los diferentes entornos urbanos.\n\nEl desarrollo urbano es un reflejo de la ideología y las instituciones nacionales. \nLa participación pública significa que se crea un consenso más amplio, lo que mejora en \ngran medida la interacción política entre los ciudadanos y el gobierno, y mejora la \nlegitimidad del proceso de planificación y del plan en sí. Un plan es más eficaz si una \namplia coalición apoya la propuesta y trabaja en conjunto para implementarla.\n\nLa participación de la sociedad civil y del público en la gestión y gobernanza urbanas \ntambién muestra respeto por la opinión, las necesidades, las aspiraciones y los activos de \nlos participantes. Puede impulsar su entusiasmo por la ciudadanía y la política, y fortalecer \nsu influencia en la planificación urbana y la vida pública. Cuando se consideran reclamos \ny opiniones contradictorias, hay una probabilidad mucho mayor de que aumente la confianza \ny la aceptación del público en el resultado. Esto tiene implicaciones más amplias para \nla construcción de una sociedad activa, inclusiva y equitativa y entornos urbanos más \ninclusivos y sostenibles.\n");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas, pero aporta información similar.");
+        var propertyEditor = editor.getEditor('root.comparabilidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: comparabilidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-11-01-01.pdf\">Metadata 11-1-1.pdf</a> (solo en inglés)");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -562,8 +694,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-09-11");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-26");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -682,7 +838,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241125194242'></script>
+<script src='/site/assets/js/sdg.js?v=20241126155425'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -704,7 +860,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241125194242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241126155425"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
