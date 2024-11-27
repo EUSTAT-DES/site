@@ -181,7 +181,7 @@ Las categorías de progreso asignadas se describen a continuación:
 <br><br>  
 
 
-### Excepciones    
+### Consideraciones y excepciones    
 Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:  
 
 1. Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.
