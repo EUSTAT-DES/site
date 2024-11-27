@@ -210,7 +210,7 @@ Debido a la naturaleza de los datos, se han definido una serie de consideracione
   <tr>
     <td class="tg-0pky">1.a.2</td>
     <td class="tg-0pky">Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)   </td>
-    <td class="tg-0pky">Se ha considerado como meta la media de de la UE para el indicador </td>
+    <td class="tg-0pky">Se ha considerado como meta la media de la UE para el indicador </td>
   </tr>
   <tr>
     <td class="tg-0pky">5.4.1 </td>
