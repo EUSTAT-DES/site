@@ -3292,7 +3292,7 @@ var mapView = function () {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
-      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":14,"tileURL":"https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png","tileOptions":{"id":"","accessToken":"","attribution":"<a href=\"https://www.geo.euskadi.eus/\" title=\"Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi\">geoEuskadi</a>"},"colorRange":["#c4e1c6","#b0d1b3","#9bc2a1","#87b28f","#74a37c","#60946b","#4d8559","#3a7747","#276836","#b0d1b3","#9bc2a1","#87b28f","#74a37c","#60946b","#4d8559","#3a7747","#276836"],"noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":""}},
+      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":14,"tileURL":"https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png","tileOptions":{"id":"","accessToken":"","attribution":"<a href=\"https://www.geo.euskadi.eus/\" title=\"Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi\">geoEuskadi</a>"},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":""}},
       mapLayers: [{"subfolder":"Territorio","label":"Territorio","min_zoom":5,"max_zoom":6,"staticBorders":true},{"subfolder":"Comarca","label":"Comarca","min_zoom":7,"max_zoom":8,"staticBorders":true},{"subfolder":"Municipio","label":"Municipio","min_zoom":9,"max_zoom":14,"staticBorders":true}],
       precision: precision,
       precisionItems: precisionItems,
@@ -3652,7 +3652,7 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @return {String} The headline color in hex form.
  */
 function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '#55a6e5' : '#1616ba';
+    return isHighContrast(contrast) ? '#55a6e5' : '#004466';
 }
 
 /**
