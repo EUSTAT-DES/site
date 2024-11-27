@@ -89,7 +89,7 @@ goal_image_extension: ''
 goals_page:
   title: general.goals
   description: frontpage.instructions_shorter
-graph_color_headline: '#1616ba'
+graph_color_headline: '#004466'
 graph_color_headline_high_contrast: '#55a6e5'
 graph_color_set: accessible
 graph_color_list: []
@@ -163,24 +163,7 @@ map_options:
     id: ''
     accessToken: ''
     attribution: <a href="https://www.geo.euskadi.eus/" title="Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi">geoEuskadi</a>
-  colorRange: 
-    -  '#c4e1c6'
-    -  '#b0d1b3'
-    -  '#9bc2a1'
-    -  '#87b28f'
-    -  '#74a37c'
-    -  '#60946b'
-    -  '#4d8559'
-    -  '#3a7747'
-    -  '#276836'
-    -  '#b0d1b3'
-    -  '#9bc2a1'
-    -  '#87b28f'
-    -  '#74a37c'
-    -  '#60946b'
-    -  '#4d8559'
-    -  '#3a7747'
-    -  '#276836'
+  colorRange: chroma.brewer.BuGn 
   noValueColor: '#f0f0f0'
   styleNormal:
     weight: 1
