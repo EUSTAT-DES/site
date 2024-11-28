@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ site.lang | default: 'es' }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <style>
+        /* Estilos básicos directamente en el <head> */
+        body {
+            font-family: Arial, sans-serif; /* Cambia a la fuente deseada */
+            font-size: 16px; /* Cambia el tamaño según lo necesites */
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Opcional: fondo */
+        }
+        #main-content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        a {
+            color: #007bff; /* Azul predeterminado para enlaces */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div id="main-content" role="main">
