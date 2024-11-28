@@ -2,14 +2,14 @@
     {% assign indicator_number = page.indicator.indicator_number %}
     {% assign goal_number = page.indicator.goal_number %}
 
-    {% if indicator_number contains 'OCECA' %}
-        <!-- Quitar el prefijo y obtener los primeros 6 dígitos -->
-        {% assign cleaned_indicator = indicator_number | remove: 'OCECA' %}
+    {% if indicator_number contains 'OCECA-' %}
+        <!-- Quitar el prefijo 'OCECA-' y obtener los primeros 6 dígitos -->
+        {% assign cleaned_indicator = indicator_number | remove: 'OCECA-' %}
         {% assign main_indicator = cleaned_indicator | slice: 0, 6 %}
-        <!-- Botón para el indicador principal (indicadores con prefijo 'OCECA') -->
+        <!-- Botón para el indicador principal (indicadores con prefijo 'OCECA-') -->
         <div class="previous-next-links d-flex justify-content-start">
             <div class="text-left">
-                <a class="btn btn-primary G{{ goal_number }}-background" href="/{{ main_indicator }}/" aria-labelledby="main-link">
+                <a class="btn btn-primary G{{ goal_number }}-background" href="{{ site.baseurl }}/{{ main_indicator }}" aria-labelledby="main-link">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span id="main-link" class="d-none d-md-inline">{{ include.main_label | t }}</span>
                 </a>
