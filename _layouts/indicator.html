@@ -19,7 +19,10 @@
 
 <div class="container">
   {% if site.create_indicators.previous_next_links %}
-    {% include components/previous-next-links.html previous_label=page.t.indicator.previous next_label=page.t.indicator.next %}
+    {% include components/previous-next-links.html 
+      previous_label=page.t.indicator.previous 
+      next_label=page.t.indicator.next 
+      main_label=page.t.indicator.main %}
   {% endif %}
 </div>
 
