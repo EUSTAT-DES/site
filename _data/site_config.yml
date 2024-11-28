@@ -28,9 +28,39 @@ create_goals:
   goals:
   goals:
     - goal: 1
-      content: >-
-        Los indicadores desglosados por ámbito territorial o por sexo se muestran en etiquetas negras. Se indica el máximo desglose territorial, si existen
-        datos a nivel territorial inferior a la C.A. de Euskadi (territorio histórico, comarca, municipio). 
+      content: general.aviso_desglose
+    - goal: 2
+      content: general.aviso_desglose
+    - goal: 3
+      content: general.aviso_desglose
+    - goal: 4
+      content: general.aviso_desglose
+    - goal: 5
+      content: general.aviso_desglose
+    - goal: 6
+      content: general.aviso_desglose
+    - goal: 7
+      content: general.aviso_desglose
+    - goal: 8
+      content: general.aviso_desglose
+    - goal: 9
+      content: general.aviso_desglose
+    - goal: 10
+      content: general.aviso_desglose      
+    - goal: 11
+      content: general.aviso_desglose
+    - goal: 12
+      content: general.aviso_desglose
+    - goal: 13
+      content: general.aviso_desglose
+    - goal: 14
+      content: general.aviso_desglose
+    - goal: 15
+      content: general.aviso_desglose
+    - goal: 16
+      content: general.aviso_desglose
+    - goal: 17
+      content: general.aviso_desglose       
 create_indicators:
   previous_next_links: true
 create_pages:
@@ -140,17 +170,17 @@ logos:
     alt: Go to homepage
 map_layers:
   - subfolder: Territorio
-    label: Territorio
+    label: general.territorio
     min_zoom: 5
     max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
-    label: Comarca
+    label: general.comarca
     min_zoom: 7
     max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
-    label: Municipio
+    label: general.municipio
     min_zoom: 9
     max_zoom: 14
     staticBorders: true
