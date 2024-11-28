@@ -1,12 +1,14 @@
 {% if page.indicator %}
     {% assign indicator_number = page.indicator.indicator_number %}
-    {% assign goal_number = page.indicator.goal_number %}
 
     {% if indicator_number contains 'OCECA-' %}
         <!-- Quitar el prefijo 'OCECA-' -->
         {% assign cleaned_indicator = indicator_number | remove: 'OCECA-' %}
-        <!-- Extraer las primeras tres partes para reconstruir el indicador principal -->
+        <!-- Extraer las partes del indicador -->
         {% assign parts = cleaned_indicator | split: '-' %}
+        <!-- Obtener el goal como la primera parte -->
+        {% assign goal_number = parts[0] %}
+        <!-- Reconstruir el indicador principal -->
         {% assign main_indicator = parts[0] | append: '-' | append: parts[1] | append: '-' | append: parts[2] %}
         <!-- Botón para el indicador principal (indicadores con prefijo 'OCECA-') -->
         <div class="previous-next-links d-flex justify-content-start">
@@ -18,6 +20,8 @@
             </div>
         </div>
     {% else %}
+        <!-- Obtener el goal directamente para indicadores normales -->
+        {% assign goal_number = page.indicator.goal_number %}
         <!-- Botones Previous y Next (indicadores normales) -->
         {% if page.previous and page.next %}
         <div class="previous-next-links d-flex justify-content-between">
