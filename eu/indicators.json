@@ -2230,14 +2230,6 @@
           "status": "progreso"
         },
         {
-          "id": "OCECA-010201-1A",
-          "title": "national_indicators.OCECA-010201-1A",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/OCECA-010201-1A/",
-          "status": "noevaluado"
-        },
-        {
           "id": "OCECA-1-2-1-1A",
           "title": "national_indicators.OCECA-1-2-1-1A",
           "description": "",
@@ -2254,22 +2246,6 @@
           "status": "noevaluado"
         },
         {
-          "id": "OCECA-010201-2A",
-          "title": "national_indicators.OCECA-010201-2A",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/OCECA-010201-2A/",
-          "status": "noevaluado"
-        },
-        {
-          "id": "OCECA-010201-2B",
-          "title": "national_indicators.OCECA-010201-2B",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/OCECA-010201-2B/",
-          "status": "noevaluado"
-        },
-        {
           "id": "OCECA-1-2-1-2B",
           "title": "national_indicators.OCECA-1-2-1-2B",
           "description": "",
@@ -2278,35 +2254,11 @@
           "status": "noevaluado"
         },
         {
-          "id": "OCECA-010202-1A",
-          "title": "national_indicators.OCECA-010202-1A",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/OCECA-010202-1A/",
-          "status": "noevaluado"
-        },
-        {
           "id": "OCECA-1-2-2-1A",
           "title": "national_indicators.OCECA-1-2-2-1A",
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-1-2-2-1A/",
-          "status": "noevaluado"
-        },
-        {
-          "id": "OCECA-010A02-01",
-          "title": "national_indicators.OCECA-010A02-01",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/1-a-2-1/",
-          "status": "noevaluado"
-        },
-        {
-          "id": "OCECA-010A02-02",
-          "title": "national_indicators.OCECA-010A02-02",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/1-a-2-2/",
           "status": "noevaluado"
         },
         {
