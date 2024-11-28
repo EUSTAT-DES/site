@@ -2223,7 +2223,7 @@
         
         {
           "id": "OCECA-1-2-1-1",
-          "title": "Proporción de personas en riesgo de pobreza relativa, considerando el umbral autonómico de pobreza",
+          "title": "national_indicators.OCECA-1-2-1-1-title",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-1-2-1-1/",
@@ -2231,15 +2231,31 @@
         },
         {
           "id": "OCECA-010201-1A",
-          "title": "Proporción de personas en riesgo de pobreza relativa, considerando el umbral nacional de pobreza",
+          "title": "national_indicators.OCECA-010201-1A",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010201-1A/",
           "status": "noevaluado"
         },
         {
-          "id": "OCECA-010201-2A",
+          "id": "OCECA-1-2-1-1A",
+          "title": "Proporción de personas en riesgo de pobreza relativa, considerando el umbral nacional de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-1-2-1-1A/",
+          "status": "noevaluado"
+        },
+        {
+          "id": "OCECA-1-2-1-2A",
           "title": "Proporción de personas en riesgo de pobreza relativa con alquiler imputado, considerando el umbral nacional de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-1-2-1-2A/",
+          "status": "noevaluado"
+        },
+        {
+          "id": "OCECA-010201-2A",
+          "title": "national_indicators.OCECA-010201-2A",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010201-2A/",
@@ -2247,23 +2263,39 @@
         },
         {
           "id": "OCECA-010201-2B",
-          "title": "Proporción de personas en riesgo de pobreza relativa con alquiler imputado, considerando el umbral autonómico de pobreza",
+          "title": "national_indicators.OCECA-010201-2B",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010201-2B/",
           "status": "noevaluado"
         },
         {
+          "id": "OCECA-1-2-1-2B",
+          "title": "Proporción de personas en riesgo de pobreza relativa con alquiler imputado, considerando el umbral autonómico de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-1-2-1-2B/",
+          "status": "noevaluado"
+        },
+        {
           "id": "OCECA-010202-1A",
-          "title": "Proporción de personas en riesgo de pobreza o exclusión social: indicador AROPE, considerando el umbral nacional de pobreza",
+          "title": "national_indicators.OCECA-010202-1A",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-010202-1A/",
           "status": "noevaluado"
         },
         {
+          "id": "OCECA-1-2-2-1A",
+          "title": "Proporción de personas en riesgo de pobreza o exclusión social: indicador AROPE, considerando el umbral nacional de pobreza",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-1-2-2-1A/",
+          "status": "noevaluado"
+        },
+        {
           "id": "OCECA-010A02-01",
-          "title": "Proporción del gasto de las administraciones públicas autonómicas que se dedica a educación",
+          "title": "national_indicators.OCECA-010A02-01",
           "description": "",
           "keywords": "",
           "href": "/site/1-a-2-1/",
@@ -2271,10 +2303,26 @@
         },
         {
           "id": "OCECA-010A02-02",
-          "title": "Proporción del gasto de las administraciones públicas autonómicas que se dedica a salud",
+          "title": "national_indicators.OCECA-010A02-02",
           "description": "",
           "keywords": "",
           "href": "/site/1-a-2-2/",
+          "status": "noevaluado"
+        },
+        {
+          "id": "OCECA-1-a-2-1",
+          "title": "Proporción del gasto de las administraciones públicas autonómicas que se dedica a salud",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-1-a-2-1/",
+          "status": "noevaluado"
+        },
+        {
+          "id": "OCECA-1-a-2-2",
+          "title": "national_indicators.OCECA-1-a-2-2",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-1-a-2-2/",
           "status": "noevaluado"
         }]
     }
