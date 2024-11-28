@@ -3,9 +3,11 @@
     {% assign goal_number = page.indicator.goal_number %}
 
     {% if indicator_number contains 'OCECA-' %}
-        <!-- Quitar el prefijo 'OCECA-' y obtener los primeros 6 dígitos -->
+        <!-- Quitar el prefijo 'OCECA-' -->
         {% assign cleaned_indicator = indicator_number | remove: 'OCECA-' %}
-        {% assign main_indicator = cleaned_indicator | slice: 0, 6 %}
+        <!-- Extraer las primeras tres partes para reconstruir el indicador principal -->
+        {% assign parts = cleaned_indicator | split: '-' %}
+        {% assign main_indicator = parts[0] | append: '-' | append: parts[1] | append: '-' | append: parts[2] %}
         <!-- Botón para el indicador principal (indicadores con prefijo 'OCECA-') -->
         <div class="previous-next-links d-flex justify-content-start">
             <div class="text-left">
