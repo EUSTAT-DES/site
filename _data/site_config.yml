@@ -170,17 +170,17 @@ logos:
     alt: Go to homepage
 map_layers:
   - subfolder: Territorio
-    label: general.territorio
+    label: Territorio
     min_zoom: 5
     max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
-    label: general.comarca
+    label: Comarca
     min_zoom: 7
     max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
-    label: general.municipio
+    label: Municipio
     min_zoom: 9
     max_zoom: 14
     staticBorders: true
