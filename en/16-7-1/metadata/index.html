@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241129113234">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241202122104">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -508,36 +508,180 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.16-7-1-titulo");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "16.7 Ensure responsive, inclusive, participatory and representative decision-making at all levels");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "16 Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "Gasto liquidado en proporción al gasto inicial de los presupuestos de las  administraciones públicas autonómicas y locales");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "\nRM_{SP}^{t} = \\frac{PM_{SP}^{t}}{PM_{16-64}^{t}}$$ <br>\n\nsiendo:\n\n$$PM_{SP}^{t} = \\frac{P_{SP,mujeres}^{t}}{P_{SP}^{t}} \\cdot 100 $$\n\n$$PM_{16-64}^{t} = \\frac{P_{16-64,mujeres}^{t}}{P_{16-64}^{t}} \\cdot 100 $$<br>\n\ndonde: \n\n$P_{SP,mujeres}^{t} =$ mujeres al servicio del sector público a 1 de enero del año $t\n\n$P_{SP}^{t} =$ personas al servicio del sector público a 1 de enero del año $t$\n\n$P_{16-64,mujeres}^{t} =$ mujeres entre 16 y 64 años a 1 de enero del año $t$<br>$P_{16-64}^{t} =$ personas entre 16 y 64 años a 1 de enero del año $t$\n");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('desagregacion', "\nInstitución pública: sector público (total), sector público autonómico, sector público local, sector público estatal, instituciones sanitarias autonómicas, centros educativos no universitarios autonómicos, diputaciones forales, universidades, policía autonómica, administración de justicia autonómica, sextor público local, ayuntamientos, sector público estatal, fuerzas armadas, fuerzas y cuerpos de seguridad del Estado, administración de justicia del Estado.\n");
+        var propertyEditor = editor.getEditor('root.desagregacion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: desagregacion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('observaciones', "El valor de referencia de este indicador es 1, que se tiene cuando la representación de la \nmujer en la administración pública analizada es perfectamente proporcional a su presencia \nen la población entre 16 y 64 años. \n\nSi el indicador toma un valor menor que 1 significa que la mujer está \ninfrarepresentada, mientras que si toma un valor mayor que 1 significa que \nestá sobrerepresentada.\n");
+        var propertyEditor = editor.getEditor('root.observaciones');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: observaciones');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('texto_oceca', "<img src=\"/site/assets/img/oceca/ocecas_image.png\" style=\"width: 200px; float: left; margin-right: 10px;\" alt=\"Logotipo OCECAS\"> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
+        var propertyEditor = editor.getEditor('root.texto_oceca');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: texto_oceca');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "El servicio público es la base del gobierno, donde se desarrollan e implementan las \npolíticas y programas públicos y donde la sociedad interactúa con el gobierno. En la \nmayoría de los países, el servicio público es también el mayor empleador. Es en este \ncontexto que el ODS 16, en su meta 16.7, alienta a los países a garantizar que el \nservicio público sea representativo de las personas a las que sirve “en todos \nlos niveles”. \n\nEl indicador 16.7.1 se centra en la representación proporcional en las instituciones \npúblicas; mide el grado en que las instituciones públicas de un país son representativas \nde la población general. La representación proporcional (también conocida como \n“representación descriptiva”) en el servicio público se relaciona con el grado en que \nla composición del servicio público refleja los diversos grupos sociodemográficos de \nla población nacional. El supuesto subyacente es que cuando el servicio público \nrefleja la diversidad social de una nación, esto puede conducir a una mayor \nlegitimidad del servicio público a los ojos de los ciudadanos, ya que los \nfuncionarios públicos se asemejan a las personas a las que prestan servicios. \n\nSe ha descubierto que la representación proporcional está asociada con niveles más \naltos de confianza en las instituciones públicas, ya que las personas perciben \nprocesos de formulación de políticas más inclusivos para mejorar la calidad y la equidad \nde las decisiones políticas y ayudar a frenar la influencia indebida de intereses \ncreados sobre la toma de decisiones.\n");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple parcialmente con los metadatos de Naciones Unidas. Se centra en el subindicador b).");
+        var propertyEditor = editor.getEditor('root.comparabilidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: comparabilidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-16-07-01b.pdf\">Metadata 16-7-1.pdf</a> (solo en inglés)");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -562,8 +706,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-09-11");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-02");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -682,7 +850,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241129113234'></script>
+<script src='/site/assets/js/sdg.js?v=20241202122104'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -704,7 +872,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241129113234"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241202122104"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
