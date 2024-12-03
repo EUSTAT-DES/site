@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203103059">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203161924">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -554,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "<p>La población malnutrida es aquella que tiene obesidad (IMC>=30),  sobrepeso (25<=IMC<30) o peso insuficiente (IMC<18,5), donde IMC es el índice de masa corporal,  que se obtiene dividiendo el peso (kg) por el cuadrado de la estatura (m).</p>\n<p>Este indicador se compone de dos series temporales:</p> <p>- Proporción de menores entre 2 y 17 años que presentan malnutrición (obesidad, sobrepeso o peso insuficiente)</p> <p>- Proporción de la población adulta con obesidad</p>");
+        var currentValue = normalizeCurrentValue('definicion', "La población malnutrida es aquella que tiene obesidad (IMC>=30), \nsobrepeso (25<=IMC<30) o peso insuficiente (IMC<18,5), donde IMC es el índice de masa corporal, \nque se obtiene dividiendo el peso (kg) por el cuadrado de la estatura (m).\n\nEste indicador se compone de dos series temporales:\n\n -Proporción de menores entre 2 y 17 años que presentan malnutrición (obesidad, sobrepeso o peso insuficiente)\n -Proporción de la población adulta con obesidad\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<p><b>Tasa de obesidad, sobrepeso o peso insuficiente de la población entre 2 y 17 años</b> </p>\n\n<p>$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$</p>\n\n<p>donde: </p>\n\n<p>$PPM_{2-17}^{t} =$ población entre 2 y 17 años con malnutrición (IMC<18,5 o IMC>=25) en el año $t$ </p>\n\n<p>$P_{2-17}^{t} =$ población entre 2 y 17 años en el año $t$</p>\n\n<p><b>Tasa de obesidad de la población adulta</b> </p>\n\n<p>$$PPO_{>18}^{t} = \\frac{PO_{>18}^{t}}{P_{>18}^{t}} \\cdot 100$$</p>\n\n<p>donde: </p>\n\n<p>$PPO_{>18}^{t} =$ población adulta con obesidad (IMC>=30) en el año $t$ </p>\n\n<p>$P_{>18}^{t} =$ población adulta en el año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Tasa de obesidad, sobrepeso o peso insuficiente de la población entre 2 y 17 años</b>\n\n$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$\n\ndonde:\n\n$PPM_{2-17}^{t} =$ población entre 2 y 17 años con malnutrición (IMC<18,5 o IMC>=25) en el año $t$\n\n$P_{2-17}^{t} =$ población entre 2 y 17 años en el año $t$\n\n<b>Tasa de obesidad de la población adulta</b>\n\n$$PPO_{>18}^{t} = \\frac{PO_{>18}^{t}}{P_{>18}^{t}} \\cdot 100$$\n\ndonde:\n\n$PPO_{>18}^{t} =$ población adulta con obesidad (IMC>=30) en el año $t$\n\n$P_{>18}^{t} =$ población adulta en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Está aceptado internacionalmente que el crecimiento infantil  refleja el estado nutricional del niño. El sobrepeso infantil se refiere a un  niño que pesa demasiado para su altura. Esta forma de desnutrición se debe a que se  gastan muy pocas calorías para la cantidad de alimentos consumidos y aumenta el riesgo  de enfermedades no transmisibles en el futuro. El sobrepeso infantil es uno de los indicadores objetivo de nutrición de la Asamblea Mundial de la Salud.</p>\n<p>Por ello, el indicador de Naciones Unidas hace referencia al crecimiento infantil,  y mide la prevalencia  del sobrepeso (peso para la talla >+2 desviación estándar de la mediana de los  estándares de crecimiento infantil de la Organización Mundial de la Salud (OMS)) entre niños  menores de 5 años.</p>\n<p>Aunque la UE ha superado en gran medida los problemas del hambre, están surgiendo nuevos desafíos relacionados con la nutrición, como el aumento de la obesidad.</p>\n<p>Por ello, el indicador europeo mide la obesidad en la edad adulta, y se utiliza para  hacer el seguimiento del progreso hacia el ODS 2 (poner fin al hambre y la malnutrición) y el ODS 3 (buena salud y bienestar), que están incluidos en las prioridades de la Comisión Europea en el marco del \"Acuerdo Verde Europeo\",  \"Una economía que funcione para las personas\" y \"Promoción de nuestro modo de vida europeo\".</p>\n<p>La política alimentaria  de la UE incluye iniciativas de nutrición y trabaja con los Estados miembros de la UE  en diversas iniciativas de salud pública en el área de la nutrición y la actividad  física para promover un estilo de vida saludable y equilibrado.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Está aceptado internacionalmente que el crecimiento infantil \nrefleja el estado nutricional del niño. El sobrepeso infantil se refiere a un \nniño que pesa demasiado para su altura. Esta forma de desnutrición se debe a que se \ngastan muy pocas calorías para la cantidad de alimentos consumidos y aumenta el riesgo \nde enfermedades no transmisibles en el futuro. El sobrepeso infantil es uno de los\nindicadores objetivo de nutrición de la Asamblea Mundial de la Salud.\n\nPor ello, el indicador de Naciones Unidas hace referencia al crecimiento infantil, \ny mide la prevalencia \ndel sobrepeso (peso para la talla >+2 desviación estándar de la mediana de los \nestándares de crecimiento infantil de la Organización Mundial de la Salud (OMS)) entre niños \nmenores de 5 años.\n\nAunque la UE ha superado en gran medida los problemas del hambre, están surgiendo nuevos desafíos\nrelacionados con la nutrición, como el aumento de la obesidad.\n\nPor ello, el indicador europeo mide la obesidad en la edad adulta, y se utiliza para \nhacer el seguimiento del progreso hacia el ODS 2\n(poner fin al hambre y la malnutrición) y el ODS 3 (buena salud y bienestar), que están\nincluidos en las prioridades de la Comisión Europea en el marco del \"Acuerdo Verde Europeo\", \n\"Una economía que funcione para las personas\" y \"Promoción de nuestro modo de vida europeo\".\n\nLa política alimentaria \nde la UE incluye iniciativas de nutrición y trabaja con los Estados miembros de la UE \nen diversas iniciativas de salud pública en el área de la nutrición y la actividad \nfísica para promover un estilo de vida saludable y equilibrado.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -684,7 +684,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02a.pdf\">Metadata 2-2-2 (1).pdf</a> (solo en inglés)<br> <a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02b.pdf\">Metadata 2-2-2 (2).pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02a.pdf\">Metadata 2-2-2 (1).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02b.pdf\">Metadata 2-2-2 (2).pdf</a> (solo en inglés)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-03");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241203103059'></script>
+<script src='/site/assets/js/sdg.js?v=20241203161924'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241203103059"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241203161924"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

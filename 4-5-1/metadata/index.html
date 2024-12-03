@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203103059">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203161924">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -554,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Relación entre las proporciones entre los siguientes grupos que han realizado actividades \neducativas (formales o no formales) en los últimos 12 o 4 semanas:<br>\n- Mujeres y hombres entre 18 y 64 años (en los últimos 12 meses) <br>\n- Personas entre 18 y 64 años pertenecientes a hogares que se encuentran en el nivel \nde ingresos inferior y superior (en los últimos 12 meses)  <br>\n- Personas entre 18 y 64 años con y sin limitaciones por problemas de salud \n(graves o no graves)(en los últimos 12 meses)<br>\n- Personas entre 15 y 64 años residentes en municipios de menos de 10.000 habitantes y más de 10.000 \nhabitantes (en las últimas 4 semanas)<br>\n");
+        var currentValue = normalizeCurrentValue('definicion', "Relación entre las proporciones entre los siguientes grupos que han realizado actividades \neducativas (formales o no formales) en los últimos 12 o 4 semanas:\n\n- Mujeres y hombres entre 18 y 64 años (en los últimos 12 meses) <br>\n- Personas entre 18 y 64 años pertenecientes a hogares que se encuentran en el nivel \nde ingresos inferior y superior (en los últimos 12 meses)  <br>\n- Personas entre 18 y 64 años con y sin limitaciones por problemas de salud \n(graves o no graves)(en los últimos 12 meses)<br>\n- Personas entre 15 y 64 años residentes en municipios de menos de 10.000 habitantes y más de 10.000 \nhabitantes (en las últimas 4 semanas)<br>\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<p>$$IPD = \\frac{[Ind_i]_d}{[Ind_i]_a}$$</p>\n\n<p>donde:</p> \n<p>$IPD$ = el Índice de Paridad de la Dimensión(Sexo, Riqueza, Ubicación, etc.)</p> \n<p>$Ind_i$ = el Indicador de Educación: realización de actividades educativas (formales o no formales) en \nlos últimos  12 o 4 meses</p>\n<p>$d$ = el grupo desfavorecido (mujeres, personas más pobres, personas que viven en municipios pequeños, \npersonas con limitaciones por problemas de salud)</p> \n<p>$d$ = el grupo favorecido (hombres, personas más ricas, personas que viven en municipios grandes, \npersonas sin limitaciones por problemas de salud)</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$IPD = \\frac{[Ind_i]_d}{[Ind_i]_a}$$\n\ndonde:\n\n$IPD$ = el Índice de Paridad de la Dimensión(Sexo, Riqueza, Ubicación, etc.)\n\n$Ind_i$ = el Indicador de Educación: realización de actividades educativas (formales o no formales) en \nlos últimos  12 o 4 meses\n\n$d$ = el grupo desfavorecido (mujeres, personas más pobres, personas que viven en municipios pequeños, \npersonas con limitaciones por problemas de salud)\n\n$d$ = el grupo favorecido (hombres, personas más ricas, personas que viven en municipios grandes, \npersonas sin limitaciones por problemas de salud)\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -596,7 +596,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('periodicidad', "Quinquenal");
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
         var propertyEditor = editor.getEditor('root.periodicidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Medir el nivel general de disparidad entre dos subpoblaciones de interés con respecto a un  indicador determinado. Cuanto más alejado de 1 se encuentre el índice de paridad, mayor será la  disparidad entre los dos grupos de interés. </p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Medir el nivel general de disparidad entre dos subpoblaciones de interés con respecto a un  indicador determinado. Cuanto más alejado de 1 se encuentre el índice de paridad, mayor será la  disparidad entre los dos grupos de interés.");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-11");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-03");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241203103059'></script>
+<script src='/site/assets/js/sdg.js?v=20241203161924'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241203103059"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241203161924"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

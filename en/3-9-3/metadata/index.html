@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203103059">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203161924">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<p>$$TM_{\\text{intoxicaciones involuntarias}}^{t} = \\frac{D_{\\text{intoxicaciones involuntarias}}^{t}}{P^{t}} \\cdot 100.000$$</p>\n\n<p>donde: </p>\n\n<p> $D_{\\text{intoxicaciones involuntarias}}^{t} =$ defunciones atribuidas a intoxicaciones involuntarias (códigos X40, X43, X44 y X46-X49 de la CIE-10) en el año $t$</p>\n<p>$P^{t} =$ población a 1 de julio del año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$TM_{\\text{intoxicaciones involuntarias}}^{t} = \\frac{D_{\\text{intoxicaciones involuntarias}}^{t}}{P^{t}} \\cdot 100.000$$\n\ndonde:\n\n$D_{\\text{intoxicaciones involuntarias}}^{t} =$ defunciones atribuidas a intoxicaciones involuntarias (códigos X40, X43, X44 y X46-X49 de la CIE-10) en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo <br> Territorio histórico");
+        var currentValue = normalizeCurrentValue('desagregacion', "Sexo\n\nTerritorio histórico\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>La medición de la tasa de mortalidad por envenenamientos no intencionales proporciona una indicación del  grado de gestión inadecuada de los productos químicos peligrosos y la contaminación, y de la eficacia del sistema de  salud de un país.</p>\n<p>La tasa de mortalidad atribuida a envenenamiento no intencional se define como el número de muertes por envenenamiento  no intencional en un año, dividido por la población y multiplicado por 100.000.Incluye los códigos de la  Clasificación Internacional de Enfermedades, Décima Revisión (CIE-10) X40, X43, X46-X48 y X49.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "La medición de la tasa de mortalidad por envenenamientos no intencionales proporciona una indicación del \ngrado de gestión inadecuada de los productos químicos peligrosos y la contaminación, y de la eficacia del sistema de \nsalud de un país.\n\nLa tasa de mortalidad atribuida a envenenamiento no intencional se define como el número de muertes por envenenamiento \nno intencional en un año, dividido por la población y multiplicado por 100.000.Incluye los códigos de la \nClasificación Internacional de Enfermedades, Décima Revisión (CIE-10) X40, X43, X46-X48 y X49.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-03");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241203103059'></script>
+<script src='/site/assets/js/sdg.js?v=20241203161924'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241203103059"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241203161924"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

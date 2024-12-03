@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203103059">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203161924">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<p>$$PPV_{\\text{vacuna}}^{t} = \\frac{PV_{\\text{vacuna}}^{\\text{cohorte}\\, t - c}}{P^{\\text{cohorte}\\, t - c}} \\cdot 100$$</p>\n\n<p>donde:</p>\n\n<p> ${vacuna}=$ tipo de vacuna</p>\n<p> ${c}=$ el intervalo de años que define la cohorte específica para cada vacuna\n (c=1 o cohorte nacida en t-1 para DTPa y VNC, c=5 para SRP y c=13 para VPH)</p>\n<p> $PV_{\\text{vacuna}}^{\\text{cohorte}\\, t - c}=$ es la población vacunada con el tipo de vacuna especificado, \nperteneciente a la cohorte nacida en $t-c$</p>\n<p> $P^{\\text{cohorte}\\, t - c}=$ es la población total de la cohorte nacida en $t-c$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPV_{\\text{vacuna}}^{t} = \\frac{PV_{\\text{vacuna}}^{\\text{cohorte}\\, t - c}}{P^{\\text{cohorte}\\, t - c}} \\cdot 100$$\n\ndonde:\n\n$PV_{\\text{vacuna}}^{\\text{cohorte}\\, t - c}=$ es la población vacunada con el tipo de vacuna especificado, \nperteneciente a la cohorte nacida en $t-c$\n\n$P^{\\text{cohorte}\\, t - c}=$ es la población total de la cohorte nacida en $t-c$\n\n${c}=$ el intervalo de años que define la cohorte específica para cada vacuna (c=1 o cohorte nacida en t-1 para DTPa y VNC, c=5 para SRP y c=13 para VPH)\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo\nTipo de vacuna: \n- vacunación de recuerdo contra difteria, tétanos y tosferina en la población infantil (DTPa)\n- vacunación de recuerdo contra neumococo en la población infantil (VNC), \n- segunda dosis de la vacuna frente a sarampión, rubeola y parotiditis en la población infantil (SRP)\n- segunda dosis de la vacuna frente al virus del papiloma humano (VPH) en adolescentes.\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Tipo de vacuna: \n- vacunación de recuerdo contra difteria, tétanos y tosferina en la población infantil (DTPa)\n- vacunación de recuerdo contra neumococo en la población infantil (VNC), \n- segunda dosis de la vacuna frente a sarampión, rubeola y parotiditis en la población infantil (SRP)\n- segunda dosis de la vacuna frente al virus del papiloma humano (VPH) en adolescentes.\n\nSexo\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -610,7 +610,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\n<p>Los resultados facilitados se obtienen utilizando las definiciones propuestas por la  Ponencia de Programa y Registro de Vacunaciones y acordadas por la Comisión de Salud  Pública en octubre de 2017. Desde entonces, las coberturas de vacunación se calculan  por cohortes de nacimiento de la población.</p>\n<p>No se incluyen las vacunas adquiridas en oficinas de farmacia ni las  administradas por el sector sanitario privado.</p>");
+        var currentValue = normalizeCurrentValue('observaciones', "\nLos resultados facilitados se obtienen utilizando las definiciones propuestas por la \nPonencia de Programa y Registro de Vacunaciones y acordadas por la Comisión de Salud \nPública en octubre de 2017. Desde entonces, las coberturas de vacunación se calculan \npor cohortes de nacimiento de la población.\n\nNo se incluyen las vacunas adquiridas en oficinas de farmacia ni las \nadministradas por el sector sanitario privado.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "<p>Este indicador tiene por objeto medir el acceso a las vacunas, incluidas las vacunas recientemente  disponibles o las que se utilizan de forma insuficiente, a nivel nacional.</p> \n\n<p>En las últimas décadas, todos los países  han añadido numerosas vacunas nuevas y que se utilizan de forma insuficiente a sus calendarios nacionales de  vacunación y hay varias vacunas en la fase final de desarrollo que se introducirán de aquí a 2030. Para supervisar el  control de enfermedades y el impacto de las vacunas, es importante medir la cobertura de cada vacuna del calendario nacional  de vacunación.</p> \n\n<p>Ya existe un sistema para supervisar la cobertura de vacunación de todos los programas nacionales, pero  la medición directa de la proporción de la población cubierta con todas las vacunas del programa solo es posible  si el país cuenta con un registro electrónico nacional de vacunación que funcione bien y permita estimar  fácilmente la cobertura por cohorte.</p>\n<p>Se miden las siguientes vacunas:</p>\n<p>Cobertura de la vacuna DTP (tercera dosis): porcentaje de lactantes supervivientes que recibieron  las 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina en un año determinado.</p> <p>Cobertura de la vacuna contra el sarampión (segunda dosis): porcentaje de niños que recibieron dos dosis de la vacuna contra el sarampión según el calendario recomendado a nivel nacional a través de los servicios de vacunación de rutina\n en un año determinado.</p>\n<p>Cobertura de la vacuna antineumocócica conjugada (última dosis del calendario): porcentaje de lactantes  supervivientes que recibieron las dosis de vacuna antineumocócica conjugada recomendadas a nivel nacional en un año determinado.</p> <p>Cobertura de la vacuna contra el VPH (última dosis del calendario): porcentaje de niñas de 15 años que recibieron  las dosis recomendadas de la vacuna contra el VPH. Actualmente se utiliza el desempeño del programa en el año  calendario anterior en función del grupo de edad objetivo.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Este indicador tiene por objeto medir el acceso a las vacunas, incluidas las vacunas recientemente \ndisponibles o las que se utilizan de forma insuficiente, a nivel nacional.\n\nEn las últimas décadas, todos los países \nhan añadido numerosas vacunas nuevas y que se utilizan de forma insuficiente a sus calendarios nacionales de \nvacunación y hay varias vacunas en la fase final de desarrollo que se introducirán de aquí a 2030. Para supervisar el \ncontrol de enfermedades y el impacto de las vacunas, es importante medir la cobertura de cada vacuna del calendario nacional \nde vacunación. La medición directa de la proporción de la población cubierta con todas las vacunas del programa solo es posible \nsi el país cuenta con un registro electrónico nacional de vacunación que funcione bien y permita estimar \nfácilmente la cobertura por cohorte.\n\nSe miden las siguientes vacunas:\n\n - Cobertura de la vacuna DTP (tercera dosis): porcentaje de lactantes supervivientes que recibieron \nlas 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina en un año determinado.\n\n - Cobertura de la vacuna contra el sarampión (segunda dosis): porcentaje de niños que recibieron dos dosis de la vacuna contra el sarampión según el calendario recomendado a nivel nacional a través de los servicios de vacunación de rutina\n en un año determinado.\n\n - Cobertura de la vacuna antineumocócica conjugada (última dosis del calendario): porcentaje de lactantes \nsupervivientes que recibieron las dosis de vacuna antineumocócica conjugada recomendadas a nivel nacional en un año determinado.\n\n - Cobertura de la vacuna contra el VPH (última dosis del calendario): porcentaje de niñas de 15 años que recibieron \nlas dosis recomendadas de la vacuna contra el VPH. Actualmente se utiliza el desempeño del programa en el año \ncalendario anterior en función del grupo de edad objetivo.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -668,7 +668,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_DTP3&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población objetivo que recibió 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina (DTP3) (%) SH_ACS_DTP3</a> UNSTATS<br> \n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_MCV2&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población objetivo que recibió la segunda dosis de la vacuna contra el sarampión (MCV2) (%) SH_ACS_MCV2</a> UNSTATS<br> \n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_PCV3&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población objetivo que recibió una tercera dosis de la vacuna antineumocócica conjugada (PCV3) (%) SH_ACS_PCV3</a> UNSTATS<br> \n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_HPV&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de la población objetivo que recibió la dosis final de la vacuna contra el virus del papiloma humano (VPH) (%) SH_ACS_HPV</a> UNSTATS<br> ");
+        var currentValue = normalizeCurrentValue('dato_global', "\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_DTP3&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población objetivo que recibió 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina (DTP3) (%) SH_ACS_DTP3</a> UNSTATS \n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_MCV2&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población objetivo que recibió la segunda dosis de la vacuna contra el sarampión (MCV2) (%) SH_ACS_MCV2</a> UNSTATS \n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_PCV3&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población objetivo que recibió una tercera dosis de la vacuna antineumocócica conjugada (PCV3) (%) SH_ACS_PCV3</a> UNSTATS \n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&seriesCode=SH_ACS_HPV&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de la población objetivo que recibió la dosis final de la vacuna contra el virus del papiloma humano (VPH) (%) SH_ACS_HPV</a> UNSTATS \n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-03");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241203103059'></script>
+<script src='/site/assets/js/sdg.js?v=20241203161924'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241203103059"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241203161924"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
