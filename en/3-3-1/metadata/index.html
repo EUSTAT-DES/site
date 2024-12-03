@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241202160551">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20241203103059">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -510,7 +510,7 @@ data-event-label="high"
     // Set values according to this site's configuration.
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_disponible', "Número de nuevas infecciones por el VIH por cada 1.000 habitantes no infectados, desglosado por sexo");
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.3-3-1-titulo");
         var propertyEditor = editor.getEditor('root.indicador_disponible');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<p>$$TND_{VIH}^{t} = \\frac{ND_{VIH}^{t}}{P^{t}} \\cdot 1.000$$ </p>\n<p>donde: </p>\n<p>$ND_{VIH}^{t} =$ nuevos diagnósticos de VIH notificados al Sistema de Información sobre Nuevos Diagnósticos de VIH (SINIVIH) en el año $t$ </p>\n<p>$P^{t} =$ población a 1 de julio del año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$TND_{VIH}^{t} = \\frac{ND_{VIH}^{t}}{P^{t}} \\cdot 1.000$$\n\ndonde:\n\n$ND_{VIH}^{t} =$ nuevos diagnósticos de VIH notificados al Sistema de Información sobre Nuevos Diagnósticos de VIH (SINIVIH) en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -610,7 +610,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\n<p>Este indicador no tiene en cuenta el lugar de origen de la infección, es decir, se consideran tanto infecciones  autóctonas   (infecciones producidas en el territorio nacional) como infecciones no autóctonas (infecciones producidas  en el extranjero).</p>");
+        var currentValue = normalizeCurrentValue('observaciones', "\nEste indicador no tiene en cuenta el lugar de origen de la infección, es decir, se consideran tanto infecciones \nautóctonas   (infecciones producidas en el territorio nacional) como infecciones no autóctonas (infecciones producidas \nen el extranjero).\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\n<p>La tasa de incidencia proporciona una medida del progreso hacia la prevención de la transmisión del VIH.\n Aunque otros indicadores también son muy importantes para la epidemia del VIH, la incidencia del VIH refleja el éxito en\n programas de prevención y, hasta cierto punto, programas de tratamiento exitosos, ya que también conducirán\n a reducir la incidencia del VIH.</p>");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa tasa de incidencia proporciona una medida del progreso hacia la prevención de la transmisión del VIH.\n Aunque otros indicadores también son muy importantes para la epidemia del VIH, la incidencia del VIH refleja el éxito en\n programas de prevención y, hasta cierto punto, programas de tratamiento exitosos, ya que también conducirán\n a reducir la incidencia del VIH.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-10");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-03");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20241202160551'></script>
+<script src='/site/assets/js/sdg.js?v=20241203103059'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20241202160551"></script><script>
+    <script src="/site/assets/js/custom.js?v=20241203103059"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
