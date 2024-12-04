@@ -183,7 +183,7 @@
         },
         {
           "id": "2-4-E1",
-          "title": "Emisiones de amoníaco de la agricultura y ganadería",
+          "title": "GRAFICO.2-4-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/eu/2-4-E1/",
@@ -335,7 +335,7 @@
         },
         {
           "id": "3-4-E1",
-          "title": "Tasa de participación en los programas de cribado poblacional de cáncer",
+          "title": "GRAFICO.3-4-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/eu/3-4-E1/",
@@ -343,7 +343,7 @@
         },
         {
           "id": "3-4-E2",
-          "title": "Esperanza de vida y esperanza de vida en buena salud",
+          "title": "GRAFICO.3-4-E2-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/eu/3-4-E2/",
@@ -662,14 +662,6 @@
           "status": "retroceso"
         },
         {
-          "id": "5-5-E1",
-          "title": "national_indicators.5-5-E1-title",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/5-5-E1/",
-          "status": "progreso"
-        },
-        {
           "id": "5-6-1",
           "title": "Sexu-harremanei, antisorgailuen erabilerari eta ugaltze-osasunari buruzko erabaki propio eta informatuak hartzen dituzten 15 eta 49 urte bitarteko emakumeen proportzioa",
           "description": "",
@@ -700,6 +692,14 @@
           "keywords": "",
           "href": "/site/eu/5-a-2/",
           "status": "alcanzado"
+        },
+        {
+          "id": "5-a-E1",
+          "title": "GRAFICO.5-a-E1-titulo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/5-a-E1/",
+          "status": "progreso"
         },
         {
           "id": "5-b-1",
@@ -775,7 +775,7 @@
         },
         {
           "id": "6-4-E1",
-          "title": "Consumo de agua",
+          "title": "GRAFICO.6-4-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/eu/6-4-E1/",
@@ -863,7 +863,7 @@
         },
         {
           "id": "7-3-E1",
-          "title": "Consumo de energía eléctrica",
+          "title": "GRAFICO.7-3-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/eu/7-3-E1/",
@@ -951,7 +951,7 @@
         },
         {
           "id": "8-5-E1",
-          "title": "Renta personal y brecha de género",
+          "title": "GRAFICO.8-5-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/eu/8-5-E1/",
@@ -2182,56 +2182,8 @@
       "indicators": [
         
         {
-          "id": "E1-1-3-E1",
-          "title": "Viviendas protegidas (VPO) adjudicadas por Etxebide en el último quinquenio por cada mil habitantes",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/E1-1-3/",
-          "status": "noevaluado"
-        }]
-    }
-  },
-  {
-    "goal": {
-      "id": "",
-      "title": "",
-      "indicators": [
-        
-        {
-          "id": "E2-1-3-E2",
-          "title": "Pensión contributiva media mensual",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/E1-1-3/",
-          "status": "noevaluado"
-        },
-        {
-          "id": "E2-2-4-E2",
-          "title": "Proporción de explotaciones ecológicas agrícolas y ganaderas",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/E2-2-4/",
-          "status": "noevaluado"
-        }]
-    }
-  },
-  {
-    "goal": {
-      "id": "",
-      "title": "",
-      "indicators": [
-        
-        {
-          "id": "OCECA-1-2-1-1",
-          "title": "national_indicators.OCECA-1-2-1-1-title",
-          "description": "",
-          "keywords": "",
-          "href": "/site/eu/OCECA-1-2-1-1/",
-          "status": "progreso"
-        },
-        {
           "id": "OCECA-1-2-1-1A",
-          "title": "national_indicators.OCECA-1-2-1-1A",
+          "title": "GRAFICO.OCECA-1-2-1-1A",
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-1-2-1-1A/",
@@ -2239,7 +2191,7 @@
         },
         {
           "id": "OCECA-1-2-1-2A",
-          "title": "national_indicators.OCECA-1-2-1-2A",
+          "title": "GRAFICO.OCECA-1-2-1-2A",
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-1-2-1-2A/",
@@ -2247,7 +2199,7 @@
         },
         {
           "id": "OCECA-1-2-1-2B",
-          "title": "national_indicators.OCECA-1-2-1-2B",
+          "title": "GRAFICO.OCECA-1-2-1-2B",
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-1-2-1-2B/",
@@ -2255,7 +2207,7 @@
         },
         {
           "id": "OCECA-1-2-2-1A",
-          "title": "national_indicators.OCECA-1-2-2-1A",
+          "title": "GRAFICO.OCECA-1-2-2-1A",
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-1-2-2-1A/",
@@ -2263,7 +2215,7 @@
         },
         {
           "id": "OCECA-1-a-2-1",
-          "title": "national_indicators.OCECA-1-a-2-1",
+          "title": "GRAFICO.OCECA-1-a-2-1",
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-1-a-2-1/",
@@ -2271,7 +2223,7 @@
         },
         {
           "id": "OCECA-1-a-2-2",
-          "title": "national_indicators.OCECA-1-a-2-2",
+          "title": "GRAFICO.OCECA-1-a-2-2",
           "description": "",
           "keywords": "",
           "href": "/site/eu/OCECA-1-a-2-2/",
