@@ -107,7 +107,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/1-b-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         }]
     }
   },
@@ -775,7 +775,7 @@
         },
         {
           "id": "6-4-E1",
-          "title": "GRAFICO.6-4-E1-titulo",
+          "title": "Consumo de agua (<b>Indicador Gobierno Vasco</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/6-4-E1/",
