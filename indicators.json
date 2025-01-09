@@ -739,7 +739,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/6-2-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "6-3-1",
@@ -775,7 +775,7 @@
         },
         {
           "id": "6-4-E1",
-          "title": "Consumo de agua (<b>Indicador Gobierno Vasco</b>)",
+          "title": "GRAFICO.6-4-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/6-4-E1/",
