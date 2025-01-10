@@ -25,42 +25,7 @@ country:
 create_goals:
   layout: goal-with-progress
   previous_next_links: true
-  goals:
-  goals:
-    - goal: 1
-      content: general.aviso_desglose
-    - goal: 2
-      content: general.aviso_desglose
-    - goal: 3
-      content: general.aviso_desglose
-    - goal: 4
-      content: general.aviso_desglose
-    - goal: 5
-      content: general.aviso_desglose
-    - goal: 6
-      content: general.aviso_desglose
-    - goal: 7
-      content: general.aviso_desglose
-    - goal: 8
-      content: general.aviso_desglose
-    - goal: 9
-      content: general.aviso_desglose
-    - goal: 10
-      content: general.aviso_desglose      
-    - goal: 11
-      content: general.aviso_desglose
-    - goal: 12
-      content: general.aviso_desglose
-    - goal: 13
-      content: general.aviso_desglose
-    - goal: 14
-      content: general.aviso_desglose
-    - goal: 15
-      content: general.aviso_desglose
-    - goal: 16
-      content: general.aviso_desglose
-    - goal: 17
-      content: general.aviso_desglose       
+  goals: []    
 create_indicators:
   previous_next_links: true
 create_pages:
