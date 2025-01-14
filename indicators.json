@@ -163,7 +163,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/2-3-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "2-3-2",
@@ -171,7 +171,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/2-3-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "2-4-1",
@@ -179,14 +179,22 @@
           "description": "",
           "keywords": "",
           "href": "/site/2-4-1/",
-          "status": "alcanzado"
+          "status": "progreso"
         },
         {
           "id": "2-4-E1",
-          "title": "Emisiones de amoníaco de la agricultura y ganadería (<b>Indicador UE</b>)",
+          "title": "Superficie dedicada a la agricultura ecológica (<b>Indicador UE</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-E1/",
+          "status": "alcanzado"
+        },
+        {
+          "id": "2-4-E2",
+          "title": "Emisiones de amoníaco de la agricultura y ganadería (<b>Indicador UE</b>)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/2-4-E2/",
           "status": "progreso"
         },
         {
@@ -211,7 +219,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/2-a-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "2-a-2",

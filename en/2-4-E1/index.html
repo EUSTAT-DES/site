@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250110184320">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250114154010">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -499,7 +499,7 @@ data-event-label="high"
                 </a>
             </div>
             <div class="text-right">
-                <a class="btn btn-primary G2-background" href="/site/en/2-5-1/" aria-labelledby="next-link">
+                <a class="btn btn-primary G2-background" href="/site/en/2-4-E2/" aria-labelledby="next-link">
                     <span id="next-link" class="d-none d-md-inline">Next indicator</span>
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </a>
@@ -538,13 +538,13 @@ data-event-label="high"
             
                 
                     <div class="progress-status-label">
-                        Fair progress but acceleration needed
+                        On track or target met
                     </div>
                 
             
             
                 <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/en_progreso.png" alt="Fair progress but acceleration needed" />
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="On track or target met" />
                 </div>
             
         </div>
@@ -582,7 +582,7 @@ data-event-label="high"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap="false"
+  data-showmap="true"
   data-startvalues="&quot;&quot;"
   data-graphlimits="[]"
   data-stackeddisaggregation=""
@@ -590,7 +590,7 @@ data-event-label="high"
   data-graphtargetlines="[]"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Emisiones de amoníaco de la agricultura y ganadería por hectárea&quot;,&quot;Emisiones de amoníaco de la agricultura y ganadería&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Actividad&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Agricultura&quot;,&quot;Ganadería&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Actividad económica&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Kg por hectárea&quot;,&quot;Kilotoneladas&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Comarca&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Añana (comarca)&quot;,&quot;Arabako Errioxa / Rioja Alavesa&quot;,&quot;Arabako Kantaurialdea / Cantábrica Alavesa&quot;,&quot;Arabako Lautada / Llanada Alavesa&quot;,&quot;Arabako Mendialdea / Montaña Alavesa&quot;,&quot;Arratia Nerbioi / Arratia-Nervión&quot;,&quot;Bidasoa Beherea / Bajo Bidasoa&quot;,&quot;Bilbo Handia / Gran Bilbao&quot;,&quot;Debabarrena / Bajo Deba&quot;,&quot;Debagoiena / Alto Deba&quot;,&quot;Donostialdea&quot;,&quot;Durangaldea / Duranguesado&quot;,&quot;Enkartazioak / Encartaciones&quot;,&quot;Gernika-Bermeo&quot;,&quot;Goierri&quot;,&quot;Gorbeialdea / Estribaciones del Gorbea&quot;,&quot;Markina-Ondarroa&quot;,&quot;Plentzia-Mungia&quot;,&quot;Tolosaldea&quot;,&quot;Urola Kosta&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Comarca&quot;},{&quot;name&quot;:&quot;Municipio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Abadiño&quot;,&quot;Abaltzisketa&quot;,&quot;Abanto y Ciérvana-Abanto Zierbena&quot;,&quot;Aduna&quot;,&quot;Agurain/Salvatierra&quot;,&quot;Aia&quot;,&quot;Aizarnazabal&quot;,&quot;Ajangiz&quot;,&quot;Albiztur&quot;,&quot;Alegia&quot;,&quot;Alegría-Dulantzi&quot;,&quot;Alkiza&quot;,&quot;Alonsotegi&quot;,&quot;Altzaga&quot;,&quot;Altzo&quot;,&quot;Amezketa&quot;,&quot;Amorebieta-Etxano&quot;,&quot;Amoroto&quot;,&quot;Amurrio&quot;,&quot;Andoain&quot;,&quot;Anoeta&quot;,&quot;Antzuola&quot;,&quot;Añana&quot;,&quot;Arakaldo&quot;,&quot;Arama&quot;,&quot;Aramaio&quot;,&quot;Arantzazu&quot;,&quot;Areatza&quot;,&quot;Aretxabaleta&quot;,&quot;Armiñón&quot;,&quot;Arraia-Maeztu&quot;,&quot;Arrankudiaga-Zollo&quot;,&quot;Arrasate/Mondragón&quot;,&quot;Arratzu&quot;,&quot;Arratzua-Ubarrundia&quot;,&quot;Arrieta&quot;,&quot;Arrigorriaga&quot;,&quot;Artea&quot;,&quot;Artzentales&quot;,&quot;Artziniega&quot;,&quot;Asparrena&quot;,&quot;Asteasu&quot;,&quot;Astigarraga&quot;,&quot;Ataun&quot;,&quot;Atxondo&quot;,&quot;Aulesti&quot;,&quot;Ayala/Aiara&quot;,&quot;Azkoitia&quot;,&quot;Azpeitia&quot;,&quot;Bakio&quot;,&quot;Baliarrain&quot;,&quot;Balmaseda&quot;,&quot;Baños de Ebro/Mañueta&quot;,&quot;Barakaldo&quot;,&quot;Barrika&quot;,&quot;Barrundia&quot;,&quot;Basauri&quot;,&quot;Beasain&quot;,&quot;Bedia&quot;,&quot;Beizama&quot;,&quot;Belauntza&quot;,&quot;Berango&quot;,&quot;Berantevilla&quot;,&quot;Berastegi&quot;,&quot;Bergara&quot;,&quot;Bermeo&quot;,&quot;Bernedo&quot;,&quot;Berriatua&quot;,&quot;Berriz&quot;,&quot;Berrobi&quot;,&quot;Bidania-Goiatz&quot;,&quot;Bilbao&quot;,&quot;Busturia&quot;,&quot;Campezo/Kanpezu&quot;,&quot;Deba&quot;,&quot;Derio&quot;,&quot;Dima&quot;,&quot;Donostia / San Sebastián&quot;,&quot;Durango&quot;,&quot;Ea&quot;,&quot;Eibar&quot;,&quot;Elantxobe&quot;,&quot;Elburgo/Burgelu&quot;,&quot;Elciego&quot;,&quot;Elduain&quot;,&quot;Elgeta&quot;,&quot;Elgoibar&quot;,&quot;Elorrio&quot;,&quot;Elvillar/Bilar&quot;,&quot;Erandio&quot;,&quot;Ereño&quot;,&quot;Ermua&quot;,&quot;Errenteria&quot;,&quot;Errezil&quot;,&quot;Erriberagoitia/Ribera Alta&quot;,&quot;Errigoiti&quot;,&quot;Eskoriatza&quot;,&quot;Etxebarri&quot;,&quot;Etxebarria&quot;,&quot;Ezkio-Itsaso&quot;,&quot;Forua&quot;,&quot;Fruiz&quot;,&quot;Gabiria&quot;,&quot;Gaintza&quot;,&quot;Galdakao&quot;,&quot;Galdames&quot;,&quot;Gamiz-Fika&quot;,&quot;Garai&quot;,&quot;Gatika&quot;,&quot;Gautegiz Arteaga&quot;,&quot;Gaztelu&quot;,&quot;Gernika-Lumo&quot;,&quot;Getaria&quot;,&quot;Getxo&quot;,&quot;Gizaburuaga&quot;,&quot;Gordexola&quot;,&quot;Gorliz&quot;,&quot;Güeñes&quot;,&quot;Harana/Valle de Arana&quot;,&quot;Hernani&quot;,&quot;Hernialde&quot;,&quot;Hondarribia&quot;,&quot;Ibarra&quot;,&quot;Ibarrangelu&quot;,&quot;Idiazabal&quot;,&quot;Igorre&quot;,&quot;Ikaztegieta&quot;,&quot;Irun&quot;,&quot;Iruña Oka/Iruña de Oca&quot;,&quot;Irura&quot;,&quot;Iruraiz-Gauna&quot;,&quot;Ispaster&quot;,&quot;Itsasondo&quot;,&quot;Iurreta&quot;,&quot;Izurtza&quot;,&quot;Karrantza Harana/Valle de Carranza&quot;,&quot;Kortezubi&quot;,&quot;Kripan&quot;,&quot;Kuartango&quot;,&quot;Labastida/Bastida&quot;,&quot;Lagrán&quot;,&quot;Laguardia&quot;,&quot;Lanciego/Lantziego&quot;,&quot;Lanestosa&quot;,&quot;Lantarón&quot;,&quot;Lapuebla de Labarca&quot;,&quot;Larrabetzu&quot;,&quot;Larraul&quot;,&quot;Lasarte-Oria&quot;,&quot;Laudio/Llodio&quot;,&quot;Laukiz&quot;,&quot;Lazkao&quot;,&quot;Leaburu&quot;,&quot;Legazpi&quot;,&quot;Legorreta&quot;,&quot;Legutio&quot;,&quot;Leintz-Gatzaga&quot;,&quot;Leioa&quot;,&quot;Lekeitio&quot;,&quot;Lemoa&quot;,&quot;Lemoiz&quot;,&quot;Leza&quot;,&quot;Lezama&quot;,&quot;Lezo&quot;,&quot;Lizartza&quot;,&quot;Loiu&quot;,&quot;Mallabia&quot;,&quot;Mañaria&quot;,&quot;Markina-Xemein&quot;,&quot;Maruri-Jatabe&quot;,&quot;Mendaro&quot;,&quot;Mendata&quot;,&quot;Mendexa&quot;,&quot;Meñaka&quot;,&quot;Moreda de Álava/Moreda Araba&quot;,&quot;Morga&quot;,&quot;Mundaka&quot;,&quot;Mungia&quot;,&quot;Munitibar-Arbatzegi Gerrikaitz&quot;,&quot;Murueta&quot;,&quot;Muskiz&quot;,&quot;Mutiloa&quot;,&quot;Mutriku&quot;,&quot;Muxika&quot;,&quot;Nabarniz&quot;,&quot;Navaridas&quot;,&quot;Oiartzun&quot;,&quot;Okondo&quot;,&quot;Olaberria&quot;,&quot;Ondarroa&quot;,&quot;Oñati&quot;,&quot;Ordizia&quot;,&quot;Orendain&quot;,&quot;Orexa&quot;,&quot;Orio&quot;,&quot;Ormaiztegi&quot;,&quot;Orozko&quot;,&quot;Ortuella&quot;,&quot;Otxandio&quot;,&quot;Oyón-Oion&quot;,&quot;Pasaia&quot;,&quot;Peñacerrada-Urizaharra&quot;,&quot;Plentzia&quot;,&quot;Portugalete&quot;,&quot;Ribera Baja/Erriberabeitia&quot;,&quot;Samaniego&quot;,&quot;San Millán/Donemiliaga&quot;,&quot;Santurtzi&quot;,&quot;Segura&quot;,&quot;Sestao&quot;,&quot;Sondika&quot;,&quot;Sopela&quot;,&quot;Sopuerta&quot;,&quot;Soraluze-Placencia de las Armas&quot;,&quot;Sukarrieta&quot;,&quot;Tolosa&quot;,&quot;Trucios-Turtzioz&quot;,&quot;Ubide&quot;,&quot;Ugao-Miraballes&quot;,&quot;Urduliz&quot;,&quot;Urduña/Orduña&quot;,&quot;Urkabustaiz&quot;,&quot;Urnieta&quot;,&quot;Urretxu&quot;,&quot;Usurbil&quot;,&quot;Valdegovía/Gaubea&quot;,&quot;Valle de Trápaga-Trapagaran&quot;,&quot;Villabona&quot;,&quot;Villabuena de Álava/Eskuernaga&quot;,&quot;Vitoria-Gasteiz&quot;,&quot;Yécora/Iekora&quot;,&quot;Zaldibar&quot;,&quot;Zaldibia&quot;,&quot;Zalduondo&quot;,&quot;Zalla&quot;,&quot;Zambrana&quot;,&quot;Zamudio&quot;,&quot;Zaratamo&quot;,&quot;Zarautz&quot;,&quot;Zeanuri&quot;,&quot;Zeberio&quot;,&quot;Zegama&quot;,&quot;Zerain&quot;,&quot;Zestoa&quot;,&quot;Zierbena&quot;,&quot;Zigoitia&quot;,&quot;Ziortza-Bolibar&quot;,&quot;Zizurkil&quot;,&quot;Zuia&quot;,&quot;Zumaia&quot;,&quot;Zumarraga&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Municipio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Porcentaje&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -650,7 +650,7 @@ data-event-label="high"
         
         
         
-        <th scope="col" class="table-value">Series</th>
+        <th scope="col" class="table-value">GeoCode</th>
         
         
       </thead>
@@ -659,179 +659,19 @@ data-event-label="high"
         <tr>
           
           
-          <td>2017</td>
+          <td>2012</td>
           
           
           
-          <td>19.2</td>
+          <td>1.1</td>
           
           
           
-          <td>Kg por hectárea</td>
+          <td>Porcentaje</td>
           
           
           
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2021</td>
-          
-          
-          
-          <td>18.1</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2010</td>
-          
-          
-          
-          <td>19.6</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020</td>
-          
-          
-          
-          <td>18.5</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td>19.1</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019</td>
-          
-          
-          
-          <td>18.4</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018</td>
-          
-          
-          
-          <td>18.2</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td>19.2</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014</td>
-          
-          
-          
-          <td>19.3</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
+          <td class="table-value"></td>
           
           
         </tr>
@@ -843,115 +683,15 @@ data-event-label="high"
           
           
           
-          <td>18.6</td>
+          <td>1.1</td>
           
           
           
-          <td>Kg por hectárea</td>
+          <td>Porcentaje</td>
           
           
           
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011</td>
-          
-          
-          
-          <td>18.6</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012</td>
-          
-          
-          
-          <td>19.2</td>
-          
-          
-          
-          <td>Kg por hectárea</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería por hectárea</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2010</td>
-          
-          
-          
-          <td>4.3</td>
-          
-          
-          
-          <td>Kilotoneladas</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td>4.2</td>
-          
-          
-          
-          <td>Kilotoneladas</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td>4.2</td>
-          
-          
-          
-          <td>Kilotoneladas</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
+          <td class="table-value"></td>
           
           
         </tr>
@@ -963,35 +703,15 @@ data-event-label="high"
           
           
           
-          <td>4.3</td>
+          <td>1.6</td>
           
           
           
-          <td>Kilotoneladas</td>
+          <td>Porcentaje</td>
           
           
           
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012</td>
-          
-          
-          
-          <td>4.2</td>
-          
-          
-          
-          <td>Kilotoneladas</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
+          <td class="table-value"></td>
           
           
         </tr>
@@ -999,39 +719,19 @@ data-event-label="high"
         <tr>
           
           
-          <td>2018</td>
+          <td>2016</td>
           
           
           
-          <td>4.0</td>
+          <td>1.2</td>
           
           
           
-          <td>Kilotoneladas</td>
+          <td>Porcentaje</td>
           
           
           
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2021</td>
-          
-          
-          
-          <td>4.0</td>
-          
-          
-          
-          <td>Kilotoneladas</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1039,59 +739,19 @@ data-event-label="high"
         <tr>
           
           
-          <td>2013</td>
+          <td>2010</td>
           
           
           
-          <td>4.1</td>
+          <td>0.8</td>
           
           
           
-          <td>Kilotoneladas</td>
+          <td>Porcentaje</td>
           
           
           
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014</td>
-          
-          
-          
-          <td>4.3</td>
-          
-          
-          
-          <td>Kilotoneladas</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011</td>
-          
-          
-          
-          <td>4.1</td>
-          
-          
-          
-          <td>Kilotoneladas</td>
-          
-          
-          
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1103,15 +763,95 @@ data-event-label="high"
           
           
           
-          <td>4.1</td>
+          <td>2.1</td>
           
           
           
-          <td>Kilotoneladas</td>
+          <td>Porcentaje</td>
           
           
           
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>0.8</td>
+          
+          
+          
+          <td>Porcentaje</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>1.0</td>
+          
+          
+          
+          <td>Porcentaje</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>2.9</td>
+          
+          
+          
+          <td>Porcentaje</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>1.1</td>
+          
+          
+          
+          <td>Porcentaje</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1123,15 +863,35 @@ data-event-label="high"
           
           
           
-          <td>4.1</td>
+          <td>2.6</td>
           
           
           
-          <td>Kilotoneladas</td>
+          <td>Porcentaje</td>
           
           
           
-          <td class="table-value">Emisiones de amoníaco de la agricultura y ganadería</td>
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>1.7</td>
+          
+          
+          
+          <td>Porcentaje</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -1217,6 +977,31 @@ data-event-label="Change to Table tab"
 
         
       >Table</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        map
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-mapview"
+          data-bs-target="#mapview"
+          aria-controls="mapview"
+          data-no-disagg="true"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
+
+        
+      >Map</button>
     </li>
     
   </ul>
@@ -1365,6 +1150,62 @@ data-event-label="Change to Table tab"
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
+<h4 id="map-heading" class="map-title">GRAFICO.2-4-E1-titulo</h4>
+<div id="map" aria-describedby="table-alternative">
+  <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Loading map" />
+</div>
+
+
+
+
+<div id="mapFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Footnote:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Data last updated:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
 
         </div>
       
@@ -1531,7 +1372,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Emisiones de amoníaco ($NH_3$) de la agricultura y ganadería</p>
+            <p>Proporción de la superficie agrícola (cultivos y prados y pastizales) destinada a la producción ecológica</p>
 
           
         </td>
@@ -1547,14 +1388,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Theoretical formula </th>
         <td>
           
-            
-\[ENH3_{agricultura\, y\, ganadería}^{t} = ENH3_{agricultura}^{t} + ENH3_{ganadería}^{t}\]
+            \[PSA_{ecológica}^{t} = \frac{SA_{ecológica}^{t}}{SA^{t}} \cdot 100\]
 
 <p>donde:</p>
 
-<p>$ENH3_{agricultura}^{t}$ emisiones de $NH_3$ de la agricultura en el año $t$</p>
+<p>$SA_{ecológica}^t =$ superficie agrícola destinada a la producción ecológica en el año $t$</p>
 
-<p>$ENH3_{ganadería}^{t}$ emisiones de $NH_3$ de la ganadería en el año $t$</p>
+<p>$SA^{t} =$ superficie agrícola (cultivos, prados y pastizales) en el año $t$</p>
 
           
         </td>
@@ -1570,7 +1410,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Actividad agrícola: agricultura, ganadería</p>
+            <p>Territorio histórico/Comarca/Municipio</p>
 
           
         </td>
@@ -1597,26 +1437,8 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Observations </th>
-        <td>
-          
-            
-<p>Las emisiones de amoníaco asignadas a la agricultura son las 
-correspondientes a las actividades con códigos NFR (Nomenclature for Reporting): 
-3Da1, 3Da2a, 3Da2b, 3Da2c, 3Da3, 3Da4, 3Db, 3Dc, 3Dd, 3De, 3Df, 3F y 3I.</p>
-
-<p>Las emisiones de amoníaco asignadas a la ganadería son las correspondientes a 
-las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b, 
-3B2, 3B3, 3B4a, 3B4d, 3B4e, 3B4f, 3B4gi, 3B4gii, 3B4giii, 3B4giv y 3B4h.</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1698,7 +1520,7 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
         <th scope="row">Data last updated </th>
         <td>
           
-            September 06, 2024
+            January 14, 2025
           
         </td>
         </tr>
@@ -1713,7 +1535,7 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
         <th scope="row">Metadata last updated </th>
         <td>
           
-            December 03, 2024
+            January 14, 2025
           
         </td>
         </tr>
@@ -1747,22 +1569,22 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
 
     <div class="col-md-6">
         
-        <h4 class="sr-only">Source 1</h4>
         
+        <h4>Source 1</h4>
         
         <table class="table indicator-source-table">
             
             
             
             <tr>
-                <td colspan="2"><img alt="Departamento de Industria, Transición Energética y Sostenibilidad" src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/fuentes/Euskadi.png?raw=true" /></td>
+                <td colspan="2"><img alt="Consejo de Agricultura y Alimentación Ecológica de Euskadi" src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/fuentes/Ekolurra.png?raw=true" /></td>
             </tr>
             
             
             
             <tr>
                 <th scope="row">Organisation</th>
-                <td>Departamento de Industria, Transición Energética y Sostenibilidad</td>
+                <td>Consejo de Agricultura y Alimentación Ecológica de Euskadi</td>
             </tr>
             
             
@@ -1783,7 +1605,117 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
             <tr>
                 <th scope="row">Link to data source</th>
                 
-                <td><a href="https://www.euskadi.eus/web01-s2ekono/es/contenidos/informacion/estatistika_ing_090226/es_def/index.shtml">Inventario de Emisiones de contaminantes a la atmósfera</a></td>
+                <td><a href="https://www.euskadi.eus/produccion-ecologica/web01-a2estadi/es/">Estadística de la producción ecológica</a></td>
+                
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        
+        
+        <h4>Source 2</h4>
+        
+        <table class="table indicator-source-table">
+            
+            
+            
+            <tr>
+                <td colspan="2"><img alt="Departamento de Alimentación, Desarrollo Rural, Agricultura y Pesca" src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/fuentes/Euskadi.png?raw=true" /></td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Organisation</th>
+                <td>Departamento de Alimentación, Desarrollo Rural, Agricultura y Pesca</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Periodicity</th>
+                <td>Anual</td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <tr>
+                <th scope="row">Link to data source</th>
+                
+                <td><a href="https://www.euskadi.eus/web01-a1estadi/es/">Estadística sobre la distribución general de tierras y sobre las producciones agrarias</a></td>
+                
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        
+        
+        <h4>Source 3</h4>
+        
+        <table class="table indicator-source-table">
+            
+            
+            
+            <tr>
+                <td colspan="2"><img alt="Ministerio de Agricultura, Pesca y Alimentación" src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/fuentes/GE.png?raw=true" /></td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Organisation</th>
+                <td>Ministerio de Agricultura, Pesca y Alimentación</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Periodicity</th>
+                <td>Anual</td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <tr>
+                <th scope="row">Link to data source</th>
+                
+                <td><a href="https://www.mapa.gob.es/es/estadistica/temas/estadisticas-agrarias/agricultura/esyrce/">Encuesta de superficies y rendimientos de cultivo (ESYRCE)</a></td>
                 
             </tr>
             
@@ -1844,29 +1776,20 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
         <th scope="row">Rationale </th>
         <td>
           
-            <p>El indicador forma parte del conjunto de indicadores de los Objetivos de Desarrollo Sostenible (ODS) de la UE.
-Se utiliza para hacer el seguimiento del progreso hacia el ODS 2 sobre poner fin al hambre y la desnutrición, y está 
-integrado en las prioridades de la Comisión Europea en el marco del Acuerdo Verde Europeo</p>
+            <p>Si bien la agricultura orgánica no se menciona explícitamente en la 
+Agenda 2030, la UE considera la agricultura orgánica como un método de 
+producción que pone el mayor énfasis en la protección del medio ambiente 
+y la vida silvestre y, con respecto a la producción ganadera, en consideraciones 
+de bienestar animal. Evita o reduce en gran medida el uso de insumos químicos 
+sintéticos como fertilizantes, pesticidas, aditivos y productos médicos. 
+Está prohibida la producción de organismos genéticamente modificados (OGM) y 
+su uso en la alimentación animal.</p>
 
-<p>El indicador mide las emisiones de amoniaco ($NH_3$) como resultado de 
-la producción agrícola. Estas emisiones resultan del manejo del estiércol, 
-las aplicaciones de fertilizantes nitrogenados inorgánicos y estiércol animal 
-aplicado al suelo, así como la orina y el estiércol depositados por los animales en pastoreo.</p>
-
-<p>El amoníaco ($NH_3$) es un gas incoloro, de olor acre y corrosivo que se produce por la descomposición 
-de la materia orgánica vegetal y de los excrementos de humanos y animales. Cuando se libera a la atmósfera, 
-el amoníaco contribuye al nivel de contaminación del aire. El sector agrícola sigue siendo el mayor contribuyente 
-a las emisiones de amoníaco en la UE.</p>
-
-<p>Las medidas implementadas en el marco de la Política Agrícola Común (PAC) y la 
-Directiva Marco del Agua han llevado a la UE a reducir las emisiones de 
-amoníaco procedentes de la agricultura desde la década de 1990. En concreto, las 
-medidas para cambiar las prácticas agrícolas provocaron reducciones en el uso de 
-fertilizantes nitrogenados y una reducción de la densidad ganadera por hectárea en toda la UE-15.</p>
-
-<p>La Directiva sobre Compromisos Nacionales de Reducción de Emisiones (Directiva NEC) 
-establece compromisos nacionales de reducción de emisiones para los Estados miembros y la
-UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
+<p>El indicador “Superficie dedicada a la agricultura ecológica” forma parte del 
+conjunto de indicadores de los Objetivos de Desarrollo Sostenible (ODS) 
+de la UE, y está incluido en las Prioridades de la Comisión Europea bajo el Acuerdo Verde Europeo. 
+El indicador mide la proporción del área agrícola utilizada (SAU) total ocupada por la 
+agricultura orgánica (áreas existentes cultivadas orgánicamente y áreas en proceso de conversión).</p>
 
           
         </td>
@@ -1882,7 +1805,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible en la C.A. de Euskadi es comparable con el indicador europeo.</p>
+            <p>El indicador disponible es comparable con el indicador europeo “superficie dedicada a la agricultura ecológica”.</p>
 
           
         </td>
@@ -1898,7 +1821,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
         <th scope="row">International results </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_02_60/default/table?lang=en&amp;category=sdg.sdg_02"> Emisiones de amoníaco de la agricultura (sdg_02_60)</a> Eurostat</p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_02_40/default/table?lang=en&amp;category=sdg.sdg_02">Superficie dedicada a la agricultura ecológica (sdg_02_40)</a> Eurostat</p>
 
           
         </td>
@@ -1919,7 +1842,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_60_esmsip2.htm">Metadata sdg_20_60</a> (solo en inglés)<br /></p>
+            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_40_esmsip2.htm">Metadatos Eurostat (sdg_02_40)</a> (solo en inglés)</p>
 
           
         </td>
@@ -2018,6 +1941,15 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/torfsen/leaflet.zoomhome@master/dist/leaflet.zoomhome.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
@@ -2034,7 +1966,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250110184320'></script>
+<script src='/site/assets/js/sdg.js?v=20250114154010'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -2056,7 +1988,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250110184320"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250114154010"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

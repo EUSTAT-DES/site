@@ -163,7 +163,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/2-3-1/",
-          "status": "notstarted"
+          "status": "alcanzado"
         },
         {
           "id": "2-3-2",
@@ -171,7 +171,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/2-3-2/",
-          "status": "notstarted"
+          "status": "retroceso"
         },
         {
           "id": "2-4-1",
@@ -179,7 +179,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/2-4-1/",
-          "status": "alcanzado"
+          "status": "progreso"
         },
         {
           "id": "2-4-E1",
@@ -187,6 +187,14 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/2-4-E1/",
+          "status": "alcanzado"
+        },
+        {
+          "id": "2-4-E2",
+          "title": "GRAFICO.2-4-E2-titulo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-4-E2/",
           "status": "progreso"
         },
         {
@@ -211,7 +219,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/2-a-1/",
-          "status": "notstarted"
+          "status": "noevaluado"
         },
         {
           "id": "2-a-2",
