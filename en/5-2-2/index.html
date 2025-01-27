@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250127165851">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250127203007">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1206,7 +1206,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Número de casos registrados de violencia contra las mujeres (victimizaciones) de manos de su pareja  o ex pareja, violencia intrafamiliar o sexual sobre el total de mujeres</p>
+            <p>Número de casos registrados de violencia sexual contra las mujeres (victimizaciones) cometidos por autores de fuera del ámbito familiar, por cada 10.000 mujeres</p>
 
           
         </td>
@@ -1222,12 +1222,11 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Theoretical formula </th>
         <td>
           
-            \[TVIF^{t} = \frac{VT^{t}}{P_{mujeres}^{t}} \cdot 100\]
+            \[TVIS^{t} = \frac{VS^{t}}{P_{mujeres}^{t}} \cdot 10000\]
 
 <p>donde:</p>
 
-<p>$VT^{t} =$ número de casos registrados de violencia contra las mujeres de manos de su pareja 
-o ex pareja, violencia intrafamiliar o sexual en el año $t$</p>
+<p>$VS^{t} =$ número de casos registrados de violencia sexual contra las mujeres cometidos por autores de fuera del ámbito familiar en el año $t$</p>
 
 <p>$P_{mujeres}^{t} =$ mujeres a 1 de julio del año $t$</p>
 
@@ -1245,8 +1244,7 @@ o ex pareja, violencia intrafamiliar o sexual en el año $t$</p>
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Tipo de violencia: Todos los tipos de violencia, violencia sexual, violencia intrafamiliar</p>
-
+            
 <p>Territorio histórico/Comarca/Municipio</p>
 
           
@@ -1361,7 +1359,7 @@ o ex pareja, violencia intrafamiliar o sexual en el año $t$</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            December 03, 2024
+            January 27, 2025
           
         </td>
         </tr>
@@ -1665,7 +1663,7 @@ de esta forma de violencia y a elaborar políticas y programas adecuados.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250127165851'></script>
+<script src='/site/assets/js/sdg.js?v=20250127203007'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1687,7 +1685,7 @@ de esta forma de violencia y a elaborar políticas y programas adecuados.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250127165851"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250127203007"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

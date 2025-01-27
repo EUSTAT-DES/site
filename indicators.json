@@ -718,14 +718,6 @@
           "status": "alcanzado"
         },
         {
-          "id": "5-a-E1",
-          "title": "Renta personal y brecha de género (<b>Indicador Gobierno Vasco</b>)",
-          "description": "",
-          "keywords": "",
-          "href": "/site/5-a-E1/",
-          "status": "progreso"
-        },
-        {
           "id": "5-b-1",
           "title": "Proporción de personas que poseen un teléfono móvil, desglosada por sexo",
           "description": "",
@@ -795,15 +787,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/6-4-2/",
-          "status": "notstarted"
-        },
-        {
-          "id": "6-4-E1",
-          "title": "Consumo de agua (<b>Indicador Gobierno Vasco</b>)",
-          "description": "",
-          "keywords": "",
-          "href": "/site/6-4-E1/",
-          "status": "progreso"
+          "status": "noevaluado"
         },
         {
           "id": "6-5-1",
@@ -884,14 +868,6 @@
           "keywords": "",
           "href": "/site/7-3-1/",
           "status": "progreso"
-        },
-        {
-          "id": "7-3-E1",
-          "title": "Consumo de energía eléctrica (<b>Indicador Gobierno Vasco</b>)",
-          "description": "",
-          "keywords": "",
-          "href": "/site/7-3-E1/",
-          "status": "noevaluado"
         },
         {
           "id": "7-a-1",
@@ -975,7 +951,7 @@
         },
         {
           "id": "8-5-E1",
-          "title": "Tasa de ocupación de la población",
+          "title": "Tasa de ocupación de la población (<b>Indicador UE</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/8-5-E1/",
