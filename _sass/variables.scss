@@ -13,4 +13,84 @@
 //$footer-text-color: #000000;
 $indicatorContent-horizontalRule-color: #dce0e3;
 
+$status-color-complete: $color-light !default;
+$status-color-inprogress: $color-light !default;
+$status-color-notstarted: $text-color !default;
+$status-color-notapplicable: $text-color !default;
+$status-color-alcanzado: $text-color !default;
+$status-color-progreso: $text-color !default;
+$status-color-retroceso: $text-color !default;
+$status-color-noevaluado: $text-color !default;
+
+
+$status-backgroundColor-complete: #2B2B2B !default;
+$status-backgroundColor-inprogress: #757575 !default;
+$status-backgroundColor-notstarted: white !default;
+$status-backgroundColor-notapplicable: repeating-linear-gradient(135deg, $status-backgroundColor-inprogress, white 10px, $status-backgroundColor-inprogress 10px, white 20px) !default;
+$status-backgroundColor-alcanzado: #5cb85c !default;
+$status-backgroundColor-progreso: #f5a327 !default;
+$status-backgroundColor-retroceso: #E27874 !default;
+$status-backgroundColor-noevaluado: #B7B7B7 !default;
+
+
+$status-backgroundColor-inner-complete: $status-backgroundColor-complete !default;
+$status-backgroundColor-inner-inprogress: $status-backgroundColor-inprogress !default;
+$status-backgroundColor-inner-notstarted: $status-backgroundColor-notstarted !default;
+$status-backgroundColor-inner-notapplicable: rgba(255, 255, 255, 0.8) !default;
+$status-backgroundColor-inner-alcanzado: $status-backgroundColor-alcanzado !default;
+$status-backgroundColor-inner-progreso: $status-backgroundColor-progreso !default;
+$status-backgroundColor-inner-retroceso: $status-backgroundColor-retroceso !default;
+$status-backgroundColor-inner-noevaluado: $status-backgroundColor-noevaluado !default;
+
+$status-color-complete-highContrast: $color-dark-highContrast !default;
+$status-color-inprogress-highContrast: $color-light-highContrast !default;
+$status-color-notstarted-highContrast: $color-light-highContrast !default;
+$status-color-notapplicable-highContrast: $color-dark-highContrast !default;
+$status-color-alcanzado-highContrast: $color-light-highContrast !default;
+$status-color-progreso-highContrast: $color-light-highContrast !default;
+$status-color-retroceso-highContrast: $color-light-highContrast !default;
+$status-color-noevaluado-highContrast: $color-light-highContrast !default;
+
+$status-backgroundColor-complete-highContrast: $color-light-highContrast !default;
+$status-backgroundColor-inprogress-highContrast: $color-medium-highContrast !default;
+$status-backgroundColor-notstarted-highContrast: $color-dark-highContrast !default;
+$status-backgroundColor-notapplicable-highContrast: $status-backgroundColor-notapplicable !default;
+$status-backgroundColor-alcanzado-highContrast: $color-light-highContrast !default;
+$status-backgroundColor-progreso-highContrast: $color-medium-highContrast !default;
+$status-backgroundColor-retroceso-highContrast: $color-dark-highContrast !default;
+$status-backgroundColor-noevaluado-highContrast: $color-light-highContrast !default;
+
+$status-backgroundColor-inner-complete-highContrast: $status-backgroundColor-complete-highContrast !default;
+$status-backgroundColor-inner-inprogress-highContrast: $status-backgroundColor-inprogress-highContrast !default;
+$status-backgroundColor-inner-notstarted-highContrast: $status-backgroundColor-notstarted-highContrast !default;
+$status-backgroundColor-inner-notapplicable-highContrast: $status-backgroundColor-inner-notapplicable !default;
+
+$status-border-complete: 1px solid transparent !default;
+$status-border-inprogress: 1px solid transparent !default;
+$status-border-notstarted: 1px solid $color-dark !default;
+$status-border-notapplicable: 1px solid $color-dark !default;
+$status-border-alcanzado: 1px solid transparent !default;
+$status-border-progreso: 1px solid transparent !default;
+$status-border-retroceso: 1px solid transparent !default;
+$status-border-noevaluado: 1px solid transparent !default;
+
+
+$status-border-complete-highContrast: 1px solid transparent !default;
+$status-border-inprogress-highContrast: 1px solid transparent !default;
+$status-border-notstarted-highContrast: 1px solid $color-light-highContrast !default;
+$status-border-notapplicable-highContrast: 1px solid $color-light-highContrast !default;
+$status-border-alcanzado-highContrast: 1px solid transparent !default;
+$status-border-progreso-highContrast: 1px solid transparent !default;
+$status-border-retroceso-highContrast: 1px solid transparent !default;
+$status-border-noevaluado-highContrast: 1px solid transparent !default;
+
+
+
+
+
+
+
+
+
+
 $tag-backgroundColor: #6e0875;
