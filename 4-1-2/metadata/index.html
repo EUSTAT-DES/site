@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250203141300">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250203170908">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -554,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas entre 18 y 20 años que han completado al menos la primera etapa de enseñanza  secundaria (CINE 2) respecto al total de personas entre 18 y 20 años, y Proporción de personas entre  20 y 22 años que han completado al menos la segunda etapa de enseñanza secundaria (CINE 3) respecto  al total de personas entre 20 y 22 años.");
+        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas entre 18 y 20 años que han completado al menos la primera etapa de enseñanza  secundaria (CINE 2) respecto al total de personas entre 18 y 20 años, y proporción de personas entre  20 y 22 años que han completado al menos la segunda etapa de enseñanza secundaria (CINE 3) respecto  al total de personas entre 20 y 22 años.");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPCINE2^{t} = \\frac{PCINE2_{18-20}^{t}}{P_{18-20}^{t}} \\cdot 100$$\n\ndonde:\n\n$PCINE2_{18-20}^{t} =$ población entre 18 y 20 años que ha completado al menos la primera etapa de \nenseñanza secundaria (CINE 2) en el año $t$\n\n$P_{18-20}^{t} =$ población entre 18 20 años en el año $t$\n\n\n\n$$PPCINE3^{t} = \\frac{PCINE3_{20-22}^{t}}{P_{20-22}^{t}} \\cdot 100$$</p>\n\ndonde:\n\n$PCINE3_{20-22}^{t} =$ población entre 20 y 22 años que ha completado al menos la segunda etapa \nde enseñanza secundaria (CINE 3) en el año $t$\n\n$P_{20-22}^{t} =$ población entre 20 y 22 años en el año $t$\n\nteniendo en cuenta que cada una de estas poblaciones se calcula como la media aritmética \nde los cuatro trimestres del año\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PCINE_n = \\frac{P_{n,Edad_a+3t5}}{P_{Edad_a+3t5}}$$\n\ndonde:\n\n$P_{n,Edad_a+3t5} =$ población con edades entre $3$ y $5$ años por encima de la edad oficial de ingreso $a$ en el último grado del nivel $n$ de educación que ha completado dicho nivel\n\n$P_{Edad_a+3t5} =$ población con edades entre $3$ y $5$ años por encima de la edad oficial de ingreso $a$ en el último grado del nivel $n$ de educación\n\n$n =$ Nivel CINE 2 (primera etapa de la educación secundaria) y CINE 3 (segunda etapa de la educación secundaria)\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -582,7 +582,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Nivel educativo: educación secundaria inferior y superior Edad");
+        var currentValue = normalizeCurrentValue('desagregacion', "Nivel educativo: primera y segunda etapa de la educación secundaria\n\nEdad\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -720,7 +720,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-01-16");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-02-03");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-03");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-02-03");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250203141300'></script>
+<script src='/site/assets/js/sdg.js?v=20250203170908'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250203141300"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250203170908"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
