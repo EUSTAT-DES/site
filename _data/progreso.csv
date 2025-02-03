@@ -1,5 +1,5 @@
 goal,status,count,percentage,total
-1,alcanzado,5,55.55555555555556,9
+1,alcanzado,6,46.15384615384615,13
 11,alcanzado,6,75.0,8
 12,alcanzado,4,80.0,5
 13,alcanzado,1,50.0,2
@@ -13,7 +13,6 @@ goal,status,count,percentage,total
 7,alcanzado,2,40.0,5
 8,alcanzado,3,27.27272727272727,11
 9,alcanzado,2,22.22222222222222,9
-1,noevaluado,2,22.22222222222222,9
 10,noevaluado,1,25.0,4
 16,noevaluado,1,16.666666666666664,6
 17,noevaluado,4,36.36363636363637,11
@@ -21,8 +20,10 @@ goal,status,count,percentage,total
 3,noevaluado,4,17.391304347826086,23
 6,noevaluado,1,16.666666666666664,6
 8,noevaluado,3,27.27272727272727,11
+1,notapplicable,2,15.384615384615385,13
+1,notstarted,2,15.384615384615385,13
 2,notstarted,1,11.11111111111111,9
-1,progreso,2,22.22222222222222,9
+1,progreso,3,23.076923076923077,13
 10,progreso,2,50.0,4
 12,progreso,1,20.0,5
 13,progreso,1,50.0,2
@@ -45,8 +46,9 @@ goal,status,count,percentage,total
 5,retroceso,3,30.0,10
 6,retroceso,1,16.666666666666664,6
 9,retroceso,2,22.22222222222222,9
-overall,alcanzado,55,41.66666666666667,132
-overall,noevaluado,17,12.878787878787879,132
-overall,notstarted,1,0.7575757575757576,132
-overall,progreso,37,28.030303030303028,132
-overall,retroceso,22,16.666666666666664,132
+overall,alcanzado,56,41.17647058823529,136
+overall,noevaluado,15,11.029411764705882,136
+overall,notapplicable,2,1.4705882352941175,136
+overall,notstarted,3,2.2058823529411766,136
+overall,progreso,38,27.941176470588236,136
+overall,retroceso,22,16.176470588235293,136
