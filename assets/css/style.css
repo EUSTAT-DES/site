@@ -3157,6 +3157,7 @@ ul.iconillo {
   margin-bottom: 5px;
   margin-right: 10px; }
   .layout-progrestatus #main-content .statuses > div .status {
+    border: none !important;
     color: #0b0c0c;
     font-weight: normal;
     border: none;
@@ -3206,7 +3207,10 @@ ul.iconillo {
         background: rgba(255, 255, 255, 0.8); }
     .layout-progrestatus #main-content .statuses > div .status .status-inner {
       padding: 0 2px;
-      border-radius: 5px; }
+      border-radius: 5px;
+      border: 1px solid #000;
+      background-color: #fff;
+      color: #000; }
 .layout-progrestatus #main-content .value {
   color: #0b0c0c;
   font-weight: bold;
@@ -3229,12 +3233,18 @@ ul.iconillo {
   .layout-progrestatus #main-content .goal-stats .notstarted {
     background-color: white;
     background: white; }
-  .layout-progrestatus #main-content .goal-stats .inprogress {
-    background-color: #757575;
-    background: #757575; }
-  .layout-progrestatus #main-content .goal-stats .complete {
-    background-color: #edb81a;
-    background: #edb81a; }
+  .layout-progrestatus #main-content .goal-stats .alcanzado {
+    background-color: #45ba80;
+    background: #45ba80; }
+  .layout-progrestatus #main-content .goal-stats .progreso {
+    background-color: #fec329;
+    background: #fec329; }
+  .layout-progrestatus #main-content .goal-stats .retroceso {
+    background-color: #db405a;
+    background: #db405a; }
+  .layout-progrestatus #main-content .goal-stats .noevaluado {
+    background-color: #ccd5dd;
+    background: #ccd5dd; }
 .layout-progrestatus #main-content .divider {
   height: 15px; }
 .layout-progrestatus #main-content .goal {
