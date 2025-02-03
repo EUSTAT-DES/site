@@ -2892,6 +2892,24 @@ ul.iconillo {
 .tag-propio {
   background-color: #2B2B2B !important; }
 
+.notapplicable {
+  background-color: #2B2B2B; }
+
+.notstarted {
+  background-color: white; }
+
+.alcanzado {
+  background-color: #45ba80; }
+
+.progreso {
+  background-color: #fec329; }
+
+.retroceso {
+  background-color: #db405a; }
+
+.noevaluado {
+  background-color: #ccd5dd; }
+
 .btn-label {
   color: white; }
 
@@ -3212,7 +3230,7 @@ ul.iconillo {
     height: 10px;
     font-weight: bold; }
   .layout-progrestatus #main-content .goal-stats .notapplicable {
-    background-color: repeating-linear-gradient(135deg, #757575, white 10px, #757575 10px, white 20px); }
+    background-color: #2B2B2B; }
   .layout-progrestatus #main-content .goal-stats .notstarted {
     background-color: white; }
   .layout-progrestatus #main-content .goal-stats .alcanzado {
