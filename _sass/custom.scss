@@ -99,13 +99,6 @@ ul.iconillo {
 .tag-europeo{ background-color: #2B2B2B!important; }
 .tag-propio{ background-color: #2B2B2B!important; }
 
-// Estados
-            .notapplicable { background-color: $status-backgroundColor-complete; }
-            .notstarted { background-color: $status-backgroundColor-notstarted; }
-            .alcanzado { background-color: #45ba80; }
-            .progreso { background-color: #fec329; }
-            .retroceso { background-color: #db405a; }
-            .noevaluado { background-color: #ccd5dd; }
 
 // Navegación
 
@@ -347,20 +340,16 @@ ul.iconillo {
                     .status-inner {
                         padding: 0 2px;
                         border-radius: 5px;
-                        background-color: #fff;
-                        color: #000;
                     }
                 }
             }
         }
         .value {
-            color: $text-color;
             font-weight: bold;
             margin-left: 3px;
         }
         .goal-stats {
             @include preserveOriginalColors;
-            border: 1px solid $color-dark;
             font-size: 0;
             margin-top: 10px;
             & span {
@@ -368,12 +357,6 @@ ul.iconillo {
                 height: 10px;
                 font-weight: bold;
             }
-            .notapplicable { background-color: $status-backgroundColor-complete; }
-            .notstarted { background-color: $status-backgroundColor-notstarted; }
-            .alcanzado { background-color: #45ba80; }
-            .progreso { background-color: #fec329; }
-            .retroceso { background-color: #db405a; }
-            .noevaluado { background-color: #ccd5dd; }
         }
         .divider {
             height: 15px;
@@ -458,18 +441,13 @@ ul.iconillo {
                     background-color: black !important;
                 }
             }
-
-            .goal-stats {
-                border: 1px solid $color-light-highContrast !important;
-                .notapplicable { background-color: $status-backgroundColor-notapplicable-highContrast; }
-                .notstarted { background-color: $status-backgroundColor-notstarted-highContrast; }
-                .inprogress { background-color: $status-backgroundColor-inprogress-highContrast; }
-                .complete { background-color: $status-backgroundColor-complete-highContrast; }
-            }
-
             .statuses {
-                strong { color: $color-light-highContrast; }
-                .value { color: $color-light-highContrast !important; }
+                strong {
+                    color: $color-light-highContrast;
+                }
+                .value {
+                    color: $color-light-highContrast !important;
+                }
                 .status {
                     @include statusHighContrast;
                     border: none !important;
