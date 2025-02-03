@@ -99,6 +99,13 @@ ul.iconillo {
 .tag-europeo{ background-color: #2B2B2B!important; }
 .tag-propio{ background-color: #2B2B2B!important; }
 
+// Estados
+            .notapplicable { background-color: $status-backgroundColor-complete; }
+            .notstarted { background-color: $status-backgroundColor-notstarted; }
+            .alcanzado { background-color: #45ba80; }
+            .progreso { background-color: #fec329; }
+            .retroceso { background-color: #db405a; }
+            .noevaluado { background-color: #ccd5dd; }
 
 // Navegación
 
@@ -361,7 +368,7 @@ ul.iconillo {
                 height: 10px;
                 font-weight: bold;
             }
-            .notapplicable { background-color: $status-backgroundColor-notapplicable; }
+            .notapplicable { background-color: $status-backgroundColor-complete; }
             .notstarted { background-color: $status-backgroundColor-notstarted; }
             .alcanzado { background-color: #45ba80; }
             .progreso { background-color: #fec329; }
