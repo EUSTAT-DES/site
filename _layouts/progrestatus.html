@@ -4,6 +4,9 @@
 <!-- Asignar los datos desde el CSV -->
 {% assign reporting_data = site.data.progreso %}
 
+<!-- Definir el orden correcto de los objetivos -->
+{% assign ordered_goals = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17" | split: "," %}
+
 
 <div id="main-content" class="container reportingstatus" role="main">
   <!-- Introducción -->
@@ -65,6 +68,7 @@
     <h2>{{ page.t.status.status_by_goal }}</h2>
     {% assign goals_data = reporting_data | where_exp: "item", "item.goal != 'overall'" %}
     {% assign grouped_goals = goals_data | group_by: "goal" %}
+
 
     {% for goal in grouped_goals %}
     {% assign goal_data = goal.items %}
