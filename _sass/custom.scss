@@ -334,6 +334,7 @@ ul.iconillo {
                 margin-right: 10px;
 
                 .status {
+                    border: none !important;
                     @include status;
                     display: inline-block;
                     margin-right: 3px;
@@ -344,10 +345,13 @@ ul.iconillo {
                     text-align: center;
                     font-size: $fontSize;
 
-                    .status-inner {
-                        padding: 0 2px;
-                        border-radius: 5px;
-                    }
+.status-inner {
+    padding: 0 2px;
+    border-radius: 5px; // Mantén los bordes redondeados si es necesario.
+    border: 1px solid #000; // Un borde negro uniforme para todos.
+    background-color: #fff; // Fondo blanco para todos.
+    color: #000; // Texto negro para todos.
+}
                 }
             }
         }
@@ -374,14 +378,16 @@ ul.iconillo {
                 background-color: $status-backgroundColor-notstarted;
                 background: $status-backgroundColor-notstarted;
             }
-            .inprogress {
-                background-color: $status-backgroundColor-inprogress;
-                background: $status-backgroundColor-inprogress;
-            }
-            .complete {
-                background-color: #edb81a;
-                background: #edb81a;
-            }
+// Otros estados de progreso
+
+                        .alcanzado {background-color: #45ba80;
+                                   background: #45ba80;}
+                        .progreso {background-color: #fec329;
+                                               background: #fec329;}
+                        .retroceso {background-color: #db405a;
+                                           background: #db405a;}
+                        .noevaluado {background-color: #ccd5dd;
+                                       background: #ccd5dd;}
         }
         .divider {
             height: 15px;

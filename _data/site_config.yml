@@ -35,7 +35,7 @@ create_pages:
     title: general.goals
   - filename: ''
     folder: /reporting-status
-    layout: reportingstatus
+    layout: progrestatus
     title: status.reporting_status
   - filename: ''
     folder: /search
@@ -229,6 +229,9 @@ progress_status:
       label: status.no_data_available
       image: assets/img/progress/notstarted.png
       alt: status.no_data_available
+      hide_on_goal_pages: false
+    - value: notapplicable
+      label: status.not_applicable
       hide_on_goal_pages: false
 remote_data_prefix: 'https://eustat-des.github.io/data/'
 reporting_status:
