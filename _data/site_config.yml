@@ -257,6 +257,9 @@ reporting_status:
     - value: complete
       label: status.reported_online
       hide_on_goal_pages: true
+    - value: notapplicable
+      label: status.not_applicable
+      hide_on_goal_pages: false
 repository_url_data: 'https://github.com/EUSTAT-DES/data'
 repository_url_site: 'https://github.com/EUSTAT-DES/site'
 search_index_boost: []
