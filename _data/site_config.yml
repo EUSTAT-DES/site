@@ -70,11 +70,12 @@ environment: staging
 footer_language_toggle: none
 footer_menu:
 frontpage_cards:
-  - content: ''
+  - title: frontpage.download_all
+    content: ''
     include: components/download-all-data.html
     button_label: ''
     button_link: ''
-    rule_color: '#a5a7a8'
+    rule_color: ''
 frontpage_goals_grid:
   title: frontpage.heading_short
   description: frontpage.instructions_shorter
