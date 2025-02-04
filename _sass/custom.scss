@@ -310,6 +310,13 @@ ul.iconillo {
         }
     }
 
+// Nuevos estados
+.alcanzado {background-color: #45ba80; background: #45ba80;}
+.progreso {background-color: #fec329; background: #fec329;}
+.retroceso {background-color: #db405a; background: #db405a;}
+.noevaluado {background-color: #ccd5dd; background: #ccd5dd;}
+
+
 // Progress status
 .layout-progrestatus {
     .reporting-status-description {
@@ -340,8 +347,6 @@ ul.iconillo {
   .status-inner {
     padding: 0 2px;
     border-radius: 5px; // Mantén los bordes redondeados si es necesario.
-    border: 1px solid #000; // Un borde negro uniforme para todos.
-    background-color: #fff; // Fondo blanco para todos.
     color: #000; // Texto negro para todos.
 }
                 }

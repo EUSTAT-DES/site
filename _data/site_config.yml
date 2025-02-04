@@ -240,18 +240,6 @@ reporting_status:
   description: status.description
   disaggregation_tabs: false
   status_types:
-    - value: alcanzado
-      label: status.alcanzado
-      hide_on_goal_pages: true
-    - value: progreso
-      label: status.en_progreso
-      hide_on_goal_pages: true
-    - value: retroceso
-      label: status.retroceso
-      hide_on_goal_pages: true
-    - value: noevaluado
-      label: status.no_evaluado
-      hide_on_goal_pages: true
     - value: notstarted
       label: status.no_data_available
       hide_on_goal_pages: false
