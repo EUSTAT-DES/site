@@ -3192,11 +3192,16 @@ ul.iconillo {
         background: rgba(255, 255, 255, 0.8); }
     .layout-progrestatus #main-content .statuses > div .status .status-inner {
       padding: 0 2px;
-      border-radius: 5px; }
+      border-radius: 5px;
+      border: 1px solid #000;
+      background-color: #fff;
+      color: #000; }
 .layout-progrestatus #main-content .value {
+  color: #0b0c0c;
   font-weight: bold;
   margin-left: 3px; }
 .layout-progrestatus #main-content .goal-stats {
+  border: 1px solid #0b0c0c;
   font-size: 0;
   margin-top: 10px; }
   @media (-ms-high-contrast: active), (forced-colors: active) {
@@ -3207,6 +3212,24 @@ ul.iconillo {
     display: inline-block;
     height: 10px;
     font-weight: bold; }
+  .layout-progrestatus #main-content .goal-stats .notapplicable {
+    background-color: repeating-linear-gradient(135deg, #757575, white 10px, #757575 10px, white 20px);
+    background: repeating-linear-gradient(135deg, #757575, white 10px, #757575 10px, white 20px); }
+  .layout-progrestatus #main-content .goal-stats .notstarted {
+    background-color: white;
+    background: white; }
+  .layout-progrestatus #main-content .goal-stats .alcanzado {
+    background-color: #45ba80;
+    background: #45ba80; }
+  .layout-progrestatus #main-content .goal-stats .progreso {
+    background-color: #fec329;
+    background: #fec329; }
+  .layout-progrestatus #main-content .goal-stats .retroceso {
+    background-color: #db405a;
+    background: #db405a; }
+  .layout-progrestatus #main-content .goal-stats .noevaluado {
+    background-color: #ccd5dd;
+    background: #ccd5dd; }
 .layout-progrestatus #main-content .divider {
   height: 15px; }
 .layout-progrestatus #main-content .goal {
@@ -3234,7 +3257,7 @@ ul.iconillo {
   min-height: 1px; }
   .layout-progrestatus #main-content .frame > a {
     display: block;
-    width: 100%; }
+    width: calc(100% - 15px); }
     .layout-progrestatus #main-content .frame > a:focus {
       outline: 2px #0b0c0c solid !important; }
       .layout-progrestatus #main-content .frame > a:focus .goal-icon-image {
@@ -3267,6 +3290,20 @@ ul.iconillo {
   margin-bottom: 20px; }
 .layout-progrestatus.contrast-high #main-content .goal-tiles img {
   background-color: black !important; }
+.layout-progrestatus.contrast-high #main-content .goal-stats {
+  border: 1px solid white !important; }
+  .layout-progrestatus.contrast-high #main-content .goal-stats .notapplicable {
+    background-color: repeating-linear-gradient(135deg, #757575, white 10px, #757575 10px, white 20px);
+    background: repeating-linear-gradient(135deg, #757575, white 10px, #757575 10px, white 20px); }
+  .layout-progrestatus.contrast-high #main-content .goal-stats .notstarted {
+    background-color: black;
+    background: black; }
+  .layout-progrestatus.contrast-high #main-content .goal-stats .inprogress {
+    background-color: #767676;
+    background: #767676; }
+  .layout-progrestatus.contrast-high #main-content .goal-stats .complete {
+    background-color: white;
+    background: white; }
 .layout-progrestatus.contrast-high #main-content .statuses strong {
   color: white; }
 .layout-progrestatus.contrast-high #main-content .statuses .value {
