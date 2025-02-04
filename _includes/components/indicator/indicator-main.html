@@ -1,5 +1,5 @@
 {% assign show_data = false %}
-{% if page.indicator.reporting_status != "notstarted" and page.indicator.data_non_statistical != true %}
+{% if page.indicator.reporting_status == "complete" and page.indicator.data_non_statistical != true %}
   {% assign show_data = true %}
 {% endif %}
 {% assign datapackage_resource = site.data[page.language].data_packages.resources | where: "name", page.indicator.slug | first %}
