@@ -3133,6 +3133,22 @@ ul.iconillo {
     .disclaimer-alert {
       font-size: 0.75em; } }
 
+.alcanzado {
+  background-color: #45ba80;
+  background: #45ba80; }
+
+.progreso {
+  background-color: #fec329;
+  background: #fec329; }
+
+.retroceso {
+  background-color: #db405a;
+  background: #db405a; }
+
+.noevaluado {
+  background-color: #ccd5dd;
+  background: #ccd5dd; }
+
 .layout-progrestatus .reporting-status-description {
   margin-bottom: 25px; }
 .layout-progrestatus #main-content .statuses strong {
@@ -3193,8 +3209,6 @@ ul.iconillo {
     .layout-progrestatus #main-content .statuses > div .status .status-inner {
       padding: 0 2px;
       border-radius: 5px;
-      border: 1px solid #000;
-      background-color: #fff;
       color: #000; }
 .layout-progrestatus #main-content .value {
   color: #0b0c0c;
