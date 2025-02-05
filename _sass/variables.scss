@@ -5,44 +5,4 @@
 
 $indicatorContent-horizontalRule-color: #dce0e3;
 
-$status-color-alcanzado: #333;
-$status-color-progreso: #333;
-$status-color-retroceso: #333;
-$status-color-noevaluado: #333;
-
-$status-backgroundColor-alcanzado: #5cb85c !default;
-$status-backgroundColor-progreso: #f5a327 !default;
-$status-backgroundColor-retroceso: #E27874 !default;
-$status-backgroundColor-noevaluado: #B7B7B7 !default;
-
-$status-backgroundColor-inner-alcanzado: $status-backgroundColor-alcanzado !default;
-$status-backgroundColor-inner-progreso: $status-backgroundColor-progreso !default;
-$status-backgroundColor-inner-retroceso: $status-backgroundColor-retroceso !default;
-$status-backgroundColor-inner-noevaluado: $status-backgroundColor-noevaluado !default;
-
-$status-color-alcanzado-highContrast: white;
-$status-color-progreso-highContrast: white;
-$status-color-retroceso-highContrast: white;
-$status-color-noevaluado-highContrast: white;
-
-$status-backgroundColor-alcanzado-highContrast: white;
-$status-backgroundColor-progreso-highContrast: white;
-$status-backgroundColor-retroceso-highContrast: white;
-$status-backgroundColor-noevaluado-highContrast: white;
-
-$status-backgroundColor-inner-alcanzado-highContrast: $status-backgroundColor-alcanzado-highContrast !default;
-$status-backgroundColor-inner-progreso-highContrast: $status-backgroundColor-progreso-highContrast !default;
-$status-backgroundColor-inner-retroceso-highContrast: $status-backgroundColor-retroceso-highContrast !default;
-$status-backgroundColor-inner-noevaluado-highContrast: $status-backgroundColor-noevaluado-highContrast !default;
-
-$status-border-alcanzado: 1px solid transparent !default;
-$status-border-progreso: 1px solid transparent !default;
-$status-border-retroceso: 1px solid transparent !default;
-$status-border-noevaluado: 1px solid transparent !default;
-
-$status-border-alcanzado-highContrast: 1px solid transparent !default;
-$status-border-progreso-highContrast: 1px solid transparent !default;
-$status-border-retroceso-highContrast: 1px solid transparent !default;
-$status-border-noevaluado-highContrast: 1px solid transparent !default;
-
 $tag-backgroundColor: #6e0875;
