@@ -25,31 +25,36 @@ layout: page
   </div>
 
   <!-- Agrupar indicadores por objetivo -->
-  {% assign grouped_indicadores = indicadores_data | group_by_exp: "item", "item.indicador | split: '.' | first" %}
+  {% assign grouped_indicadores = indicadores_data | group_by_exp: "item", "item.indicador | split: '-' | first" %}
   
   <!-- Iterar por los objetivos -->
   {% for grupo in grouped_indicadores %}
     {% assign objetivo_numero = grupo.name %}
     {% assign objetivo_indicadores = grupo.items %}
     <div class="goal reporting-status-item">
-      <div class="frame goal-tiles">
-        <img src="{{ site.baseurl }}/assets/img/ods_{{ objetivo_numero }}.png" alt="Objetivo {{ objetivo_numero }}" width="100" height="100" />
-      </div>
-      <div class="details">
-        <h2>{{ page.t.goals[objetivo_numero] }}</h2>
-        <ul>
-          <!-- Iterar por los indicadores del objetivo -->
-          {% for indicador in objetivo_indicadores %}
-            {% assign indicador_id = indicador.indicador %}
-            {% assign indicador_info = nombres_indicadores[indicador_id] %}
-            <li class="indicator-item">
-              <span class="indicator-status {{ indicador.estado | slugify }}" title="{{ indicador.estado | t }}"></span>
-              <strong>{{ indicador_id }}:</strong>
-              <span>{{ indicador_info }}</span>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+        <div class="frame goal-tiles">
+            <img src="{{ site.baseurl }}/assets/img/{{ site.goal_image_prefix }}{{ objetivo_numero }}.{{ site.goal_image_extension }}" 
+                 alt="{{ page.t.goal.indicators_for_goal }} {{ objetivo_numero }}" 
+                 width="100" height="100" 
+                 class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
+        </div>
+        <div class="details">
+            <h2 class="status-goal">
+                {{ page.t.goals[objetivo_numero] }}
+            </h2>
+            <ul>
+                <!-- Iterar por los indicadores del objetivo -->
+                {% for indicador in objetivo_indicadores %}
+                    {% assign indicador_id = indicador.indicador %}
+                    {% assign indicador_info = nombres_indicadores[indicador_id] %}
+                    <li class="indicator-item">
+                        <span class="indicator-status {{ indicador.estado | slugify }}" title="{{ indicador.estado | t }}"></span>
+                        <strong>{{ indicador_id }}:</strong>
+                        <span>{{ indicador_info }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
   {% endfor %}
 </div>
