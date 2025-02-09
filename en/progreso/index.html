@@ -1,0 +1,3303 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://eustat-des.github.io/data/en',
+
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
+  },
+
+  // A hook which can be replaced to alter whether/how the values that are
+  // displayed on indicator tables/graphs get rounded. A "context" parameter
+  // is also passed which contains additional information.
+  dataRounding: function(value, context) {
+    // Alterations go here.
+    return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
+  language: 'en',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
+};
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data !== null && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+
+        
+    <title>Progreso por indicador - Indicators For The Sustainable Development Goals</title>
+
+
+
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+
+        <!--[if IE 9]>
+        <script src="/site/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/site/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/site/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/site/assets/img/favicons/favicon.ico" />
+
+        
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250209175634">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
+
+        
+
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/site/assets/css/ie.css">
+        <![endif]-->
+
+        
+
+    </head>
+<body class="language-en
+layout-page
+">
+<!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"POC","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website.","enable_high_contrast":"Enable high contrast","hide_menu":"Hide navigation menu","high_contrast":"High contrast","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","show_menu":"Show navigation menu","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
+</div>
+
+
+<header role="banner" class="">
+    <div class="barra_azul_cab">
+        <div id="logoMaster" class="logoMaster">
+          <a id="ctl00_Cabecera_enlaceHome" data-ajax="false" href="https://www.eustat.eus/indice.html">
+            <img src="https://www.eustat.eus/cwImages/2015/logocabecera.png" alt="eustat">
+          </a>
+          <div class="logoMasterDescripcion">
+            Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
+          </div>
+        </div>
+      </div>
+      <div id="disclaimer">
+        
+<div class="container">
+  <div class="disclaimer-alert">
+    <strong class="phase-tag">POC</strong>
+    
+    This is a development website.
+    
+  </div>
+</div>
+
+      </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/site/en/" id="home" aria-label="Go to homepage" title="Go to homepage">
+    <img src="/site/assets/img/logo/SDG_logo_en.png" alt="Go to homepage" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/site/en/">Home</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/faq">FAQ</a>
+</li></ul>
+    
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/site/en/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/progreso/">
+                Español
+            </a>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/eu/progreso/">
+                Euskera
+            </a>
+        </li><li class="language-option-en list-inline-item">
+            <span class="language-toggle-active-language">
+                English
+            </span>
+        </li></ul>
+</div>
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/progreso/">
+                Español
+            </a>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/eu/progreso/">
+                Euskera
+            </a>
+        </li><li class="language-option-en list-inline-item">
+            <span class="language-toggle-active-language">
+                English
+            </span>
+        </li></ul>
+</div></span><a title="Enable high contrast" aria-label="Enable high contrast"
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="top" tabindex=-1></div>
+
+
+<div class="container">
+    <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        <li class="breadcrumb-item" >
+            <a href="/site/en/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Progreso por indicador</li>
+    </ol>
+</nav>
+</div>
+<div id="main-content" class="container" role="main">
+    <div>
+        <h1>Progreso por indicador</h1>
+        
+
+
+    <p>&lt;!DOCTYPE html&gt;</p>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://eustat-des.github.io/data/en',
+
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
+  },
+
+  // A hook which can be replaced to alter whether/how the values that are
+  // displayed on indicator tables/graphs get rounded. A "context" parameter
+  // is also passed which contains additional information.
+  dataRounding: function(value, context) {
+    // Alterations go here.
+    return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
+  language: 'en',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
+};
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data !== null && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title and meta description
+        ================================================== -->
+
+        
+    <title>Progreso por indicador - Indicators For The Sustainable Development Goals</title>
+
+
+
+        
+        <meta name="robots" content="noindex, nofollow" />
+        
+
+        <!--[if IE 9]>
+        <script src="/site/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/img/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/site/assets/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/site/assets/img/favicons/favicon-16x16.png" />
+<link rel="icon" type="image/x-icon" href="/site/assets/img/favicons/favicon.ico" />
+
+        
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="" />
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250209175634" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" crossorigin="" />
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" crossorigin="" />
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css" crossorigin="" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="" />
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin="" />
+        
+
+        
+
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/site/assets/css/ie.css">
+        <![endif]-->
+
+        
+
+    </head>
+<body class="language-en
+layout-page
+">
+<!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"POC","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website.","enable_high_contrast":"Enable high contrast","hide_menu":"Hide navigation menu","high_contrast":"High contrast","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","show_menu":"Show navigation menu","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
+</div>
+
+
+<header role="banner" class="">
+    <div class="barra_azul_cab">
+        <div id="logoMaster" class="logoMaster">
+          <a id="ctl00_Cabecera_enlaceHome" data-ajax="false" href="https://www.eustat.eus/indice.html">
+            <img src="https://www.eustat.eus/cwImages/2015/logocabecera.png" alt="eustat" />
+          </a>
+          <div class="logoMasterDescripcion">
+            Euskal Estatistika Erakundea<br />Instituto Vasco de Estadística
+          </div>
+        </div>
+      </div>
+      <div id="disclaimer">
+        
+<div class="container">
+  <div class="disclaimer-alert">
+    <strong class="phase-tag">POC</strong>
+    
+    This is a development website.
+    
+  </div>
+</div>
+
+      </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/site/en/" id="home" aria-label="Go to homepage" title="Go to homepage">
+    <img src="/site/assets/img/logo/SDG_logo_en.png" alt="Go to homepage" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/site/en/">Home</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/faq">FAQ</a>
+</li></ul>
+    
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/site/en/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search" />
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/progreso/">
+                Español
+            </a>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/eu/progreso/">
+                Euskera
+            </a>
+        </li><li class="language-option-en list-inline-item">
+            <span class="language-toggle-active-language">
+                English
+            </span>
+        </li></ul>
+</div>
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/progreso/">
+                Español
+            </a>
+        </li><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/eu/progreso/">
+                Euskera
+            </a>
+        </li><li class="language-option-en list-inline-item">
+            <span class="language-toggle-active-language">
+                English
+            </span>
+        </li></ul>
+</div></span><a title="Enable high contrast" aria-label="Enable high contrast" data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click" data-event-category="Accessibility" data-event-action="Change contrast setting" data-event-label="high">A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+&lt;div id="top" tabindex=-1&gt;&lt;/div&gt;
+
+
+
+<!-- Cargar datos desde progreso_indicador.csv -->
+
+<!-- Cargar nombres cortos según el idioma seleccionado -->
+
+
+
+
+<div id="main-content" class="container reportingstatus" role="main">
+  <!-- Título principal -->
+  <h1>Indicators</h1>
+  
+  <!-- Introducción -->
+  <div>
+    <p></p>
+  </div>
+
+  <!-- Iterar por los objetivos en el orden correcto -->
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/1/" title=" 1">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/1.png" alt="No poverty" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/1/">No poverty</a>
+          </h2>
+          <span class="total"><span>13</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>1-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>1-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>1-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>1-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>1-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>1-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>1-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>1-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>1-5-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>1-5-4:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>1-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>1-a-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>1-b-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/2/" title=" 2">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/2.png" alt="Zero hunger" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/2/">Zero hunger</a>
+          </h2>
+          <span class="total"><span>16</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>2-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>2-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>2-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>2-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>2-2-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>2-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>2-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>2-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>2-4-E1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>2-4-E2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>2-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>2-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>2-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>2-a-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>2-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>2-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/3/" title=" 3">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/3.png" alt="Good health and well-being" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/3/">Good health and well-being</a>
+          </h2>
+          <span class="total"><span>30</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>3-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>3-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>3-3-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-3-4:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>3-3-5:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>3-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>3-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-4-E1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>3-4-E2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>3-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>3-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>3-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>3-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-7-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-8-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>3-8-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>3-9-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>3-9-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>3-9-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>3-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>3-b-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>3-b-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>3-c-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>3-d-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>3-d-2:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/4/" title=" 4">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/4.png" alt="Quality education" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/4/">Quality education</a>
+          </h2>
+          <span class="total"><span>13</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>4-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>4-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>4-1-E1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>4-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>4-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>4-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>4-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>4-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>4-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>4-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>4-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>4-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>4-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/5/" title=" 5">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/5.png" alt="Gender equality" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/5/">Gender equality</a>
+          </h2>
+          <span class="total"><span>14</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>5-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>5-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>5-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>5-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>5-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>5-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>5-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>5-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>5-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>5-6-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>5-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>5-a-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>5-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>5-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/6/" title=" 6">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/6.png" alt="Clean water and sanitation" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/6/">Clean water and sanitation</a>
+          </h2>
+          <span class="total"><span>11</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>6-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>6-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>6-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>6-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>6-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>6-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>6-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>6-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>6-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>6-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>6-b-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/7/" title=" 7">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/7.png" alt="Affordable and clean energy" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/7/">Affordable and clean energy</a>
+          </h2>
+          <span class="total"><span>6</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>7-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>7-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>7-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>7-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>7-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>7-b-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/8/" title=" 8">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/8.png" alt="Decent work and economic growth" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/8/">Decent work and economic growth</a>
+          </h2>
+          <span class="total"><span>17</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>8-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>8-10-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>8-10-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>8-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>8-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>8-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>8-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>8-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>8-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>8-5-E1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>8-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>8-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>8-8-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>8-8-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>8-9-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>8-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>8-b-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/9/" title=" 9">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/9/">Industry, innovation and infrastructure</a>
+          </h2>
+          <span class="total"><span>12</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>9-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>9-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>9-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>9-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>9-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>9-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>9-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>9-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>9-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>9-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>9-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>9-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/10/" title=" 10">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/10.png" alt="Reduced inequalities" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/10/">Reduced inequalities</a>
+          </h2>
+          <span class="total"><span>14</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>10-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>10-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>10-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>10-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>10-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>10-7-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-7-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-7-4:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>10-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/11/" title=" 11">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/11.png" alt="Sustainable cities and communities" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/11/">Sustainable cities and communities</a>
+          </h2>
+          <span class="total"><span>15</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>11-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>11-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>11-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>11-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>11-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>11-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>11-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>11-5-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>11-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>11-6-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>11-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>11-7-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>11-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>11-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>11-b-2:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/12/" title=" 12">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/12.png" alt="Responsible consumption and production" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/12/">Responsible consumption and production</a>
+          </h2>
+          <span class="total"><span>13</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>12-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>12-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>12-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>12-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>12-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>12-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>12-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>12-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>12-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>12-8-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>12-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>12-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>12-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/13/" title=" 13">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/13.png" alt="Climate action" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/13/">Climate action</a>
+          </h2>
+          <span class="total"><span>8</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>13-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>13-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>13-1-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>13-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>13-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>13-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>13-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>13-b-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/14/" title=" 14">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/14.png" alt="Life below water" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/14/">Life below water</a>
+          </h2>
+          <span class="total"><span>10</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>14-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>14-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>14-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/15/" title=" 15">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/15.png" alt="Life on land" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/15/">Life on land</a>
+          </h2>
+          <span class="total"><span>14</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>15-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>15-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>15-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>15-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>15-8-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status " title=""></span>
+                <strong>15-9-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-b-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>15-c-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/16/" title=" 16">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/16.png" alt="Peace, justice and strong institutions" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/16/">Peace, justice and strong institutions</a>
+          </h2>
+          <span class="total"><span>24</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-1-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>16-1-4:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-10-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-10-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>16-2-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-2-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>16-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-3-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-4-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-5-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>16-6-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>16-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-7-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>16-8-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>16-9-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-a-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>16-b-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+    
+     <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    
+
+    
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <!-- Cargar la imagen del objetivo desde el sistema de sdg_lookup -->
+          
+          <a href="/site/en/17/" title=" 17">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/17.png" alt="Partnerships for the goals" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-" />
+          </a>
+          
+        </div>
+        <div class="details">
+          <h2 class="status-goal">
+            <a href="/site/en/17/">Partnerships for the goals</a>
+          </h2>
+          <span class="total"><span>24</span> Indicators</span>
+
+          <!-- Lista de indicadores con sus estados -->
+          <ul class="indicator-list">
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>17-1-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>17-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>17-10-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>17-11-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>17-12-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>17-13-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-14-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-15-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-16-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-17-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-18-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>17-18-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>17-18-3:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-19-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>17-19-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>17-2-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>17-3-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <strong>17-3-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <strong>17-5-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>17-6-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-7-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <strong>17-8-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status notstarted" title="notstarted"></span>
+                <strong>17-9-1:</strong>
+                <span></span>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    
+  
+</div>
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/site/en/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'hide';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Search';</script>
+
+<script src="/site/assets/js/sdg.js?v=20250209175634"></script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: { autoNumber: "all" },
+      tagSide: "right"
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/gh/mathjax/MathJax@legacy-v2-develop/unpacked/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+    
+    
+    <script src="/site/assets/js/custom.js?v=20250209175634"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
+</script>
+
+
+</body>
+</html>
+
+
+
+    </div>
+</div>
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/site/en/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'hide';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Search';</script>
+
+<script src='/site/assets/js/sdg.js?v=20250209175634'></script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: { autoNumber: "all" },
+      tagSide: "right"
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script
+  src="https://cdn.jsdelivr.net/gh/mathjax/MathJax@legacy-v2-develop/unpacked/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+    
+    
+    <script src="/site/assets/js/custom.js?v=20250209175634"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
+</script>
+
+
+</body>
+</html>

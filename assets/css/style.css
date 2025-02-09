@@ -3362,3 +3362,31 @@ ul.iconillo {
       color: black !important; }
   .layout-progrestatus.contrast-high #main-content .statuses .status.notstarted {
     border: 1px solid white !important; }
+
+.indicator-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; }
+
+.indicator-status {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px; }
+
+.indicator-status.alcanzado {
+  background-color: #45ba80;
+  /* Verde */ }
+
+.indicator-status.progreso {
+  background-color: #fec329;
+  /* Amarillo */ }
+
+.indicator-status.retroceso {
+  background-color: #db405a;
+  /* Rojo */ }
+
+.indicator-status.noevaluado {
+  background-color: #ccd5dd;
+  /* Gris */ }
