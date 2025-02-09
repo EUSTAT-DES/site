@@ -5,18 +5,12 @@ permalink: progreso/
 layout: page
 ---
 
-{% include head.html %}
-{% include header.html %}
-
-<!-- Cargar datos desde progreso_indicador.csv -->
+<!-- Asignar los datos desde progreso_indicador.csv -->
 {% assign indicadores_data = site.data.progreso_indicador %}
-<!-- Cargar nombres cortos según el idioma seleccionado -->
-{% assign idioma = site.lang | default: "es" %}
-{% assign nombres_indicadores = site.data[idioma].indicador_corto %}
+<!-- Definir el orden correcto de los objetivos -->
 {% assign ordered_goals = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17" | split: "," %}
 
 <div id="main-content" class="container reportingstatus" role="main">
-  <!-- Título principal -->
   <h1>{{ page.t.general.indicators }}</h1>
   
   <!-- Introducción -->
@@ -27,7 +21,7 @@ layout: page
   <!-- Iterar por los objetivos en el orden correcto -->
   {% for goal_number in ordered_goals %}
     {% assign goal_details = goal_number | sdg_lookup %}
-    {% assign goal_indicadores = "" | split: "," %} <!-- Crear una lista vacía -->
+    {% assign goal_indicadores = "" | split: "," %} <!-- Lista vacía -->
 
     <!-- Filtrar manualmente los indicadores por objetivo -->
     {% for item in indicadores_data %}
@@ -58,7 +52,7 @@ layout: page
           <ul class="indicator-list">
             {% for indicador in goal_indicadores %}
               {% assign indicador_id = indicador.indicador %}
-              {% assign indicador_info = nombres_indicadores[indicador_id] %}
+              {% assign indicador_info = page.t.indicators[indicador_id] | default: "Título no encontrado" %}
               <li class="indicator-item">
                 <span class="indicator-status {{ indicador.estado | slugify }}" title="{{ indicador.estado | t }}"></span>
                 <strong>{{ indicador_id }}:</strong>
@@ -71,5 +65,3 @@ layout: page
     {% endif %}
   {% endfor %}
 </div>
-
-{% include footer.html %}
