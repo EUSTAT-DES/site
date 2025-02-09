@@ -28,7 +28,15 @@ layout: page
   <!-- Iterar por los objetivos en el orden correcto -->
   {% for goal_number in ordered_goals %}
     {% assign goal_details = goal_number | sdg_lookup %}
-    {% assign goal_indicadores = indicadores_data | where_exp: "item", "item.indicador | split: '-' | first == goal_number" %}
+    {% assign goal_indicadores = "" | split: "," %} <!-- Crear una lista vacía -->
+
+    <!-- Filtrar manualmente los indicadores por objetivo -->
+    {% for item in indicadores_data %}
+      {% assign goal_extracted = item.indicador | split: '-' | first %}
+      {% if goal_extracted == goal_number %}
+        {% assign goal_indicadores = goal_indicadores | push: item %}
+      {% endif %}
+    {% endfor %}
 
     {% if goal_indicadores.size > 0 %}
       <div class="goal reporting-status-item">
