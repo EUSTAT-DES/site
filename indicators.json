@@ -1211,7 +1211,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/10-7-2/",
-          "status": "notapplicable"
+          "status": "notstarted"
         },
         {
           "id": "10-7-3",
@@ -1371,7 +1371,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/11-b-1/",
-          "status": "notapplicable"
+          "status": "notstarted"
         },
         {
           "id": "11-b-2",
@@ -2251,6 +2251,14 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-9-4-1-6/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-10-2-1-1A",
+          "title": "Proporción de personas que viven por debajo del 50% de la mediana de los ingresos, considerando la mediana nacional",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-10-2-1-1A/",
           "status": "complete"
         }]
     }
