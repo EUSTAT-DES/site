@@ -183,7 +183,7 @@
         },
         {
           "id": "2-4-E1",
-          "title": "Superficie dedicada a la agricultura ecológica (<b>Indicador UE</b>)",
+          "title": "Superficie dedicada a la agricultura ecológica (<b>Indicador UE sdg_02_40</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-E1/",
@@ -191,7 +191,7 @@
         },
         {
           "id": "2-4-E2",
-          "title": "Emisiones de amoníaco de la agricultura y ganadería (<b>Indicador UE</b>)",
+          "title": "Emisiones de amoníaco de la agricultura y ganadería (<b>Indicador UE sdg_02_60</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-E2/",
@@ -943,7 +943,7 @@
         },
         {
           "id": "8-5-E1",
-          "title": "Tasa de ocupación de la población (<b>Indicador UE</b>)",
+          "title": "Tasa de ocupación de la población (<b>Indicador UE sdg_08_30</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/8-5-E1/",
@@ -1083,6 +1083,14 @@
           "description": "",
           "keywords": "",
           "href": "/site/9-4-1/",
+          "status": "complete"
+        },
+        {
+          "id": "9-4-E1",
+          "title": "Intensidad de las emisiones atmosféricas de la industria (<b>Indicador UE sdg_09_70</b>)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/9-4-E1/",
           "status": "complete"
         },
         {
@@ -2227,6 +2235,22 @@
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-6-1-1/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-9-4-1-5",
+          "title": "Emisiones de CO2 respecto al año 1990",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-9-4-1-5/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-9-4-1-6",
+          "title": "Emisiones de CO2 respecto al año 2005",
+          "description": "",
+          "keywords": "",
+          "href": "/site/OCECA-9-4-1-6/",
           "status": "complete"
         }]
     }
