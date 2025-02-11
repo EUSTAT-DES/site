@@ -1595,7 +1595,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/14-3-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "14-4-1",
@@ -1678,6 +1678,14 @@
           "status": "complete"
         },
         {
+          "id": "15-1-E1",
+          "title": "Superficie de las áreas terrestres protegidas (km2 y porcentaje)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/15-1-E1/",
+          "status": "complete"
+        },
+        {
           "id": "15-2-1",
           "title": "Avances hacia la gestión forestal sostenible",
           "description": "",
@@ -1707,7 +1715,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/15-4-2/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "15-5-1",

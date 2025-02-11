@@ -1595,7 +1595,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/14-3-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "14-4-1",
@@ -1678,6 +1678,14 @@
           "status": "complete"
         },
         {
+          "id": "15-1-E1",
+          "title": "GRAFICO.15-1-E1-titulo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/15-1-E1/",
+          "status": "complete"
+        },
+        {
           "id": "15-2-1",
           "title": "Progress towards sustainable forest management",
           "description": "",
@@ -1707,7 +1715,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/en/15-4-2/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "15-5-1",
