@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250212124627">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250212162750">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -442,7 +442,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="" />
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250212124627" />
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250212162750" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" crossorigin="" />
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" crossorigin="" />
@@ -626,7 +626,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status alcanzado" title="alcanzado"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>1-1-1:</strong>
                 <span></span>
               </li>
@@ -690,7 +690,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>1-5-3:</strong>
                 <span></span>
               </li>
@@ -1394,7 +1394,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>5-6-2:</strong>
                 <span></span>
               </li>
@@ -1426,7 +1426,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>5-c-1:</strong>
                 <span></span>
               </li>
@@ -1622,7 +1622,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status progreso" title="progreso"></span>
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
                 <strong>7-b-1:</strong>
                 <span></span>
               </li>
@@ -1818,7 +1818,7 @@ layout-page
           <h2 class="status-goal">
             <a href="/site/en/9/">Industry, innovation and infrastructure</a>
           </h2>
-          <span class="total"><span>12</span> Indicators</span>
+          <span class="total"><span>13</span> Indicators</span>
 
           <!-- Lista de indicadores con sus estados -->
           <ul class="indicator-list">
@@ -1876,6 +1876,14 @@ layout-page
               <li class="indicator-item">
                 <span class="indicator-status retroceso" title="retroceso"></span>
                 <strong>9-4-1:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>9-4-E1:</strong>
                 <span></span>
               </li>
             
@@ -1976,7 +1984,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status noevaluado" title="noevaluado"></span>
+                <span class="indicator-status retroceso" title="retroceso"></span>
                 <strong>10-4-1:</strong>
                 <span></span>
               </li>
@@ -1984,7 +1992,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status progreso" title="progreso"></span>
+                <span class="indicator-status noevaluado" title="noevaluado"></span>
                 <strong>10-4-2:</strong>
                 <span></span>
               </li>
@@ -2016,7 +2024,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>10-7-2:</strong>
                 <span></span>
               </li>
@@ -2198,7 +2206,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>11-b-1:</strong>
                 <span></span>
               </li>
@@ -2276,7 +2284,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>12-4-1:</strong>
                 <span></span>
               </li>
@@ -2324,7 +2332,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notstarted" title="notstarted"></span>
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
                 <strong>12-a-1:</strong>
                 <span></span>
               </li>
@@ -2386,7 +2394,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>13-1-2:</strong>
                 <span></span>
               </li>
@@ -2394,7 +2402,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notstarted" title="notstarted"></span>
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
                 <strong>13-1-3:</strong>
                 <span></span>
               </li>
@@ -2480,7 +2488,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>14-2-1:</strong>
                 <span></span>
               </li>
@@ -2488,7 +2496,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notstarted" title="notstarted"></span>
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
                 <strong>14-3-1:</strong>
                 <span></span>
               </li>
@@ -2574,7 +2582,7 @@ layout-page
           <h2 class="status-goal">
             <a href="/site/en/15/">Life on land</a>
           </h2>
-          <span class="total"><span>14</span> Indicators</span>
+          <span class="total"><span>15</span> Indicators</span>
 
           <!-- Lista de indicadores con sus estados -->
           <ul class="indicator-list">
@@ -2592,6 +2600,14 @@ layout-page
               <li class="indicator-item">
                 <span class="indicator-status noevaluado" title="noevaluado"></span>
                 <strong>15-1-2:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status progreso" title="progreso"></span>
+                <strong>15-1-E1:</strong>
                 <span></span>
               </li>
             
@@ -2622,7 +2638,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notstarted" title="notstarted"></span>
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
                 <strong>15-4-2:</strong>
                 <span></span>
               </li>
@@ -2716,7 +2732,7 @@ layout-page
           <h2 class="status-goal">
             <a href="/site/en/16/">Peace, justice and strong institutions</a>
           </h2>
-          <span class="total"><span>24</span> Indicators</span>
+          <span class="total"><span>25</span> Indicators</span>
 
           <!-- Lista de indicadores con sus estados -->
           <ul class="indicator-list">
@@ -2724,7 +2740,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notstarted" title="notstarted"></span>
+                <span class="indicator-status alcanzado" title="alcanzado"></span>
                 <strong>16-1-1:</strong>
                 <span></span>
               </li>
@@ -2750,6 +2766,14 @@ layout-page
               <li class="indicator-item">
                 <span class="indicator-status retroceso" title="retroceso"></span>
                 <strong>16-1-4:</strong>
+                <span></span>
+              </li>
+            
+              
+              
+              <li class="indicator-item">
+                <span class="indicator-status retroceso" title="retroceso"></span>
+                <strong>16-1-E1:</strong>
                 <span></span>
               </li>
             
@@ -3098,7 +3122,7 @@ layout-page
               
               
               <li class="indicator-item">
-                <span class="indicator-status notapplicable" title="notapplicable"></span>
+                <span class="indicator-status notstarted" title="notstarted"></span>
                 <strong>17-5-1:</strong>
                 <span></span>
               </li>
@@ -3189,7 +3213,7 @@ layout-page
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src="/site/assets/js/sdg.js?v=20250212124627"></script>
+<script src="/site/assets/js/sdg.js?v=20250212162750"></script>
 
 
 <script type="text/x-mathjax-config">
@@ -3210,7 +3234,7 @@ layout-page
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250212124627"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250212162750"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -3271,7 +3295,7 @@ layout-page
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250212124627'></script>
+<script src='/site/assets/js/sdg.js?v=20250212162750'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -3293,7 +3317,7 @@ layout-page
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250212124627"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250212162750"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

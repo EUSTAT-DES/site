@@ -83,7 +83,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/1-5-4/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "1-a-1",
@@ -1471,11 +1471,11 @@
         },
         {
           "id": "12-a-1",
-          "title": "Energia berriztagarriak ekoizteko ahalmen instalatua garapen-bidean dauden herrialdeetan (per capita watt)",
+          "title": "Energia berriztagarriak sortzeko gaitasun instalatua garapen-bidean dauden herrialdeetan eta herrialde garatuetan (watt per capita)",
           "description": "",
           "keywords": "",
           "href": "/site/eu/12-a-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "12-b-1",
@@ -1523,7 +1523,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/eu/13-1-3/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "13-2-1",
