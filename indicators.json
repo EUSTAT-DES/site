@@ -1679,7 +1679,7 @@
         },
         {
           "id": "15-1-E1",
-          "title": "Superficie de las áreas terrestres protegidas (km2 y porcentaje)",
+          "title": "Superficie de las áreas terrestres protegidas (km2 y porcentaje) (<b>Indicador UE sdg_15_20</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/15-1-E1/",
@@ -1795,7 +1795,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/16-1-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "16-1-2",
@@ -1819,6 +1819,14 @@
           "description": "",
           "keywords": "",
           "href": "/site/16-1-4/",
+          "status": "complete"
+        },
+        {
+          "id": "16-1-E1",
+          "title": "Población que reporta ocurrencia de delitos, violencia o vandalismo en su área (<b>Indicador UE sdg_16_20</b>)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/16-1-E1/",
           "status": "complete"
         },
         {
