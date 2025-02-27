@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250214110403">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250227151514">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -357,7 +357,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;ServPub&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Servicios públicos (total)&quot;,&quot;Enseñanza&quot;,&quot;Asistencia sanitaria&quot;,&quot;Gestión de pensiones&quot;,&quot;Administración de justicia&quot;,&quot;Seguridad ciudadana&quot;,&quot;Servicios sociales&quot;,&quot;Transporte público&quot;,&quot;Obras públicas&quot;,&quot;Ayuda a personas dependientes&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Servicios públicos&quot;},{&quot;name&quot;:&quot;Sexo&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Mujer&quot;,&quot;Hombre&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sexo&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Porcentaje&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;ServPub&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Enseñanza&quot;,&quot;Asistencia sanitaria&quot;,&quot;Gestión de pensiones&quot;,&quot;Administración de justicia&quot;,&quot;Seguridad ciudadana&quot;,&quot;Servicios sociales&quot;,&quot;Transporte público&quot;,&quot;Obras públicas&quot;,&quot;Ayuda a personas dependientes&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Servicios públicos&quot;},{&quot;name&quot;:&quot;Sexo&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Mujer&quot;,&quot;Hombre&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sexo&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Porcentaje&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -392,15 +392,259 @@ layout-indicator-iframe
   <div id="datatables">
 
     
+    <a role="button" href="https://eustat-des.github.io/data/en/headline/16-6-2.csv" class="btn btn-primary btn-download" download="indicator_16-6-2.csv" tabindex="0" role="button">Download headline data (.csv)</a>
+    
     <a role="button" href="https://eustat-des.github.io/data/en/data/16-6-2.csv" class="btn btn-primary btn-download" download='indicator_16-6-2.csv' tabindex='0' role='button'>Download source data (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Download source data for disaggregations (.csv)</p>
 
     
-    <h3>No headline data available</h3>
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col" class="table-value">Units</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>57.4</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>57.4</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>57.3</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>40.2</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>54.1</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>56.8</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>51.0</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>46.3</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>41.2</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>50.4</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>47.7</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>50.3</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>55.1</td>
+          
+          
+          
+          <td class="table-value">Porcentaje</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Geographical Area: </p>
+    
+    
+    <p>Unit of Measurement: </p>
+    
+    
+    <p>Footnote: </p>
+    
+  </div>
   
 
 </div>
@@ -791,27 +1035,14 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[PPS^{t} = promedio (PPS_{enseñanza}^{t}, PPS_{asistencia \, sanitaria}^{t}, PPS_{gestión \, de \, pensiones}^{t}, PPS_{administración \, de \, justicia}^{t}, PPS_{seguridad \, ciudadana}^{t}, PPS_{servicios \, sociales}^{t}, PPS_{transporte \, público}^{t}, PPS_{obras \, públicas}^{t}, PPS_{ayuda \, a \, personas \, dependientes}^{t})\]
+\[PPS^t = \frac{1}{n} \sum_{i=1}^{n} PPS_{i}^{t}\]
 
 <p>donde:</p>
 
-<p>$PPS_{enseñanza}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de enseñanza en el año $t$</p>
-
-<p>$PPS_{asistencia \, sanitaria}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de asistencia sanitaria en el año $t</p>
-
-<p>$PPS_{gestión \, de \, pensiones}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de gestión de pensiones en el año $t</p>
-
-<p>$PPS_{administración \, de \, justicia}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de administración de justicia en el año $t$</p>
-
-<p>$PPS_{seguridad \, ciudadana}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de seguridad ciudadana en el año $t</p>
-
-<p>$PPS_{servicios \, sociales}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de servicios sociales en el año $t</p>
-
-<p>$PPS_{transporte \, público}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de transporte público en el año $t$</p>
-
-<p>$PPS_{obras \, públicas}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de obras públicas en el año $t$</p>
-
-<p>$PPS_{ayuda \, a \, personas \, dependientes}^{t}$ proporción de la población que se siente satisfecha con el funcionamiento de los servicios públicos en materia de ayuda a personas dependientes en el año $t$</p>
+<p>$PPS_{i}^{t}$ representa la proporción de la población satisfecha con el funcionamiento de los servicios públicos en el año $t$ 
+para las siguientes áreas: enseñanza, asistencia sanitaria, gestión de pensiones, 
+administración de justicia, seguridad ciudadana, servicios sociales, transporte 
+público, obras públicas y ayuda a personas dependientes</p>
 
           
         </td>
@@ -944,7 +1175,7 @@ público, obras públicas y ayuda a personas dependientes</p>
         <th scope="row">Data last updated </th>
         <td>
           
-            September 11, 2024
+            February 27, 2025
           
         </td>
         </tr>
@@ -959,7 +1190,7 @@ público, obras públicas y ayuda a personas dependientes</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            December 02, 2024
+            February 27, 2025
           
         </td>
         </tr>
@@ -1224,7 +1455,7 @@ del desempeño general del gobierno.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250214110403'></script>
+<script src='/site/assets/js/sdg.js?v=20250227151514'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1246,7 +1477,7 @@ del desempeño general del gobierno.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250214110403"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250227151514"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
