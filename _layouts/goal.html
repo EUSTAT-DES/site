@@ -61,7 +61,7 @@
                   {{ indicator.placeholder }}
                 {% else %}
                   <a href="{{ indicator.url }}">{{ indicator.name }}</a>
-                  {% include components/indicator/tags.html tags=tag_classes reporting_status=true indicator=indicator %}
+                  {% include components/indicator/tags.html tags=tag_classes reporting_status=true progress_status=true indicator=indicator %}
                 {% endif %}
               </div>
             </div>
