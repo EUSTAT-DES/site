@@ -3390,3 +3390,17 @@ ul.iconillo {
 .indicator-status.noevaluado {
   background-color: #ccd5dd;
   /* Gris */ }
+
+.layout-goal .container h3, .layout-goal .container h4 {
+  margin: 0;
+  font-size: 16px; }
+  .layout-goal .container h3:after, .layout-goal .container h4:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #0b0c0c;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+.layout-goal .container .row {
+  margin-bottom: 20px; }
+.layout-goal .container .goal-page-indicator-progress {
+  margin-left: 0px; }
