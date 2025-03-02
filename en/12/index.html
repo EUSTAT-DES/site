@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302142637">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302143319">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -384,58 +384,71 @@ data-event-label="high"
 </div>
 
 
+
+
+
+
 <div id="main-content" class="container" role="main">
 
   
 
 
 
-  <div class="container g-0">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Targets</h2>
+  <div class="container g-0 goal-showing-progress">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading">Targets and indicators</h2>
       </div>
-      <div class="col-md-6">
-        <h2>Indicators</h2>
+      
+      <div class="col-lg-2 d-none d-lg-block progress-column-header">
+        <span aria-hidden="true">Progress</span>
       </div>
+      
     </div>
-
-    
+    <hr class="goal-page-column-header-rule">
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.1</span>
             </h3>
-            <div>Implement the 10‐Year Framework of Programmes on Sustainable Consumption and Production Patterns, all countries taking action, with developed countries taking the lead, taking into account the development and capabilities of developing countries</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Implement the 10‐Year Framework of Programmes on Sustainable Consumption and Production Patterns, all countries taking action, with developed countries taking the lead, taking into account the development and capabilities of developing countries</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.1.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.1.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-1-1/">Number of countries developing, adopting or implementing policy instruments aimed at supporting the shift to sustainable consumption and production</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-1-1/">Number of countries developing, adopting or implementing policy instruments aimed at supporting the shift to sustainable consumption and production</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -449,38 +462,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.2
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.2</span>
             </h3>
-            <div>By 2030, achieve the sustainable management and efficient use of natural resources</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, achieve the sustainable management and efficient use of natural resources</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.2.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.2.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-2-1/">Material footprint, material footprint per capita, and material footprint per GDP</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-2-1/">Material footprint, material footprint per capita, and material footprint per GDP</a></span>
+              
 
 
 
@@ -499,11 +519,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -517,35 +537,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.2.2
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.2.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-2-2/">Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-2-2/">Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -559,38 +582,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.3
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.3</span>
             </h3>
-            <div>By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains, including post-harvest losses</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.3.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.3.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-3-1/">(a) Food loss index and (b) food waste index</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-3-1/">(a) Food loss index and (b) food waste index</a></span>
+              
 
 
 
@@ -609,11 +639,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -627,38 +657,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.4
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.4</span>
             </h3>
-            <div>By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil in order to minimize their adverse impacts on human health and the environment</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil in order to minimize their adverse impacts on human health and the environment</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.4.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.4.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-4-1/">Number of parties to international multilateral environmental agreements on hazardous waste, and other chemicals that meet their commitments and obligations in transmitting information as required by each relevant agreement</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-4-1/">Number of parties to international multilateral environmental agreements on hazardous waste, and other chemicals that meet their commitments and obligations in transmitting information as required by each relevant agreement</a></span>
+              
 
 
 
@@ -677,11 +714,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -695,35 +732,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.4.2
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.4.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-4-2/">(a) Hazardous waste generated per capita; and (b) proportion of hazardous waste treated, by type of treatment</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-4-2/">(a) Hazardous waste generated per capita; and (b) proportion of hazardous waste treated, by type of treatment</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -737,48 +777,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.5
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.5</span>
             </h3>
-            <div>By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.5.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.5.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-5-1/">National recycling rate, tons of material recycled</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-5-1/">National recycling rate, tons of material recycled</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -792,48 +839,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.6
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.6</span>
             </h3>
-            <div>Encourage companies, especially large and transnational companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Encourage companies, especially large and transnational companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.6.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.6.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-6-1/">Number of companies publishing sustainability reports</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-6-1/">Number of companies publishing sustainability reports</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -847,38 +901,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.7
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.7</span>
             </h3>
-            <div>Promote public procurement practices that are sustainable, in accordance with national policies and priorities</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Promote public procurement practices that are sustainable, in accordance with national policies and priorities</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.7.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.7.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-7-1/">Degree of sustainable public procurement policies and action plan implementation</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-7-1/">Degree of sustainable public procurement policies and action plan implementation</a></span>
+              
 
 
 
@@ -897,11 +958,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -915,38 +976,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.8
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.8</span>
             </h3>
-            <div>By 2030, ensure that people everywhere have the relevant information and awareness for sustainable development and lifestyles in harmony with nature</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, ensure that people everywhere have the relevant information and awareness for sustainable development and lifestyles in harmony with nature</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.8.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.8.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-8-1/">Extent to which (i) global citizenship education and (ii) education for sustainable development are mainstreamed in (a) national education policies; (b) curricula; (c) teacher education; and (d) student assessment</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-8-1/">Extent to which (i) global citizenship education and (ii) education for sustainable development are mainstreamed in (a) national education policies; (b) curricula; (c) teacher education; and (d) student assessment</a></span>
+              
 
 
 
@@ -965,11 +1033,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -983,48 +1051,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.a
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.a</span>
             </h3>
-            <div>Support developing countries to strengthen their scientific and technological capacity to move towards more sustainable patterns of consumption and production</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Support developing countries to strengthen their scientific and technological capacity to move towards more sustainable patterns of consumption and production</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.a.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.a.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-a-1/">Installed renewable energy-generating capacity in developing countries (in watts per capita)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-a-1/">Installed renewable energy-generating capacity in developing countries (in watts per capita)</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -1038,38 +1113,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.b
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.b</span>
             </h3>
-            <div>Develop and implement tools to monitor sustainable development impacts for sustainable tourism that creates jobs and promotes local culture and products</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Develop and implement tools to monitor sustainable development impacts for sustainable tourism that creates jobs and promotes local culture and products</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.b.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.b.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-b-1/">Implementation of standard accounting tools to monitor the economic and environmental aspects of tourism sustainability</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-b-1/">Implementation of standard accounting tools to monitor the economic and environmental aspects of tourism sustainability</a></span>
+              
 
 
 
@@ -1088,11 +1170,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -1106,38 +1188,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 12.c
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 12.c</span>
             </h3>
-            <div>Rationalize inefficient fossil-fuel subsidies that encourage wasteful consumption by removing market distortions, in accordance with national circumstances, including by restructuring taxation and phasing out those harmful subsidies, where they exist, to reflect their environmental impacts, taking fully into account the specific needs and conditions of developing countries and minimizing the possible adverse impacts on their development in a manner that protects the poor and the affected communities</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Rationalize inefficient fossil-fuel subsidies that encourage wasteful consumption by removing market distortions, in accordance with national circumstances, including by restructuring taxation and phasing out those harmful subsidies, where they exist, to reflect their environmental impacts, taking fully into account the specific needs and conditions of developing countries and minimizing the possible adverse impacts on their development in a manner that protects the poor and the affected communities</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 12.c.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 12.c.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/12-c-1/">Amount of fossil-fuel subsidies per unit of GDP (production and consumption)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/12-c-1/">Amount of fossil-fuel subsidies per unit of GDP (production and consumption)</a></span>
+              
 
 
 
@@ -1156,11 +1245,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -1174,13 +1263,12 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
   </div>
   <a href="#top">Back to top</a>
@@ -1234,7 +1322,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250302142637'></script>
+<script src='/site/assets/js/sdg.js?v=20250302143319'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1256,7 +1344,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250302142637"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250302143319"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

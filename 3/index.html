@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302142637">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302143319">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -384,252 +384,285 @@ data-event-label="high"
 </div>
 
 
+
+
+
+
 <div id="main-content" class="container" role="main">
 
   
 
 
 
-  <div class="container g-0">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Metas</h2>
+  <div class="container g-0 goal-showing-progress">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading">Metas e indicadores</h2>
       </div>
-      <div class="col-md-6">
-        <h2>Indicadores</h2>
+      
+      <div class="col-lg-2 d-none d-lg-block progress-column-header">
+        <span aria-hidden="true"><b>Seguimiento</b></span>
       </div>
+      
     </div>
-
-    
+    <hr class="goal-page-column-header-rule">
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.1</span>
             </h3>
-            <div>De aquí a 2030, reducir la tasa mundial de mortalidad materna a menos de 70 por cada 100.000 nacidos vivos</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">De aquí a 2030, reducir la tasa mundial de mortalidad materna a menos de 70 por cada 100.000 nacidos vivos</span>
+          </div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicador</span> 3.1.1
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/3-1-1/">Tasa de mortalidad materna</a>
-                  
-
-
-
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicador</span> 3.1.2
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/3-1-2/">Proporción de partos atendidos por personal sanitario especializado</a>
-                  
-
-
-
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
-          
-        </div>
       </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-1-1/">Tasa de mortalidad materna</a></span>
+              
+
+
+
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.1.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-1-2/">Proporción de partos atendidos por personal sanitario especializado</a></span>
+              
+
+
+
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.2
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.2</span>
             </h3>
-            <div>De aquí a 2030, poner fin a las muertes evitables de recién nacidos y de niños menores de 5 años, logrando que todos los países intenten reducir la mortalidad neonatal al menos a 12 por cada 1.000 nacidos vivos y la mortalidad de los niños menores de 5 años al menos a 25 por cada 1.000 nacidos vivos</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">De aquí a 2030, poner fin a las muertes evitables de recién nacidos y de niños menores de 5 años, logrando que todos los países intenten reducir la mortalidad neonatal al menos a 12 por cada 1.000 nacidos vivos y la mortalidad de los niños menores de 5 años al menos a 25 por cada 1.000 nacidos vivos</span>
+          </div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicador</span> 3.2.1
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/3-2-1/">Tasa de mortalidad de niños menores de 5 años</a>
-                  
-
-
-
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicador</span> 3.2.2
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/3-2-2/">Tasa de mortalidad neonatal</a>
-                  
-
-
-
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
-          
-        </div>
       </div>
-    
-      
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.3
-            </h3>
-            <div>De aquí a 2030, poner fin a las epidemias del SIDA, la tuberculosis, la malaria y las enfermedades tropicales desatendidas y combatir la hepatitis, las enfermedades transmitidas por el agua y otras enfermedades transmisibles</div>
-        </div>
-        <div class="col-md-6">
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.3.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.2.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-3-1/">Número de nuevas infecciones por el VIH por cada 1.000 habitantes no infectados, desglosado por sexo, edad y poblaciones clave</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-2-1/">Tasa de mortalidad de niños menores de 5 años</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.2.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-2-2/">Tasa de mortalidad neonatal</a></span>
+              
+
+
+
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.3</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">De aquí a 2030, poner fin a las epidemias del SIDA, la tuberculosis, la malaria y las enfermedades tropicales desatendidas y combatir la hepatitis, las enfermedades transmitidas por el agua y otras enfermedades transmisibles</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.3.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-3-1/">Número de nuevas infecciones por el VIH por cada 1.000 habitantes no infectados, desglosado por sexo, edad y poblaciones clave</a></span>
+              
+
+
+
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -643,35 +676,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.3.2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.3.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-3-2/">Incidencia de la tuberculosis por cada 100.000 habitantes</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-3-2/">Incidencia de la tuberculosis por cada 100.000 habitantes</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -685,35 +721,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.3.3
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.3.3</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-3-3/">Incidencia de la malaria por cada 1.000 habitantes</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-3-3/">Incidencia de la malaria por cada 1.000 habitantes</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -727,35 +766,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.3.4
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.3.4</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-3-4/">Incidencia de la hepatitis B por cada 100.000 habitantes</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-3-4/">Incidencia de la hepatitis B por cada 100.000 habitantes</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -769,25 +811,28 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.3.5
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.3.5</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-3-5/">Número de personas que requieren intervenciones contra enfermedades tropicales desatendidas</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-3-5/">Número de personas que requieren intervenciones contra enfermedades tropicales desatendidas</a></span>
+              
 
 
 
@@ -806,11 +851,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -824,48 +869,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.4
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.4</span>
             </h3>
-            <div>De aquí a 2030, reducir en un tercio la mortalidad prematura por enfermedades no transmisibles mediante su prevención y tratamiento, y promover la salud mental y el bienestar</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">De aquí a 2030, reducir en un tercio la mortalidad prematura por enfermedades no transmisibles mediante su prevención y tratamiento, y promover la salud mental y el bienestar</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.4.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.4.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-4-1/">Tasa de mortalidad atribuida a las enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias crónicas</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-4-1/">Tasa de mortalidad atribuida a las enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias crónicas</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -879,35 +931,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.4.2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.4.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-4-2/">Tasa de mortalidad por suicidio</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-4-2/">Tasa de mortalidad por suicidio</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -921,35 +976,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.4.E1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.4.E1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-4-E1/">Tasa de participación en los programas de cribado poblacional de cáncer (<b>Indicador Gobierno Vasco</b>)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-4-E1/">Tasa de participación en los programas de cribado poblacional de cáncer (<b>Indicador Gobierno Vasco</b>)</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -963,35 +1021,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.4.E2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.4.E2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-4-E2/">Esperanza de vida y esperanza de vida en buena salud (<b>Indicador Gobierno Vasco</b>)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-4-E2/">Esperanza de vida y esperanza de vida en buena salud (<b>Indicador Gobierno Vasco</b>)</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1005,48 +1066,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.5
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.5</span>
             </h3>
-            <div>Fortalecer la prevención y el tratamiento del abuso de sustancias adictivas, incluido el uso indebido de estupefacientes y el consumo nocivo de alcohol</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Fortalecer la prevención y el tratamiento del abuso de sustancias adictivas, incluido el uso indebido de estupefacientes y el consumo nocivo de alcohol</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.5.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.5.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-5-1/">Cobertura de los tratamientos (farmacológicos y psicosociales y servicios de rehabilitación y postratamiento) de trastornos por abuso de sustancias adictivas</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-5-1/">Cobertura de los tratamientos (farmacológicos y psicosociales y servicios de rehabilitación y postratamiento) de trastornos por abuso de sustancias adictivas</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1060,35 +1128,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.5.2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.5.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-5-2/">Consumo de alcohol per cápita (a partir de los 15 años de edad) durante un año civil en litros de alcohol puro</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-5-2/">Consumo de alcohol per cápita (a partir de los 15 años de edad) durante un año civil en litros de alcohol puro</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1102,48 +1173,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.6
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.6</span>
             </h3>
-            <div>De aquí a 2020, reducir a la mitad el número de muertes y lesiones causadas por accidentes de tráfico en el mundo</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">De aquí a 2020, reducir a la mitad el número de muertes y lesiones causadas por accidentes de tráfico en el mundo</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.6.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.6.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-6-1/">Tasa de mortalidad por lesiones debidas a accidentes de tráfico</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-6-1/">Tasa de mortalidad por lesiones debidas a accidentes de tráfico</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1157,48 +1235,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.7
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.7</span>
             </h3>
-            <div>De aquí a 2030, garantizar el acceso universal a los servicios de salud sexual y reproductiva, incluidos los de planificación familiar, información y educación, y la integración de la salud reproductiva en las estrategias y los programas nacionales</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">De aquí a 2030, garantizar el acceso universal a los servicios de salud sexual y reproductiva, incluidos los de planificación familiar, información y educación, y la integración de la salud reproductiva en las estrategias y los programas nacionales</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.7.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.7.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-7-1/">Proporción de mujeres en edad de procrear (entre 15 y 49 años) que cubren sus necesidades de planificación familiar con métodos modernos</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-7-1/">Proporción de mujeres en edad de procrear (entre 15 y 49 años) que cubren sus necesidades de planificación familiar con métodos modernos</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1212,35 +1297,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.7.2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.7.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-7-2/">Tasa de fecundidad de las adolescentes (entre 10 y 14 años y entre 15 y 19 años) por cada 1.000 mujeres de ese grupo de edad</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-7-2/">Tasa de fecundidad de las adolescentes (entre 10 y 14 años y entre 15 y 19 años) por cada 1.000 mujeres de ese grupo de edad</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1254,48 +1342,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.8
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.8</span>
             </h3>
-            <div>Lograr la cobertura sanitaria universal, incluida la protección contra los riesgos financieros, el acceso a servicios de salud esenciales de calidad y el acceso a medicamentos y vacunas inocuos, eficaces, asequibles y de calidad para todos</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Lograr la cobertura sanitaria universal, incluida la protección contra los riesgos financieros, el acceso a servicios de salud esenciales de calidad y el acceso a medicamentos y vacunas inocuos, eficaces, asequibles y de calidad para todos</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.8.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.8.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-8-1/">Cobertura de los servicios de salud esenciales</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-8-1/">Cobertura de los servicios de salud esenciales</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1309,35 +1404,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.8.2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.8.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-8-2/">Proporción de la población con grandes gastos sanitarios por hogar como porcentaje del total de gastos o ingresos de los hogares</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-8-2/">Proporción de la población con grandes gastos sanitarios por hogar como porcentaje del total de gastos o ingresos de los hogares</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1351,38 +1449,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.9
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.9</span>
             </h3>
-            <div>De aquí a 2030, reducir considerablemente el número de muertes y enfermedades causadas por productos químicos peligrosos y por la polución y contaminación del aire, el agua y el suelo</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">De aquí a 2030, reducir considerablemente el número de muertes y enfermedades causadas por productos químicos peligrosos y por la polución y contaminación del aire, el agua y el suelo</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.9.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.9.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-9-1/">Tasa de mortalidad atribuida a la contaminación de los hogares y del aire ambiente</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-9-1/">Tasa de mortalidad atribuida a la contaminación de los hogares y del aire ambiente</a></span>
+              
 
 
 
@@ -1401,11 +1506,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1419,25 +1524,28 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.9.2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.9.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-9-2/">Tasa de mortalidad atribuida al agua insalubre, el saneamiento deficiente y la falta de higiene (exposición a servicios insalubres de agua, saneamiento e higiene para todos (WASH))</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-9-2/">Tasa de mortalidad atribuida al agua insalubre, el saneamiento deficiente y la falta de higiene (exposición a servicios insalubres de agua, saneamiento e higiene para todos (WASH))</a></span>
+              
 
 
 
@@ -1456,11 +1564,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1474,35 +1582,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.9.3
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.9.3</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-9-3/">Tasa de mortalidad atribuida a intoxicaciones involuntarias</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-9-3/">Tasa de mortalidad atribuida a intoxicaciones involuntarias</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1516,48 +1627,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.a
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.a</span>
             </h3>
-            <div>Fortalecer la aplicación del Convenio Marco de la Organización Mundial de la Salud para el Control del Tabaco en todos los países, según proceda</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Fortalecer la aplicación del Convenio Marco de la Organización Mundial de la Salud para el Control del Tabaco en todos los países, según proceda</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.a.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.a.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-a-1/">Prevalencia del consumo actual de tabaco a partir de los 15 años de edad (edades ajustadas)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-a-1/">Prevalencia del consumo actual de tabaco a partir de los 15 años de edad (edades ajustadas)</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1571,48 +1689,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.b
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.b</span>
             </h3>
-            <div>Apoyar las actividades de investigación y desarrollo de vacunas y medicamentos contra las enfermedades transmisibles y no transmisibles que afectan primordialmente a los países en desarrollo y facilitar el acceso a medicamentos y vacunas esenciales asequibles de conformidad con la Declaración relativa al Acuerdo sobre los Aspectos de los Derechos de Propiedad Intelectual Relacionados con el Comercio y la Salud Pública, en la que se afirma el derecho de los países en desarrollo a utilizar al máximo las disposiciones del Acuerdo sobre los Aspectos de los Derechos de Propiedad Intelectual Relacionados con el Comercio respecto a la flexibilidad para proteger la salud pública y, en particular, proporcionar acceso a los medicamentos para todos</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Apoyar las actividades de investigación y desarrollo de vacunas y medicamentos contra las enfermedades transmisibles y no transmisibles que afectan primordialmente a los países en desarrollo y facilitar el acceso a medicamentos y vacunas esenciales asequibles de conformidad con la Declaración relativa al Acuerdo sobre los Aspectos de los Derechos de Propiedad Intelectual Relacionados con el Comercio y la Salud Pública, en la que se afirma el derecho de los países en desarrollo a utilizar al máximo las disposiciones del Acuerdo sobre los Aspectos de los Derechos de Propiedad Intelectual Relacionados con el Comercio respecto a la flexibilidad para proteger la salud pública y, en particular, proporcionar acceso a los medicamentos para todos</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.b.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.b.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-b-1/">Proporción de la población inmunizada con todas las vacunas incluidas en cada programa nacional</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-b-1/">Proporción de la población inmunizada con todas las vacunas incluidas en cada programa nacional</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1626,25 +1751,28 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.b.2
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.b.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-b-2/">Total neto de asistencia oficial para el desarrollo destinado a los sectores de la investigación médica y la atención sanitaria básica</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-b-2/">Total neto de asistencia oficial para el desarrollo destinado a los sectores de la investigación médica y la atención sanitaria básica</a></span>
+              
 
 
 
@@ -1663,11 +1791,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1681,25 +1809,28 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.b.3
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.b.3</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-b-3/">Proporción de centros de salud que disponen de un conjunto básico de medicamentos esenciales asequibles de manera sostenible</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-b-3/">Proporción de centros de salud que disponen de un conjunto básico de medicamentos esenciales asequibles de manera sostenible</a></span>
+              
 
 
 
@@ -1718,11 +1849,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1736,48 +1867,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.c
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.c</span>
             </h3>
-            <div>Aumentar considerablemente la financiación de la salud y la contratación, el perfeccionamiento, la capacitación y la retención del personal sanitario en los países en desarrollo, especialmente en los países menos adelantados y los pequeños Estados insulares en desarrollo</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Aumentar considerablemente la financiación de la salud y la contratación, el perfeccionamiento, la capacitación y la retención del personal sanitario en los países en desarrollo, especialmente en los países menos adelantados y los pequeños Estados insulares en desarrollo</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicador</span> 3.c.1
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.c.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/3-c-1/">Densidad y distribución del personal sanitario</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-c-1/">Densidad y distribución del personal sanitario</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
     
     
         <div class="progress-status">
@@ -1791,136 +1929,145 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Meta</span> 3.d
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Meta</span> 3.d</span>
             </h3>
-            <div>Reforzar la capacidad de todos los países, en particular los países en desarrollo, en materia de alerta temprana, reducción de riesgos y gestión de los riesgos para la salud nacional y mundial</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Reforzar la capacidad de todos los países, en particular los países en desarrollo, en materia de alerta temprana, reducción de riesgos y gestión de los riesgos para la salud nacional y mundial</span>
+          </div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicador</span> 3.d.1
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/3-d-1/">Capacidad prevista en el Reglamento Sanitario Internacional (RSI) y preparación para emergencias de salud</a>
-                  
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
-        <span class="visually-hidden">Estado del indicador</span>
-        
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Datos no disponibles</span>
-</span>
-
-
-        </li></ul>
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/notstarted.png" alt="Datos no disponibles" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicador</span> 3.d.2
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/3-d-2/">Porcentaje de infecciones del torrente sanguíneo debidas a determinados organismos resistentes a los antimicrobianos seleccionados</a>
-                  
-
-
-
-
-    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
-        <span class="visually-hidden">Estado del indicador</span>
-        
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Datos no disponibles</span>
-</span>
-
-
-        </li></ul>
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden"><b>Seguimiento</b></span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/notstarted.png" alt="Datos no disponibles" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
-          
-        </div>
       </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.d.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-d-1/">Capacidad prevista en el Reglamento Sanitario Internacional (RSI) y preparación para emergencias de salud</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Datos no disponibles</span>
+</span>
+
+
+        </li></ul>
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/notstarted.png" alt="Datos no disponibles" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicador</span> 3.d.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/3-d-2/">Porcentaje de infecciones del torrente sanguíneo debidas a determinados organismos resistentes a los antimicrobianos seleccionados</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Etiquetas"><li class="list-inline-item">
+        <span class="visually-hidden">Estado del indicador</span>
+        
+
+
+
+<span class="status notstarted">
+    <span class="status-inner">Datos no disponibles</span>
+</span>
+
+
+        </li></ul>
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden"><b>Seguimiento</b></span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/notstarted.png" alt="Datos no disponibles" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
   </div>
   <a href="#top">Volver arriba</a>
@@ -1974,7 +2121,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250302142637'></script>
+<script src='/site/assets/js/sdg.js?v=20250302143319'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1996,7 +2143,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250302142637"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250302143319"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302142637">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302143319">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -384,58 +384,71 @@ data-event-label="high"
 </div>
 
 
+
+
+
+
 <div id="main-content" class="container" role="main">
 
   
 
 
 
-  <div class="container g-0">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Targets</h2>
+  <div class="container g-0 goal-showing-progress">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading">Targets and indicators</h2>
       </div>
-      <div class="col-md-6">
-        <h2>Indicators</h2>
+      
+      <div class="col-lg-2 d-none d-lg-block progress-column-header">
+        <span aria-hidden="true">Progress</span>
       </div>
+      
     </div>
-
-    
+    <hr class="goal-page-column-header-rule">
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.1</span>
             </h3>
-            <div>Develop quality, reliable, sustainable and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Develop quality, reliable, sustainable and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.1.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.1.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-1-1/">Proportion of the rural population who live within 2 km of an all-season road</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-1-1/">Proportion of the rural population who live within 2 km of an all-season road</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -449,25 +462,28 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.1.2
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.1.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-1-2/">Passenger and freight volumes, by mode of transport</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-1-2/">Passenger and freight volumes, by mode of transport</a></span>
+              
 
 
 
@@ -486,11 +502,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -504,145 +520,162 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.2
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.2</span>
             </h3>
-            <div>Promote inclusive and sustainable industrialization and, by 2030, significantly raise industry’s share of employment and gross domestic product, in line with national circumstances, and double its share in least developed countries</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Promote inclusive and sustainable industrialization and, by 2030, significantly raise industry’s share of employment and gross domestic product, in line with national circumstances, and double its share in least developed countries</span>
+          </div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicator</span> 9.2.1
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-2-1/">Manufacturing value added as a proportion of GDP and per capita</a>
-                  
-
-
-
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/retroceso.png" alt="Stagnation or regression" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
+          <div class="col-lg-2 d-none d-lg-block"></div>
           
-
-            
-            
-            
-            
-
-            <div class="row">
-              <h4>
-                <span class="visually-hidden">Indicator</span> 9.2.2
-              </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-2-2/">Manufacturing employment as a proportion of total employment</a>
-                  
-
-
-
-
-
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
-    
-    
-        <div class="progress-status">
-            
-            
-                <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/retroceso.png" alt="Stagnation or regression" />
-                </div>
-            
-        </div>
-    
-
-
-                  </div>
-                
-              </div>
-            </div>
-          
-        </div>
       </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.2.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-2-1/">Manufacturing value added as a proportion of GDP and per capita</a></span>
+              
+
+
+
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/retroceso.png" alt="Stagnation or regression" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.2.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-2-2/">Manufacturing employment as a proportion of total employment</a></span>
+              
+
+
+
+
+
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
+    
+    
+        <div class="progress-status">
+            
+            
+                <div class="progress-status-image">
+                    <img src="/site/assets/img/progress/retroceso.png" alt="Stagnation or regression" />
+                </div>
+            
+        </div>
+    
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.3
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.3</span>
             </h3>
-            <div>Increase the access of small-scale industrial and other enterprises, in particular in developing countries, to financial services, including affordable credit, and their integration into value chains and markets</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Increase the access of small-scale industrial and other enterprises, in particular in developing countries, to financial services, including affordable credit, and their integration into value chains and markets</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.3.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.3.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-3-1/">Proportion of small-scale industries in total industry value added</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-3-1/">Proportion of small-scale industries in total industry value added</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -656,25 +689,28 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.3.2
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.3.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-3-2/">Proportion of small-scale industries with a loan or line of credit</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-3-2/">Proportion of small-scale industries with a loan or line of credit</a></span>
+              
 
 
 
@@ -693,11 +729,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -711,48 +747,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.4
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.4</span>
             </h3>
-            <div>By 2030, upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies and industrial processes, with all countries taking action in accordance with their respective capabilities</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">By 2030, upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies and industrial processes, with all countries taking action in accordance with their respective capabilities</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.4.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.4.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-4-1/">CO2 emission per unit of value added</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-4-1/">CO2 emission per unit of value added</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -766,35 +809,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.4.E1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.4.E1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-4-E1/">Intensidad de las emisiones atmosféricas de la industria (<b>Indicador UE sdg_09_70</b>)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-4-E1/">Intensidad de las emisiones atmosféricas de la industria (<b>Indicador UE sdg_09_70</b>)</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -808,48 +854,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.5
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.5</span>
             </h3>
-            <div>Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, in particular developing countries, including, by 2030, encouraging innovation and substantially increasing the number of research and development workers per 1 million people and public and private research and development spending</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, in particular developing countries, including, by 2030, encouraging innovation and substantially increasing the number of research and development workers per 1 million people and public and private research and development spending</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.5.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.5.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-5-1/">Research and development expenditure as a proportion of GDP</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-5-1/">Research and development expenditure as a proportion of GDP</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -863,35 +916,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.5.2
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.5.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-5-2/">Researchers (in full-time equivalent) per million inhabitants</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-5-2/">Researchers (in full-time equivalent) per million inhabitants</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -905,38 +961,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.a
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.a</span>
             </h3>
-            <div>Facilitate sustainable and resilient infrastructure development in developing countries through enhanced financial, technological and technical support to African countries, least developed countries, landlocked developing countries and small island developing States</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Facilitate sustainable and resilient infrastructure development in developing countries through enhanced financial, technological and technical support to African countries, least developed countries, landlocked developing countries and small island developing States</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.a.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.a.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-a-1/">Total official international support (official development assistance plus other official flows) to infrastructure</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-a-1/">Total official international support (official development assistance plus other official flows) to infrastructure</a></span>
+              
 
 
 
@@ -955,11 +1018,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -973,48 +1036,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.b
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.b</span>
             </h3>
-            <div>Support domestic technology development, research and innovation in developing countries, including by ensuring a conducive policy environment for, inter alia, industrial diversification and value addition to commodities</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Support domestic technology development, research and innovation in developing countries, including by ensuring a conducive policy environment for, inter alia, industrial diversification and value addition to commodities</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.b.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.b.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-b-1/">Proportion of medium and high-tech industry value added in total value added</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-b-1/">Proportion of medium and high-tech industry value added in total value added</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -1028,48 +1098,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Target</span> 9.c
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 9.c</span>
             </h3>
-            <div>Significantly increase access to information and communications technology and strive to provide universal and affordable access to the Internet in least developed countries by 2020</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Significantly increase access to information and communications technology and strive to provide universal and affordable access to the Internet in least developed countries by 2020</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Indicator</span> 9.c.1
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 9.c.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/en/9-c-1/">Proportion of population covered by a mobile network, by technology</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/en/9-c-1/">Proportion of population covered by a mobile network, by technology</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Progress</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Progress</span>
+              
     
     
         <div class="progress-status">
@@ -1083,13 +1160,12 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
   </div>
   <a href="#top">Back to top</a>
@@ -1143,7 +1219,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250302142637'></script>
+<script src='/site/assets/js/sdg.js?v=20250302143319'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1165,7 +1241,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250302142637"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250302143319"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

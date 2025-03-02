@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302142637">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302143319">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -384,58 +384,71 @@ data-event-label="high"
 </div>
 
 
+
+
+
+
 <div id="main-content" class="container" role="main">
 
   
 
 
 
-  <div class="container g-0">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Helmugak</h2>
+  <div class="container g-0 goal-showing-progress">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading">Helmugak eta adierazleak</h2>
       </div>
-      <div class="col-md-6">
-        <h2>Adierazleak</h2>
+      
+      <div class="col-lg-2 d-none d-lg-block progress-column-header">
+        <span aria-hidden="true">Aurrerapena</span>
       </div>
+      
     </div>
-
-    
+    <hr class="goal-page-column-header-rule">
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 13.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 13.1</span>
             </h3>
-            <div>Klimarekin eta hondamendi naturalekin lotutako arriskuekiko erresilientzia eta horietara egokitzeko ahalmena sendotzea herrialde guztietan</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Klimarekin eta hondamendi naturalekin lotutako arriskuekiko erresilientzia eta horietara egokitzeko ahalmena sendotzea herrialde guztietan</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.1.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.1.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-1-1/">Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutako pertsonen kopurua 100.000 pertsonako</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-1-1/">Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutako pertsonen kopurua 100.000 pertsonako</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -449,25 +462,28 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.1.2
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.1.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-1-2/">Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-1-2/">Hondamendien Arriskua Murrizteko 2015-2030 aldirako Sendaiko Esparruarekin bat etorriz, hondamendien arriskuak murrizteko estrategia nazionalak finkatzen eta aplikatzen dituzten herrialdeen kopurua</a></span>
+              
 
 
 
@@ -486,11 +502,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -504,35 +520,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.1.3
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.1.3</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-1-3/">Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-1-3/">Hondamendien arriskuak murrizteko tokiko estrategiak finkatzen eta aplikatzen dituzten tokiko gobernuen proportzioa, hondamendien arriskua murrizteko estrategia nazionalekin bat etorriz</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -546,48 +565,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 13.2
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 13.2</span>
             </h3>
-            <div>Klima‐aldaketarekin lotutako neurriak sartzea politika, estrategia eta plan nazionaletan</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Klima‐aldaketarekin lotutako neurriak sartzea politika, estrategia eta plan nazionaletan</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.2.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.2.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-2-1/">Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak dituzten herrialdeen kopurua</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-2-1/">Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak dituzten herrialdeen kopurua</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -601,35 +627,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.2.2
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.2.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-2-2/">Berotegi-efektuko gasen isurpena guztira, urteka</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-2-2/">Berotegi-efektuko gasen isurpena guztira, urteka</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -643,38 +672,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 13.3
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 13.3</span>
             </h3>
-            <div>Hezkuntza, sentsibilizazioa eta giza ahalmena eta erakundeena hobetzea, klima‐aldaketa murrizteko, horretara egokitzeko, dituen eraginak arintzeko eta garaiz ohartarazteko</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Hezkuntza, sentsibilizazioa eta giza ahalmena eta erakundeena hobetzea, klima‐aldaketa murrizteko, horretara egokitzeko, dituen eraginak arintzeko eta garaiz ohartarazteko</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.3.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.3.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-3-1/">Munduko herritartasunerako hezkuntzak eta garapen jasangarrirako hezkuntzak esparru hauetan duten txertatze-maila: a) hezkuntza-politika nazionaletan, b) hezkuntza-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-3-1/">Munduko herritartasunerako hezkuntzak eta garapen jasangarrirako hezkuntzak esparru hauetan duten txertatze-maila: a) hezkuntza-politika nazionaletan, b) hezkuntza-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan</a></span>
+              
 
 
 
@@ -693,11 +729,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -711,38 +747,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 13.a
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 13.a</span>
             </h3>
-            <div>Klima Aldaketari buruzko Nazio Batuen Esparru Konbentzioan parte hartzen duten garatutako herrialdeen konpromisoa betetzea; hau da, 2020rako iturri guztietatik jasotako 100-000 milioi dolar (urtean) erabiltzea, denen artean, garapen‐bidean dauden herrialdeen beharrei erantzuteko, klima‐aldaketa arintzeko neurri zehatzak hartzeko eta horiek gardentasunez aplikatzeko; eta martxan jartzea Klimarako Funts Berdea, ahalik eta azkarren kapitalizatuta</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Klima Aldaketari buruzko Nazio Batuen Esparru Konbentzioan parte hartzen duten garatutako herrialdeen konpromisoa betetzea; hau da, 2020rako iturri guztietatik jasotako 100-000 milioi dolar (urtean) erabiltzea, denen artean, garapen‐bidean dauden herrialdeen beharrei erantzuteko, klima‐aldaketa arintzeko neurri zehatzak hartzeko eta horiek gardentasunez aplikatzeko; eta martxan jartzea Klimarako Funts Berdea, ahalik eta azkarren kapitalizatuta</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.a.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.a.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-a-1/">Hornitutako eta mobilizatutako kantitateak Estatu Batuetako dolarretan, gaur egun ezarritako helburuari dagokionez (hemendik 2025era denon artean 100.000 milioi dolar mobilizatzea)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-a-1/">Hornitutako eta mobilizatutako kantitateak Estatu Batuetako dolarretan, gaur egun ezarritako helburuari dagokionez (hemendik 2025era denon artean 100.000 milioi dolar mobilizatzea)</a></span>
+              
 
 
 
@@ -761,11 +804,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -775,38 +818,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 13.b
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 13.b</span>
             </h3>
-            <div>Plangintza eta kudeaketa eraginkorrerako ahalmena areagotzeko mekanismoak sustatzea, klima‐aldaketarekin lotuta, aurrerapen txikieneko herrialdeetan eta garapen‐bidean dauden uharte‐estatu txikietan; arreta berezia eskainiz emakumeei, gazteei, tokiko komunitateei eta komunitate marjinatuei</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Plangintza eta kudeaketa eraginkorrerako ahalmena areagotzeko mekanismoak sustatzea, klima‐aldaketarekin lotuta, aurrerapen txikieneko herrialdeetan eta garapen‐bidean dauden uharte‐estatu txikietan; arreta berezia eskainiz emakumeei, gazteei, tokiko komunitateei eta komunitate marjinatuei</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 13.b.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 13.b.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/13-b-1/">Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak  dituzten aurrerapen txikieneko herrialdeen eta garapen-bidean dauden uharte-estatu txikien kopurua</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/13-b-1/">Nazio Batuen Klima Aldaketari buruzko Esparru Konbentzioaren idazkaritzari jakinarazitako nazio mailan zehaztutako ekarpenak, epe luzerako estrategiak, egokitzeko plan nazionalak eta egokitzapenari buruzko komunikazioak  dituzten aurrerapen txikieneko herrialdeen eta garapen-bidean dauden uharte-estatu txikien kopurua</a></span>
+              
 
 
 
@@ -825,11 +875,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -839,13 +889,12 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
   </div>
   <a href="#top">Gora itzuli</a>
@@ -899,7 +948,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250302142637'></script>
+<script src='/site/assets/js/sdg.js?v=20250302143319'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -921,7 +970,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250302142637"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250302143319"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

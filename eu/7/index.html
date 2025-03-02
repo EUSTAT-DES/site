@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302142637">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250302143319">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -384,58 +384,71 @@ data-event-label="high"
 </div>
 
 
+
+
+
+
 <div id="main-content" class="container" role="main">
 
   
 
 
 
-  <div class="container g-0">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Helmugak</h2>
+  <div class="container g-0 goal-showing-progress">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading">Helmugak eta adierazleak</h2>
       </div>
-      <div class="col-md-6">
-        <h2>Adierazleak</h2>
+      
+      <div class="col-lg-2 d-none d-lg-block progress-column-header">
+        <span aria-hidden="true">Aurrerapena</span>
       </div>
+      
     </div>
-
-    
+    <hr class="goal-page-column-header-rule">
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 7.1
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 7.1</span>
             </h3>
-            <div>2030. urterako, energia‐zerbitzu arrazoizko, fidagarri eta modernoetarako sarbide unibertsala bermatzea</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">2030. urterako, energia‐zerbitzu arrazoizko, fidagarri eta modernoetarako sarbide unibertsala bermatzea</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 7.1.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 7.1.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/7-1-1/">Elektrizitaterako sarbidea duen biztanleriaren proportzioa</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/7-1-1/">Elektrizitaterako sarbidea duen biztanleriaren proportzioa</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -449,35 +462,38 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 7.1.2
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 7.1.2</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/7-1-2/">Energia-iturri nagusi gisa erregai eta teknologia garbiak erabiltzen dituen biztanleriaren proportzioa</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/7-1-2/">Energia-iturri nagusi gisa erregai eta teknologia garbiak erabiltzen dituen biztanleriaren proportzioa</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -491,48 +507,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 7.2
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 7.2</span>
             </h3>
-            <div>2030. urterako, nabarmen areagotzea energia berriztagarrien proportzioa, energia‐iturri guztien artean</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">2030. urterako, nabarmen areagotzea energia berriztagarrien proportzioa, energia‐iturri guztien artean</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 7.2.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 7.2.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/7-2-1/">Energia berriztagarrien proportzioa energiaren azken osoko kontsumoan</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/7-2-1/">Energia berriztagarrien proportzioa energiaren azken osoko kontsumoan</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -546,48 +569,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 7.3
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 7.3</span>
             </h3>
-            <div>2030. urterako, energia‐eraginkortasunaren hobekuntzaren munduko tasa bikoiztea</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">2030. urterako, energia‐eraginkortasunaren hobekuntzaren munduko tasa bikoiztea</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 7.3.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 7.3.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/7-3-1/">Energia-intentsitatea, energia primarioaren eta BPGaren arabera neurtuta</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/7-3-1/">Energia-intentsitatea, energia primarioaren eta BPGaren arabera neurtuta</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -601,38 +631,45 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 7.a
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 7.a</span>
             </h3>
-            <div>2030. urterako, nazioarteko lankidetza areagotzea, energia garbiari lotutako ikerketarako eta teknologiarako sarbidea ahalbidetzeko. Hemen sartuko dira iturri berriztagarriak, energia‐eraginkortasuna eta erregai fosilen teknologia aurreratu eta ez horren kutsakorrak- Hemen sartzen da, halaber, energia‐azpiegituretako eta teknologia garbietako inbertsioa sustatzea</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">2030. urterako, nazioarteko lankidetza areagotzea, energia garbiari lotutako ikerketarako eta teknologiarako sarbidea ahalbidetzeko. Hemen sartuko dira iturri berriztagarriak, energia‐eraginkortasuna eta erregai fosilen teknologia aurreratu eta ez horren kutsakorrak- Hemen sartzen da, halaber, energia‐azpiegituretako eta teknologia garbietako inbertsioa sustatzea</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 7.a.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 7.a.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/7-a-1/">Nazioarteko finantza-korronteak garapen-bidean dauden herrialdeetara, energia garbien ikerketa eta garapena babesteko eta energia berriztagarrien ekoizpena sustatzeko, sistema hibridoak barne</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/7-a-1/">Nazioarteko finantza-korronteak garapen-bidean dauden herrialdeetara, energia garbien ikerketa eta garapena babesteko eta energia berriztagarrien ekoizpena sustatzeko, sistema hibridoak barne</a></span>
+              
 
 
 
@@ -651,11 +688,11 @@ data-event-label="high"
         </li></ul>
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -669,48 +706,55 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
       
-      <div class="row">
-        <div class="col-md-6">
-            <h3>
-              <span class="visually-hidden">Helmuga</span> 7.b
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Helmuga</span> 7.b</span>
             </h3>
-            <div>2030. urterako, energia‐zerbitzu modernoak eta jasangarriak emateko azpiegitura areagotzea eta teknologia berritzea, garapen‐bidean dauden herrialde guztietan; bereziki, aurrerapen txikieneko herrialdeetan, garapen‐bidean dauden uharte‐estatu txikietan eta garapen‐bidean dauden kostalderik gabeko herrialdeetan, betiere, bat etorriz beren laguntza‐programekin</div>
-        </div>
-        <div class="col-md-6">
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">2030. urterako, energia‐zerbitzu modernoak eta jasangarriak emateko azpiegitura areagotzea eta teknologia berritzea, garapen‐bidean dauden herrialde guztietan; bereziki, aurrerapen txikieneko herrialdeetan, garapen‐bidean dauden uharte‐estatu txikietan eta garapen‐bidean dauden kostalderik gabeko herrialdeetan, betiere, bat etorriz beren laguntza‐programekin</span>
+          </div>
+          
+          <div class="col-lg-2 d-none d-lg-block"></div>
+          
+      </div>
+        
+
+          
+          
+          
           
 
-            
-            
-            
-            
-
-            <div class="row">
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
               <h4>
-                <span class="visually-hidden">Adierazlea</span> 7.b.1
+                <span class="indicator-number"><span class="visually-hidden">Adierazlea</span> 7.b.1</span>
               </h4>
-              <div class="col">
-                
-                  <a href="/site/eu/7-b-1/">Energia berriztagarriak sortzeko gaitasun instalatua garapen-bidean dauden herrialdeetan eta herrialde garatuetan (watt per capita)</a>
-                  
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/eu/7-b-1/">Energia berriztagarriak sortzeko gaitasun instalatua garapen-bidean dauden herrialdeetan eta herrialde garatuetan (watt per capita)</a></span>
+              
 
 
 
 
 
-                
-                
-                  <div class="col-lg-1 goal-page-indicator-progress">
-                    <span class="visually-hidden">Aurrerapena</span>
-                    
+            </div>
+            
+            <div class="col-lg-2 goal-page-indicator-progress">
+              <span class="visually-hidden">Aurrerapena</span>
+              
     
     
         <div class="progress-status">
@@ -724,13 +768,12 @@ data-event-label="high"
     
 
 
-                  </div>
-                
-              </div>
             </div>
-          
-        </div>
-      </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
   </div>
   <a href="#top">Gora itzuli</a>
@@ -784,7 +827,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250302142637'></script>
+<script src='/site/assets/js/sdg.js?v=20250302143319'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -806,7 +849,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250302142637"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250302143319"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
