@@ -540,3 +540,26 @@ ul.iconillo {
 .indicator-status.noevaluado {
   background-color: #ccd5dd; /* Gris */
 }
+
+// Layout en 2 columnas
+.layout-goal {
+    .container {
+        h3, h4 {
+            margin: 0;
+            font-size: $fontSize;
+            &:after {
+                content: "";
+                display: block;
+                border-bottom: 1px solid $color-dark;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+        .row {
+            margin-bottom: 20px;
+        }
+        .goal-page-indicator-progress {
+            margin-left: 0px;
+        }
+    }
+}
