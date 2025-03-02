@@ -47,7 +47,7 @@
             {% endif %}
 
             {% if indicator.progress_status %}
-              {% assign tag_classes = tag_classes | push: indicator.progress_status | slugify %}
+              {% assign tag_classes = tag_classes | push: indicator.progress_status %}
             {% endif %}
             
             {% assign tag_classes = tag_classes | join: " " %}
