@@ -45,12 +45,10 @@
                 {% assign tag_classes = tag_classes | push: tag_slug %}
               {% endfor %}
             {% endif %}
-
-            {% if indicator.progress_status %}
-              {% assign tag_classes = tag_classes | push: 'progress-status-' | append: indicator.progress_status | slugify %}
-            {% endif %}
-            
             {% assign tag_classes = tag_classes | join: " " %}
+            {% if indicator.progress_status and indicator.progress_status != '' %}
+              {% assign indicator_has_progress = true %}
+            {% endif %}
 
             <div class="row">
               <h4>
@@ -61,7 +59,14 @@
                   {{ indicator.placeholder }}
                 {% else %}
                   <a href="{{ indicator.url }}">{{ indicator.name }}</a>
-                  {% include components/indicator/tags.html tags=tag_classes reporting_status=true indicator=indicator %}
+                  {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
+                {% endif %}
+                {% if indicator_has_progress %}
+                  <div class="col-lg-1 goal-page-indicator-progress">
+                    <span class="visually-hidden">{{ site.progress_status.status_heading | t }}</span>
+                    {% assign progress_status_label = site.progress_status[indicator.progress_status] %}
+                    <span>{{ progress_status_label }}</span>
+                  </div>
                 {% endif %}
               </div>
             </div>
