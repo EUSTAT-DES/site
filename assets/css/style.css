@@ -3403,4 +3403,10 @@ ul.iconillo {
 .layout-goal .container .row {
   margin-bottom: 20px; }
 .layout-goal .container .goal-page-indicator-progress {
-  margin-left: 0px; }
+  margin-left: 0px;
+  /* Asegurarse de que la imagen sea más grande */ }
+  .layout-goal .container .goal-page-indicator-progress .progress-status-image img {
+    width: 40px;
+    /* Ajusta este valor según el tamaño deseado */
+    object-fit: contain;
+    /* Asegura que la imagen mantenga su proporción */ }
