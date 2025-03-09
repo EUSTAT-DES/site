@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250303184414">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250309215002">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -590,7 +590,7 @@ data-event-label="high"
   data-graphtargetlines="[]"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Gipuzkoa&quot;,&quot;Bizkaia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Euros&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;PD_AGR_LSFP&quot;,&quot;PD_AGR_SSFP&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Ambito&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;01&quot;,&quot;20&quot;,&quot;48&quot;,&quot;_T&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Ámbito&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Euros constantes&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -625,163 +625,15 @@ data-event-label="high"
   <div id="datatables">
 
     
-    <a role="button" href="https://eustat-des.github.io/data/eu/headline/2-3-1.csv" class="btn btn-primary btn-download" download="indicator_2-3-1.csv" tabindex="0" role="button">Deskargatu titularren datuak (.csv)</a>
-    
     <a role="button" href="https://eustat-des.github.io/data/eu/data/2-3-1.csv" class="btn btn-primary btn-download" download='indicator_2-3-1.csv' tabindex='0' role='button'>Jatorrizko datuak deskargatu (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Deskargatu desagregazioen jatorrizko datuak (.csv)</p>
 
     
-    <h3>Datu nagusiak</h3>
-    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Volumen de producción por unidad de trabajo</caption>
-      <thead>
-        
-        
-        <th scope="col">Year</th>
-        
-        
-        
-        <th scope="col">Value</th>
-        
-        
-        
-        <th scope="col" class="table-value">Units</th>
-        
-        
-      </thead>
-      <tbody>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td>65128.6</td>
-          
-          
-          
-          <td class="table-value">Euros</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td>67325.4</td>
-          
-          
-          
-          <td class="table-value">Euros</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2017</td>
-          
-          
-          
-          <td>68894.9</td>
-          
-          
-          
-          <td class="table-value">Euros</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018</td>
-          
-          
-          
-          <td>68872.5</td>
-          
-          
-          
-          <td class="table-value">Euros</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019</td>
-          
-          
-          
-          <td>71800.9</td>
-          
-          
-          
-          <td class="table-value">Euros</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020</td>
-          
-          
-          
-          <td>68938.6</td>
-          
-          
-          
-          <td class="table-value">Euros</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2021</td>
-          
-          
-          
-          <td>73395.4</td>
-          
-          
-          
-          <td class="table-value">Euros</td>
-          
-          
-        </tr>
-        
-      </tbody>
-    </table>
+    <h3>Ez dago datu nagusirik</h3>
     
   </div>
 
-  
-  <div id="datatableFooter">
-    
-    
-    <p>Eremu geografikoa: </p>
-    
-    
-    <p>Neurri-unitatea: </p>
-    
-    
-    <p>Oharra: </p>
-    
-  </div>
   
 
 </div>
@@ -1101,28 +953,19 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Eskuragarri dagoen adierazlea </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Volumen de producción por unidad de trabajo</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
+  
       
       
       
@@ -1131,13 +974,117 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Helmuga </th>
+        <td>
           
-      
-      
-      
-        
+            <p>2.3 2030. urterako, nekazaritza‐ustiapena eta eskala txikian elikagai-ekoizle direnen diru‐sarrerak bikoiztea (bereziki, emakume, herri indigena, familiako nekazari, abeltzain eta arrantzaleenak), besteak beste, lurretara sarbide segurua eta bidezkoa edukiz, bai eta beste ekoizpen‐baliabide eta input batzuetara eta ezagutza, finantza‐zerbitzu, merkatu eta balioa eransteko aukeretara ere, eta nekazaritzakoak ez diren enpleguak lortzea</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Helburua </th>
+        <td>
+          
+            <p>2 Gosea amaitzea, elikagai-segurtasuna eta elikadura hobea lortzea, eta nekazaritza jasangarria bultzatzea</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definizioa </th>
+        <td>
+          
+            <p>Producción total de cultivos y derivados, ganado, productos ganaderos y otras producciones  de las explotaciones agrícolas, ya sean pequeñas o grandes, expresada por Unidad de Trabajo  Anual (UTA).
+Una explotación se considera <strong>pequeña</strong> cuando cumple ambas condiciones: - Opera una cantidad de tierra que se encuentra en los dos primeros quintiles 
+  (el 40% inferior) de la distribución acumulada del tamaño de la tierra a nivel de la 
+  Comunidad Autónoma de Euskadi (medida en hectáreas).</p>
+<ul>
+  <li>Obtiene un ingreso económico anual de las actividades agrícolas que se encuentra en los 
+dos primeros quintiles (el 40% inferior) de la distribución acumulada de los ingresos 
+económicos agrícolas por unidad de producción a nivel de la Comunidad Autónoma de Euskadi.</li>
+</ul>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Formula teorikoa </th>
+        <td>
+          
+            
+\[PUT_{pe}^{t} = \frac{SE131_{pe}^{t}}{SE010_{pe}^{t}}\]
+
+<p>donde:</p>
+
+<p>$SE131_{pe}^{t}$ = Producción total de cultivos y derivados, ganado, productos ganaderos 
+  y otras producciones de las explotaciones agrícolas (pequeñas o grandes) en el año $t$.</p>
+
+<p>$SE010_{pe}^{t}$ = Total de la mano de obra en las explotaciones agrícolas (pequeñas o grandes) 
+  en el año $t$, expresada en <strong>Unidades de Trabajo Anual (UTA)</strong>, donde <strong>1 UTA equivale a una 
+  persona trabajando a tiempo completo durante un año</strong>.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Eskuragarri dauden desagregazioak </th>
+        <td>
+          
+            <p>Territorio histórico</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Aldizkakotasuna </th>
+        <td>
+          
+            <p>Anual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1208,13 +1155,33 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Azken aldiz eguneratutako datuak </th>
+        <td>
           
-      
-      
-      
-        
+            2025 martxoa 09
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Azken aldiz eguneratutako metadatuak </th>
+        <td>
+          
+            2025 martxoa 09
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -1274,6 +1241,49 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Justifikazioa </th>
+        <td>
+          
+            
+<p>La Agenda 2030 para el Desarrollo Sostenible ha hecho hincapié en la importancia de mejorar 
+la productividad de los pequeños productores de alimentos, ya que estos desempeñan un 
+papel importante en la producción mundial de alimentos. El indicador monitorea los avances 
+en esta área, donde el objetivo es duplicar la productividad para el año 2030.</p>
+
+<p>La mejora de la productividad laboral en las unidades de producción en pequeña escala también 
+tiene implicaciones en la reducción de la pobreza, ya que los pequeños productores de 
+alimentos suelen ser pobres y con frecuencia se encuentran en condiciones 
+cercanas a la subsistencia.</p>
+
+<p>Fuente: División de Estadísticas de las Naciones Unidas, Eurostat</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
+        <td>
+          
+            <p>El indicador disponible no cumple con los metadatos de Naciones Unidas pero aporta información similar.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -1284,18 +1294,19 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">NBEko metadatuetarako esteka </th>
+        <td>
           
-      
-      
-      
-        
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-03-01.pdf">Metadatos 2-3-1.pdf (solo en inglés)</a></p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
+      
+  
       
       
       
@@ -1403,7 +1414,7 @@ data-event-label="Change to indicator.global_metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250303184414'></script>
+<script src='/site/assets/js/sdg.js?v=20250309215002'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1425,7 +1436,7 @@ data-event-label="Change to indicator.global_metadata tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250303184414"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250309215002"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
