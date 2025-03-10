@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250309215002">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250310085626">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -554,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "La población malnutrida es aquella que tiene obesidad (IMC>=30), \nsobrepeso (25<=IMC<30) o peso insuficiente (IMC<18,5), donde IMC es el índice de masa corporal, \nque se obtiene dividiendo el peso (kg) por el cuadrado de la estatura (m).\n\nEste indicador se compone de dos series temporales:\n\n - Proporción de menores entre 2 y 17 años que presentan malnutrición (obesidad, sobrepeso o peso insuficiente)\n \n - Proporción de la población adulta con obesidad\n");
+        var currentValue = normalizeCurrentValue('definicion', "La población malnutrida es aquella que tiene obesidad, \nsobrepeso o peso insuficiente.\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -568,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b>Tasa de obesidad, sobrepeso o peso insuficiente de la población entre 2 y 17 años</b>\n\n$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$\n\ndonde:\n\n$PPM_{2-17}^{t} =$ población entre 2 y 17 años con malnutrición (IMC<18,5 o IMC>=25) en el año $t$\n\n$P_{2-17}^{t} =$ población entre 2 y 17 años en el año $t$\n\n<b>Tasa de obesidad de la población adulta</b>\n\n$$PPO_{>18}^{t} = \\frac{PO_{>18}^{t}}{P_{>18}^{t}} \\cdot 100$$\n\ndonde:\n\n$PPO_{>18}^{t} =$ población adulta con obesidad (IMC>=30) en el año $t$\n\n$P_{>18}^{t} =$ población adulta en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Tasa de obesidad, sobrepeso o peso insuficiente de la población entre 2 y 17 años</b>\n\n$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$\n\ndonde:\n\n$PPM_{2-17}^{t} =$ población entre 2 y 17 años con malnutrición en el año $t$\n\n$P_{2-17}^{t} =$ población entre 2 y 17 años en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Está aceptado internacionalmente que el crecimiento infantil \nrefleja el estado nutricional del niño. El sobrepeso infantil se refiere a un \nniño que pesa demasiado para su altura. Esta forma de desnutrición se debe a que se \ngastan muy pocas calorías para la cantidad de alimentos consumidos y aumenta el riesgo \nde enfermedades no transmisibles en el futuro. El sobrepeso infantil es uno de los\nindicadores objetivo de nutrición de la Asamblea Mundial de la Salud.\n\nPor ello, el indicador de Naciones Unidas hace referencia al crecimiento infantil, \ny mide la prevalencia \ndel sobrepeso (peso para la talla >+2 desviación estándar de la mediana de los \nestándares de crecimiento infantil de la Organización Mundial de la Salud (OMS)) entre niños \nmenores de 5 años.\n\nAunque la UE ha superado en gran medida los problemas del hambre, están surgiendo nuevos desafíos\nrelacionados con la nutrición, como el aumento de la obesidad.\n\nPor ello, el indicador europeo mide la obesidad en la edad adulta, y se utiliza para \nhacer el seguimiento del progreso hacia el ODS 2\n(poner fin al hambre y la malnutrición) y el ODS 3 (buena salud y bienestar), que están\nincluidos en las prioridades de la Comisión Europea en el marco del \"Acuerdo Verde Europeo\", \n\"Una economía que funcione para las personas\" y \"Promoción de nuestro modo de vida europeo\".\n\nLa política alimentaria \nde la UE incluye iniciativas de nutrición y trabaja con los Estados miembros de la UE \nen diversas iniciativas de salud pública en el área de la nutrición y la actividad \nfísica para promover un estilo de vida saludable y equilibrado.\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Está aceptado internacionalmente que el crecimiento infantil \nrefleja el estado nutricional del niño. El sobrepeso infantil se refiere a un \nniño que pesa demasiado para su altura. Esta forma de desnutrición se debe a que se \ngastan muy pocas calorías para la cantidad de alimentos consumidos y aumenta el riesgo \nde enfermedades no transmisibles en el futuro. El sobrepeso infantil es uno de los\nindicadores objetivo de nutrición de la Asamblea Mundial de la Salud.\n\nPor ello, el indicador de Naciones Unidas hace referencia al crecimiento infantil, \ny mide la prevalencia \ndel sobrepeso (peso para la talla >+2 desviación estándar de la mediana de los \nestándares de crecimiento infantil de la Organización Mundial de la Salud (OMS)) entre niños \nmenores de 5 años.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -654,7 +654,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas al no utilizar la misma forma de cálculo del sobrepeso, ni el mismo grupo de edad. La tasa de obesidad de la población adulta es comparable con el indicador europeo.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas al no utilizar la misma forma de cálculo del sobrepeso, ni el mismo grupo de edad.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -668,7 +668,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_02_10/default/table?lang=en&category=sdg.sdg_02\">Tasa de obesidad por índice de masa corporal (IMC) (sdg_02)</a> Eurostat <br> <a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.2.2&seriesCode=SN_STA_OVWGT&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=%3C5Y\">Proporción de niños con sobrepeso moderado o grave (%) SN_STA_OVWGT</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.2.2&seriesCode=SN_STA_OVWGT&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=%3C5Y\">Proporción de niños con sobrepeso moderado o grave (%) SN_STA_OVWGT</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -734,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-12-12");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-10");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -862,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250309215002'></script>
+<script src='/site/assets/js/sdg.js?v=20250310085626'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -884,7 +884,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250309215002"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250310085626"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

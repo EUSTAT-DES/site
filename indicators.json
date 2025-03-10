@@ -143,7 +143,7 @@
         },
         {
           "id": "2-2-2",
-          "title": "Prevalencia de la malnutrición (peso para la estatura, desviación típica > +2 o < -2 de la mediana de los patrones de crecimiento infantil de la OMS) entre los niños menores de 5 años, desglosada por tipo (emaciación y sobrepeso)",
+          "title": "Tasa de obesidad, sobrepeso o peso insuficiente de la población entre 2 y 17 años",
           "description": "",
           "keywords": "",
           "href": "/site/2-2-2/",
@@ -156,6 +156,14 @@
           "keywords": "",
           "href": "/site/2-2-3/",
           "status": "notstarted"
+        },
+        {
+          "id": "2-2-E1",
+          "title": "Tasa de obesidad de la población adulta según el índice de masa corporal (IMC) (Indicador UE sdg_02_10)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/2-2-E1/",
+          "status": "complete"
         },
         {
           "id": "2-3-1",
@@ -183,7 +191,7 @@
         },
         {
           "id": "2-4-E1",
-          "title": "Superficie dedicada a la agricultura ecológica (<b>Indicador UE sdg_02_40</b>)",
+          "title": "Superficie dedicada a la agricultura ecológica (Indicador UE sdg_02_40)",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-E1/",
@@ -191,7 +199,7 @@
         },
         {
           "id": "2-4-E2",
-          "title": "Emisiones de amoníaco de la agricultura y ganadería (<b>Indicador UE sdg_02_60</b>)",
+          "title": "Emisiones de amoníaco de la agricultura y ganadería (Indicador UE sdg_02_60)",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-E2/",
@@ -343,7 +351,7 @@
         },
         {
           "id": "3-4-E1",
-          "title": "Tasa de participación en los programas de cribado poblacional de cáncer (<b>Indicador Gobierno Vasco</b>)",
+          "title": "Tasa de participación en los programas de cribado poblacional de cáncer (Indicador Gobierno Vasco)",
           "description": "",
           "keywords": "",
           "href": "/site/3-4-E1/",
@@ -351,7 +359,7 @@
         },
         {
           "id": "3-4-E2",
-          "title": "Esperanza de vida y esperanza de vida en buena salud (<b>Indicador Gobierno Vasco</b>)",
+          "title": "Esperanza de vida y esperanza de vida en buena salud (Indicador Gobierno Vasco)",
           "description": "",
           "keywords": "",
           "href": "/site/3-4-E2/",
@@ -943,7 +951,7 @@
         },
         {
           "id": "8-5-E1",
-          "title": "Tasa de ocupación de la población (<b>Indicador UE sdg_08_30</b>)",
+          "title": "Tasa de ocupación de la población (Indicador UE sdg_08_30)",
           "description": "",
           "keywords": "",
           "href": "/site/8-5-E1/",
@@ -1087,7 +1095,7 @@
         },
         {
           "id": "9-4-E1",
-          "title": "Intensidad de las emisiones atmosféricas de la industria (<b>Indicador UE sdg_09_70</b>)",
+          "title": "Intensidad de las emisiones atmosféricas de la industria (Indicador UE sdg_09_70)",
           "description": "",
           "keywords": "",
           "href": "/site/9-4-E1/",
@@ -1679,7 +1687,7 @@
         },
         {
           "id": "15-1-E1",
-          "title": "Superficie de las áreas terrestres protegidas (km2 y porcentaje) (<b>Indicador UE sdg_15_20</b>)",
+          "title": "Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)",
           "description": "",
           "keywords": "",
           "href": "/site/15-1-E1/",
@@ -1823,7 +1831,7 @@
         },
         {
           "id": "16-1-E1",
-          "title": "Población que reporta ocurrencia de delitos, violencia o vandalismo en su área (<b>Indicador UE sdg_16_20</b>)",
+          "title": "Población que reporta ocurrencia de delitos, violencia o vandalismo en su área (Indicador UE sdg_16_20)",
           "description": "",
           "keywords": "",
           "href": "/site/16-1-E1/",

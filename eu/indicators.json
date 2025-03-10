@@ -143,7 +143,7 @@
         },
         {
           "id": "2-2-2",
-          "title": "Malnutrizioaren prebalentzia 5 urtetik beherako umeen artean (adin bakoitzeko pisuan, desbideratze tipikoa gutxienez OMEren hazkunde-patroien erdiko balioa baino 2 puntu handiagoa edo txikiagoa denean), motaren arabera (ahultasuna eta gehiegizko pisua) banatuta",
+          "title": "Prevalencia de la malnutrición por grupos de edad",
           "description": "",
           "keywords": "",
           "href": "/site/eu/2-2-2/",
@@ -156,6 +156,14 @@
           "keywords": "",
           "href": "/site/eu/2-2-3/",
           "status": "notstarted"
+        },
+        {
+          "id": "2-2-E1",
+          "title": "GRAFICO.2-2-E1-titulo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/eu/2-2-E1/",
+          "status": "complete"
         },
         {
           "id": "2-3-1",
