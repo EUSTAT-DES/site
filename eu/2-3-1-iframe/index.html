@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250310085626">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250310111613">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -363,7 +363,7 @@ layout-indicator-iframe
   data-graphtargetlines="[]"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;PD_AGR_LSFP&quot;,&quot;PD_AGR_SSFP&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Ambito&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;01&quot;,&quot;20&quot;,&quot;48&quot;,&quot;_T&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Ámbito&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Euros constantes&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;PD_AGR_LSFP&quot;,&quot;PD_AGR_SSFP&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Euros constantes&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -398,15 +398,335 @@ layout-indicator-iframe
   <div id="datatables">
 
     
+    <a role="button" href="https://eustat-des.github.io/data/eu/headline/2-3-1.csv" class="btn btn-primary btn-download" download="indicator_2-3-1.csv" tabindex="0" role="button">Deskargatu titularren datuak (.csv)</a>
+    
     <a role="button" href="https://eustat-des.github.io/data/eu/data/2-3-1.csv" class="btn btn-primary btn-download" download='indicator_2-3-1.csv' tabindex='0' role='button'>Jatorrizko datuak deskargatu (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Deskargatu desagregazioen jatorrizko datuak (.csv)</p>
 
     
-    <h3>Ez dago datu nagusirik</h3>
+    <h3>Datu nagusiak</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Volumen de producción por unidad de trabajo</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Series</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>44914.3</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_LSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>10978.5</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_SSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>12294.5</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_SSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>10150.0</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_SSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>10509.0</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_SSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>50293.1</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_LSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>12030.9</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_SSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>10646.1</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_SSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>45942.5</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_LSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>9818.3</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_SSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>43924.4</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_LSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>43308.1</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_LSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>46168.5</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_LSFP</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>42600.2</td>
+          
+          
+          
+          <td>Euros constantes</td>
+          
+          
+          
+          <td class="table-value">PD_AGR_LSFP</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Eremu geografikoa: </p>
+    
+    
+    <p>Neurri-unitatea: </p>
+    
+    
+    <p>Oharra: </p>
+    
+  </div>
   
 
 </div>
@@ -929,7 +1249,7 @@ económicos agrícolas por unidad de producción a nivel de la Comunidad Autóno
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025 martxoa 09
+            2025 martxoa 10
           
         </td>
         </tr>
@@ -1136,7 +1456,7 @@ cercanas a la subsistencia.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250310085626'></script>
+<script src='/site/assets/js/sdg.js?v=20250310111613'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -1158,7 +1478,7 @@ cercanas a la subsistencia.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250310085626"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250310111613"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
