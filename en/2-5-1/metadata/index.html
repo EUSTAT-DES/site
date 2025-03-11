@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250310164207">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250311163326">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -508,6 +508,18 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.nodisponible");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
@@ -528,16 +540,52 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('descripcion_global', "Los recursos genéticos para la alimentación y la agricultura constituyen \nlos elementos básicos de la seguridad alimentaria y, directa o indirectamente, \nsustentan los medios de vida de todas las personas de la Tierra. \n\nComo la conservación \ny la accesibilidad a estos recursos son de vital importancia, se han establecido \ninstalaciones de conservación a mediano o largo plazo (bancos de genes) para preservar \ny hacer accesibles estos recursos y la información asociada a ellos para la cría y \nla investigación a nivel nacional, regional y mundial. Los inventarios de los fondos \nde los bancos de genes proporcionan una medida dinámica de la diversidad vegetal y \nanimal existente y su nivel de conservación. Los datos pertinentes a este indicador \nfacilitan el seguimiento de la diversidad asegurada y accesible a través de los \nbancos de genes y apoyan la elaboración y actualización de estrategias para la \nconservación y el uso sostenible de los recursos genéticos. \n\nEl indicador está relacionado con un marco de seguimiento aprobado por la Comisión \nde Recursos Genéticos para la Alimentación y la Agricultura de la FAO en el \nque se describe el estado y las tendencias de los recursos genéticos vegetales \ny animales mediante indicadores acordados a nivel mundial y evaluaciones periódicas \nimpulsadas por los países. \n\nEl número de materiales conservados en condiciones de almacenamiento a mediano o \nlargo plazo proporciona una medición indirecta de la diversidad genética total, \nque se gestiona para asegurar su uso futuro. En términos generales, las \nvariaciones positivas se aproximan a un aumento de la agrobiodiversidad \nasegurada, mientras que las variaciones negativas a una pérdida de la misma.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var propertyEditor = editor.getEditor('root.descripcion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: descripcion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dato_global', "");
+        var propertyEditor = editor.getEditor('root.dato_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dato_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-05-01a.pdf\">Metadatos 2-5-1(1).pdf (solo en inglés)</a>\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-05-01b.pdf\">Metadatos 2-5-1(2).pdf (solo en inglés)</a>");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -564,6 +612,18 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-11");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -682,7 +742,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250310164207'></script>
+<script src='/site/assets/js/sdg.js?v=20250311163326'></script>
 
 
 <script type="text/x-mathjax-config">
@@ -704,7 +764,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250310164207"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250311163326"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
