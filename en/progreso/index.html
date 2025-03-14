@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250312210046">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250314094040">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -442,7 +442,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="" />
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250312210046" />
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250314094040" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" crossorigin="" />
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" crossorigin="" />
@@ -3213,28 +3213,27 @@ layout-page
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src="/site/assets/js/sdg.js?v=20250312210046"></script>
+<script src="/site/assets/js/sdg.js?v=20250314094040"></script>
 
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: { autoNumber: "all" },
-      tagSide: "right"
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],  // Permite $...$ y \(...\) para matemáticas en línea
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],  // Permite $$...$$ y \[...\] para ecuaciones en bloque
+      tags: 'none'  // Desactiva la numeración automática de ecuaciones
     },
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true
+    svg: {
+      fontCache: 'global'  // Optimiza el rendimiento al reutilizar fuentes matemáticas
     }
-  });
+  };
 </script>
-<script src="https://cdn.jsdelivr.net/gh/mathjax/MathJax@legacy-v2-develop/unpacked/MathJax.js?config=TeX-AMS_CHTML">
-</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250312210046"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250314094040"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -3295,29 +3294,27 @@ layout-page
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250312210046'></script>
+<script src='/site/assets/js/sdg.js?v=20250314094040'></script>
 
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: { autoNumber: "all" },
-      tagSide: "right"
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],  // Permite $...$ y \(...\) para matemáticas en línea
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],  // Permite $$...$$ y \[...\] para ecuaciones en bloque
+      tags: 'none'  // Desactiva la numeración automática de ecuaciones
     },
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true
+    svg: {
+      fontCache: 'global'  // Optimiza el rendimiento al reutilizar fuentes matemáticas
     }
-  });
+  };
 </script>
-<script
-  src="https://cdn.jsdelivr.net/gh/mathjax/MathJax@legacy-v2-develop/unpacked/MathJax.js?config=TeX-AMS_CHTML">
-</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250312210046"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250314094040"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
