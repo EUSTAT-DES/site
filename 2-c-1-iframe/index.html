@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250316171358">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250316231035">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -346,7 +346,7 @@ layout-indicator-iframe
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype="line"
+  data-graphtype="BAR"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
@@ -357,7 +357,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Tasa de variación interanual del índice de precios de los alimentos&quot;,&quot;Índice de precios de los alimentos (2021=100)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Producto&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Alimentos&quot;,&quot;Pan y cereales&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Producto&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio histórico&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Porcentaje&quot;,&quot;Índice&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;AG_FPA_CFPI&quot;,&quot;EU_FPA_IPC&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Alimento&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;ECOICOP011&quot;,&quot;ECOICOP01111&quot;,&quot;ECOICOP11112&quot;,&quot;ECOICOP112&quot;,&quot;ECOICOP113&quot;,&quot;ECOICOP1141&quot;,&quot;ECOICOP1142&quot;,&quot;ECOICOP115&quot;,&quot;ECOICOP1111&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Alimento&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;1.0&quot;,&quot;20.0&quot;,&quot;48.0&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio histórico&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Índice&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -935,7 +935,7 @@ como la media aritmética de los índices de precios de consumo mensuales</p>
         <th scope="row">Datos actualizados por última vez </th>
         <td>
           
-            29 de agosto de 2024
+            16 de marzo de 2025
           
         </td>
         </tr>
@@ -1217,7 +1217,7 @@ el contexto macroeconómico y los shocks externos.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250316171358'></script>
+<script src='/site/assets/js/sdg.js?v=20250316231035'></script>
 
 
 <script>
@@ -1237,7 +1237,7 @@ el contexto macroeconómico y los shocks externos.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250316171358"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250316231035"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
