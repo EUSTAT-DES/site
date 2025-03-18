@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250318101512">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250318155348">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -522,23 +522,11 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('indicador_onu_global', "Pobrezian bizi diren adin guztietako gizon, emakume eta haurren proportzioa, dimentsio guztietan, definizio nazionalen arabera");
-        var propertyEditor = editor.getEditor('root.indicador_onu_global');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: indicador_onu_global');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('meta_global', "2030. urterako, gutxienez erdira jaistea pobrezian, bere dimentsio guztietan (definizio nazionalen arabera), bizi diren gizon, emakume eta adin guztietako haurren proportzioa");
+        var currentValue = normalizeCurrentValue('meta_global', "1.2 2030. urterako, gutxienez erdira jaistea pobrezian, bere dimentsio guztietan (definizio nazionalen arabera), bizi diren gizon, emakume eta adin guztietako haurren proportzioa");
         var propertyEditor = editor.getEditor('root.meta_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -552,7 +540,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('objetivo_global', "Pobrezia mota guztiak desagertzea mundu osoan");
+        var currentValue = normalizeCurrentValue('objetivo_global', "1 Pobrezia mota guztiak desagertzea mundu osoan");
         var propertyEditor = editor.getEditor('root.objetivo_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -566,7 +554,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica  de los ingresos por unidad de consumo (escala OCDE modificada).");
+        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas que cumplen al menos uno de los tres criterios del riesgo de pobreza   o exclusión social (estar en riesgo de pobreza relativa, en situación de carencia material y social  severa o viviendo en hogares con baja intensidad de trabajo)");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -580,7 +568,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<p>$$PPRPR_{CCAA}^{t} = \\frac{PRPR_{CCAA}^{t}}{P^{t}} \\cdot 100$$ </p>\n<p>donde: </p>\n<p>$PRPR_{CCAA}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>\n<p>$P^{t} =$ población total en el año $t$</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$T_{AROPE}^{t} = \\frac{P_{AROPE}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$P_{AROPE}^{t} =$ población en riesgo de pobreza o exclusión social el año $t$\n\n$P^{t} =$ población total en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -608,7 +596,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('periodicidad', "Diaria (semana laborable)");
+        var currentValue = normalizeCurrentValue('periodicidad', "Bienal");
         var propertyEditor = editor.getEditor('root.periodicidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -622,7 +610,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "Los ingresos que se utilizan en el cálculo de este indicador corresponden al año anterior al de la encuesta. El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.");
+        var currentValue = normalizeCurrentValue('observaciones', "El indicador mide la proporción de personas que cumplen al menos uno de los siguientes criterios:\n\n<b>Personas en riesgo de pobreza relativa:</b> personas con ingresos por unidad de consumo por\ndebajo del 60% de la mediana (escala OCDE modificada).\n\nEl número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, \nque asigna un peso de 1 a la primera  persona de 14 o más años, un peso de 0,5 al resto de personas de \n14 o más años y un peso de 0,3 a las personas de menos de 14 años.\n\n<b>Personas en situación de carencia material y social severa:</b> personas que padecen al menos \nsiete de la siguiente lista de trece limitaciones (siete definidas a nivel de hogar y seis a nivel de persona):\n\nA nivel de hogar:\n 1. No puede permitirse ir de vacaciones al menos una semana al año.\n 2. No puede permitirse una comida de carne, pollo o pescado al menos cada dos días.\n 3. No puede permitirse mantener la vivienda con una temperatura adecuada.\n 4. No tiene capacidad para afrontar gastos imprevistos.\n 5. Ha tenido retrasos en el pago de gastos relacionados con la vivienda principal \n(hipoteca o alquiler, recibos de gas, comunidad, etc) o en\ncompras a plazos en los últimos 12 meses.\n 6. No puede permitirse disponer de un automóvil.\n 7. No puede sustituir muebles estropeados o viejos.\n\nA nivel de persona:\n 8. No puede permitirse sustituir ropa estropeada por otra nueva.\n 9. No puede permitirse tener dos pares de zapatos en buenas condiciones.\n 10. No puede permitirse reunirse con amigos/familia para comer o tomar algo al menos una vez al mes.\n 11. No puede permitirse participar regularmente en actividades de ocio.\n 12. No puede permitirse gastar una pequeña cantidad de dinero en sí mismo.\n 13. No puede permitirse conexión a internet.\n\nEn el caso de menores de 16 años no se dispone de los seis conceptos enumerados anteriormente a \nnivel de persona. Para estos menores los valores de esos elementos se imputan a partir de los valores\nrecogidos para los miembros de su hogar con 16 o más años.\n\n<b>Baja intensidad en el empleo:</b> son los hogares en los que sus miembros en edad de trabajar \n(personas de 18 a 64 años, excluyendo los estudiantes de 18 a 24 años, los jubilados o retirados, \nasí como las personas inactivas entre 60 y 64 cuya fuente principal de ingresos del hogar sean las pensiones)\nlo hicieron menos del 20% del total de su potencial de trabajo durante el año de referencia.\nEsta variable no se aplica en el caso de las personas de 65 y más años.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -648,23 +636,11 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('descripcion_global', "El porcentaje de personas que viven en hogares considerados en riesgo de pobreza en el contexto nacional.");
-        var propertyEditor = editor.getEditor('root.descripcion_global');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: descripcion_global');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nTradicionalmente se ha definido la pobreza como la falta de dinero. \nSin embargo, la pobreza hay que entenderla de manera mucho más amplia.\nUna persona pobre puede sufrir múltiples desventajas al mismo tiempo; por ejemplo, puede \ntener mala salud o desnutrición, falta de agua potable o electricidad, mala calidad del \ntrabajo o poca escolaridad. Centrarse en un solo factor, como el ingreso, no es \nsuficiente para captar la verdadera realidad de la pobreza.\n\n\nEn la Unión Europea, la población en riesgo de pobreza o exclusión social, \nabreviado como AROPE, \ncorresponde a la suma de personas que están en riesgo de pobreza (pobreza de ingresos), \ngravemente desfavorecidas material y socialmente, o que viven en un hogar con una \nintensidad laboral muy baja. \nLas personas se incluyen sólo una vez incluso si se encuentran en más de una de las \nsituaciones mencionadas anteriormente. La tasa AROPE es la proporción de la población total \nque está en riesgo de pobreza o exclusión social.\n\nLa tasa AROPE es el principal indicador para hacer el seguimiento del\nobjetivo de pobreza y exclusión social de la UE para 2030 y fue el indicador principal \npara hacer el seguimiento del objetivo de pobreza de la Estrategia UE 2020.\n\nEl <a href=\"https://ec.europa.eu/social/main.jsp?catId=1606&langId=es\">Pilar \nEuropeo de Derechos Sociales</a> propone tres objetivos a nivel \nde la UE que deben alcanzarse de aquí a 2030 en los ámbitos del empleo, \nlas capacidades y la protección social. La pobreza y la exclusión social \nes uno de los objetivos. El número de personas en riesgo de pobreza o exclusión\nsocial debería reducirse en al menos 15 millones de aquí a 2030, y de ellas, \nal menos 5 millones deberían ser niños.\n\nFuente: División de Estadísticas de las Naciones Unidas, Eurostat\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -692,7 +668,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "Eurostat <a href=\"https://ec.europa.eu/eurostat/databrowser/bookmark/7d6a8537-b602-4526-aff8-4fcbd2b48dee?lang=en\">(ilc_li02)</a><br> UNSTAT<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&seriesCode=SI_POV_DAY1&areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=4&table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX\">(1.2.1)</a>");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en\"> Personas en riesgo de pobreza o exclusión social por edad y sexo (ilc_peps01n)</a> Eurostat");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -708,7 +684,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf\">Metadatos del indicador 1-2-1 PDF</a>");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf\">Metadatos 1-2-2.pdf (solo en inglés)</a>\n\n<a href=\"https://ec.europa.eu/eurostat/cache/metadata/en/sdg_01_10_esmsip2.htm\">Metadatos Eurostat (sdg_01_10)</a> (solo en inglés)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +720,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -758,7 +734,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -886,7 +862,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250318101512'></script>
+<script src='/site/assets/js/sdg.js?v=20250318155348'></script>
 
 
 <script>
@@ -906,7 +882,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250318101512"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250318155348"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

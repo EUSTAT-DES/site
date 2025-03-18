@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250318101512">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250318155348">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1183,19 +1183,8 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Indicator </th>
-        <td>
-          
-            <p>Proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1204,7 +1193,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Target </th>
         <td>
           
-            <p>By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions</p>
+            <p>1.2 By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions</p>
 
           
         </td>
@@ -1220,7 +1209,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>End poverty in all its forms everywhere</p>
+            <p>1 End poverty in all its forms everywhere</p>
 
           
         </td>
@@ -1236,7 +1225,8 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica  de los ingresos por unidad de consumo (escala OCDE modificada).</p>
+            
+<p>Proportion of people who meet at least one of the three criteria for risk of poverty or social exclusion (being at risk of relative poverty, in a situation of material and social deprivation or living in a household with low work intensity)</p>
 
           
         </td>
@@ -1252,10 +1242,14 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Theoretical formula </th>
         <td>
           
-            <p>$$PPRPR_{CCAA}^{t} = \frac{PRPR_{CCAA}^{t}}{P^{t}} \cdot 100$$ </p>
-<p>donde: </p>
-<p>$PRPR_{CCAA}^{t} =$ población en riesgo de pobreza relativa considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos por unidad de consumo (escala OCDE modificada)) en el año $t$ </p>
-<p>$P^{t} =$ población total en el año $t$</p>
+            
+\[T_{AROPE}^{t} = \frac{P_{AROPE}^{t}}{P^{t}} \cdot 100\]
+
+<p>where:</p>
+
+<p>$P_{AROPE}^{t} =$ population at risk of poverty or social exclusion in $t$</p>
+
+<p>$P^{t} =$ total population in $t$</p>
 
           
         </td>
@@ -1271,10 +1265,10 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Dimensiones de la pobreza: riesgo de pobreza, carencia material y social severa, 
-baja intensidad de trabajo</p>
+            <p>Dimensions of poverty: risk of poverty, severe material and social deprivation,
+low work intensity</p>
 
-<p>Sexo</p>
+<p>Sex</p>
 
           
         </td>
@@ -1290,7 +1284,7 @@ baja intensidad de trabajo</p>
         <th scope="row">Frequency </th>
         <td>
           
-            <p>Diaria (semana laborable)</p>
+            <p>Bienal</p>
 
           
         </td>
@@ -1306,7 +1300,47 @@ baja intensidad de trabajo</p>
         <th scope="row">Observations </th>
         <td>
           
-            <p>Los ingresos que se utilizan en el cálculo de este indicador corresponden al año anterior al de la encuesta. El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.</p>
+            <p>The indicator measures the proportion of people who meet at least one of the following criteria:</p>
+
+<p><b>People at risk of relative poverty:</b> people with income per unit of consumption
+below 60% of the median (modified OECD scale).</p>
+
+<p>The number of consumption units in a household
+is calculated using the modified OECD scale, which assigns a weight of 1 to the
+first person aged 14 or over, a weight of 0.5 for other people aged 14 or over
+and a weight of 0.3 for people under 14 years of age</p>
+
+<p><b>People in a situation of severe material and social deprivation:</b> people who suffer from at least
+seven from the following list of thirteen limitations (seven defined at the household level and six at the individual level):</p>
+
+<p>At the household level:</p>
+<ol>
+  <li>You can’t afford to go on vacation for at least one week a year.</li>
+  <li>You cannot afford a meal of meat, chicken or fish at least every other day.</li>
+  <li>You cannot afford to keep the home at an adequate temperature.</li>
+  <li>You do not have the capacity to face unforeseen expenses.</li>
+  <li>You have had delays in the payment of expenses related to the main home (mortgage or rent, gas bills, community…)
+ or in installment purchases in the last 12 months.</li>
+  <li>You can’t afford a car.</li>
+  <li>You cannot replace damaged or old furniture.</li>
+</ol>
+
+<p>At the individual level:</p>
+<ol>
+  <li>You cannot afford to replace damaged clothes with new ones.</li>
+  <li>You can’t afford to have two pairs of shoes in good condition.</li>
+  <li>You can’t afford to meet friends/family for food or drinks at least once a month.</li>
+  <li>You cannot afford to regularly participate in leisure activities.</li>
+  <li>You can’t afford to spend a small amount of money on yourself.</li>
+  <li>Cannot afford internet connection.
+In the case of minors under 16 years of age, the six concepts listed above are not available at the individual level.
+For these minors, the values of these elements are imputed from the values collected for the members of their household aged 16 or over.</li>
+</ol>
+
+<p><b>Low work intensity:</b>these are households in which their working age members (people from 18 to 64 years old, excluding 
+students from 18 to 24 years old, retirees or retirees, as well as inactive people between 60 and 64 whose main source of household income 
+are pensions) worked less than 20% of their total work potential during the reference year.
+This variable does not apply for people aged 65 and over.</p>
 
           
         </td>
@@ -1390,13 +1424,33 @@ baja intensidad de trabajo</p>
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
-      
-      
-      
-        
+            July 29, 2024
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            July 29, 2024
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -1511,19 +1565,8 @@ baja intensidad de trabajo</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Description </th>
-        <td>
-          
-            <p>El porcentaje de personas que viven en hogares considerados en riesgo de pobreza en el contexto nacional.</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1532,7 +1575,33 @@ baja intensidad de trabajo</p>
         <th scope="row">Rationale </th>
         <td>
           
-            <p>Hacer el seguimiento de la pobreza nacional es importante para las agendas de desarrollo específicas de cada país. Las líneas de pobreza nacionales se utilizan para hacer estimaciones más precisas de la pobreza consistentes con las circunstancias económicas y sociales específicas del país, y no están destinadas a comparaciones internacionales de tasas de pobreza</p>
+            
+<p>Traditionally, poverty has been defined as a lack of money.
+However, poverty must be understood much more broadly.
+A poor person can suffer multiple disadvantages at the same time; For example, you can
+suffer from poor health or malnutrition, lack of drinking water or electricity, poor quality of
+work or little schooling. Focusing on a single factor, such as income, is not
+enough to capture the true reality of poverty.</p>
+
+<p>In the European Union, the population at risk of poverty or social exclusion,
+abbreviated as AROPE, corresponds to the sum of people who are at risk of poverty (income poverty),
+severely disadvantaged materially and socially, or living in a household with a
+very low work intensity.
+People are included only once, even if they are in more than one of the
+situations mentioned above. The AROPE rate is the proportion of the total population
+who are at risk of poverty or social exclusion.</p>
+
+<p>The AROPE rate is the main indicator for monitoring the
+EU poverty and social exclusion target for 2030 and was the leading indicator
+to monitor the poverty target of the EU 2020 strategy.</p>
+
+<p>The <a href="https://employment-social-affairs.ec.europa.eu/european-pillar-social-rights-20-principles_en">
+European Pillar of Social Rights</a> proposes three objectives at the level of EU
+to be achieved by 2030 in the areas of employment, skills and social protection.
+Poverty and social exclusion is one of the objectives. The number of people at risk of poverty or exclusion
+should be reduced by at least 15 million by 2030, and of these, at least 5 million should be children.</p>
+
+<p>Source: United Nations Statistics Division, Eurostat</p>
 
           
         </td>
@@ -1548,7 +1617,7 @@ baja intensidad de trabajo</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos de Naciones Unidas.</p>
+            <p>The available indicator complies with United Nations metadata.</p>
 
           
         </td>
@@ -1564,7 +1633,7 @@ baja intensidad de trabajo</p>
         <th scope="row">International results </th>
         <td>
           
-            <p>Eurostat <a href="https://ec.europa.eu/eurostat/databrowser/bookmark/7d6a8537-b602-4526-aff8-4fcbd2b48dee?lang=en">(ilc_li02)</a><br /> UNSTAT<a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.1.1&amp;seriesCode=SI_POV_DAY1&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=4&amp;table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX">(1.2.1)</a></p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en"> People at risk of poverty or social exclusion by age and sex (ilc_peps01n)</a> Eurostat</p>
 
           
         </td>
@@ -1585,7 +1654,9 @@ baja intensidad de trabajo</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-01.pdf">Metadatos del indicador 1-2-1 PDF</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf">Metadata 1-2-2.pdf</a></p>
+
+<p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_01_10_esmsip2.htm">Metadata Eurostat (sdg_01_10)</a></p>
 
           
         </td>
@@ -1700,7 +1771,7 @@ baja intensidad de trabajo</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250318101512'></script>
+<script src='/site/assets/js/sdg.js?v=20250318155348'></script>
 
 
 <script>
@@ -1720,7 +1791,7 @@ baja intensidad de trabajo</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250318101512"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250318155348"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
