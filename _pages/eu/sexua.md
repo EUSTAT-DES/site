@@ -1,7 +1,7 @@
 ---
 title: Sexuaren arabera bereizitako adierazleak
 language: eu
-permalink: eu/sexua/
+permalink: eu/sexo/
 layout: page
 ---
 
