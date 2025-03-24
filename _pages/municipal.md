@@ -5,7 +5,6 @@ permalink: municipal/
 layout: page
 ---
 
-Indicadores con datos municipales
 
 <div class="container">
   {% assign indicators = site.data.municipio %}
