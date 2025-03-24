@@ -1,13 +1,12 @@
 ---
-title: Indicadores con datos municipales
-language: es
-permalink: municipal/
+title: Sexuaren arabera bereizitako adierazleak
+language: eu
+permalink: eu/sexo/
 layout: page
 ---
 
-
 <div class="container">
-  {% assign indicators = site.data.municipio %}
+  {% assign indicators = site.data.sexo %}
   {% assign ordered_goals = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17" | split: "," %}
 
   <!-- Mostrar indicadores agrupados en orden de objetivos -->

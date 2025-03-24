@@ -80,6 +80,7 @@ frontpage_goals_grid:
   title: frontpage.heading_short
   description: frontpage.instructions_shorter
 frontpage_introduction_banner:
+  description: frontpage.intro_body
 goal_image_base: 'https://eustat-des.github.io/site/assets/img/goals'
 goal_image_extension: ''
 goals_page:
@@ -188,7 +189,15 @@ menu:
     dropdown: []
   - path: /faq
     translation_key: menu.faq
-    dropdown: []     
+    dropdown: []  
+  - translation_key: menu.desagregaciones
+    dropdown:
+      - path: territorio/
+        translation_key: menu.territorio
+      - path: municipal/
+        translation_key: menu.municipal
+      - path: sexo/
+        translation_key: menu.sexo   
 metadata_edit_url: metadata
 metadata_tabs:
   - scope: national
