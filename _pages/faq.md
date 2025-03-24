@@ -31,9 +31,12 @@ Los objetivos se sustentan en un marco de indicadores mundiales que permiten hac
 
 ## Indicadores disponibles en la C.A. de Euskadi
 
-Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos por el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
+Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno Vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye un número importante de indicadores cuya metodología ha sido armonizada con todos los órganos centrales de estadística de las Comunidades Autónomas, garantizando así la plena comparabilidad directa de estos indicadores a nivel regional. [Acuerdo de los órganos centrales de estadística de las CCAA (pdf, 14Kb)](/site/assets/doc/oceca_es.doc).
 
-Se intenta que los indicadores disponibles en la C.A. de Euskadi sean comparables con los indicadores del [marco de indicadores mundiales de Naciones Unidas](https://unstats.un.org/sdgs/metadata) o con los [indicadores de Desarrollo Sostenible de la Unión Europea](https://ec.europa.eu/eurostat/web/sdi). En el caso de que el indicador disponible en la C.A. de Euskadi no sea comparable con el indicador mundial o europeo, así se indica en sus metadatos.
+Se incluyen también indicadores de seguimiento de las ambiciones y objetivos del Gobierno Vasco, elaborados en coordinación con el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
+
+Se ha intentado que los indicadores disponibles en la C.A. de Euskadi sean comparables con los indicadores del [marco de indicadores mundiales de Naciones Unidas](https://unstats.un.org/sdgs/metadata) o con los [indicadores de Desarrollo Sostenible de la Unión Europea](https://ec.europa.eu/eurostat/web/sdi). En el caso de que el indicador disponible en la C.A. de Euskadi no sea comparable con el indicador mundial o europeo, así se indica en sus metadatos.
+
 
 ## Presentación de los indicadores
 
