@@ -31,7 +31,7 @@ Los objetivos se sustentan en un marco de indicadores mundiales que permiten hac
 
 ## Indicadores disponibles en la C.A. de Euskadi
 
-Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno Vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye un número importante de indicadores cuya metodología ha sido armonizada con todos los órganos centrales de estadística de las Comunidades Autónomas, garantizando así la plena comparabilidad directa de estos indicadores a nivel regional. [Acuerdo de los órganos centrales de estadística de las CCAA (pdf, 14Kb)](/site/assets/doc/oceca_es.doc).
+Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno Vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye un número importante de indicadores cuya metodología ha sido armonizada con todos los órganos centrales de estadística de las Comunidades Autónomas, garantizando así la plena comparabilidad directa de estos indicadores a nivel regional. [Acuerdo de los órganos centrales de estadística de las CCAA (pdf, 14Kb)](/site/assets/doc/OCECA_es.pdf).
 
 Se incluyen también indicadores de seguimiento de las ambiciones y objetivos del Gobierno Vasco, elaborados en coordinación con el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
 
