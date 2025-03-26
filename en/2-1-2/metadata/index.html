@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Porcentaje de la población que ha sufrido durante los últimos doce meses alguno de los problemas de inseguridad alimentaria de la Escala de Seguridad Alimentaria (FSS)");
+        var currentValue = normalizeCurrentValue('definicion', "Percentage of the population experiencing any of the food insecurity problems  listed in the Food Security Scale (FSS) during the past twelve months");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$T_{FSS}^{t} = \\frac{P_{FSS}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$P_{FSS}^{t} =$ población que ha sufrido alguna situación de inseguridad alimentaria \ngrave o muy grave en los últimos 12 meses en el año $t$\n\n$P^{t} =$ población total en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$T_{FSS}^{t} = \\frac{P_{FSS}^{t}}{P^{t}} \\cdot 100$$\n\nwhere:\n\n$P_{FSS}^{t} =$ Population that has suffered a severe or very severe food insecurity \nsituation in the last 12 months of the year $t$\n\n$P^{t} =$ total population in the year $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -608,7 +608,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "El indicador mide la proporción de personas que experimentan alguna situación de\ninseguridad alimentaria según el siguiente cuestionario:\n\n - A- Se les agotan los alimentos que compran y no disponen de dinero para conseguir más\n - B- No pueden conseguir una alimentación equilibrada y variada\n - C- ¿Han recortado la cantidad de comida o incluso se han saltado algunas comidas porque no disponían de dinero suficiente para alimentación?\n - E- ¿Han comido menos de lo que hubiesen querido porque no disponían de suficiente dinero para comprar alimentos?\n - F- ¿Han tenido ustedes hambre pero no comieron porque no pudieron conseguir comida suficiente?\n");
+        var currentValue = normalizeCurrentValue('observaciones', "The indicator measures the proportion of people experiencing some form of food \ninsecurity according to the following questionnaire:\n\n - A- They run out of food they buy and have no money to buy more.\n - B- They cannot achieve a balanced and varied diet\n - C- Have you cut back on the amount of food you ate or even skipped meals because\n      you didn't have enough money for food?\n - E- Have you eaten less than you would have liked because you didn't have enough money to buy food?\n - F- Have you ever been hungry but didn't eat because you couldn't get enough food?\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -626,7 +626,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa inseguridad alimentaria en niveles moderados de gravedad suele estar asociada \na la incapacidad de comer regularmente dietas saludables y equilibradas. Por tanto, \nuna prevalencia elevada de inseguridad alimentaria en niveles moderados puede \nconsiderarse un predictor de diversas formas de problemas de salud relacionados \ncon la dieta en la población, asociados a la deficiencia de micronutrientes y a \ndietas desequilibradas. \n\nLos niveles graves de inseguridad alimentaria, por otra parte, implican una alta \nprobabilidad de reducción de la ingesta de alimentos y, por tanto, pueden dar lugar a \nformas más graves de desnutrición, incluido el hambre.\n\nLos cuestionarios breves como la Escala de experiencia de inseguridad alimentaria \nson muy fáciles de administrar y \ntienen un coste limitado, lo que constituye una de las principales ventajas de su uso.\n\nFuente: División de Estadísticas de las Naciones Unidas, Eurostat\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nFood insecurity at moderate levels of severity is typically associated with the inability \nto regularly eat healthy, balanced diets. As such, high prevalence of food insecurity at \nmoderate levels can be considered a predictor of various forms of diet-related health \nconditions in the population, associated with micronutrient deficiency and unbalanced diets. \n\nSevere levels of food insecurity, on the other hand, imply a high probability of reduced \nfood intake and therefore can lead to more severe forms of undernutrition, including hunger.\n\nShort questionnaires like the FIES are very easy to administer at limited cost, which is \none of the main advantages of their use.\n\nSource: United Nations Statistics Division, Eurostat\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos de Naciones Unidas pero aporta información similar.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "\nThe available indicator does not comply with United Nations metadata but provides similar information.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -654,7 +654,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.1.2&seriesCode=AG_PRD_FIESMS&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX\"> Prevalencia de inseguridad alimentaria moderada o severa en la población (%) AG_PRD_FIESMS</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.1.2&seriesCode=AG_PRD_FIESMS&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAGE%20%7C%20ALLAREA%20%7C%20BOTHSEX\"> - Prevalence of moderate or severe food insecurity in the population (%) AG_PRD_FIESMS</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -670,7 +670,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-01-02.pdf\">Metadatos 2-1-2.pdf (solo en inglés)</a>");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-01-02.pdf\">Metadata 2-1-2.pdf</a>");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -706,7 +706,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-02-08");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -720,7 +720,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-17");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -848,7 +848,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -868,7 +868,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

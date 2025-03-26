@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de menores entre 2 y 17 años con obesidad, sobrepeso o peso insuficiente.\n");
+        var currentValue = normalizeCurrentValue('definicion', "Malnutrizioa (obesitatea, gehiegizko pisua edo pisu gutxiegi) duten 2 eta 17 urte bitarteko adingabeen proportzioa \n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$\n\ndonde:\n\n$PPM_{2-17}^{t} =$ población entre 2 y 17 años con malnutrición (obesidad, sobrepeso o peso insuficiente) en el año $t$\n\n$P_{2-17}^{t} =$ población entre 2 y 17 años en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$\n\nnon:\n\n$PPM_{2-17}^{t} =$ malnutrizioak jotako 2 eta 17 urte bitarteko biztanleak $t$ urtean\n\n$P_{2-17}^{t} =$ 2 eta 17 urte bitarteko biztanleak $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo");
+        var currentValue = normalizeCurrentValue('desagregacion', "Sexua");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Está aceptado internacionalmente que el crecimiento infantil \nrefleja el estado nutricional del niño. \n\nEl sobrepeso infantil se refiere a un niño con un peso excesivo para su \nestatura. Esta forma de malnutrición se debe a un gasto calórico insuficiente para la \ncantidad de alimentos consumidos y aumenta el riesgo de enfermedades no transmisibles \nen etapas posteriores de la vida. El sobrepeso infantil es uno de los indicadores de nutrición de la Asamblea Mundial de la Salud.\n\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Nazioartean onartuta dago haurren hazkundeak haurraren nutrizio-egoera islatzen \nduela. Haurren gehiegizko pisua altuerarako pisu handiegia duen haur bati dagokio. \nDesnutrizio mota horren arrazoia da oso kaloria gutxi gastatzen direla kontsumitutako \nelikagaien kantitaterako, eta etorkizunean transmititu ezin diren gaixotasunak \nizateko arriskua handitzen dela. Haurren gehiegizko pisua da Osasunaren Mundu Batzarraren \nnutrizioaren adierazle objektiboetako bat.\n\nHorregatik, Nazio Batuen adierazleak haurren hazkundeari egiten dio erreferentzia, eta \n5 urtetik beherako haurren artean gehiegizko pisuaren prebalentzia neurtzen du (Osasunaren \nMundu Erakundearen (OME) haurren hazkunde-estandarren medianaren >+2 desbideratze estandarraren \npisua).\n\nIturria: Nazio Batuen Estatistika Dibisioa\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas al no utilizar la misma forma de cálculo del sobrepeso, ni el mismo grupo de edad.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak ez ditu Nazio Batuen adierazlearen metadatuak betetzen,  ez baitu gehiegizko pisua kalkulatzeko modu bera erabiltzen, ezta adin-talde bera ere.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.2.2&seriesCode=SN_STA_OVWGT&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=%3C5Y\">Proporción de niños con sobrepeso moderado o grave (%) SN_STA_OVWGT</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.2.2&seriesCode=SN_STA_OVWGT&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=%3C5Y\">Gehiegizko pisu ertaina edo larria duten haurren proportzioa (%) SN_STA_OVWGT</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02a.pdf\">Metadatos 2-2-2 (1).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02b.pdf\">Metadatos 2-2-2 (2).pdf</a> (solo en inglés)\n");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02a.pdf\">Metadatuak 2-2-2 (1).pdf</a> (ingelesez bakarrik)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-02-02b.pdf\">Metadatuak 2-2-2 (2).pdf</a> (ingelesez bakarrik)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-10");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-17");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

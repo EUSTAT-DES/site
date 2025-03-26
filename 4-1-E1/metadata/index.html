@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -518,20 +518,104 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "Tasa de abandono escolar prematuro de la población de 18-24 años");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "4.1 De aquí a 2030, asegurar que todas las niñas y todos los niños terminen la enseñanza primaria y secundaria, que ha de ser gratuita, equitativa y de calidad y producir resultados de aprendizaje pertinentes y efectivos");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "4 Garantizar una educación inclusiva y equitativa de calidad y promover oportunidades de aprendizaje permanente para todos");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "Porcentaje de población que ha completado como máximo la primera etapa de la educación  secundaria y no sigue ningún estudio o formación");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "\n$$PP_{abandono}^{t}  = \\frac{P_{abandono,18-24}^{t}}{P_{18-24}^{t}}$$\n\ndonde:\n\n$P_{abandono,18-24}^{t} =$ población de 18 a 24 años que ha completado como máximo la primera etapa de la educación secundaria y no ha seguido ningún estudio o formación en el año $t$\n\n$P_{18-24}^{t} =$ población de 18 a 24 años en el año $t$\n");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('desagregacion', "\nSexo");
+        var propertyEditor = editor.getEditor('root.desagregacion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: desagregacion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
@@ -572,8 +656,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-01-16");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-25");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -692,7 +800,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -712,7 +820,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

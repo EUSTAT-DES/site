@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -532,18 +532,6 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('indicador_onu_global', "1.3.1 Babes sozialeko sistema baten edo gutxieneko maila baten estaldura duen biztanleriaren proportzioa, sexuaren arabera banatuta, eta honako hauek bereiziz: haurrak, langabetuak, adinekoak, desgaitasunen bat duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak");
-        var propertyEditor = editor.getEditor('root.indicador_onu_global');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: indicador_onu_global');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
     
@@ -576,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica  de los ingresos por unidad de consumo (escala OCDE modificada).");
+        var currentValue = normalizeCurrentValue('definicion', "\nGizarte-babeseko sistema batek benetan estaltzen dituen pertsonen proportzioa islatzen du \nadierazleak. Datuak serie desberdinetan aurkezten dira, gizarte-babeseko sistemaren osagaiak \nbereizteko. Kasu bakoitzerako, estaldura dagokion biztanleriaren ehuneko gisa adierazten da.\n\nSerie eskuragaiak: \n\n<b>Langabezia-prestazioak jasotzen dituzten langabeen proportzioa:</b>\nLangabezia-prestazioen onuradunen eta langabe-kopuruaren arteko harremana\n\n<b>Erretirorako legezko adina gainditu eta pentsioa jasotzen duten biztanleen proportzioa:</b>\nPentsio bat (kotizaziopekoa edo ez kontributiboa) jasotzen duten erretirorako legezko adinetik gorakoen eta erretirorako legezko adinetik gorakoen arteko harremana \n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -590,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<p><b>Proporción de la población que es perceptora de pensiones contributivas</b> </p>\n<p>$$PPPC^{t} = \\frac{PPC^{t}}{P^{t}} \\cdot 100$$ </p>\n<p>donde: </p>\n<p>$PPC^{t} =$ población perceptora de pensiones contributivas en el año $t$ </p>\n<p>$P^{t} =$ población a 1 de julio del año $t$</p>\n<p><b>Población perceptora de la Renta de Garantía de Ingresos (RGI)</b> </p>\n<p>Número de titulares y beneficiarios no titulares de la prestación</p>\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Langabezia-prestazioak jasotzen dituzten langabeen proportzioa</b>\n\n$$PP_{langabezia}^{t} = \\frac{P_{langabezia\\, sari}^{t}}{P_{langabezia}^{t}} \\cdot 100$$\n\nnon:\n\n$P_{langabezia\\, sari}^{t} =$ langabeziagatiko prestazioak jasotzen dituzten biztanleak $t$ urtean\n\n$P_{langabezia}^{t} =$ lanik gabe egondako biztanleak $t$ urtean\n\n<br>\n\n<b>Erretirorako legezko adina gainditu eta pentsioa jasotzen duten biztanleen proportzioa</b>\n\n$$PP_{erretiro}^{t} = \\frac{P_{pensionista\\,edad\\, jubilación}^{t}}{P_{edad\\, jubilación}^{t}} \\cdot 100$$\n\ndonde:\n\n$P_{pentsiondun\\,erretiro\\, adina} =$ erretirorako legezko adina gainditu eta pentsioa jasotzen duten biztanleak $t$ urtean\n\n$PP_{erretiro\\, adina}^{t} =$ erretirorako legezko adina gainditzen duen biztanleria utailaren 1ean $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -604,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo \n\nTerritorio histórico\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Sexua\n\nLurralde historikoa\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -632,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "No hay datos municipales para las prestaciones de RGI y AES en municipios con menos de 5 personas perceptoras.");
+        var currentValue = normalizeCurrentValue('observaciones', "\n\"Langabezia-prestazioak jasotzen dituzten langabeen proportzioa\" seriea tentuz hartu behar da, \neta ez da interpretatu behar prestazio bat jasotzen duten langabeen proportzio gisa; izan ere, \naldizkako langile finkoen bolumen handiak estaldura-tasa handia eragin dezake, baita 100 baino \nhandiagoa ere.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -646,23 +634,11 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('descripcion_global', "El indicador refleja la proporción de personas efectivamente cubiertas por un sistema de protección social,  incluidos los niveles mínimos de protección social. También refleja los principales componentes de la protección social:  prestaciones infantiles y de maternidad, apoyo a las personas desempleadas, personas con discapacidad, víctimas  de accidentes laborales y personas mayores. La cobertura efectiva de la protección social se mide por el número  de personas que contribuyen activamente a un plan de seguro social o reciben prestaciones (contributivas o no contributivas). ");
-        var propertyEditor = editor.getEditor('root.descripcion_global');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: descripcion_global');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "El acceso a al menos un nivel básico de protección social durante todo el ciclo de vida es un derecho humano.  El principio de universalidad de la protección social evidencia la importancia de los sistemas de protección social  para garantizar condiciones de vida dignas a toda la población, durante toda su vida. La proporción de la población  cubierta por sistemas de protección social proporciona una indicación de hasta qué punto se logra la universalidad  y, por tanto, de cuán seguras son las condiciones de vida de la población.");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nNazio Batuen adierazleak gizarte-babeseko sistema batek benetan estaltzen dituen \npertsonen proportzioa islatu nahi du, gizarte-babeseko gutxieneko mailak barne. \nGizarte-babesaren osagai nagusiak ere islatzen ditu (haurrentzako eta amatasuneko prestazioak, \nlangabeei, desgaitasuna duten pertsonei, lan-istripuen biktimei eta adinekoei laguntzea). \nGizarte-babesaren benetako estaldura neurtzen da gizarte-aseguruko plan bati modu aktiboan \nlaguntzen dioten edo prestazioak (kotizaziopekoak edo ez kontributiboak) jasotzen dituzten \npertsonen kopuruaren arabera.  \n\nBizi-ziklo osoan gutxienez gizarte-babeseko oinarrizko maila batera iristea giza eskubidea \nda. Gizarte-babesaren unibertsaltasun-printzipioak agerian uzten du gizarte-babeseko sistemak \noso garrantzitsuak direla biztanle guztiei bizitza osoan bizi-baldintza duinak bermatzeko. \nGizarte-babeseko sistemek estalitako biztanleriaren proportzioak adierazten du zenbateraino \nlortzen den unibertsaltasuna eta, beraz, zein seguruak diren biztanleriaren bizi-baldintzak.\n\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -676,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible en la C.A de Euskadi cumple con los metadatos de Naciones Unidas para las series analizadas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Euskal Autonomia Erkidegoan eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu aztertutako serieetarako.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -690,7 +666,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "UNSTAT, Proporción de niños que reciben prestaciones en efectivo por familia, por sexo (%)<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&seriesCode=SI_COV_CHLD&areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX\">SI_COV_CHLD</a>");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&seriesCode=SI_COV_CHLD&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX\"> Prestazioak eskudirutan jasotzen dituzten haurren/etxebizitzen proportzioa seme-alaba/familiengatik, sexuaren arabera(%) SI_COV_CHLD</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -706,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01a.pdf\">Metadatos del indicador 1-3-1 (1) PDF</a><br> <a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01b.pdf\">Metadatos del indicador 1-3-1 (2) PDF</a>");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01a.pdf\">Metadatuak 1-3-1 (1).pdf</a> (ingelesez bakarrik)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01b.pdf\">Metadatuak 1-3-1 (2).pdf</a> (ingelesez bakarrik)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -742,7 +718,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-03");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -756,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-15");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -884,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -904,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

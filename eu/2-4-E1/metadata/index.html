@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de la superficie agrícola (cultivos y prados y pastizales) destinada a la producción ecológica");
+        var currentValue = normalizeCurrentValue('definicion', "Ekoizpen ekologikora bideratutako nekazaritza-azaleraren proportzioa (laboreak eta belardi eta larreak)");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "$$PSA_{ecológica}^{t} = \\frac{SA_{ecológica}^{t}}{SA^{t}} \\cdot 100$$\n\ndonde:\n\n$SA_{ecológica}^t =$ superficie agrícola destinada a la producción ecológica en el año $t$\n\n$SA^{t} =$ superficie agrícola (cultivos, prados y pastizales) en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "$$PSA_{ekologikoa}^{t} = \\frac{SA_{ekologikoa}^{t}}{SA^{t}} \\cdot 100$$\n\ndonde:\n\n$SA_{ekologikoa}^t =$ sekoizpen ekologikora bideratutako nekazaritza-azalera $t$ urtean\n\n$SA^{t} =$ nekazaritza-azalera (laboreak eta belardi eta larreak) $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Territorio histórico/Comarca/Municipio");
+        var currentValue = normalizeCurrentValue('desagregacion', "Lurralde historikoa/Eskualdea/Udalerria");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Si bien la agricultura orgánica no se menciona explícitamente en la \nAgenda 2030, la UE considera la agricultura orgánica como un método de \nproducción que pone el mayor énfasis en la protección del medio ambiente \ny la vida silvestre y, con respecto a la producción ganadera, en consideraciones \nde bienestar animal. Evita o reduce en gran medida el uso de insumos químicos \nsintéticos como fertilizantes, pesticidas, aditivos y productos médicos. \nEstá prohibida la producción de organismos genéticamente modificados (OGM) y \nsu uso en la alimentación animal.\n\nEl indicador \"Superficie dedicada a la agricultura ecológica\" forma parte del \nconjunto de indicadores de los Objetivos de Desarrollo Sostenible (ODS) \nde la UE, y está incluido en las Prioridades de la Comisión Europea bajo el Acuerdo Verde Europeo. \nEl indicador mide la proporción del área agrícola utilizada (SAU) total ocupada por la \nagricultura orgánica (áreas existentes cultivadas orgánicamente y áreas en proceso de conversión).\n\nFuente: Eurostat\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "2030 Agendan nekazaritza organikoa esplizituki aipatzen ez bada ere, EBren ustez, nekazaritza \norganikoa ekoizpen-metodo bat da, eta ingurumena eta basa-bizitza babesten ditu gehien, eta, \nabeltzaintza-ekoizpenari dagokionez, animalien ongizateari buruzko kontsiderazioak azpimarratzen \nditu. Intsumo kimiko sintetikoen erabilera saihestu edo neurri handi batean murrizten du, hala \nnola ongarriak, pestizidak, gehigarriak eta produktu medikoak. Debekatuta dago genetikoki \neraldatutako organismoak (GEO) ekoiztea, eta animalien elikaduran duen erabilera.\n\n\"Nekazaritza ekologikora bideratutako azalera\" adierazlea EBko Garapen Jasangarriko Helburuen \n(GJH) adierazleen multzoaren parte da, eta Europako Batzordearen Lehentasunen barruan dago, \nEuropako Akordio Berdearen arabera. Adierazleak nekazaritza organikoak guztira okupatzen duen \nnekazaritza-eremuaren (NAE) proportzioa neurtzen du (organikoki landutako eremuak eta bihurtze-prozesuan \ndauden eremuak).  \n\nIturria: Eurostat\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible es comparable con el indicador europeo.\n");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazlea Europako adierazlearekin aldera daiteke.\n");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_02_40/default/table?lang=en&category=sdg.sdg_02\">Superficie dedicada a la agricultura ecológica (sdg_02_40)</a> Eurostat");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_02_40/default/table?lang=en&category=sdg.sdg_02\">Nekazaritza ekologikora bideratutako azalera (sdg_02_40)</a> Eurostat");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_40_esmsip2.htm\">Metadatos Eurostat (sdg_02_40)</a> (solo en inglés)\n");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_40_esmsip2.htm\">Metadatuak Eurostat (sdg_02_40)</a> (ingelesez bakarrik)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-10");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-11");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

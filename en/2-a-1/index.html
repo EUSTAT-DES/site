@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1423,11 +1423,12 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Valor Añadido Bruto (VAB) del sector de la agricultura, ganadería y pesca respecto 
-al VAB del total de los sectores, a precios corrientes.</p>
+<p>Gross Value Added (VAB) of agriculture, livestock and fishing with respect to the GVA 
+of the total sectors, at current prices.</p>
 
-<p>El valor agregado agrícola y el PIB se basan en el Sistema Europeo de Cuentas (SEC-2010). La agricultura se refiere 
-al sector de agricultura, silvicultura, pesca y caza (Sección A de la CNAE 2009 o CIIU Rev4)</p>
+<p>Agricultural value added and GDP are based on the European System of Accounts (ESA-2010). 
+Agriculture refers to the agriculture, forestry, fishing, and hunting sectors (Section A of 
+the CNAE 2009 or ISIC Rev4).</p>
 
           
         </td>
@@ -1444,13 +1445,13 @@ al sector de agricultura, silvicultura, pesca y caza (Sección A de la CNAE 2009
         <td>
           
             
-\[PVAB_{agricultura}^{t} = \frac{VAB_{agricultura}^{t}}{PIB^{t}} \cdot 100\]
+\[PVAB_{agriculture}^{t} = \frac{VAB_{agriculture}^{t}}{PIB^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$VAB_{agricultura}^{t} =$ valor añadido bruto del sector de la agricultura, ganadería y pesca a precios corrientes en el año $t$</p>
+<p>$VAB_{agriculture}^{t} =$ gross added value of the agriculture, livestock and fishing sector at current prices in the year $t$</p>
 
-<p>$PIB^{t} =$  producto interior bruto a precios corrientes en el año $t$</p>
+<p>$PIB^{t} =$ gross domestic product at current prices in the year $t$</p>
 
           
         </td>
@@ -1466,7 +1467,7 @@ al sector de agricultura, silvicultura, pesca y caza (Sección A de la CNAE 2009
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Territorio histórico/Comarca/Municipio</p>
+            <p>Province/County/Municipality</p>
 
           
         </td>
@@ -1498,7 +1499,7 @@ al sector de agricultura, silvicultura, pesca y caza (Sección A de la CNAE 2009
         <th scope="row">Observations </th>
         <td>
           
-            <p>Los datos difundidos en el PIB Municipal se elaboran mediante estimaciones realizadas en base a la metodología establecida en el Sistema Europeo de Cuentas (SEC-2010).</p>
+            <p>The data published in the Municipal GDP are compiled using estimates based on the methodology established in the European System of Accounts (ESA-2010).</p>
 
           
         </td>
@@ -1576,7 +1577,7 @@ al sector de agricultura, silvicultura, pesca y caza (Sección A de la CNAE 2009
         <th scope="row">Data last updated </th>
         <td>
           
-            March 11, 2025
+            July 29, 2024
           
         </td>
         </tr>
@@ -1591,7 +1592,7 @@ al sector de agricultura, silvicultura, pesca y caza (Sección A de la CNAE 2009
         <th scope="row">Metadata last updated </th>
         <td>
           
-            March 11, 2025
+            July 29, 2024
           
         </td>
         </tr>
@@ -1777,30 +1778,33 @@ al sector de agricultura, silvicultura, pesca y caza (Sección A de la CNAE 2009
         <th scope="row">Rationale </th>
         <td>
           
-            <p>Un índice de orientación agrícola (IOA) superior a 1 refleja una mayor orientación hacia 
-el sector agrícola, que recibe una mayor proporción del gasto público en relación con su contribución 
-al valor añadido económico.</p>
+            
+<p>An Agriculture Orientation Index (AOI) greater than 1 reflects a higher orientation towards the agriculture 
+sector, which receives a higher share of government spending relative to its contribution to economic 
+value-added.</p>
 
-<p>Un IOA inferior a 1 refleja una menor orientación hacia la agricultura, mientras que un IOA igual a 1 refleja neutralidad 
-en la orientación de un gobierno hacia el sector agrícola. El gasto público en agricultura incluye el gasto en políticas 
-y programas sectoriales; mejora del suelo y control de la degradación del suelo; riego y embalses para uso agrícola; 
-gestión de la salud animal, investigación ganadera y capacitación en cría de animales; investigación biológica marina y de 
-agua dulce; forestación y otros proyectos forestales; etc.</p>
+<p>An AOI less than 1 reflects a lower orientation to agriculture, while an AOI equal to 1 
+reflects neutrality in a government’s orientation to the agriculture sector.</p>
 
-<p>El gasto en estas actividades agrícolas ayuda a aumentar la eficiencia del sector, la productividad y 
-el crecimiento de los ingresos al aumentar el capital físico o humano y/o reducir las restricciones presupuestarias 
-intertemporales.</p>
+<p>Government spending in agriculture includes spending on sector policies and programs; soil improvement 
+and soil degradation control; irrigation and reservoirs for agricultural use; animal health management, 
+livestock research and training in animal husbandry; marine/freshwater biological research; afforestation 
+and other forestry projects; etc.</p>
 
-<p>Sin embargo, el sector privado normalmente invierte poco en estas actividades debido a la presencia de fallas del mercado 
-(por ejemplo, la naturaleza de bien público de la investigación y el desarrollo; las externalidades positivas 
-de las condiciones mejoradas del suelo y el agua; la falta de acceso a crédito competitivo debido a la 
-información asimétrica entre productores e instituciones financieras, etc.).</p>
+<p>Spending in these agricultural activities helps to increase sector efficiency, productivity and income 
+growth by increasing physical or human capital and/or reducing inter-temporal budget constraints.</p>
 
-<p>De manera similar, el alto 
-riesgo que enfrentan los productores agrícolas, en particular los pequeños agricultores que no pueden 
-protegerse contra el riesgo, a menudo requiere la intervención del gobierno en términos de redistribución 
-del ingreso para apoyar a los pequeños agricultores en dificultades luego de pérdidas de cosechas y 
-ganado debido a plagas, sequías, inundaciones, fallas de infraestructura o cambios severos de precios.</p>
+<p>However, the private sector typically under-invests in these activities due to the presence of market 
+failure (e.g. the public good nature of research and development; the positive externalities from 
+improved soil and water conditions; lack of access to competitive credit due to asymmetric information 
+between producers and financial institutions, etc.).</p>
+
+<p>Similarly, the high risk faced by agricultural producers, particular smallholders unable to hedge 
+against risk, often requires government intervention in terms of income redistribution to support 
+smallholders in distress following crop failures and livestock loss from pests, droughts, floods, 
+infrastructure failure, or severe price changes.</p>
+
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1816,7 +1820,7 @@ ganado debido a plagas, sequías, inundaciones, fallas de infraestructura o camb
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible es una de las series del indicador de Naciones Unidas, pero no es el indicador principal.</p>
+            <p>The available indicator is one of the series of the United Nations indicator, but it is not the main indicator.</p>
 
           
         </td>
@@ -1832,7 +1836,7 @@ ganado debido a plagas, sequías, inundaciones, fallas de infraestructura o camb
         <th scope="row">International results </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.a.1&amp;seriesCode=AG_PRD_AGVAS&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Valor añadido de la agricultura como porcentaje del PIB (%) AG_PRD_AGVAS</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.a.1&amp;seriesCode=AG_PRD_AGVAS&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Agricultural value added as a percentage of GDP (%) AG_PRD_AGVAS</a> UNSTATS</p>
 
           
         </td>
@@ -1853,7 +1857,7 @@ ganado debido a plagas, sequías, inundaciones, fallas de infraestructura o camb
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-0A-01.pdf">Metadatos 2-a-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-0A-01.pdf">Metadata 2-a-1.pdf</a></p>
 
           
         </td>
@@ -1977,7 +1981,7 @@ ganado debido a plagas, sequías, inundaciones, fallas de infraestructura o camb
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -1997,7 +2001,7 @@ ganado debido a plagas, sequías, inundaciones, fallas de infraestructura o camb
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

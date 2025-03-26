@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1669,13 +1669,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Series disponibles:</p>
+<p>Serie eskuragarriak:</p>
 
-<p><b> Proporción de viviendas con agua corriente:</b>
-Proporción de viviendas principales con abastecimiento de agua corriente</p>
+<p><b> Ur korrontea duten etxebizitzen proportzioa:</b>
+Ur-hornidura duten etxebizitza nagusien proportzioa</p>
 
-<p><b>Proporción de viviendas con baño:</b>
-Proporción de viviendas principales con baño</p>
+<p><b>Bainugela duten etxebizitzen proportzioa:</b>
+Bainugela duten etxebizitza nagusien proportzioa</p>
 
           
         </td>
@@ -1692,27 +1692,27 @@ Proporción de viviendas principales con baño</p>
         <td>
           
             
-<p><b>Proporción de viviendas con agua corriente</b></p>
+<p><b>Ur korrontea duten etxebizitzen proportzioa</b></p>
 
-\[PVP_{agua\, corriente}^{t} = \frac{VP_{agua\, corriente}^{t}}{VP^{t}} \cdot 100\]
+\[PVP_{ur\, korronte}^{t} = \frac{VP_{ur\, korronte}^{t}}{VP^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$VP_{agua\, corriente}^{t} =$ viviendas principales con abastecimiento de agua corriente en el año $t$</p>
+<p>$VP_{ur\, korronte}^{t} =$ ur korrontearen hornidura duten etxebizitza nagusiak $t$ urtean</p>
 
-<p>$VP^{t} =$ viviendas principales en el año $t$</p>
+<p>$VP^{t} =$ etxebizitza nagusiak $t$ urtean</p>
 
 <p><br /></p>
 
-<p><b>Proporción de viviendas con baño</b></p>
+<p><b>Bainugela duten etxebizitzen proportzioa</b></p>
 
-\[PVP_{baño}^{t} = \frac{VP_{baño}^{t}}{VP^{t}} \cdot 100\]
+\[PVP_{bainugela}^{t} = \frac{VP_{bainugela}^{t}}{VP^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$VP_{baño}^{t} =$ viviendas principales con baño en el año $t$</p>
+<p>$VP_{bainugela}^{t} =$ bainua duten etxebizitza nagusiak $t$ urtean</p>
 
-<p>$VP^{t} =$ viviendas principales en el año $t$</p>
+<p>$VP^{t} =$ txebizitza nagusiak $t$ urtean</p>
 
           
         </td>
@@ -1729,7 +1729,7 @@ Proporción de viviendas principales con baño</p>
         <td>
           
             
-<p>Territorio histórico/Comarca/Municipio</p>
+<p>Lurraklde historikoa/Eskualdea/Udalerria</p>
 
           
         </td>
@@ -1761,7 +1761,7 @@ Proporción de viviendas principales con baño</p>
         <th scope="row">Oharra </th>
         <td>
           
-            <p>Vivienda principal es aquella vivienda que es utilizada toda o la mayor parte del año como  residencia habitual por una o más personas</p>
+            <p>Etxebizitza nagusia da urte osoan edo urte gehienean pertsona batek edo gehiagok  ohiko bizileku gisa erabiltzen duten etxebizitza.</p>
 
           
         </td>
@@ -1850,7 +1850,7 @@ Proporción de viviendas principales con baño</p>
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025 urtarrila 10
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1865,7 +1865,7 @@ Proporción de viviendas principales con baño</p>
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2025 martxoa 15
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1997,35 +1997,32 @@ Proporción de viviendas principales con baño</p>
         <td>
           
             
-<p>El indicador de Naciones Unidas se basa en 9 componentes. La proporción de la población 
-que vive en hogares con acceso a servicios básicos se define como la proporción de la población 
-que utiliza sistemas de prestación de servicios públicos que satisfacen las necesidades 
-humanas básicas, incluidos agua potable, saneamiento, 
-higiene, energía, movilidad, recogida de residuos, atención sanitaria, educación y tecnologías 
-de la información.</p>
+<p>Nazio Batuen adierazlea 9 osagaitan oinarritzen da. Oinarrizko zerbitzuak eskuratzeko 
+aukera duten etxeetan bizi diren biztanleen proportzioa honela definitzen da: oinarrizko 
+giza premiak asetzen dituzten zerbitzu publikoak emateko sistemak erabiltzen dituzten 
+biztanleen proportzioa, edateko ura, saneamendua, higienea, energia, mugikortasuna, hondakinen 
+bilketa, osasun-arreta, hezkuntza eta informazioaren teknologiak barne.</p>
 
-<p>Estos componentes se capturan en varios indicadores independientes de los ODS, 
-lo que significa que los conceptos y definiciones del indicador 1.4.1 de los ODS se derivarán 
-de estos indicadores específicos de los ODS o serán los mismos que ellos.</p>
+<p>Osagai horiek GJHekiko independenteak diren hainbat adierazletan atzematen dira, eta horrek 
+esan nahi du GJHen 1.4.1 adierazlearen kontzeptuak eta definizioak GJHen adierazle espezifiko 
+horietatik eratorriko direla edo haien berberak izango direla.</p>
 
-<p>Entre los diferentes aspectos de la pobreza, este indicador se centra en el acceso a 
-servicios básicos. Proporcionar acceso a servicios básicos como agua potable, servicios 
-de saneamiento e higiene, energía 
-y movilidad sostenibles, vivienda, educación, atención sanitaria, etc., ayuda a mejorar 
-la calidad de vida de los pobres.</p>
+<p>Pobreziaren alderdi desberdinen artean, adierazle hau oinarrizko zerbitzuetarako sarbidean 
+zentratzen da. Oinarrizko zerbitzuak eskura izatea, hala nola edateko ura, saneamendu- eta 
+higiene-zerbitzuak, energia eta mugikortasun jasangarriak, etxebizitza, hezkuntza, osasun-arreta, 
+etab., pobreen bizi-kalitatea hobetzen laguntzen du.</p>
 
-<p>La falta de prestación de servicios básicos y la falta de empoderamiento y participación 
-de los gobiernos locales en la prestación de servicios básicos socavan el crecimiento económico 
-y la calidad de vida en cualquier comunidad. Unos sistemas adecuados de prestación de servicios 
-básicos promueven mejoras socioeconómicas y ayudan a lograr el crecimiento económico, la 
-inclusión social, la reducción de la pobreza y la igualdad.</p>
+<p>Oinarrizko zerbitzurik ez emateak eta tokiko gobernuek oinarrizko zerbitzuak ematean ahalduntzerik 
+eta parte-hartzerik ez izateak kalte egiten die hazkunde ekonomikoari eta bizi-kalitateari edozein 
+erkidegotan. Oinarrizko zerbitzuak emateko sistema egokiek hobekuntza sozioekonomikoak sustatzen 
+dituzte, eta hazkunde ekonomikoa, gizarteratzea, pobreziaren murrizketa eta berdintasuna lortzen 
+laguntzen dute.</p>
 
-<p>Más específicamente, la mejora de los servicios básicos puede ayudar a aumentar el bienestar 
-y la productividad de las comunidades, crear empleos, ahorrar tiempo y esfuerzo humano en 
-el transporte de agua, apoyar la seguridad alimentaria, mejorar el uso de la energía, producir 
-productos básicos esenciales, mejorar la salud (haciendo que los servicios médicos atención 
-sanitaria, disponibilidad de agua potable o recogida de residuos sólidos) o mejorar el nivel 
-de educación.</p>
+<p>Zehazkiago, oinarrizko zerbitzuak hobetzea lagungarria izan daiteke komunitateen ongizatea eta 
+produktibitatea handitzeko, enpleguak sortzeko, ura garraiatzeko denbora eta giza ahalegina 
+aurrezteko, elikagaien segurtasuna babesteko, energiaren erabilera hobetzeko, funtsezko oinarrizko 
+produktuak ekoizteko, osasuna hobetzeko (zerbitzu medikoak osasun-arreta emateko, edateko ura 
+edukitzeko edo hondakin solidoak biltzeko) edo hezkuntza-maila hobetzeko.</p>
 
           
         </td>
@@ -2041,7 +2038,7 @@ de educación.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible en la C.A de Euskadi cumple con  los metadatos de Naciones Unidas para las series analizadas. Otras series se presentan en otros indicadores de desarrollo sostenible de esta plataforma (3-8-1, 4-1-1, 7-1-2, 9-1-1, 9-c-1, 11-2-1, 11-6-1)</p>
+            <p>Euskal Autonomia Erkidegoan eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu aztertutako serieetarako. Beste serie batzuk plataforma honetako garapen jasangarriaren beste adierazle batzuetan aurkezten dira (3-8-1, 4-1-1, 7-1-2, 9-1-1, 9-c-1, 11-2-1, 11-6-1)</p>
 
           
         </td>
@@ -2057,10 +2054,10 @@ de educación.</p>
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.4.1&amp;seriesCode=SP_ACS_BSRVH2O&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=RURAL">Proporción de población que utiliza servicios básicos de agua potable, por ubicación (%) SP_ACS_BSRVH2O</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.4.1&amp;seriesCode=SP_ACS_BSRVH2O&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=RURAL">Edateko uraren oinarrizko zerbitzuak erabiltzen dituzten biztanleen proportzioa, kokapenaren arabera (%) SP_ACS_BSRVH2O</a> UNSTATS</p>
 
 <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.4.1&amp;seriesCode=SP_ACS_BSRVSAN&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ALLAREA">
-Proporción de población que utiliza servicios básicos de saneamiento, por ubicación (%) SP_ACS_BSRVSAN</a> UNSTATS</p>
+Oinarrizko saneamendu-zerbitzuak erabiltzen dituzten biztanleen proportzioa, kokapenaren arabera (%) SP_ACS_BSRVSAN</a> UNSTATS</p>
 
           
         </td>
@@ -2081,7 +2078,7 @@ Proporción de población que utiliza servicios básicos de saneamiento, por ubi
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-04-01.pdf">Metadatos 1-4-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-04-01.pdf">Metadatuak 1-4-1.pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -2205,7 +2202,7 @@ Proporción de población que utiliza servicios básicos de saneamiento, por ubi
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -2225,7 +2222,7 @@ Proporción de población que utiliza servicios básicos de saneamiento, por ubi
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

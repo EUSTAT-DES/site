@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nProporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de:\n - valor de la producción agrícola por hectárea\n - ingresos agrícolas netos\n");
+        var currentValue = normalizeCurrentValue('definicion', "\nProportion of agricultural land with a desirable or acceptable level of:\n- production per hectare\n- net income\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b>Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de producción por hectárea</b>\n\n$$PSANR_{\\text{deseable o aceptable}}^{t} = \\frac{SANR_{\\text{deseable}}^{t} + SANR_{\\text{aceptable}}^{t}}{SANR_{\\text{deseable}}^{t} + SANR_{\\text{aceptable}}^{t} + SANR_{\\text{insostenible}}^{t}}$$\n\ndonde:\n\n$SANR_{\\text{deseable}}^{t}$ = superficie agrícola correspondiente a aquellas explotaciones donde su producción por \nhectárea es mayor o igual que 2/3 del percentil 90 de la producción por hectárea de las explotaciones de su mismo \nterritorio y orientación técnico-económica (agricultura, ganadería o mixta) en el año $t$\n\n$SANR_{\\text{aceptable}}^{t}$ = superficie agrícola correspondiente a aquellas explotaciones donde su producción \npor hectárea es menor que 2/3 pero mayor o igual que 1/3 del percentil 90 de la producción por hectárea de las \nexplotaciones de su mismo territorio y orientación técnico-económica (agricultura, ganadería o mixta) en el año $t$\n\n$SANR_{\\text{insostenible}}^{t}$ = superficie agrícola correspondiente a aquellas explotaciones donde su producción \npor hectárea es menor que 1/3 del percentil 90 de la producción por hectárea de las explotaciones de su mismo \nterritorio y orientación técnico-económica (agricultura, ganadería o mixta) en el año $t$\n\n<br>\n\n<b>Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de ingresos netos</b>\n\n$$PSANR_{\\text{deseable o aceptable}}^{t} = \n  \\frac{SANR_{\\text{deseable}}^{t} + SANR_{\\text{aceptable}}^{t}}\n  {SANR_{\\text{deseable}}^{t} + SANR_{\\text{aceptable}}^{t} + SANR_{\\text{insostenible}}^{t}}$$\n\n\ndonde:\n\n$SANR_{\\text{deseable}}^t$: Superficie agrícola correspondiente a aquellas explotaciones donde sus ingresos netos han sido positivos en los años $t$, $t-1$ y $t-2$\n  \n$SANR_{\\text{aceptable}}^t$: Superficie agrícola correspondiente a aquellas explotaciones donde sus ingresos netos han sido positivos en al menos uno de los años $t$, $t-1$ y $t-2$, pero no en todos ellos\n  \n$SANR_{\\text{insostenible}}^t$: Superficie agrícola correspondiente a aquellas explotaciones donde sus ingresos netos no han sido positivos en ninguno de los años $t$, $t-1$ y $t-2$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Proportion of agricultural area where a desirable or acceptable level of production per hectare has been achieved</b>\n\n$$PSANR_{\\text{desirable or acceptable}}^{t} = \\frac{SANR_{\\text{desirable}}^{t} + SANR_{\\text{acceptable}}^{t}}{SANR_{\\text{desirable}}^{t} + SANR_{\\text{acceptable}}^{t} + SANR_{\\text{unsustainable}}^{t}}$$\n\nwhere:\n\n$SANR_{\\text{desirable}}^{t}$ = Agricultural area corresponding to those agricultural holdings where \ntheir production per hectare is greater than or equal to 2/3 of the 90th percentile of the production \nper hectare of agricultural holdings in the same territory and technical-economic orientation (agriculture, \nlivestock, or mixed) in the year $t$\n\n$SANR_{\\text{acceptable}}^{t}$ = Agricultural area corresponding to those agricultural holdings where \ntheir production per hectare is less than two-thirds but greater than or equal to one-third of the 90th \npercentile of the production per hectare of agricultutal holdings in the same territory and with a \ntechnical-economic orientation (agriculture, livestock, or mixed) in the year $t$\n\n$SANR_{\\text{unsustainable}}^{t}$ = Agricultural area corresponding to those agricultural holdings where \ntheir production per hectare is less than 1/3 of the 90th percentile of the production per hectare of \nagricultural holdings in the same territory and technical-economic orientation (agriculture, livestock, \nor mixed) in the year $t$\n\n<br>\n\n<b>Proportion of agricultural area where a desirable or acceptable level of net income has been achieved</b>\n\n$$PSANR_{\\text{desirable or acceptable}}^{t} = \n  \\frac{SANR_{\\text{desirable}}^{t} + SANR_{\\text{acceptable}}^{t}}\n  {SANR_{\\text{desirable}}^{t} + SANR_{\\text{acceptable}}^{t} + SANR_{\\text{unsustainable}}^{t}}$$\n\n\nwhere:\n\n$SANR_{\\text{desirable}}^t$: Agricultural area corresponding to those agricultural holdings where their net income has been positive in the years $t$, $t-1$ y $t-2$\n  \n$SANR_{\\text{acceptable}}^t$: Agricultural area corresponding to those agricultural holdings where their net income has been positive in at least one of the years $t$, $t-1$ y $t-2$, but not in all of them\n  \n$SANR_{\\text{unsustainable}}^t$: Agricultural area corresponding to those agricultural holdings where their net income has not been positive in any of the years $t$, $t-1$ y $t-2$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -608,7 +608,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nA la hora de interpretar la serie \"Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o  aceptable de producción por hectárea\" se debe tener en cuenta que es un indicador relativo, ya que  el nivel de productividad de una explotación no depende únicamente de cómo es su producción por hectárea,  sino también de cómo es la producción por hectárea de las explotaciones de su mismo territorio y orientación  técnico-económica (agricultura, ganadería o mixta).\nA la hora de interpretar la serie \"Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de ingresos netos\" se debe tener en cuenta que es un indicador absoluto, ya que el  nivel de rentabilidad de una explotación depende exclusivamente de sus ingresos netos en los últimos tres años.");
+        var currentValue = normalizeCurrentValue('observaciones', "\nWhen interpreting the series \"Proportion of agricultural land with a desirable or acceptable level  of production per hectare\", it should be noted that it is a relative indicator, since the productivity level  of an agricultural holding depends not only on its production per hectare, but also on the production per hectare  of agricultural holdings in the same territory and with the same technical and economic orientation  (agriculture, livestock, or mixed).\nWhen interpreting the series \"Proportion of agricultural land with a desirable or acceptable level  of net income\", it should be noted that it is an absolute indicator, since the profitability of an agricultural  holding depends exclusively on its net income over the past three years.");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLos enfoques para definir la agricultura sostenible varían \nen términos de su cobertura de las tres dimensiones principales de la \nsostenibilidad, es decir, económica, ambiental y social, y en términos \nde la escala que se utiliza para evaluar la sostenibilidad, es decir, desde \nescalas de campo y granja hasta escalas nacional y global. Algunos enfoques\nconsideran diferentes características de la sostenibilidad, por ejemplo, \nsi las prácticas actuales son económicamente viables, respetuosas con el \nmedio ambiente y socialmente deseables. Otros enfoques se centran en prácticas\nparticulares como la agricultura orgánica, regenerativa o de bajos insumos y \npueden equipararlas con la agricultura sostenible.\n\n\nEl indicador 2.4.1 de los ODS se basa en un conjunto de subindicadores \nque cubren las tres dimensiones de la sostenibilidad:\n - Valor de la producción agrícola por hectárea \n - Ingresos agrícolas netos \n - Mecanismos de mitigación de riesgos\n - Prevalencia de la degradación del suelo \n - Variación en la disponibilidad de agua \n - Gestión de fertilizantes\n - Gestión de pesticidas \n - Uso de prácticas que apoyan la agrobiodiversidad \n - Salarios en la agricultura \n - Escala de experiencia de inseguridad alimentaria (FIES) \n - Tenencia de la tierra \n - Derechos de tenencia seguros de la tierra\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nThe approaches to framing and defining sustainable agriculture vary in terms of their coverage of \nthe three primary dimensions of sustainability, i.e. economic, environmental and social, and in \nterms of the scale that is used to assess sustainability, i.e. from field and farm scales, to national \nand global scales. Some approaches consider different features of sustainability, for example whether \ncurrent practices are economically feasible, environmentally friendly and socially desirable. Other \napproaches focus on particular practices such as organic, regenerative or low-input agriculture and \ncan equate these with sustainable agriculture.\n\n\nSDG indicator 2.4.1 is based on a set of sub-indicators that cover the three dimensions of sustainability:\n - Farm output value per hectare \n - Net farm income \n - Risk mitigation mechanisms\n - Prevalence of soil degradation \n - Variation in water availability \n - Management of fertilizers\n - Management of pesticides \n - Use of agro-biodiversity-supportive practices \n - Wage rate in agriculture \n - Food Insecurity Experience Scale\n - Secure tenure rights to land\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple parcialmente con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "The available indicator partially complies with the United Nations indicator metadata.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -666,7 +666,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.4.1&seriesCode=AG_LND_SUST_PRXCSS&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Progreso hacia una agricultura productiva y sostenible, puntaje de estado actual AG_LND_SUST_PRXCSS</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.4.1&seriesCode=AG_LND_SUST_PRXCSS&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Progress towards productive and sustainable agriculture, current status score AG_LND_SUST_PRXCSS</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01.pdf\">Metadatos 2-4-1 (1).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01proxy.pdf\">Metadatos 2-4-1 (2).pdf</a> (solo en inglés)\n");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01.pdf\">Metadata 2-4-1 (1).pdf</a>\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01proxy.pdf\">Metadata 2-4-1 (2).pdf</a>\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -718,7 +718,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-10");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-17");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

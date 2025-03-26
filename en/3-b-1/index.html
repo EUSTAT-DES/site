@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1015,7 +1015,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Proporción de la población inmunizada con todas las vacunas incluidas en cada programa nacional</p>
+            <p>Proportion of the target population covered by all vaccines included in their national programme</p>
 
           
         </td>
@@ -1032,16 +1032,16 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[PPV_{\text{vacuna}}^{t} = \frac{PV_{\text{vacuna}}^{\text{cohorte}\, t - c}}{P^{\text{cohorte}\, t - c}} \cdot 100\]
+\[PPV_{\text{vacuna}}^{t} = \frac{PV_{\text{vaccine}}^{\text{cohort}\, t - c}}{P^{\text{cohort}\, t - c}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$PV_{\text{vacuna}}^{\text{cohorte}\, t - c}=$ es la población vacunada con el tipo de vacuna especificado, 
-perteneciente a la cohorte nacida en $t-c$</p>
+<p>$PV_{\text{vaccine}}^{\text{cohort}\, t - c}=$ population vaccinated with the specified type of vaccine, 
+belonging to the cohort born in $t-c$</p>
 
-<p>$P^{\text{cohorte}\, t - c}=$ es la población total de la cohorte nacida en $t-c$</p>
+<p>$P^{\text{cohort}\, t - c}=$ total population of the cohort born in $t-c$</p>
 
-<p>${c}=$ el intervalo de años que define la cohorte específica para cada vacuna (c=1 o cohorte nacida en t-1 para DTPa y VNC, c=5 para SRP y c=13 para VPH)</p>
+<p>${c}=$ el interval of years that defines the specific cohort for each vaccine (c=1 or cohort born at t-1 for DPTa and VNC, c=5 for SRP and c=13 for VPH)</p>
 
           
         </td>
@@ -1057,15 +1057,15 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Tipo de vacuna:</p>
+            <p>Vaccine type:</p>
 <ul>
-  <li>vacunación de recuerdo contra difteria, tétanos y tosferina en la población infantil (DTPa)</li>
-  <li>vacunación de recuerdo contra neumococo en la población infantil (VNC),</li>
-  <li>segunda dosis de la vacuna frente a sarampión, rubeola y parotiditis en la población infantil (SRP)</li>
-  <li>segunda dosis de la vacuna frente al virus del papiloma humano (VPH) en adolescentes.</li>
+  <li>booster vaccination against diphtheria, tetanus, and whooping cough in children (DPTa)</li>
+  <li>booster vaccination against pneumococcus in the pediatric population (VNC)</li>
+  <li>second dose of the measles, mumps, and rubella vaccine in children (SRP)</li>
+  <li>second dose of the human papillomavirus (HPV) vaccine in adolescents</li>
 </ul>
 
-<p>Sexo</p>
+<p>Sex</p>
 
           
         </td>
@@ -1098,13 +1098,11 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <td>
           
             
-<p>Los resultados facilitados se obtienen utilizando las definiciones propuestas por la 
-Ponencia de Programa y Registro de Vacunaciones y acordadas por la Comisión de Salud 
-Pública en octubre de 2017. Desde entonces, las coberturas de vacunación se calculan 
-por cohortes de nacimiento de la población.</p>
+<p>The results are obtained using the definitions proposed by the Vaccination Registry and 
+Program Report and agreed by the Public Health Commission in October 2017. Since then, 
+vaccination coverage has been calculated by population birth cohorts.</p>
 
-<p>No se incluyen las vacunas adquiridas en oficinas de farmacia ni las 
-administradas por el sector sanitario privado.</p>
+<p>Vaccines purchased in pharmacies or administered by the private health sector are not included.</p>
 
           
         </td>
@@ -1188,33 +1186,13 @@ administradas por el sector sanitario privado.</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            March 11, 2025
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            December 03, 2024
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1545,7 +1523,7 @@ calendario anterior en función del grupo de edad objetivo.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -1565,7 +1543,7 @@ calendario anterior en función del grupo de edad objetivo.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

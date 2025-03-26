@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas que cumplen al menos uno de los tres criterios del riesgo de pobreza   o exclusión social (estar en riesgo de pobreza relativa, en situación de carencia material y social  severa o viviendo en hogares con baja intensidad de trabajo)");
+        var currentValue = normalizeCurrentValue('definicion', "Pobreziako edo gizarte-bazterketako arriskuaren hiru irizpideetako bat gutxienez betetzen  duten pertsonen proportzioa (pobrezia erlatiboko arriskuan egotea, gabezia material eta  sozial larriko egoeran egotea edo lan-intentsitate txikiko etxekoen unitateetan bizitzea)  ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$T_{AROPE}^{t} = \\frac{P_{AROPE}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$P_{AROPE}^{t} =$ población en riesgo de pobreza o exclusión social el año $t$\n\n$P^{t} =$ población total en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$T_{AROPE}^{t} = \\frac{P_{AROPE}^{t}}{P^{t}} \\cdot 100$$\n\nnon:\n\n$P_{AROPE}^{t} =$ pobrezia edo gizarte-bazterkeria izateko arriskuan erlatiboan daudenak $t$ urtean\n\n$P^{t} =$ biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Dimensiones de la pobreza: riesgo de pobreza, carencia material y social severa, \nbaja intensidad de trabajo\n\nSexo\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Pobreziaren dimentsioak: pobrezia-arriskua, gabezia material eta sozial larria, \nlan-intentsitate txikia  \n\nSexua\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "El indicador mide la proporción de personas que cumplen al menos uno de los siguientes criterios:\n\n<b>Personas en riesgo de pobreza relativa:</b> personas con ingresos por unidad de consumo por\ndebajo del 60% de la mediana (escala OCDE modificada).\n\nEl número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, \nque asigna un peso de 1 a la primera  persona de 14 o más años, un peso de 0,5 al resto de personas de \n14 o más años y un peso de 0,3 a las personas de menos de 14 años.\n\n<b>Personas en situación de carencia material y social severa:</b> personas que padecen al menos \nsiete de la siguiente lista de trece limitaciones (siete definidas a nivel de hogar y seis a nivel de persona):\n\nA nivel de hogar:\n 1. No puede permitirse ir de vacaciones al menos una semana al año.\n 2. No puede permitirse una comida de carne, pollo o pescado al menos cada dos días.\n 3. No puede permitirse mantener la vivienda con una temperatura adecuada.\n 4. No tiene capacidad para afrontar gastos imprevistos.\n 5. Ha tenido retrasos en el pago de gastos relacionados con la vivienda principal \n(hipoteca o alquiler, recibos de gas, comunidad, etc) o en\ncompras a plazos en los últimos 12 meses.\n 6. No puede permitirse disponer de un automóvil.\n 7. No puede sustituir muebles estropeados o viejos.\n\nA nivel de persona:\n 8. No puede permitirse sustituir ropa estropeada por otra nueva.\n 9. No puede permitirse tener dos pares de zapatos en buenas condiciones.\n 10. No puede permitirse reunirse con amigos/familia para comer o tomar algo al menos una vez al mes.\n 11. No puede permitirse participar regularmente en actividades de ocio.\n 12. No puede permitirse gastar una pequeña cantidad de dinero en sí mismo.\n 13. No puede permitirse conexión a internet.\n\nEn el caso de menores de 16 años no se dispone de los seis conceptos enumerados anteriormente a \nnivel de persona. Para estos menores los valores de esos elementos se imputan a partir de los valores\nrecogidos para los miembros de su hogar con 16 o más años.\n\n<b>Baja intensidad en el empleo:</b> son los hogares en los que sus miembros en edad de trabajar \n(personas de 18 a 64 años, excluyendo los estudiantes de 18 a 24 años, los jubilados o retirados, \nasí como las personas inactivas entre 60 y 64 cuya fuente principal de ingresos del hogar sean las pensiones)\nlo hicieron menos del 20% del total de su potencial de trabajo durante el año de referencia.\nEsta variable no se aplica en el caso de las personas de 65 y más años.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "Adierazleak irizpide hauetako bat gutxienez betetzen duten pertsonen proportzioa neurtzen du:\n\n<b>Pobrezia erlatiborako arriskuan dauden pertsonak:</b> kontsumo-unitate bakoitzeko diru-sarrerak\nmedianaren % 60tik behera dituzten pertsonak (ELGA eskala aldatua).\n\nEtxekoen unitate baten kontsumo-unitateen kopurua kalkulatzeko, ELGA eskala aldatua erabiltzen da. \nEskala horrek 1 pisua esleitzen dio 14 urte edo gehiagoko lehen pertsonari, 0,5 pisua 14 urte edo \ngehiagoko gainerako pertsonei eta 0,3 pisua 14 urtetik beherako pertsonei.  \n\n<b>Gabezia material eta sozial larria duten pertsonak:</b> hamahiru mugako zerrenda honetako \nzazpi gutxienez pairatzen dituzten pertsonak (zazpi etxekoen unitateari dagokionez eta sei pertsonari dagokionez):\n\nEtxekoen unitateari dagokionez:\n 1. Ezin da urtean gutxienez astebetez oporretara joan.\n 2. Ezin da haragi-, oilasko- edo arrain-bazkaririk egin bi egunetik behin, gutxienez.\n 3. Ezin da etxebizitza tenperatura egokian mantendu.\n 4. Ez du ustekabeko gastuei aurre egiteko gaitasunik.\n 5. Atzerapenak izan ditu etxebizitza nagusiarekin lotutako gastuen ordainketan \n(hipoteka edo alokairua, gas-ordainagiriak, komunitatea, etab.) edo epeka egindako \nerosketetan azken 12 hilabeteetan.\n 6. Ezin da automobilik eduki.\n 7. Ezin ditu ordezkatu hondatutako altzariak edo zaharrak.\n\nPertsona-mailan:\n 8. Ezin da hondatutako arroparen ordez arropa berria jarri.\n 9. Ezin dira bi zapata pare baldintza onetan eduki.\n 10. Ezin da lagunekin/familiarekin elkartu hilean behin gutxienez jateko edo zerbait hartzeko.\n 11. Ezin da aldizka aisialdiko jardueretan parte hartu.\n 12. Ezin da diru kopuru txiki bat gastatu.\n 13. Ezin da Interneteko konexiorik egin.\n\n16 urtetik beherakoen kasuan, ez daude aurrez pertsona-mailan zerrendatutako sei kontzeptuak. \nAdingabe horien kasuan, elementu horien balioak 16 urte edo gehiago dituzten etxekoen unitateko \nkideentzat jasotako balioetatik abiatuta egozten dira.  \n\n<b>Intentsitate txikia enpleguan:</b> lan egiteko adinean dauden kideek (18-64 urteko pertsonak, \n18 eta 24 urte bitarteko ikasleak, erretiratuak eta 60-64 urte bitarteko pertsona ez-aktiboak izan \nezik, horien etxeko diru-sarreren iturri nagusia pentsioak badira) beren lan-potentzial osoaren % 20 \nbaino gutxiago lan egin zuten erreferentziako urtean. Aldagai hori ez da aplikatzen 65 urte edo \ngehiagoko pertsonen kasuan.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nTradicionalmente se ha definido la pobreza como la falta de dinero. \nSin embargo, la pobreza hay que entenderla de manera mucho más amplia.\nUna persona pobre puede sufrir múltiples desventajas al mismo tiempo; por ejemplo, puede \ntener mala salud o desnutrición, falta de agua potable o electricidad, mala calidad del \ntrabajo o poca escolaridad. Centrarse en un solo factor, como el ingreso, no es \nsuficiente para captar la verdadera realidad de la pobreza.\n\n\nEn la Unión Europea, la población en riesgo de pobreza o exclusión social, \nabreviado como AROPE, \ncorresponde a la suma de personas que están en riesgo de pobreza (pobreza de ingresos), \ngravemente desfavorecidas material y socialmente, o que viven en un hogar con una \nintensidad laboral muy baja. \nLas personas se incluyen sólo una vez incluso si se encuentran en más de una de las \nsituaciones mencionadas anteriormente. La tasa AROPE es la proporción de la población total \nque está en riesgo de pobreza o exclusión social.\n\nLa tasa AROPE es el principal indicador para hacer el seguimiento del\nobjetivo de pobreza y exclusión social de la UE para 2030 y fue el indicador principal \npara hacer el seguimiento del objetivo de pobreza de la Estrategia UE 2020.\n\nEl <a href=\"https://ec.europa.eu/social/main.jsp?catId=1606&langId=es\">Pilar \nEuropeo de Derechos Sociales</a> propone tres objetivos a nivel \nde la UE que deben alcanzarse de aquí a 2030 en los ámbitos del empleo, \nlas capacidades y la protección social. La pobreza y la exclusión social \nes uno de los objetivos. El número de personas en riesgo de pobreza o exclusión\nsocial debería reducirse en al menos 15 millones de aquí a 2030, y de ellas, \nal menos 5 millones deberían ser niños.\n\nFuente: División de Estadísticas de las Naciones Unidas, Eurostat\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nTradizionalki, pobrezia diru falta bezala definitu izan da. Hala ere, pobrezia \naskoz ere modu zabalagoan ulertu behar da. Pertsona pobre batek desabantaila ugari \nizan ditzake aldi berean; adibidez, osasun edo desnutrizio txarra, edateko ur edo \nelektrizitate falta, lanaren kalitate txarra edo eskolatze txikia izan ditzake. Faktore \nbakar batean zentratzea, hala nola diru-sarreran, ez da nahikoa pobreziaren benetako \nerrealitatea atzemateko.\n\nEuropar Batasunean, pobrezia- edo gizarte-bazterketako arriskuan dagoen biztanleria, \nAROPE gisa laburtua, pobrezia-arriskuan (diru-sarreren pobrezia) dauden, materialki \neta sozialki egoera larrian dauden edo lan-intentsitate oso baxuko etxekoen unitatean \nbizi diren pertsonen baturari dagokio. Pertsonak behin bakarrik sartzen dira, baita \nlehen aipatutako egoera batean baino gehiagotan badaude ere. AROPE tasa pobreziako edo \ngizarte-bazterketako arriskuan dagoen biztanleria osoaren proportzioa da.  \n\nAROPE tasa adierazle nagusia da EBren 2030erako pobreziaren eta gizarte-bazterketaren \nhelburuaren jarraipena egiteko, eta adierazle nagusia izan zen EB 2020 Estrategiaren \npobrezia-helburuaren jarraipena egiteko.\n\n<a href=\"https://ec.europa.eu/social/main.jsp?catId=1606&langId=es\">Gizarte Eskubideen Europako \nZutabea</a>k hiru helburu proposatzen ditu EB mailan, hemendik \n2030era lortu beharrekoak enpleguaren, gaitasunen eta gizarte-babesaren eremuetan. \nPobrezia eta gizarte-bazterketa da helburuetako bat. Pobreziako edo gizarte-bazterketako \narriskuan dauden pertsonen kopurua gutxienez 15 milioi murriztu beharko litzateke hemendik \n2030era, eta horietatik gutxienez 5 milioi haurrak izan beharko lirateke.\n\nIturria: Nazio Batuen Estatistika Dibisioa, Eurostat\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en\"> Personas en riesgo de pobreza o exclusión social por edad y sexo (ilc_peps01n)</a> Eurostat");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en\"> Pobreziako edo gizarte-bazterketako arriskuan dauden pertsonak, adinaren eta sexuaren arabera (ilc_peps01n)</a> Eurostat");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf\">Metadatos 1-2-2.pdf (solo en inglés)</a>\n\n<a href=\"https://ec.europa.eu/eurostat/cache/metadata/en/sdg_01_10_esmsip2.htm\">Metadatos Eurostat (sdg_01_10)</a> (solo en inglés)\n");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf\">Metadatuak 1-2-2.pdf (ingelesez bakarrik)</a>\n\n<a href=\"https://ec.europa.eu/eurostat/cache/metadata/en/sdg_01_10_esmsip2.htm\">Eurostat Metadatuak (sdg_01_10)</a> (ingelesez bakarrik)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -774,7 +774,8 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Número de admisiones a tratamiento ambulatorio por abuso o dependencia de sustancias adictivas  en un centro de tratamiento por primera vez en un año determinado por cada 100.000 habitantes</p>
+            
+<p>Number of first-time outpatient treatment admissions for addictive substance abuse or dependence  at a treatment center in a given year per 100,000 population</p>
 
           
         </td>
@@ -791,12 +792,14 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[TAT_{sustancias\, adictivas}^{t} = \frac{AT_{sustancias\, adictivas}^{t}}{P^{t}} \cdot 100.000\]
+\[TAT_{addictive\, substances}^{t} = \frac{AT_{addictive\, substances}^{t}}{P^{t}} \cdot 100.000\]
 
-<p>donde:
-$AT_{sustancias\, adictivas}^{t} =$ número de admisiones a tratamiento ambulatorio por abuso o dependencia de sustancias adictivas en un centro de tratamiento por primera vez en el año $t$</p>
+<p>where:</p>
 
-<p>$P^{t} =$ población a 1 de julio del año $t$</p>
+<p>$AT_{addictive\, substances}^{t} =$ Number of admissions to outpatient treatment for addictive substance abuse or 
+dependence at a treatment center for the first time in the year $t$</p>
+
+<p>$P^{t} =$ population on July 1 of year $t$</p>
 
           
         </td>
@@ -812,9 +815,9 @@ $AT_{sustancias\, adictivas}^{t} =$ número de admisiones a tratamiento ambulato
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Sustancias adictivas: drogas ilegales, alcohol</p>
+            <p>Addictive substances: illegal drugs, alcohol</p>
 
-<p>Sexo</p>
+<p>Sex</p>
 
           
         </td>
@@ -847,16 +850,15 @@ $AT_{sustancias\, adictivas}^{t} =$ número de admisiones a tratamiento ambulato
         <td>
           
             
-<p>Se puede producir cierta sobrestimación del indicador a nivel estatal, dado que una misma 
-persona ha podido ser notificada en dos o más comunidades diferentes y no es posible su 
-identificación por motivos de confidencialidad.</p>
+<p>There may be some overestimation of the indicator at the state level, given that the same person may 
+have been notified in two or more different communities and their identification is not possible for 
+confidentiality reasons.</p>
 
-<p>Tratamiento: cualquier intervención realizada por profesionales cualificados para eliminar, 
-reducir o controlar el consumo de drogas.</p>
+<p>Treatment: Any intervention performed by qualified professionals to eliminate, reduce, or control drug use.</p>
 
-<p>Ambulatorio: la persona no pernocta en el centro. Este criterio no se aplica a los centros penitenciarios.</p>
+<p>Outpatient: the person does not spend the night at the facility. This criterion does not apply to penitentiary centers.</p>
 
-<p>Drogas ilegales: no se consideran drogas ilegales el alcohol y la nicotina (tabaco).</p>
+<p>Illegal drugs: Alcohol and nicotine (tobacco) are not considered illegal drugs.</p>
 
           
         </td>
@@ -945,7 +947,7 @@ reducir o controlar el consumo de drogas.</p>
         <th scope="row">Data last updated </th>
         <td>
           
-            March 11, 2025
+            October 29, 2024
           
         </td>
         </tr>
@@ -960,7 +962,7 @@ reducir o controlar el consumo de drogas.</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            December 03, 2024
+            October 29, 2024
           
         </td>
         </tr>
@@ -1092,33 +1094,34 @@ reducir o controlar el consumo de drogas.</p>
         <td>
           
             
-<p>Este indicador de Naciones Unidas mide la cobertura de las intervenciones de tratamiento para los trastornos por consumo 
-de sustancias y se define como el número de personas que recibieron tratamiento en un año 
-dividido por el número total de personas con trastornos por consumo de sustancias en el mismo año. 
-Este indicador se desglosa en dos grandes grupos de sustancias psicoactivas: (1) drogas, (2) alcohol y otras sustancias psicoactivas.</p>
+<p>This United Nations indicator measures the coverage of treatment interventions for substance 
+use disorders is defined as the number of people who received treatment in a year divided by 
+the total number of people with substance use disorders in the same year. This indicator is 
+disaggregated by two broad groups of psychoactive substances: (1) drugs, (2) alcohol and other 
+psychoactive substances.</p>
 
-<p>Según datos de la Oficina de las Naciones Unidas contra la Droga y el Delito (ONUDD) y la Organización Mundial de la Salud (OMS), 
- alrededor de 296 millones de personas de entre 15 y 64 años en todo el mundo consumieron una droga ilegal al menos una vez en 2021, 
-alrededor de 2.300 millones de personas beben alcohol en la actualidad, unos 35 millones de personas sufren trastornos por consumo 
-de drogas y 289 millones por consumo de alcohol.</p>
+<p>According to United Nations Office on Drugs and Crime (UNODC) and World Health Organization (WHO) 
+data, around 296 million people aged 15 to 64 years worldwide used an illicit drug at least once in 
+2021, about 2.3 billion people are current drinkers of alcohol, some 35 million of people suffer 
+from drug use disorders and 289 million from alcohol use disorders.</p>
 
-<p>Los trastornos por consumo de sustancias son afecciones de salud graves que representan una carga significativa para 
-las personas afectadas, sus familias y comunidades. Los trastornos por consumo de sustancias no tratados generan costos sustanciales
-para la sociedad, incluida la pérdida de productividad, el aumento del gasto en atención médica y los costos relacionados con 
-la justicia penal, el bienestar social y otras consecuencias sociales.</p>
+<p>Substance use disorders are serious health conditions that present a significant burden for affected 
+individuals, their families and communities. Untreated substance use disorders trigger substantial costs 
+to society including lost productivity, increased health care expenditure, and costs related to criminal 
+justice, social welfare, and other social consequences.</p>
 
-<p>El fortalecimiento de los servicios de tratamiento 
-implica  proporcionar acceso a un conjunto integral de intervenciones basadas en evidencia (establecidas en las normas y 
-directrices internacionales) que deberían estar disponibles para todos los grupos de población que las necesiten. 
-El indicador indicará en qué medida se dispone de una variedad de intervenciones basadas en evidencia para el tratamiento
-de los trastornos por consumo de sustancias y la población necesitada tiene acceso a ellas a nivel nacional, regional y mundial.</p>
+<p>Strengthening treatment services entails providing access to a comprehensive set of evidence-based 
+interventions (-laid down in the international standards and guidelines) that should be available 
+to all population groups in need. The indicator will inform the extent to which a range of evidence-based
+interventions for treatment of substance use disorder are available and are accessed by the population 
+in need at country, regional and global level.</p>
 
-<p>Aunque existe un tratamiento eficaz, solo una pequeña cantidad de personas con trastornos por consumo de sustancias
- lo recibe. Por ejemplo, se estima que, a nivel mundial, una de cada siete personas con trastornos por consumo de drogas
-tiene acceso a servicios de tratamiento de drogas o se le proporcionan (Informe mundial sobre drogas 2019). Los datos del 
-ATLAS de la OMS sobre el uso de sustancias mostraron que, en 2014, solo el 11,9 % (de los 103 países que respondieron) informó 
-de una cobertura alta (40 % o más) para la dependencia del alcohol. El indicador 3.5.1 de los ODS es crucial para medir el progreso
-hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mundo, tal como se formula en la Meta 3.5.</p>
+<p>Even though effective treatment exists, only a small amount of people with substance use disorders 
+receive it. For instance, it is estimated that globally one out of 7 people with drug use disorders 
+have access to or provided drug treatment services (World Drug Report 2019). WHO ATLAS-Substance 
+Use data showed that in 2014 only 11.9 % (out of 103 responding) countries reported high coverage (40% 
+or more) for alcohol dependence. SDG indicator 3.5.1 is crucial for measurement the progress 
+towards strengthening the treatment of substance abuse worldwide as formulated in the Target 3.5.</p>
 
           
         </td>
@@ -1134,7 +1137,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible no cumple con los metadatos del indicador de  Naciones Unidas, pero aporta información complementaria.</p>
+            <p>The available indicator does not meet the UN indicator metadata requirements, but provides  complementary information.</p>
 
           
         </td>
@@ -1150,7 +1153,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
         <th scope="row">International results </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.5.1&amp;seriesCode=SH_SUD_TREAT&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20DRUG_TOTAL">Cobertura de intervenciones de tratamiento (farmacológicas, psicosociales y de rehabilitación y servicios de seguimiento) para trastornos por consumo de sustancias (%) SH_SUD_TREAT</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.5.1&amp;seriesCode=SH_SUD_TREAT&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20DRUG_TOTAL">Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders (%) SH_SUD_TREAT</a> UNSTATS</p>
 
           
         </td>
@@ -1171,7 +1174,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-01.pdf">Metadata 3-5-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-01.pdf">Metadata 3-5-1.pdf</a></p>
 
           
         </td>
@@ -1239,7 +1242,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -1259,7 +1262,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

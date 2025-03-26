@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1581,13 +1581,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            
-<p>Series disponibles:</p>
-
-<p><b> Emisiones de amoníaco ($NH_3$) de la agricultura y ganadería:</b></p>
-
-<p><b>Emisiones de amoníaco ($NH_3$) de la agricultura y ganadería por hectárea:</b>
-Emisiones de amoníaco (NH3) de la agricultura y ganadería por cada hectárea destinada a tierras de cultivo, prados y pastizales</p>
+            <p>Nekazaritzako eta abeltzaintzako amoniako-isuriak ($NH_3$)</p>
 
           
         </td>
@@ -1604,31 +1598,13 @@ Emisiones de amoníaco (NH3) de la agricultura y ganadería por cada hectárea d
         <td>
           
             
-<p><b> Emisiones de amoníaco ($NH_3$) de la agricultura y ganadería:</b></p>
+\[ENH3_{nekazaritza\, eta\, abeltzaintza}^{t} = ENH3_{nekazaritza}^{t} + ENH3_{abeltzaintza}^{t}\]
 
-\[ENH3_{agricultura\, y\, ganadería}^{t} = ENH3_{agricultura}^{t} + ENH3_{ganadería}^{t}\]
+<p>non:</p>
 
-<p>donde:</p>
+<p>$ENH3_{nekazaritza}^{t}$ nekazaritzako amoniako-isuriak  ($NH_3$) $t$ urtean</p>
 
-<p>$ENH3_{agricultura}^{t}$ emisiones de $NH_3$ de la agricultura en el año $t$</p>
-
-<p>$ENH3_{ganadería}^{t}$ emisiones de $NH_3$ de la ganadería en el año $t$</p>
-
-<p><br /></p>
-
-<p><b>Emisiones de amoníaco ($NH_3$) de la agricultura y ganadería por hectárea:</b></p>
-
-\[ENH3S_{agricultura\, y\, ganadería}^{t} = \frac{ENH3_{agricultura}^{t} + ENH3_{ganadería}^{t}}{S_{tierras\, de\, cultivo}^{t} + S_{prados\, y\, pastizales}^{t}}\]
-
-<p>donde:</p>
-
-<p>$ENH3_{agricultura}^{t}$ emisiones de NH3 de la agricultura en el año $t$</p>
-
-<p>$ENH3_{ganadería}^{t}$ emisiones de NH3 de la ganadería en el año $t$</p>
-
-<p>$S_{tierras\, de\, cultivo}^{t}$ superficie destinada a tierras de cultivo en el año $t$</p>
-
-<p>$S_{prados\, y\, pastizales}^{t}$ superficie destinada a prados y pastizales en el año $t$</p>
+<p>$ENH3_{abeltzaintza}^{t}$ abeltzaintzako amoniako-isuriak  ($NH_3$) $t$ urtean</p>
 
           
         </td>
@@ -1644,7 +1620,7 @@ Emisiones de amoníaco (NH3) de la agricultura y ganadería por cada hectárea d
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Actividad agrícola: agricultura, ganadería</p>
+            <p>Nekazaritza-jarduera: nekazaritza, abeltzaintza</p>
 
           
         </td>
@@ -1677,13 +1653,11 @@ Emisiones de amoníaco (NH3) de la agricultura y ganadería por cada hectárea d
         <td>
           
             
-<p>Las emisiones de amoníaco asignadas a la agricultura son las 
-correspondientes a las actividades con códigos NFR (Nomenclature for Reporting): 
-3Da1, 3Da2a, 3Da2b, 3Da2c, 3Da3, 3Da4, 3Db, 3Dc, 3Dd, 3De, 3Df, 3F y 3I.</p>
+<p>Nekazaritzari esleitutako amoniako-igorpenak NFR (Nomenclature for Reporting) kodeak dituzten jarduerei 
+dagozkienak dira: 3Da1, 3Da2a, 3Da2b, 3Da2c, 3Da3, 3Da4, 3Db, 3Dc, 3Dd, 3De, 3Df, 3F eta 3I.</p>
 
-<p>Las emisiones de amoníaco asignadas a la ganadería son las correspondientes a 
-las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b, 
-3B2, 3B3, 3B4a, 3B4d, 3B4e, 3B4f, 3B4gi, 3B4gii, 3B4giii, 3B4giv y 3B4h.</p>
+<p>Abeltzaintzari esleitutako amoniako-emisioak NFR (Nomenclature for Reporting) kodeak dituzten jarduerei dagozkie: 
+3B1a, 3B1b, 3B2, 3B3, 3B4a, 3B4d, 3B4e, 3B4f, 3B4gi, 3B4gii, 3B4giii, 3B4giv eta 3B4h.</p>
 
           
         </td>
@@ -1772,7 +1746,7 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025 martxoa 10
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1787,7 +1761,7 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2025 martxoa 18
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1918,31 +1892,29 @@ las actividades con códigos NFR (Nomenclature for Reporting): 3B1a, 3B1b,
         <th scope="row">Justifikazioa </th>
         <td>
           
-            <p>El indicador forma parte del conjunto de indicadores de los Objetivos de Desarrollo Sostenible (ODS) de la UE.
-Se utiliza para hacer el seguimiento del progreso hacia el ODS 2 sobre poner fin al hambre y la desnutrición, y está 
-integrado en las prioridades de la Comisión Europea en el marco del Acuerdo Verde Europeo</p>
+            <p>Adierazlea EBko Garapen Iraunkorreko Helburuen (GJH) adierazle multzoaren parte da. Gosea eta desnutrizioa 
+amaitzeari buruzko 2. GJHrako aurrerabidearen jarraipena egiteko erabiltzen da, eta Europako Batzordearen 
+lehentasunetan txertatuta dago, Europako Akordio Berdearen esparruan.</p>
 
-<p>El indicador mide las emisiones de amoniaco ($NH_3$) como resultado de 
-la producción agrícola. Estas emisiones resultan del manejo del estiércol, 
-las aplicaciones de fertilizantes nitrogenados inorgánicos y estiércol animal 
-aplicado al suelo, así como la orina y el estiércol depositados por los animales en pastoreo.</p>
+<p>Adierazleak amoniako-isuriak ($NH_3$) neurtzen ditu, nekazaritza-ekoizpenaren ondorioz. Isurketa horiek 
+honako hauen ondorio dira: simaurra maneiatzea, ongarri nitrogenatu ez-organikoak aplikatzea, eta animaliek 
+artzaintzan utzitako gernua eta simaurra.</p>
 
-<p>El amoníaco ($NH_3$) es un gas incoloro, de olor acre y corrosivo que se produce por la descomposición 
-de la materia orgánica vegetal y de los excrementos de humanos y animales. Cuando se libera a la atmósfera, 
-el amoníaco contribuye al nivel de contaminación del aire. El sector agrícola sigue siendo el mayor contribuyente 
-a las emisiones de amoníaco en la UE.</p>
+<p>Amoniakoa ($NH_3$) kolorerik gabeko gas bat da, usain garratz eta korrosibokoa, landare-materia organikoaren 
+eta gizakien eta animalien gorotzen deskonposizioaren ondorioz sortzen dena. Atmosfera askatzen denean, 
+amoniakoak airearen kutsadura-mailan laguntzen du. Nekazaritza-sektoreak jarraitzen du izaten EBn amoniako-isurien 
+zergadun handiena.</p>
 
-<p>Las medidas implementadas en el marco de la Política Agrícola Común (PAC) y la 
-Directiva Marco del Agua han llevado a la UE a reducir las emisiones de 
-amoníaco procedentes de la agricultura desde la década de 1990. En concreto, las 
-medidas para cambiar las prácticas agrícolas provocaron reducciones en el uso de 
-fertilizantes nitrogenados y una reducción de la densidad ganadera por hectárea en toda la UE-15.</p>
+<p>Nekazaritza Politika Bateratuaren (NPB) eta Uraren Esparru Zuzentarauaren esparruan ezarritako neurrien ondorioz, 
+EBk nekazaritzatik datozen amoniako-isuriak murriztu ditu 1990eko hamarkadatik. Zehazki, nekazaritza-jarduerak 
+aldatzeko neurriek nitrogenodun ongarrien erabilera murriztea eta EB-15 osoan hektareako abeltzaintza-dentsitatea 
+murriztea eragin zuten.</p>
 
-<p>La Directiva sobre Compromisos Nacionales de Reducción de Emisiones (Directiva NEC) 
-establece compromisos nacionales de reducción de emisiones para los Estados miembros y la
-UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
+<p>Emisioak Murrizteko Konpromiso Nazionalei buruzko Zuzentarauak (HPB Zuzentaraua) emisioak murrizteko konpromiso 
+nazionalak ezartzen ditu estatu kideentzat eta EBrentzat airearen bost kutsatzaile garrantzitsurentzat, amoniakoa 
+barne.</p>
 
-<p>Fuente: Eurostat</p>
+<p>Iturria: Eurostat</p>
 
           
         </td>
@@ -1958,7 +1930,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible en la C.A. de Euskadi es comparable con el indicador europeo.</p>
+            <p>Euskal Autonomia Erkidegoan eskuragarri dagoen adierazlea Europako adierazlearekin aldera daiteke.</p>
 
           
         </td>
@@ -1974,7 +1946,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_02_60/default/table?lang=en&amp;category=sdg.sdg_02"> Emisiones de amoníaco de la agricultura (sdg_02_60)</a> Eurostat</p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_02_60/default/table?lang=en&amp;category=sdg.sdg_02"> Nekazaritzako amoniako-isuriak (sdg_02_60)</a> Eurostat</p>
 
           
         </td>
@@ -1995,7 +1967,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_60_esmsip2.htm">Metadata sdg_20_60</a> (solo en inglés)<br /></p>
+            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_02_60_esmsip2.htm">Metadatuak sdg_20_60</a> (ingelesez bakarrik)<br /></p>
 
           
         </td>
@@ -2110,7 +2082,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -2130,7 +2102,7 @@ UE para cinco importantes contaminantes del aire, incluido el amoníaco.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

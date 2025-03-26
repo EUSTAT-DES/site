@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nProportion of people who meet at least one of the three criteria for risk of poverty or social exclusion (being at risk of relative poverty, in a situation of material and social deprivation or living in a household with low work intensity)");
+        var currentValue = normalizeCurrentValue('definicion', "\nProportion of people who meet at least one of the three criteria for risk of poverty  or social exclusion (being at risk of relative poverty, in a situation of material and social deprivation  or living in a household with low work intensity)");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$T_{AROPE}^{t} = \\frac{P_{AROPE}^{t}}{P^{t}} \\cdot 100$$\n\nwhere:\n\n$P_{AROPE}^{t} =$ population at risk of poverty or social exclusion in $t$\n\n$P^{t} =$ total population in $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$T_{AROPE}^{t} = \\frac{P_{AROPE}^{t}}{P^{t}} \\cdot 100$$\n\nwhere:\n\n$P_{AROPE}^{t} =$ population at risk of poverty or social exclusion in year $t$\n\n$P^{t} =$ total population in year $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Dimensions of poverty: risk of poverty, severe material and social deprivation,\nlow work intensity\n\nSex\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Dimensions of poverty: risk of poverty, severe material and social deprivation, \nlow work intensity\n\nSex\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "The indicator measures the proportion of people who meet at least one of the following criteria:\n\n<b>People at risk of relative poverty:</b> people with income per unit of consumption\nbelow 60% of the median (modified OECD scale).\n\nThe number of consumption units in a household\nis calculated using the modified OECD scale, which assigns a weight of 1 to the\nfirst person aged 14 or over, a weight of 0.5 for other people aged 14 or over\nand a weight of 0.3 for people under 14 years of age\n\n<b>People in a situation of severe material and social deprivation:</b> people who suffer from at least\nseven from the following list of thirteen limitations (seven defined at the household level and six at the individual level):\n\n At the household level:\n 1. You can't afford to go on vacation for at least one week a year.\n 2. You cannot afford a meal of meat, chicken or fish at least every other day.\n 3. You cannot afford to keep the home at an adequate temperature.\n 4. You do not have the capacity to face unforeseen expenses.\n 5. You have had delays in the payment of expenses related to the main home (mortgage or rent, gas bills, community...)\n or in installment purchases in the last 12 months.\n 6. You can't afford a car.\n 7. You cannot replace damaged or old furniture.\n\nAt the individual level:\n 8. You cannot afford to replace damaged clothes with new ones.\n 9. You can't afford to have two pairs of shoes in good condition.\n 10. You can't afford to meet friends/family for food or drinks at least once a month.\n 11. You cannot afford to regularly participate in leisure activities.\n 12. You can't afford to spend a small amount of money on yourself.\n 13. Cannot afford internet connection.\nIn the case of minors under 16 years of age, the six concepts listed above are not available at the individual level.\nFor these minors, the values of these elements are imputed from the values collected for the members of their household aged 16 or over.\n\n<b>Low work intensity:</b>these are households in which their working age members (people from 18 to 64 years old, excluding \nstudents from 18 to 24 years old, retirees or retirees, as well as inactive people between 60 and 64 whose main source of household income \nare pensions) worked less than 20% of their total work potential during the reference year.\nThis variable does not apply for people aged 65 and over.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "The indicator measures the proportion of people who meet at least one of the following criteria:\n\n<b>People at risk of relative poverty:</b> people with income per unit of consumption\nbelow 60% of the median (modified OECD scale).\n\nThe number of consumption units in a household \nis calculated using the modified OECD scale, which assigns a weight of 1 to the \nfirst person aged 14 or over, a weight of 0.5 for other people aged 14 or over \nand a weight of 0.3 for people under 14 years of age\n\n<b>People in a situation of severe material and social deprivation:</b> people who suffer from at least \nseven from the following list of thirteen limitations (seven defined at the household level and six at the individual level):\n\n At the household level:\n 1. You can't afford to go on vacation for at least one week a year.\n 2. You cannot afford a meal of meat, chicken or fish at least every other day.\n 3. You cannot afford to keep the home at an adequate temperature.\n 4. You do not have the capacity to face unforeseen expenses.\n 5. You have had delays in the payment of expenses related to the main home (mortgage or rent, gas bills, community...) \n or in installment purchases in the last 12 months.\n 6. You can't afford a car.\n 7. You cannot replace damaged or old furniture.\n\nAt the individual level:\n 8. You cannot afford to replace damaged clothes with new ones.\n 9. You can't afford to have two pairs of shoes in good condition.\n 10. You can't afford to meet friends/family for food or drinks at least once a month.\n 11. You cannot afford to regularly participate in leisure activities.\n 12. You can't afford to spend a small amount of money on yourself.\n 13. Cannot afford internet connection.\nIn the case of minors under 16 years of age, the six concepts listed above are not available at the individual level.\nFor these minors, the values of these elements are imputed from the values collected for the members of their household aged 16 or over.\n\n<b>Low work intensity:</b>these are households in which their working age members (people from 18 to 64 years old, excluding \nstudents from 18 to 24 years old, retirees or retirees, as well as inactive people between 60 and 64 whose main source of household income \nare pensions) worked less than 20% of their total work potential during the reference year.\nThis variable does not apply for people aged 65 and over.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nTraditionally, poverty has been defined as a lack of money.\nHowever, poverty must be understood much more broadly.\nA poor person can suffer multiple disadvantages at the same time; For example, you can\nsuffer from poor health or malnutrition, lack of drinking water or electricity, poor quality of\nwork or little schooling. Focusing on a single factor, such as income, is not\nenough to capture the true reality of poverty.\n\nIn the European Union, the population at risk of poverty or social exclusion,\nabbreviated as AROPE, corresponds to the sum of people who are at risk of poverty (income poverty),\nseverely disadvantaged materially and socially, or living in a household with a\nvery low work intensity.\nPeople are included only once, even if they are in more than one of the\nsituations mentioned above. The AROPE rate is the proportion of the total population\nwho are at risk of poverty or social exclusion.\n\nThe AROPE rate is the main indicator for monitoring the\nEU poverty and social exclusion target for 2030 and was the leading indicator\nto monitor the poverty target of the EU 2020 strategy.\n\n\nThe <a href=\"https://employment-social-affairs.ec.europa.eu/european-pillar-social-rights-20-principles_en\">\nEuropean Pillar of Social Rights</a> proposes three objectives at the level of EU\nto be achieved by 2030 in the areas of employment, skills and social protection.\nPoverty and social exclusion is one of the objectives. The number of people at risk of poverty or exclusion\nshould be reduced by at least 15 million by 2030, and of these, at least 5 million should be children.\n\nSource: United Nations Statistics Division, Eurostat\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nTraditionally, poverty has been defined as a lack of money. \nHowever, poverty must be understood much more broadly. \nA poor person can suffer multiple disadvantages at the same time; For example, you can \nsuffer from poor health or malnutrition, lack of drinking water or electricity, poor quality of \nwork or little schooling. Focusing on a single factor, such as income, is not \nenough to capture the true reality of poverty.\n\nIn the European Union, the population at risk of poverty or social exclusion, \nabbreviated as AROPE, corresponds to the sum of people who are at risk of poverty (income poverty), \nseverely disadvantaged materially and socially, or living in a household with a \nvery low work intensity.\nPeople are included only once, even if they are in more than one of the \nsituations mentioned above. The AROPE rate is the proportion of the total population \nwho are at risk of poverty or social exclusion.\n\nThe AROPE rate is the main indicator for monitoring the \nEU poverty and social exclusion target for 2030 and was the leading indicator \nto monitor the poverty target of the EU 2020 strategy.\n\n\nThe <a href=\"https://employment-social-affairs.ec.europa.eu/european-pillar-social-rights-20-principles_en\">\nEuropean Pillar of Social Rights</a> proposes three objectives at the level of EU\nto be achieved by 2030 in the areas of employment, skills and social protection.\nPoverty and social exclusion is one of the objectives. The number of people at risk of poverty or exclusion\nshould be reduced by at least 15 million by 2030, and of these, at least 5 million should be children.\n\nSource: United Nations Statistics Division, Eurostat\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1232,19 +1232,8 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Adierazlea </th>
-        <td>
-          
-            <p>1.3.1 Babes sozialeko sistema baten edo gutxieneko maila baten estaldura duen biztanleriaren proportzioa, sexuaren arabera banatuta, eta honako hauek bereiziz: haurrak, langabetuak, adinekoak, desgaitasunen bat duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1285,7 +1274,18 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Proporción de personas con ingresos por unidad de consumo por debajo del 60% de la mediana autonómica  de los ingresos por unidad de consumo (escala OCDE modificada).</p>
+            
+<p>Gizarte-babeseko sistema batek benetan estaltzen dituen pertsonen proportzioa islatzen du 
+adierazleak. Datuak serie desberdinetan aurkezten dira, gizarte-babeseko sistemaren osagaiak 
+bereizteko. Kasu bakoitzerako, estaldura dagokion biztanleriaren ehuneko gisa adierazten da.</p>
+
+<p>Serie eskuragaiak:</p>
+
+<p><b>Langabezia-prestazioak jasotzen dituzten langabeen proportzioa:</b>
+Langabezia-prestazioen onuradunen eta langabe-kopuruaren arteko harremana</p>
+
+<p><b>Erretirorako legezko adina gainditu eta pentsioa jasotzen duten biztanleen proportzioa:</b>
+Pentsio bat (kotizaziopekoa edo ez kontributiboa) jasotzen duten erretirorako legezko adinetik gorakoen eta erretirorako legezko adinetik gorakoen arteko harremana</p>
 
           
         </td>
@@ -1301,13 +1301,28 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Formula teorikoa </th>
         <td>
           
-            <p><b>Proporción de la población que es perceptora de pensiones contributivas</b> </p>
-<p>$$PPPC^{t} = \frac{PPC^{t}}{P^{t}} \cdot 100$$ </p>
-<p>donde: </p>
-<p>$PPC^{t} =$ población perceptora de pensiones contributivas en el año $t$ </p>
-<p>$P^{t} =$ población a 1 de julio del año $t$</p>
-<p><b>Población perceptora de la Renta de Garantía de Ingresos (RGI)</b> </p>
-<p>Número de titulares y beneficiarios no titulares de la prestación</p>
+            
+<p><b>Langabezia-prestazioak jasotzen dituzten langabeen proportzioa</b></p>
+
+\[PP_{langabezia}^{t} = \frac{P_{langabezia\, sari}^{t}}{P_{langabezia}^{t}} \cdot 100\]
+
+<p>non:</p>
+
+<p>$P_{langabezia\, sari}^{t} =$ langabeziagatiko prestazioak jasotzen dituzten biztanleak $t$ urtean</p>
+
+<p>$P_{langabezia}^{t} =$ lanik gabe egondako biztanleak $t$ urtean</p>
+
+<p><br /></p>
+
+<p><b>Erretirorako legezko adina gainditu eta pentsioa jasotzen duten biztanleen proportzioa</b></p>
+
+\[PP_{erretiro}^{t} = \frac{P_{pensionista\,edad\, jubilación}^{t}}{P_{edad\, jubilación}^{t}} \cdot 100\]
+
+<p>donde:</p>
+
+<p>$P_{pentsiondun\,erretiro\, adina} =$ erretirorako legezko adina gainditu eta pentsioa jasotzen duten biztanleak $t$ urtean</p>
+
+<p>$PP_{erretiro\, adina}^{t} =$ erretirorako legezko adina gainditzen duen biztanleria utailaren 1ean $t$ urtean</p>
 
           
         </td>
@@ -1323,9 +1338,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Sexo</p>
+            <p>Sexua</p>
 
-<p>Territorio histórico</p>
+<p>Lurralde historikoa</p>
 
           
         </td>
@@ -1357,7 +1372,11 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Oharra </th>
         <td>
           
-            <p>No hay datos municipales para las prestaciones de RGI y AES en municipios con menos de 5 personas perceptoras.</p>
+            
+<p>“Langabezia-prestazioak jasotzen dituzten langabeen proportzioa” seriea tentuz hartu behar da, 
+eta ez da interpretatu behar prestazio bat jasotzen duten langabeen proportzio gisa; izan ere, 
+aldizkako langile finkoen bolumen handiak estaldura-tasa handia eragin dezake, baita 100 baino 
+handiagoa ere.</p>
 
           
         </td>
@@ -1435,7 +1454,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025 martxoa 03
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1450,7 +1469,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2025 martxoa 15
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1681,19 +1700,8 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Deskribapena </th>
-        <td>
-          
-            <p>El indicador refleja la proporción de personas efectivamente cubiertas por un sistema de protección social,  incluidos los niveles mínimos de protección social. También refleja los principales componentes de la protección social:  prestaciones infantiles y de maternidad, apoyo a las personas desempleadas, personas con discapacidad, víctimas  de accidentes laborales y personas mayores. La cobertura efectiva de la protección social se mide por el número  de personas que contribuyen activamente a un plan de seguro social o reciben prestaciones (contributivas o no contributivas).</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1702,7 +1710,22 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Justifikazioa </th>
         <td>
           
-            <p>El acceso a al menos un nivel básico de protección social durante todo el ciclo de vida es un derecho humano.  El principio de universalidad de la protección social evidencia la importancia de los sistemas de protección social  para garantizar condiciones de vida dignas a toda la población, durante toda su vida. La proporción de la población  cubierta por sistemas de protección social proporciona una indicación de hasta qué punto se logra la universalidad  y, por tanto, de cuán seguras son las condiciones de vida de la población.</p>
+            
+<p>Nazio Batuen adierazleak gizarte-babeseko sistema batek benetan estaltzen dituen 
+pertsonen proportzioa islatu nahi du, gizarte-babeseko gutxieneko mailak barne. 
+Gizarte-babesaren osagai nagusiak ere islatzen ditu (haurrentzako eta amatasuneko prestazioak, 
+langabeei, desgaitasuna duten pertsonei, lan-istripuen biktimei eta adinekoei laguntzea). 
+Gizarte-babesaren benetako estaldura neurtzen da gizarte-aseguruko plan bati modu aktiboan 
+laguntzen dioten edo prestazioak (kotizaziopekoak edo ez kontributiboak) jasotzen dituzten 
+pertsonen kopuruaren arabera.</p>
+
+<p>Bizi-ziklo osoan gutxienez gizarte-babeseko oinarrizko maila batera iristea giza eskubidea 
+da. Gizarte-babesaren unibertsaltasun-printzipioak agerian uzten du gizarte-babeseko sistemak 
+oso garrantzitsuak direla biztanle guztiei bizitza osoan bizi-baldintza duinak bermatzeko. 
+Gizarte-babeseko sistemek estalitako biztanleriaren proportzioak adierazten du zenbateraino 
+lortzen den unibertsaltasuna eta, beraz, zein seguruak diren biztanleriaren bizi-baldintzak.</p>
+
+<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
 
           
         </td>
@@ -1718,7 +1741,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible en la C.A de Euskadi cumple con los metadatos de Naciones Unidas para las series analizadas.</p>
+            <p>Euskal Autonomia Erkidegoan eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu aztertutako serieetarako.</p>
 
           
         </td>
@@ -1734,7 +1757,8 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p>UNSTAT, Proporción de niños que reciben prestaciones en efectivo por familia, por sexo (%)<a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&amp;seriesCode=SI_COV_CHLD&amp;areaCode=1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX">SI_COV_CHLD</a></p>
+            
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.3.1&amp;seriesCode=SI_COV_CHLD&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX"> Prestazioak eskudirutan jasotzen dituzten haurren/etxebizitzen proportzioa seme-alaba/familiengatik, sexuaren arabera(%) SI_COV_CHLD</a> UNSTATS</p>
 
           
         </td>
@@ -1755,7 +1779,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01a.pdf">Metadatos del indicador 1-3-1 (1) PDF</a><br /> <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01b.pdf">Metadatos del indicador 1-3-1 (2) PDF</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01a.pdf">Metadatuak 1-3-1 (1).pdf</a> (ingelesez bakarrik)</p>
+
+<p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-03-01b.pdf">Metadatuak 1-3-1 (2).pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -1823,7 +1849,7 @@ data-event-label="Change to indicator.global_metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -1843,7 +1869,7 @@ data-event-label="Change to indicator.global_metadata tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

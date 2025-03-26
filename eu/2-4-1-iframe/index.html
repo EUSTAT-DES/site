@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1141,10 +1141,10 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de:</p>
+<p>Maila desiragarria edo onargarria lortu den nekazaritza-azaleraren proportzioa:</p>
 <ul>
-  <li>valor de la producción agrícola por hectárea</li>
-  <li>ingresos agrícolas netos</li>
+  <li>hektareako ekoizpena</li>
+  <li>diru-sarrera garbiak</li>
 </ul>
 
           
@@ -1162,39 +1162,39 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p><b>Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de producción por hectárea</b></p>
+<p><b>Hektareako ekoizpen-maila nahigarria edo onargarria lortu den nekazaritza-azaleraren proportzioa</b></p>
 
-\[PSANR_{\text{deseable o aceptable}}^{t} = \frac{SANR_{\text{deseable}}^{t} + SANR_{\text{aceptable}}^{t}}{SANR_{\text{deseable}}^{t} + SANR_{\text{aceptable}}^{t} + SANR_{\text{insostenible}}^{t}}\]
+\[PSANR_{\text{nahigarria edo onargarria}}^{t} = \frac{SANR_{\text{nahigarria}}^{t} + SANR_{\text{onargarria}}^{t}}{SANR_{\text{nahigarria}}^{t} + SANR_{\text{onargarria}}^{t} + SANR_{\text{eutsiezin}}^{t}}\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$SANR_{\text{deseable}}^{t}$ = superficie agrícola correspondiente a aquellas explotaciones donde su producción por 
-hectárea es mayor o igual que 2/3 del percentil 90 de la producción por hectárea de las explotaciones de su mismo 
-territorio y orientación técnico-económica (agricultura, ganadería o mixta) en el año $t$</p>
+<p>$SANR_{\text{nahigarria}}^{t}$ = nekazaritza-azalera, hektareako ekoizpena lurralde bereko ustiategietako 
+hektareako produkzioaren 2/3 baino handiagoa edo handiagoa eta orientazio tekniko-ekonomikoa (nekazaritza, 
+abeltzaintza edo mistoa) duten ustiategiei dagokiena $t$ urtean</p>
 
-<p>$SANR_{\text{aceptable}}^{t}$ = superficie agrícola correspondiente a aquellas explotaciones donde su producción 
-por hectárea es menor que 2/3 pero mayor o igual que 1/3 del percentil 90 de la producción por hectárea de las 
-explotaciones de su mismo territorio y orientación técnico-económica (agricultura, ganadería o mixta) en el año $t$</p>
+<p>$SANR_{\text{onargarria}}^{t}$ = hektareako ekoizpena 2/3 baino txikiagoa baina bere lurralde bereko 
+ustiategietako hektareako ekoizpenaren 1/3 edo handiagoa eta orientazio tekniko-ekonomikoa (nekazaritza, 
+abeltzaintza edo mistoa) duten ustiategiei dagokien nekazaritza-azalera $t$ urtean</p>
 
-<p>$SANR_{\text{insostenible}}^{t}$ = superficie agrícola correspondiente a aquellas explotaciones donde su producción 
-por hectárea es menor que 1/3 del percentil 90 de la producción por hectárea de las explotaciones de su mismo 
-territorio y orientación técnico-económica (agricultura, ganadería o mixta) en el año $t$</p>
+<p>$SANR_{\text{eutsiezin}}^{t}$ = nekazaritza-azalera, hektareako ekoizpena lurralde bereko ustiategietako 
+hektareako ekoizpeneko 90garren pertzentilaren 1/3 baino txikiagoa eta orientazio tekniko-ekonomikoa (nekazaritza, 
+abeltzaintza edo mistoa) duten ustiategiei dagokiena $t$ urtean</p>
 
 <p><br /></p>
 
-<p><b>Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de ingresos netos</b></p>
+<p><b>Diru-sarrera garbien maila desiragarria edo onargarria lortu den nekazaritza-azaleraren proportzioa</b></p>
 
-\[PSANR_{\text{deseable o aceptable}}^{t} = 
-  \frac{SANR_{\text{deseable}}^{t} + SANR_{\text{aceptable}}^{t}}
-  {SANR_{\text{deseable}}^{t} + SANR_{\text{aceptable}}^{t} + SANR_{\text{insostenible}}^{t}}\]
+\[PSANR_{\text{nahigarria edo onargarria}}^{t} = 
+  \frac{SANR_{\text{nahigarria}}^{t} + SANR_{\text{onargarria}}^{t}}
+  {SANR_{\text{nahigarria}}^{t} + SANR_{\text{onargarria}}^{t} + SANR_{\text{eutsiezin}}^{t}}\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$SANR_{\text{deseable}}^t$: Superficie agrícola correspondiente a aquellas explotaciones donde sus ingresos netos han sido positivos en los años $t$, $t-1$ y $t-2$</p>
+<p>$SANR_{\text{nahigarria}}^t$: Diru-sarrera garbiak positiboak izan dituzten ustiategiei dagokien nekazaritza-azalera $t$, $t-1$ eta $t-2$ urteetan</p>
 
-<p>$SANR_{\text{aceptable}}^t$: Superficie agrícola correspondiente a aquellas explotaciones donde sus ingresos netos han sido positivos en al menos uno de los años $t$, $t-1$ y $t-2$, pero no en todos ellos</p>
+<p>$SANR_{\text{onargarria}}^t$: Diru-sarrera garbiak positiboak izan dituzten ustiategiei dagokien nekazaritza-azalera $t$, $t-1$ eta $t-2$ urteetako batean gutxienez, baina ez guztietan</p>
 
-<p>$SANR_{\text{insostenible}}^t$: Superficie agrícola correspondiente a aquellas explotaciones donde sus ingresos netos no han sido positivos en ninguno de los años $t$, $t-1$ y $t-2$</p>
+<p>$SANR_{\text{eutsiezin}}^t$: Diru-sarrera garbiak positiboak izan ez diren ustiategietako nekazaritza-azalera ez $t$, ez $t-1$ eta ez $t-2$ urtean</p>
 
           
         </td>
@@ -1232,8 +1232,8 @@ territorio y orientación técnico-económica (agricultura, ganadería o mixta) 
         <td>
           
             
-<p>A la hora de interpretar la serie “Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o  aceptable de producción por hectárea” se debe tener en cuenta que es un indicador relativo, ya que  el nivel de productividad de una explotación no depende únicamente de cómo es su producción por hectárea,  sino también de cómo es la producción por hectárea de las explotaciones de su mismo territorio y orientación  técnico-económica (agricultura, ganadería o mixta).
-A la hora de interpretar la serie “Proporción de la superficie agrícola donde se ha alcanzado un nivel deseable o aceptable de ingresos netos” se debe tener en cuenta que es un indicador absoluto, ya que el  nivel de rentabilidad de una explotación depende exclusivamente de sus ingresos netos en los últimos tres años.</p>
+<p>“Hektareako ekoizpen-maila desiragarria edo onargarria lortu duen nekazaritza-azaleraren proportzioa”  seriea interpretatzeko orduan, kontuan hartu behar da adierazle erlatiboa dela; izan ere, ustiategi  baten produktibitate-maila ez dago soilik hektareako duen ekoizpenaren mende, baita lurralde bereko  ustiategien hektareako ekoizpena eta orientazio tekniko-ekonomikoa ere (nekazaritza, abeltzaintza edo mistoa).
+“Diru-sarrera garbien maila desiragarria edo onargarria lortu den nekazaritza-azaleraren proportzioa”  seriea interpretatzeko orduan, kontuan hartu behar da adierazle absolutua dela, ustiategi baten  errentagarritasun-maila azken hiru urteetan izan dituen diru-sarrera garbien mende baitago soilik.</p>
 
           
         </td>
@@ -1322,7 +1322,7 @@ A la hora de interpretar la serie “Proporción de la superficie agrícola dond
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025 martxoa 10
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1337,7 +1337,7 @@ A la hora de interpretar la serie “Proporción de la superficie agrícola dond
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2025 martxoa 17
+            2024 uztaila 29
           
         </td>
         </tr>
@@ -1469,32 +1469,28 @@ A la hora de interpretar la serie “Proporción de la superficie agrícola dond
         <td>
           
             
-<p>Los enfoques para definir la agricultura sostenible varían 
-en términos de su cobertura de las tres dimensiones principales de la 
-sostenibilidad, es decir, económica, ambiental y social, y en términos 
-de la escala que se utiliza para evaluar la sostenibilidad, es decir, desde 
-escalas de campo y granja hasta escalas nacional y global. Algunos enfoques
-consideran diferentes características de la sostenibilidad, por ejemplo, 
-si las prácticas actuales son económicamente viables, respetuosas con el 
-medio ambiente y socialmente deseables. Otros enfoques se centran en prácticas
-particulares como la agricultura orgánica, regenerativa o de bajos insumos y 
-pueden equipararlas con la agricultura sostenible.</p>
+<p>Nekazaritza jasangarria definitzeko ikuspegiak aldatu egiten dira iraunkortasunaren hiru dimentsio 
+nagusien estaldurari dagokionez, hau da, ekonomikoa, ingurumenekoa eta soziala, eta iraunkortasuna 
+ebaluatzeko erabiltzen den eskalari dagokionez, hau da, landa-eskalatik eta baserri-eskalatik eskala 
+nazional eta globaleraino. Ikuspegi batzuek iraunkortasunaren ezaugarri desberdinak hartzen dituzte 
+kontuan; adibidez, egungo praktikak ekonomikoki bideragarriak diren, ingurumena errespetatzen duten 
+eta sozialki desiragarriak diren. Beste ikuspegi batzuk praktika berezietan oinarritzen dira, hala 
+nola nekazaritza organikoa, birsortzailea edo intsumo txikikoa, eta nekazaritza jasangarriarekin 
+pareka ditzakete.</p>
 
-<p>El indicador 2.4.1 de los ODS se basa en un conjunto de subindicadores 
-que cubren las tres dimensiones de la sostenibilidad:</p>
+<p>GJHen 2.4.1 adierazlea iraunkortasunaren hiru dimentsioak estaltzen dituzten azpiadierazleetan oinarritzen da:</p>
 <ul>
-  <li>Valor de la producción agrícola por hectárea</li>
-  <li>Ingresos agrícolas netos</li>
-  <li>Mecanismos de mitigación de riesgos</li>
-  <li>Prevalencia de la degradación del suelo</li>
-  <li>Variación en la disponibilidad de agua</li>
-  <li>Gestión de fertilizantes</li>
-  <li>Gestión de pesticidas</li>
-  <li>Uso de prácticas que apoyan la agrobiodiversidad</li>
-  <li>Salarios en la agricultura</li>
-  <li>Escala de experiencia de inseguridad alimentaria (FIES)</li>
-  <li>Tenencia de la tierra</li>
-  <li>Derechos de tenencia seguros de la tierra</li>
+  <li>Nekazaritza-ekoizpenaren balioa hektareako</li>
+  <li>Nekazaritzako diru-sarrera garbiak</li>
+  <li>Arriskuak arintzeko mekanismoak</li>
+  <li>Lurzoruaren degradazioaren prebalentzia</li>
+  <li>Ur-erabilgarritasunaren aldaketa</li>
+  <li>Ongarrien kudeaketa</li>
+  <li>Pestiziden kudeaketa</li>
+  <li>Agrobioaniztasuna babesten duten praktikak erabiltzea</li>
+  <li>Soldatak nekazaritzan</li>
+  <li>Elikagaien segurtasun-ezaren esperientzia-eskala</li>
+  <li>Lurrerako jabetza-eskubideak bermatzea</li>
 </ul>
 
           
@@ -1511,7 +1507,7 @@ que cubren las tres dimensiones de la sostenibilidad:</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible cumple parcialmente con los metadatos del indicador de Naciones Unidas.</p>
+            <p>Eskuragarri dagoen adierazleak partzialki betetzen ditu Nazio Batuen adierazlearen metadatuak.</p>
 
           
         </td>
@@ -1527,7 +1523,7 @@ que cubren las tres dimensiones de la sostenibilidad:</p>
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.4.1&amp;seriesCode=AG_LND_SUST_PRXCSS&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Progreso hacia una agricultura productiva y sostenible, puntaje de estado actual AG_LND_SUST_PRXCSS</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.4.1&amp;seriesCode=AG_LND_SUST_PRXCSS&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Nekazaritza produktibo eta jasangarri bateranzko aurrerapena, egungo egoeraren puntajea AG_LND_SUST_PRXCSS</a> UNSTATS</p>
 
           
         </td>
@@ -1548,9 +1544,9 @@ que cubren las tres dimensiones de la sostenibilidad:</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01.pdf">Metadatos 2-4-1 (1).pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01.pdf">Metadatuak 2-4-1 (1).pdf</a> (ingelesez bakarrik)</p>
 
-<p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01proxy.pdf">Metadatos 2-4-1 (2).pdf</a> (solo en inglés)</p>
+<p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-02-04-01proxy.pdf">Metadatuak 2-4-1 (2).pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -1618,7 +1614,7 @@ que cubren las tres dimensiones de la sostenibilidad:</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -1638,7 +1634,7 @@ que cubren las tres dimensiones de la sostenibilidad:</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nEste indicador se compone de dos series temporales:\n\n- Indicador de anomalías en los precios de los alimentos\n- Índice de precios de consumo de los alimentos\n");
+        var currentValue = normalizeCurrentValue('definicion', "<p>Food Consumer Price Index and annual variation rate</p>\n<p>This indicator is composed of two time series:<br> - Consumer Price Index for Food<br> - Year-on-year variation rate in food consumer prices</p>");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b>Indicador de anomalías en los precios de los alimentos</b>\n\n$$IFPA_t = \\frac{1}{m} \\sum_{i=1}^{m} IFPA_{tm}$$\n\ndonde:\n\n$IFPA_{tm}$ = indicador de anomalías en los precios de los alimentos en el año $t$ y el mes $m$\n\n\n<br>\n\n<b>Índice de precios de consumo de los alimentos</b>\n\n$$IPC_{alimentos}^{t} = \\frac{1}{12} \\cdot \\sum_{m=1}^{12} IPC_{alimentos,m}^{t}$$\n\ndonde:\n\n$IPC_{alimentos,m}^{t}$ índice de precios de consumo de los alimentos del mes $m$ del año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Consumer Price Index for Food</b>\n\n$$IPC_{food}^{t} = \\frac{1}{12} \\cdot \\sum_{m=1}^{12} IPC_{food,m}^{t}$$\n\nwhere:\n\n$IPC_{food,m}^{t}$ consumer price index for food for the month $m$ of year $t$\n\n\n<b>Year-on-year variation rate in food consumer prices</b>\n\n$$TVIPC_{t} = \\left( \\frac{IPC_{food}^{t}}{IPC_{food}^{t-1}} - 1 \\right) \\cdot 100$$\n\n$IPC_{food,m}^{t}$ consumer price index for food in the year $t$\n\n$IPC_{food,m}^{t-1}$ consumer price index for food in the year $t-1$, considering that annual \nconsumer price indices are calculated as the arithmetic mean of the monthly consumer price indices.\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Productos: alimentos (todos), cereales y derivados, pan, huevos, leche\naceites y grasas, frutas frescas y legumbres y hortalizas frescas\n\nTerritorio histórico\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Products: food (all), bread and cereals\n\nProvince\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -634,7 +634,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('texto_oceca', "\nLa serie \"Índice de precios de consumo de los alimentos\" está calculada utilizando una  metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
+        var currentValue = normalizeCurrentValue('texto_oceca', "<img src=\"/site/assets/img/oceca/ocecas_image.png\" style=\"width: 200px; float: left; margin-right: 10px;\" alt=\"Logotipo OCECAS\"> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
         var propertyEditor = editor.getEditor('root.texto_oceca');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "El indicador de anomalías de los precios de los alimentos (IFPA) \nidentifica los precios de mercado que son anormalmente altos. La IFPA \nse basa en una tasa de crecimiento compuesta ponderada que representa el crecimiento \nde los precios tanto dentro del año como a lo largo del año.\n\nEl indicador evalúa directamente \nel crecimiento de los precios durante un mes particular durante muchos años, teniendo \nen cuenta la estacionalidad en los mercados agrícolas y la inflación, lo que permite \nresponder a la pregunta de si un cambio en el precio es anormal o no para un período determinado.\n\nEl indicador es sólo una guía para comprender la dinámica del mercado. \nComo tal, no se puede confiar en él como único elemento para determinar si el \nprecio de un alimento en un mercado particular en un momento dado es anormalmente\n alto o bajo debido a los efectos directos de las políticas locales. Los resultados \ndeben sopesarse con otra información disponible sobre los fundamentos del mercado, \nel contexto macroeconómico y los shocks externos.\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nThe Food Price Anomaly Indicator (FPAI) identifies abnormally high market prices. \nThe FPIAI is based on a weighted compound growth rate that represents both intra- \nand year-over-year price growth.\n\nThe indicator directly assesses price growth during a particular month over many years, \ntaking into account seasonality in agricultural markets and inflation, thereby answering \nthe question of whether a price change is abnormal for a given period.\n\nThe indicator is only a guide to understanding market dynamics. As such, it cannot be relied \nupon as the sole indicator to determine whether the price of a food product in a particular \nmarket at a given time is abnormally high or low due to the direct effects of local policies. \nThe results must be weighed against other available information on market fundamentals, the \nmacroeconomic context, and external shocks.\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "La serie \"Indicador de anomalías de los precios de los alimentos\" cumple con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "The available indicator does not comply with the UN indicator metadata, but provides  complementary information.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.c.1&seriesCode=AG_FPA_HMFP&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ABNORMAL\">Proporción de países que registran precios de los alimentos anormalmente altos o moderadamente altos, según el Indicador de anomalías de los precios de los alimentos (%) AG_FPA_HMFP</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=2.c.1&seriesCode=AG_FPA_HMFP&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ABNORMAL\">Proportion of countries experiencing abnormally high or moderately high food prices, according to the Food Price Anomaly Indicator (%) AG_FPA_HMFP</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-0C-01.pdf\">Metadata 2-c-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-02-0C-01.pdf\">Metadata 2-c-1.pdf</a>");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-19");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-17");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

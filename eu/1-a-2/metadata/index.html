@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250324225603">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250326071335">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción del gasto de las administraciones públicas en la C.A. de Euskadi que se dedica a servicios\nesenciales: educación, salud y protección social (grupos funcionales 09, 07 y 10 de la Clasificación \nde Funciones del Gobierno -COFOG-, utilizada a nivel \ninternacional para clasificar los propósitos de las actividades gubernamentales)\n");
+        var currentValue = normalizeCurrentValue('definicion', "Funtsezko zerbitzuetara (hezkuntza, osasuna eta gizarte-babesa) bideratzen den Euskal AEko \nherri-administrazioen gastuaren proportzioa (Jaurlaritzaren Funtzioen Sailkapeneko 09, \n07 eta 10 funtzio-taldeak, gobernu-jardueren helburuak sailkatzeko nazioartean erabiltzen direnak)  \n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PE_{t} = \\frac{TE_{t} + TH_{t} + TS_{t}}{TG_{t}} \\cdot 100$$\n\ndonde:\n\n$PE_{t}$ = gasto del gobierno en servicios esenciales (educación, salud y protección social) como porcentaje del gasto total del gobierno en el año fiscal $t$\n\n$TE_{t}$ = gasto total del gobierno en educación en el año fiscal $t$\n\n$TH_{t}$ = gasto total del gobierno en salud en el año fiscal $t$\n\n$TS_{t}$ = gasto total del gobierno en protección social en el año fiscal $t$\n\n$TG_{t}$ = gasto total del gobierno en el año fiscal $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PE_{t} = \\frac{TE_{t} + TH_{t} + TS_{t}}{TG_{t}} \\cdot 100$$\n\ndonde:\n\n$PE_{t}$ = gobernuaren gastua funtsezko zerbitzuetan (hezkuntza, osasuna eta gizarte-babesa), fiskaleko gobernuaren gastu osoaren ehuneko gisa, $t$ urtean\n\n$TE_{t}$ = gobernuak hezkuntzan egiten duen guztizko gastua, $t$ urte fiskalean\n\n$TH_{t}$ = gobernuak osasunean egiten duen guztizko gastua, $t$ urte fiskalean\n\n$TS_{t}$ = gobernuak gizarte-babesean egiten duen guztizko gastua, $t$ urte fiskalean\n\n$TG_{t}$ = gobernuaren guztizko gastua, $t$ urte fiskalean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Servicios esenciales: educación, salud, protección social\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Funtsezko zerbitzuak: hezkuntza, osasuna, gizarte-babesa\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nEl indicador se calcula para el gobierno general, que incluye diferentes unidades\ngubernamentales: gobierno central, gobierno autonómico, gobiernos forales y gobiernos locales.\n\nLa Clasificación de Funciones del Gobierno (COFOG), desarrollada por la \nOrganización para la Cooperación y el Desarrollo Económicos (OCDE) y publicada \npor la División de Estadística de las Naciones Unidas, estructura el gasto público\nen 10 grupos funcionales:\n\n - 01 Servicios públicos generales\n - 02 Defensa\n - 03 Orden público y seguridad\n - 04 Asuntos económicos\n - 05 Protección del medio ambiente\n - 06 Vivienda y servicios comunitarios\n - 07 Salud\n - 08 Ocio, cultura y religión\n - 09 Educación\n - 10 Protección social\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nAdierazlea gobernu orokorrerako kalkulatzen da, gobernu-unitate desberdinak barne hartzen dituena: \ngobernu zentrala, gobernu autonomikoa, foru gobernuak eta tokiko gobernuak.\n\nGobernuaren Funtzioen Sailkapenak (COFOG), Ekonomia Lankidetza eta Garapenerako Erakundeak (ELGA) \ngaratu eta Nazio Batuen Estatistika Atalak argitaratutakoak, gastu publikoa 10 talde funtzionaletan \negituratzen du:\n\n- 01 Zerbitzu publiko orokorrak\n- 02 Defentsa\n- 03 Ordena publikoa eta segurtasuna\n- 04 Gai ekonomikoak\n- 05 Ingurumena babestea\n- 06 Etxebizitza eta zerbitzu komunitarioak\n- 07 Osasuna\n- 08 Aisia, kultura eta erlijioa\n- 09 Hezkuntza\n- 10 Gizarte-babesa\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "El indicador se utiliza para evaluar el gasto del gobierno en servicios \nesenciales (educación, salud y protección social) en relación con el monto del \ngasto gubernamental total. Dado que proviene de un marco internacional, \nel Manual de estadísticas de finanzas públicas (MEFP 2014), proporciona a los \nanalistas un conjunto de datos comparable entre países y garantiza el establecimiento \nde conclusiones analíticas sólidas para respaldar el seguimiento de los ODS \nutilizando datos fiscales.\n\nUna alta proporción del gasto público en servicios esenciales (educación, \nsalud y protección social) demuestra una alta prioridad gubernamental para \nestas funciones de gasto.\n\nPara informar este indicador, se considera que el gobierno general es el \nnivel más apropiado de cobertura institucional, ya que abarcará las unidades \ngubernamentales pertinentes, incluidos los gobiernos locales, ya que en muchos \npaíses se debe considerar la descentralización de estas categorías de gasto. \nUn país puede tener un gobierno central; varios gobiernos estatales, \nprovinciales o regionales; y muchos gobiernos locales, y el MEFP 2014 recomienda \nque se compilen estadísticas para todas esas unidades de gobierno general.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Adierazlea gobernuak funtsezko zerbitzuetan (hezkuntza, osasuna eta gizarte-babesa) \negindako gastua ebaluatzeko erabiltzen da, gobernuaren guztizko gastuaren zenbatekoari \ndagokionez. Nazioarteko esparru batetik datorrenez, Finantza Publikoen Estatistiken \nEskuliburuak (FPEE 2014) herrialdeen arteko datu alderagarriak ematen dizkie analistei, \neta GJHen jarraipena datu fiskalak erabiliz egiteko ondorio analitiko sendoak ezartzea \nbermatzen du.\n\nFuntsezko zerbitzuetako (hezkuntza, osasuna eta gizarte-babesa) gastu publikoaren proportzio \nhandi batek erakusten du gobernuak lehentasun handia duela gastu-funtzio horietarako.\n\nAdierazle horren berri emateko, uste da gobernu orokorra dela estaldura instituzionalaren \nmailarik egokiena; izan ere, dagozkion gobernu-unitateak hartuko ditu, tokiko gobernuak barne, \nherrialde askotan kontuan hartu behar baita gastu-kategoria horien deszentralizazioa. Herrialde \nbatek gobernu zentral bat izan dezake; estatuetako, probintzietako edo eskualdeetako hainbat \ngobernu; eta tokiko gobernu asko, eta MEFP 2014k gomendatzen du estatistikak biltzea gobernu \norokorreko unitate horietarako guztietarako.\n\nIturria: Nazio Batuen Estatistika Dibisioa  \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible en la C.A de Euskadi utiliza la clasificación COFOG,  que no cumple con los metadatos del indicador de Naciones Unidas pero  aporta información similar. El indicador mundial utiliza el  manual de estadísticas  de finanzas gubernamentales (MEFP) donde el concepto de gasto se aplica de manera  ligeramente diferente.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Euskal Autonomia Erkidegoan eskuragarri dagoen adierazleak COFOG sailkapena erabiltzen du.  Sailkapen horrek ez ditu betetzen Nazio Batuen adierazlearen metadatuak, baina antzeko  informazioa ematen du. Munduko adierazleak gobernu finantzen estatistiken eskuliburua  (GFEE) erabiltzen du, non gastuaren kontzeptua pixka bat desberdin aplikatzen den.  ");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -666,7 +666,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_ESSRV&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nProporción del gasto público total en servicios esenciales (%) SG_XPD_ESSRV</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_PROT&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nProporción del gasto público total en servicios esenciales, protección social (%) SG_XPD_PROT</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_EDUC&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nProporción del gasto público total en servicios esenciales, educación (%) SG_XPD_EDUC</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_HLTH&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nProporción del gasto público total en servicios esenciales, salud (%) SG_XPD_HLTH</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_ESSRV&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nFuntsezko zerbitzuetako guztizko gastu publikoaren proportzioa (%) SG_XPD_ESSRV</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_PROT&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nFuntsezko zerbitzuetako guztizko gastu publikoaren proportzioa, gizarte-babesa (%) SG_XPD_PROT</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_EDUC&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nFuntsezko zerbitzuetako guztizko gastu publikoaren proportzioa, hezkuntza (%) SG_XPD_EDUC</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=1.a.2&seriesCode=SG_XPD_HLTH&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nFuntsezko zerbitzuetako guztizko gastu publikoaren proportzioa, osasuna (%) SG_XPD_HLTH</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf\">Metadatos 1-a-2 (1).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf\">Metadatos 1-a-2 (2).pdf</a> (solo en inglés)\n");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02a.pdf\">Metadatuak 1-a-2 (1).pdf</a> (ingelesez bakarrik)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-01-0a-02b.pdf\">Metadatuak 1-a-2 (2).pdf</a> (ingelesez bakarrik)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -718,7 +718,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-07");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-16");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250324225603'></script>
+<script src='/site/assets/js/sdg.js?v=20250326071335'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250324225603"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250326071335"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
