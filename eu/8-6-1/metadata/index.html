@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250328095122">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250328152521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPNINI_{15-24}^{t} = \\frac{PNINI_{15-24}^{t}}{P_{15-24}^{t}} \\cdot 100$$\n\ndonde:\n\n$PNINI_{15-24}^{t} =$ población entre 15 y 24 años que no tiene empleo ni ha realizado estudios o formación (reglada o no reglada) en las últimas cuatro semanas en el añoo $t$\n\n$P_{15-24}^{t} =$ población entre 15 y 24 años en el año $t$ <br>\n\nteniendo en cuenta que cada una de estas poblaciones se calcula como la media aritmética de los cuatro trimestres del año\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPNINI_{15-24}^{t} = \\frac{PNINI_{15-24}^{t}}{P_{15-24}^{t}} \\cdot 100$$\n\ndonde:\n\n$PNINI_{15-24}^{t} =$ población entre 15 y 24 años que no tiene empleo ni ha realizado estudios o formación (reglada o no reglada) en las últimas cuatro semanas en el añoo $t$\n\n$P_{15-24}^{t} =$ población entre 15 y 24 años en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa proporción de jóvenes que no tienen empleo, educación ni formación \n(tasa de jóvenes que no estudian ni reciben formación) proporciona una medida de \nlos jóvenes que están fuera del sistema educativo, que no reciben formación ni empleo \ny, por lo tanto, sirve como una medida más amplia de los jóvenes que pueden \ningresar al mercado laboral que el desempleo juvenil. \n\nIncluye a los jóvenes que no se animan a trabajar, así como a aquellos que \nestán fuera de la fuerza laboral debido a una discapacidad o por su participación en \nlas tareas domésticas, entre otras razones. \n\nLa tasa de jóvenes que no estudian ni reciben formación también es una mejor medida \ndel universo actual de jóvenes que pueden ingresar al mercado laboral en comparación \ncon la tasa de inactividad juvenil, ya que esta última incluye a aquellos jóvenes \nque están fuera de la fuerza laboral y están recibiendo educación, y por lo tanto \nestán mejorando sus habilidades y calificaciones.\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa proporción de jóvenes que no tienen empleo, educación ni formación \n(tasa de jóvenes que no estudian ni reciben formación) proporciona una medida de \nlos jóvenes que están fuera del sistema educativo, que no reciben formación ni empleo \ny, por lo tanto, sirve como una medida más amplia de los jóvenes que pueden \ningresar al mercado laboral que el desempleo juvenil. \n\nIncluye a los jóvenes que no se animan a trabajar, así como a aquellos que \nestán fuera de la fuerza laboral debido a una discapacidad o por su participación en \nlas tareas domésticas, entre otras razones. \n\nLa tasa de jóvenes que no estudian ni reciben formación también es una mejor medida \ndel universo actual de jóvenes que pueden ingresar al mercado laboral en comparación \ncon la tasa de inactividad juvenil, ya que esta última incluye a aquellos jóvenes \nque están fuera de la fuerza laboral y están recibiendo educación, y por lo tanto \nestán mejorando sus habilidades y calificaciones.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-08-06-01.pdf\">Metadata 8-6-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-08-06-01.pdf\">Metadatos 8-6-1.pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -756,7 +756,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-25");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-28");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -884,7 +884,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250328095122'></script>
+<script src='/site/assets/js/sdg.js?v=20250328152521'></script>
 
 
 <script>
@@ -904,7 +904,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250328095122"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250328152521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

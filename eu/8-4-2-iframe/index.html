@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250328095122">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250328152521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1631,21 +1631,29 @@ importaciones y exportaciones físicas.</p>
 
 <p>$Exp^t =$ Exportaciones en el año $t$</p>
 
+<p><br /></p>
+
 <p><b>Consumo doméstico de materiales per cápita:</b></p>
 
 \[CMDPC^{t} = \frac{{CMD^{t}}}{P^{t}}\]
 
 <p>donde:</p>
 
-<p>$P{t} =$ población a 1 de julio del año $t$</p>
+<p>$CMD^{t} =$ consumo doméstico de materiales en el año $t$</p>
+
+<p>$P^{t} =$ población a 1 de julio del año $t$</p>
+
+<p><br /></p>
 
 <p><b>Consumo doméstico de materiales per cápita por unidad de PIB:</b></p>
 
-\[CMDPIB^{t} = \frac{{CMD^{t}}}{PIB_{15}^{t}}\]
+\[CMDPIB^{t} = \frac{{CMD^{t}}}{PIB_{2022}^{t}}\]
 
 <p>donde:</p>
 
-<p>$PIB_{15}^{t} =$ Producto interior bruto en volumen encadenado con referencia 2015 
+<p>$CMD^{t} =$ consumo doméstico de materiales en el año $t$</p>
+
+<p>$PIB_{2022}^{t} =$ Producto interior bruto en volumen encadenado con referencia 2022 
 en millones de euros en el año $t$</p>
 
           
@@ -1765,7 +1773,7 @@ en millones de euros en el año $t$</p>
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2024 azaroa 25
+            2025 martxoa 28
           
         </td>
         </tr>
@@ -1911,6 +1919,8 @@ puede interpretar como equivalente de residuos a largo plazo.</p>
 describe el nivel promedio de uso de materiales en una economía (un indicador 
 de presión ambiental) y también se lo conoce como perfil metabólico.</p>
 
+<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+
           
         </td>
         </tr>
@@ -1951,7 +1961,7 @@ de presión ambiental) y también se lo conoce como perfil metabólico.</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-08-04-02.pdf">Metadata 8-4-2.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-08-04-02.pdf">Metadatos 8-4-2.pdf</a> (solo en inglés)</p>
 
           
         </td>
@@ -2019,7 +2029,7 @@ de presión ambiental) y también se lo conoce como perfil metabólico.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250328095122'></script>
+<script src='/site/assets/js/sdg.js?v=20250328152521'></script>
 
 
 <script>
@@ -2039,7 +2049,7 @@ de presión ambiental) y también se lo conoce como perfil metabólico.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250328095122"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250328152521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
