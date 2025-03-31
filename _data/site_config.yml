@@ -186,9 +186,6 @@ menu:
   - path: /reporting-status
     translation_key: menu.reporting_status
     dropdown: []
-  - path: /faq
-    translation_key: menu.faq
-    dropdown: []  
   - translation_key: menu.desagregaciones
     dropdown:
       - path: territorio/
@@ -197,6 +194,9 @@ menu:
         translation_key: menu.municipal
       - path: sexo/
         translation_key: menu.sexo   
+  - path: /faq
+    translation_key: menu.faq
+    dropdown: []  
 metadata_edit_url: metadata
 metadata_tabs:
   - scope: national
