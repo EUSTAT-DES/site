@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250328152521">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331074521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -217,8 +217,6 @@ layout-indicator
     <a class="nav-link" href="/site/en/">Home</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/faq">FAQ</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     menu.desagregaciones
                 </a>
@@ -229,7 +227,9 @@ layout-indicator
 </li><li class=" ">
     <a class="dropdown-item" href="/site/en/sexo/">menu.sexo</a>
 </li></ul>
-            </li></ul>
+            </li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/faq">FAQ</a>
+</li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -962,7 +962,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Available indicator </th>
         <td>
           
-            <p>GRAFICO.9-4-1-titulo</p>
+            <p>Intensidad de las emisiones atmosféricas de la industria (<b>Indicador UE sdg_09_70</b>)</p>
 
           
         </td>
@@ -1032,13 +1032,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[PVABEPM_{manufacturero}^{t} = \frac{EPM_{manufacturero}^{t}}{VAB__{manufacturero\, 2022}^{t}}\]
+\[PVABEPM_{manufacturero}^{t} = \frac{EPM_{manufacturero}^{t}}{VAB_{manufacturero\, 2022}^{t}}\]
 
 <p>donde:</p>
 
 <p>$EPM_{manufacturero}^{t} =$ emisiones de partículas en suspensión del sector manufacturero en el año $t$</p>
 
-<p>$VAB__{manufacturero\, 2022}^{t} =$ valor añadido bruto del sector manufacturero en volumen encadenado con referencia 2022 en el año  $t$</p>
+<p>$VAB_{manufacturero\, 2022}^{t} =$ valor añadido bruto del sector manufacturero en volumen encadenado con referencia 2022 en el año  $t$</p>
 
           
         </td>
@@ -1180,7 +1180,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Metadata last updated </th>
         <td>
           
-            February 10, 2025
+            March 31, 2025
           
         </td>
         </tr>
@@ -1342,6 +1342,8 @@ mayores niveles en los pulmones y pueden ser más tóxicas.</p>
 <p>La intensidad de las emisiones 
 se calcula dividiendo las emisiones de PM del sector por su valor añadido bruto (VAB), que 
 se define como la producción (a precios básicos) menos el consumo intermedio (a precios de comprador).</p>
+
+<p>Fuente: Eurostat</p>
 
           
         </td>
@@ -1510,7 +1512,7 @@ se define como la producción (a precios básicos) menos el consumo intermedio (
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250328152521'></script>
+<script src='/site/assets/js/sdg.js?v=20250331074521'></script>
 
 
 <script>
@@ -1530,7 +1532,7 @@ se define como la producción (a precios básicos) menos el consumo intermedio (
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250328152521"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250331074521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

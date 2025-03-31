@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250328152521">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331074521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -217,8 +217,6 @@ layout-indicator
     <a class="nav-link" href="/site/">Inicio</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/site/reporting-status">Informe de seguimiento</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/faq">Acerca de</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Datos desagregados
                 </a>
@@ -229,7 +227,9 @@ layout-indicator
 </li><li class=" ">
     <a class="dropdown-item" href="/site/sexo/">Sexo</a>
 </li></ul>
-            </li></ul>
+            </li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">Acerca de</a>
+</li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -692,8 +692,19 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Indicador disponible </th>
+        <td>
           
+            <p>No hay datos disponibles para este indicador</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -804,8 +815,18 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Metadatos actualizados por última vez </th>
+        <td>
           
+            31 de marzo de 2025
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -865,6 +886,37 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Justificación </th>
+        <td>
+          
+            
+<p>Los elevados costos económicos y sociales que soportan los migrantes se reconocen 
+cada vez más como graves impedimentos para alcanzar resultados de desarrollo 
+sostenible derivados de la migración internacional. Un papel fundamental de las 
+políticas migratorias es reducir los costos financieros de contratación que 
+incurren los trabajadores migrantes que buscan empleo en el extranjero.</p>
+
+<p>Los costos de contratación que pagan los trabajadores migrantes a las agencias 
+de contratación, además de las comisiones que pagan los empleadores, suponen 
+una importante carga para los ingresos y las remesas de los migrantes pobres.
+ Desvían el dinero que envían sus familias a agencias de contratación y 
+prestamistas ilícitos. Casi 10 millones de personas utilizan los canales 
+regulares para migrar en busca de empleo cada año. Un gran número de 
+ellas paga comisiones ilegales a las agencias de contratación.</p>
+
+<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -880,13 +932,19 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Metadatos del indicador de Naciones Unidas/Unión Europea </th>
+        <td>
           
-      
-      
-      
-        
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-10-07-01.pdf">Metadatos 10-7-1.pdf</a> (solo en inglés)</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -994,7 +1052,7 @@ data-event-label="Change to indicator.global_metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250328152521'></script>
+<script src='/site/assets/js/sdg.js?v=20250331074521'></script>
 
 
 <script>
@@ -1014,7 +1072,7 @@ data-event-label="Change to indicator.global_metadata tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250328152521"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250331074521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250328152521">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331074521">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -217,8 +217,6 @@ layout-indicator
     <a class="nav-link" href="/site/">Inicio</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/site/reporting-status">Informe de seguimiento</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/faq">Acerca de</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Datos desagregados
                 </a>
@@ -229,7 +227,9 @@ layout-indicator
 </li><li class=" ">
     <a class="dropdown-item" href="/site/sexo/">Sexo</a>
 </li></ul>
-            </li></ul>
+            </li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">Acerca de</a>
+</li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -692,59 +692,18 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Indicador disponible </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Índice de incidencia de accidentes con baja en jornada/in itinere, según gravedad</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-  
-  
-  
-  
-  
-  
   
       
       
@@ -754,6 +713,142 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Meta </th>
+        <td>
+          
+            <p>8.8 Proteger los derechos laborales y promover un entorno de trabajo seguro y sin riesgos para todos los trabajadores, incluidos los trabajadores migrantes, en particular las mujeres migrantes y las personas con empleos precarios</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Objetivo </th>
+        <td>
+          
+            <p>8 Promover el crecimiento económico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definición del indicador </th>
+        <td>
+          
+            <p>Índice de incidencia de accidentes con baja en jornada/in itinere, según gravedad</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Fórmula teórica </th>
+        <td>
+          
+            
+<p>$IACC_{gravedad}^{t} = \frac{ACC_{gravedad}^{t}}{P_{OIT}^{t}} \cdot 100.000$$</p>
+
+<p>donde:</p>
+
+<p>$ACC_{gravedad}^{t} =$ número de accidentes con baja en jornada/in itinere, según gravedad en el año $t$</p>
+
+<p>$P_{OIT} =$ personas empleadas en el año $t$</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Desagregaciones disponibles </th>
+        <td>
+          
+            
+<p>Gravedad: mortal, no mortal</p>
+
+<p>Sexo</p>
+
+<p>Territorio histórico</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Periodicidad </th>
+        <td>
+          
+            <p>Anual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">OCECA </th>
+        <td>
+          
+            <p><img src="/site/assets/img/oceca/ocecas_image.png" style="width: 200px; float: left; margin-right: 10px;" alt="Logotipo OCECAS" /> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
         
           
       
@@ -806,6 +901,21 @@ data-event-label="Change to indicator.global_metadata tab"
       
         
           
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadatos actualizados por última vez </th>
+        <td>
+          
+            31 de marzo de 2025
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -865,6 +975,57 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Justificación </th>
+        <td>
+          
+            
+<p>Este indicador proporciona información valiosa que podría utilizarse para formular 
+políticas y programas de prevención de lesiones, enfermedades y muertes laborales. 
+También podría utilizarse para supervisar la implementación de estos programas y 
+señalar áreas específicas de mayor riesgo, como una ocupación, industria o ubicación 
+en particular. Si bien el objetivo principal de este indicador es proporcionar 
+información con fines de prevención, puede utilizarse para otros fines, como 
+identificar las ocupaciones y actividades económicas con mayor riesgo de lesiones 
+laborales; detectar cambios en los patrones y la ocurrencia de lesiones laborales, 
+a fin de supervisar las mejoras en seguridad y revelar nuevas áreas de riesgo; 
+informar a empleadores, organizaciones de empleadores, trabajadores y organizaciones 
+de trabajadores sobre los riesgos asociados con su trabajo y lugares de trabajo, 
+para que puedan participar activamente en su propia seguridad; evaluar la 
+eficacia de las medidas preventivas; estimar las consecuencias de las lesiones 
+laborales, especialmente en términos de días perdidos o costos; y proporcionar 
+una base para la formulación de políticas destinadas a alentar a los empleadores, 
+las organizaciones de empleadores, los trabajadores y las organizaciones de 
+trabajadores a introducir medidas de prevención de accidentes.</p>
+
+<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comparabilidad entre el indicador disponible y el indicador de Naciones Unidas/Unión europea </th>
+        <td>
+          
+            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -875,18 +1036,19 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Metadatos del indicador de Naciones Unidas/Unión Europea </th>
+        <td>
           
-      
-      
-      
-        
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-08-08-01.pdf">Metadatos 8-8-1.pdf</a> (solo en inglés)</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
+      
+  
       
       
       
@@ -994,7 +1156,7 @@ data-event-label="Change to indicator.global_metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250328152521'></script>
+<script src='/site/assets/js/sdg.js?v=20250331074521'></script>
 
 
 <script>
@@ -1014,7 +1176,7 @@ data-event-label="Change to indicator.global_metadata tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250328152521"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250331074521"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
