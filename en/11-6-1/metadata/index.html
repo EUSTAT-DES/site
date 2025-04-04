@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331163103">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250404175835">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Residuos urbanos recogidos per cápita y proporción de residuos municipales (incinerados,  vertidos y reciclados) en relación al total de residuos municipales generados y tratados. Se  consideran residuos urbanos los procedentes de los hogares y del sector servicios  (comercios, oficinas e instituciones públicas o privadas), cuya gestión es asumida por  las Entidades Locales");
+        var currentValue = normalizeCurrentValue('definicion', "Residuos urbanos recogidos per cápita y proporción de residuos urbanos tratados (incinerados,  vertidos y reciclados) en relación al total de residuos municipales generados. Se  consideran residuos urbanos los procedentes de los hogares y del sector servicios  (comercios, oficinas e instituciones públicas o privadas), cuya gestión es asumida por  las entidades locales");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b> Residuos urbanos recogidos per cápita</b> \n\n$$RURP^{t} = \\frac{RUR^{t}}{P^{t}} $$\n\ndonde:\n\n$RUR^{t} =$ cantidad de residuos urbanos recogidos en el año $t$ \n\n$P^{t} =$ población a 1 de julio del año $t$\n\n<b> Proporción de residuos municipales tratados, por operación de tratamiento</b> \n\n$$PRM_{tratamiento}^{t} = \\frac{RM_{tratamiento}^{t}}{RM^{t}} \\cdot 100$$ <br> \n\n$RM_{tratamiento}^{t} =$ cantidad de residuos municipales tratados (según tipo de tratamiento) en el año $t$\n\n$RM^{t} =$ cantidad total de residuos municipales generados y tratados en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b> Residuos urbanos recogidos per cápita</b> \n\n$$RURP^{t} = \\frac{RUR^{t}}{P^{t}} $$\n\ndonde:\n\n$RUR^{t} =$ cantidad de residuos urbanos recogidos en el año $t$ \n\n$P^{t} =$ población a 1 de julio del año $t$\n\n<br>\n\nProporción de residuos urbanos recogidos y gestionados en instalaciones controladas\n\n$$PRUR^{t} = \\frac{RUG^{t}}{RUR^{t}} \\cdot 100$$\n\ndonde:\n\n$RUG^{t} =$ cantidad de residuos urbanos generados en el año $t$ \n\n$RUR^{t} =$ cantidad de residuos urbanos recogidos y gestionados en instalaciones controladas en el año $t$ \n\n\n<br>\n\n<b> Proporción de residuos urbanos tratados, por operación de tratamiento</b> \n\n$$PRU_{tratamiento}^{t} = \\frac{RU_{tratamiento}^{t}}{RU^{t}} \\cdot 100$$ <br> \n\n$RU_{tratamiento}^{t} =$ cantidad de residuos urbanos tratados (según tipo de tratamiento) en el año $t$\n\n$RUR^{t} =$ cantidad total de residuos urbanos recogidos y gestionados en instalaciones controladas en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nSe entiende por residuos municipales los residuos domésticos y comerciales, procedentes  de hogares y del sector servicios (comercio, oficinas e instituciones) gestionados por  las Entidades Locales, no incluyéndose los residuos comerciales gestionados por canales  privados distintos al municipal, ni residuos procedentes de la industria.");
+        var currentValue = normalizeCurrentValue('observaciones', "\nSe entiende por residuos urbanos los residuos domésticos y comerciales, procedentes  de hogares y del sector servicios (comercio, oficinas e instituciones) gestionados por  las entidades locales, no incluyéndose los residuos comerciales gestionados por canales  privados distintos al municipal, ni residuos procedentes de la industria.");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Los hogares y las empresas urbanas producen cantidades sustanciales de residuos que \ndeben recogerse regularmente, reciclarse o tratarse y eliminarse adecuadamente \npara mantener condiciones de vida saludables e higiénicas. \n\nMuchas ciudades enfrentan cada vez más desafíos en la gestión de residuos sólidos \ndebido a la rápida urbanización, la falta de capacidad técnica y financiera o la \nbaja prioridad política. Además, cuanto mayor es el nivel de ingresos de una ciudad, \nmayor es la cantidad de residuos sólidos producidos. Por lo tanto, el \ncrecimiento económico que experimentarán los países en desarrollo y emergentes \nplanteará mayores desafíos en la gestión de residuos sólidos a los gobiernos \nlocales en las próximas décadas.\n\nEl impacto ambiental adverso de los residuos no recogidos en una ciudad es \nsignificativo. Los residuos sólidos no recogidos pueden terminar en los desagües, \nlo que provoca el bloqueo de los mismos y provoca condiciones insalubres que \ntienen un impacto directo en la salud de los residentes. La quema a cielo abierto \nde residuos no recogidos produce contaminantes que son muy perjudiciales a nivel \nlocal y mundial. Los vectores, como los mosquitos, suelen reproducirse en desagües \nbloqueados y el bloqueo de los mismos contribuye a provocar inundaciones. En 2015, \nel informe Global Waste Management Outlook estimó que al menos 2 mil millones de \npersonas no tienen acceso a la recolección regular de residuos. Esto es particularmente \npeor en los asentamientos informales y el informe Solid Waste Management in \nWorld Cities de ONU-Hábitat publicado en 2010 estimó que solo el 5% de los residuos en \nlas zonas de ocupantes ilegales se recolectan regularmente.\n\nLa escala global de la urbanización y el crecimiento económico están creando \nuna potencial “bomba de tiempo” en relación con los residuos que generamos en el \nmundo. Si no se aborda ahora, el impacto negativo significativo en la salud \nhumana y el medio ambiente se sentirá en las naciones en todos los niveles de \ndesarrollo. Se estima que en 2016 se generaron 2 mil millones de toneladas \nde residuos sólidos municipales (RSM), y se espera que esta cifra aumente a \n3.4 mil millones de toneladas para 2050 en un escenario de continuidad de las \nactividades (Banco Mundial, 2018). Los vertederos sin control son ya una fuente \nimportante de gases de efecto invernadero (GEI) y, si continuamos por el camino \nactual, se prevé que el sector de los residuos, en particular los residuos \nalimentarios, represente entre el 8 y el 10 % de las emisiones antropogénicas \nglobales de GEI para 2025. Además, cada año, al menos 8 millones de toneladas \nde plástico llegan a los océanos del mundo (Jambeck et al., 2015).\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Los hogares y empresas urbanas generan cantidades sustanciales de residuos que deben recolectarse regularmente, \nreciclarse o tratarse y eliminarse adecuadamente para mantener condiciones de vida saludables \ne higiénicas. \n\nMuchas ciudades enfrentan cada vez más desafíos en la gestión de residuos\ndebido a la rápida urbanización, la falta de capacidad técnica y financiera o la baja prioridad \npolítica. Además, cuanto mayor es el nivel de ingresos de una ciudad, mayor es la cantidad de \nresiduos sólidos que se producen. \n\nPor lo tanto, el crecimiento económico que experimentarán los países en desarrollo y emergentes \nplanteará mayores desafíos a los gobiernos locales en la gestión de residuos en las próximas décadas.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos de Naciones Unidas");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-11-06-01.pdf\">Metadata 11-6-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-11-06-01.pdf\">Metadatos 11-6-1.pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-26");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250331163103'></script>
+<script src='/site/assets/js/sdg.js?v=20250404175835'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250331163103"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250404175835"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

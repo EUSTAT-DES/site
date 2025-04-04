@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331163103">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250404175835">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -518,36 +518,168 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.1-5-4-titulo");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "11.b By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, and develop and implement, in line with the Sendai Framework for Disaster Risk Reduction 2015–2030, holistic disaster risk management at all levels");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "11 Make cities and human settlements inclusive, safe, resilient and sustainable");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "Porcentaje de gobiernos locales que adoptan e implementan estrategias locales de reducción del riesgo de desastres mediante planes territoriales de emergencias y planes municipales de emergencias");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "<b>Porcentaje de municipios que disponen de un plan municipal de emergencias</b>\n\n$$PMUN_{RRD\\, municipal}^{t} = \\frac{MUN_{RRD\\, municipal}^{t}}{MUN^{t}} \\cdot 100$$\n\ndonde:\n\n$MUN_{RRD\\, municipal} =$ número de gobiernos locales con planes municipales de emergencias en el año $t$\n\n$MUN^{t} =$ número de gobiernos locales en el año $t$\n\n <br>\n\n<b>Porcentaje de municipios cubiertos por un plan territorial de emergencias</b>\n\n$$PMUN_{RRD\\, territorial}^{t} = \\frac{MUN_{RRD\\, territorial}^{t}}{MUN^{t}} \\cdot 100$$\n\ndonde:\n\n$MUN_{RRD\\, territorial} =$ número de gobiernos locales con planes territoriales de emergencias en el año $t$\n\n$MUN^{t} =$ número de gobiernos locales en el año $t$\n");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('desagregacion', "Territorio histórico/Comarca/Municipio");
+        var propertyEditor = editor.getEditor('root.desagregacion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: desagregacion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('observaciones', "\nEn Euskadi, según determina el Plan de Protección Civil de Euskadi – LABI, deben elaborar \ny aprobar planes municipales de emergencia (PEM) los municipios con población superior a 20.000 habitantes. \n\nPara los municipios de más de 5.000 habitantes, en coherencia con la normativa estatal reguladora de las \nBases del Régimen Local, esta directriz es recomendatoria. En 2024, el 96% de los municipios de 5.000 a 20.000 habitantes \ny el 25% de los municipios de 1.000 a 5.000 habitantes disponen de Plan de Emergencia Municipal homologado.\n");
+        var propertyEditor = editor.getEditor('root.observaciones');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: observaciones');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "El Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030 fue adoptado por los \nEstados Miembros de las Naciones Unidas en marzo de 2015 como una política global de \nreducción del riesgo de desastres. El resultado esperado del Marco de Sendai es lograr \n“la reducción sustancial del riesgo de desastres y de las pérdidas en vidas, medios de \nsubsistencia y salud y en los activos económicos, físicos, sociales, culturales y \nambientales de las personas, las empresas, las comunidades y los países”. \n\nEntre las metas globales del Marco de Sendai, la “Meta E: Aumentar sustancialmente \nel número de países con estrategias nacionales y locales de reducción del riesgo \nde desastres para 2020” tiene por objeto mejorar el progreso y la cobertura globales \nde las estrategias y políticas nacionales y locales de reducción del riesgo de desastres.\n\nLos objetivos de los planes, estrategias y políticas nacionales de reducción del riesgo \nde desastres son prevenir nuevos riesgos de desastres y reducir los existentes mediante \nla implementación de medidas económicas, estructurales, legales, sociales, de salud, culturales, \neducativas, ambientales, tecnológicas, políticas e institucionales integradas e inclusivas que \nprevengan y reduzcan la exposición a los peligros y la vulnerabilidad a los desastres, aumenten \nla preparación para la respuesta y la recuperación y, de ese modo, fortalezcan la resiliencia. \n\nAumentar la proporción de gobiernos locales que adoptan e implementan estrategias locales de \nreducción del riesgo de desastres, como lo exige el Marco de Sendai, contribuirá al desarrollo \nsostenible y fortalecerá la resiliencia económica, social, sanitaria y ambiental. \n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos de Naciones Unidas.");
+        var propertyEditor = editor.getEditor('root.comparabilidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: comparabilidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-11-0b-02.pdf\">Metadatos 11-b-2.pdf</a> (solo en inglés)");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -572,8 +704,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-04-04");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -692,7 +848,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250331163103'></script>
+<script src='/site/assets/js/sdg.js?v=20250404175835'></script>
 
 
 <script>
@@ -712,7 +868,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250331163103"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250404175835"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

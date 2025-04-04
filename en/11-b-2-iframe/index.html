@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331163103">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250404175835">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -305,13 +305,13 @@ layout-indicator-iframe
             
                 
                     <div class="progress-status-label">
-                        No data available
+                        On track or target met
                     </div>
                 
             
             
                 <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/notstarted.png" alt="No data available" />
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="On track or target met" />
                 </div>
             
         </div>
@@ -324,6 +324,13 @@ layout-indicator-iframe
 
   
 
+<div class="row" id="page-content">
+  <div class="col-xs-12">
+    <p>GRAFICO.1-5-4-contenido</p>
+
+  </div>
+</div>
+
 
   
 
@@ -334,15 +341,15 @@ layout-indicator-iframe
   data-indicatorid='indicator_11-b-2'
   data-id="11-b-2"
   data-country="Basque Country"
-  data-charttitle="Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies"
+  data-charttitle="GRAFICO.1-5-4-titulo"
   data-charttitles="[]"
   data-measurementunit=""
   data-xaxislabel=""
-  data-showdata="false"
+  data-showdata="true"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap="false"
+  data-showmap="true"
   data-startvalues="[]"
   data-graphlimits="[]"
   data-stackeddisaggregation=""
@@ -350,14 +357,1126 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;SG_DSR_SILS&quot;,&quot;EU_DSR_SILS_TH&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;ES211&quot;,&quot;ES213&quot;,&quot;ES212&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio&quot;},{&quot;name&quot;:&quot;Comarca&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;ES0101&quot;,&quot;ES0104&quot;,&quot;ES0106&quot;,&quot;ES0102&quot;,&quot;ES0103&quot;,&quot;ES4801&quot;,&quot;ES2001&quot;,&quot;ES4802&quot;,&quot;ES2002&quot;,&quot;ES2003&quot;,&quot;ES2004&quot;,&quot;ES4803&quot;,&quot;ES4804&quot;,&quot;ES4805&quot;,&quot;ES2005&quot;,&quot;ES0105&quot;,&quot;ES4806&quot;,&quot;ES4807&quot;,&quot;ES2006&quot;,&quot;ES2007&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Comarca&quot;},{&quot;name&quot;:&quot;Municipio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;ES48001&quot;,&quot;ES20001&quot;,&quot;ES48002&quot;,&quot;ES20002&quot;,&quot;ES01051&quot;,&quot;ES20016&quot;,&quot;ES20003&quot;,&quot;ES48911&quot;,&quot;ES20004&quot;,&quot;ES20005&quot;,&quot;ES01001&quot;,&quot;ES20006&quot;,&quot;ES48912&quot;,&quot;ES20906&quot;,&quot;ES20007&quot;,&quot;ES20008&quot;,&quot;ES48003&quot;,&quot;ES48004&quot;,&quot;ES01002&quot;,&quot;ES20009&quot;,&quot;ES20010&quot;,&quot;ES20011&quot;,&quot;ES01049&quot;,&quot;ES48005&quot;,&quot;ES20012&quot;,&quot;ES01003&quot;,&quot;ES48006&quot;,&quot;ES48093&quot;,&quot;ES20013&quot;,&quot;ES01006&quot;,&quot;ES01037&quot;,&quot;ES48009&quot;,&quot;ES20055&quot;,&quot;ES48914&quot;,&quot;ES01008&quot;,&quot;ES48010&quot;,&quot;ES48011&quot;,&quot;ES48023&quot;,&quot;ES48008&quot;,&quot;ES01004&quot;,&quot;ES01009&quot;,&quot;ES20014&quot;,&quot;ES20903&quot;,&quot;ES20015&quot;,&quot;ES48091&quot;,&quot;ES48070&quot;,&quot;ES01010&quot;,&quot;ES20017&quot;,&quot;ES20018&quot;,&quot;ES48012&quot;,&quot;ES20904&quot;,&quot;ES48090&quot;,&quot;ES01011&quot;,&quot;ES48013&quot;,&quot;ES48014&quot;,&quot;ES01013&quot;,&quot;ES48015&quot;,&quot;ES20019&quot;,&quot;ES48092&quot;,&quot;ES20020&quot;,&quot;ES20021&quot;,&quot;ES48016&quot;,&quot;ES01014&quot;,&quot;ES20022&quot;,&quot;ES20074&quot;,&quot;ES48017&quot;,&quot;ES01016&quot;,&quot;ES48018&quot;,&quot;ES48019&quot;,&quot;ES20023&quot;,&quot;ES20024&quot;,&quot;ES48020&quot;,&quot;ES48021&quot;,&quot;ES01017&quot;,&quot;ES20029&quot;,&quot;ES48901&quot;,&quot;ES48026&quot;,&quot;ES20069&quot;,&quot;ES48027&quot;,&quot;ES48028&quot;,&quot;ES20030&quot;,&quot;ES48031&quot;,&quot;ES01021&quot;,&quot;ES01022&quot;,&quot;ES20031&quot;,&quot;ES20033&quot;,&quot;ES20032&quot;,&quot;ES48032&quot;,&quot;ES01023&quot;,&quot;ES48902&quot;,&quot;ES48033&quot;,&quot;ES48034&quot;,&quot;ES20067&quot;,&quot;ES20066&quot;,&quot;ES01046&quot;,&quot;ES48079&quot;,&quot;ES20034&quot;,&quot;ES48029&quot;,&quot;ES48030&quot;,&quot;ES20035&quot;,&quot;ES48906&quot;,&quot;ES48035&quot;,&quot;ES20038&quot;,&quot;ES20037&quot;,&quot;ES48036&quot;,&quot;ES48037&quot;,&quot;ES48038&quot;,&quot;ES48039&quot;,&quot;ES48040&quot;,&quot;ES48041&quot;,&quot;ES20907&quot;,&quot;ES48046&quot;,&quot;ES20039&quot;,&quot;ES48044&quot;,&quot;ES48047&quot;,&quot;ES48042&quot;,&quot;ES48043&quot;,&quot;ES48045&quot;,&quot;ES01056&quot;,&quot;ES20040&quot;,&quot;ES20041&quot;,&quot;ES20036&quot;,&quot;ES20042&quot;,&quot;ES48048&quot;,&quot;ES20043&quot;,&quot;ES48094&quot;,&quot;ES20044&quot;,&quot;ES20045&quot;,&quot;ES01901&quot;,&quot;ES20046&quot;,&quot;ES01027&quot;,&quot;ES48049&quot;,&quot;ES20047&quot;,&quot;ES48910&quot;,&quot;ES48050&quot;,&quot;ES48022&quot;,&quot;ES48907&quot;,&quot;ES01019&quot;,&quot;ES01020&quot;,&quot;ES01028&quot;,&quot;ES01030&quot;,&quot;ES01031&quot;,&quot;ES01032&quot;,&quot;ES48051&quot;,&quot;ES01902&quot;,&quot;ES01033&quot;,&quot;ES48052&quot;,&quot;ES20048&quot;,&quot;ES20902&quot;,&quot;ES01036&quot;,&quot;ES48053&quot;,&quot;ES20049&quot;,&quot;ES20050&quot;,&quot;ES20051&quot;,&quot;ES20052&quot;,&quot;ES01058&quot;,&quot;ES20068&quot;,&quot;ES48054&quot;,&quot;ES48057&quot;,&quot;ES48055&quot;,&quot;ES48056&quot;,&quot;ES01034&quot;,&quot;ES48081&quot;,&quot;ES20053&quot;,&quot;ES20054&quot;,&quot;ES48903&quot;,&quot;ES48058&quot;,&quot;ES48059&quot;,&quot;ES48060&quot;,&quot;ES48061&quot;,&quot;ES20901&quot;,&quot;ES48062&quot;,&quot;ES48063&quot;,&quot;ES48064&quot;,&quot;ES01039&quot;,&quot;ES48066&quot;,&quot;ES48068&quot;,&quot;ES48069&quot;,&quot;ES48007&quot;,&quot;ES48908&quot;,&quot;ES48071&quot;,&quot;ES20057&quot;,&quot;ES20056&quot;,&quot;ES48067&quot;,&quot;ES48909&quot;,&quot;ES01041&quot;,&quot;ES20063&quot;,&quot;ES01042&quot;,&quot;ES20058&quot;,&quot;ES48073&quot;,&quot;ES20059&quot;,&quot;ES20076&quot;,&quot;ES20905&quot;,&quot;ES20060&quot;,&quot;ES20061&quot;,&quot;ES20062&quot;,&quot;ES48075&quot;,&quot;ES48083&quot;,&quot;ES48072&quot;,&quot;ES01043&quot;,&quot;ES20064&quot;,&quot;ES01044&quot;,&quot;ES48077&quot;,&quot;ES48078&quot;,&quot;ES01047&quot;,&quot;ES01052&quot;,&quot;ES01053&quot;,&quot;ES48082&quot;,&quot;ES20070&quot;,&quot;ES48084&quot;,&quot;ES48904&quot;,&quot;ES48085&quot;,&quot;ES48086&quot;,&quot;ES20065&quot;,&quot;ES48076&quot;,&quot;ES20071&quot;,&quot;ES48087&quot;,&quot;ES48088&quot;,&quot;ES48065&quot;,&quot;ES48089&quot;,&quot;ES48074&quot;,&quot;ES01054&quot;,&quot;ES20072&quot;,&quot;ES20077&quot;,&quot;ES48916&quot;,&quot;ES20073&quot;,&quot;ES01055&quot;,&quot;ES48080&quot;,&quot;ES20075&quot;,&quot;ES01057&quot;,&quot;ES01059&quot;,&quot;ES01060&quot;,&quot;ES48095&quot;,&quot;ES20078&quot;,&quot;ES01061&quot;,&quot;ES48096&quot;,&quot;ES01062&quot;,&quot;ES48905&quot;,&quot;ES48097&quot;,&quot;ES20079&quot;,&quot;ES48024&quot;,&quot;ES48025&quot;,&quot;ES20025&quot;,&quot;ES20026&quot;,&quot;ES20027&quot;,&quot;ES48913&quot;,&quot;ES01018&quot;,&quot;ES48915&quot;,&quot;ES20028&quot;,&quot;ES01063&quot;,&quot;ES20081&quot;,&quot;ES20080&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Municipio&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;PT&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
   data-proxyseries="null"
 >
   
-  <div id="indicator-main" class="indicator-main col-md-12">
+  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
+  <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
+    <div id="serieses"></div>
+<div id="units"></div>
+<div id="toolbar">
+  <span id="series-help">
+    <h4>Sub-categories</h4>
+    <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+  </span>
+  <div id="fields">
+    <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+  </div>
+</div>
+
+  </div>
+  <div id="indicator-main" class="indicator-main col-md-9">
+    
+
+
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    
+    <a role="button" href="https://eustat-des.github.io/data/en/headline/11-b-2.csv" class="btn btn-primary btn-download" download="indicator_11-b-2.csv" tabindex="0" role="button">Download headline data (.csv)</a>
+    
+    <a role="button" href="https://eustat-des.github.io/data/en/data/11-b-2.csv" class="btn btn-primary btn-download" download='indicator_11-b-2.csv' tabindex='0' role='button'>Download source data (.csv)</a>
+
+    <p class="no-js-disaggregation-hint">Download source data for disaggregations (.csv)</p>
+
+    
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>GRAFICO.1-5-4-titulo</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col">Series</th>
+        
+        
+        
+        <th scope="col" class="table-value">GeoCode</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>34.13</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>34.13</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>34.13</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>34.13</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>34.13</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>33.73</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>34.13</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>33.73</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>34.52</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>33.73</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>34.52</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>35.32</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>34.13</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>34.52</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>33.73</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>SG_DSR_SILS</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>PT</td>
+          
+          
+          
+          <td>EU_DSR_SILS_TH</td>
+          
+          
+          
+          <td class="table-value"></td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    
+  </div>
+
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Geographical Area: </p>
+    
+    
+    <p>Unit of Measurement: </p>
+    
+    
+    <p>Footnote: GRAFICO.1-5-4-notapie</p>
+    
+  </div>
+  
+
+</div>
+
+
+<section>
+
+  <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+
+  <div class="async-loaded mt-4" style="display:none;">
+
+    <div style="display: none;">
+    <span id="table-alternative">For tabular data alternative see Table tab.</span>
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+
+        
+      >Table</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        map
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-mapview"
+          data-bs-target="#mapview"
+          aria-controls="mapview"
+          data-no-disagg="true"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
+
+        
+      >Map</button>
+    </li>
+    
+  </ul>
+  
+    <div class="tab-content data-view">
+    
+      
+        <div role="tabpanel" class="tab-pane active" id="chartview">
+          
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only">Warning:</span></i>
+      There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">
+            GRAFICO.1-5-4-titulo
+          </h4>
+          <div id="chart" class="plot-container">
+            <canvas
+    role="img"
+    aria-labelledby="chart-heading"
+    aria-describedby="table-alternative chart-annotations"
+    tabindex="0"
+ ></canvas>
+
+          </div>
+          <div id="plotLegend"></div>
+          
+
+
+
+<div id="selectionChartFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+        <dt>Footnote:</dt>
+        <dd>GRAFICO.1-5-4-notapie</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Footnote:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Data last updated:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button
+          id="btnSave"
+          title="Download chart image as PNG"
+          aria-label="Download chart image as PNG"
+          class='btn btn-primary btn-download'>
+          Download chart image (.png)
+        </button><!--
+   --></div>
+    </div>
+
+
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="tableview">
+          <div style="display: none;">
+            <span id="column-sort-info">Click to sort by this column</span>
+          </div>
+          <div id="selectionsTable"></div>
+<dl id="tableTargetLines" class="clearfix"></dl>
+
+
+
+
+<div id="selectionTableFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+        <dt>Footnote:</dt>
+        <dd>GRAFICO.1-5-4-notapie</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Footnote:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Data last updated:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+<div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
+<h4 id="map-heading" class="map-title">GRAFICO.1-5-4-titulo</h4>
+<div id="map" aria-describedby="table-alternative">
+  <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Loading map" />
+</div>
+
+
+
+
+<div id="mapFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+        <dt>Footnote:</dt>
+        <dd>GRAFICO.1-5-4-notapie</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Footnote:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Data last updated:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
+
+        </div>
+      
+    
+  </div>
+  
+
+  </div>
+
+</section>
+
   
   <div class="mt-4">
 <ul class="nav nav-tabs" role="tablist">
@@ -451,28 +1570,19 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Available indicator </th>
+        <td>
           
-      
-      
-      
-        
+            <p>GRAFICO.1-5-4-titulo</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
+  
       
       
       
@@ -481,18 +1591,141 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
           
-      
-      
-      
-        
+            <p>11.b By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, and develop and implement, in line with the Sendai Framework for Disaster Risk Reduction 2015–2030, holistic disaster risk management at all levels</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Goal </th>
+        <td>
           
+            <p>11 Make cities and human settlements inclusive, safe, resilient and sustainable</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Porcentaje de gobiernos locales que adoptan e implementan estrategias locales de reducción del riesgo de desastres mediante planes territoriales de emergencias y planes municipales de emergencias</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Theoretical formula </th>
+        <td>
+          
+            <p><b>Porcentaje de municipios que disponen de un plan municipal de emergencias</b></p>
+
+\[PMUN_{RRD\, municipal}^{t} = \frac{MUN_{RRD\, municipal}^{t}}{MUN^{t}} \cdot 100\]
+
+<p>donde:</p>
+
+<p>$MUN_{RRD\, municipal} =$ número de gobiernos locales con planes municipales de emergencias en el año $t$</p>
+
+<p>$MUN^{t} =$ número de gobiernos locales en el año $t$</p>
+
+<p><br /></p>
+
+<p><b>Porcentaje de municipios cubiertos por un plan territorial de emergencias</b></p>
+
+\[PMUN_{RRD\, territorial}^{t} = \frac{MUN_{RRD\, territorial}^{t}}{MUN^{t}} \cdot 100\]
+
+<p>donde:</p>
+
+<p>$MUN_{RRD\, territorial} =$ número de gobiernos locales con planes territoriales de emergencias en el año $t$</p>
+
+<p>$MUN^{t} =$ número de gobiernos locales en el año $t$</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Available disaggregations </th>
+        <td>
+          
+            <p>Territorio histórico/Comarca/Municipio</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Frequency </th>
+        <td>
+          
+            <p>Anual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Observations </th>
+        <td>
+          
+            
+<p>En Euskadi, según determina el Plan de Protección Civil de Euskadi – LABI, deben elaborar 
+y aprobar planes municipales de emergencia (PEM) los municipios con población superior a 20.000 habitantes.</p>
+
+<p>Para los municipios de más de 5.000 habitantes, en coherencia con la normativa estatal reguladora de las 
+Bases del Régimen Local, esta directriz es recomendatoria. En 2024, el 96% de los municipios de 5.000 a 20.000 habitantes 
+y el 25% de los municipios de 1.000 a 5.000 habitantes disponen de Plan de Emergencia Municipal homologado.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -558,13 +1791,33 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
-      
-      
-      
-        
+            April 04, 2025
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            April 04, 2025
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -582,10 +1835,61 @@ data-event-label="Change to indicator.global_metadata tab"
         <div role="tabpanel" class="tab-pane " id="sources_alt">
             <article>
                 
-
                 
 
-    
+
+
+
+
+<div class="row">
+
+    <div class="col-md-6">
+        
+        <h4 class="sr-only">Source 1</h4>
+        
+        
+        <table class="table indicator-source-table">
+            
+            
+            
+            <tr>
+                <td colspan="2"><img alt="Departamento de Seguridad" src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/fuentes/Euskadi.png?raw=true" /></td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Organisation</th>
+                <td>Departamento de Seguridad</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Periodicity</th>
+                <td>Anual</td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </table>
+    </div>
+
+</div>
 
 
             </article>
@@ -624,6 +1928,61 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Rationale </th>
+        <td>
+          
+            <p>El Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030 fue adoptado por los 
+Estados Miembros de las Naciones Unidas en marzo de 2015 como una política global de 
+reducción del riesgo de desastres. El resultado esperado del Marco de Sendai es lograr 
+“la reducción sustancial del riesgo de desastres y de las pérdidas en vidas, medios de 
+subsistencia y salud y en los activos económicos, físicos, sociales, culturales y 
+ambientales de las personas, las empresas, las comunidades y los países”.</p>
+
+<p>Entre las metas globales del Marco de Sendai, la “Meta E: Aumentar sustancialmente 
+el número de países con estrategias nacionales y locales de reducción del riesgo 
+de desastres para 2020” tiene por objeto mejorar el progreso y la cobertura globales 
+de las estrategias y políticas nacionales y locales de reducción del riesgo de desastres.</p>
+
+<p>Los objetivos de los planes, estrategias y políticas nacionales de reducción del riesgo 
+de desastres son prevenir nuevos riesgos de desastres y reducir los existentes mediante 
+la implementación de medidas económicas, estructurales, legales, sociales, de salud, culturales, 
+educativas, ambientales, tecnológicas, políticas e institucionales integradas e inclusivas que 
+prevengan y reduzcan la exposición a los peligros y la vulnerabilidad a los desastres, aumenten 
+la preparación para la respuesta y la recuperación y, de ese modo, fortalezcan la resiliencia.</p>
+
+<p>Aumentar la proporción de gobiernos locales que adoptan e implementan estrategias locales de 
+reducción del riesgo de desastres, como lo exige el Marco de Sendai, contribuirá al desarrollo 
+sostenible y fortalecerá la resiliencia económica, social, sanitaria y ambiental.</p>
+
+<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comparability between the available indicator and the UN indicator </th>
+        <td>
+          
+            <p>El indicador disponible cumple con los metadatos de Naciones Unidas.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -634,18 +1993,19 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Link to UN metadata </th>
+        <td>
           
-      
-      
-      
-        
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-11-0b-02.pdf">Metadatos 11-b-2.pdf</a> (solo en inglés)</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
+      
+  
       
       
       
@@ -690,6 +2050,15 @@ data-event-label="Change to indicator.global_metadata tab"
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/torfsen/leaflet.zoomhome@master/dist/leaflet.zoomhome.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
@@ -706,7 +2075,7 @@ data-event-label="Change to indicator.global_metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250331163103'></script>
+<script src='/site/assets/js/sdg.js?v=20250404175835'></script>
 
 
 <script>
@@ -726,7 +2095,7 @@ data-event-label="Change to indicator.global_metadata tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250331163103"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250404175835"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

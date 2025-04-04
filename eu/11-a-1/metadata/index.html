@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331163103">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250404175835">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de la población residente en municipios que disponen de plan general o normas subsidiarias de planeamiento urbanístico");
+        var currentValue = normalizeCurrentValue('definicion', "Este indicador se compone de dos series temporales:\n\n- Proporción de la población residente en municipios que cuentan con un plan de ordenación territorial\n- Proporción de la población residente en municipios que disponen de plan general o normas subsidiarias de planeamiento urbanístico\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPPGNS^{t} = \\frac{PPG^{t}+PNS^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$PPG^{t} =$ población residente en municipios que disponen de plan general el 1 de enero del año $t$\n\n$PNS^{t} =$ población residente en municipios que disponen de normas subsidiarias el 1 de enero del año $t$\n\n$P^{t} =$ población a 1 de enero del año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Indicador de anomalías en los precios de los alimentosProporción de la población residente en municipios que cuentan con un plan de ordenación territorial\n\n$$PPTP^{t} = \\frac{PTP^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$PTP^{t} =$ población residente en municipios que cuentan con Plan Territorial Parcial el 1 de enero del año $t$\n\n$P^{t} =$ población a 1 de enero del año $t$\n\n\n<br>\n\n<b>Proporción de la población residente en municipios que disponen de plan general o normas subsidiarias de planeamiento urbanístico</b>\n\n$$PPPGNS^{t} = \\frac{PPG^{t}+PNS^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$PPG^{t} =$ población residente en municipios que disponen de plan general el 1 de enero del año $t$\n\n$PNS^{t} =$ población residente en municipios que disponen de normas subsidiarias el 1 de enero del año $t$\n\n$P^{t} =$ población a 1 de enero del año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Este indicador se basa en la noción de que el desarrollo y la implementación de \nlas Políticas Urbanas Nacionales deben apoyar la participación, la asociación, la \ncooperación y la coordinación de los actores, así como facilitar el diálogo. Las Políticas \nUrbanas Nacionales (PNU) y los Planes de Desarrollo Regional (PDR) promueven un \ndesarrollo urbano coordinado y conectado. Un esfuerzo coordinado del \ngobierno a través de una PNU o un PDR brinda la mejor oportunidad para \nlograr una urbanización sostenible y un desarrollo territorial equilibrado al \nvincular las políticas sectoriales, conectar las políticas gubernamentales \nnacionales, regionales y locales, y fortalecer los vínculos urbanos, \nperiurbanos y rurales a través de un desarrollo territorial equilibrado.\n\nEste indicador proporciona un buen barómetro sobre el progreso global en materia \nde políticas urbanas nacionales sostenibles. Sirve como análisis de brechas \npara respaldar las recomendaciones de políticas. El indicador puede identificar \nbuenas prácticas y políticas entre los países que pueden promover la asociación \ny la cooperación entre todas las partes interesadas. Este indicador está orientado \na los procesos y es aspiracional y tiene el potencial de respaldar la validación \ndel Objetivo 11 y otros indicadores de los ODS con un componente urbano. El indicador \ntiene la capacidad de ser aplicable a niveles de múltiples jurisdicciones, es decir, \nabarcando varias áreas y al mismo tiempo atendiendo los desafíos urbanos de una manera \nnacional más integrada.\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Este indicador se basa en la noción de que el desarrollo y la implementación de \nlas Políticas Urbanas Nacionales deben apoyar la participación, la asociación, la \ncooperación y la coordinación de los actores, así como facilitar el diálogo. Las Políticas \nUrbanas Nacionales (PNU) y los Planes de Desarrollo Regional (PDR) promueven un \ndesarrollo urbano coordinado y conectado. Un esfuerzo coordinado del \ngobierno a través de una PNU o un PDR brinda la mejor oportunidad para \nlograr una urbanización sostenible y un desarrollo territorial equilibrado al \nvincular las políticas sectoriales, conectar las políticas gubernamentales \nnacionales, regionales y locales, y fortalecer los vínculos urbanos, \nperiurbanos y rurales a través de un desarrollo territorial equilibrado.\n\nEste indicador proporciona un buen barómetro sobre el progreso global en materia \nde políticas urbanas nacionales sostenibles. Sirve como análisis de brechas \npara respaldar las recomendaciones de políticas. El indicador puede identificar \nbuenas prácticas y políticas entre los países que pueden promover la asociación \ny la cooperación entre todas las partes interesadas. Este indicador está orientado \na los procesos y es aspiracional y tiene el potencial de respaldar la validación \ndel Objetivo 11 y otros indicadores de los ODS con un componente urbano. El indicador \ntiene la capacidad de ser aplicable a niveles de múltiples jurisdicciones, es decir, \nabarcando varias áreas y al mismo tiempo atendiendo los desafíos urbanos de una manera \nnacional más integrada.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-11-0a-01.pdf\">Metadata 11-a-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-11-0a-01.pdf\">Metadatos 11-a-1.pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-26");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250331163103'></script>
+<script src='/site/assets/js/sdg.js?v=20250404175835'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250331163103"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250404175835"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

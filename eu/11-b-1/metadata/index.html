@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250331163103">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250404175835">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -518,6 +518,18 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.nodisponible");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
@@ -540,14 +552,62 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030 fue adoptado por los Estados Miembros de las \nNaciones Unidas en marzo de 2015 como una política global de reducción del riesgo de desastres. \n\nEl resultado esperado del Marco de Sendai es lograr “La reducción sustancial del riesgo de desastres y las \npérdidas en vidas, medios de subsistencia y salud y en los activos económicos, físicos, sociales, culturales \ny ambientales de las personas, las empresas, las comunidades y los países”. Entre las metas globales del \nMarco de Sendai, la “Meta E: Aumentar sustancialmente el número de países con estrategias nacionales y \nlocales de reducción del riesgo de desastres para 2020” tiene como objetivo mejorar \nel progreso global y la cobertura de las estrategias y políticas nacionales y locales de \nreducción del riesgo de desastres. \n\nLos objetivos de los planes, estrategias y políticas nacionales \nde reducción del riesgo de desastres son prevenir nuevos riesgos de desastres y reducir los \nexistentes mediante la implementación de medidas económicas, estructurales, legales, \nsociales, de salud, culturales, educativas, ambientales, tecnológicas, políticas e \ninstitucionales integradas e inclusivas que prevengan y reduzcan la exposición a peligros y \nla vulnerabilidad a los desastres, aumenten la preparación para la respuesta y la recuperación y, \nde esa manera, fortalezcan la resiliencia. \n\nEl indicador creará un puente entre los ODS y el Marco de Sendai para la Reducción del \nRiesgo de Desastres. Un número cada vez mayor de gobiernos nacionales que adopten e \nimplementen estrategias nacionales y locales de reducción del riesgo de desastres, como \nlo exige el Marco de Sendai, contribuirá al desarrollo sostenible desde las perspectivas \neconómica, ambiental y social.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('comparabilidad', "");
+        var propertyEditor = editor.getEditor('root.comparabilidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: comparabilidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=11.b.1&seriesCode=SG_DSR_SFDRR&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Número de países que informaron tener una Estrategia Nacional de RRD alineada con el Marco de Sendai SG_DSR_SFDRR</a> UNSTATS");
+        var propertyEditor = editor.getEditor('root.dato_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dato_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-11-0b-01.pdf\">Metadatos 11-b-1.pdf</a> (solo en inglés)");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -574,6 +634,18 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -692,7 +764,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250331163103'></script>
+<script src='/site/assets/js/sdg.js?v=20250404175835'></script>
 
 
 <script>
@@ -712,7 +784,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250331163103"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250404175835"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
