@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250404175835">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250407072539">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n\n$$PCPS^{t} = \\begin{cases} 1 & \\text{Sí se elabora, adopta o aplica políticas destinadas al consumo y producción sostenibles en el año 𝑡} \\\\ 0 & \\text{No se elabora, adopta ni aplica políticas destinadas al consumo y producción sostenibles en el año 𝑡} \\end{cases} $$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PCPS^{t} =\\begin{cases}\n1 & \\text{si se elabora, adopta o aplica políticas destinadas al consumo y producción sostenibles en el año } t \\\\\n0 & \\text{si no se elabora, adopta ni aplica políticas destinadas al consumo y producción sostenibles en el año } t\n\\end{cases}$$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa incorporación del consumo y la producción sostenibles en la adopción de decisiones \na todos los niveles es una función fundamental del Marco Decenal, que se espera que \n“apoye la integración del consumo y la producción sostenibles en las políticas, \nprogramas y estrategias de desarrollo sostenible, según corresponda, incluidas, cuando \nproceda, las estrategias de reducción de la pobreza” (Documento Final de Río+20 – A/CONF.216/5).\n\nEl objetivo de este indicador es ayudar a evaluar el volumen y la distribución geográfica \nde los avances de los gobiernos en materia de consumo y producción sostenibles. Además, \nse está recopilando más información sobre los tipos, el enfoque y la orientación de \nlos instrumentos de política que se están elaborando y utilizando, para supervisar su \nprogreso a lo largo del tiempo, así como su contribución a otros Objetivos de \nDesarrollo Sostenible. \n\nEsto debería respaldar la evaluación de cuánto y con qué rapidez avanzan los gobiernos \nen el desarrollo y la aplicación de políticas que abordan el consumo y la producción \nsostenibles, ya sea a nivel transversal o sectorial. El indicador también tiene en \ncuenta los instrumentos de política vinculantes (leyes y reglamentos) y no \nvinculantes. \n\nLa primera categoría es esencial para el cambio, ya que los instrumentos \nvinculantes proporcionan la base legal para el consumo y la producción sostenibles, y \npueden utilizarse para hacer cumplir la ley o para proporcionar incentivos. La capacidad \nde elaborar, aprobar e implementar leyes es un indicador del compromiso de \nlas jurisdicciones en el cambio hacia el consumo y la producción sostenibles. Este \nindicador también puede ayudar a monitorear la evolución del panorama legislativo global. \n\nLa segunda categoría también es esencial para garantizar la participación, el compromiso y \nla apropiación institucional. En algunos casos, los instrumentos de política no vinculantes \npueden conducir a la creación de nuevos instrumentos legales. El desarrollo y la implementación \nde instrumentos no vinculantes en todos los sectores también proporciona información sobre \nel compromiso de los socios y otras partes interesadas en el consumo y la producción sostenibles.\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa incorporación del consumo y la producción sostenibles en la adopción de decisiones \na todos los niveles es una función fundamental del Marco Decenal, que se espera que \n“apoye la integración del consumo y la producción sostenibles en las políticas, \nprogramas y estrategias de desarrollo sostenible, según corresponda, incluidas, cuando \nproceda, las estrategias de reducción de la pobreza” (Documento Final de Río+20 – A/CONF.216/5).\n\nEl objetivo de este indicador es ayudar a evaluar el volumen y la distribución geográfica \nde los avances de los gobiernos en materia de consumo y producción sostenibles. Además, \nse está recopilando más información sobre los tipos, el enfoque y la orientación de \nlos instrumentos de política que se están elaborando y utilizando, para supervisar su \nprogreso a lo largo del tiempo, así como su contribución a otros Objetivos de \nDesarrollo Sostenible. \n\nEsto debería respaldar la evaluación de cuánto y con qué rapidez avanzan los gobiernos \nen el desarrollo y la aplicación de políticas que abordan el consumo y la producción \nsostenibles, ya sea a nivel transversal o sectorial. El indicador también tiene en \ncuenta los instrumentos de política vinculantes (leyes y reglamentos) y no \nvinculantes. \n\nLa primera categoría es esencial para el cambio, ya que los instrumentos \nvinculantes proporcionan la base legal para el consumo y la producción sostenibles, y \npueden utilizarse para hacer cumplir la ley o para proporcionar incentivos. La capacidad \nde elaborar, aprobar e implementar leyes es un indicador del compromiso de \nlas jurisdicciones en el cambio hacia el consumo y la producción sostenibles. Este \nindicador también puede ayudar a monitorear la evolución del panorama legislativo global. \n\nLa segunda categoría también es esencial para garantizar la participación, el compromiso y \nla apropiación institucional. En algunos casos, los instrumentos de política no vinculantes \npueden conducir a la creación de nuevos instrumentos legales. El desarrollo y la implementación \nde instrumentos no vinculantes en todos los sectores también proporciona información sobre \nel compromiso de los socios y otras partes interesadas en el consumo y la producción sostenibles.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -666,7 +666,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.1.1&seriesCode=SG_SCP_CNTRY&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Países con planes de acción nacionales de consumo y producción sostenibles (CPS) o con CPS incorporado como prioridad u objetivo en las políticas nacionales (1 = SÍ; 0 = NO) SG_SCP_CNTRY</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.1.1&seriesCode=SG_SCP_CNTRY&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Países con planes de acción nacionales de consumo y producción sostenibles (CPS) o con CPS incorporado como prioridad u objetivo en las políticas nacionales (1 = SÍ; 0 = NO) SG_SCP_CNTRY</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-01-01.pdf\">Metadata 12-1-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-01-01.pdf\">Metadatos 12-1-1.pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-26");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-07");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250404175835'></script>
+<script src='/site/assets/js/sdg.js?v=20250407072539'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250404175835"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250407072539"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

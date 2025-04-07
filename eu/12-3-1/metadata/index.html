@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250404175835">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250407072539">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -518,6 +518,18 @@ data-event-label="high"
     }
 
     // Set values according to this site's configuration.
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.nodisponible");
+        var propertyEditor = editor.getEditor('root.indicador_disponible');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_disponible');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_disponible'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
@@ -540,14 +552,50 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('justificacion_global', "La Agenda 2030 para el Desarrollo Sostenible ha enfatizado la importancia de los sistemas \nsostenibles de producción y consumo, ya que los sistemas alimentarios eficientes, \ntanto en el lado de la oferta como en el del consumo, contribuyen a la seguridad \nalimentaria y la sostenibilidad de los recursos naturales, dado que la agricultura \nes un importante consumidor de tierra y agua.\n\nEl índice de pérdida y desperdicio de alimentos analiza toda la cadena de suministro \ny la tendencia de las pérdidas estructurales. El Índice de Pérdida de Alimentos monitorea \nel progreso en el lado de la oferta de las cadenas alimentarias, ya que mide si la \nproporción de la producción agrícola que no llega a la etapa de venta minorista en \n2030 ha aumentado o disminuido con respecto al período base y en qué medida. El \nnumerador del indicador indica el nivel de pérdidas e informa sobre la magnitud del problema.\n\nUna mayor eficiencia en la cadena de suministro de alimentos también tiene \nimplicaciones para todos los productores, ya sea considerando la eficiencia de \nlos grandes productores para los mercados de exportación o de las pequeñas \nunidades de producción relevantes para los objetivos de reducción de la \npobreza y la inseguridad alimentaria.\n\nSegún una publicación de la FAO de 2011, aproximadamente un tercio \nde todos los alimentos se pierden o se desperdician. Esto genera pérdidas \neconómicas y aumenta la presión sobre los sistemas alimentarios. Reducir el \ndesperdicio de alimentos es fundamental para maximizar el valor de las \ntierras agrícolas y garantizar que los recursos naturales se utilicen \nde forma sostenible. Este indicador no solo ayudará a los países a identificar \ndónde se pierden y desperdician alimentos, sino que también puede proporcionar \ninformación que los gobiernos, la ciudadanía y el sector privado pueden \nutilizar para reducir el desperdicio de alimentos.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var propertyEditor = editor.getEditor('root.justificacion_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: justificacion_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.justificacion_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.comparabilidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&seriesCode=AG_FOOD_WST_PC&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALL\">\nDesperdicio de alimentos per cápita (KG) AG_FOOD_WST_PC</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&seriesCode=AG_FOOD_WST&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALL\">\nDesperdicio de alimentos (toneladas) AG_FOOD_WST</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&seriesCode=AG_FLS_INDEX&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nÍndice mundial de pérdida de alimentos AG_FLS_INDEX</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&seriesCode=AG_FLS_PCT&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">\nPorcentaje de pérdida de alimentos (%) AG_FLS_PC</a> UNSTATS\n");
+        var propertyEditor = editor.getEditor('root.dato_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dato_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_global'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.dato_ccaa'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-03-01A.pdf\">Metadatos 12-3-1(a).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-03-01B.pdf\">Metadatos 12-3-1(b).pdf</a> (solo en inglés)\n");
+        var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: indicador_meta_enlace');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_meta_enlace'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.informacion_interes'));
@@ -572,8 +620,32 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.UNIT_MEASURE'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
+        var propertyEditor = editor.getEditor('root.national_data_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_data_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_data_updated_date'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-07");
+        var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: national_metadata_updated_date');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.national_metadata_updated_date'));
 
     
@@ -692,7 +764,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250404175835'></script>
+<script src='/site/assets/js/sdg.js?v=20250407072539'></script>
 
 
 <script>
@@ -712,7 +784,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250404175835"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250407072539"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
