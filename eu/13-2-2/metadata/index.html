@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250407072539">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -550,7 +550,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('objetivo_global', "1 Pobrezia mota guztiak desagertzea mundu osoan");
+        var currentValue = normalizeCurrentValue('objetivo_global', "13 Neurri urgenteak hartzea klima-aldaketaren eta haren ondorioen aurka egiteko");
         var propertyEditor = editor.getEditor('root.objetivo_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Emisiones totales de gases de efecto invernadero (GEI) por unidad de PIB real, per cápita, y  tasas de variación respecto a las emitidas en los años 1990 y 2005");
+        var currentValue = normalizeCurrentValue('definicion', "Emisiones totales de gases de efecto invernadero (GEI), emisiones totales de GEI por unidad de PIB real,  per cápita, y tasas de variación respecto a las emisiones en los años 1990 y 2005");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPIBGEI^{t} = \\frac{GEI2^{t}}{PIB_{2015}^{t}} $$\n\n$$GEIPC^{t} = \\frac{GEI2^{t}}{P^{t}} $$\n\n$$TVGEI_{1990}^{t} = \\frac{GEI^{t}-GEI^{1990}}{GEI^{1990}} \\cdot 100$$ \n\n$$TVGEI_{2005}^{t} = \\frac{GEI^{t}-GEI^{2005}}{GEI^{2005}} \\cdot 100$$ \n\n\ndonde:\n\n$GEI^{t} =$ emisiones de gases de efecto invernadero en el año $t$\n\n$PIB_{2015}^{t} =$ producto interior bruto en volumen encadenado con referencia 2015 en el año $t$\n\n$P^{t} =$ población a 1 de julio en el año $t$\n\n$GEI^{1990} =$ emisiones de gases de efecto invernadero en el año 1990\n\n$GEI^{2005} =$ emisiones de gases de efecto invernadero en el año 2005\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Emisiones totales de gases de efecto invernadero por unidad de PIB</b>\n\n$$PPIBGEI^{t} = \\frac{GEI2^{t}}{PIB_{2022}^{t}} $$\n\n<b>Emisiones totales de gases de efecto invernadero per cápita</b>\n\n$$GEIPC^{t} = \\frac{GEI2^{t}}{P^{t}} $$\n\n<b>Emisiones de gases de efecto invernadero respecto al año 1990</b>\n\n$$TVGEI_{1990}^{t} = \\frac{GEI^{t}-GEI^{1990}}{GEI^{1990}} \\cdot 100$$ \n\n<b>Emisiones de gases de efecto invernadero respecto al año 2005</b>\n\n$$TVGEI_{2005}^{t} = \\frac{GEI^{t}-GEI^{2005}}{GEI^{2005}} \\cdot 100$$ \n\n\ndonde:\n\n$GEI^{t} =$ emisiones de gases de efecto invernadero en el año $t$\n\n$PIB_{2022}^{t} =$ producto interior bruto en volumen encadenado con referencia 2022 en el año $t$\n\n$P^{t} =$ población a 1 de julio en el año $t$\n\n$GEI^{1990} =$ emisiones de gases de efecto invernadero en el año 1990\n\n$GEI^{2005} =$ emisiones de gases de efecto invernadero en el año 2005\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "El objetivo último de la Convención Marco sobre el Cambio Climático (CMNUCC) es lograr \nla estabilización de las concentraciones de gases de efecto invernadero en la atmósfera a \nun nivel que impida interferencias antropogénicas peligrosas en el sistema climático. \nLa estimación de los niveles de emisiones y absorciones de gases de efecto invernadero (GEI) \nes un elemento importante de los esfuerzos para lograr este objetivo.\n\nEl Acuerdo de París adoptado en 2015 marca el último paso en la evolución del régimen de \ncambio climático de la ONU y se basa en el trabajo realizado en el marco de la Convención. \nSu objetivo principal es fortalecer la respuesta mundial a la amenaza del cambio \nclimático manteniendo el aumento de la temperatura global en este siglo muy por debajo de los \n2 grados Celsius con respecto a los niveles preindustriales y proseguir los esfuerzos para \nlimitar el aumento de la temperatura aún más a 1,5 grados Celsius. El Acuerdo también tiene \ncomo objetivo fortalecer la capacidad de los países para hacer frente a los impactos del \ncambio climático.\n\nEl indicador forma parte del conjunto de indicadores de los Objetivos de Desarrollo \nSostenible (ODS) de la UE. La normativa europea del clima establece un marco para la acción \nclimática y aumenta la ambición de la UE para 2030, con un nuevo objetivo de reducir \nlas emisiones netas de gases de efecto invernadero (GEI) en al menos un 55 % para \nese año (en comparación con 1990) y lograr la neutralidad climática para 2050.\n\nSe toma el año 2005 como otro año base debido a que es el año base utilizado por la \nDirectiva del reparto del esfuerzo de mitigación de los gases de efecto \ninvernadero (GEI) a fin de cumplir los compromisos adquiridos por la UE hasta 2020.\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "El objetivo último de la Convención Marco sobre el Cambio Climático (CMNUCC) es lograr \nla estabilización de las concentraciones de gases de efecto invernadero en la atmósfera a \nun nivel que impida interferencias antropogénicas peligrosas en el sistema climático. \nLa estimación de los niveles de emisiones y absorciones de gases de efecto invernadero (GEI) \nes un elemento importante de los esfuerzos para lograr este objetivo.\n\nEl Acuerdo de París adoptado en 2015 marca el último paso en la evolución del régimen de \ncambio climático de la ONU y se basa en el trabajo realizado en el marco de la Convención. \nSu objetivo principal es fortalecer la respuesta mundial a la amenaza del cambio \nclimático manteniendo el aumento de la temperatura global en este siglo muy por debajo de los \n2 grados Celsius con respecto a los niveles preindustriales y proseguir los esfuerzos para \nlimitar el aumento de la temperatura aún más a 1,5 grados Celsius. El Acuerdo también tiene \ncomo objetivo fortalecer la capacidad de los países para hacer frente a los impactos del \ncambio climático.\n\nEl indicador forma parte del conjunto de indicadores de los Objetivos de Desarrollo \nSostenible (ODS) de la UE. La normativa europea del clima establece un marco para la acción \nclimática y aumenta la ambición de la UE para 2030, con un nuevo objetivo de reducir \nlas emisiones netas de gases de efecto invernadero (GEI) en al menos un 55 % para \nese año (en comparación con 1990) y lograr la neutralidad climática para 2050.\n\nEl año 1990 se utiliza como referencia en la mayoría de los acuerdos climáticos \ninternacionales (Kioto, Naciones Unidas). El año 2005 es el año base utilizado por la \nDirectiva del reparto del esfuerzo de mitigación de los gases de efecto \ninvernadero (ETS, sistema de comercio de emisiones de la UE), \ndebido a que existe mayor disponibilidad de datos detallados sectoriales a partir\nde esa fecha.\n\nFuente: División de Estadísticas de las Naciones Unidas, Eurostat\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple parcialmente con los metadatos de Naciones Unidas. Los datos  no se presentan como emisiones totales, sino en relación con el PIB o número de habitantes.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "La serie \"emisiones totales de gases de efecto invernadero por año\" cumple con los metadatos de  Naciones Unidas. Se presentan, además, otras series relacionadas con los objetivos europeos.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -666,7 +666,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://ec.europa.eu/eurostat/cache/metadata/en/sdg_13_10_esmsip2.html\"> Emisiones netas de gases de efecto invernadero (sdg_13_10)</a> Eurostat\n");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_13_10/default/table?lang=en&category=sdg.sdg_13\"> Emisiones netas de gases de efecto invernadero (sdg_13_10)</a> Eurostat");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-02.pdf\">Metadata 13-2-2.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-02.pdf\">Metadatos 13-2-2.pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-11-29");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-08");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250407072539'></script>
+<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250407072539"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

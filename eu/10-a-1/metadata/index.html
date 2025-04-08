@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250407072539">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -520,7 +520,7 @@ data-event-label="high"
     // Set values according to this site's configuration.
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.10-7-3-titulo");
+        var currentValue = normalizeCurrentValue('indicador_disponible', "GRAFICO.nodisponible");
         var propertyEditor = editor.getEditor('root.indicador_disponible');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -538,83 +538,23 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('definicion', "\nNúmero de personas que tienen reconocida la condición de refugiada o una condición  de protección internacional similar por cada 100.000 habitantes");
-        var propertyEditor = editor.getEditor('root.definicion');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: definicion');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$TR^{t} = \\frac{R^{t}}{P^{t+1}} \\cdot 100.000$$\n\ndonde:\n\n$PR^{t} =$ personas con documento de identidad de refugiada, documento de identidad de protección subsidiaria \no autorización de residencia temporal por circunstancias excepcionales en vigor a 31 de diciembre del año $t$\n\n${P^{t+1} =$ población a 1 de enero del año $t+1$\n");
-        var propertyEditor = editor.getEditor('root.formula');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: formula');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('periodicidad', "Anual");
-        var propertyEditor = editor.getEditor('root.periodicidad');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: periodicidad');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('observaciones', "Se debe tener en cuenta que la desagregación por comunidades autónomas del número de personas que tienen reconocida la condición de refugiada o una condición de protección internacional similar en España no se realiza por el lugar de residencia, sino por el lugar donde se realizó el trámite administrativo que dio lugar a esa condición.");
-        var propertyEditor = editor.getEditor('root.observaciones');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: observaciones');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('texto_oceca', "<img src=\"/site/assets/img/oceca/ocecas_image.png\" style=\"width: 200px; float: left; margin-right: 10px;\" alt=\"Logotipo OCECAS\"> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.");
-        var propertyEditor = editor.getEditor('root.texto_oceca');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: texto_oceca');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.descripcion_global'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl cálculo de este indicador permitirá observar cuántos productos de \nlos países en desarrollo y los Países Menos Adelantados (PMA) tendrán \nlibre acceso a los mercados de los países desarrollados. En \ncomparación con los aranceles aplicados \na otros países, este indicador permitirá evaluar en qué medida se ha \notorgado un trato especial y diferenciado en materia de aranceles de \nimportación. \n\nLa evolución de este indicador indicará el progreso en la eliminación \ngradual de los aranceles sobre los bienes procedentes de países en desarrollo y PMA.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl cálculo de este indicador permitirá observar cuántos productos de los países \nen desarrollo y los países menos adelantados (PMA) tendrán libre acceso a los \nmercados de los países desarrollados. En comparación con los aranceles aplicados \na otros países, este indicador permitirá evaluar en qué medida se ha otorgado \nun trato especial y diferenciado en materia de aranceles de importación. \n\nLa evolución de este indicador indicará el progreso en la eliminación gradual de los \naranceles sobre los bienes procedentes de países en desarrollo y PMA.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -630,7 +570,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=10.7.4&seriesCode=SM_POP_REFG_OR&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Número de refugiados por cada 100.000 habitantes, por país de origen (por cada 100.000 habitantes) SM_POP_REFG_OR</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=10.a.1&seriesCode=TM_TRF_ZERO&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=AGR\">Proporción de líneas arancelarias aplicadas a las importaciones con arancel cero (%) TM_TRF_ZERO</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -696,7 +636,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-31");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-08");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -824,7 +764,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250407072539'></script>
+<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
 
 
 <script>
@@ -844,7 +784,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250407072539"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
