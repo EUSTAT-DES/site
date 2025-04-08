@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nNúmero de personas que utilizan combustibles y tecnologías limpios para cocinar, \ncalentar e iluminar, dividido por la población total que hace uso de cocina, \ncalefacción o iluminación, expresado en porcentaje. \n\n“Limpio” se define por los objetivos de tasa de emisiones y recomendaciones \nespecíficas sobre combustibles incluidos en las Directrices de la OMS para la calidad del \naire en interiores. Se consideran combustibles no limpios el carbón sin procesar y el \nqueroseno.\n");
+        var currentValue = normalizeCurrentValue('definicion', "\nJanaria prestatzeko, berotzeko eta argiztatzeko erregai eta teknologia \ngarbiak erabiltzen dituzten pertsonen kopurua, zati sukaldea, berogailua \nedo argiztapena erabiltzen duen biztanleria osoa, ehunekotan adierazita. \n\n\"Garbia\" definitzen da OMEk barnealdeetako airearen kalitateari buruz emandako \njarraibideetan jasotzen diren isuri-tasen eta erregaiei buruzko gomendio \nespezifikoetako helburuen arabera.Erregai ez-garbitzat hartzen dira prozesatu \ngabeko ikatza eta kerosenoa.\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPUC_{combustibles\\, limpios}^{t} = \\frac{PUC_{combustibles\\, limpios}^{t}}{PUC^{t}} \\cdot 100$$\n\ndonde:\n\n$PUC_{combustibles\\, limpios}^{t} =$ población que utiliza combustibles y tecnologías \nlimpios para cocinar, calentar e iluminar en el año $t$\n\n$P^{t} =$ población que hace uso de cocina, calefacción o iluminación en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPUC_{erregai\\, garbiak}^{t} = \\frac{PUC_{erregai\\, garbiak}^{t}}{PUC^{t}} \\cdot 100$$\n\nnon:\n\n$PUC_{erregai\\, garbiak}^{t} =$ Janaria prestatzeko, berotzeko eta argiztatzeko erregai eta teknologia \ngarbiak erabiltzen dituzten pertsonak $t$ urtean\n\n$P^{t} =$ sukaldea, berogailua edo argiztapena erabiltzen duen biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -614,7 +614,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nCocinar, iluminar y calentar representan una gran parte del consumo de energía \nen los hogares de los países de ingresos bajos y medianos. Para cocinar y \ncalentar, los hogares suelen depender de combustibles sólidos (como madera, \ncarbón vegetal, biomasa) o queroseno combinados con tecnologías ineficientes \n(por ejemplo, fuegos abiertos, estufas, calentadores de ambiente o lámparas). \n\nEs bien sabido que la dependencia de esa energía ineficiente para cocinar, \ncalentar e iluminar está asociada con altos niveles de contaminación del aire \nen los hogares (interiores). \n\nSe estima que el uso de combustibles ineficientes \npara cocinar por sí solo causa más de 4 millones de muertes al año, principalmente \nentre mujeres y niños. Esto es más que la tuberculosis, el virus de inmunodeficiencia \nhumana y la malaria juntos. Estos impactos adversos para la salud pueden evitarse \nadoptando combustibles y tecnologías limpios para todos los principales \nfines energéticos del hogar o, en algunas circunstancias, adoptando \ncocinas de combustión avanzada (es decir, aquellas que alcanzan \nlos objetivos de tasas de emisión previstos en las directrices de la OMS) y \nadoptando protocolos estrictos para su uso seguro. \n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nJanaria prestatzea, argitzea eta berotzea dira diru-sarrera txikiak eta ertainak \ndituzten herrialdeetako etxeetako energia-kontsumoaren zati handi bat. Janaria \nprestatzeko eta berotzeko, erregai solidoen (zura, egur-ikatza, biomasa) edo teknologia \nez-eraginkorrekin konbinatutako kerosenoaren (adibidez, su irekiak, berogailuak, \ngiro-berogailuak edo lanparak) mende egon ohi dira etxeak. \n\nJakina da sukaldean aritzeko, berotzeko eta argiztatzeko energia ez-eraginkor \nhorrekiko mendekotasuna etxeetako (barneko) airearen poluzio-maila altuekin lotuta \ndagoela. \n\nJanaria prestatzeko eraginkorrak ez diren erregaiak erabiltzeak urtean 4 milioi heriotza \nbaino gehiago eragiten dituela kalkulatzen da, batez ere emakume eta haurren artean. \nTuberkulosia, giza immunoeskasiaren birusa eta malaria batera baino gehiago da hori. \nOsasunerako kaltegarriak diren inpaktu horiek saihesteko, erregai eta teknologia garbiak \nerabil daitezke etxeko helburu energetiko nagusi guztietarako, edo, egoera batzuetan, \nerrekuntza aurreratuko sukaldeak erabil daitezke (hau da, OMEren jarraibideetan aurreikusitako \nemisio-tasen helburuak betetzen dituztenak), eta modu seguruan erabiltzeko protokolo zorrotzak bete. \n\nIturria: Nazio Batuen Estatistika Saila\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -628,7 +628,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Erabilgarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -642,7 +642,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=7.1.2&seriesCode=EG_EGY_CLEAN&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAREA\">Proporción de la población que depende principalmente de combustibles y tecnologías limpios (%) EG_EGY_CLEAN</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=7.1.2&seriesCode=EG_EGY_CLEAN&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAREA\">Batez ere erregai eta teknologia garbien mende dauden biztanleen proportzioa (%) EG_EGY_CLEAN</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -658,7 +658,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-07-01-02.pdf\">Metadatos 7-1-2.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-07-01-02.pdf\">Metadatuak 7-1-2.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-11-25");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -708,7 +708,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-28");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -836,7 +836,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -856,7 +856,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Número de admisiones a tratamiento ambulatorio por abuso o dependencia de sustancias adictivas  en un centro de tratamiento por primera vez en un año determinado por cada 100.000 habitantes");
+        var currentValue = normalizeCurrentValue('definicion', "Urte jakin batean lehen aldiz tratamendu-zentro batean substantzia adiktiboen abusu edo mendekotasunagatik  tratamendu anbulatorioan hartutakoen kopurua, 100.000 biztanleko");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$TAT_{sustancias\\, adictivas}^{t} = \\frac{AT_{sustancias\\, adictivas}^{t}}{P^{t}} \\cdot 100.000$$\n\ndonde:\n\n$AT_{sustancias\\, adictivas}^{t} =$ número de admisiones a tratamiento ambulatorio por abuso o dependencia de sustancias adictivas en un centro de tratamiento por primera vez en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$TAT_{substantzia\\, adiktiboak}^{t} = \\frac{AT_{substantzia\\, adiktiboak}^{t}}{P^{t}} \\cdot 100.000$$\n\nnon:\n$AT_{substantzia\\, adiktiboak}^{t} =$ tratamendu-zentro batean substantzia adiktiboen abusu edo mendekotasunagatik tratamendu anbulatorioan lehen aldiz onartutakoen kopurua $t$ urtean\n\n$P^{t} =$ biztanleria $t$ urteko uztailaren 1ean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sustancias adictivas: drogas ilegales, alcohol\n\nSexo \n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Substantia adiktiboak: legez kanpoko drogak, alkohola\n\nSexua \n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nSe puede producir cierta sobrestimación del indicador a nivel estatal, dado que una misma \npersona ha podido ser notificada en dos o más comunidades diferentes y no es posible su \nidentificación por motivos de confidencialidad.\n\nTratamiento: cualquier intervención realizada por profesionales cualificados para eliminar, \nreducir o controlar el consumo de drogas.\n\nAmbulatorio: la persona no pernocta en el centro. Este criterio no se aplica a los centros penitenciarios.\n\nDrogas ilegales: no se consideran drogas ilegales el alcohol y la nicotina (tabaco).\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nAdierazlea neurriz kanpo kalkula daiteke estatuan, pertsona bera bi erkidego edo gehiagotan jakinarazi \nahal izan delako, eta konfidentzialtasun-arrazoiengatik ezin delako identifikatu.\n\nTratamendua: droga-kontsumoa desagerrarazteko, murrizteko edo kontrolatzeko profesional kualifikatuek \negindako edozein esku-hartze.\n\nAnbulatorioa: pertsonak ez du gaua zentroan igarotzen. Irizpide hori ez zaie aplikatzen espetxeei.\n\nLegez kanpoko drogak: alkohola eta nikotina (tabakoa) ez dira legez kanpoko drogatzat hartzen.  \n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nEste indicador de Naciones Unidas mide la cobertura de las intervenciones de tratamiento para los trastornos por consumo \nde sustancias y se define como el número de personas que recibieron tratamiento en un año \ndividido por el número total de personas con trastornos por consumo de sustancias en el mismo año. \nEste indicador se desglosa en dos grandes grupos de sustancias psicoactivas: (1) drogas, (2) alcohol y otras sustancias psicoactivas.\n\nSegún datos de la Oficina de las Naciones Unidas contra la Droga y el Delito (ONUDD) y la Organización Mundial de la Salud (OMS), \n alrededor de 296 millones de personas de entre 15 y 64 años en todo el mundo consumieron una droga ilegal al menos una vez en 2021, \nalrededor de 2.300 millones de personas beben alcohol en la actualidad, unos 35 millones de personas sufren trastornos por consumo \nde drogas y 289 millones por consumo de alcohol.\n\nLos trastornos por consumo de sustancias son afecciones de salud graves que representan una carga significativa para \nlas personas afectadas, sus familias y comunidades. Los trastornos por consumo de sustancias no tratados generan costos sustanciales\npara la sociedad, incluida la pérdida de productividad, el aumento del gasto en atención médica y los costos relacionados con \nla justicia penal, el bienestar social y otras consecuencias sociales. \n\nEl fortalecimiento de los servicios de tratamiento \nimplica  proporcionar acceso a un conjunto integral de intervenciones basadas en evidencia (establecidas en las normas y \ndirectrices internacionales) que deberían estar disponibles para todos los grupos de población que las necesiten. \nEl indicador indicará en qué medida se dispone de una variedad de intervenciones basadas en evidencia para el tratamiento\nde los trastornos por consumo de sustancias y la población necesitada tiene acceso a ellas a nivel nacional, regional y mundial.\n\nAunque existe un tratamiento eficaz, solo una pequeña cantidad de personas con trastornos por consumo de sustancias\n lo recibe. Por ejemplo, se estima que, a nivel mundial, una de cada siete personas con trastornos por consumo de drogas\ntiene acceso a servicios de tratamiento de drogas o se le proporcionan (Informe mundial sobre drogas 2019). Los datos del \nATLAS de la OMS sobre el uso de sustancias mostraron que, en 2014, solo el 11,9 % (de los 103 países que respondieron) informó \nde una cobertura alta (40 % o más) para la dependencia del alcohol. El indicador 3.5.1 de los ODS es crucial para medir el progreso\nhacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mundo, tal como se formula en la Meta 3.5.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nNazio Batuen adierazle honek substantzien kontsumoagatiko nahasmenduen tratamendu-esku-hartzeen estaldura neurtzen \ndu, eta honela definitzen da: urtebetean tratamendua jaso duten pertsonen kopurua zati urte berean substantzien \nkontsumoagatiko nahasmenduak dituzten pertsonen guztizko kopurua. Adierazle hori substantzia psikoaktiboen bi talde \nhanditan banatzen da: (1) drogak, (2) alkohola eta beste substantzia psikoaktibo batzuk.\n\nDrogaren eta Delituaren aurkako Nazio Batuen Bulegoak (NDBE) eta Osasunaren Mundu Erakundeak (OME) emandako datuen \narabera, mundu osoan 15 eta 64 urte bitarteko 296 milioi pertsonak gutxienez behin kontsumitu zuten legez kanpoko \ndroga bat 2021ean, 2.300 milioi pertsona inguruk edaten dute alkohola gaur egun, 35 milioi pertsonak nahasmenduak \ndituzte drogen kontsumoagatik eta 289 milioik alkohola kontsumitzeagatik.\n\nSubstantzien kontsumoagatiko nahasmenduak osasun-afekzio larriak dira, eta karga handia dakarte eraginpeko \npertsonentzat, haien familientzat eta komunitateentzat. Tratatu gabeko substantzien kontsumoagatiko nahasmenduek \nfuntsezko kostuak sortzen dituzte gizartearentzat, produktibitate-galera, arreta medikoko gastuaren igoera eta \njustizia penalarekin, gizarte-ongizatearekin eta beste ondorio sozial batzuekin lotutako kostuak barne.\n\nTratamendu-zerbitzuak indartzeak berekin dakar ebidentzian oinarritutako esku-hartze multzo integral baterako sarbidea \nematea (nazioarteko arau eta gidalerroetan ezarritakoak), eta esku-hartze horiek eskuragarri egon beharko lukete behar \ndituzten biztanle-talde guztientzat. Adierazleak adieraziko du zer neurritan dauden eskuragarri substantzien \nkontsumoagatiko nahasmenduen tratamendurako ebidentzian oinarritutako esku-hartzeak, eta beharra duten biztanleek zer \nneurritan dituzten eskura estatu, eskualde eta mundu mailan.\n\nTratamendu eraginkorra badago ere, substantzien kontsumoagatiko nahasmenduak dituzten pertsona gutxi batzuek baino \nez dute jasotzen. Adibidez, mundu mailan, droga-kontsumoaren ondoriozko nahasmenduak dituzten zazpi pertsonatik \nbatek droga-tratamenduko zerbitzuak eskura dituela edo ematen zaizkiola kalkulatzen da (Drogei buruzko 2019ko munduko \ntxostena). OMEren ATLASk substantzien erabilerari buruz emandako datuek erakutsi zutenez, 2014an, % 11,9k bakarrik \n(erantzun zuten 103 herrialdeetatik) eman zuen alkoholarekiko mendekotasunerako estaldura handia ( % 40 edo gehiago). \nGJHen 3.5.1 adierazlea erabakigarria da mundu osoan substantzien abusuaren tratamendua indartzeko egindako aurrerapena \nneurtzeko, 3.5 helburuan adierazten den bezala.\n\nIturria: Nazio Batuen Estatistika Dibisioa  \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos del indicador de  Naciones Unidas, pero aporta información complementaria.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak ez ditu betetzen Nazio Batuen adierazlearen metadatuak, baina informazio  osagarria ematen du.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.5.1&seriesCode=SH_SUD_TREAT&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX%20%7C%20DRUG_TOTAL\">Cobertura de intervenciones de tratamiento (farmacológicas, psicosociales y de rehabilitación y servicios de seguimiento) para trastornos por consumo de sustancias (%) SH_SUD_TREAT</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.5.1&seriesCode=SH_SUD_TREAT&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX%20%7C%20DRUG_TOTAL\">Tratamendu-esku-hartzeen estaldura (farmakologikoak, psikosozialak eta errehabilitaziokoak eta jarraipen-zerbitzuak) substantzien kontsumoagatiko nahasmenduetarako (%) SH_SUD_TREAT</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-01.pdf\">Metadatos 3-5-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-01.pdf\">Metadatuak 3-5-1.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-11");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-31");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

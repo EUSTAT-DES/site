@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas que viven en hogares con un gasto sanitario que representa más del 10% o 25 % del gasto total del hogar");
+        var currentValue = normalizeCurrentValue('definicion', "Familia-etxearen guztizko gastuaren % 10 edo 25% baino gehiagoko osasun-gastua duten familia-etxeetan bizi diren pertsonen proportzioa");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPGGS_{\\gt x\\%}^{t} = \\frac{PGGS_{\\gt x\\%}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$PGGS_{\\gt x\\%}^{t} =$ población que vive en hogares con grandes gastos sanitarios, superiores a $x\\%$ del gasto total del hogar, en el año $t$\n\n$P^{t} =$ población total en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPGGS_{\\gt x\\%}^{t} = \\frac{PGGS_{\\gt x\\%}^{t}}{P^{t}} \\cdot 100$$\n\nnon:\n\n$PGGS_{\\gt x\\%}^{t} =$ osasun-gastu handiak (familia-etxearen guztizko gastuaren $%\\x$etik gorakoak) dituzten familia-etxeetan bizi den biztanleria $t$ urtean\n\n$P^{t} =$ biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Umbral de gasto: 10% y 25% del gasto total del hogar");
+        var currentValue = normalizeCurrentValue('desagregacion', "Gastuaren atalasea: Familia-gastuaren %10 eta %25");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl indicador mide la proporción de la población con un elevado gasto familiar en salud como porcentaje del gasto o ingreso \ntotal del hogar. Se utilizan dos umbrales para definir el “gran gasto familiar en salud”: superior al 10% y superior \nal 25% del gasto o ingreso total del hogar.\n\nLa meta 3.8 se refiere a la cobertura sanitaria universal (CSU) y se define como “Lograr la cobertura \nsanitaria universal, incluida la protección contra los riesgos financieros, el acceso a servicios \nde salud esenciales de calidad y el acceso a medicamentos y vacunas esenciales seguros, eficaces, de calidad \ny asequibles para todos”. \n\nLa preocupación es que todas las personas y comunidades reciban los servicios sanitarios\nde calidad que necesitan (incluidos los medicamentos y otros productos sanitarios) sin dificultades financieras. \nLas dificultades financieras son una consecuencia clave de los mecanismos inadecuados de protección\ncontra los riesgos financieros y pueden experimentarse en cualquier país, independientemente del nivel de ingresos\n y el tipo de sistema sanitario.  \n\nEl indicador 3.8.2 trata de identificar a las personas con gastos de \nbolsillo en salud que exceden su capacidad de pago, lo que podría llevar a recortar el gasto en otras necesidades \nbásicas como la educación, la alimentación, la vivienda y los servicios públicos. \n\nReducir las dificultades financieras en materia de salud es importante en la \nagenda de desarrollo mundial, así como una prioridad del \nsector sanitario de muchos países en todas las regiones.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nAdierazleak familian osasunean gastu handia duen biztanleriaren proportzioa neurtzen du, etxekoen unitatearen gastu \nedo diru-sarrera osoaren ehuneko gisa. Bi atalase erabiltzen dira \"osasun-arloko familia-gastu handia\" definitzeko: \n% 10etik gorakoa eta etxekoen unitatearen guztizko gastuaren edo diru-sarreraren % 25etik gorakoa.\n\n3.8 helburua osasun-estaldura unibertsalari (OEU) dagokio, eta honela definitzen da: \"Osasun-estaldura unibertsala \nlortzea, finantza-arriskuen aurkako babesa, kalitatezko funtsezko osasun-zerbitzuak eskuratzea eta funtsezko sendagai \neta txerto seguruak, eraginkorrak, kalitatezkoak eta guztientzat eskuragarriak eskuratzea barne\".\n\nPertsona eta komunitate guztiek behar dituzten kalitatezko osasun-zerbitzuak (sendagaiak eta bestelako osasun-produktuak \nbarne) finantza-arazorik gabe jasotzea da kezka nagusia. Finantza-zailtasunak finantza-arriskuen aurkako babes-mekanismo \ndesegokien funtsezko ondorio dira, eta edozein herrialdetan izan daitezke, diru-sarreren maila eta osasun-sistema mota \nedozein izanda ere.\n\n3.8.2 adierazlearen bidez, ordaintzeko gaitasuna gainditzen duten osasun-arloko poltsikoko gastuak dituzten pertsonak \nidentifikatu nahi dira, eta horrek oinarrizko beste premia batzuetako gastua murriztea ekar lezake, hala nola hezkuntzakoa, \nelikadurakoa, etxebizitzakoa eta zerbitzu publikoetakoa.\n\nOsasunaren arloko finantza-zailtasunak murriztea garrantzitsua da munduko garapen-agendan, baita herrialde askotako \nosasun-sektoreak eskualde guztietan duen lehentasuna ere.\n\nIturria: Nazio Batuen Estatistika Dibisioa \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.8.2&seriesCode=SH_XPD_EARN25&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población con grandes gastos domésticos en salud (superiores al 25%) como porcentaje del gasto o ingreso total del hogar (%) SH_XPD_EARN25</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.8.2&seriesCode=SH_XPD_EARN10&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Proporción de la población con grandes gastos domésticos en salud (superiores al 10%) como porcentaje del gasto o ingreso total del hogar (%) SH_XPD_EARN10</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.8.2&seriesCode=SH_XPD_EARN25&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Etxeko osasun-gastu handiak ( %25etik gorakoak) dituzten biztanleen proportzioa, etxeko gastu edo diru-sarrera osoaren portzentaje gisa (%) SH_XPD_EARN25</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.8.2&seriesCode=SH_XPD_EARN10&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\"> Etxeko osasun-gastu handiak ( %10etik gorakoak) dituzten biztanleen proportzioa, etxeko gastu edo diru-sarrera osoaren portzentaje gisa (%) SH_XPD_EARN10</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-08-02.pdf\">Metadatos 3-8-2.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-08-02.pdf\">Metadatuak 3-8-2.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-11");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-25");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Casos autóctonos de hepatitis B notificados a la Red Nacional de Vigilancia Epidemiológica (RENAVE) por cada 100.000 habitantes");
+        var currentValue = normalizeCurrentValue('definicion', "Zaintza Epidemiologikoko Sare Nazionalari (RENAVE) jakinarazitako B hepatitisaren kasu autoktonoak, 100.000 biztanleko");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$TCA_{hepatitis B}^{t} = \\frac{CA_{hepatitis B}^{t}}{P^{t}} \\cdot 100.000$$\n\ndonde:\n\n$CA_{hepatitis B}^{t} =$ casos autóctonos de hepatitis B notificados a la Red Nacional de Vigilancia Epidemiológica (RENAVE) en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$TCA_{hepatitis B}^{t} = \\frac{CA_{hepatitis B}^{t}}{P^{t}} \\cdot 100.000$$\n\ndonde:\n\n$CA_{hepatitis B}^{t} =$ Zaintza Epidemiologikoko Sare Nazionalari (RENAVE) jakinarazitako B hepatitisaren kasu autoktonoak $t$ urtean \n\n$P^{t} =$ biztanleria uztailaren 1ean $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo");
+        var currentValue = normalizeCurrentValue('desagregacion', "Sexua");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "Los casos autóctonos son aquellos en los que la enfermedad se ha contraído en el territorio nacional.");
+        var currentValue = normalizeCurrentValue('observaciones', "Kasu autoktonoak dira lurralde nazionalean gaixotasuna harrapatu den kasuak.");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl propósito es describir la reducción de las infecciones crónicas por hepatitis B. La mayor parte de la carga \nde enfermedad por infección por VHB proviene de infecciones adquiridas antes de los 5 años de edad. Por lo tanto, \nla prevención de la infección por VHB se centra en niños menores de 5 años. Las Naciones Unidas seleccionaron \nel acumulado de la incidencia de infección crónica por VHB a los 5 años de edad como indicador del objetivo de \n“combatir la hepatitis”. Este indicador se mide indirectamente a través de la proporción de niños 5 años de edad \nque han desarrollado una infección crónica por VHB (es decir, la proporción que da positivo en una \nprueba marcador de infección llamado antígeno de superficie de la hepatitis B [HBsAg]).\n\nEste indicador se mide indirectamente a través de la proporción de niños de 5 años que han desarrollado una \ninfección crónica por VHB (es decir, la proporción que da positivo para un marcador de infección llamado \nantígeno de superficie de la hepatitis B [HBsAg]). \n\nFuente: División de Estadísticas de las Naciones Unidas \n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nHelburua B hepatitisak eragindako infekzio kronikoen murrizketa deskribatzea da. BHB infekzioak eragindako \ngaixotasun-karga gehiena 5 urte bete baino lehen hartutako infekzioetatik dator. Beraz, BHB bidezko infekzioaren \nprebentzioa 5 urtetik beherako haurretan oinarritzen da. Nazio Batuek 5 urterekin BHBk eragindako infekzio \nkronikoaren intzidentzia metatua hautatu zuten \"hepatitisari aurre egiteko\" helburuaren adierazle gisa. Adierazle \nhori zeharka neurtzen da BHB bidezko infekzio kronikoa garatu duten 5 urteko haurren proportzioaren bidez (hau da, \nB hepatitisaren gainazaleko antigeno [HBsAg] izeneko infekzio-proba markatzaile batean positibo ematen duen proportzioa).\n\nAdierazle hori zeharka neurtzen da BHB bidezko infekzio kronikoa garatu duten 5 urteko haurren proportzioaren bidez \n(hau da, B hepatitisaren gainazaleko antigeno [HBsAg] izeneko infekzio-markagailu baterako positibo ematen duen proportzioa).\n\nIturria: Nazio Batuen Estatistika Dibisioa \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos de Naciones Unidas, pero aporta información similar");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak ez ditu Nazio Batuen metadatuak betetzen, baina antzeko informazioa ematen du");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.3.4&seriesCode=SH_HAP_HBSAG&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=%3C5Y\">Prevalencia del antígeno de superficie de la hepatitis B (HBsAg) (%) SH_HAP_HBSAG</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.3.4&seriesCode=SH_HAP_HBSAG&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=%3C5Y\">B hepatitisaren gainazaleko antigenoaren prebalentzia (HBsAg) (%) SH_HAP_HBSAG</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-04.pdf\">Metadatos 3-3-4.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-03-04.pdf\">Metadatuak 3-3-4.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-11");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

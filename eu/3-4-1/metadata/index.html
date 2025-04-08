@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nEste indicador se compone de dos series temporales:\n\n <b>-Tasa de mortalidad prematura (entre 30 y 70 años) atribuida a las enfermedades no transmisibles</b>: probabilidad de morir entre los 30 y los 70 años por enfermedades cardiovasculares, cáncer, \ndiabetes o enfermedades respiratorias crónicas.\n\n <b>-Tasa de mortalidad atribuida a las enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias \ncrónicas por cada 100.000 habitantes</b>: defunciones atribuidas a las enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias \ncrónicas por cada 100.000 habitantes\n");
+        var currentValue = normalizeCurrentValue('definicion', "\nAdierazle honek bi denborazko serie ditu: \n\n - Transmititu ezin diren gaixotasunei egotzitako heriotza goiztiarren tasa (30-70 urte): gaixotasun kardiobaskularren, \nminbiziaren, diabetesaren edo arnas gaixotasun kronikoen ondorioz 30 eta 70 urte bitartean hiltzeko probabilitatea. \n\n - Gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei egotzitako heriotza-tasa 100.000 \nbiztanleko: gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei esleitutako \nheriotzak 100.000 biztanleko \n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b>Tasa de mortalidad prematura atribuida a las enfermedades no transmisibles</b>\n\n$$^{5}M_x = \\frac{DENT_{x,x+5}^{t}}{PENT_{x,x+5}^{t}}$$\n\ndonde:\n\n$DENT_{x,x+5}^{t} =$ defunciones atribuidas a las 4 enfermedades no transmisibles\nentre la edad exacta $x$ y la edad exacta $x+5$ en el año $t$\n\n$P^{t} =$ población entre la edad exacta $x$ y la edad exacta $x+5$ del año $t$\n\n\n<b>Tasa de mortalidad atribuida a las enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias \ncrónicas por cada 100.000 habitantes</b>\n\n\n$$TM_{ENT}^{t} = \\frac{D_{ENT}^{t}}{P^{t}} \\cdot 100.000$$\n\n\ndonde:\n\n$D_{ENT}^{t} =$ defunciones atribuidas a enfermedades no transmisibles en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Tasa de mortalidad prematura atribuida a las enfermedades no transmisibles</b>\n\n$$^{5}M_x = \\frac{DENT_{x,x+5}^{t}}{PENT_{x,x+5}^{t}}$$\n\nnon:\n\n$DENT_{x,x+5}^{t} =$ $x$ adin zehatzaren eta $x+5$ adin zehatzaren artean transmititu ezin diren 4 gaixotasunei \nesleitutako heriotzak $t$ urtean\n\n$P^{t} =$ $x$adin zehatzaren eta $x+5$ adin zehatzaren arteko biztanleria $t$ urtean\n\n\n<b>Gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei egotzitako heriotza-tasa \n100.000 biztanleko</b>\n\n\n$$TM_{ENT}^{t} = \\frac{D_{ENT}^{t}}{P^{t}} \\cdot 100.000$$\n\n\nnon:\n\n$D_{ENT}^{t} =$ transmititu ezin diren gaixotasunei egotzitako heriotzak $t$ urtean\n\n$P^{t} =$ biztanleria $t$ urteko uztailaren 1ean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "\nEnfermedad no transmisible (ENT): enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias \ncrónicas\n\nSexo\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "\nGaixotasun ez-transmitigarria (GET): gaixotasun kardiobaskularrak, minbizia, diabetesa edo arnas gaixotasun \nkronikoak\n\nSexua\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nSe utilizan los siguientes códigos de la Clasificación Internacional de Enfermedades para cada una de las enfermedades no transmisibles:\n- enfermedades cardiovasculares (códigos I00-I99 de la CIE-10) \n- cáncer (códigos C00-C97 de la CIE-10)\n- diabetes (códigos E10-E14 de la CIE-10)\n- enfermedades respiratorias crónicas (códigos J30-J98 de la CIE-10) \n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nGaixotasunen Nazioarteko Sailkapenaren kode hauek erabiltzen dira transmititu ezin den gaixotasun bakoitzerako:\n- gaixotasun kardiobaskularrak (GNS-10eko I00-I99 kodeak)\n- minbizia (GNS-10eko C00-C97 kodeak)\n- diabetesa (GNS-10eko E10-E14 kodeak)\n- arnas gaixotasun kronikoak (GNS-10eko J30-J98 kodeak)  \n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa morbilidad por enfermedades no transmisibles (ENT) entre los adultos está aumentando rápidamente a nivel mundial debido\n al envejecimiento y las transiciones epidemiológicas. Las enfermedades cardiovasculares, el cáncer, la diabetes y las\n enfermedades respiratorias crónicas son las cuatro causas principales de la carga de ENT. Medir el riesgo de morir \npor estas cuatro causas principales es importante para evaluar el alcance de la carga de mortalidad prematura por ENT en \nuna población, suponiendo que experimentaría las tasas de mortalidad actuales a cualquier edad y no moriría por ninguna\n otra causa de muerte (por ejemplo, lesiones o VIH/SIDA).\n\nLa tasa de mortalidad atribuida a enfermedades cardiovasculares, cáncer, diabetes o \nenfermedades respiratorias crónicas es la probabilidad de morir entre los 30 y los 70 años \npor enfermedades cardiovasculares, cáncer, diabetes\no enfermedades respiratorias crónicas, definida como el porcentaje de personas de 30 años que morirían antes de cumplir \n70 años por enfermedades cardiovasculares, cáncer, diabetes o enfermedades respiratorias crónicas, suponiendo que experimentaría \nlas tasas de mortalidad actuales a cualquier edad y no moriría por ninguna otra causa de muerte (por ejemplo, lesiones o VIH/SIDA).\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nHelduen artean transmititu ezin diren gaixotasunengatiko erikortasuna (ENT) azkar handitzen ari da mundu mailan, \nzahartzearen eta trantsizio epidemiologikoen ondorioz. Gaixotasun kardiobaskularrak, minbizia, diabetesa eta arnas \ngaixotasun kronikoak dira ENT kargaren lau kausa nagusiak. Lau kausa nagusi horiengatik hiltzeko arriskua neurtzea \ngarrantzitsua da ENT bidezko hilkortasun goiztiarraren kargaren norainokoa ebaluatzeko populazio batean, gaur \negungo hilkortasun-tasak edozein adinetan jasango lituzkeela eta ez litzatekeela beste heriotza-kausa batengatik \nhilko (adibidez, lesioak edo GIB/HIESa).\n\nGaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnasketako gaixotasun kronikoei egotzitako heriotza-tasa \ngaixotasun kardiobaskularren, minbiziaren, diabetesaren edo arnasketako gaixotasun kronikoen ondorioz 30 eta 70 urte \nbitartean hiltzeko probabilitatea da. Gaixotasun kardiobaskularren, minbiziaren, diabetesaren edo arnasketako gaixotasun \nkronikoen ondorioz 70 urte bete baino lehen hilko liratekeen 30 urteko pertsonen ehunekoa da, eta gaur egungo \nheriotza-tasak edozein adinetan izango lituzkeela eta ez litzatekeela beste heriotza-kausa batengatik hilko (adibidez, \nlesioak edo GIB/HIESa).\n\nIturria: Nazio Batuen Estatistika Dibisioa  \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.4.1&seriesCode=SH_DTH_NCOM&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=30-70%20%7C%20BOTHSEX\">Tasa de mortalidad atribuida a enfermedades cardiovasculares, cáncer, diabetes o enfermedades respiratorias crónicas (probabilidad) SH_DTH_NCOM</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.4.1&seriesCode=SH_DTH_NCOM&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=30-70%20%7C%20BOTHSEX\">Gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei egotzitako heriotza-tasa (probabilitatea) SH_DTH_NCOM</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-01.pdf\">Metadatos 3-4-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-01.pdf\">Metadatuak 3-4-1.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-11");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-25");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

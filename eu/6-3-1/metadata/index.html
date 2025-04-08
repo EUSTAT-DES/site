@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nEl indicador está constituido por 2 series:\n\n  - Proporción de flujos de aguas residuales domésticas tratadas de manera adecuada: Proporción de la carga contaminante \n    correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes que depuran sus aguas \n    residuales reduciendo su nivel de contaminación hasta un límte aceptable para las aguas receptoras\n\n  - Proporción de flujos de aguas residuales domésticas conectadas a un sistema de colectores: Proporción de la carga contaminante \n    correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes conectadas a un sistema \n    de conductos que recoja y conduzca sus aguas residuales hasta una instalación de tratamiento o a un punto de vertido final\n");
+        var currentValue = normalizeCurrentValue('definicion', "\nAdierazleak 2 serie ditu:\n\n  - Modu egokian tratatutako etxeko hondakin-uren fluxuen proportzioa: 2.000 biztanle baliokidetik gorako \n    hiri-aglomerazioei dagokien karga kutsatzailearen proportzioa, hondakin-urak araztu eta kutsadura-maila \n    ur hartzaileentzat onargarria den mugaraino murrizten duena.\n\n  - Kolektore-sistema bati konektatutako etxeko hondakin-uren fluxuen proportzioa: 2.000 biztanletik gorako \n    hiri-aglomerazioei dagokien karga kutsatzailearen proportzioa, hondakin-urak bildu eta tratamendu-instalazio \n    batera edo azken isurketa-puntu batera eramango dituen hodi-sistema batera konektatuta\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b>Proporción de flujos de aguas residuales domésticas tratadas de manera adecuada</b>\n\n  $$PCC_{\\text{depuración}}^{t} =\n  \\left( \\frac{CC_{\\text{depuración}}^{t}}{CC^{t}} \\cdot 100 \\right)$$\n\ndonde:\n\n$CC_{\\text{depuración}}^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de \n2.000 habitantes equivalentes que depuran adecuadamente sus aguas residuales en el año $t$\n\n$CC^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes en el año $t$\n\n<br>\n\n<b>Proporción de flujos de aguas residuales domésticas conectadas a un sistema de colectores</b>\n\n  $$PCC_{\\text{colectores}}^{t} =\n  \\left( \\frac{CC_{\\text{colectores}}^{t}}{CC^{t}} \\cdot 100 \\right)$$\n\ndonde:\n\n$CC_{\\text{colectores}}^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de 2.000 \nhabitantes equivalentes conectadas a un sistema de colectores de aguas residuales en el año $t$\n\n$CC^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Modu egokian tratatutako etxeko hondakin-uren fluxuen proportzioa</b>\n\n  $$PCC_{\\text{ur-arazketa}}^{t} = \\left( \\frac{CC_{\\text{ur-arazketa}}^{t}}{CC^{t}} \\cdot 100 \\right)$$\n\nnon: \n\n$CC_{\\text{ur-arazketa}}^{t} =$ 2.000 biztanle baliokidetik gorako hiri-aglomerazioei dagokien karga \nkutsatzailea, hondakin-urak behar bezala arazten dituena $t$ urtean\n\n$CC^{t} =$ 2.000 biztanle baliokidetik gorako hiri-aglomerazioei dagokien karga kutsatzailea $t$ urtean\n\n<br>\n\n<b>Kolektore-sistema batera konektatutako etxeko hondakin-uren fluxuen proportzioa</b>\n\n  $$PCC_{\\text{kolektoreak}}^{t} =\n  \\left( \\frac{CC_{\\text{kolektoreak}}^{t}}{CC^{t}} \\cdot 100 \\right)$$\n\nnon:\n\n$CC_{\\text{kolektoreak}}^{t} =$ 2.000 biztanletik gorako hiri-aglomerazioei dagokien karga kutsatzailea, \nhondakin-uren kolektore-sistema bati konektatuta $t$ urtean\n\n$CC^{t} =$ 2.000 biztanle baliokidetik gorako hiri-aglomerazioei dagokien karga kutsatzailea $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -608,7 +608,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nLa carga contaminante de una aglomeración urbana se mide en habitantes equivalentes, definiéndose un \nhabitante equivalente como la carga orgánica biodegradable con una demanda bioquímica de oxígeno de \ncinco días de 60 gramos de oxígeno por día. Un habitante equivalente viene a representar la carga \norgánica biodegradable generada por una persona en un día en una vivienda normal. \n\nSe debe tener en cuenta que la carga contaminante de una aglomeración urbana no solo incluye \nla contaminación debida a las excreciones humanas, sino también la contaminación procedente \nde aquellos locales utilizados para efectuar una actividad comercial o industrial, siempre \nque sea de naturaleza orgánica biodegradable. Así pues, el número de habitantes equivalentes de \nuna aglomeración urbana siempre es superior a su número de habitantes reales.\n\nEste indicador solo tiene en cuenta a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes, \nen consonancia con los artículos 3 y 4 de la Directiva 91/271/CEE sobre el tratamiento de las aguas residuales urbanas.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nHiri-aglomerazio baten karga kutsatzailea biztanle baliokideetan neurtzen da, eta biztanle baliokide bat \nhonela definitzen da: karga organiko biodegradagarria, eguneko 60 gramo oxigenoko bost eguneko oxigeno-eskari \nbiokimikoarekin. Biztanle baliokide bat pertsona batek etxebizitza arrunt batean egun batean sortzen duen \nkarga organiko biodegradagarria da.\n\nKontuan izan behar da hiri-aglomerazio baten karga kutsatzaileak ez duela soilik giza iraizteek eragindako \nkutsadura hartzen, baita merkataritza- edo industria-jarduera bat egiteko erabiltzen diren lokalek eragindako \nkutsadura ere, betiere izaera organiko biodegradagarria badu. Beraz, hiri-aglomerazio bateko biztanle \nbaliokideen kopurua beti da benetako biztanle-kopurua baino handiagoa.\n\nAdierazle honek 2.000 biztanletik gorako hiri-aglomerazioak bakarrik hartzen ditu kontuan, hiriko hondakin-uren \ntratamenduari buruzko 91/271/EEE Zuzentarauaren 3. eta 4. artikuluekin bat etorriz.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas, pero aporta información similar.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak ez ditu betetzen Nazio Batuen adierazlearen metadatuak, baina antzeko informazioa ematen du. ");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -670,7 +670,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-06-03-01.pdf\">Metadatos 6-3-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-06-03-01.pdf\">Metadatuak 6-3-1.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -706,7 +706,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-10");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -720,7 +720,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -848,7 +848,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -868,7 +868,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1575,7 +1575,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Ganancia bruta por hora normal de trabajo del personal asalariado</p>
+            <p>Soldatako langileen irabazi gordina lanordu arrunt bakoitzeko</p>
 
           
         </td>
@@ -1591,27 +1591,27 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Formula teorikoa </th>
         <td>
           
-            <p><b>Ingreso medio por hora de las personas empleadas:</b></p>
+            <p><b>pertsona enplegatuen batez besteko diru-sarrerak, lanorduko</b></p>
 
 \[GH^{t} = \frac{G^{t}}{H^{t}}\]
 
 <p>donde:</p>
 
-<p>$G^{t} =$ ganancia bruta del personal asalariado en el año $t$</p>
+<p>$G^{t} =$ soldatapeko langileen irabazi gordina $t$ urtean</p>
 
-<p>$H^{t} =$ horas normales de trabajo del personal asalariado en el año $t$</p>
+<p>$H^{t} =$ soldatapeko langileen lanordu arruntak $t$ urtean</p>
 
 <p><br /></p>
 
-<p><b>Brecha salarial de género:</b></p>
+<p><b>Generoko soldata-arrakala:</b></p>
 
-\[BSG^{t} = \frac{GPH_{hombre}^{t} - GPH_{mujer}^{t}}{GPH_{hombre}^{t}} \cdot 100\]
+\[BSG^{t} = \frac{GPH_{gizona}^{t} - GPH_{emakume}^{t}}{GPH_{gizona}^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$GPH_{hombre}^{t} =$ ganancia promedio hora de los hombres en el año $t$</p>
+<p>$GPH_{gizona}^{t} =$ gizonen orduko batez besteko irabazia $t$ urtean</p>
 
-<p>$GPH_{mujer}^{t} =$ ganancia promedio hora de las mujeres en el año $t$</p>
+<p>$GPH_{emakume}^{t} =$ emakumeen orduko batez besteko irabazia $t$ urtean</p>
 
           
         </td>
@@ -1627,10 +1627,10 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Sexo</p>
+            <p>Sexua</p>
 
-<p>Personas sin discapacidad, y con discapacidad (personal asalariado con un 
-grado de discapacidad superior o igual al 33%)</p>
+<p>Desgaitasunik ez duten eta desgaitasuna duten pertsonak (soldatapeko langileak, % 33ko 
+edo hortik gorako desgaitasun-maila dutenak)</p>
 
           
         </td>
@@ -1735,33 +1735,13 @@ grado de discapacidad superior o igual al 33%)</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako datuak </th>
-        <td>
-          
-            2025 martxoak 27
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako metadatuak </th>
-        <td>
           
-            2025 martxoak 28
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -2018,7 +1998,7 @@ indicación de hasta qué punto se respeta o se logra la igualdad salarial.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+            <p>Eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
 
           
         </td>
@@ -2044,7 +2024,7 @@ indicación de hasta qué punto se respeta o se logra la igualdad salarial.</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-08-05-01.pdf">Metadatos 8-5-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-08-05-01.pdf">Metadatuak 8-5-1.pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -2159,7 +2139,7 @@ indicación de hasta qué punto se respeta o se logra la igualdad salarial.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -2179,7 +2159,7 @@ indicación de hasta qué punto se respeta o se logra la igualdad salarial.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

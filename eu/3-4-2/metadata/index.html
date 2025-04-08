@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Defunciones atribuidas a suicidio por cada 100.000 habitantes.");
+        var currentValue = normalizeCurrentValue('definicion', "Suizidioari egotziriko heriotzak 100.000 biztanleko");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$TM_{suicidio }^{t} = \\frac{D_{suicidio }^{t}}{P^{t}} \\cdot 100.000$$\n\ndonde:\n\n$D_{suicidio }^{t} =$ defunciones atribuidas a suicidio (códigos X60-X84 de la CIE-10) en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$TM_{suizidio }^{t} = \\frac{D_{suizidio }^{t}}{P^{t}} \\cdot 100.000$$\n\nnon:\n\n$D_{suizidio }^{t} =$ suizidioari egotziriko heriotzak (GNS-10eko X60-X84 kodeak) $t$ urtean \n\n$P^{t} =$ biztanleria $$t urteko uztailaren 1ean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Sexo \n\nTerritorio histórico\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Sexua\n\nLurralde historikoa\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLos trastornos mentales se dan en todas las regiones y culturas del mundo. Los más frecuentes  son la depresión y la ansiedad, que se estima que afectan a casi 1 de cada 10 personas. En su peor\n forma, la depresión puede conducir al suicidio. En 2019, se estima que hubo más de 700.000 muertes \npor suicidio en todo el mundo.\nLa tasa de mortalidad por suicidio se define como el número de muertes por suicidio en un año,  dividido por la población y multiplicado por 100 000. Los suicidios se definen en términos de la\n Clasificación Internacional de Enfermedades, Décima Revisión (CIE-10)\n\nFuente: División de Estadísticas de las Naciones Unidas");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nBuruko nahasmenduak munduko eskualde eta kultura guztietan gertatzen dira. Ohikoenak depresioa eta  antsietatea dira, gutxi gorabehera 10 pertsonatik 1i eragiten baitiote. Bere modurik okerrenean, depresioak  suizidiora eraman dezake. 2019an, mundu osoan 700.000 heriotza baino gehiago izan zirela uste da.\nSuizidioaren ondoriozko heriotza-tasa honela definitzen da: urtebetean suizidioak eragindako heriotza-kopurua  zati biztanleria eta bider 100.000. Suizidioak honela definitzen dira: Gaixotasunen Nazioarteko Sailkapena,  Hamargarren Berrikuspena (GNS-10)\nIturria: Nazio Batuen Estatistika Dibisioa  ");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.4.2&seriesCode=SH_STA_SCIDE&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX\">Tasa de mortalidad por suicidio, por sexo (muertes por cada 100.000 habitantes) SH_STA_SCIDE</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.4.2&seriesCode=SH_STA_SCIDE&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=BOTHSEX\">Suizidioaren ondoriozko heriotza-tasa, sexuaren arabera (heriotzak 100.000 biztanleko) SH_STA_SCIDE</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-02.pdf\">Metadatos 3-4-2.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-03-04-02.pdf\">Metadatuak 3-4-2.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -730,7 +730,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-11");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -744,7 +744,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-25");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-10-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

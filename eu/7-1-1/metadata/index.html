@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nPorcentaje de población con acceso a fuentes consistentes de electricidad\n");
+        var currentValue = normalizeCurrentValue('definicion', "\nElektrizitate-iturri sendoak eskuratzeko aukera duten biztanleen ehunekoa\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PA_{electricidad}^{t} = \\frac{PA_{electricidad}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$PA_{electricidad}^{t} =$ población con acceso a electricidad en el año $t$\n\n$P^{t} =$ población en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PA_{elektrizitatea}^{t} = \\frac{PA_{elektrizitatea}^{t}}{P^{t}} \\cdot 100$$\n\nnon:\n\n$PA_{elektrizitatea}^{t} =$ elektrizitaterako sarbidea duen biztanleria $t$ urtean\n\n$P^{t} =$ biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -614,7 +614,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nEl acceso a la electricidad aborda cuestiones fundamentales en todas \nlas dimensiones del desarrollo sostenible. La meta tiene una amplia gama \nde impactos sociales y económicos, entre ellos, la facilitación \ndel desarrollo de actividades generadoras de ingresos y el alivio de la \ncarga de las tareas domésticas.\n\nEn el marco de la meta mundial de acceso igualitario a la energía, el \nODS 7.1.1 se centra específicamente en el acceso a la electricidad disponible \npara la población mundial. Para obtener una imagen clara, solo \nse consideran que hay acceso si la fuente principal de iluminación es \nel proveedor local de electricidad, los sistemas solares, las minirredes y \nlos sistemas autónomos. \n\nLas fuentes como generadores, velas, baterías, etc., no se consideran \ndebido a su limitada capacidad de trabajo y a que generalmente se \nmantienen como fuentes de respaldo para la iluminación.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nElektrizitaterako sarbideak funtsezko gaiak jorratzen ditu garapen \njasangarriaren dimentsio guztietan. Jomugak inpaktu sozial eta ekonomiko ugari ditu, \nbesteak beste, diru-sarrerak sortzen dituzten jardueren garapena erraztea eta etxeko \nlanen zama arintzea.\n\n\nEnergia berdintasunez eskuratzeko mundu mailako helburuaren esparruan, 7.1.1 GJHak munduko \nbiztanleentzat eskuragarri dagoen elektrizitaterako sarbidean zentratzen da espezifikoki.  \nIrudi argi bat lortzeko, sarbidea dagoela kontsideratzen da soilik argiztapen-iturri nagusia \nelektrizitate-hornitzaile lokala, eguzki-sistemak, minirsareak eta sistema autonomoak badira. \n\nSorgailuak, kandelak, bateriak eta abar bezalako iturriak ez dira kontuan hartzen, \nlanerako gaitasun mugatua dutelako eta, oro har, argiztapenerako babes-iturri gisa \nmantentzen direlako. \n\n\nIturria: Nazio Batuen Estatistika Saila\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -628,7 +628,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "Erabilgarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -642,7 +642,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=7.1.1&seriesCode=EG_ACS_ELEC&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAREA\">Proporción de población con acceso a electricidad, por zonas urbanas/rurales (%) EG_ACS_ELEC</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.3.2&seriesCode=EG_ACS_ELEC&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAREA\">Elektrizitaterako sarbidea duten biztanleen proportzioa, hirigune/landa-eremuaren arabera (%) EG_ACS_ELEC</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -658,7 +658,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-07-01-01.pdf\">Metadatos 7-1-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-07-01-01.pdf\">Metadatuak 7-1-1.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-02-10");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -708,7 +708,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -836,7 +836,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -856,7 +856,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

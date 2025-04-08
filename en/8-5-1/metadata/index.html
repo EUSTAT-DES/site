@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<b>Ingreso medio por hora de las personas empleadas:</b>\n\n$$GH^{t} = \\frac{G^{t}}{H^{t}} $$\n\ndonde:\n\n$G^{t} =$ ganancia bruta del personal asalariado en el año $t$\n\n$H^{t} =$ horas normales de trabajo del personal asalariado en el año $t$\n\n<br>\n\n<b>Brecha salarial de género:</b>\n\n$$BSG^{t} = \\frac{GPH_{hombre}^{t} - GPH_{mujer}^{t}}{GPH_{hombre}^{t}} \\cdot 100$$\n\ndonde:\n\n$GPH_{hombre}^{t} =$ ganancia promedio hora de los hombres en el año $t$\n\n$GPH_{mujer}^{t} =$ ganancia promedio hora de las mujeres en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "<b>Ingreso medio por hora de las personas empleadas:</b>\n\n$$GH^{t} = \\frac{G^{t}}{H^{t}} $$\n\ndonde:\n\n$G^{t} =$ ganancia bruta del personal asalariado en el año $t$\n\n$H^{t} =$ horas normales de trabajo del personal asalariado en el año $t$\n\n<br>\n\n<b>Brecha salarial de género:</b>\n\n$$BSG^{t} = \\frac{GPH_{hombre}^{t} - GPH_{mujer}^{t}}{GPH_{hombre}^{t}} \\cdot 100$$\n\ndonde:\n\n$GPH_{hombre}^{t} =$ ganancia promedio por hora de los hombres en el año $t$\n\n$GPH_{mujer}^{t} =$ ganancia promedio por hora de las mujeres en el año $t$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -756,7 +756,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-28");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-08");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -884,7 +884,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -904,7 +904,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

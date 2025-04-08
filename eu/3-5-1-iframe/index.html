@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -774,7 +774,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Número de admisiones a tratamiento ambulatorio por abuso o dependencia de sustancias adictivas  en un centro de tratamiento por primera vez en un año determinado por cada 100.000 habitantes</p>
+            <p>Urte jakin batean lehen aldiz tratamendu-zentro batean substantzia adiktiboen abusu edo mendekotasunagatik  tratamendu anbulatorioan hartutakoen kopurua, 100.000 biztanleko</p>
 
           
         </td>
@@ -791,13 +791,12 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[TAT_{sustancias\, adictivas}^{t} = \frac{AT_{sustancias\, adictivas}^{t}}{P^{t}} \cdot 100.000\]
+\[TAT_{substantzia\, adiktiboak}^{t} = \frac{AT_{substantzia\, adiktiboak}^{t}}{P^{t}} \cdot 100.000\]
 
-<p>donde:</p>
+<p>non:
+$AT_{substantzia\, adiktiboak}^{t} =$ tratamendu-zentro batean substantzia adiktiboen abusu edo mendekotasunagatik tratamendu anbulatorioan lehen aldiz onartutakoen kopurua $t$ urtean</p>
 
-<p>$AT_{sustancias\, adictivas}^{t} =$ número de admisiones a tratamiento ambulatorio por abuso o dependencia de sustancias adictivas en un centro de tratamiento por primera vez en el año $t$</p>
-
-<p>$P^{t} =$ población a 1 de julio del año $t$</p>
+<p>$P^{t} =$ biztanleria $t$ urteko uztailaren 1ean</p>
 
           
         </td>
@@ -813,9 +812,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Sustancias adictivas: drogas ilegales, alcohol</p>
+            <p>Substantia adiktiboak: legez kanpoko drogak, alkohola</p>
 
-<p>Sexo</p>
+<p>Sexua</p>
 
           
         </td>
@@ -848,16 +847,15 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Se puede producir cierta sobrestimación del indicador a nivel estatal, dado que una misma 
-persona ha podido ser notificada en dos o más comunidades diferentes y no es posible su 
-identificación por motivos de confidencialidad.</p>
+<p>Adierazlea neurriz kanpo kalkula daiteke estatuan, pertsona bera bi erkidego edo gehiagotan jakinarazi 
+ahal izan delako, eta konfidentzialtasun-arrazoiengatik ezin delako identifikatu.</p>
 
-<p>Tratamiento: cualquier intervención realizada por profesionales cualificados para eliminar, 
-reducir o controlar el consumo de drogas.</p>
+<p>Tratamendua: droga-kontsumoa desagerrarazteko, murrizteko edo kontrolatzeko profesional kualifikatuek 
+egindako edozein esku-hartze.</p>
 
-<p>Ambulatorio: la persona no pernocta en el centro. Este criterio no se aplica a los centros penitenciarios.</p>
+<p>Anbulatorioa: pertsonak ez du gaua zentroan igarotzen. Irizpide hori ez zaie aplikatzen espetxeei.</p>
 
-<p>Drogas ilegales: no se consideran drogas ilegales el alcohol y la nicotina (tabaco).</p>
+<p>Legez kanpoko drogak: alkohola eta nikotina (tabakoa) ez dira legez kanpoko drogatzat hartzen.</p>
 
           
         </td>
@@ -946,7 +944,7 @@ reducir o controlar el consumo de drogas.</p>
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025 martxoak 11
+            2024 urriak 29
           
         </td>
         </tr>
@@ -961,7 +959,7 @@ reducir o controlar el consumo de drogas.</p>
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2025 martxoak 31
+            2024 urriak 29
           
         </td>
         </tr>
@@ -1093,35 +1091,36 @@ reducir o controlar el consumo de drogas.</p>
         <td>
           
             
-<p>Este indicador de Naciones Unidas mide la cobertura de las intervenciones de tratamiento para los trastornos por consumo 
-de sustancias y se define como el número de personas que recibieron tratamiento en un año 
-dividido por el número total de personas con trastornos por consumo de sustancias en el mismo año. 
-Este indicador se desglosa en dos grandes grupos de sustancias psicoactivas: (1) drogas, (2) alcohol y otras sustancias psicoactivas.</p>
+<p>Nazio Batuen adierazle honek substantzien kontsumoagatiko nahasmenduen tratamendu-esku-hartzeen estaldura neurtzen 
+du, eta honela definitzen da: urtebetean tratamendua jaso duten pertsonen kopurua zati urte berean substantzien 
+kontsumoagatiko nahasmenduak dituzten pertsonen guztizko kopurua. Adierazle hori substantzia psikoaktiboen bi talde 
+handitan banatzen da: (1) drogak, (2) alkohola eta beste substantzia psikoaktibo batzuk.</p>
 
-<p>Según datos de la Oficina de las Naciones Unidas contra la Droga y el Delito (ONUDD) y la Organización Mundial de la Salud (OMS), 
- alrededor de 296 millones de personas de entre 15 y 64 años en todo el mundo consumieron una droga ilegal al menos una vez en 2021, 
-alrededor de 2.300 millones de personas beben alcohol en la actualidad, unos 35 millones de personas sufren trastornos por consumo 
-de drogas y 289 millones por consumo de alcohol.</p>
+<p>Drogaren eta Delituaren aurkako Nazio Batuen Bulegoak (NDBE) eta Osasunaren Mundu Erakundeak (OME) emandako datuen 
+arabera, mundu osoan 15 eta 64 urte bitarteko 296 milioi pertsonak gutxienez behin kontsumitu zuten legez kanpoko 
+droga bat 2021ean, 2.300 milioi pertsona inguruk edaten dute alkohola gaur egun, 35 milioi pertsonak nahasmenduak 
+dituzte drogen kontsumoagatik eta 289 milioik alkohola kontsumitzeagatik.</p>
 
-<p>Los trastornos por consumo de sustancias son afecciones de salud graves que representan una carga significativa para 
-las personas afectadas, sus familias y comunidades. Los trastornos por consumo de sustancias no tratados generan costos sustanciales
-para la sociedad, incluida la pérdida de productividad, el aumento del gasto en atención médica y los costos relacionados con 
-la justicia penal, el bienestar social y otras consecuencias sociales.</p>
+<p>Substantzien kontsumoagatiko nahasmenduak osasun-afekzio larriak dira, eta karga handia dakarte eraginpeko 
+pertsonentzat, haien familientzat eta komunitateentzat. Tratatu gabeko substantzien kontsumoagatiko nahasmenduek 
+funtsezko kostuak sortzen dituzte gizartearentzat, produktibitate-galera, arreta medikoko gastuaren igoera eta 
+justizia penalarekin, gizarte-ongizatearekin eta beste ondorio sozial batzuekin lotutako kostuak barne.</p>
 
-<p>El fortalecimiento de los servicios de tratamiento 
-implica  proporcionar acceso a un conjunto integral de intervenciones basadas en evidencia (establecidas en las normas y 
-directrices internacionales) que deberían estar disponibles para todos los grupos de población que las necesiten. 
-El indicador indicará en qué medida se dispone de una variedad de intervenciones basadas en evidencia para el tratamiento
-de los trastornos por consumo de sustancias y la población necesitada tiene acceso a ellas a nivel nacional, regional y mundial.</p>
+<p>Tratamendu-zerbitzuak indartzeak berekin dakar ebidentzian oinarritutako esku-hartze multzo integral baterako sarbidea 
+ematea (nazioarteko arau eta gidalerroetan ezarritakoak), eta esku-hartze horiek eskuragarri egon beharko lukete behar 
+dituzten biztanle-talde guztientzat. Adierazleak adieraziko du zer neurritan dauden eskuragarri substantzien 
+kontsumoagatiko nahasmenduen tratamendurako ebidentzian oinarritutako esku-hartzeak, eta beharra duten biztanleek zer 
+neurritan dituzten eskura estatu, eskualde eta mundu mailan.</p>
 
-<p>Aunque existe un tratamiento eficaz, solo una pequeña cantidad de personas con trastornos por consumo de sustancias
- lo recibe. Por ejemplo, se estima que, a nivel mundial, una de cada siete personas con trastornos por consumo de drogas
-tiene acceso a servicios de tratamiento de drogas o se le proporcionan (Informe mundial sobre drogas 2019). Los datos del 
-ATLAS de la OMS sobre el uso de sustancias mostraron que, en 2014, solo el 11,9 % (de los 103 países que respondieron) informó 
-de una cobertura alta (40 % o más) para la dependencia del alcohol. El indicador 3.5.1 de los ODS es crucial para medir el progreso
-hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mundo, tal como se formula en la Meta 3.5.</p>
+<p>Tratamendu eraginkorra badago ere, substantzien kontsumoagatiko nahasmenduak dituzten pertsona gutxi batzuek baino 
+ez dute jasotzen. Adibidez, mundu mailan, droga-kontsumoaren ondoriozko nahasmenduak dituzten zazpi pertsonatik 
+batek droga-tratamenduko zerbitzuak eskura dituela edo ematen zaizkiola kalkulatzen da (Drogei buruzko 2019ko munduko 
+txostena). OMEren ATLASk substantzien erabilerari buruz emandako datuek erakutsi zutenez, 2014an, % 11,9k bakarrik 
+(erantzun zuten 103 herrialdeetatik) eman zuen alkoholarekiko mendekotasunerako estaldura handia ( % 40 edo gehiago). 
+GJHen 3.5.1 adierazlea erabakigarria da mundu osoan substantzien abusuaren tratamendua indartzeko egindako aurrerapena 
+neurtzeko, 3.5 helburuan adierazten den bezala.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Iturria: Nazio Batuen Estatistika Dibisioa</p>
 
           
         </td>
@@ -1137,7 +1136,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible no cumple con los metadatos del indicador de  Naciones Unidas, pero aporta información complementaria.</p>
+            <p>Eskuragarri dagoen adierazleak ez ditu betetzen Nazio Batuen adierazlearen metadatuak, baina informazio  osagarria ematen du.</p>
 
           
         </td>
@@ -1153,7 +1152,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.5.1&amp;seriesCode=SH_SUD_TREAT&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20DRUG_TOTAL">Cobertura de intervenciones de tratamiento (farmacológicas, psicosociales y de rehabilitación y servicios de seguimiento) para trastornos por consumo de sustancias (%) SH_SUD_TREAT</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.5.1&amp;seriesCode=SH_SUD_TREAT&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20DRUG_TOTAL">Tratamendu-esku-hartzeen estaldura (farmakologikoak, psikosozialak eta errehabilitaziokoak eta jarraipen-zerbitzuak) substantzien kontsumoagatiko nahasmenduetarako (%) SH_SUD_TREAT</a> UNSTATS</p>
 
           
         </td>
@@ -1174,7 +1173,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-01.pdf">Metadatos 3-5-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-05-01.pdf">Metadatuak 3-5-1.pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -1242,7 +1241,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -1262,7 +1261,7 @@ hacia el fortalecimiento del tratamiento del abuso de sustancias en todo el mund
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

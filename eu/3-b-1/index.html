@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1015,7 +1015,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Proporción de la población inmunizada con todas las vacunas incluidas en cada programa nacional</p>
+            <p>Programa nazional bakoitzean sartutako txerto guztiekin immunizatutako biztanleriaren proportzioa</p>
 
           
         </td>
@@ -1032,16 +1032,15 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[PPV_{\text{vacuna}}^{t} = \frac{PV_{\text{vacuna}}^{\text{cohorte}\, t - c}}{P^{\text{cohorte}\, t - c}} \cdot 100\]
+\[PPV_{\text{txerto}}^{t} = \frac{PV_{\text{txerto}}^{\text{kohorte}\, t - c}}{P^{\text{kohorte}\, t - c}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$PV_{\text{vacuna}}^{\text{cohorte}\, t - c}=$ es la población vacunada con el tipo de vacuna especificado, 
-perteneciente a la cohorte nacida en $t-c$</p>
+<p>$PV_{\text{txerto}}^{\text{kohorte}\, t - c}=$ Zehaztutako txerto motaren bidez txertatutako biztanleria da, $t-c$-an jaiotako kohorteari dagokiona</p>
 
-<p>$P^{\text{cohorte}\, t - c}=$ es la población total de la cohorte nacida en $t-c$</p>
+<p>$P^{\text{kohorte}\, t - c}=$ $t-c$-an jaiotako kohortearen biztanleria osoa da</p>
 
-<p>${c}=$ el intervalo de años que define la cohorte específica para cada vacuna (c=1 o cohorte nacida en t-1 para DTPa y VNC, c=5 para SRP y c=13 para VPH)</p>
+<p>${c}=$ txerto bakoitzerako kohorte espezifikoa definitzen duen urte-tartea (c = 1 edo t-1ean jaiotako kohortea DTPa eta VNCrako, c = 5 SRPrako eta c = 13 VPHrako)</p>
 
           
         </td>
@@ -1057,15 +1056,15 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Tipo de vacuna:</p>
+            <p>Txerto mota:</p>
 <ul>
-  <li>vacunación de recuerdo contra difteria, tétanos y tosferina en la población infantil (DTPa)</li>
-  <li>vacunación de recuerdo contra neumococo en la población infantil (VNC),</li>
-  <li>segunda dosis de la vacuna frente a sarampión, rubeola y parotiditis en la población infantil (SRP)</li>
-  <li>segunda dosis de la vacuna frente al virus del papiloma humano (VPH) en adolescentes.</li>
+  <li>difteriaren, tetanosaren eta kukutxeztularen aurkako oroitzapeneko txertaketa haurrengan (DTPa)</li>
+  <li>pneumokokoaren aurkako oroitzapenezko txertaketa haurren artean (VNC)</li>
+  <li>Elgorriaren, errubeolaren eta parotiditisaren (SRP) aurkako txertoaren bigarren dosia haurren artean</li>
+  <li>Giza papilomaren birusaren (VPH) aurkako txertoaren bigarren dosia nerabeetan</li>
 </ul>
 
-<p>Sexo</p>
+<p>Sexua</p>
 
           
         </td>
@@ -1098,13 +1097,12 @@ perteneciente a la cohorte nacida en $t-c$</p>
         <td>
           
             
-<p>Los resultados facilitados se obtienen utilizando las definiciones propuestas por la 
-Ponencia de Programa y Registro de Vacunaciones y acordadas por la Comisión de Salud 
-Pública en octubre de 2017. Desde entonces, las coberturas de vacunación se calculan 
-por cohortes de nacimiento de la población.</p>
+<p>Emandako emaitzak lortzeko, Txertaketen Programaren eta Erregistroaren Ponentziak proposatutako 
+eta Osasun Publikoaren Batzordeak 2017ko urrian adostutako definizioak erabiltzen dira. Ordutik, 
+biztanleriaren jaiotza-kohorteen arabera kalkulatzen dira txertaketa-estaldurak.</p>
 
-<p>No se incluyen las vacunas adquiridas en oficinas de farmacia ni las 
-administradas por el sector sanitario privado.</p>
+<p>Ez dira sartzen farmazia-bulegoetan erositako txertoak, ezta osasun-sektore pribatuak emandakoak 
+ere.</p>
 
           
         </td>
@@ -1193,7 +1191,7 @@ administradas por el sector sanitario privado.</p>
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025 martxoak 11
+            2024 urriak 29
           
         </td>
         </tr>
@@ -1208,7 +1206,7 @@ administradas por el sector sanitario privado.</p>
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2025 martxoak 25
+            2024 urriak 29
           
         </td>
         </tr>
@@ -1339,40 +1337,35 @@ administradas por el sector sanitario privado.</p>
         <th scope="row">Justifikazioa </th>
         <td>
           
-            <p>Este indicador tiene por objeto medir el acceso a las vacunas, incluidas las vacunas recientemente 
-disponibles o las que se utilizan de forma insuficiente, a nivel nacional.</p>
+            
+<p>Adierazle honen helburua da txertoetarako sarbidea neurtzea, baita berriki eskuragarri dauden txertoak 
+edo behar ez bezala erabiltzen direnak ere, estatuan.</p>
 
-<p>En las últimas décadas, todos los países 
-han añadido numerosas vacunas nuevas y que se utilizan de forma insuficiente a sus calendarios nacionales de 
-vacunación y hay varias vacunas en la fase final de desarrollo que se introducirán de aquí a 2030. Para supervisar el 
-control de enfermedades y el impacto de las vacunas, es importante medir la cobertura de cada vacuna del calendario nacional 
-de vacunación. La medición directa de la proporción de la población cubierta con todas las vacunas del programa solo es posible 
-si el país cuenta con un registro electrónico nacional de vacunación que funcione bien y permita estimar 
-fácilmente la cobertura por cohorte.</p>
+<p>Azken hamarkadetan, herrialde guztiek txerto berri ugari gehitu dituzte, eta ez dira nahikoa erabiltzen 
+txertaketa-egutegi nazionaletan, eta hainbat txerto daude garapenaren azken fasean, hemendik 2030era bitartean 
+sartuko direnak. Gaixotasunen kontrola eta txertoen eragina gainbegiratzeko, garrantzitsua da txerto bakoitzak 
+txertaketa-egutegi nazionalean duen estaldura neurtzea. Programako txerto guztiekin estalitako populazioaren 
+proportzioaren neurketa zuzena egiteko, ezinbestekoa da herrialdeak txertaketaren erregistro elektroniko nazional 
+bat izatea, ondo funtzionatzen duena eta kohorte bidezko estaldura erraz estimatzea ahalbidetzen duena.</p>
 
-<p>Se miden las siguientes vacunas:</p>
+<p>Txerto hauek neurtzen dira:</p>
 
 <ul>
   <li>
-    <p>Cobertura de la vacuna DTP (tercera dosis): porcentaje de lactantes supervivientes que recibieron 
-las 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina en un año determinado.</p>
+    <p>DTP txertoaren estaldura (hirugarren dosia): urte jakin batean difteriaren, tetanosaren eta kukutxeztularen aurkako txertoaren 3 dosiak jaso zituzten bizirik dauden bularreko haurren ehunekoa.</p>
   </li>
   <li>
-    <p>Cobertura de la vacuna contra el sarampión (segunda dosis): porcentaje de niños que recibieron dos dosis de la vacuna contra el sarampión según el calendario recomendado a nivel nacional a través de los servicios de vacunación de rutina
- en un año determinado.</p>
+    <p>Elgorriaren aurkako txertoaren estaldura (bigarren dosia): elgorriaren aurkako txertoaren bi dosi jaso zituzten haurren ehunekoa, urte jakin batean errutinako txertaketa-zerbitzuen bidez maila nazionalean gomendatutako egutegiaren arabera.</p>
   </li>
   <li>
-    <p>Cobertura de la vacuna antineumocócica conjugada (última dosis del calendario): porcentaje de lactantes 
-supervivientes que recibieron las dosis de vacuna antineumocócica conjugada recomendadas a nivel nacional en un año determinado.</p>
+    <p>Txerto antipneumokoziko konjugatuaren estaldura (egutegiko azken dosia): urte jakin batean nazio mailan gomendatutako txerto antneumokoziko konjugatuaren dosiak jaso zituzten bizirik dauden bularreko haurren ehunekoa.</p>
   </li>
   <li>
-    <p>Cobertura de la vacuna contra el VPH (última dosis del calendario): porcentaje de niñas de 15 años que recibieron 
-las dosis recomendadas de la vacuna contra el VPH. Actualmente se utiliza el desempeño del programa en el año 
-calendario anterior en función del grupo de edad objetivo.</p>
+    <p>GPBaren aurkako txertoaren estaldura (egutegiko azken dosia): GPHaren aurkako txertoaren gomendatutako dosiak jaso zituzten 15 urteko nesken ehunekoa. Gaur egun, programa aurreko egutegian betetzen da, helburuko adin-taldearen arabera.</p>
   </li>
 </ul>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Iturria: Nazio Batuen Estatistika Dibisioa</p>
 
           
         </td>
@@ -1388,7 +1381,7 @@ calendario anterior en función del grupo de edad objetivo.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos de Naciones Unidas.</p>
+            <p>Eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.</p>
 
           
         </td>
@@ -1405,13 +1398,13 @@ calendario anterior en función del grupo de edad objetivo.</p>
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_DTP3&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Proporción de la población objetivo que recibió 3 dosis de la vacuna contra la difteria, el tétanos y la tos ferina (DTP3) (%) SH_ACS_DTP3</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_DTP3&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Difteriaren, tetanosaren eta kukutxeztularen aurkako txertoaren (DTP3) 3 dosi jaso zituen xede-biztanleriaren proportzioa (%) SH_ACS_DTP3</a> UNSTATS</p>
 
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_MCV2&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Proporción de la población objetivo que recibió la segunda dosis de la vacuna contra el sarampión (MCV2) (%) SH_ACS_MCV2</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_MCV2&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Elgorriaren aurkako txertoaren bigarren dosia jaso zuen xede-biztanleriaren proportzioa (MCV2) (%) SH_ACS_MCV2</a> UNSTATS</p>
 
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_PCV3&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Proporción de la población objetivo que recibió una tercera dosis de la vacuna antineumocócica conjugada (PCV3) (%) SH_ACS_PCV3</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_PCV3&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Txerto antipneumokoziko konjugatuaren hirugarren dosi bat jaso zuen xede-biztanleriaren proportzioa (PCV3) (%) SH_ACS_PCV3</a> UNSTATS</p>
 
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_HPV&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Proporción de la población objetivo que recibió la dosis final de la vacuna contra el virus del papiloma humano (VPH) (%) SH_ACS_HPV</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.b.1&amp;seriesCode=SH_ACS_HPV&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Giza papilomaren birusaren aurkako txertoaren azken dosia jaso zuen xede-biztanleriaren proportzioa (%) SH_ACS_HPV</a> UNSTATS</p>
 
           
         </td>
@@ -1432,7 +1425,7 @@ calendario anterior en función del grupo de edad objetivo.</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-0b-01.pdf">Metadatos 3-b-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-0b-01.pdf">Metadatuak 3-b-1.pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -1547,7 +1540,7 @@ calendario anterior en función del grupo de edad objetivo.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -1567,7 +1560,7 @@ calendario anterior en función del grupo de edad objetivo.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

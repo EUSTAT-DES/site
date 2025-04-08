@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408091242">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250408171500">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nCapacidad instalada de las instalaciones que generan electricidad \na partir de fuentes de energía renovables dividida por la población\n");
+        var currentValue = normalizeCurrentValue('definicion', "\nEnergia-iturri berriztagarrietatik elektrizitatea sortzen \nduten instalazioen ahalmen instalatua, biztanleriagatik zatitua  \n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$CINSTPC_{renovable}^{t} = \\frac{CINST_{renovable}^{t}}{P^{t}} \\cdot 100$$ \n\ndonde:\n\n$CINST_{renovable}^{t} =$ capacidad instalada de generación de energía eléctrica procedente de fuentes renovables en el año $t$ \n\n$P^{t} =$ población total en el año  $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$CINSTPC_{berriztagarria}^{t} = \\frac{CINST_{berriztagarria}^{t}}{P^{t}} \\cdot 100$$ \n\nnon:\n\n$CINST_{berriztagarria}^{t} =$ Energia-iturri berriztagarrietatik elektrizitatea sortzeko ahalmen instalatua $t$ urtean \n\n$P^{t} =$ biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "\nTipo de fuente de energía renovable: hidraúlica, fotovoltaica, eólica, solar térmica\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "\nEnergia berriztagarrien iturri mota: hidraulikoa, fotovoltaikoa, eolikoa, eguzki-energia termikoa\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -626,7 +626,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLa infraestructura y las tecnologías necesarias para suministrar \nservicios energéticos modernos y sostenibles abarcan una\namplia gama de equipos y dispositivos que se utilizan en numerosos \nsectores económicos. No existe un mecanismo fácilmente disponible \npara recopilar, agregar y medir la contribución de este grupo dispar de \nproductos a la prestación de servicios energéticos modernos y sostenibles.\n\nSin embargo, una parte importante de la cadena de suministro de energía \nque puede medirse fácilmente es la infraestructura utilizada para \nproducir electricidad. \n\nLas energías renovables se consideran una forma sostenible de suministro \nde energía, ya que su uso actual no suele agotar su disponibilidad para \nsu uso en el futuro. El enfoque de este indicador en la electricidad \nrefleja el énfasis del objetivo en las fuentes modernas de energía y \nes particularmente relevante para los países en desarrollo donde la \ndemanda de electricidad suele ser alta y su disponibilidad es limitada. \n\nAdemás, el enfoque en las energías renovables refleja el hecho de que las \ntecnologías utilizadas para producir electricidad renovable son \ngeneralmente modernas y más sostenibles que las no renovables, \nen particular en los subsectores de mayor crecimiento de la generación \nde electricidad a partir de energía eólica y solar.\n\nLa división de la capacidad de electricidad renovable por población \n(para producir una medida de vatios per cápita) propone escalar los datos \nde capacidad para tener en cuenta la gran variación de necesidades entre \npaíses. Utiliza la población en lugar del PIB para escalar los datos, \nporque este es el indicador más básico de la demanda de servicios \nenergéticos modernos y sostenibles en un país.\n\nEste indicador también debería complementar los indicadores \n7.1.1 y 7.2.1. Con respecto al acceso a la electricidad, proporcionará \ninformación adicional sobre la proporción de personas con acceso a la \nelectricidad al mostrar cuánta infraestructura está disponible \npara brindar ese acceso (en términos de la cantidad de capacidad por persona). \nEl enfoque en la capacidad renovable también agregará valor al indicador \nde energías renovables existente (7.2.1) al mostrar cuánto contribuye \nla energía renovable a la necesidad de un mejor acceso a la electricidad.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEnergia-zerbitzu moderno eta jasangarriak hornitzeko beharrezkoak \ndiren azpiegitura eta teknologiek sektore ekonomiko askotan erabiltzen \ndiren ekipo eta gailu ugari hartzen dituzte. Ez dago erraz eskura daitekeen \nmekanismorik produktu-multzo desberdin horrek energia-zerbitzu moderno eta \niraunkorrak emateko egiten duen ekarpena biltzeko, gehitzeko eta neurtzeko. \n\nHala ere, erraz neur daitekeen energia-horniduraren katearen zati handi bat \nelektrizitatea ekoizteko erabiltzen den azpiegitura da. \n\nEnergia berriztagarriak energia hornitzeko modu jasangarritzat jotzen dira, \ngaur egun duten erabilerak ez baitu etorkizunean erabiltzeko aukera agortzen. \nAdierazle horrek elektrizitatean duen ikuspegiak helburuak energia-iturri \nmodernoetan duen enfasia islatzen du, eta bereziki garrantzitsua da garapen \nbidean dauden herrialdeetarako, non elektrizitate-eskaria handia izaten den \neta erabilgarritasuna mugatua. \n\nGainera, energia berriztagarrien ikuspegiak erakusten du elektrizitate \nberriztagarria ekoizteko erabiltzen diren teknologiak modernoak eta jasangarriagoak \ndirela berriztagarriak ez direnak baino, bereziki energia eolikotik eta eguzki-energiatik \nelektrizitatea sortzeko hazkunde handiena duten azpisektoreetan. \n\nElektrizitate berriztagarriaren ahalmena biztanleriaren arabera banatzeak (biztanle \nbakoitzeko watt-en neurri bat sortzeko) ahalmen-datuak eskalatzea proposatzen du, \nherrialdeen arteko premien alde handia kontuan hartzeko. BPGren ordez biztanleria \nerabiltzen du datuak eskalatzeko, herrialde batean energia-zerbitzu moderno eta jasangarrien \neskariaren adierazlerik oinarrizkoena delako.\n\nAdierazle horrek 7.1.1 eta 7.2.1 adierazleak ere osatu beharko lituzke. Elektrizitaterako \nsarbideari dagokionez, informazio gehigarria emango du elektrizitaterako sarbidea duten \npertsonen proportzioari buruz; izan ere, erakutsiko du zenbat azpiegitura dagoen erabilgarri \nsarbide hori emateko (pertsona bakoitzeko edukiera kantitateari dagokionez). Ahalmen berriztagarriaren \nikuspegiak ere balioa erantsiko dio energia berriztagarrien adierazleari (7.2.1), erakusten baitu \nzenbat laguntzen dion energia berriztagarriak elektrizitatea hobeto eskuratzeko beharrari. \n\nIturria: Nazio Batuen Estatistika Saila\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -654,7 +654,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=7.b.1&seriesCode=EG_EGY_RNEW&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALL\">Capacidad instalada de generación de electricidad renovable (vatios per cápita) EG_EGY_RNEW</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=7.b.1&seriesCode=EG_EGY_RNEW&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALL\">Elektrizitate berriztagarria sortzeko ahalmen instalatua (watt per capita) EG_EGY_RNEW</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -670,7 +670,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-07-0b-01.pdf\">Metadatos 7-b-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-07-0b-01.pdf\">Metadatuak 7-b-1.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -706,7 +706,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-03-31");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -720,7 +720,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-28");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -848,7 +848,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250408091242'></script>
+<script src='/site/assets/js/sdg.js?v=20250408171500'></script>
 
 
 <script>
@@ -868,7 +868,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250408091242"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250408171500"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
