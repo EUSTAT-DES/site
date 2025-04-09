@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250409120635">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250409133606">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1117,6 +1117,22 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Indicador disponible </th>
+        <td>
+          
+            <p>Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -1132,28 +1148,85 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Definición del indicador </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Superficie terrestre incluida en áreas protegidas (Red Natura 2000 y Espacios Naturales Protegidos), y porcentaje sobre el total de la superficie terrestre</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Fórmula teórica </th>
+        <td>
           
-      
-      
-      
+            
+\[PSTP^{t} = \frac{STP^{t}}{ST^{t}} \cdot 100\]
+
+<p>donde:</p>
+
+<p>$STP^{t} =$ superficie terrestre incluida en áreas protegidas en el año $t$</p>
+
+<p>$ST^{t} =$ superficie terrestre en el año $t$</p>
+
+<p>La desagregación por tipo de ecosistema se realiza sobre la superficie total del ecosistema, según
+la siguiente fórmula:</p>
+
+\[PSTP_{ecosistema}^{t} = \frac{STP_{ecosistema}^{t}}{ST_{ecosistema}^{t}} \cdot 100\]
+
+<p>donde:</p>
+
+<p>$STP_{ecosistema}^{t} =$ superficie de un ecosistema determinado incluida en áreas protegidas en el año $t$</p>
+
+<p>$ST_{ecosistema}^{t} =$ superficie total de un ecosistema determinado en el año $t$</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Desagregaciones disponibles </th>
+        <td>
           
-      
-      
-      
+            <p>Tipo de ecosistema: bosques, humedales, pastizales, tierras de cultivo,  asentamientos, otras tierras</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Periodicidad </th>
+        <td>
           
+            <p>Trienal</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1224,13 +1297,33 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Datos actualizados por última vez </th>
+        <td>
           
-      
-      
-      
-        
+            11 de febrero de 2025
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadatos actualizados por última vez </th>
+        <td>
+          
+            09 de abril de 2025
+          
+        </td>
+        </tr>
+        
+      
+  
   </tbody>
 </table>
 
@@ -1400,28 +1493,81 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Justificación </th>
+        <td>
+          
+            <p>Este indicador mide la extensión de las áreas terrestres protegidas, que incluyen las designadas 
+a nivel nacional y los espacios Natura 2000. Un área designada a nivel nacional es un 
+área protegida por la legislación nacional.</p>
+
+<p>Los espacios Natura 2000 se designan para salvaguardar las especies y los hábitats de 
+Europa, incluidos en las Directivas de Hábitats y de Aves de la UE.</p>
+
+<p>Fuente: Eurostat</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comparabilidad entre el indicador disponible y el indicador de Naciones Unidas/Unión europea </th>
+        <td>
+          
+            <p>El indicador disponible es comparable con el indicador europeo.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Resultados internacionales </th>
+        <td>
+          
+            
+<p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_15_20/default/table?lang=en&amp;category=sdg.sdg_15">
+Superficie de las áreas terrestres protegidas(sdg_15_20)</a> Eurostat</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Metadatos del indicador de Naciones Unidas/Unión Europea </th>
+        <td>
           
-      
-      
-      
-        
+            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_15_20_esmsip2.htm">Metadatos Eurostat (sdg_15_20)</a> (solo en inglés)</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
+  
       
       
       
@@ -1529,7 +1675,7 @@ data-event-label="Change to indicator.global_metadata tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250409120635'></script>
+<script src='/site/assets/js/sdg.js?v=20250409133606'></script>
 
 
 <script>
@@ -1549,7 +1695,7 @@ data-event-label="Change to indicator.global_metadata tab"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250409120635"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250409133606"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
