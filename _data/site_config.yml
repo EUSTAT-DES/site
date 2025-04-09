@@ -76,6 +76,11 @@ frontpage_cards:
     button_label: ''
     button_link: ''
     rule_color: ''
+  - title: frontpage.notaprensa
+    content: frontpage.notaprensa_content
+    button_label: frontpage.notaprensa
+    button_link: frontpage.notaprensa_link
+    rule_color: ''
 frontpage_goals_grid:
   title: frontpage.heading_short
   description: frontpage.instructions_shorter
