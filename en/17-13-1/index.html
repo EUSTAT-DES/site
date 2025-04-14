@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250411131101">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250414104327">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -2584,13 +2584,15 @@ los sectores externo, financiero, fiscal y real:</p>
             
 <p><b>Tasa de variación interanual del PIB real</b></p>
 
-\[TVPIB^{t} = \left(\frac{PIB_{2015}^{t}}{PIB_{2015}^{t-1}} - 1 \right) \cdot 100\]
+\[TVPIB^{t} = \left(\frac{PIB_{2022}^{t}}{PIB_{2022}^{t-1}} - 1 \right) \cdot 100\]
 
 <p>donde:</p>
 
-<p>$PIB_{2015}^{t} $ producto interior bruto en volumen encadenado con referencia 2015 en el año $t$</p>
+<p>$PIB_{2022}^{t} $ producto interior bruto en volumen encadenado con referencia 2022 en el año $t$</p>
 
-<p>$PIB_{2015}^{t-1} $ producto interior bruto en volumen encadenado con referencia 2015 en el año $t-1$</p>
+<p>$PIB_{2022}^{t-1} $ producto interior bruto en volumen encadenado con referencia 2022 en el año $t-1$</p>
+
+<p><br /></p>
 
 <p><b>Tasa de desempleo</b></p>
 
@@ -2602,13 +2604,19 @@ los sectores externo, financiero, fiscal y real:</p>
 
 <p>$A^{t} $ personas económicamente activas en el año $t$, teniendo en cuenta que cada una de estas poblaciones se calcula como la media aritmética de los cuatro trimestres del año.</p>
 
+<p><br /></p>
+
 <p><b>Tasa de variación interanual del índice de precios de consumo</b></p>
 
 \[TVIPC^{t} = \left(\frac{IPC^{t}}{IPC^{t-1}} - 1 \right) \cdot 100\]
 
-<p>donde: <br />$IPC^{t} $ indice de precios de consumo del año $t$</p>
+<p>donde:</p>
+
+<p>$IPC^{t} $ indice de precios de consumo del año $t$</p>
 
 <p>$IPC^{t-1} $ indice de precios de consumo del año $t-1$, teniendo en cuenta que los índices de precios de consumo anuales se calculan como la media aritmética de los índices de precios de consumo mensuales</p>
+
+<p><br /></p>
 
 <p><b>Volumen de remesas enviadas al extranjero en proporción al PIB</b></p>
 
@@ -2626,7 +2634,9 @@ los sectores externo, financiero, fiscal y real:</p>
 
 \[VR^{t} = \displaystyle \sum_{p \epsilon Países} VR_{España,p}^{t} = \frac{\frac{P_{16-64,p}^{t}+P_{16-64,p}^{t+1}}{2}}{\frac{P_{16-64,España,p}^{t}+P_{16-64,España,p}^{t+1}}{2}}\]
 
-<p>siendo los países: Colombia, Marruecos, Ecuador, República, Dominicana, Honduras, Bolivia, Senegal, Paraguay,Pakistán, Rumanía, resto de países. No se considera a los países pertenecientes a la Unión Europea en “resto de países”.</p>
+<p>siendo los países: Colombia, Marruecos, Ecuador, República, Dominicana, Honduras, Bolivia, Senegal, Paraguay, Pakistán, Rumanía, resto de países. No se considera a los países pertenecientes a la Unión Europea en “resto de países”.</p>
+
+<p><br /></p>
 
 <p><b>Deuda bruta de la administración pública autonómica según el protocolo de déficit excesivo en proporción al PIB</b></p>
 
@@ -2638,22 +2648,29 @@ los sectores externo, financiero, fiscal y real:</p>
 
 <p>$PIB^{t} $ producto interior bruto a precios corrientes en el año $t$</p>
 
+<p><br /></p>
+
 <p><b>Ingresos fiscales de la administración pública autonómica en proporción al PIB</b></p>
 
 \[PPIBIF^{t} = \frac{D.211^{t} + D.212^{t} + D.214^{t} + D.29^{t} + D.51^{t} + D.59^{t} + D.91^{t} + D.611^{t} + D.613^{t}}{PIB^{t}} \cdot 100\]
 
 <p>donde:</p>
 
-<p>$D.211^{t}$ impuestos del tipo de valor añadido IVA en el año $t$
-$D.212^{t}$ impuestos y derechos sobre las importaciones excluido el IVA en el año $t$
-$D.214^{t}$ impuestos sobre los productos excluido el IVA e importaciones en el año $t$
-$D.29^{t}$ otros impuestos sobre la producción en el año $t$
-$D.51^{t}$ impuestos sobre la renta en el año $t$
-$D.59^{t}$ otros impuestos corrientes en el año $t$
-$D.91^{t}$ impuestos sobre el capital en el año $t$
-$D.611^{t}$ cotizaciones sociales efectivas a cargo de los empleadores en el año $t$
-$D.613^{t}$ cotizaciones sociales efectivas a cargo de los hogares en el año $t$
-$PIB^{t}$ producto interior bruto a precios corrientes en el año $t$</p>
+<ul>
+  <li>$D.211^{t}$ impuestos del tipo de valor añadido IVA en el año $t$</li>
+  <li>$D.212^{t}$ impuestos y derechos sobre las importaciones excluido el IVA en el año $t$</li>
+  <li>$D.214^{t}$ impuestos sobre los productos excluido el IVA e importaciones en el año $t$</li>
+  <li>$D.29^{t}$ otros impuestos sobre la producción en el año $t$</li>
+  <li>$D.51^{t}$ impuestos sobre la renta en el año $t$</li>
+  <li>$D.59^{t}$ otros impuestos corrientes en el año $t$</li>
+  <li>$D.91^{t}$ impuestos sobre el capital en el año $t$</li>
+  <li>$D.611^{t}$ cotizaciones sociales efectivas a cargo de los empleadores en el año $t$</li>
+  <li>$D.613^{t}$ cotizaciones sociales efectivas a cargo de los hogares en el año $t$</li>
+</ul>
+
+<p>$PIB^{t}$ producto interior bruto a precios corrientes en el año $t$</p>
+
+<p><br /></p>
 
 <p><b>Saldo fiscal de la administración pública autonómicas en proporción al PIB</b></p>
 
@@ -2804,7 +2821,7 @@ $PIB^{t}$ producto interior bruto a precios corrientes en el año $t$</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            December 03, 2024
+            April 14, 2025
           
         </td>
         </tr>
@@ -3248,6 +3265,8 @@ más bajas.</p>
   </li>
 </ol>
 
+<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+
           
         </td>
         </tr>
@@ -3304,7 +3323,7 @@ más bajas.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-17-13-01.pdf">Metadata 17-13-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-17-13-01.pdf">Metadatos 17-13-1.pdf</a> (solo en inglés)</p>
 
           
         </td>
@@ -3419,7 +3438,7 @@ más bajas.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250411131101'></script>
+<script src='/site/assets/js/sdg.js?v=20250414104327'></script>
 
 
 <script>
@@ -3439,7 +3458,7 @@ más bajas.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250411131101"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250414104327"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

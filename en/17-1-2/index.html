@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250411131101">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250414104327">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1535,7 +1535,17 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Total de ingresos consolidades de las administraciones públicas autonómicas y locales en proporción al PIB a precios corrientes</p>
+            
+<p>Series disponibles:</p>
+
+<ul>
+  <li>
+    <p>Proporción de los ingresos no financieros  de las administraciones públicas vascas que provienen de impuestos</p>
+  </li>
+  <li>
+    <p>Proporción de los ingresos totales de las administraciones públicas vascas que provienen de impuestos</p>
+  </li>
+</ul>
 
           
         </td>
@@ -1552,29 +1562,25 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[PI_{impuestos}^{t} = \frac{I_{CCAA,impuestos\, directos}^{t}+I_{CCAA,impuestos\, indirectos}^{t}+I_{EELL,impuestos\, directos}^{t}+I_{EELL,impuestos\, indirectos}^{t}}{I_{CCAA}^{t}+I_{EELL}^{t}-TC_{CCAA\, a\, EELL}^{t}-TC_{EELL\, a\, CCAA}^{t}-TK_{CCAA\, a\, EELL}^{t}-TK_{EELL\, a\, CCAA}^{t}} \cdot 100\]
+<p><b>Proporción de los ingresos no financieros que provienen de impuestos</b></p>
+
+\[PI_{imp}^{t} = \frac{I_{imp}^{t}}{I_{no\_fin}^{t}} \cdot 100\]
 
 <p>donde:</p>
 
-<p>$I_{CCAA,impuestos\, directos}^{t} =$ ingresos provenientes de impuestos directos (derechos reconocidos netos) en la liquidación de presupuestos consolidados de la comunidad autónoma (capítulo de ingresos 1 de la clasificación económica) en el año $t$</p>
+<p>$I_{imp}^{t}$ = ingresos por impuestos directos e indirectos de la CCAA y EELL en el año $t$</p>
 
-<p>$I_{CCAA,impuestos\, indirectos}^{t} =$ ingresos provenientes de impuestos indirectos (derechos reconocidos netos) en la liquidación de presupuestos consolidados de la comunidad autónoma (capítulo de ingresos 2 de la clasificación económica) en el año $t$</p>
+<p>$I_{no_fin}^{t}$ = ingresos no financieros consolidados de la CCAA y EELL en el año $t$ (capítulos 1 a 5, eliminando las transferencias internas entre administraciones)</p>
 
-<p>$I_{EELL,impuestos\, directos}^{T} =$ ingresos provenientes de impuestos directos (derechos reconocidos netos) en la liquidación de presupuestos consolidados de las entidades locales de la comunidad autónoma (capítulo de ingresos 1 de la clasificación económica) en el año $t$</p>
+<p><br /></p>
 
-<p>$I_{EELL,impuestos\, indirectos}^{T} =$ ingresos provenientes de impuestos indirectos (derechos reconocidos netos) en la liquidación de presupuestos consolidados de las entidades locales de la comunidad autónoma (capítulo de ingresos 2 de la clasificación económica) en el año $t$</p>
+<p><b>Proporción de los ingresos no financieros que provienen de impuestos</b></p>
 
-<p>$I_{CCAA}^{t} =$ ingresos (derechos reconocidos netos) en la liquidación de presupuestos consolidados de la comunidad autónoma en el año $t$</p>
+\[PIT_{imp}^{t} = \frac{I_{imp}^{t}}{I_{tot}^{t}} \cdot 100\]
 
-<p>$I_{EELL}^{t} =$ ingresos (derechos reconocidos netos) en la liquidación de presupuestos consolidados de las entidades locales de la comunidad autónoma en el año $t$</p>
+<p>$I_{imp}^{t}$ = ingresos por impuestos directos e indirectos de la CCAA y EELL en el año $t$</p>
 
-<p>$TC_{CCAA\, a\, EELL} =$ gastos en transferencias corrientes a las entidades locales (obligaciones reconocidas netas) en la liquidación de los presupuestos consolidados de la comunidad autónoma en el año $t$</p>
-
-<p>$TC_{EELL\, a\, CCAA} =$ ingresos en transferencias corrientes de las entidades locales (derechos reconocidos netos) en la liquidación de los presupuestos consolidados de la comunidad autónoma en el año $t$</p>
-
-<p>$TK_{CCAA\, a\, EELL} =$ gastos en transferencias de capital a las entidades locales (obligaciones reconocidas netas) en la liquidación de los presupuestos consolidados de la comunidad autónoma en el año $t$</p>
-
-<p>$TK_{EELL\, a\, CCAA} =$ ingresos en transferencias de capital de las entidades locales (derechos reconocidos netos) en la liquidación de los presupuestos consolidados de la comunidad autónoma en el año $t$</p>
+<p>$I_{tot}^{t}$ = ingresos totales consolidados de la CCAA y EELL en el año $t$ (capítulos 1 a 9, eliminando transferencias internas entre administraciones)</p>
 
           
         </td>
@@ -1585,19 +1591,8 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Available disaggregations </th>
-        <td>
-          
-            <p>Tipo de ingresos: financieros y no financieros</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1623,7 +1618,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Los datos consolidados de las liquidaciones presupuestarias de las comunidades autónomas  se toman depurados de IFL (Intermediación Financiera Local) y PAC (política agrícola común)</p>
+<p>Los datos consolidados de las liquidaciones presupuestarias de las comunidades autónomas  se toman depurados de IFL (Intermediación Financiera Local) y PAC (política agrícola común)
+En la primera serie se consideran ingresos por impuestos los incluidos en los capítulos 1  (impuestos directos) y 2 (impuestos indirectos) de la clasificación económica. Los ingresos  no financieros corresponden a los capítulos 1 a 5. Se elimina la doble contabilización de  transferencias entre la comunidad autónoma y las entidades locales.
+La segunda serie incluye tanto los ingresos no financieros como los financieros (capítulo 9). También  se consolidan las transferencias internas para evitar duplicidades.</p>
 
           
         </td>
@@ -1727,7 +1724,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Metadata last updated </th>
         <td>
           
-            December 02, 2024
+            April 14, 2025
           
         </td>
         </tr>
@@ -1868,6 +1865,8 @@ las autoridades nacionales al Departamento de Estadística del FMI, proporcionar
 analistas un conjunto de datos comparable entre países que destaca la relación entre 
 el presupuesto nacional ejecutado y la administración de ingresos/impuestos.</p>
 
+<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+
           
         </td>
         </tr>
@@ -1882,7 +1881,7 @@ el presupuesto nacional ejecutado y la administración de ingresos/impuestos.</p
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple parcialmente con los metadatos de Naciones Unidas.</p>
+            <p>El indicador disponible no cumple con los metadatos de Naciones Unidas, pero aporta información complementaria. Mientras que el indicador de Naciones Unidas relaciona los  ingresos tributarios con el total del gasto público, el indicador de la C.A. de Euskadi mide  la proporción de los ingresos totales consolidados de las administraciones públicas  vascas que provienen de impuestos. Por tanto, se centra en la estructura de  financiación del sector público vasco y no en su ejecución presupuestaria.</p>
 
           
         </td>
@@ -2035,7 +2034,7 @@ el presupuesto nacional ejecutado y la administración de ingresos/impuestos.</p
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250411131101'></script>
+<script src='/site/assets/js/sdg.js?v=20250414104327'></script>
 
 
 <script>
@@ -2055,7 +2054,7 @@ el presupuesto nacional ejecutado y la administración de ingresos/impuestos.</p
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250411131101"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250414104327"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
