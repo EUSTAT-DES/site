@@ -57,7 +57,7 @@ date_formats:
     format: '%d de %B de %Y'
   - type: standard
     language: eu
-    format: '%Y %B %d'
+    format: "%Y.%m.%d"
 disclaimer:
   phase: ''
   message: ''
