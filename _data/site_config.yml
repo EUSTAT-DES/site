@@ -78,7 +78,7 @@ frontpage_cards:
     rule_color: ''
   - title: frontpage.notaprensa
     button_label: frontpage.notaprensa
-    button_link: frontpage.notaprensa_link
+    button_link: "https://www.eustat.eus/estadisticas/tema_1393/opt_1/tipo_6/ti_indicadores-de-la-agenda-2030-para-el-desarrollo-sostenible/temas.html#el"
     content: frontpage.notaprensa_content
     rule_color: ''
 frontpage_goals_grid:
