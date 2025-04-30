@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b>Emisiones totales de gases de efecto invernadero por unidad de PIB</b>\n\n$$PPIBGEI^{t} = \\frac{GEI^{t}}{PIB_{2022}^{t}} $$\n\n<b>Emisiones totales de gases de efecto invernadero per cápita</b>\n\n$$GEIPC^{t} = \\frac{GEI^{t}}{P^{t}} $$\n\n<b>Emisiones de gases de efecto invernadero respecto al año 1990</b>\n\n$$TVGEI_{1990}^{t} = \\frac{GEI^{t}-GEI^{1990}}{GEI^{1990}} \\cdot 100$$ \n\n<b>Emisiones de gases de efecto invernadero respecto al año 2005</b>\n\n$$TVGEI_{2005}^{t} = \\frac{GEI^{t}-GEI^{2005}}{GEI^{2005}} \\cdot 100$$ \n\n\ndonde:\n\n$GEI^{t} =$ emisiones de gases de efecto invernadero en el año $t$\n\n$PIB_{2022}^{t} =$ producto interior bruto en volumen encadenado con referencia 2022 en el año $t$\n\n$P^{t} =$ población a 1 de julio en el año $t$\n\n$GEI^{1990} =$ emisiones de gases de efecto invernadero en el año 1990\n\n$GEI^{2005} =$ emisiones de gases de efecto invernadero en el año 2005\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Berotegi-efektua eragiten duten gasen guztizko isurketak, BPG-unitateko</b>\n\n$$PPIBGEI^{t} = \\frac{GEI^{t}}{PIB_{2022}^{t}} $$\n\n<b>Berotegi-efektua eragiten duten gasen guztizko isurketak per capita</b>\n\n$$GEIPC^{t} = \\frac{GEI^{t}}{P^{t}} $$\n\n<b>Berotegi-efektua eragiten duten gasen isurketak, 1990. urtearekiko</b>\n\n$$TVGEI_{1990}^{t} = \\frac{GEI^{t}-GEI^{1990}}{GEI^{1990}} \\cdot 100$$ \n\n<b>Berotegi-efektua eragiten duten gasen isurketak, 2005. urtearekiko</b>\n\n$$TVGEI_{2005}^{t} = \\frac{GEI^{t}-GEI^{2005}}{GEI^{2005}} \\cdot 100$$ \n\n\nnon:\n\n$GEI^{t} =$ berotegi-efektua eragiten duten gasen isurketak $t$ urtean\n\n$PIB_{2022}^{t} =$ barne-produktu gordina, kateatutako bolumenean, 2022 erreferentziarekin $t$ urtean\n\n$P^{t} =$ biztanleria $t$ urteko uztailaren 1ean\n\n$GEI^{1990} =$ berotegi-efektua eragiten duten gasen isurketak 1990ean\n\n$GEI^{2005} =$ berotegi-efektua eragiten duten gasen isurketak 2005ean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "La serie \"emisiones totales de gases de efecto invernadero por año\" cumple con los metadatos de  Naciones Unidas. Se presentan, además, otras series relacionadas con los objetivos europeos.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "\"Berotegi-efektua eragiten duten gasen urteko guztizko isurketak\" serieak Nazio Batuen metadatuak betetzen ditu.  Horrez gain, Europako helburuekin zerikusia duten beste serie batzuk aurkezten dira. ");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -666,7 +666,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_13_10/default/table?lang=en&category=sdg.sdg_13\"> Emisiones netas de gases de efecto invernadero (sdg_13_10)</a> Eurostat");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_13_10/default/table?lang=en&category=sdg.sdg_13\"> Berotegi-efektua eragiten duten gasen isurketa garbiak (sdg_13_10)</a> Eurostat");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-02.pdf\">Metadatos 13-2-2.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-02.pdf\">Metadatuak 13-2-2.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -718,7 +718,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-04-22");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-09");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

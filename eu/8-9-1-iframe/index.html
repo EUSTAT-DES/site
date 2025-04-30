@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1314,7 +1314,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Turismoak sortutako BPG, BPGrekiko proportzioan, prezio arruntetan, eta turismoak sortutako BPGren urteko hazkunde-tasa.</p>
+            <p>Turismoak sortutako BPGa, uneko prezioetako BPGarekiko proportzioan, eta turismoak sortutako BPGaren urteko hazkunde-tasa.</p>
 
           
         </td>
@@ -1331,25 +1331,25 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p><b>Turismoak sortutako BPG, BPGrekiko proportzioan</b></p>
+<p><b>Turismoak sortutako BPGa, BPGarekiko proportzioan</b></p>
 
-\[PPIB_{turistiko}^{t} = \frac{PIB_{turistiko}^{t}}{PIB^{t}} \cdot 100\]
+\[PPIB_{turismoa}^{t} = \frac{PIB_{turismoa}^{t}}{PIB^{t}} \cdot 100\]
 
 <p>non:</p>
 
-<p>$PIB_{turistiko}^{t} =$ turismoak sortutako barne-produktu gordina, prezio arruntetan $t$ urtean</p>
+<p>$PIB_{turismoa}^{t} =$ turismoak sortutako barne-produktu gordina, uneko prezioetan $t$ urtean</p>
 
-<p>$PIB^{t} =$ barne-produktu gordina, prezio arruntetan $t$ urtean</p>
+<p>$PIB^{t} =$ barne-produktu gordina, uneko prezioetan $t$ urtean</p>
 
 <p><br /></p>
 
 <p><b>Turismoak sortutako BPGren urteko hazkunde-tasa</b></p>
 
-\[TCPIB^{t}_{turistiko} = \left( \frac{PIB^{t}_{turistiko} - PIB^{t-1}_{turistiko}}{PIB^{t-1}_{turistiko}} \right) \cdot 100\]
+\[TCPIB^{t}_{turismoa} = \left( \frac{PIB^{t}_{turismoa} - PIB^{t-1}_{turismoa}}{PIB^{t-1}_{turismoa}} \right) \cdot 100\]
 
 <p>non:</p>
 
-<p>$PIB^{t-1}_{turistiko} =$ barne-produktu gordina, prezio arruntetan $t-1$ urtean</p>
+<p>$PIB^{t-1}_{turismoa} =$ barne-produktu gordina, uneko prezioetan $t-1$ urtean</p>
 
           
         </td>
@@ -1631,7 +1631,7 @@ que a menudo se pasa por alto en las agendas políticas a todos los niveles.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>Eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
+            <p>EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
 
           
         </td>
@@ -1648,7 +1648,7 @@ que a menudo se pasa por alto en las agendas políticas a todos los niveles.</p>
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=8.9.1&amp;seriesCode=ST_GDP_ZS&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Turismoaren zuzeneko BPG, guztizko BPGaren proportzio gisa (%) ST_GDP_ZS</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=8.9.1&amp;seriesCode=ST_GDP_ZS&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Turismoaren zuzeneko BPGa, guztizko BPGaren proportzio gisa (%) ST_GDP_ZS</a> UNSTATS</p>
 
           
         </td>
@@ -1737,7 +1737,7 @@ que a menudo se pasa por alto en las agendas políticas a todos los niveles.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1757,7 +1757,7 @@ que a menudo se pasa por alto en las agendas políticas a todos los niveles.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

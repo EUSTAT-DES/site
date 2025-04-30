@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -994,7 +994,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Pobreziako edo gizarte-bazterketako arriskuaren hiru irizpideetako bat gutxienez betetzen  duten pertsonen proportzioa (pobrezia erlatiboko arriskuan egotea, gabezia material eta  sozial larriko egoeran egotea edo lan-intentsitate txikiko etxekoen unitateetan bizitzea)</p>
+            <p>Pobreziako edo gizarte-bazterketako arriskuaren hiru irizpideetako bat gutxienez  betetzen duten pertsonen proportzioa: pobrezia erlatiboko arriskuan egotea,  gabezia material eta sozial larriko egoeran egotea, edo lan-intentsitate txikiko  etxe batean bizitzea</p>
 
           
         </td>
@@ -1015,9 +1015,9 @@ data-event-label="Change to indicator.global_metadata tab"
 
 <p>non:</p>
 
-<p>$P_{AROPE}^{t} =$ pobrezia edo gizarte-bazterkeria izateko arriskuan erlatiboan daudenak $t$ urtean</p>
+<p>$P_{AROPE}^{t} =$ pobreziako edo gizarte-bazterketako arrisku erlatiboan dagoen biztanleria $t$ urtean</p>
 
-<p>$P^{t} =$ biztanleria $t$ urtean</p>
+<p>$P^{t} =$ biztanleria osoa $t$ urtean</p>
 
           
         </td>
@@ -1033,7 +1033,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Pobreziaren dimentsioak: pobrezia-arriskua, gabezia material eta sozial larria, 
+            <p>Pobreziaren dimentsioak: pobrezia-arriskua; gabezia material eta sozial larria; 
 lan-intentsitate txikia</p>
 
 <p>Sexua</p>
@@ -1070,48 +1070,48 @@ lan-intentsitate txikia</p>
           
             <p>Adierazleak irizpide hauetako bat gutxienez betetzen duten pertsonen proportzioa neurtzen du:</p>
 
-<p><b>Pobrezia erlatiborako arriskuan dauden pertsonak:</b> kontsumo-unitate bakoitzeko diru-sarrerak
+<p><b>Pobrezia erlatiboaren arriskuan dauden pertsonak:</b> kontsumo-unitate bakoitzeko diru-sarrerak 
 medianaren % 60tik behera dituzten pertsonak (ELGA eskala aldatua).</p>
 
-<p>Etxekoen unitate baten kontsumo-unitateen kopurua kalkulatzeko, ELGA eskala aldatua erabiltzen da. 
+<p>Etxeko kontsumo-unitateen kopurua kalkulatzeko, ELGA eskala aldatua erabiltzen da. 
 Eskala horrek 1 pisua esleitzen dio 14 urte edo gehiagoko lehen pertsonari, 0,5 pisua 14 urte edo 
 gehiagoko gainerako pertsonei eta 0,3 pisua 14 urtetik beherako pertsonei.</p>
 
-<p><b>Gabezia material eta sozial larria duten pertsonak:</b> hamahiru mugako zerrenda honetako 
-zazpi gutxienez pairatzen dituzten pertsonak (zazpi etxekoen unitateari dagokionez eta sei pertsonari dagokionez):</p>
+<p><b>Gabezia material eta sozial larria duten pertsonak:</b> ondoko hamahiru egoeretatik gutxienez 
+zazpi pairatzen dituzten pertsonak; zazpi egoera etxeari dagokizkonak dira eta sei pertsonari dagozkionak:</p>
 
-<p>Etxekoen unitateari dagokionez:</p>
+<p>Etxeari dagozkionak:</p>
 <ol>
-  <li>Ezin da urtean gutxienez astebetez oporretara joan.</li>
-  <li>Ezin da haragi-, oilasko- edo arrain-bazkaririk egin bi egunetik behin, gutxienez.</li>
-  <li>Ezin da etxebizitza tenperatura egokian mantendu.</li>
+  <li>Ezin du urtean gutxienez astebetez oporretara joan.</li>
+  <li>Ezin du gutxienez bi egunetik behin haragi-, oilasko- edo arrain-otordurik egin.</li>
+  <li>Ezin du etxebizitza tenperatura egokian mantendu.</li>
   <li>Ez du ustekabeko gastuei aurre egiteko gaitasunik.</li>
   <li>Atzerapenak izan ditu etxebizitza nagusiarekin lotutako gastuen ordainketan 
 (hipoteka edo alokairua, gas-ordainagiriak, komunitatea, etab.) edo epeka egindako 
 erosketetan azken 12 hilabeteetan.</li>
-  <li>Ezin da automobilik eduki.</li>
+  <li>Ezin du kotxerik eduki.</li>
   <li>Ezin ditu ordezkatu hondatutako altzariak edo zaharrak.</li>
 </ol>
 
-<p>Pertsona-mailan:</p>
+<p>Pertsonari dagozkionak:</p>
 <ol>
-  <li>Ezin da hondatutako arroparen ordez arropa berria jarri.</li>
-  <li>Ezin dira bi zapata pare baldintza onetan eduki.</li>
-  <li>Ezin da lagunekin/familiarekin elkartu hilean behin gutxienez jateko edo zerbait hartzeko.</li>
-  <li>Ezin da aldizka aisialdiko jardueretan parte hartu.</li>
-  <li>Ezin da diru kopuru txiki bat gastatu.</li>
-  <li>Ezin da Interneteko konexiorik egin.</li>
+  <li>Ezin du hondatutako arroparen ordez berria erosi.</li>
+  <li>Ezin ditu egoera onean dauden bi zapata pare eduki.</li>
+  <li>Ezin du zerbait jateko edo edateko lagunekin/familiarekin elkartu hilean behin gutxienez.</li>
+  <li>Ezin du aldizka aisialdiko jardueretan parte hartu.</li>
+  <li>Ezin du bere buruarentzako gauzetan diru kopuru txiki bat gastatu.</li>
+  <li>Ezin du Interneteko konexiorik ordaindu.</li>
 </ol>
 
-<p>16 urtetik beherakoen kasuan, ez daude aurrez pertsona-mailan zerrendatutako sei kontzeptuak. 
-Adingabe horien kasuan, elementu horien balioak 16 urte edo gehiago dituzten etxekoen unitateko 
-kideentzat jasotako balioetatik abiatuta egozten dira.</p>
+<p>16 urtetik beherakoen kasuan, pertsonari dagozkion azken sei kontzeptuak ez daude eskuragarri. 
+Adingabe horien kasuan, elementu horien balioak 16 urte edo gehiago dituzten etxeko kideentzat 
+jasotako balioetatik abiatuta egozten dira.</p>
 
-<p><b>Intentsitate txikia enpleguan:</b> lan egiteko adinean dauden kideek (18-64 urteko pertsonak, 
-18 eta 24 urte bitarteko ikasleak, erretiratuak eta 60-64 urte bitarteko pertsona ez-aktiboak izan 
-ezik, horien etxeko diru-sarreren iturri nagusia pentsioak badira) beren lan-potentzial osoaren % 20 
-baino gutxiago lan egin zuten erreferentziako urtean. Aldagai hori ez da aplikatzen 65 urte edo 
-gehiagoko pertsonen kasuan.</p>
+<p><b>Lan-intentsitate txikia:</b> etxe horietako lan egiteko adinean dauden kideek beren lan-potentzial osoaren % 20 
+baino gutxiago lan egin zuten erreferentziako urtean; lan egiteko adinean dauden kidetzat hartzen dira 18 eta 64 
+urteko arteko pertsonak (salbu eta 18 eta 24 urte bitarteko ikasleak, erretiratuak, eta 60-64 urte bitarteko 
+pertsona ez-aktiboak, horien etxeko diru-sarreren iturri nagusia pentsioak badira). Aldagai hori ez da aplikatzen 
+65 urte edo gehiagoko pertsonen kasuan.</p>
 
           
         </td>
@@ -1388,7 +1388,7 @@ arriskuan dauden pertsonen kopurua gutxienez 15 milioi murriztu beharko litzatek
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>Eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.</p>
+            <p>EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
 
           
         </td>
@@ -1404,7 +1404,7 @@ arriskuan dauden pertsonen kopurua gutxienez 15 milioi murriztu beharko litzatek
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en"> Pobreziako edo gizarte-bazterketako arriskuan dauden pertsonak, adinaren eta sexuaren arabera (ilc_peps01n)</a> Eurostat</p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en">Pobrezia edo gizarte-bazterketa arriskuan dauden pertsonak, adinaren eta sexuaren arabera (ilc_peps01n)</a> Eurostat</p>
 
           
         </td>
@@ -1425,7 +1425,7 @@ arriskuan dauden pertsonen kopurua gutxienez 15 milioi murriztu beharko litzatek
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf">Metadatuak 1-2-2.pdf (ingelesez bakarrik)</a></p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf">Metadatuak 1-2-2.pdf</a> (ingelesez bakarrik)</p>
 
 <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_01_10_esmsip2.htm">Eurostat Metadatuak (sdg_01_10)</a> (ingelesez bakarrik)</p>
 
@@ -1495,7 +1495,7 @@ arriskuan dauden pertsonen kopurua gutxienez 15 milioi murriztu beharko litzatek
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1515,7 +1515,7 @@ arriskuan dauden pertsonen kopurua gutxienez 15 milioi murriztu beharko litzatek
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

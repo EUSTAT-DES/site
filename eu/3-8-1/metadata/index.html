@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Arreta medikoaren premiak ase gabe dituztela dioten 16 urteko eta gehiagoko pertsonen proportzioa, honako arrazoi  hauetakoren batengatik: Finantza-arrazoiak, itxaron-zerrenda eta bidaiatzeko urrunegi");
+        var currentValue = normalizeCurrentValue('definicion', "Ondoko arrazoiren bategatik arreta medikoaren premiak ase gabe dituztela dioten 16 urteko eta gehiagoko pertsonen proportzioa:  Finantza-arrazoiak, itxaron-zerrenda eta bidaiatzeko urrunegi egotea");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPNIAM_{16+}^{t} = \\frac{PNIAM_{16+}^{t}}{P_{16+}^{t}} \\cdot 100$$\n\nnon:\n\n$PNIAM_{16+}^{t} =$ arreta medikoaren premiak ase gabe dituztela dioten 16 urteko eta gehiagoko pertsonak $t$ urtean \n$P_{16+}^{t} =$ 16 urteko eta gehiagoko biztanleria $t$ urtean\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPNIAM_{16+}^{t} = \\frac{PNIAM_{16+}^{t}}{P_{16+}^{t}} \\cdot 100$$\n\nnon:\n\n$PNIAM_{16+}^{t} =$ arreta medikoaren premiak ase gabe dituztela dioten 16 urteko eta gehiagoko pertsonak $t$ urtean \n\n$P_{16+}^{t} =$ 16 urteko eta gehiagoko biztanleria $t$ urtean \n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nAse gabeko behar autoinformatuak pertsona batek azterketa edo tratamendu mediko bat behar ote zuen ebaluatzeari  dagozkio (hortzak zaintzea izan ezik), baina ez zuen izan edo ez zuen bilatu");
+        var currentValue = normalizeCurrentValue('observaciones', "\nAse gabeko behar autoinformatuak esan nahi du pertsonak berak ebaluatzen duela azterketa edo  tratamendu medikurik behar duen (hortzen zainketa izan ezik), baina ez duen lortu edo ez duen bilatu ");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nAdierazleak funtsezko osasun-zerbitzuen estaldura neurtzen du (funtsezko zerbitzuen batez besteko estaldura gisa \ndefinitzen da, ugalketa-osasuna, ama-osasuna, jaioberriena eta haurrena, gaixotasun infekziosoak, gaixotasun \nez-transmitigarriak eta zerbitzuak eskuratzeko gaitasuna barne hartzen dituzten esku-hartze trazatzaileetan oinarrituta, \nbiztanleria orokorraren eta behartsuenaren artean).\n\n3.8 helburua honela definitzen da: \"Osasun-estaldura unibertsala lortzea, finantza-arriskuen aurkako babesa, kalitatezko \nfuntsezko osasun-zerbitzuak eskuratzea eta funtsezko sendagai eta txerto seguruak, eraginkorrak, kalitatezkoak eta guztiontzat \neskuragarriak eskuratzea barne\". Helburua da pertsona eta komunitate guztiek behar dituzten kalitatezko osasun-zerbitzuak \njasotzea (sendagaiak eta bestelako osasun-produktuak barne), finantza-zailtasunik gabe.\n\nBi adierazle aukeratu dira 3.8 helburuaren jarraipena egiteko GJHen esparruan. 3.8.1 adierazlea osasun-zerbitzuen estaldurarako \nda, eta 3.8.2 adierazlea osasun-gastuetan zentratzen da, familia baten aurrekontuari dagokionez, arreta medikoaren zuzeneko \nordainketek eragindako finantza-zailtasunak identifikatzeko. Oro har, 3.8.1 eta 3.8.2 adierazleen helburua 3.8 helburuko \nzerbitzuen estalduraren eta finantza-babesaren dimentsioak atzematea da, hurrenez hurren. Bi adierazle horiek batera monitorizatu \nbehar dira beti.\n\nHerrialdeek funtsezko zerbitzu asko ematen dituzte osasuna babesteko, sustatzeko, prebenitzeko, tratatzeko eta artatzeko. Zerbitzuen \nestalduraren adierazleak (behar duten zerbitzua jasotzen duten pertsonak bezala definituak) dira osasun-estaldura unibertsalaren (OEU) \nesparruan zerbitzuak ematen aurrera jarraitzeko modurik onena.\n\nIturria: Nazio Batuen Estatistika Dibisioa\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nAdierazleak funtsezko osasun-zerbitzuen estaldura neurtzen du (funtsezko zerbitzuen batez besteko estaldura gisa \ndefinitzen da, ugalketa-osasuna, ama-osasuna, jaioberriena eta haurrena, gaixotasun infekziosoak, gaixotasun \nez-transmitigarriak eta zerbitzuak eskuratzeko gaitasuna barne hartzen dituzten esku-hartze trazatzaileetan oinarrituta, \nbiztanleria orokorraren eta behartsuenaren artean).\n\n3.8 helburua honela definitzen da: \"Osasun-estaldura unibertsala lortzea, finantza-arriskuen aurkako babesa, kalitatezko \nfuntsezko osasun-zerbitzuak eskuratzea eta funtsezko sendagai eta txerto seguruak, eraginkorrak, kalitatezkoak eta guztiontzat \neskuragarriak eskuratzea barne\". Helburua da pertsona eta komunitate guztiek behar dituzten kalitatezko osasun-zerbitzuak \njasotzea (sendagaiak eta bestelako osasun-produktuak barne), finantza-zailtasunik gabe.\n\nBi adierazle aukeratu dira 3.8 helburuaren jarraipena egiteko GJHen esparruan. 3.8.1 adierazlea osasun-zerbitzuen estaldurarako \nda, eta 3.8.2 adierazlea osasun-gastuetan zentratzen da, familia baten aurrekontuari dagokionez, arreta medikoaren zuzeneko \nordainketek eragindako finantza-zailtasunak identifikatzeko. Oro har, 3.8.1 eta 3.8.2 adierazleen helburua 3.8 helburuko \nzerbitzuen estalduraren eta finantza-babesaren dimentsioak atzematea da, hurrenez hurren. Bi adierazle horiek batera monitorizatu \nbehar dira beti.\n\nHerrialdeek funtsezko zerbitzu asko ematen dituzte osasuna babesteko, sustatzeko, prebenitzeko, tratatzeko eta artatzeko. Zerbitzuen \nestalduraren adierazleak (behar duten zerbitzua jasotzen duten pertsonak bezala definituak) dira osasun-estaldura unibertsalaren (OEU) \nesparruan zerbitzuak ematen aurrera jarraitzeko modurik onena.\n\nIturria: Nazio Batuen Estatistika Saila \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak ez ditu betetzen Nazio Batuen adierazlearen metadatuak, baina informazio osagarria ematen du.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak ez ditu betetzen Nazio Batuen adierazlearen metadatuak, baina informazio osagarria ematen du.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

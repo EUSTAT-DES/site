@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "El consumo doméstico de materiales (CDM), o consumo interno de materiales, es un indicador \nestándar de contabilidad de flujo de materiales (MFA) e informa el consumo aparente \nde materiales en la economía de la C.A. de Euskadi.\n\nEl CDM mide la cantidad total de material (biomasa, combustibles fósiles, minerales \nmetálicos y minerales no metálicos) utilizado directamente en una economía y basado \nen cuentas de flujos directos de materiales, es decir, material extraido, \nimportaciones y exportaciones físicas.\n\nLos datos se presentan en términos absolutos, por habitante y por unidad de PIB.\n");
+        var currentValue = normalizeCurrentValue('definicion', "Materialaren bertako kontsumoa (MBK), material-fluxuaren kontabilitate-adierazle estandarra \nda, eta Euskal AEko ekonomian materialen itxurazko kontsumoaren berri ematen du.\n\nMBKak ekonomia batean zuzenean erabilitako eta material-fluxu zuzenen kontuetan oinarritutako \nmaterial kantitate osoa neurtzen du (biomasa, erregai fosilak, mineral metalikoak eta mineral \nez-metalikoak), hau da, erauzitako materiala, inportazioak eta esportazio fisikoak.\n\nDatuak balio absolututan aurkezten dira, biztanleko eta BPGren unitateko.\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<b>Consumo doméstico de materiales</b>\n\n$$CDM^t = Extr^t + Imp^t - Exp^t$$\n\ndonde:\n\n$Extr^t =$ Extracción doméstica en el año $t$\n\n$Imp^t =$ Importaciones en el año $t$\n\n$Exp^t =$ Exportaciones en el año $t$\n\n<br>\n\n<b>Consumo doméstico de materiales per cápita</b>\n\n$$CMDPC^{t} = \\frac{{CMD^{t}}}{P^{t}}$$\n\ndonde:\n\n$CMD^{t} =$ consumo doméstico de materiales en el año $t$\n\n$P^{t} =$ población a 1 de julio del año $t$\n\n<br>\n\n<b>Consumo doméstico de materiales per cápita por unidad de PIB</b>\n\n$$CMDPIB^{t} = \\frac{{CMD^{t}}}{PIB_{2022}^{t}}$$\n\ndonde:\n\n$CMD^{t} =$ consumo doméstico de materiales en el año $t$\n\n$PIB_{2022}^{t} =$ Producto interior bruto en volumen encadenado con referencia 2022 \nen millones de euros en el año $t$ \n");
+        var currentValue = normalizeCurrentValue('formula', "<b>Materialen bertako kontsumoa</b>\n\n$$CDM^t = Extr^t + Imp^t - Exp^t$$\n\nnon:\n\n$Extr^t =$ bertako erauzketa $t$ urtean\n\n$Imp^t =$ inportazioak $t$ urtean\n\n$Exp^t =$ esportazioak $t$ urtean\n\n<br>\n\n<b>Materialen bertako kontsumoa per capita</b>\n\n$$CMDPC^{t} = \\frac{{CMD^{t}}}{P^{t}}$$\n\nnon:\n\n$CMD^{t} =$ materialen bertako kontsumoa $t$ urtean\n\n$P^{t} =$ biztanleria $t$ urteko uztailaren 1ean\n\n<br>\n\n<b>Materialen bertako kontsumoa per capita BPG unitateko</b>\n\n$$CMDPIB^{t} = \\frac{{CMD^{t}}}{PIB_{2022}^{t}}$$\n\nnon:\n\n$CMD^{t} =$ materialen bertako kontsumoa $t$ urtean\n\n$PIB_{2022}^{t} =$ Barne-produktu gordina, kateatutako bolumenean, 2022ko erreferentziarekin, milioi eurotan $t$ urtean \n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -628,7 +628,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -646,7 +646,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-02-02.pdf\">Metadatos 12-2-2.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-02-02.pdf\">Metadatuak 12-2-2.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -694,7 +694,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-04-22");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -708,7 +708,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-07");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -836,7 +836,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -856,7 +856,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

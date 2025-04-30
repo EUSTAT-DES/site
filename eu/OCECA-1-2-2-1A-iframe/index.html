@@ -143,7 +143,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1012,8 +1012,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            
-<p>Proporción de personas que están en al menos uno de los tres criterios del riesgo de  pobreza o exclusión social: en riesgo de pobreza relativa (considerando  el umbral nacional de pobreza), viviendo en hogares con carencia material  severa o viviendo en hogares con baja intensidad de trabajo</p>
+            <p>Pobreziako edo gizarte-bazterketako arriskuaren hiru irizpideetako bat gutxienez  betetzen duten pertsonen proportzioa: pobrezia erlatiboko arriskuan egotea  (pobrezia-atalase nazionalaren arabera), gabezia material eta sozial larriko  egoeran egotea, edo lan-intentsitate txikiko etxe batean bizitzea</p>
 
           
         </td>
@@ -1031,11 +1030,11 @@ data-event-label="Change to indicator.sources tab"
           
             \[AROPE_{NAC}^{t} = \frac{PRPES_{NAC}^{t}}{P^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$PRPES_{NAC}^{t} =$ población en riesgo de pobreza o exclusión social el año $t$, considerando el umbral nacional de pobreza</p>
+<p>$PRPES_{NAC}^{t} =$ pobreziako edo gizarte-bazterketako arrisku erlatiboan dagoen biztanleria $t$ urtean, pobrezia-atalase nazionalaren arabera</p>
 
-<p>$P^{t} =$ población total en el año  $t$</p>
+<p>$P^{t} =$ biztanleria osoa $t$ urtean</p>
 
           
         </td>
@@ -1072,54 +1071,53 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Oharra </th>
         <td>
           
-            <p>El indicador mide la proporción de personas que cumplen al menos uno de los siguientes criterios:</p>
+            <p>Adierazleak irizpide hauetako bat gutxienez betetzen duten pertsonen proportzioa neurtzen du:</p>
 
-<p><b>Personas en riesgo de pobreza relativa:</b> personas con ingresos por unidad de consumo por
-debajo del 60% de la mediana (escala OCDE modificada).</p>
+<p><b>Pobrezia erlatiboaren arriskuan dauden pertsonak:</b> kontsumo-unitate bakoitzeko diru-sarrerak 
+medianaren % 60tik behera dituzten pertsonak (ELGA eskala aldatua).</p>
 
-<p>El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, 
-que asigna un peso de 1 a la primera  persona de 14 o más años, un peso de 0,5 al resto de personas de 
-14 o más años y un peso de 0,3 a las personas de menos de 14 años.&lt;/p&gt;</p>
+<p>Etxeko kontsumo-unitateen kopurua kalkulatzeko, ELGA eskala aldatua erabiltzen da. 
+Eskala horrek 1 pisua esleitzen dio 14 urte edo gehiagoko lehen pertsonari, 0,5 pisua 14 urte edo 
+gehiagoko gainerako pertsonei eta 0,3 pisua 14 urtetik beherako pertsonei.&lt;/p&gt;</p>
 
-<p><b>Personas en situación de carencia material y social severa:</b> personas que padecen al menos 
-siete de la siguiente lista de trece limitaciones (siete definidas a nivel de hogar y seis a nivel de persona):</p>
+<p><b>Gabezia material eta sozial larria duten pertsonak:</b> ondoko hamahiru egoeretatik gutxienez 
+zazpi pairatzen dituzten pertsonak; zazpi egoera etxeari dagokizkonak dira eta sei pertsonari dagozkionak:</p>
 
-<p>A nivel de hogar:</p>
+<p>Etxeari dagozkionak:</p>
 <ol>
-  <li>No puede permitirse ir de vacaciones al menos una semana al año.</li>
-  <li>No puede permitirse una comida de carne, pollo o pescado al menos cada dos días.</li>
-  <li>No puede permitirse mantener la vivienda con una temperatura adecuada.</li>
-  <li>No tiene capacidad para afrontar gastos imprevistos.</li>
-  <li>Ha tenido retrasos en el pago de gastos relacionados con la vivienda principal 
-(hipoteca o alquiler, recibos de gas, comunidad, etc) o en
-compras a plazos en los últimos 12 meses.</li>
-  <li>No puede permitirse disponer de un automóvil.</li>
-  <li>No puede sustituir muebles estropeados o viejos.</li>
+  <li>Ezin du urtean gutxienez astebetez oporretara joan.</li>
+  <li>Ezin du gutxienez bi egunetik behin haragi-, oilasko- edo arrain-otordurik egin.</li>
+  <li>Ezin du etxebizitza tenperatura egokian mantendu.</li>
+  <li>Ez du ustekabeko gastuei aurre egiteko gaitasunik.</li>
+  <li>Atzerapenak izan ditu etxebizitza nagusiarekin lotutako gastuen ordainketan 
+(hipoteka edo alokairua, gas-ordainagiriak, komunitatea, etab.) edo epeka egindako 
+erosketetan azken 12 hilabeteetan.</li>
+  <li>Ezin du kotxerik eduki.</li>
+  <li>Ezin ditu ordezkatu hondatutako altzariak edo zaharrak.</li>
 </ol>
 
-<p>A nivel de persona:</p>
+<p>Pertsonari dagozkionak:</p>
 <ol>
-  <li>No puede permitirse sustituir ropa estropeada por otra nueva.</li>
-  <li>No puede permitirse tener dos pares de zapatos en buenas condiciones.</li>
-  <li>No puede permitirse reunirse con amigos/familia para comer o tomar algo al menos una vez al mes.</li>
-  <li>No puede permitirse participar regularmente en actividades de ocio.</li>
-  <li>No puede permitirse gastar una pequeña cantidad de dinero en sí mismo.</li>
-  <li>No puede permitirse conexión a internet.</li>
+  <li>Ezin du hondatutako arroparen ordez berria erosi.</li>
+  <li>Ezin ditu egoera onean dauden bi zapata pare eduki.</li>
+  <li>Ezin du zerbait jateko edo edateko lagunekin/familiarekin elkartu hilean behin gutxienez.</li>
+  <li>Ezin du aldizka aisialdiko jardueretan parte hartu.</li>
+  <li>Ezin du bere buruarentzako gauzetan diru kopuru txiki bat gastatu.</li>
+  <li>Ezin du Interneteko konexiorik ordaindu.</li>
 </ol>
 
-<p>En el caso de menores de 16 años no se dispone de los seis conceptos enumerados anteriormente a 
-nivel de persona. Para estos menores los valores de esos elementos se imputan a partir de los valores
-recogidos para los miembros de su hogar con 16 o más años.</p>
+<p>16 urtetik beherakoen kasuan, pertsonari dagozkion azken sei kontzeptuak ez daude eskuragarri. 
+Adingabe horien kasuan, elementu horien balioak 16 urte edo gehiago dituzten etxeko kideentzat 
+jasotako balioetatik abiatuta egozten dira.</p>
 
-<p><b>Baja intensidad en el empleo:</b> son los hogares en los que sus miembros en edad de trabajar 
-(personas de 18 a 64 años, excluyendo los estudiantes de 18 a 24 años, los jubilados o retirados, 
-así como las personas inactivas entre 60 y 64 cuya fuente principal de ingresos del hogar sean las pensiones)
-lo hicieron menos del 20% del total de su potencial de trabajo durante el año de referencia.
-Esta variable no se aplica en el caso de las personas de 65 y más años.</p>
+<p><b>Lan-intentsitate txikia:</b> etxe horietako lan egiteko adinean dauden kideek beren lan-potentzial osoaren % 20 
+baino gutxiago lan egin zuten erreferentziako urtean; lan egiteko adinean dauden kidetzat hartzen dira 18 eta 64 
+urteko arteko pertsonak (salbu eta 18 eta 24 urte bitarteko ikasleak, erretiratuak, eta 60-64 urte bitarteko 
+pertsona ez-aktiboak, horien etxeko diru-sarreren iturri nagusia pentsioak badira). Aldagai hori ez da aplikatzen 
+65 urte edo gehiagoko pertsonen kasuan.</p>
 
-<p>Los datos a partir del 2022 del Indicador de pobreza y exclusion AROPE se calculan con la nueva 
-definicion de la tasa (metodología Eurostat del año 2021), mientras que los datos anteriores corresponden 
-a la definición antigua.</p>
+<p>AROPE pobreziaren eta bazterketaren adierazlearen 2022tik aurrerako datuak tasaren definizio berriarekin kalkulatzen 
+dira (2021eko Eurostat metodologia); aurreko datuak, berriz, lehengo definizioari dagozkio.</p>
 
           
         </td>
@@ -1208,7 +1206,7 @@ a la definición antigua.</p>
         <th scope="row">Azken aldiz eguneratutako datuak </th>
         <td>
           
-            2025.04.22
+            2024.07.29
           
         </td>
         </tr>
@@ -1223,7 +1221,7 @@ a la definición antigua.</p>
         <th scope="row">Azken aldiz eguneratutako metadatuak </th>
         <td>
           
-            2024.11.28
+            2024.07.29
           
         </td>
         </tr>
@@ -1431,7 +1429,7 @@ a la definición antigua.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1451,7 +1449,7 @@ a la definición antigua.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

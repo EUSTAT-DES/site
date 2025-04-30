@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$TVTP^{t} = \\frac{VTP_{exp\\, sexual}^{t}+VTP_{exp\\, laboral}^{t}+VTP_{obtención\\, órganos}^{t}+VTP_{otros\\, fines}^{t}}{P^{t}} \\cdot 100.000$$ \n\ndonde:\n\n$VTP_{exp\\, sexual}^{t} =$ número de víctimas detectadas de trata de seres humanos con fines de explotación sexual en el año $t$ \n\n$VTP_{exp\\, laboral}^{t} =$ número de víctimas detectadas de trata de seres humanos con fines de explotación laboral en el año $t$ \n\n$VTP_{obtención\\, órganos}^{t} =$ número de víctimas detectadas de trata de seres humanos para la obtención de órganos en el año $t$\n\n$VTP_{otros\\, fines}^{t} =$ número de víctimas detectadas de trata de seres humanos con fines de matrimonios forzados, criminalidad forzada y/o mendicidad en el año $t$ <br>$P^{t} =$ población a 1 de julio del año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$TVTP^{t} = \\frac{VTP_{sexu\\, esplotazioa}^{t}+VTP_{lan\\, esplotazioa}^{t}+VTP_{organoak}^{t}+VTP_{bestelako\\, helburuak}^{t}}{P^{t}} \\cdot 100.000$$ \n\nnon:\n\n$VTP_{sexu\\, esplotazioa}^{t} =$ sexu-esplotaziorako gizakien salerosketan detektatutako biktima-kopurua $t$ urtean \n\n$VTP_{lan\\, esplotazioa}^{t} =$ lan-esplotaziorako gizakien salerosketan detektatutako biktima-kopurua $t$ urtean \n\n$VTP_{organoak}^{t} =$ organoak lortzeko gizakien salerosketan detektatutako biktima-kopurua $t$ urtean \n\n$VTP_{bestelako\\, helburuak}^{t} =$ gizakien salerosketan detektatutako biktima-kopurua, ezkontza behartuetarako, behartutako kriminalitaterako eta/edo eskean aritzeko $t$ urtean \n\n$P^{t} =$ biztanleria $t$ urteko uztailaren 1ean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Tipo de explotación: explotación sexual, explotación laboral, obtención de órganos, otros fines (matrimonios forzados, criminalidad forzada y/o mendicidad)\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Esplotazio mota: sexu-esplotazioa; lan-esplotazioa; organoak lortzea; bestelako helburuak (ezkontza behartuak, behartutako kriminalitatea eta/edo eskean aritzea)\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-16-02-02.pdf\">Metadatos 16-2-2.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-16-02-02.pdf\">Metadatuak 16-2-2.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -718,7 +718,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-04-22");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-09");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

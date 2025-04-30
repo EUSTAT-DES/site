@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1378,7 +1378,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Emisiones de dióxido de carbono (CO2) por unidad de PIB real</p>
+            <p>Isuritako karbono dioxidoa (CO2), barne-produktu gordin errealeko unitate bakoitzeko</p>
 
           
         </td>
@@ -1394,27 +1394,28 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Formula teorikoa </th>
         <td>
           
-            <p><b>Emisiones de CO2 por unidad de valor añadido</b></p>
+            <p><b>CO2 isurketak balio erantsiko unitate bakoitzeko</b></p>
 
 \[PPIBECO2^{t} = \frac{ECO2^{t}}{PIB_{2022}^{t}}\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$ECO2^{t} =$ emisiones de CO2 en el año $t$</p>
+<p>$ECO2^{t} =$ isuritako CO2a $t$ urtean</p>
 
-<p>$PIB_{2022}^{t} =$ producto interior bruto en volumen encadenado con referencia 2022 en el año $t$</p>
+<p>$PIB_{2022}^{t} =$ barne-produktu gordina, 2022 erreferentziarekin kateatutako bolumenean $t$ urtean</p>
 
 <p><br /></p>
 
-<p><b>Emisiones de CO2 por unidad de valor añadido del sector manufacturero</b></p>
+<p><b>CO2 isurketak manufaktura-sektoreko balio erantsiaren unitateko</b></p>
 
-\[PVABECO2_{manufacturero}^{t} = \frac{ECO2_{manufacturero}^{t}}{VAB_{manufacturero\, 2022}^{t}}\]
+\[PVABECO2_{manufaktura}^{t} = \frac{ECO2_{manufaktura}^{t}}{VAB_{manufaktura\, 2022}^{t}}\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$ECO2_{manufacturero}^{t} =$ emisiones de CO2 del sector manufacturero en el año $t$</p>
+<p>$ECO2_{manufaktura}^{t} =$ manufaktura-sektorearen CO2 isuriak $t$ urtean</p>
 
-<p>$VAB_{manufacturero\, 2022}^{t} =$ valor añadido bruto del sector manufacturero en volumen encadenado con referencia 2022 en el año $t$</p>
+<p>$VAB_{manufaktura\, 2022}^{t} =$ manufaktura sektorearen barne-produktu gordina, 
+2022 erreferentziarekin kateatutako bolumenean $t$ urtean</p>
 
           
         </td>
@@ -1524,33 +1525,13 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako datuak </th>
-        <td>
-          
-            2025.04.22
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako metadatuak </th>
-        <td>
           
-            2025.04.08
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1719,7 +1700,7 @@ los procesos de fabricación.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+            <p>EAEko adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
 
           
         </td>
@@ -1736,9 +1717,9 @@ los procesos de fabricación.</p>
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.4.1&amp;seriesCode=EN_ATM_CO2GDP&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Emisiones de dióxido de carbono por unidad de PIB PPP (kilogramos de CO2 por dólar estadounidense constante de 2021) EN_ATM_CO2GDP</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.4.1&amp;seriesCode=EN_ATM_CO2GDP&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Karbono dioxidoaren isuriak, Eros Ahalmenaren Parekotasunean, BPGaren unitateko (CO2 kilogramoak 2021eko AEBetako dolar konstante bakoitzeko) EN_ATM_CO2GDP</a> UNSTATS</p>
 
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.4.1&amp;seriesCode=EN_ATM_CO2MVA&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ISIC4_C"> Emisiones de dióxido de carbono de las industrias manufactureras por unidad de valor añadido manufacturero (kilogramos de CO2 por dólar estadounidense constante de 2015) EN_ATM_CO2MVA</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.4.1&amp;seriesCode=EN_ATM_CO2MVA&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ISIC4_C"> Manufaktura-industrien karbono dioxidoaren isurketak manufakturaren balio erantsiko unitate bakoitzeko (CO2 kilogramoak 2015eko AEBetako dolar konstante bakoitzeko) EN_ATM_CO2MVA</a> UNSTATS</p>
 
           
         </td>
@@ -1759,7 +1740,7 @@ los procesos de fabricación.</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-09-04-01.pdf">Metadatos 9-4-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-09-04-01.pdf">Metadatuak 9-4-1.pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -1827,7 +1808,7 @@ los procesos de fabricación.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1847,7 +1828,7 @@ los procesos de fabricación.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

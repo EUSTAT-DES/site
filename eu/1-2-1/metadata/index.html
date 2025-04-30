@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Kontsumo-unitate bakoitzeko diru-sarrerak  Euskal AEko medianaren % 60 (ELGA eskala aldatua)");
+        var currentValue = normalizeCurrentValue('definicion', "EAEko medianaren % 60tik beherako kontsumo-unitateko diru-sarrerak  dituzten pertsonen proportzioa (ELGA eskala aldatua) ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PP_{RPR}^{t} = \\frac{P_{RPR}^{t}}{P^{t}} \\cdot 100$$\n\nnon:\n\n$P_{RPR}^{t} =$ diru-sarreren medianaren % 60tik beherako diru-sarrerak dituzten biztanleak $t$ urtean, kontsumo-unitatearen arabera (ELGA eskala aldatua)\n\n$P^{t} =$ biztanleria $t$ urtean\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PP_{RPR}^{t} = \\frac{P_{RPR}^{t}}{P^{t}} \\cdot 100$$\n\nnon:\n\n$P_{RPR}^{t} =$ diru-sarreren medianaren % 60tik beherako kontsumo-unitateko diru-sarrerak dituzten biztanleak $t$ urtean (ELGA eskala aldatua)\n\n$P^{t} =$ biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "Etxe bateko kontsumo-unitateen kopurua aldatutako ELGE eskala erabiliz kalkulatzen da;  eskala horrek 1 14 urte edo gehiagoko lehen pertsona, 0,5eko pisua 14 urte edo gehiagoko  gainerako pertsonentzat edo urte gehiago eta 0,3 urte baino gutxiagoko pertsonen artean.  ");
+        var currentValue = normalizeCurrentValue('observaciones', "Etxeko kontsumo-unitateen kopurua kalkulatzeko, ELGA eskala aldatua erabiltzen da.  Eskala horrek 1 pisua esleitzen dio 14 urte edo gehiagoko lehen pertsonari, 0,5 pisua 14 urte edo  gehiagoko gainerako pertsonei eta 0,3 pisua 14 urtetik beherako pertsonei.  ");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu. Euskal Autonomia  Erkidegoko pobrezia-tasa eta sexua kalkulatzeko, autonomia-erkidegoko pobrezia-atalasea aplikatzen da.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu. EAEko pobrezia-tasa  eta sexua kalkulatzeko, autonomia-erkidegoko pobrezia-atalasea aplikatzen da. ");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_01_20/default/table?lang=en&category=sdg.sdg_01\">Gizarte-transferentzien ondoren moneta-pobreziaren arriskuan dauden pertsonak - EU-SILC eta ECHP inkestak(sdg_01_20)</a> Eurostat");
+        var currentValue = normalizeCurrentValue('dato_global', "<a href=\"https://ec.europa.eu/eurostat/databrowser/view/sdg_01_20/default/table?lang=en&category=sdg.sdg_01\">Gizarte-transferentzien ondoren diru-pobreziaren arriskuan dauden pertsonak - EU-SILC eta ECHP inkestak(sdg_01_20)</a> Eurostat");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

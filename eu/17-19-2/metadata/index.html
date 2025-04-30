@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$CPV^{t} = \\begin{cases} SÍ, & \\text{Se ha realizado al menos un censo de población y vivienda en [t, t − 9]} \\\\ NO & \\text{No se ha realizado al menos un censo de población y vivienda en [t, t − 9]} \\end{cases} $$\n\n$$RND^{t} = \\begin{cases} 1 & \\text{Sí se ha registrado el 100% de los nacimientos y al menos el 80% de las defunciones del año 𝑡} \\\\ 0 & \\text{No se ha registrado el 100% de los nacimientos y al menos el 80% de las defunciones del año 𝑡} \\end{cases} $$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$CPV^{t} = \\begin{cases} BAI & \\text{Biztanleriaren eta etxebizitzaren errolda bat egin da, gutxienez [t, t − 9]an} \\\\ EZ & \\text{Ez da egin biztanleriaren eta etxebizitzaren errolda bat, gutxienez [t, t − 9]an} \\end{cases} $$\n\n$$RND^{t} = \\begin{cases} 1 & \\text{Jaiotzen % 100 eta gutxienez heriotzen % 80 erregistratu dira 𝑡 urtean} \\\\ 0 & \\text{Ez dira erregistratu jaiotzen % 100 eta gutxienez heriotzen % 80 𝑡 urtean} \\end{cases} $$\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -640,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -654,7 +654,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=17.19.2&seriesCode=SG_REG_CENSUS&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de países que han realizado al menos un censo de población y vivienda en los últimos 10 años (%) SG_REG_CENSUS</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=17.19.2&seriesCode=SG_REG_BRTH90&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de países con datos de registro de nacimientos que están completos al menos en un 90 por ciento (%) SG_REG_BRTH90</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=17.19.2&seriesCode=SG_REG_DETH75&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Proporción de países con datos de registro de defunciones que están completos al menos en un 75 por ciento (%) SG_REG_DETH75</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=17.19.2&seriesCode=SG_REG_CENSUS&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Azken 10 urteetan gutxienez biztanleriaren eta etxebizitzen errolda bat egin duten herrialdeen proportzioa (%) SG_REG_CENSUS</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=17.19.2&seriesCode=SG_REG_BRTH90&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Gutxienez ehuneko 90ean osatuta dauden jaiotzen erregistro-datuak dituzten herrialdeen proportzioa (%) SG_REG_BRTH90</a> UNSTATS\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=17.19.2&seriesCode=SG_REG_DETH75&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=Total\">Gutxienez ehuneko 75ean osorik dauden heriotzen erregistro-datuak dituzten herrialdeen proportzioa (%) SG_REG_DETH75</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -670,7 +670,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-17-19-02a.pdf\">Metadatos 17-19-2a.pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-17-19-02b.pdf\">Metadatos 17-19-2b.pdf</a> (solo en inglés)\n");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-17-19-02a.pdf\">Metadatuak 17-19-2a.pdf</a> (ingelesez bakarrik)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-17-19-02b.pdf\">Metadatos 17-19-2b.pdf</a> (ingelesez bakarrik)\n");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -706,7 +706,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-04-22");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -720,7 +720,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-14");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -848,7 +848,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -868,7 +868,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

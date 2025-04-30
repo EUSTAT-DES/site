@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Nekazaritza-ustiategietako titularren proportzioa, nekazaritzako langile guztiekiko, eta nekazaritza-ustiategietako  titular guztiekiko emakumeen proportzioa, edukitze-motaren arabera banakatuta.");
+        var currentValue = normalizeCurrentValue('definicion', "Nekazaritza-ustiategietako titularren proportzioa, nekazaritzako langile guztiekiko, eta nekazaritza-ustiategietako  titular guztiekiko emakumeen proportzioa, edukitza-motaren arabera.");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n<b>Nekazaritza-ustiategietako titularren proportzioa nekazaritzako langile guztiekiko</b>\n\n$$PPOA_{titularrak}^{t} = \\frac{TEA^{t}}{POA^{t}} \\cdot 100$$\n\nnon:\n\n$TEA^{t} =$ nekazaritza-ustiategietako titularrak $t$ urtean\n\n$POA^{t} =$ nekazaritzan diharduten pertsonak $t$ urtean\n\n<br>\n\n<b>Nekazaritza-ustiategien titular diren emakumeen proportzioa, nekazaritza-ustiategien \ntitular guztiekiko, edukitze-motaren arabera banakatuta</b>\n\n$$PTEA_{emakumeak}^{t} = \\frac{TEA_{emakumeak}^{t}}{TEA^{t}} \\cdot 100$$\n\nnon:\n\n$TEA_{emakumeak}^{t} =$ nekazaritza-ustiategietako emakume titularrak $t$ urtean edukitze-motaren arabera\n\n$TEA^{t} =$ nekazaritza-ustiategietako pertsona titularrak $t$ urtean edukitze-motaren arabera\n");
+        var currentValue = normalizeCurrentValue('formula', "\n<b>Nekazaritza-ustiategietako titularren proportzioa nekazaritzako langile guztiekiko</b>\n\n$$PPOA_{titularrak}^{t} = \\frac{TEA^{t}}{POA^{t}} \\cdot 100$$\n\nnon:\n\n$TEA^{t} =$ nekazaritza-ustiategietako titularrak $t$ urtean\n\n$POA^{t} =$ nekazaritzan diharduten pertsonak $t$ urtean\n\n<br>\n\n<b>Nekazaritza-ustiategien titular diren emakumeen proportzioa, nekazaritza-ustiategien \ntitular guztiekiko, edukitza-motaren arabera</b>\n\n$$PTEA_{emakumeak}^{t} = \\frac{TEA_{emakumeak}^{t}}{TEA^{t}} \\cdot 100$$\n\nnon:\n\n$TEA_{emakumeak}^{t} =$ nekazaritza-ustiategietako emakume titularrak $t$ urtean edukitza-motaren arabera\n\n$TEA^{t} =$ nekazaritza-ustiategietako pertsona titularrak $t$ urtean edukitza-motaren arabera\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\n5.a.1 (a) azpiadierazlea prebalentzia-neurri bat da. Nekazaritzako lurren gaineko jabetza edo \neskubide seguruak dituzten pertsonen prebalentzia neurtzen du, sexuaren arabera banakatuta.\n\n5.a.1 (b) azpiadierazleak genero-parekotasuna du ardatz, eta emakumeak jabetzan edo \nnekazaritza-lurren gaineko eskubide seguruetan zein neurritan dauden desabantailan neurtzen du.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\n5.a.1 (a) azpiadierazlea prebalentzia-neurri bat da. Nekazaritzako lurren gaineko jabetza edo \neskubide seguruak dituzten pertsonen prebalentzia neurtzen du, sexuaren arabera banakatuta.\n\n5.a.1 (b) azpiadierazleak genero-parekotasuna du ardatz, eta neurtzen du emakumeak jabetzan edo \nnekazaritza-lurren gaineko eskubide seguruetan zein neurritan dauden desabantailan.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

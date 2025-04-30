@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "<b>Larrialdietarako udal-plan bat duten udalerrien ehunekoa</b>\n\n$$PMUN_{RRD\\, udalerria}^{t} = \\frac{MUN_{RRD\\, udalerria}^{t}}{MUN^{t}} \\cdot 100$$\n\nnon:\n\n$MUN_{RRD\\, udalerria}^{t} =$ larrialdietarako udal-planak dituzten tokiko gobernuen kopurua, $t$ urtean\n\n$MUN^{t} =$ tokiko gobernuak, $t$ urtean\n\n <br>\n\n<b>Larrialdietako lurralde-plan batek estalitako udalerrien ehunekoa</b>\n\n$$PMUN_{RRD\\, lurraldea}^{t} = \\frac{MUN_{RRD\\, lurraldea}^{t}}{MUN^{t}} \\cdot 100$$\n\nnon:\n\n$MUN_{RRD\\, lurraldea}^{t} =$ larrialdietarako lurralde-planak dituzten tokiko gobernuen kopurua, $t$ urtean\n\n$MUN^{t} =$ tokiko gobernuak, $t$ urtean\n");
+        var currentValue = normalizeCurrentValue('formula', "<b>Larrialdietarako udal-plana duten udalerrien ehunekoa</b>\n\n$$PMUN_{udal\\, HAM}^{t} = \\frac{MUN_{udal\\, HAM}^{t}}{MUN^{t}} \\cdot 100$$\n\nnon:\n\n$MUN_{udal\\, HAM}^{t} =$ larrialdietarako udal-planak dituzten udalerrien kopurua, $t$ urtean\n\n$MUN^{t} =$ udalerriak $t$ urtean\n\n <br>\n\n<b>Larrialdietarako lurralde-plan batek estalitako udalerrien ehunekoa</b>\n\n$$PMUN_{lurralde\\, HAM}^{t} = \\frac{MUN_{lurralde\\, HAM}^{t}}{MUN^{t}} \\cdot 100$$\n\nnon:\n\n$MUN_{lurralde\\, HAM}^{t} =$ larrialdietarako lurralde-planak dituzten udalerrien kopurua, $t$ urtean\n\n$MUN^{t} =$ udalerriak $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nEuskadin, Euskadiko Babes Zibileko Planak (LABI) ezarritakoaren arabera, 20.000 biztanletik gorako \nudalerriek larrialdietarako udal-planak (IHP) egin eta onartu behar dituzte.\n\n5.000 biztanletik gorako udalerrietan, Toki Araubidearen Oinarriak arautzen dituen Estatuko araudiarekin \nbat etorriz, jarraibide hau gomendagarria da. 2024an, 5.000 eta 20.000 biztanle arteko udalerrien % 96k \neta 1.000 eta 5.000 biztanle arteko udalerrien % 25ek Udal Larrialdi Plan homologatua dute.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nEuskadin, Euskadiko Babes Zibileko Planak (LABI) ezarritakoaren arabera, 20.000 biztanletik gorako \nudalerriek larrialdietarako udal-planak egin eta onartu behar dituzte.\n\n5.000 biztanletik gorako udalerrietan, Toki Araubidearen Oinarriak arautzen dituen Estatuko araudiarekin \nbat etorriz, jarraibide hau gomendagarria da. 2024an, 5.000 eta 20.000 biztanle arteko udalerrien % 96k \neta 1.000 eta 5.000 biztanle arteko udalerrien % 25ek Udal Larrialdi Plan homologatua dute.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "2015-2030 Hondamendi Arriskua Murrizteko Sendai Esparrua 2015eko martxoan onartu zuten Nazio \nBatuetako estatu kideek, hondamendi-arriskua murrizteko politika global gisa. Sendaiko Markoak \nespero duen emaitza da \"hondamendien arriskua eta galerak nabarmen murriztea bizitzetan, biziraupen- \neta osasun-baliabideetan eta pertsonen, enpresen, komunitateen eta herrialdeen aktibo ekonomiko, \nfisiko, sozial, kultural eta ingurumenekoetan\".\n\nSendaiko Esparruaren helburu globalen artean, \"E helburua: 2020rako hondamendi-arriskua murrizteko \nestrategia nazionalak eta tokikoak dituzten herrialdeen kopurua nabarmen handitzea\" dago, hondamendi-arriskua \nmurrizteko estrategia eta politika nazional eta lokalen aurrerapena eta estaldura orokorra hobetzeko.\n\nHondamendi-arriskua murrizteko plan, estrategia eta politika nazionalen helburuak dira hondamendi-arrisku \nberriak prebenitzea eta daudenak murriztea, neurri ekonomiko, egiturazko, legal, sozial, osasun, kultura, \nhezkuntza, ingurumen, teknologia, politika eta erakunde integratu eta inklusiboak ezarriz, arriskuekiko \nesposizioa eta hondamendiekiko urrakortasuna prebenitu eta murrizteko, erantzuteko eta berreskuratzeko \nprestakuntza areagotzeko eta, horrela, erresilientzia indartzeko.\n\nSendaiko Esparruak eskatzen duen bezala, hondamendi-arriskua murrizteko tokiko estrategiak hartzen eta \nezartzen dituzten tokiko gobernuen proportzioa handitzeak garapen jasangarria bultzatuko du eta \nerresilientzia ekonomikoa, soziala, sanitarioa eta ingurumenekoa indartuko ditu.\n\nIturria: Nazio Batuen Estatistika Dibisioa  \n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "2015-2030 Hondamendi Arriskua Murrizteko Sendai Esparrua 2015eko martxoan onartu zuten Nazio \nBatuetako estatu kideek, hondamendi-arriskua murrizteko politika global gisa. Sendaiko Markoak \nespero duen emaitza da \"hondamendien arriskua eta galerak nabarmen murriztea bizitzetan, biziraupen- \neta osasun-baliabideetan eta pertsonen, enpresen, komunitateen eta herrialdeen aktibo ekonomiko, \nfisiko, sozial, kultural eta ingurumenekoetan\".\n\nSendai Esparruaren helburu globalen artean, \"E helburua: 2020rako hondamendi-arriskua murrizteko \nestrategia nazionalak eta tokikoak dituzten herrialdeen kopurua nabarmen handitzea\" dago, hondamendi-arriskua \nmurrizteko estrategia eta politika nazional eta lokalen aurrerapena eta estaldura orokorra hobetzeko.\n\nHondamendi-arriskua murrizteko plan, estrategia eta politika nazionalen helburuak dira hondamendi-arrisku \nberriak prebenitzea eta daudenak murriztea, neurri ekonomiko, egiturazko, legal, sozial, osasun, kultura, \nhezkuntza, ingurumen, teknologia, politika eta erakunde integratu eta inklusiboak ezarriz, arriskuekiko \nesposizioa eta hondamendiekiko urrakortasuna prebenitu eta murrizteko, erantzuteko eta berreskuratzeko \nprestakuntza areagotzeko eta, horrela, erresilientzia indartzeko.\n\nSendai Esparruak eskatzen duen bezala, hondamendi-arriskua murrizteko tokiko estrategiak hartzen eta \nezartzen dituzten tokiko gobernuen proportzioa handitzeak garapen jasangarria bultzatuko du eta \nerresilientzia ekonomikoa, soziala, sanitarioa eta ingurumenekoa indartuko ditu.\n\nIturria: Nazio Batuen Estatistika Dibisioa  \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -848,7 +848,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -868,7 +868,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Malnutrizioa (obesitatea, gehiegizko pisua edo pisu gutxiegi) duten 2 eta 17 urte bitarteko adingabeen proportzioa \n");
+        var currentValue = normalizeCurrentValue('definicion', "Malnutrizioa duten 2 eta 17 urte bitarteko adingabeen proportzioa (obesitatea, gehiegizko pisua edo pisu gutxiegi) \n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$\n\nnon:\n\n$PPM_{2-17}^{t} =$ malnutrizioak jotako 2 eta 17 urte bitarteko biztanleak $t$ urtean\n\n$P_{2-17}^{t} =$ 2 eta 17 urte bitarteko biztanleak $t$ urtean\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPM_{2-17}^{t} = \\frac{PM_{2-17}^{t}}{P_{2-17}^{t}} \\cdot 100$$\n\nnon:\n\n$PPM_{2-17}^{t} =$ malnutrizioak duten 2 eta 17 urte bitarteko biztanleak $t$ urtean\n\n$P_{2-17}^{t} =$ 2 eta 17 urte bitarteko biztanleak $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -650,7 +650,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Nazioartean onartuta dago haurren hazkundeak haurraren nutrizio-egoera islatzen \nduela. Haurren gehiegizko pisua altuerarako pisu handiegia duen haur bati dagokio. \nDesnutrizio mota horren arrazoia da oso kaloria gutxi gastatzen direla kontsumitutako \nelikagaien kantitaterako, eta etorkizunean transmititu ezin diren gaixotasunak \nizateko arriskua handitzen dela. Haurren gehiegizko pisua da Osasunaren Mundu Batzarraren \nnutrizioaren adierazle objektiboetako bat.\n\nHorregatik, Nazio Batuen adierazleak haurren hazkundeari egiten dio erreferentzia, eta \n5 urtetik beherako haurren artean gehiegizko pisuaren prebalentzia neurtzen du (Osasunaren \nMundu Erakundearen (OME) haurren hazkunde-estandarren medianaren >+2 desbideratze estandarraren \npisua).\n\nIturria: Nazio Batuen Estatistika Dibisioa\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Nazioartean onartuta dago haurren hazkundeak haurraren nutrizio-egoera islatzen \nduela. Haurren gehiegizko pisua altuerarako pisu handiegia duen haur bati dagokio. \nDesnutrizio mota horren arrazoia da oso kaloria gutxi gastatzen direla kontsumitutako \nelikagaien kantitaterako, eta etorkizunean transmititu ezin diren gaixotasunak \nizateko arriskua handitzen dela. Haurren gehiegizko pisua da Osasunaren Mundu Batzarraren \nnutrizioaren adierazle objektiboetako bat.\n\nHorregatik, Nazio Batuen adierazleak haurren hazkundeari egiten dio erreferentzia, eta \n5 urtetik beherako haurren artean gehiegizko pisuaren prebalentzia neurtzen du (Osasunaren \nMundu Erakundearen (OME) haurren hazkunde-estandarren medianaren >+2 desbideratze estandarraren \npisua).\n\nIturria: Nazio Batuen Estatistika Saila\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak ez ditu Nazio Batuen adierazlearen metadatuak betetzen,  ez baitu gehiegizko pisua kalkulatzeko modu bera erabiltzen, ezta adin-talde bera ere.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak ez ditu Nazio Batuen adierazlearen metadatuak betetzen,  ez baitu gehiegizko pisua kalkulatzeko modu bera erabiltzen, ezta adin-talde bera ere.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

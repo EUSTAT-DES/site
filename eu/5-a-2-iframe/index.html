@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -970,7 +970,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Esparru juridikoak (ohiturazko zuzenbidea barne) zenbateraino bermatzen duen emakumeek  jabetzarako duten eskubide berdintasuna edo lurren kontrola, sei proxieren ebaluaziotik neurtuta.</p>
+            <p>Lege-esparruak (ohiturazko zuzenbidea barne) zenbateraino bermatzen duen lurren jabetza edo kontrolerako  emakumeen eskubide berdintasuna, sei proxyren ebaluazioaren bidez.</p>
 
           
         </td>
@@ -987,7 +987,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[MJDMPT^{t} = \begin{cases} 1 &amp; \text{Proxietako bat ere ez badago legerian presente 𝑡 urtean} \\ 2 &amp; \text{Proxietako bat legerian agertzen bada 𝑡 urtean} \\ 3 &amp; \text{Proxietako bi legedian agertzen badira 𝑡 urtean} \\ 4 &amp; \text{Proxietako hiru legedian agertzen badira 𝑡 urtean} \\ 5 &amp; \text{Proxietako lau legedian agertzen badira 𝑡 urtean} \\ 6 &amp; \text{Proxietako bost edo sei legedian agertzen badira 𝑡 urtean} \end{cases}\]
+\[MJDMPT^{t} = \begin{cases} 1 &amp; \text{Proxyetako bat ere ez dago legerian 𝑡 urtean} \\ 2 &amp; \text{Proxyetako bat dago legerian 𝑡 urtean} \\ 3 &amp; \text{Proxyetako bi daude legerian 𝑡 urtean} \\ 4 &amp; \text{Proxyetako hiru daude legerian 𝑡 urtean} \\ 5 &amp; \text{Proxyetako lau daude legerian 𝑡 urtean} \\ 6 &amp; \text{Proxyetako bost edo sei daude legerian 𝑡 urtean} \end{cases}\]
 
           
         </td>
@@ -1025,17 +1025,17 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Adierazleak neurtzen du arau-esparruak zenbateraino bermatzen duen emakumeen jabetzarako eta lurren 
-kontrolerako eskubide-berdintasuna, lege-esparrua nazioartean onartutako sei proxieren aurrean kontrastatuz, 
-zehazki, Emakumearen aurkako diskriminazio-modu guztiak ezabatzeari buruzko Konbentzioan eta Lurra edukitzeko 
-gobernantza arduratsuari buruzko borondatezko jarraibideetan:</p>
+<p>Adierazleak neurtzen du lege-esparruak zenbateraino bermatzen duen lurren jabetza edo kontrolerako 
+emakumeen eskubide berdintasuna, lege-esparrua nazioartean onartutako sei proxyrekiko alderatuz; proxy horiek
+Emakumearen aurkako diskriminazio-modu guztiak ezabatzeari buruzko Konbentzioan eta Lurra edukitzeko 
+gobernantza arduratsuari buruzko borondatezko jarraibideetan onartutakoak dira:</p>
 <ul>
-  <li>Proxy A: Lurren baterako erregistroa nahitaezkoa edo pizgarria</li>
-  <li>Proxy B: Lurren transakzioetarako ezkontideen adostasunaren betebeharra</li>
-  <li>Proxy C: Herentzia-eskubideen berdintasuna</li>
-  <li>Proxy D: Emakumeek lurrak gehiago eduki eta kontrolatzeko finantza-baliabideak esleitzea</li>
-  <li>Proxy E: Ohiturazko eskubidea aitortzen duten legezko sistemetan, emakumeak jabetzarako duen eskubideen gaineko babes esplizitua dago</li>
-  <li>Proxy F: Nahitaezko kuotak lurren kudeaketan eta administrazioan</li>
+  <li>A proxya: Lurren nahitaezko edo sustatutako erregistro bateratua</li>
+  <li>B proxya: Lurren transakzioetarako ezkontidearen adostasunaren betebeharra</li>
+  <li>C proxya: Herentzia-eskubideen berdintasuna</li>
+  <li>D proxya: Emakumeen lurren jabetza eta kontrola areagotzeko finantza-baliabideen esleipena</li>
+  <li>E proxya: Ohiturazko eskubidea aitortzen duten legezko sistemetan, emakumeen jabetzarako eskubideen babes esplizitua egotea</li>
+  <li>F proxya: Nahitaezko kuotak lurren kudeaketan eta administrazioan</li>
 </ul>
 
           
@@ -1272,7 +1272,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>Eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu</p>
+            <p>EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu</p>
 
           
         </td>
@@ -1289,7 +1289,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=5.a.2&amp;seriesCode=SG_LGL_LNDFEMOD&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Esparru juridikoak (ohiturazko zuzenbidea barne) emakumeek lurraren jabetzarako eta/edo kontrolerako duten eskubide-berdintasuna zenbateraino bermatzen duen (1 = ebidentziarik gabe 6 = berme-maila altuenak) SG_LGL_LNDFEMOD</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=5.a.2&amp;seriesCode=SG_LGL_LNDFEMOD&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Lege-esparruak (ohiturazko zuzenbidea barne) zenbateraino bermatzen duen lurren jabetza edo kontrolerako emakumeen eskubide berdintasuna (1 = ebidentziarik gabe 6 = berme-maila altuenak) SG_LGL_LNDFEMOD</a> UNSTATS</p>
 
           
         </td>
@@ -1378,7 +1378,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1398,7 +1398,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

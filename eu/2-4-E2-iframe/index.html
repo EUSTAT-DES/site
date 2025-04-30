@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1340,7 +1340,14 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Nekazaritzako eta abeltzaintzako amoniako-isuriak ($NH_3$)</p>
+            
+<p>Adierazle honek bi serie ditu:</p>
+
+<p><b> - Nekazaritzaren eta abeltzaintzaren amoniako-isuriak (NH3)</b></p>
+
+<p><b> - Nekazaritzaren eta abeltzaintzaren amoniako-isuriak (NH3) hektareako:</b> 
+Nekazaritzaren eta abeltzaintzaren amoniako-isuriak (NH3) laborantzarako, belardietarako 
+eta larreetarako hektarea bakoitzeko</p>
 
           
         </td>
@@ -1357,13 +1364,31 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
+<p><b> Nekazaritzaren eta abeltzaintzaren amoniako-isuriak (NH3)</b></p>
+
 \[ENH3_{nekazaritza\, eta\, abeltzaintza}^{t} = ENH3_{nekazaritza}^{t} + ENH3_{abeltzaintza}^{t}\]
 
 <p>non:</p>
 
-<p>$ENH3_{nekazaritza}^{t}$ nekazaritzako amoniako-isuriak  ($NH_3$) $t$ urtean</p>
+<p>$ENH3_{nekazaritza}^{t}$ = nekazaritzaren amoniako-isuriak $t$ urtean</p>
 
-<p>$ENH3_{abeltzaintza}^{t}$ abeltzaintzako amoniako-isuriak  ($NH_3$) $t$ urtean</p>
+<p>$ENH3_{abeltzaintza}^{t}$ = abeltzaintzaren amoniako-isuriak $t$ urtean</p>
+
+<p><br /></p>
+
+<p><b>Nekazaritzaren eta abeltzaintzaren amoniako-isuriak (NH3) hektareako</b></p>
+
+\[ENH3S_{nekazaritza\, eta\, abeltzaintza}^{t} = \frac{ENH3_{nekazaritza}^{t} + ENH3_{abeltzaintza}^{t}}{S_{labore-lurrak}^{t} + S_{belardiak\, eta\, larreak}^{t}}\]
+
+<p>non:</p>
+
+<p>$ENH3_{nekazaritza}^{t}$ = nekazaritzaren amoniako-isuriak $t$ urtean</p>
+
+<p>$ENH3_{abeltzaintza}^{t}$ = abeltzaintzaren amoniako-isuriak $t$ urtean</p>
+
+<p>$S_{labore-lurrak}^{t}$ = labore-lurren azalera $t$ urtean</p>
+
+<p>$S_{belardiak\, eta\, larreak}^{t}$ = belardi eta larreen azalera $t$ urtean</p>
 
           
         </td>
@@ -1379,7 +1404,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Nekazaritza-jarduera: nekazaritza, abeltzaintza</p>
+            <p>Jarduera: nekazaritza; abeltzaintza</p>
 
           
         </td>
@@ -1412,11 +1437,11 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Nekazaritzari esleitutako amoniako-igorpenak NFR (Nomenclature for Reporting) kodeak dituzten jarduerei 
-dagozkienak dira: 3Da1, 3Da2a, 3Da2b, 3Da2c, 3Da3, 3Da4, 3Db, 3Dc, 3Dd, 3De, 3Df, 3F eta 3I.</p>
+<p>Nekazaritzari esleitutako amoniako-isuriak ondoko NFR (Nomenclature for Reporting) kodeak dituzten 
+jarduerei dagozkienak dira: 3Da1, 3Da2a, 3Da2b, 3Da2c, 3Da3, 3Da4, 3Db, 3Dc, 3Dd, 3De, 3Df, 3F eta 3I.</p>
 
-<p>Abeltzaintzari esleitutako amoniako-emisioak NFR (Nomenclature for Reporting) kodeak dituzten jarduerei dagozkie: 
-3B1a, 3B1b, 3B2, 3B3, 3B4a, 3B4d, 3B4e, 3B4f, 3B4gi, 3B4gii, 3B4giii, 3B4giv eta 3B4h.</p>
+<p>Abeltzaintzari esleitutako amoniako-isuriak ondoko NFR (Nomenclature for Reporting) kodeak dituzten 
+jarduerei dagozkienak dira: 3B1a, 3B1b, 3B2, 3B3, 3B4a, 3B4d, 3B4e, 3B4f, 3B4gi, 3B4gii, 3B4giii, 3B4giv eta 3B4h.</p>
 
           
         </td>
@@ -1705,7 +1730,7 @@ barne.</p>
         <th scope="row">Nazioarteko emaitzak </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_02_60/default/table?lang=en&amp;category=sdg.sdg_02"> Nekazaritzako amoniako-isuriak (sdg_02_60)</a> Eurostat</p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_02_60/default/table?lang=en&amp;category=sdg.sdg_02"> Nekazaritzaren amoniako-isuriak (sdg_02_60)</a> Eurostat</p>
 
           
         </td>
@@ -1794,7 +1819,7 @@ barne.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1814,7 +1839,7 @@ barne.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

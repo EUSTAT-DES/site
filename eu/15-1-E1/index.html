@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1172,22 +1172,21 @@ data-event-label="Change to indicator.global_metadata tab"
             
 \[PSTP^{t} = \frac{STP^{t}}{ST^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$STP^{t} =$ superficie terrestre incluida en áreas protegidas en el año $t$</p>
+<p>$STP^{t} =$ eremu babestuetan sartutako lur-azalera $t$ urtean</p>
 
-<p>$ST^{t} =$ superficie terrestre en el año $t$</p>
+<p>$ST^{t} =$ lur-azalera $t$ urtean</p>
 
-<p>La desagregación por tipo de ecosistema se realiza sobre la superficie total del ecosistema, según
-la siguiente fórmula:</p>
+<p>Ekosistema motaren araberako bereizketa ekosistemaren azalera osoan egiten da, formula honen arabera:</p>
 
-\[PSTP_{ecosistema}^{t} = \frac{STP_{ecosistema}^{t}}{ST_{ecosistema}^{t}} \cdot 100\]
+\[PSTP_{ekosistema}^{t} = \frac{STP_{ekosistema}^{t}}{ST_{ekosistema}^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$STP_{ecosistema}^{t} =$ superficie de un ecosistema determinado incluida en áreas protegidas en el año $t$</p>
+<p>$STP_{ekosistema}^{t} =$ ekosistema jakin baten azalera, eremu babestuetan dagoena $t$ urtean</p>
 
-<p>$ST_{ecosistema}^{t} =$ superficie total de un ecosistema determinado en el año $t$</p>
+<p>$ST_{ekosistema}^{t} =$ ekosistema jakin baten guztizko azalera $t$ urtean</p>
 
           
         </td>
@@ -1203,7 +1202,7 @@ la siguiente fórmula:</p>
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Tipo de ecosistema: bosques, humedales, pastizales, tierras de cultivo,  asentamientos, otras tierras</p>
+            <p>Ekosistema mota: basoak; hezeguneak; larreak; laborantza-lurrak; asentamenduak; beste lur batzuk</p>
 
           
         </td>
@@ -1297,33 +1296,13 @@ la siguiente fórmula:</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako datuak </th>
-        <td>
-          
-            2025.04.22
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako metadatuak </th>
-        <td>
           
-            2025.04.09
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1521,7 +1500,7 @@ Europa, incluidos en las Directivas de Hábitats y de Aves de la UE.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible es comparable con el indicador europeo.</p>
+            <p>EAEn eskuragarri dagoen adierazlea Europako adierazlearekin aldera daiteke.</p>
 
           
         </td>
@@ -1539,7 +1518,7 @@ Europa, incluidos en las Directivas de Hábitats y de Aves de la UE.</p>
           
             
 <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_15_20/default/table?lang=en&amp;category=sdg.sdg_15">
-Superficie de las áreas terrestres protegidas(sdg_15_20)</a> Eurostat</p>
+Lurreko eremu babestuen azalera (sdg_15_20)</a> Eurostat</p>
 
           
         </td>
@@ -1560,7 +1539,7 @@ Superficie de las áreas terrestres protegidas(sdg_15_20)</a> Eurostat</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_15_20_esmsip2.htm">Metadatos Eurostat (sdg_15_20)</a> (solo en inglés)</p>
+            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_15_20_esmsip2.htm">Metadatuak Eurostat (sdg_15_20)</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -1675,7 +1654,7 @@ Superficie de las áreas terrestres protegidas(sdg_15_20)</a> Eurostat</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1695,7 +1674,7 @@ Superficie de las áreas terrestres protegidas(sdg_15_20)</a> Eurostat</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

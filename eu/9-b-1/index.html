@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1015,7 +1015,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Proporción del valor añadido bruto del sector manufacturero correspondiente a las actividades de media-alta y alta tecnología</p>
+            <p>Teknologia ertain-altuko eta altuko jarduerei dagokien manufaktura-sektorearen balio erantsi gordinaren proportzioa</p>
 
           
         </td>
@@ -1032,12 +1032,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>\(PVAB_{manufacturero\,media-alta\, y\, alta}^{t} = \frac{VAB_{manufacturero\,media-alta\, y\, alta}^{t}}{VAB_{manufacturero}^{t}} \cdot 100\)
-donde:</p>
+\[PVAB_{manufaktura\, ertain-altua\, eta\, altua}^{t} = \frac{VAB_{manufaktura\, ertain-altua\, eta\, altua}^{t}}{VAB_{manufaktura}^{t}} \cdot 100\]
 
-<p>$VAB_{manufacturero\,media-alta\, y\, alta}^{t}$ = valor añadido bruto correspondiente a las ctividades manufactureras de media-alta y alta tecnología en el año $t$</p>
+<p>non:</p>
 
-<p>$VAB_{manufacturero}^{t}$ = valor añadido bruto total del sector manufacturero en el año $t$</p>
+<p>$VAB_{manufaktura\, ertain-altua\, eta\, altua}^{t}$ = teknologia ertain-altuko eta altuko jarduerei dagokien manufaktura-sektorearen balio erantsia $t$ urtean</p>
+
+<p>$VAB_{manufaktura}^{t}$ = manufaktura-sektorearen balio erantsi gordin osoa $t$ urtean</p>
 
           
         </td>
@@ -1075,25 +1076,22 @@ donde:</p>
         <td>
           
             
-<p>Se consideran actividades manufactureras de media-alta y alta tecnología las actividades 
-con CNAE-2009:</p>
+<p>Teknologia ertain-altuko eta altuko manufaktura-jardueratzat hartzen dira JESN-2009ko ondoko jarduerak:</p>
 
-<p>Media-alta tecnología</p>
+<p>Teknologia ertain-altua</p>
 <ul>
-  <li>20: Industria química</li>
-  <li>25.4: Fabricación de armas y municiones</li>
-  <li>27 a 29: Fabricación de material y equipo eléctrico; Fabricación de maquinaria 
-y equipo n.c.o.p;   Fabricación de vehículos de motor, remolques y semirremolques</li>
-  <li>30 excepto 30.1 y 30.3: Fabricación de otro material de transporte excepto 
-construcción naval, construcción aeronáutica y espacial y su maquinaria</li>
-  <li>32.5: Fabricación de instrumentos y suministros médicos y odontológicos</li>
+  <li>20: Industria kimikoa</li>
+  <li>25.4: Armen eta munizioen fabrikazioa</li>
+  <li>27tik 29ra: Material eta ekipo elektrikoen fabrikazioa; Makineria eta ekipoen fabrikazioa b.i.s.g.; ibilgailu motordunen, atoien eta erdi-atoien fabrikazioa</li>
+  <li>30 (30.1 eta 30.3 izan ezik): Beste garraio-material batzuen fabrikazioa (ontzigintza, eraikuntza aeronautikoa eta espaziala eta hartarako makineria izan ezik)</li>
+  <li>32.5: Tresna eta hornidura mediko eta odontologikoen fabrikazioa</li>
 </ul>
 
-<p>Alta tecnología</p>
+<p>Teknologia altua</p>
 <ul>
-  <li>21: Fabricación de productos farmaceúticos</li>
-  <li>26: Fabricación de productos informáticos, electrónicos y ópticos</li>
-  <li>30.3: Construcción aeronáutica y espacial y su maquinaria</li>
+  <li>21: Produktu farmazeutikoen fabrikazioa</li>
+  <li>26: Produktu informatiko, elektroniko eta optikoen fabrikazioa</li>
+  <li>30.3: Eraikuntza aeronautikoa eta espaziala eta bere makineria</li>
 </ul>
 
           
@@ -1178,33 +1176,13 @@ construcción naval, construcción aeronáutica y espacial y su maquinaria</li>
       
       
       
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako datuak </th>
-        <td>
-          
-            2025.04.22
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako metadatuak </th>
-        <td>
           
-            2025.04.04
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1355,7 +1333,7 @@ también refleja el impacto de la innovación.</p>
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+            <p>EAEko adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
 
           
         </td>
@@ -1372,7 +1350,7 @@ también refleja el impacto de la innovación.</p>
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.b.1&amp;seriesCode=NV_IND_TECH&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ISIC3_D">Proporción del valor añadido de las manufacturas de tecnología media y alta en el valor añadido total (%) NV_IND_TECH</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.b.1&amp;seriesCode=NV_IND_TECH&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ISIC3_D">Teknologia ertaineko eta altuko manufakturen balio erantsiaren proportzioa guztizko balio erantsian (%) NV_IND_TECH</a> UNSTATS</p>
 
           
         </td>
@@ -1393,7 +1371,7 @@ también refleja el impacto de la innovación.</p>
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-09-0B-01.pdf">Metadatos 9-b-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-09-0B-01.pdf">Metadatuak 9-b-1.pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -1508,7 +1486,7 @@ también refleja el impacto de la innovación.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -1528,7 +1506,7 @@ también refleja el impacto de la innovación.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

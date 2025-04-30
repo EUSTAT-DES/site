@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Irakurketa ulermenaren eskalan eta matematiketetan gutxienez 2. maila lortu duten 16-65 urteko pertsonen proportzioa  ");
+        var currentValue = normalizeCurrentValue('definicion', "Irakurketa ulermenaren eskalan eta matematikan gutxienez 2. mailako gaitasuna lortu duten 16-65 urteko pertsonen proportzioa  ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPN2_{c}^{t} = \\frac{PN2_{16-65\\,c}^{t}}{P_{16-65}^{t}}$$\n\nnon:\n\n$PN2_{16-65\\,c}^{t} =$ $c$ gaitasun-motaren eskalan gutxienez 2. mailako gaitasuna lortu duten 16-65 urteko biztanleak $t$ urtean\n\n$P_{16-65}^{t} =$ 16-65 urteko biztanleria $t$ urtean\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPN2_{c}^{t} = \\frac{PN2_{16-65\\,c}^{t}}{P_{16-65}^{t}}$$\n\nnon:\n\n$PN2_{16-65\\,c}^{t} =$ $c$ konpetentziaren eskalan gutxienez 2. mailako gaitasuna lortu duten 16-65 urteko biztanleak $t$ urtean\n\n$P_{16-65}^{t} =$ 16-65 urteko biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Gaitasun mota: irakurmena, matematika\n\nSexua\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Konpetentzia: irakurketa; matematika\n\nSexua\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nHelduen gaitasunak nazioartean ebaluatzeko programak 500 puntuko eskala erabiltzen du irakurmena eta matematikako \ngaitasuna ebaluatzeko. Puntuazio horiek interpretatzen laguntzeko, eskala sei gaitasun-kategoriatan banatzen da:\n\n - 1. maila baino txikiagoa: 176 baino puntuazio txikiagoa\n - 1. maila: 176 eta 225 arteko puntuazioa\n - 2. maila: 226 eta 275 arteko puntuazioa\n - 3. maila: 276 eta 325 arteko puntuazioa\n - 4. maila: 326 eta 375 arteko puntuazioa\n - 5. maila: 376tik 500era bitarteko puntuazioa\n\nPertsona batek, gutxienez, 2. mailako gaitasuna lortzen du irakurmen-eskalan, normalean gai denean ezagutzen \nez dituen gaiei buruzko testuak ulertzeko, nahiz eta zailtasunak izan hainbat testu alderatu eta kontrastatzeko \nedo ezagutzen ez duen gai jakin bati buruzko testu digitalak bilatzeko.\n\nPertsona batek, gutxienez, 2. gaitasun-maila lortzen du matematika-eskalan, normalean bitarteko kalkuluak behar \ndituzten galderei erantzuteko gai denean, taula bateko informazio matematikoa ulertzen duenean eta grafiko \nsinpleak interpretatzeko zailtasunik ez duenean, nahiz eta zailtasunak izan proportzioak maneiatzeko edo grafiko \nkonplexuak interpretatzeko.\n\n2012ko datua 2011ko hirugarren lauhilekoaren eta 2012ko lehen lauhilekoaren artean egindako azterketari dagokio.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nHelduen gaitasunak nazioartean ebaluatzeko programak 500 puntuko eskala erabiltzen du irakurmen eta matematika \ngaitasunak ebaluatzeko. Puntuazio horiek interpretatzen laguntzeko, eskala sei kategoriatan banatzen da:\n\n - 1. maila baino txikiagoa: 176 puntu baino gutxiago \n - 1. maila: 176 eta 225 arteko puntuazioa\n - 2. maila: 226 eta 275 arteko puntuazioa\n - 3. maila: 276 eta 325 arteko puntuazioa\n - 4. maila: 326 eta 375 arteko puntuazioa\n - 5. maila: 376 eta 500 arteko puntuazioa\n\nPertsona batek, gutxienez, 2. mailako gaitasuna lortzen du irakurmen-eskalan, normalean gai denean ezagutzen \nez dituen gaiei buruzko testuak ulertzeko, nahiz eta zailtasunak izan hainbat testu alderatu eta kontrastatzeko \nedo ezagutzen ez duen gai jakin bati buruzko testu digitalak bilatzeko.\n\nPertsona batek, gutxienez, 2. mailako gaitasuna lortzen du matematika eskalan, normalean gai denean bitarteko kalkuluak behar \ndituzten galderei erantzuteko, taula bateko informazio matematikoa ulertzen duenean eta grafiko \nsinpleak interpretatzeko zailtasunik ez duenean, nahiz eta zailtasunak izan proportzioak maneiatzeko edo grafiko \nkonplexuak interpretatzeko.\n\n2012ko datua 2011ko hirugarren lauhilekoaren eta 2012ko lehen lauhilekoaren artean egindako azterketari dagokio.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

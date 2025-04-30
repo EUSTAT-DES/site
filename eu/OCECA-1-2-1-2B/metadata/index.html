@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -552,7 +552,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción de personas con ingresos con alquiler imputado por unidad de consumo por debajo del 60% de la mediana autonómica de los ingresos con alquiler imputado por unidad de consumo (escala OCDE modificada)");
+        var currentValue = normalizeCurrentValue('definicion', "Alokairua inputatutako kontsumo-unitate bakoitzeko diru-sarrerak autonomia erkidegoko medianaren % 60tik beherakoak dituzten pertsonen proportzioa (ELGA eskala aldatua) ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -566,7 +566,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPRPRAI_{CCAA}^{t} = \\frac{PRPRAI_{CCAA}^{t}}{P^{t}} \\cdot 100$$\n\ndonde:\n\n$PRPRAI_{CCAA}^{t} =$ población en riesgo de pobreza relativa con alquiler imputado considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos con alquiler imputado por unidad de consumo -escala OCDE modificada-) en el año $t$\n\n$P^{t} =$ población total en el año  $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPRPRAI_{CCAA}^{t} = \\frac{PRPRAI_{CCAA}^{t}}{P^{t}} \\cdot 100$$\n\nnon:\n\n$PRPRAI_{CCAA}^{t} =$ pobrezia-arrisku erlatiboan dagoen biztanleria, pobrezia-atalase autonomikoaren arabera  \n(alokairua inputatutako kontsumo-unitate bakoitzeko diru-sarrerak autonomia erkidegoko medianaren % 60 -ELGA eskala aldatua-) $t$ urtean \n\n$P^{t} =$ biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -596,7 +596,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, \nque asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto \nde personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.\n\nEl alquiler imputado se aplica a los hogares que no pagan un alquiler completo por\n ser propietarios o por ocupar una vivienda alquilada a un precio inferior al de \nmercado o a título gratuito para así equiparar las rentas con aquellos que sí lo pagan. \n\nEl valor que se imputa es el equivalente al alquiler que se pagaría en el mercado por una \nvivienda similar a la ocupada, menos cualquier alquiler realmente abonado. En esta \nvariable también se incluye el alquiler imputado de la vivienda cuando la misma \nestá proporcionada por la empresa en la que trabaja algún miembro del hogar. \nAsimismo se deducen de los ingresos totales del hogar los intereses de los \npréstamos solicitados para la compra de la vivienda principal.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "Etxeko kontsumo-unitateen kopurua kalkulatzeko, ELGA eskala aldatua erabiltzen da. \nEskala horrek 1 pisua esleitzen dio 14 urte edo gehiagoko lehen pertsonari, 0,5 pisua 14 urte edo \ngehiagoko gainerako pertsonei eta 0,3 pisua 14 urtetik beherako pertsonei.\n\nInputatutako alokairua aplikatzen zaie alokairu osoa ordaintzen ez duten familiei, jabeak direlako \nedo merkatuko prezioa baino merkeago edo doan alokatutako etxebizitza bat okupatzen dutelako,  \nalokairu osoa ordaintzen dutenekiko errentak parekatzeko.\n\nOkupatuaren antzeko etxebizitza batengatik merkatuan ordainduko litzatekeen alokairuaren baliokidea da inputatzen \nden balioa, benetan ordaindutako edozein alokairu kenduta. Aldagai horretan sartzen da, halaber, etxebizitzaren \nalokairu inputatua, etxebizitza hori etxeko kideren batek lan egiten duen enpresak ematen duenean. Era berean, \netxeko guztizko diru-sarreretatik kentzen dira etxebizitza nagusia erosteko eskatutako maileguen interesak.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -658,7 +658,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-04-22");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -672,7 +672,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-03-15");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2024-07-29");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -800,7 +800,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -820,7 +820,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

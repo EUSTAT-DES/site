@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción del valor añadido bruto del sector manufacturero correspondiente a las actividades de media-alta y alta tecnología");
+        var currentValue = normalizeCurrentValue('definicion', "Teknologia ertain-altuko eta altuko jarduerei dagokien manufaktura-sektorearen balio erantsi gordinaren proportzioa");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PVAB_{manufacturero\\,media-alta\\, y\\, alta}^{t} = \\frac{VAB_{manufacturero\\,media-alta\\, y\\, alta}^{t}}{VAB_{manufacturero}^{t}} \\cdot 100$$\ndonde:\n\n$VAB_{manufacturero\\,media-alta\\, y\\, alta}^{t}$ = valor añadido bruto correspondiente a las ctividades manufactureras de media-alta y alta tecnología en el año $t$\n\n$VAB_{manufacturero}^{t}$ = valor añadido bruto total del sector manufacturero en el año $t$\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PVAB_{manufaktura\\, ertain-altua\\, eta\\, altua}^{t} = \\frac{VAB_{manufaktura\\, ertain-altua\\, eta\\, altua}^{t}}{VAB_{manufaktura}^{t}} \\cdot 100$$\n\nnon:\n\n$VAB_{manufaktura\\, ertain-altua\\, eta\\, altua}^{t}$ = teknologia ertain-altuko eta altuko jarduerei dagokien manufaktura-sektorearen balio erantsia $t$ urtean\n\n$VAB_{manufaktura}^{t}$ = manufaktura-sektorearen balio erantsi gordin osoa $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -608,7 +608,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nSe consideran actividades manufactureras de media-alta y alta tecnología las actividades \ncon CNAE-2009:\n\nMedia-alta tecnología\n- 20: Industria química\n- 25.4: Fabricación de armas y municiones\n- 27 a 29: Fabricación de material y equipo eléctrico; Fabricación de maquinaria \ny equipo n.c.o.p;   Fabricación de vehículos de motor, remolques y semirremolques\n- 30 excepto 30.1 y 30.3: Fabricación de otro material de transporte excepto \nconstrucción naval, construcción aeronáutica y espacial y su maquinaria\n- 32.5: Fabricación de instrumentos y suministros médicos y odontológicos\n\nAlta tecnología\n- 21: Fabricación de productos farmaceúticos\n- 26: Fabricación de productos informáticos, electrónicos y ópticos\n- 30.3: Construcción aeronáutica y espacial y su maquinaria\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nTeknologia ertain-altuko eta altuko manufaktura-jardueratzat hartzen dira JESN-2009ko ondoko jarduerak: \n\nTeknologia ertain-altua\n- 20: Industria kimikoa \n- 25.4: Armen eta munizioen fabrikazioa \n- 27tik 29ra: Material eta ekipo elektrikoen fabrikazioa; Makineria eta ekipoen fabrikazioa b.i.s.g.; ibilgailu motordunen, atoien eta erdi-atoien fabrikazioa \n- 30 (30.1 eta 30.3 izan ezik): Beste garraio-material batzuen fabrikazioa (ontzigintza, eraikuntza aeronautikoa eta espaziala eta hartarako makineria izan ezik) \n- 32.5: Tresna eta hornidura mediko eta odontologikoen fabrikazioa \n\nTeknologia altua \n- 21: Produktu farmazeutikoen fabrikazioa \n- 26: Produktu informatiko, elektroniko eta optikoen fabrikazioa \n- 30.3: Eraikuntza aeronautikoa eta espaziala eta bere makineria \n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -652,7 +652,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEko adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -666,7 +666,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.b.1&seriesCode=NV_IND_TECH&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ISIC3_D\">Proporción del valor añadido de las manufacturas de tecnología media y alta en el valor añadido total (%) NV_IND_TECH</a> UNSTATS\n");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.b.1&seriesCode=NV_IND_TECH&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ISIC3_D\">Teknologia ertaineko eta altuko manufakturen balio erantsiaren proportzioa guztizko balio erantsian (%) NV_IND_TECH</a> UNSTATS\n");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -682,7 +682,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-09-0B-01.pdf\">Metadatos 9-b-1.pdf</a> (solo en inglés)");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-09-0B-01.pdf\">Metadatuak 9-b-1.pdf</a> (ingelesez bakarrik)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -718,7 +718,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "2025-04-22");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -732,7 +732,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-04-04");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

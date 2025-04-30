@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Gutxienez bigarren hezkuntzako lehen etapa (ISNI 2) amaitu duten 18 eta 20 urte bitarteko pertsonen proportzioa,  18 eta 20 urte bitarteko pertsona guztiekiko eta Gutxienez bigarren hezkuntzako bigarren etapa (ISNI 3) amaitu  duten 20-22 urteko pertsonen proportzioa, 20 eta 22 urte bitarteko pertsona guztiekiko.");
+        var currentValue = normalizeCurrentValue('definicion', "Gutxienez bigarren hezkuntzako lehen zikloa (Hezkuntzaren Nazioarteko Sailkapen Normalizatua 2)  amaitu duten 18 eta 20 urte bitarteko pertsonen proportzioa, 18 eta 20 urte bitarteko pertsona  guztiekiko, eta gutxienez bigarren hezkuntzako bigarren zikloa (HNSN 3) amaitu  duten 20 eta 22 urte bitarteko pertsonen proportzioa, 20 eta 22 urte bitarteko pertsona guztiekiko. ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PCINE_n = \\frac{P_{n,Adina_a+3t5}}{P_{Adina_a+3t5}}$$\n\nnon:\n\n$P_{n,Adina_a+3t5} =$ $3$ eta $5$ urte arteko biztanleria, $a$ sartzeko adin ofizialaren gainetik, maila hori osatu duen $n$ hezkuntza-mailaren azken graduan.\n\n$P_{Adina_a+3t5} =$ $3$ eta $5$ urte arteko biztanleria, $a$ sartzeko adin ofizialaren gainetik, $n$ hezkuntza mailaren azken graduan\n\n$n =$ ISNI 2 maila (Bigarren Hezkuntzako lehen etapa) eta ISNI 3 (bigarren hezkuntzako bigarren etapa)\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PCINE_n = \\frac{P_{n,Adina_a+3t5}}{P_{Adina_a+3t5}}$$\n\nnon:\n\n$P_{n,Adina_a+3t5} =$ $n$ zikloko azken urtean sartzeko adin ofiziala baino $3$ - $5$ urte gehiago izanik, maila hori gainditu duen biztanleria\n\n$P_{Adina_a+3t5} =$ $n$ zikloko azken urtean sartzeko adin ofiziala baino $3$ - $5$ urte gehiagoko biztanleria\n\n$n =$ HNSN 2 (Bigarren Hezkuntzako lehen zikloa) eta HNSN 3 (Bigarren Hezkuntzako bigarren zikloa)\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Hezkuntza-maila: bigarren hezkuntzako lehen eta bigarren etapak\n\nAdina\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Hezkuntza-maila: Bigarren Hezkuntzako lehen zikoa; Bigarren Hezkuntzako bigarren zikloa\n\nAdina\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nISNI: Hezkuntzaren Nazioarteko Sailkapen Normalizatua (UNESCO - 2011). Erreferentziako sailkapen estatistiko \nbat da, hezkuntza-programak eta dagozkien ziurtagiriak hezkuntza-mailen eta ikasketa-eremuen arabera \nordenatzeko aukera ematen duena.\n\nISNI aren definizioak eta oinarrizko kontzeptuak nazioartean baliozkoak izateko eta hezkuntza-sistema guztiak \nsartzeko pentsatuta daude. UNESCOko Estatu Kideen Konferentzia Orokorrak formalki onartutako nazioarteko \nakordio baten emaitza da.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nHNSN: Hezkuntzaren Nazioarteko Sailkapen Normalizatua (UNESCO - 2011). \nErreferentziako sailkapen estatistiko bat da, hezkuntza-programak eta dagozkien ziurtagiriak \nhezkuntza-mailen eta ikasketa-eremuen arabera sailkatzeko aukera ematen duena.\n\nHNSNren definizioak eta oinarrizko kontzeptuak nazioartean baliozkoak izateko eta hezkuntza-sistema guztiak \nsartzeko pentsatuta daude. UNESCOko Estatu Kideen Konferentzia Orokorrak formalki onartutako nazioarteko \nakordio baten emaitza da.\n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak Nazio Batuen metadatuak betetzen ditu.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -678,7 +678,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=4.1.2&seriesCode=SE_TOT_CPLR&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAREA%20%7C%20BOTHSEX%20%7C%20UPPSEC%20%7C%20_T\">Goi-mailako bigarren hezkuntzaren amaiera-tasa (%) SE_TOT_CPLR</a> UNSTATS");
+        var currentValue = normalizeCurrentValue('dato_global', "\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=4.1.2&seriesCode=SE_TOT_CPLR&areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=ALLAREA%20%7C%20BOTHSEX%20%7C%20UPPSEC%20%7C%20_T\">Goi-mailako bigarren hezkuntza amaitze-tasa (%) SE_TOT_CPLR</a> UNSTATS");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

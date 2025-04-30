@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1644,27 +1644,27 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Formula teorikoa </th>
         <td>
           
-            <p><b>Porcentaje de municipios que disponen de un plan municipal de emergencias</b></p>
+            <p><b>Larrialdietarako udal-plana duten udalerrien ehunekoa</b></p>
 
-\[PMUN_{RRD\, municipal}^{t} = \frac{MUN_{RRD\, municipal}^{t}}{MUN^{t}} \cdot 100\]
+\[PMUN_{udal\, HAM}^{t} = \frac{MUN_{udal\, HAM}^{t}}{MUN^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$MUN_{RRD}^{t} =$ número de gobiernos locales con planes municipales de emergencias en el año $t$</p>
+<p>$MUN_{udal\, HAM}^{t} =$ larrialdietarako udal-planak dituzten udalerrien kopurua $t$ urtean</p>
 
-<p>$MUN^{t} =$ número de gobiernos locales en el año $t$</p>
+<p>$MUN^{t} =$ udalerrien kopurua $t$ urtean</p>
 
 <p><br /><br /></p>
 
-<p><b>Porcentaje de municipios cubiertos por un plan territorial de emergencias</b></p>
+<p><b>Larrialdietarako lurralde-plan batek estalitako udalerrien ehunekoa</b></p>
 
-\[PMUN_{RRD\, territorial}^{t} = \frac{MUN_{RRD\, territorial}^{t}}{MUN^{t}} \cdot 100\]
+\[PMUN_{lurralde\, HAM}^{t} = \frac{MUN_{lurralde\, HAM}^{t}}{MUN^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>non:</p>
 
-<p>$MUN_{RRD\, territorial}^{t} =$ número de gobiernos locales con planes territoriales de emergencias en el año $t$</p>
+<p>$MUN_{lurralde\, HAM}^{t} =$ larrialdietako lurralde-planak dituzten udalerrien kopurua $t$ urtean</p>
 
-<p>$MUN^{t} =$ número de gobiernos locales en el año $t$</p>
+<p>$MUN^{t} =$ udalerrien kopurua $t$ urtean</p>
 
           
         </td>
@@ -1680,7 +1680,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dauden desagregazioak </th>
         <td>
           
-            <p>Territorio histórico/Comarca/Municipio</p>
+            <p>Lurralde historikoa/Eskualdea/Udalerria</p>
 
           
         </td>
@@ -1791,33 +1791,13 @@ y el 25% de los municipios de 1.000 a 5.000 habitantes disponen de Plan de Emerg
       
       
       
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako datuak </th>
-        <td>
-          
-            2025.04.22
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Azken aldiz eguneratutako metadatuak </th>
-        <td>
           
-            2025.04.08
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1973,7 +1953,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
         <th scope="row">Eskuragarri dagoen adierazlearen eta NBE adierazlearen arteko konparagarritasuna </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos de Naciones Unidas.</p>
+            <p>EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
 
           
         </td>
@@ -1999,7 +1979,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
         <th scope="row">NBEko metadatuetarako esteka </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-13-01-03.pdf">Metadata 13-1-3.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-13-01-03.pdf">Metadatuak 13-1-3.pdf</a> (ingelesez bakarrik)</p>
 
           
         </td>
@@ -2076,7 +2056,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -2096,7 +2076,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

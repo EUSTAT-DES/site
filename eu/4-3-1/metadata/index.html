@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Azken 12 hilabeteetan hezkuntza-jarduerak (formalak edo ez-formalak) egin dituzten proportzioa, pertsonen  guztizkoarekin alderatuta, adin taldearen arabera");
+        var currentValue = normalizeCurrentValue('definicion', "Azken 4 asteetan edo 12 hilabeteetan hezkuntza-jarduerak (arautuak edo arautu gabeak) egin dituztenen proportzioa,  sexuaren eta adin taldearen arabera");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPE_{adin\\, taldea}^{t} = \\frac{PE_{adin\\, taldea}^{t}}{P_{adin\\, taldea}^{t}} \\cdot 100$$\n\ndonde:\n\n$PE_{adin\\, taldea}^{t} =$  ikasketak edo prestakuntza (arautua edo arautu gabea) egin duen adin-talde bateko biztanleria $t$ urtean\n\n$P_{adin\\, taldea}^{t} =$ adin-talde bateko biztanleria $t$ urtean\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPE_{adin\\, taldea}^{t} = \\frac{PE_{adin\\, taldea}^{t}}{P_{adin\\, taldea}^{t}} \\cdot 100$$\n\nnon:\n\n$PE_{adin\\, taldea}^{t} =$  ikasketak edo prestakuntza (arautua edo arautu gabea) egin duen adin-talde bateko biztanleria $t$ urtean\n\n$P_{adin\\, taldea}^{t} =$ adin-talde bateko biztanleria $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -592,7 +592,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('desagregacion', "Adina: 15-24, 15-64, 25-64, 18-64\n\nSexua\n\nLurralde historikoa\n");
+        var currentValue = normalizeCurrentValue('desagregacion', "Adina: 15-24; 15-64; 25-64; 18-64 \n\nSexua\n\nLurralde historikoa\n");
         var propertyEditor = editor.getEditor('root.desagregacion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "Biztanleria Jardueraren Arabera Sailkatzeko Inkestatik datozen datuak urteko datuak dira, adin-taldearen arabera, \neta azken 4 asteetan egindako jarduerei buruz galdetzen da.\n\nBiztanleria helduak ikaskuntza-jardueretan duen parte-hartzeari buruzko inkestatik datozen datuak 18-64 \nadin-taldekoak dira, eta azken 12 hilabeteetan egindako jarduerei buruz galdetzen da.  \n");
+        var currentValue = normalizeCurrentValue('observaciones', "Biztanleria Jardueraren Arabera Sailkatzeko Inkestatik datozen datuak urtekoak dira, adin-taldearen arabera, \neta azken 4 asteetan egindako jarduerei buruz galdetzen da.\n\nBiztanleria helduak ikaskuntza-jardueretan duen parte-hartzeari buruzko inkestatik datozen datuak 18-64 \nadin-taldekoak dira, eta azken 12 hilabeteetan egindako jarduerei buruz galdetzen da.  \n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -664,7 +664,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('comparabilidad', "Eskuragarri dagoen adierazleak ez ditu Nazio Batuen metadatuak betetzen, baina antzeko informazioa ematen du.");
+        var currentValue = normalizeCurrentValue('comparabilidad', "EAEn eskuragarri dagoen adierazleak ez ditu Nazio Batuen metadatuak betetzen, baina antzeko informazioa ematen du.");
         var propertyEditor = editor.getEditor('root.comparabilidad');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -872,7 +872,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -892,7 +892,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

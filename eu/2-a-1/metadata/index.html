@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250423075949">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -564,7 +564,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Nekazaritza, abeltzaintza eta arrantza sektorearen balio erantsi gordina (BEG) sektore guztien BEGarekiko, \nuneko prezioetan.\n\nNekazaritzako balio agregatua eta BPG Europako Kontu Sisteman (KSE-2010) oinarritzen dira. Nekazaritza \nnekazaritza, basogintza, arrantza eta ehizaren sektoreari dagokio (EJSNren A atala 2009 edo CIIU Ber4)\n");
+        var currentValue = normalizeCurrentValue('definicion', "Nekazaritza, abeltzaintza eta arrantza sektorearen balio erantsi gordina (BEG) sektore guztien BEGarekiko, \nuneko prezioetan.\n\nNekazaritzako balio erantsia eta BPGa Europako Kontu Sisteman (KSE-2010) oinarritzen dira. Nekazaritza terminoa \nnekazaritza, basogintza, arrantza eta ehizaren sektoreari dagokio (EJSN 2009ren edo CIIU Ver4ren A atala)\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -578,7 +578,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PVAB_{nekazaritza}^{t} = \\frac{VAB_{nekazaritza}^{t}}{PIB^{t}} \\cdot 100$$\n\nnon:\n\n$VAB_{nekazaritza}^{t} =$ nekazaritza, abeltzaintza eta arrantza sektorearen balio erantsi gordina, prezio arruntetan $t$ urtean\n\n$PIB^{t} =$  barne-produktu gordina, prezio arruntetan $t$ urtean\n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PVAB_{nekazaritza}^{t} = \\frac{VAB_{nekazaritza}^{t}}{PIB^{t}} \\cdot 100$$\n\nnon:\n\n$VAB_{nekazaritza}^{t} =$ nekazaritza, abeltzaintza eta arrantza sektorearen balio erantsi gordina, uneko prezioetan $t$ urtean\n\n$PIB^{t} =$  barne-produktu gordina, uneko prezioetan $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +620,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "Udal BPGan zabaldutako datuak Kontuen Europako Sisteman (KSE-2010) ezarritako metodologian oinarrituta egindako zenbatespenen bidez egiten dira.");
+        var currentValue = normalizeCurrentValue('observaciones', "Udal BPGan argitaratutako datuak Kontuen Europako Sisteman (KSE-2010) ezarritako metodologian oinarrituta egindako zenbatespenen bidez egiten dira.");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -638,7 +638,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "1 baino gehiagoko nekazaritza-orientazioko indizeak (IH) nekazaritza-sektorerako joera handiagoa erakusten \ndu, gastu publikoaren proportzio handiagoa jasotzen baitu balio erantsi ekonomikoari egiten dion ekarpenari \ndagokionez.\n\n1etik beherako IHk nekazaritzarako joera txikiagoa duela adierazten du, eta 1etik beherako IHk, berriz, \nneutraltasuna adierazten du gobernu bat nekazaritza-sektorera bideratzean. Nekazaritzan egindako gastu \npublikoak honako hauek hartzen ditu barnean: politika eta programa sektorialetako gastua; lurzoruaren \nhobekuntza eta lurzoruaren degradazioaren kontrola; nekazaritzarako ureztaketa eta urtegiak; animalien \nosasunaren kudeaketa, abeltzaintzaren ikerketa eta animalien hazkuntzarako gaikuntza; itsasoko eta ur \ngezako ikerketa biologikoa; baso-landaketa eta beste baso-proiektu batzuk; eta abar.\n\nNekazaritza-jarduera horietan egindako gastuak sektorearen eraginkortasuna, produktibitatea eta diru-sarreren \nhazkundea handitzen laguntzen du, kapital fisikoa edo giza kapitala handitzen delako eta/edo denboraz kanpoko \naurrekontu-murrizketak murrizten direlako.\n\nHala ere, sektore pribatuak normalean gutxi inbertitzen du jarduera horietan, merkatuaren failak direla eta \n(adibidez, ikerketaren eta garapenaren ondasun publikoaren izaera; lurzoruaren eta uraren baldintza hobetuen \nkanpo-efektu positiboak; lehiakortasun-krediturik ez izatea, ekoizleen eta finantza-erakundeen arteko informazio \nasimetrikoa dela eta, eta abar).\n\nEra berean, nekazaritzako ekoizleek, bereziki arriskutik babestu ezin diren nekazari txikiek, aurre egin behar \ndieten arrisku handiak, askotan, gobernuaren esku-hartzea eskatzen du diru-sarreren birbanaketari dagokionez, \nlaborari txikiei laguntzeko zailtasunetan, izurriteen, lehorteen, uholdeen, azpiegitura-failen edo prezio-aldaketa \nlarrien ondorioz uzta eta ganadua galdu ondoren.  \n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "1 baino gehiagoko nekazaritza-orientazioko indizeak (IH) nekazaritza-sektorerako joera handiagoa erakusten \ndu, gastu publikoaren proportzio handiagoa jasotzen baitu balio erantsi ekonomikoari egiten dion ekarpenari \ndagokionez.\n\n1etik beherako IHk nekazaritzarako joera txikiagoa duela adierazten du, eta 1etik beherako IHk, berriz, \nneutraltasuna adierazten du gobernu bat nekazaritza-sektorera bideratzean. Nekazaritzan egindako gastu \npublikoak honako hauek hartzen ditu barnean: politika eta programa sektorialetako gastua; lurzoruaren \nhobekuntza eta lurzoruaren degradazioaren kontrola; nekazaritzarako ureztaketa eta urtegiak; animalien \nosasunaren kudeaketa, abeltzaintzaren ikerketa eta animalien hazkuntzarako gaikuntza; itsasoko eta ur \ngezako ikerketa biologikoa; baso-landaketa eta beste baso-proiektu batzuk; eta abar.\n\nNekazaritza-jarduera horietan egindako gastuak sektorearen eraginkortasuna, produktibitatea eta diru-sarreren \nhazkundea handitzen laguntzen du, kapital fisikoa edo giza kapitala handitzen delako eta/edo denboraz kanpoko \naurrekontu-murrizketak murrizten direlako.\n\nHala ere, sektore pribatuak normalean gutxi inbertitzen du jarduera horietan, merkatuaren failak direla eta \n(adibidez, ikerketaren eta garapenaren ondasun publikoaren izaera; lurzoruaren eta uraren baldintza hobetuen \nkanpo-efektu positiboak; lehiakortasun-krediturik ez izatea, ekoizleen eta finantza-erakundeen arteko informazio \nasimetrikoa dela eta, eta abar).\n\nEra berean, nekazaritzako ekoizleek, bereziki arriskutik babestu ezin diren nekazari txikiek, aurre egin behar \ndieten arrisku handiak, askotan, gobernuaren esku-hartzea eskatzen du diru-sarreren birbanaketari dagokionez, \nlaborari txikiei laguntzeko zailtasunetan, izurriteen, lehorteen, uholdeen, azpiegitura-failen edo prezio-aldaketa \nlarrien ondorioz uzta eta ganadua galdu ondoren.  \n\nIturria: Nazio Batuen Estatistika Saila\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -860,7 +860,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250423075949'></script>
+<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
 
 
 <script>
@@ -880,7 +880,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250423075949"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
