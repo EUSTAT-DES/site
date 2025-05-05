@@ -2,12 +2,12 @@
   {
     "goal": {
       "id": "1",
-      "title": "Poner fin a la pobreza en todas sus formas y en todo el mundo",
+      "title": "Pobrezia mota guztiak desagertzea mundu osoan",
       "indicators": [
         
         {
           "id": "1-1-1",
-          "title": "Proporción de la población que vive por debajo del umbral internacional de pobreza, desglosada por sexo, edad, situación laboral y ubicación geográfica (urbana o rural)",
+          "title": "Nazioarteko pobrezia-atalasearen azpitik bizi diren biztanleen proportzioa, sexuaren, adinaren, lan-egoeraren eta kokapen geografikoaren arabera (hirikoa edo landa-eremukoa)",
           "description": "",
           "keywords": "",
           "href": "/site/1-1-1/",
@@ -15,7 +15,7 @@
         },
         {
           "id": "1-2-1",
-          "title": "Proporción de la población que vive por debajo del umbral nacional de pobreza, desglosada por sexo y edad",
+          "title": "Pobreziaren atalase nazionalaren azpitik bizi den biztanleriaren proportzioa, sexuaren eta adinaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/1-2-1/",
@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2-2",
-          "title": "Proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza, en todas sus dimensiones, con arreglo a las definiciones nacionales",
+          "title": "Pobrezian bizi diren adin guztietako gizon, emakume eta haurren proportzioa, dimentsio guztietan, definizio nazionalen arabera",
           "description": "",
           "keywords": "",
           "href": "/site/1-2-2/",
@@ -31,7 +31,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Proporción de la población cubierta por sistemas o niveles mínimos de protección social, desglosada por sexo, distinguiendo entre los niños, los desempleados, los ancianos, las personas con discapacidad, las mujeres embarazadas, los recién nacidos, las víctimas de accidentes de trabajo, los pobres y los vulnerables",
+          "title": "Gizarte-babeseko gutxieneko sistemek edo mailek estalitako biztanleriaren proportzioa, sexuaren arabera banakatuta, honako hauek bereiziz: haurrak, langabeak, adinekoak, desgaitasuna duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak",
           "description": "",
           "keywords": "",
           "href": "/site/1-3-1/",
@@ -39,7 +39,7 @@
         },
         {
           "id": "1-4-1",
-          "title": "Proporción de la población que vive en hogares con acceso a los servicios básicos",
+          "title": "Oinarrizko zerbitzuak erabiltzeko aukera duten etxeetan bizi diren biztanleen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/1-4-1/",
@@ -47,7 +47,7 @@
         },
         {
           "id": "1-4-2",
-          "title": "Proporción del total de la población adulta con derechos seguros de tenencia de la tierra: a) que posee documentación reconocida legalmente al respecto y b) considera seguros sus derechos, desglosada por sexo y tipo de tenencia",
+          "title": "Lurra edukitzeko eskubide seguruak dituen biztanleria heldu osoaren proportzioa: a) legez onartutako dokumentazioa duena eta b) bere eskubideak segurutzat jotzen dituena, sexuaren eta edukitze-motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/1-4-2/",
@@ -55,7 +55,7 @@
         },
         {
           "id": "1-5-1",
-          "title": "Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 habitantes",
+          "title": "100.000 biztanleko hondamenen ondorioz hildako, desagertutako eta eragindako pertsonen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/1-5-1/",
@@ -63,7 +63,7 @@
         },
         {
           "id": "1-5-2",
-          "title": "Pérdidas económicas directas atribuidas a los desastres en relación con el producto interno bruto (PIB) mundial",
+          "title": "Hondamendiei egotzitako galera ekonomiko zuzenak, munduko barne-produktu gordinari (BPG) dagokionez",
           "description": "",
           "keywords": "",
           "href": "/site/1-5-2/",
@@ -71,7 +71,7 @@
         },
         {
           "id": "1-5-3",
-          "title": "Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendái para la Reducción del Riesgo de Desastres 2015‑2030",
+          "title": "Hondamendien arriskua murrizteko estrategia nazionalak onartzen eta aplikatzen dituzten herrialdeen kopurua, 2015-2030 aldirako Hondamendi Arriskua Murrizteko Sendai Esparruarekin bat etorriz",
           "description": "",
           "keywords": "",
           "href": "/site/1-5-3/",
@@ -79,7 +79,7 @@
         },
         {
           "id": "1-5-4",
-          "title": "Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres",
+          "title": "Hondamendi-arriskua murrizteko estrategia nazionalak erabili eta aplikatzen dituzten tokiko gobernuen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/1-5-4/",
@@ -87,7 +87,7 @@
         },
         {
           "id": "1-a-1",
-          "title": "Total de las subvenciones de asistencia oficial para el desarrollo de todos los donantes que se centran en la reducción de la pobreza como porcentaje del ingreso nacional bruto del país receptor",
+          "title": "Herrialde hartzailearen diru-sarrera nazional gordinaren ehuneko gisa pobrezia murriztea helburu duten emaile guztien garapenerako laguntza ofizialeko dirulaguntzen guztizkoa",
           "description": "",
           "keywords": "",
           "href": "/site/1-a-1/",
@@ -95,7 +95,7 @@
         },
         {
           "id": "1-a-2",
-          "title": "Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)",
+          "title": "Funtsezko zerbitzuetara (hezkuntza, osasuna eta gizarte-babesa) bideratzen den guztizko gastu publikoaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/1-a-2/",
@@ -103,7 +103,7 @@
         },
         {
           "id": "1-b-1",
-          "title": "Gasto público social en favor de los pobres",
+          "title": "Gastu publiko soziala pobreen alde",
           "description": "",
           "keywords": "",
           "href": "/site/1-b-1/",
@@ -114,12 +114,12 @@
   {
     "goal": {
       "id": "2",
-      "title": "Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrición y promover la agricultura sostenible",
+      "title": "Gosea amaitzea, elikagai-segurtasuna eta elikadura hobea lortzea, eta nekazaritza jasangarria bultzatzea",
       "indicators": [
         
         {
           "id": "2-1-1",
-          "title": "Prevalencia de la subalimentación",
+          "title": "Subalimentazioaren prebalentzia",
           "description": "",
           "keywords": "",
           "href": "/site/2-1-1/",
@@ -127,7 +127,7 @@
         },
         {
           "id": "2-1-2",
-          "title": "Prevalencia de la inseguridad alimentaria moderada o grave entre la población, según la escala de experiencia de inseguridad alimentaria",
+          "title": "Elikadura-segurtasun eza moderatu edo larriaren prebalentzia herritarren artean, elikadura-segurtasun ezaren esperientzia-eskalaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/2-1-2/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-2-1",
-          "title": "Prevalencia del retraso del crecimiento (estatura para la edad, desviación típica < -2 de la mediana de los patrones de crecimiento infantil de la Organización Mundial de la Salud (OMS)) entre los niños menores de 5 años",
+          "title": "Hazkundearen atzerapenaren prebalentzia (adinerako garaiera, Osasunaren Mundu Erakundearen (OME) haurren hazkunde-patroien medianaren < -2 desbideratze tipikoa) 5 urtetik beherako haurren artean",
           "description": "",
           "keywords": "",
           "href": "/site/2-2-1/",
@@ -143,7 +143,7 @@
         },
         {
           "id": "2-2-2",
-          "title": "Prevalencia de la malnutrición (peso para la estatura, desviación típica > +2 o < -2 de la mediana de los patrones de crecimiento infantil de la OMS) entre los niños menores de 5 años, desglosada por tipo (emaciación y sobrepeso)",
+          "title": "Malnutrizioaren prebalentzia (altuerarako pisua, OMEko haurren hazkunde-patroien medianaren > +2 edo < -2 desbiderapen tipikoa) 5 urtetik beherako haurren artean, motaren arabera banakatuta (emaziazioa eta gehiegizko pisua)",
           "description": "",
           "keywords": "",
           "href": "/site/2-2-2/",
@@ -151,7 +151,7 @@
         },
         {
           "id": "2-2-3",
-          "title": "Prevalencia de la anemia en las mujeres de entre 15 y 49 años, desglosada por embarazo (porcentaje)",
+          "title": "15 eta 49 urte bitarteko emakumeen anemiaren prebalentzia, haurdunaldiaren arabera banakatuta (ehunekoa)",
           "description": "",
           "keywords": "",
           "href": "/site/2-2-3/",
@@ -167,7 +167,7 @@
         },
         {
           "id": "2-2-E1",
-          "title": "Tasa de obesidad de la población adulta según el índice de masa corporal (IMC) (Indicador UE sdg_02_10)",
+          "title": "GRAFICO.2-2-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/2-2-E1/",
@@ -175,7 +175,7 @@
         },
         {
           "id": "2-3-1",
-          "title": "Volumen de producción por unidad de trabajo desglosado por tamaño y tipo de explotación (agropecuaria/ganadera/forestal)",
+          "title": "Ekoizpen-bolumena lan-unitateko, ustiategiaren tamainaren eta motaren arabera banakatuta (nekazaritza eta abeltzaintza/basogintza)",
           "description": "",
           "keywords": "",
           "href": "/site/2-3-1/",
@@ -183,7 +183,7 @@
         },
         {
           "id": "2-3-2",
-          "title": "Media de ingresos de los productores de alimentos en pequeña escala, desglosada por sexo y condición indígena",
+          "title": "Elikagaien ekoizleen diru-sarreren batez bestekoa eskala txikian, sexuaren eta indigenen egoeraren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/2-3-2/",
@@ -191,7 +191,7 @@
         },
         {
           "id": "2-4-1",
-          "title": "Proporción de la superficie agrícola en que se practica una agricultura productiva y sostenible",
+          "title": "Nekazaritza produktibo eta iraunkorra egiten den nekazaritza-azaleraren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-1/",
@@ -199,7 +199,7 @@
         },
         {
           "id": "2-4-E1",
-          "title": "Superficie dedicada a la agricultura ecológica (Indicador UE sdg_02_40)",
+          "title": "Superficie dedicada a la agricultura ecológica (<b>Indicador UE sdg_02_40</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-E1/",
@@ -207,7 +207,7 @@
         },
         {
           "id": "2-4-E2",
-          "title": "Emisiones de amoníaco de la agricultura y ganadería (Indicador UE sdg_02_60)",
+          "title": "Emisiones de amoníaco de la agricultura y ganadería (<b>Indicador UE sdg_02_60</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/2-4-E2/",
@@ -215,7 +215,7 @@
         },
         {
           "id": "2-5-1",
-          "title": "Número de: a) recursos genéticos vegetales y b) animales para la alimentación y la agricultura preservados en instalaciones de conservación a medio y largo plazo",
+          "title": "Epe ertain eta luzerako kontserbazio-instalazioetan kontserbatutako elikadurarako eta nekazaritzarako landare-baliabide genetikoen eta b) animalien kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/2-5-1/",
@@ -223,7 +223,7 @@
         },
         {
           "id": "2-5-2",
-          "title": "Proporción de razas y variedades locales consideradas en riesgo de extinción",
+          "title": "Desagertzeko arriskuan dauden arraza eta barietate lokalen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/2-5-2/",
@@ -231,7 +231,7 @@
         },
         {
           "id": "2-a-1",
-          "title": "Índice de orientación agrícola para el gasto público",
+          "title": "Gastu publikorako nekazaritza-orientazioaren indizea",
           "description": "",
           "keywords": "",
           "href": "/site/2-a-1/",
@@ -239,7 +239,7 @@
         },
         {
           "id": "2-a-2",
-          "title": "Total de corrientes oficiales de recursos (asistencia oficial para el desarrollo más otras corrientes oficiales) destinado al sector agrícola",
+          "title": "Nekazaritza-sektorerako baliabide-korronte ofizialen guztizkoa (garapenerako laguntza ofiziala gehi beste korronte ofizial batzuk)",
           "description": "",
           "keywords": "",
           "href": "/site/2-a-2/",
@@ -247,7 +247,7 @@
         },
         {
           "id": "2-b-1",
-          "title": "Subsidios a la exportación de productos agropecuarios",
+          "title": "Nekazaritza eta abeltzaintzako produktuen esportaziorako dirulaguntzak",
           "description": "",
           "keywords": "",
           "href": "/site/2-b-1/",
@@ -255,7 +255,7 @@
         },
         {
           "id": "2-c-1",
-          "title": "Indicador de anomalías en los precios de los alimentos",
+          "title": "Elikagaien prezioen anomalien adierazlea",
           "description": "",
           "keywords": "",
           "href": "/site/2-c-1/",
@@ -266,12 +266,12 @@
   {
     "goal": {
       "id": "3",
-      "title": "Garantizar una vida sana y promover el bienestar de todos a todas las edades",
+      "title": "Guztiontzat eta adin guztietan bizimodu osasungarria bermatzea eta ongizatea sustatzea",
       "indicators": [
         
         {
           "id": "3-1-1",
-          "title": "Tasa de mortalidad materna",
+          "title": "Amen heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-1-1/",
@@ -279,7 +279,7 @@
         },
         {
           "id": "3-1-2",
-          "title": "Proporción de partos atendidos por personal sanitario especializado",
+          "title": "Osasun-langile espezializatuek artatutako erditzeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/3-1-2/",
@@ -287,7 +287,7 @@
         },
         {
           "id": "3-2-1",
-          "title": "Tasa de mortalidad de niños menores de 5 años",
+          "title": "5 urtetik beherako haurren heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-2-1/",
@@ -295,7 +295,7 @@
         },
         {
           "id": "3-2-2",
-          "title": "Tasa de mortalidad neonatal",
+          "title": "Jaioberrien heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-2-2/",
@@ -303,7 +303,7 @@
         },
         {
           "id": "3-3-1",
-          "title": "Número de nuevas infecciones por el VIH por cada 1.000 habitantes no infectados, desglosado por sexo, edad y poblaciones clave",
+          "title": "GIBak eragindako infekzio berrien kopurua infektatu gabeko 1.000 biztanleko, sexuaren, adinaren eta funtsezko herrien arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/3-3-1/",
@@ -311,7 +311,7 @@
         },
         {
           "id": "3-3-2",
-          "title": "Incidencia de la tuberculosis por cada 100.000 habitantes",
+          "title": "100.000 biztanleko tuberkulosiaren intzidentzia",
           "description": "",
           "keywords": "",
           "href": "/site/3-3-2/",
@@ -319,7 +319,7 @@
         },
         {
           "id": "3-3-3",
-          "title": "Incidencia de la malaria por cada 1.000 habitantes",
+          "title": "1.000 biztanleko malariaren intzidentzia",
           "description": "",
           "keywords": "",
           "href": "/site/3-3-3/",
@@ -327,7 +327,7 @@
         },
         {
           "id": "3-3-4",
-          "title": "Incidencia de la hepatitis B por cada 100.000 habitantes",
+          "title": "B hepatitisaren intzidentzia 100.000 biztanleko",
           "description": "",
           "keywords": "",
           "href": "/site/3-3-4/",
@@ -335,7 +335,7 @@
         },
         {
           "id": "3-3-5",
-          "title": "Número de personas que requieren intervenciones contra enfermedades tropicales desatendidas",
+          "title": "Artatu gabeko gaixotasun tropikalen aurkako interbentzioak behar dituzten pertsonen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/3-3-5/",
@@ -343,7 +343,7 @@
         },
         {
           "id": "3-4-1",
-          "title": "Tasa de mortalidad atribuida a las enfermedades cardiovasculares, el cáncer, la diabetes o las enfermedades respiratorias crónicas",
+          "title": "Gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei egotzitako heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-4-1/",
@@ -351,7 +351,7 @@
         },
         {
           "id": "3-4-2",
-          "title": "Tasa de mortalidad por suicidio",
+          "title": "Suizidioagatiko heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-4-2/",
@@ -359,7 +359,7 @@
         },
         {
           "id": "3-4-E1",
-          "title": "Tasa de participación en los programas de cribado poblacional de cáncer (Indicador Gobierno Vasco)",
+          "title": "Tasa de participación en los programas de cribado poblacional de cáncer (<b>Indicador Gobierno Vasco</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/3-4-E1/",
@@ -367,7 +367,7 @@
         },
         {
           "id": "3-4-E2",
-          "title": "Esperanza de vida y esperanza de vida en buena salud (Indicador Gobierno Vasco)",
+          "title": "Esperanza de vida y esperanza de vida en buena salud (<b>Indicador Gobierno Vasco</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/3-4-E2/",
@@ -375,7 +375,7 @@
         },
         {
           "id": "3-5-1",
-          "title": "Cobertura de los tratamientos(farmacológicos y psicosociales y servicios de rehabilitación y postratamiento) de trastornos por abuso de sustancias adictivas",
+          "title": "Substantzia adiktiboen abusuak eragindako nahasmenduen tratamenduen estaldura (farmakologikoak eta psikosozialak eta errehabilitazio- eta poststratamendu-zerbitzuak)",
           "description": "",
           "keywords": "",
           "href": "/site/3-5-1/",
@@ -383,7 +383,7 @@
         },
         {
           "id": "3-5-2",
-          "title": "Consumo de alcohol per cápita (a partir de los 15 años de edad) durante un año civil en litros de alcohol puro",
+          "title": "Alkoholaren kontsumoa per capita (15 urtetik aurrera) urte zibil batean, alkohol puruaren litrotan",
           "description": "",
           "keywords": "",
           "href": "/site/3-5-2/",
@@ -391,7 +391,7 @@
         },
         {
           "id": "3-6-1",
-          "title": "Tasa de mortalidad por lesiones debidas a accidentes de tráfico",
+          "title": "Trafiko-istripuek eragindako lesioen ondoriozko heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-6-1/",
@@ -399,7 +399,7 @@
         },
         {
           "id": "3-7-1",
-          "title": "Proporción de mujeres en edad de procrear (entre 15 y 49 años) que cubren sus necesidades de planificación familiar con métodos modernos",
+          "title": "Ugaltzeko adinean (15-49 urte) dauden eta familia-plangintzako premiak metodo modernoen bidez betetzen dituzten emakumeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/3-7-1/",
@@ -407,7 +407,7 @@
         },
         {
           "id": "3-7-2",
-          "title": "Tasa de fecundidad de las adolescentes (entre 10 y 14 años y entre 15 y 19 años) por cada 1.000 mujeres de ese grupo de edad",
+          "title": "Nerabeen (10-14 urte eta 15-19 urte) ugalkortasun-tasa adin-talde horretako 1.000 emakumeko",
           "description": "",
           "keywords": "",
           "href": "/site/3-7-2/",
@@ -415,7 +415,7 @@
         },
         {
           "id": "3-8-1",
-          "title": "Cobertura de los servicios de salud esenciales",
+          "title": "Oinarrizko osasun-zerbitzuen estaldura",
           "description": "",
           "keywords": "",
           "href": "/site/3-8-1/",
@@ -423,7 +423,7 @@
         },
         {
           "id": "3-8-2",
-          "title": "Proporción de la población con grandes gastos sanitarios por hogar como porcentaje del total de gastos o ingresos de los hogares",
+          "title": "Etxeko osasun-gastu handiak dituzten biztanleen proportzioa, etxeetako gastu edo diru-sarrera guztien ehuneko gisa",
           "description": "",
           "keywords": "",
           "href": "/site/3-8-2/",
@@ -431,7 +431,7 @@
         },
         {
           "id": "3-9-1",
-          "title": "Tasa de mortalidad atribuida a la contaminación de los hogares y del aire ambiente",
+          "title": "Etxeetako eta giroko airearen kutsadurari egotzitako heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-9-1/",
@@ -439,7 +439,7 @@
         },
         {
           "id": "3-9-2",
-          "title": "Tasa de mortalidad atribuida al agua insalubre, el saneamiento deficiente y la falta de higiene (exposición a servicios insalubres de agua, saneamiento e higiene para todos (WASH))",
+          "title": "Ur osasungaitzari, saneamendu eskasari eta higiene ezari (guztientzako ur, saneamendu eta higiene zerbitzu osasungaitzen eraginpean egotea) egotzitako heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-9-2/",
@@ -447,7 +447,7 @@
         },
         {
           "id": "3-9-3",
-          "title": "Tasa de mortalidad atribuida a intoxicaciones involuntarias",
+          "title": "Nahi gabeko intoxikazioei egotzitako heriotza-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/3-9-3/",
@@ -455,7 +455,7 @@
         },
         {
           "id": "3-a-1",
-          "title": "Prevalencia del consumo actual de tabaco a partir de los 15 años de edad (edades ajustadas)",
+          "title": "Egungo tabako-kontsumoaren prebalentzia 15 urtetik aurrera (adin egokituak)",
           "description": "",
           "keywords": "",
           "href": "/site/3-a-1/",
@@ -463,7 +463,7 @@
         },
         {
           "id": "3-b-1",
-          "title": "Proporción de la población inmunizada con todas las vacunas incluidas en cada programa nacional",
+          "title": "Programa nazional bakoitzean sartutako txerto guztiekin immunizatutako biztanleriaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/3-b-1/",
@@ -471,7 +471,7 @@
         },
         {
           "id": "3-b-2",
-          "title": "Total neto de asistencia oficial para el desarrollo destinado a los sectores de la investigación médica y la atención sanitaria básica",
+          "title": "Ikerketa medikoaren eta oinarrizko osasun-arretaren sektoreetarako garapenerako laguntza ofizialaren guztizko garbia",
           "description": "",
           "keywords": "",
           "href": "/site/3-b-2/",
@@ -479,7 +479,7 @@
         },
         {
           "id": "3-b-3",
-          "title": "Proporción de centros de salud que disponen de un conjunto básico de medicamentos esenciales asequibles de manera sostenible",
+          "title": "Modu jasangarrian eskura daitezkeen funtsezko sendagaien oinarrizko multzoa duten osasun-zentroen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/3-b-3/",
@@ -487,7 +487,7 @@
         },
         {
           "id": "3-c-1",
-          "title": "Densidad y distribución del personal sanitario",
+          "title": "Osasun-langileen dentsitatea eta banaketa",
           "description": "",
           "keywords": "",
           "href": "/site/3-c-1/",
@@ -495,7 +495,7 @@
         },
         {
           "id": "3-d-1",
-          "title": "Capacidad prevista en el Reglamento Sanitario Internacional (RSI) y preparación para emergencias de salud",
+          "title": "Nazioarteko Osasun Araudian aurreikusitako gaitasuna eta osasun-larrialdietarako prestakuntza",
           "description": "",
           "keywords": "",
           "href": "/site/3-d-1/",
@@ -503,7 +503,7 @@
         },
         {
           "id": "3-d-2",
-          "title": "Porcentaje de infecciones del torrente sanguíneo debidas a determinados organismos resistentes a los antimicrobianos",
+          "title": "Antimikrobianoekiko erresistenteak diren organismo jakin batzuek eragindako odol-uhararen infekzioen ehunekoa",
           "description": "",
           "keywords": "",
           "href": "/site/3-d-2/",
@@ -514,12 +514,12 @@
   {
     "goal": {
       "id": "4",
-      "title": "Garantizar una educación inclusiva y equitativa de calidad y promover oportunidades de aprendizaje permanente para todos",
+      "title": "Guztiontzako kalitatezko hezkuntza inklusiboa nahiz bidezkoa bermatzea eta etengabeko ikaskuntzarako aukerak bultzatzea",
       "indicators": [
         
         {
           "id": "4-1-1",
-          "title": "Proporción de niños y adolescentes que, a) en los grados 2 o 3, b) al final de la educación primaria y c) al final de la educación secundaria inferior, han alcanzado al menos un nivel mínimo de competencia en i) lectura y ii) matemáticas, desglosada por sexo",
+          "title": "Haur eta nerabeen proportzioa, a) 2. edo 3. graduetan, b) lehen hezkuntzaren amaieran eta c) beheko bigarren hezkuntzaren amaieran, gutxieneko gaitasun-maila bat lortu dutenak i) irakurketan eta ii) matematikan, sexuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-1-1/",
@@ -527,7 +527,7 @@
         },
         {
           "id": "4-1-2",
-          "title": "Tasa de finalización (educación primaria, educación secundaria inferior y educación secundaria superior)",
+          "title": "Amaiera-tasa (lehen hezkuntza, beheko bigarren hezkuntza eta goi-mailako bigarren hezkuntza)",
           "description": "",
           "keywords": "",
           "href": "/site/4-1-2/",
@@ -543,7 +543,7 @@
         },
         {
           "id": "4-2-1",
-          "title": "Proporción de niños de 24 a 59 meses cuyo desarrollo es adecuado en cuanto a la salud, el aprendizaje y el bienestar psicosocial, desglosada por sexo",
+          "title": "Osasunari, ikaskuntzari eta ongizate psikosozialari dagokionez garapen egokia duten 24-59 hilabeteko haurren proportzioa, sexuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-2-1/",
@@ -551,7 +551,7 @@
         },
         {
           "id": "4-2-2",
-          "title": "Tasa de participación en el aprendizaje organizado (un año antes de la edad oficial de ingreso en la educación primaria), desglosada por sexo",
+          "title": "Antolatutako ikaskuntzan parte hartzeko tasa (lehen hezkuntzan sartzeko adin ofiziala baino urtebete lehenago), sexuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-2-2/",
@@ -559,7 +559,7 @@
         },
         {
           "id": "4-3-1",
-          "title": "Tasa de participación de jóvenes y adultos en la educación y formación académica y no académica en los últimos 12 meses, desglosada por sexo",
+          "title": "Gazteek eta helduek azken 12 hilabeteetan hezkuntzan eta prestakuntza akademikoan eta ez-akademikoan izandako parte-hartze tasa, sexuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-3-1/",
@@ -567,7 +567,7 @@
         },
         {
           "id": "4-4-1",
-          "title": "Proporción de jóvenes y adultos con competencias en tecnología de la información y las comunicaciones (TIC), desglosada por tipo de competencia",
+          "title": "Informazioaren eta komunikazioaren teknologian (IKT) gaitasuna duten gazteen eta helduen proportzioa, gaitasun motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-4-1/",
@@ -575,7 +575,7 @@
         },
         {
           "id": "4-5-1",
-          "title": "Índices de paridad (entre mujeres y hombres, zonas rurales y urbanas, quintiles de riqueza superior e inferior y grupos como los discapacitados, los pueblos indígenas y los afectados por los conflictos, a medida que se disponga de datos) para todos los indicadores de educación de esta lista que puedan desglosarse",
+          "title": "Parekotasun-indizeak (emakumeen eta gizonen artean, landako eta hiriko eremuen artean, goiko eta beheko aberastasun-kintilen artean, eta ezinduak, herri indigenak eta gatazkek eragindakoak bezalako taldeen artean, datuak izan ahala) zerrenda honetako hezkuntza-adierazle guztiak banakatzeko",
           "description": "",
           "keywords": "",
           "href": "/site/4-5-1/",
@@ -583,7 +583,7 @@
         },
         {
           "id": "4-6-1",
-          "title": "Proporción de la población en un grupo de edad determinado que ha alcanzado al menos un nivel fijo de competencia funcional en a) alfabetización y b) aritmética, desglosada por sexo",
+          "title": "a) alfabetatzean eta b) aritmetikan gutxienez gaitasun funtzionaleko maila finkoa lortu duen adin-talde jakin bateko biztanleriaren proportzioa, sexuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-6-1/",
@@ -591,7 +591,7 @@
         },
         {
           "id": "4-7-1",
-          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación de docentes y d) la evaluación de los estudiantes",
+          "title": "Zein mailatan sartzen dira i) munduko herritartasunerako hezkuntza eta ii) garapen iraunkorrerako hezkuntza a) hezkuntza-politika nazionaletan, b) ikasketa-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan",
           "description": "",
           "keywords": "",
           "href": "/site/4-7-1/",
@@ -599,7 +599,7 @@
         },
         {
           "id": "4-a-1",
-          "title": "Proporción de escuelas que ofrecen servicios básicos, desglosada por tipo de servicio",
+          "title": "Oinarrizko zerbitzuak eskaintzen dituzten eskolen proportzioa, zerbitzu motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-a-1/",
@@ -607,7 +607,7 @@
         },
         {
           "id": "4-b-1",
-          "title": "Volumen de la asistencia oficial para el desarrollo destinada a becas, desglosado por sector y tipo de estudio",
+          "title": "Beketara bideratutako garapenerako laguntza ofizialaren bolumena, sektorearen eta ikasketa motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-b-1/",
@@ -615,7 +615,7 @@
         },
         {
           "id": "4-c-1",
-          "title": "Proporción de docentes con las calificaciones mínimas requeridas, desglosada por nivel educativo",
+          "title": "Eskatutako gutxieneko kalifikazioak dituzten irakasleen proportzioa, hezkuntza-mailaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/4-c-1/",
@@ -626,12 +626,12 @@
   {
     "goal": {
       "id": "5",
-      "title": "Lograr la igualdad de género y empoderar a todas las mujeres y las niñas",
+      "title": "Genero berdintasuna lortzea eta emakume nahiz neska guztiak ahalduntzea",
       "indicators": [
         
         {
           "id": "5-1-1",
-          "title": "Determinar si existen o no marcos jurídicos para promover, hacer cumplir y supervisar la igualdad y la no discriminación por razón de sexo",
+          "title": "Berdintasuna eta sexuagatiko diskriminaziorik eza sustatzeko, betearazteko eta gainbegiratzeko esparru juridikorik dagoen ala ez erabakitzea",
           "description": "",
           "keywords": "",
           "href": "/site/5-1-1/",
@@ -639,7 +639,7 @@
         },
         {
           "id": "5-2-1",
-          "title": "Proporción de mujeres y niñas a partir de 15 años de edad que han sufrido violencia física, sexual o psicológica a manos de su actual o anterior pareja en los últimos 12 meses, desglosada por forma de violencia y edad",
+          "title": "Azken 12 hilabeteetan egungo edo aurreko bikotekidearen eskutik indarkeria fisikoa, sexuala edo psikologikoa jasan duten 15 urtetik gorako emakumeen eta nesken proportzioa, indarkeria motaren eta adinaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/5-2-1/",
@@ -647,7 +647,7 @@
         },
         {
           "id": "5-2-2",
-          "title": "Proporción de mujeres y niñas a partir de 15 años de edad que han sufrido violencia sexual a manos de personas que no eran su pareja en los últimos12 meses, desglosada por edad y lugar del hecho",
+          "title": "12 hilabeteetan bikotekideak ez ziren pertsonen eskutik sexu-indarkeria jasan duten 15 urtetik gorako emakumeen eta nesken proportzioa, adinaren eta lekuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/5-2-2/",
@@ -655,7 +655,7 @@
         },
         {
           "id": "5-3-1",
-          "title": "Proporción de mujeres de entre 20 y 24 años que estaban casadas o mantenían una unión estable antes de cumplir los 15 años y antes de cumplir los 18 años",
+          "title": "15 urte bete aurretik eta 18 urte bete aurretik ezkonduta zeuden edo lotura egonkorra zuten 20 eta 24 urte bitarteko emakumeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/5-3-1/",
@@ -663,7 +663,7 @@
         },
         {
           "id": "5-3-2",
-          "title": "Proporción de niñas y mujeres de entre 15 y 49 años que han sufrido mutilación genital femenina, desglosada por edad",
+          "title": "Emakumeen mutilazio genitala jasan duten 15 eta 49 urte bitarteko nesken eta emakumeen proportzioa, adinaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/5-3-2/",
@@ -671,7 +671,7 @@
         },
         {
           "id": "5-4-1",
-          "title": "Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación",
+          "title": "Etxeko lanetan eta ordaindu gabeko laguntzan emandako denboraren proportzioa, sexuaren, adinaren eta kokapenaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/5-4-1/",
@@ -679,7 +679,7 @@
         },
         {
           "id": "5-5-1",
-          "title": "Proporción de escaños ocupados por mujeres en a) los parlamentos nacionales y b) los gobiernos locales",
+          "title": "a) estatuetako parlamentuetan eta b) tokiko gobernuetan emakumeek okupatutako eserlekuen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/5-5-1/",
@@ -687,7 +687,7 @@
         },
         {
           "id": "5-5-2",
-          "title": "Proporción de mujeres en cargos directivos",
+          "title": "Zuzendaritza-karguetan dauden emakumeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/5-5-2/",
@@ -695,7 +695,7 @@
         },
         {
           "id": "5-6-1",
-          "title": "Proporción de mujeres de entre 15 y 49 años que toman sus propias decisiones informadas sobre las relaciones sexuales, el uso de anticonceptivos y la atención de la salud reproductiva",
+          "title": "Sexu-harremanei, antisorgailuen erabilerari eta ugalketa-osasunari buruzko erabaki informatuak hartzen dituzten 15 eta 49 urte bitarteko emakumeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/5-6-1/",
@@ -703,7 +703,7 @@
         },
         {
           "id": "5-6-2",
-          "title": "Número de países con leyes y reglamentos que garantizan a los hombres y las mujeres a partir de los 15 años de edad un acceso pleno e igualitario a los servicios de salud sexual y reproductiva y a la información y educación al respecto",
+          "title": "15 urtetik gorako gizonei eta emakumeei sexu- eta ugalketa-osasuneko zerbitzuak eta horri buruzko informazioa eta hezkuntza berdintasunez eskuratzea bermatzen dieten legeak eta erregelamenduak dituzten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/5-6-2/",
@@ -711,7 +711,7 @@
         },
         {
           "id": "5-a-1",
-          "title": "a) Proporción del total de la población agrícola con derechos de propiedad o derechos seguros sobre tierras agrícolas, desglosada por sexo; y b) proporción de mujeres entre los propietarios o los titulares de derechos sobre tierras agrícolas, desglosada por tipo de tenencia",
+          "title": "a) Jabetza-eskubideak edo nekazaritza-lurren gaineko eskubide seguruak dituzten nekazarien guztizkoaren proportzioa, sexuaren arabera banakatuta; eta b) emakumeen proportzioa nekazaritza-lurren gaineko eskubideen jabeen edo titularren artean, edukitza-motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/5-a-1/",
@@ -719,7 +719,7 @@
         },
         {
           "id": "5-a-2",
-          "title": "Proporción de países cuyo ordenamiento jurídico (incluido el derecho consuetudinario) garantiza la igualdad de derechos de la mujer a la propiedad o el control de las tierras",
+          "title": "Emakumeen lurren jabetzarako edo kontrolerako eskubide-berdintasuna bermatzen duen ordenamendu juridikoa (ohiturazko zuzenbidea barne) duten herrialdeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/5-a-2/",
@@ -727,7 +727,7 @@
         },
         {
           "id": "5-b-1",
-          "title": "Proporción de personas que poseen un teléfono móvil, desglosada por sexo",
+          "title": "Telefono mugikorra duten pertsonen proportzioa, sexuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/5-b-1/",
@@ -735,7 +735,7 @@
         },
         {
           "id": "5-c-1",
-          "title": "Proporción de países con sistemas para el seguimiento de la igualdad de género y el empoderamiento de las mujeres y la asignación de fondos públicos para ese fin",
+          "title": "Genero-berdintasunaren jarraipena egiteko eta emakumeak ahalduntzeko sistemak dituzten herrialdeen proportzioa, eta horretarako funts publikoak esleitzea",
           "description": "",
           "keywords": "",
           "href": "/site/5-c-1/",
@@ -746,12 +746,12 @@
   {
     "goal": {
       "id": "6",
-      "title": "Garantizar la disponibilidad y la gestión sostenible del agua y el saneamiento para todos",
+      "title": "Uraren eskuragarritasuna eta kudeaketa jasangarria nahiz guztiontzako saneamendua bermatzea",
       "indicators": [
         
         {
           "id": "6-1-1",
-          "title": "Proporción de la población que utiliza servicios de suministro de agua potable gestionados sin riesgos",
+          "title": "Arriskurik gabe kudeatutako edateko uraren hornidura-zerbitzuak erabiltzen dituzten biztanleen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/6-1-1/",
@@ -759,7 +759,7 @@
         },
         {
           "id": "6-2-1",
-          "title": "Proporción de la población que utiliza: a) servicios de saneamiento gestionados sin riesgos y b) instalaciones para el lavado de manos con agua y jabón",
+          "title": "Erabiltzen duten biztanleen proportzioa: a) arriskurik gabe kudeatutako saneamendu-zerbitzuak eta b) eskuak urarekin eta xaboiarekin garbitzeko instalazioak",
           "description": "",
           "keywords": "",
           "href": "/site/6-2-1/",
@@ -767,7 +767,7 @@
         },
         {
           "id": "6-3-1",
-          "title": "Proporción de los flujos de aguas residuales domésticas e industriales tratados de manera adecuada",
+          "title": "Egoki tratatutako etxeko eta industriako hondakin-uren fluxuen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/6-3-1/",
@@ -775,7 +775,7 @@
         },
         {
           "id": "6-3-2",
-          "title": "Proporción de masas de agua de buena calidad",
+          "title": "Kalitate oneko ur-masen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/6-3-2/",
@@ -783,7 +783,7 @@
         },
         {
           "id": "6-4-1",
-          "title": "Cambio en el uso eficiente de los recursos hídricos con el paso del tiempo",
+          "title": "Denboraren poderioz baliabide hidrikoen erabilera eraginkorra aldatzea",
           "description": "",
           "keywords": "",
           "href": "/site/6-4-1/",
@@ -791,7 +791,7 @@
         },
         {
           "id": "6-4-2",
-          "title": "Nivel de estrés hídrico: extracción de agua dulce en proporción a los recursos de agua dulce disponibles",
+          "title": "Estres hidrikoaren maila: ur gezaren erauzketa eskuragarri dauden ur gezako baliabideen proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/6-4-2/",
@@ -799,7 +799,7 @@
         },
         {
           "id": "6-5-1",
-          "title": "Grado de gestión integrada de los recursos hídricos",
+          "title": "Baliabide hidrikoen kudeaketa integratuaren maila",
           "description": "",
           "keywords": "",
           "href": "/site/6-5-1/",
@@ -807,7 +807,7 @@
         },
         {
           "id": "6-5-2",
-          "title": "Proporción de la superficie de cuencas transfronterizas sujetas a arreglos operacionales para la cooperación en materia de aguas",
+          "title": "Uren arloko lankidetzarako operazio-konponketak egin behar dituzten mugaz gaindiko arroen azaleraren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/6-5-2/",
@@ -815,7 +815,7 @@
         },
         {
           "id": "6-6-1",
-          "title": "Cambio en la extensión de los ecosistemas relacionados con el agua con el paso del tiempo",
+          "title": "Denborarekin urarekin zerikusia duten ekosistemen hedadura aldatzea",
           "description": "",
           "keywords": "",
           "href": "/site/6-6-1/",
@@ -823,7 +823,7 @@
         },
         {
           "id": "6-a-1",
-          "title": "Volumen de la asistencia oficial para el desarrollo destinada al agua y el saneamiento que forma parte de un plan de gastos coordinados por el gobierno",
+          "title": "Ura eta saneamendua garatzeko laguntza ofizialaren bolumena, gobernuak koordinatutako gastuen plan baten parte dena",
           "description": "",
           "keywords": "",
           "href": "/site/6-a-1/",
@@ -831,7 +831,7 @@
         },
         {
           "id": "6-b-1",
-          "title": "Proporción de dependencias administrativas locales que han establecido políticas y procedimientos operacionales para la participación de las comunidades locales en la gestión del agua y el saneamiento",
+          "title": "Uraren kudeaketan eta saneamenduan tokiko komunitateek parte hartzeko politikak eta prozedura operatiboak ezarri dituzten tokiko administrazio-bulegoen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/6-b-1/",
@@ -842,12 +842,12 @@
   {
     "goal": {
       "id": "7",
-      "title": "Garantizar el acceso a una energía asequible, fiable, sostenible y moderna para todos",
+      "title": "Energia eskuragarria, fidagarria, jasangarria eta modernoa bermatzea guztiontzat",
       "indicators": [
         
         {
           "id": "7-1-1",
-          "title": "Proporción de la población que tiene acceso a la electricidad",
+          "title": "Elektrizitaterako sarbidea duen biztanleriaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/7-1-1/",
@@ -855,7 +855,7 @@
         },
         {
           "id": "7-1-2",
-          "title": "Proporción de la población cuya fuente primaria de energía son los combustibles y tecnologías limpios",
+          "title": "Erregai eta teknologia garbiak energia-iturri nagusi dituzten biztanleen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/7-1-2/",
@@ -863,7 +863,7 @@
         },
         {
           "id": "7-2-1",
-          "title": "Proporción de energía renovable en el consumo final total de energía",
+          "title": "Energia berriztagarriaren proportzioa energiaren azken kontsumo osoan",
           "description": "",
           "keywords": "",
           "href": "/site/7-2-1/",
@@ -871,7 +871,7 @@
         },
         {
           "id": "7-3-1",
-          "title": "Intensidad energética medida en función de la energía primaria y el PIB",
+          "title": "Energia primarioaren eta BPGaren arabera neurtutako intentsitate energetikoa",
           "description": "",
           "keywords": "",
           "href": "/site/7-3-1/",
@@ -879,7 +879,7 @@
         },
         {
           "id": "7-a-1",
-          "title": "Corrientes financieras internacionales hacia los países en desarrollo para apoyar la investigación y el desarrollo de energías limpias y la producción de energía renovable, incluidos los sistemas híbridos",
+          "title": "Nazioarteko finantza-korronteak garapen-bidean dauden herrialdeetara, energia garbien ikerketan eta garapenean eta energia berriztagarrien ekoizpenean laguntzeko, sistema hibridoak barne",
           "description": "",
           "keywords": "",
           "href": "/site/7-a-1/",
@@ -887,7 +887,7 @@
         },
         {
           "id": "7-b-1",
-          "title": "Capacidad instalada de generación de energía renovable en los países en desarrollo y en los países desarrollados (en vatios per cápita)",
+          "title": "Garapen bidean dauden herrialdeetan eta herrialde garatuetan (biztanle bakoitzeko wattetan) energia berriztagarria sortzeko instalatutako gaitasuna",
           "description": "",
           "keywords": "",
           "href": "/site/7-b-1/",
@@ -898,12 +898,12 @@
   {
     "goal": {
       "id": "8",
-      "title": "Promover el crecimiento económico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos",
+      "title": "Guztiontzako hazkunde ekonomiko jarraitua, inklusiboa eta jasangarria, osoko enplegu produktiboa eta lan duina sustatzea",
       "indicators": [
         
         {
           "id": "8-1-1",
-          "title": "Tasa de crecimiento anual del PIB real per cápita",
+          "title": "Biztanleko BPG errealaren urteko hazkunde-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/8-1-1/",
@@ -911,7 +911,7 @@
         },
         {
           "id": "8-2-1",
-          "title": "Tasa de crecimiento anual del PIB real por persona empleada",
+          "title": "Langile bakoitzeko BPG errealaren urteko hazkunde-tasa",
           "description": "",
           "keywords": "",
           "href": "/site/8-2-1/",
@@ -919,7 +919,7 @@
         },
         {
           "id": "8-3-1",
-          "title": "Proporción de empleo informal con respecto al empleo total, desglosada por sector y sexo",
+          "title": "Enplegu informalaren proportzioa guztizko enpleguarekiko, sektorearen eta sexuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/8-3-1/",
@@ -927,7 +927,7 @@
         },
         {
           "id": "8-4-1",
-          "title": "Huella material en términos absolutos, huella material per cápita y huella material por PIB",
+          "title": "Aztarna materiala termino absolutuetan, aztarna materiala per capita eta aztarna materiala BPGaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/8-4-1/",
@@ -935,7 +935,7 @@
         },
         {
           "id": "8-4-2",
-          "title": "Consumo material interno en términos absolutos, consumo material interno per cápita y consumo material interno por PIB",
+          "title": "Barne-materialaren kontsumoa termino absolutuetan, barne-materialaren kontsumoa per capita eta barne-materialaren kontsumoa BPGaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/8-4-2/",
@@ -943,7 +943,7 @@
         },
         {
           "id": "8-5-1",
-          "title": "Ingreso medio por hora de las personas empleadas, desglosado por sexo, edad, ocupación y personas con discapacidad",
+          "title": "Landunen batez besteko diru-sarrerak orduko, sexuaren, adinaren, okupazioaren eta desgaitasuna duten pertsonen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/8-5-1/",
@@ -951,7 +951,7 @@
         },
         {
           "id": "8-5-2",
-          "title": "Tasa de desempleo, desglosada por sexo, edad y personas con discapacidad",
+          "title": "Langabezia-tasa, sexuaren, adinaren eta desgaitasuna duten pertsonen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/8-5-2/",
@@ -959,7 +959,7 @@
         },
         {
           "id": "8-5-E1",
-          "title": "Tasa de ocupación de la población (Indicador UE sdg_08_30)",
+          "title": "Tasa de ocupación de la población (<b>Indicador UE sdg_08_30</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/8-5-E1/",
@@ -967,7 +967,7 @@
         },
         {
           "id": "8-6-1",
-          "title": "Proporción de jóvenes (entre 15 y 24 años) que no cursan estudios, no están empleados ni reciben capacitación",
+          "title": "Ikasten ez duten, enplegaturik ez duten eta gaikuntzarik jasotzen ez duten gazteen proportzioa (15-24 urte)",
           "description": "",
           "keywords": "",
           "href": "/site/8-6-1/",
@@ -975,7 +975,7 @@
         },
         {
           "id": "8-7-1",
-          "title": "Proporción y número de niños de entre 5 y 17 años que realizan trabajo infantil, desglosados por sexo y edad",
+          "title": "Haurren lana egiten duten 5 eta 17 urte bitarteko haurren proportzioa eta kopurua, sexuaren eta adinaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/8-7-1/",
@@ -983,7 +983,7 @@
         },
         {
           "id": "8-8-1",
-          "title": "Lesiones ocupacionales mortales y no mortales por cada 100.000 trabajadores, desglosadas por sexo y estatus migratorio",
+          "title": "Lesio okupazional hilgarriak eta ez-hilgarriak 100.000 langileko, sexuaren eta migrazio-estatusaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/8-8-1/",
@@ -991,7 +991,7 @@
         },
         {
           "id": "8-8-2",
-          "title": "Nivel de cumplimiento nacional de los derechos laborales (libertad de asociación y negociación colectiva) con arreglo a las fuentes textuales de la Organización Internacional del Trabajo (OIT) y la legislación interna, desglosado por sexo y estatus migratorio",
+          "title": "Lan-eskubideen betetze-maila nazionala (elkartzeko askatasuna eta negoziazio kolektiboa), Lanaren Nazioarteko Erakundearen (LANE) testu-iturrien eta barne-legediaren arabera, sexuaren eta migrazio-estatusaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/8-8-2/",
@@ -999,7 +999,7 @@
         },
         {
           "id": "8-9-1",
-          "title": "PIB generado directamente por el turismo en proporción al PIB total y a la tasa de crecimiento",
+          "title": "Turismoak zuzenean sortutako BPG, BPG osoaren eta hazkunde-tasaren proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/8-9-1/",
@@ -1015,7 +1015,7 @@
         },
         {
           "id": "8-10-1",
-          "title": "a) Número de sucursales de bancos comerciales por cada 100.000 adultos y b) número de cajeros automáticos por cada 100.000 adultos",
+          "title": "a) Banku komertzialen sukurtsalen kopurua 100.000 heldu bakoitzeko, eta b) kutxazain automatikoen kopurua 100.000 heldu bakoitzeko",
           "description": "",
           "keywords": "",
           "href": "/site/8-10-1/",
@@ -1023,7 +1023,7 @@
         },
         {
           "id": "8-10-2",
-          "title": "Proporción de adultos (a partir de 15 años de edad) que tienen una cuenta en un banco u otra institución financiera o un proveedor de servicios de dinero móvil",
+          "title": "Banku batean, beste finantza-erakunde batean edo diru mugikorreko zerbitzuen hornitzaile batean kontu bat duten helduen proportzioa (15 urtetik aurrera)",
           "description": "",
           "keywords": "",
           "href": "/site/8-10-2/",
@@ -1031,7 +1031,7 @@
         },
         {
           "id": "8-a-1",
-          "title": "Compromisos y desembolsos en relación con la iniciativa Ayuda para el Comercio",
+          "title": "Merkataritzarako Laguntza ekimenarekin lotutako konpromisoak eta ordainketak",
           "description": "",
           "keywords": "",
           "href": "/site/8-a-1/",
@@ -1039,7 +1039,7 @@
         },
         {
           "id": "8-b-1",
-          "title": "Existencia de una estrategia nacional organizada y en marcha para el empleo de los jóvenes, como estrategia independiente o como parte de una estrategia nacional de empleo",
+          "title": "Estrategia nazional antolatu eta abian bat dago gazteen enplegurako, estrategia independente gisa edo enplegurako estrategia nazional baten parte gisa",
           "description": "",
           "keywords": "",
           "href": "/site/8-b-1/",
@@ -1050,12 +1050,12 @@
   {
     "goal": {
       "id": "9",
-      "title": "Construir infraestructuras resilientes, promover la industrialización inclusiva y sostenible y fomentar la innovación",
+      "title": "Azpiegitura erresilienteak eraikitzea, industrializazio inklusibo eta jasangarria bultzatzea eta berrikuntza sustatzea",
       "indicators": [
         
         {
           "id": "9-1-1",
-          "title": "Proporción de la población rural que vive a menos de 2 km de una carretera transitable todo el año",
+          "title": "Urte osoan ibiltzeko moduko errepide batetik 2 km baino gutxiagora bizi diren landa-biztanleen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/9-1-1/",
@@ -1063,7 +1063,7 @@
         },
         {
           "id": "9-1-2",
-          "title": "Volumen de transporte de pasajeros y carga, desglosado por medio de transporte",
+          "title": "Bidaiariak eta zama garraiatzeko bolumena, garraiobidez banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/9-1-2/",
@@ -1071,7 +1071,7 @@
         },
         {
           "id": "9-2-1",
-          "title": "Valor añadido del sector manufacturo en proporción al PIB y per cápita",
+          "title": "Manufaktura-sektorearen balio erantsia, BPGaren eta per capita kopuruaren proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/9-2-1/",
@@ -1079,7 +1079,7 @@
         },
         {
           "id": "9-2-2",
-          "title": "Empleo del sector manufacturero en proporción al empleo total",
+          "title": "Manufaktura-sektorearen enplegua guztizko enpleguaren proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/9-2-2/",
@@ -1087,7 +1087,7 @@
         },
         {
           "id": "9-3-1",
-          "title": "Proporción del valor añadido total del sector industrial correspondiente a las pequeñas industrias",
+          "title": "Industria txikiei dagokien industri sektorearen balio erantsi osoaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/9-3-1/",
@@ -1095,7 +1095,7 @@
         },
         {
           "id": "9-3-2",
-          "title": "Proporción de las pequeñas industrias que han obtenido un préstamo o una línea de crédito",
+          "title": "Mailegu edo kreditu-lerro bat lortu duten industria txikien proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/9-3-2/",
@@ -1103,7 +1103,7 @@
         },
         {
           "id": "9-4-1",
-          "title": "Emisiones de CO2 por unidad de valor añadido",
+          "title": "Balio erantsiko unitate bakoitzeko CO2 isuriak",
           "description": "",
           "keywords": "",
           "href": "/site/9-4-1/",
@@ -1111,7 +1111,7 @@
         },
         {
           "id": "9-4-E1",
-          "title": "Intensidad de las emisiones atmosféricas de la industria (Indicador UE sdg_09_70)",
+          "title": "Intensidad de las emisiones atmosféricas de la industria (<b>Indicador UE sdg_09_70</b>)",
           "description": "",
           "keywords": "",
           "href": "/site/9-4-E1/",
@@ -1119,7 +1119,7 @@
         },
         {
           "id": "9-5-1",
-          "title": "Gastos en investigación y desarrollo en proporción al PIB",
+          "title": "Ikerketa eta garapeneko gastuak BPGrekiko proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/9-5-1/",
@@ -1127,7 +1127,7 @@
         },
         {
           "id": "9-5-2",
-          "title": "Número de investigadores (en equivalente a tiempo completo) por cada millón de habitantes",
+          "title": "Ikertzaileen kopurua (lanaldi osoaren baliokidean) milioi bat biztanleko",
           "description": "",
           "keywords": "",
           "href": "/site/9-5-2/",
@@ -1135,7 +1135,7 @@
         },
         {
           "id": "9-a-1",
-          "title": "Total de apoyo internacional oficial (asistencia oficial para el desarrollo más otras corrientes oficiales de recursos) destinado a la infraestructura",
+          "title": "Azpiegiturara bideratutako nazioarteko laguntza ofiziala (garapenerako laguntza ofiziala gehi beste baliabide-korronte ofizial batzuk) guztira",
           "description": "",
           "keywords": "",
           "href": "/site/9-a-1/",
@@ -1143,7 +1143,7 @@
         },
         {
           "id": "9-b-1",
-          "title": "Proporción del valor añadido por la industria de tecnología mediana y alta en el valor añadido total",
+          "title": "Teknologia-industria ertain eta altuak guztizko balio erantsian duen balio erantsiaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/9-b-1/",
@@ -1151,7 +1151,7 @@
         },
         {
           "id": "9-c-1",
-          "title": "Proporción de la población con cobertura de red móvil, desglosada por tecnología",
+          "title": "Sare mugikorreko estaldura duten biztanleen proportzioa, teknologiaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/9-c-1/",
@@ -1162,12 +1162,12 @@
   {
     "goal": {
       "id": "10",
-      "title": "Reducir la desigualdad en los países y entre ellos",
+      "title": "Herrialde bakoitzaren barneko eta herrialdeen arteko desberdintasunak murriztea",
       "indicators": [
         
         {
           "id": "10-1-1",
-          "title": "Tasas de crecimiento per cápita de los gastos o ingresos de los hogares del 40% más pobre de la población y la población total",
+          "title": "Biztanleriaren eta biztanleria osoaren % 40 pobreena den etxekoen unitateen gastu edo diru-sarreren per capita hazkunde-tasak",
           "description": "",
           "keywords": "",
           "href": "/site/10-1-1/",
@@ -1175,7 +1175,7 @@
         },
         {
           "id": "10-2-1",
-          "title": "Proporción de personas que viven por debajo del 50% de la mediana de los ingresos, desglosada por sexo, edad y personas con discapacidad",
+          "title": "Diru-sarreren medianaren % 50etik behera bizi diren pertsonen proportzioa, sexuaren, adinaren eta desgaitasuna duten pertsonen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/10-2-1/",
@@ -1183,7 +1183,7 @@
         },
         {
           "id": "10-3-1",
-          "title": "Proporción de la población que declara haberse sentido personalmente discriminada o acosada en los últimos 12 meses por motivos de discriminación prohibidos por el derecho internacional de los derechos humanos",
+          "title": "Azken 12 hilabeteetan giza eskubideen nazioarteko zuzenbideak debekatutako diskriminazio-arrazoiengatik pertsonalki diskriminatua edo jazarria sentitu dela adierazi duen biztanleriaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/10-3-1/",
@@ -1191,7 +1191,7 @@
         },
         {
           "id": "10-4-1",
-          "title": "Proporción del PIB generada por el trabajo",
+          "title": "Lanak sortutako BPGaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/10-4-1/",
@@ -1199,7 +1199,7 @@
         },
         {
           "id": "10-4-2",
-          "title": "Efecto redistributivo de la política fiscal",
+          "title": "Politika fiskalaren birbanaketa-eragina",
           "description": "",
           "keywords": "",
           "href": "/site/10-4-2/",
@@ -1207,7 +1207,7 @@
         },
         {
           "id": "10-5-1",
-          "title": "Indicadores de solidez financiera",
+          "title": "Sendotasun finantzarioaren adierazleak",
           "description": "",
           "keywords": "",
           "href": "/site/10-5-1/",
@@ -1215,7 +1215,7 @@
         },
         {
           "id": "10-6-1",
-          "title": "Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales",
+          "title": "Garapen bidean dauden herrialdeetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan",
           "description": "",
           "keywords": "",
           "href": "/site/10-6-1/",
@@ -1223,7 +1223,7 @@
         },
         {
           "id": "10-7-1",
-          "title": "Costo de la contratación sufragado por el empleado en proporción a los ingresos mensuales percibidos en el país de destino",
+          "title": "Langileak ordaindutako kontratazioaren kostua, xede-herrialdean jasotako hileko diru-sarreren proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/10-7-1/",
@@ -1231,7 +1231,7 @@
         },
         {
           "id": "10-7-2",
-          "title": "Proporción de países que han aplicado políticas migratorias bien gestionadas que facilitan la migración y la movilidad ordenadas, seguras, regulares y responsables de las personas",
+          "title": "Migrazioa eta mugikortasuna errazten duten migrazio-politika ondo kudeatuak, ordenatuak, seguruak, erregularrak eta pertsonen arduradunak aplikatu dituzten herrialdeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/10-7-2/",
@@ -1239,7 +1239,7 @@
         },
         {
           "id": "10-7-3",
-          "title": "Número de personas muertas o desaparecidas en el proceso de migración hacia un destino internacional",
+          "title": "Nazioarteko destino baterako migrazio-prozesuan hildako edo desagertutako pertsonen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/10-7-3/",
@@ -1247,7 +1247,7 @@
         },
         {
           "id": "10-7-4",
-          "title": "Proporción de la población integrada por refugiados, desglosada por país de origen",
+          "title": "Errefuxiatuek osatutako biztanleriaren proportzioa, jatorrizko herrialdearen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/10-7-4/",
@@ -1255,7 +1255,7 @@
         },
         {
           "id": "10-a-1",
-          "title": "Proporción de líneas arancelarias que se aplican a las importaciones de los países menos adelantados y los países en desarrollo con arancel cero",
+          "title": "Gutxien aurreratutako herrialdeetako eta garapen bidean dauden herrialdeetako inportazioei aplikatzen zaizkien muga-zergen proportzioa, zero arantzelarekin",
           "description": "",
           "keywords": "",
           "href": "/site/10-a-1/",
@@ -1263,7 +1263,7 @@
         },
         {
           "id": "10-b-1",
-          "title": "Corrientes totales de recursos para el desarrollo, desglosadas por país receptor y país donante y por tipo de corriente (por ejemplo, asistencia oficial para el desarrollo, inversión extranjera directa y otras corrientes)",
+          "title": "Garapenerako baliabideen guztizko korronteak, herrialde hartzailearen, herrialde emailearen eta korronte motaren arabera banakatuta (adibidez, garapenerako laguntza ofiziala, atzerriko inbertsio zuzena eta beste korronte batzuk)",
           "description": "",
           "keywords": "",
           "href": "/site/10-b-1/",
@@ -1271,7 +1271,7 @@
         },
         {
           "id": "10-c-1",
-          "title": "Costo de las remesas en proporción a las sumas remitidas",
+          "title": "Bidalketen kostua, bidalitako zenbatekoen proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/10-c-1/",
@@ -1282,12 +1282,12 @@
   {
     "goal": {
       "id": "11",
-      "title": "Lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles",
+      "title": "Hiriak eta giza kokaguneak inklusiboak, seguruak, erresilienteak eta jasangarriak izatea lortzea",
       "indicators": [
         
         {
           "id": "11-1-1",
-          "title": "Proporción de la población urbana que vive en barrios marginales, asentamientos informales o viviendas inadecuadas",
+          "title": "Auzo marjinaletan, kokaleku informaletan edo etxebizitza desegokietan bizi den hiri-biztanleriaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/11-1-1/",
@@ -1295,7 +1295,7 @@
         },
         {
           "id": "11-2-1",
-          "title": "Proporción de la población que tiene fácil acceso al transporte público, desglosada por sexo, edad y personas con discapacidad",
+          "title": "Garraio publikora iristeko erraztasuna duen biztanleriaren proportzioa, sexuaren, adinaren eta desgaitasuna duten pertsonen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/11-2-1/",
@@ -1303,7 +1303,7 @@
         },
         {
           "id": "11-3-1",
-          "title": "Relación entre la tasa de consumo de tierras y la tasa de crecimiento de la población",
+          "title": "Lurren kontsumo-tasaren eta biztanleriaren hazkunde-tasaren arteko erlazioa",
           "description": "",
           "keywords": "",
           "href": "/site/11-3-1/",
@@ -1311,7 +1311,7 @@
         },
         {
           "id": "11-3-2",
-          "title": "Proporción de ciudades que cuentan con una estructura de participación directa de la sociedad civil en la planificación y la gestión urbanas y funcionan con regularidad y democráticamente",
+          "title": "Gizarte zibilak hiri-plangintzan eta -kudeaketan zuzenean parte hartzeko egitura duten eta erregulartasunez eta demokratikoki funtzionatzen duten hirien proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/11-3-2/",
@@ -1319,7 +1319,7 @@
         },
         {
           "id": "11-4-1",
-          "title": "Total de gastos per cápita destinados a la preservación, protección y conservación de todo el patrimonio cultural y natural, desglosado por fuente de financiación (pública y privada), tipo de patrimonio (cultural y natural) y nivel de gobierno (nacional, regional y local/municipal)",
+          "title": "Kultura- eta natura-ondare osoa zaintzeko, babesteko eta kontserbatzeko per capita gastuak, guztira, honela banatuta: finantzaketa-iturria (publikoa eta pribatua), ondare mota (kulturala eta naturala) eta gobernu-maila (nazionala, eskualdekoa eta tokikoa/udalekoa)",
           "description": "",
           "keywords": "",
           "href": "/site/11-4-1/",
@@ -1327,7 +1327,7 @@
         },
         {
           "id": "11-5-1",
-          "title": "Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 personas",
+          "title": "100.000 pertsonako, zuzenean hondamendiei egotzitako hildako, desagertutako eta kaltetutako pertsonen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/11-5-1/",
@@ -1335,7 +1335,7 @@
         },
         {
           "id": "11-5-2",
-          "title": "Pérdidas económicas directas atribuidas a los desastres en relación con el producto interno bruto (PIB) mundial",
+          "title": "Hondamendiei egotzitako galera ekonomiko zuzenak, munduko barne-produktu gordinari (BPG) dagokionez",
           "description": "",
           "keywords": "",
           "href": "/site/11-5-2/",
@@ -1343,7 +1343,7 @@
         },
         {
           "id": "11-5-3",
-          "title": "a) Daños en la infraestructura crítica y b) número de interrupciones de los servicios básicos, atribuidos a desastres",
+          "title": "a) azpiegitura kritikoan izandako kalteak eta b) hondamendiei egotzitako oinarrizko zerbitzuen etendura-kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/11-5-3/",
@@ -1351,7 +1351,7 @@
         },
         {
           "id": "11-6-1",
-          "title": "Proporción de residuos sólidos municipales recogidos y administrados en instalaciones controladas con respecto al total de residuos municipales generados, desglosada por ciudad",
+          "title": "Kontrolatutako instalazioetan bildu eta administratutako udal-hondakin solidoen proportzioa, sortutako udal-hondakin guztiekiko, hirika banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/11-6-1/",
@@ -1359,7 +1359,7 @@
         },
         {
           "id": "11-6-2",
-          "title": "Niveles medios anuales de partículas finas en suspensión (por ejemplo, PM2.5 y PM10) en las ciudades (ponderados según la población)",
+          "title": "Partikula fin esekien urteko batez besteko mailak (adibidez, PM2.5 eta PM10) hirietan (biztanleriaren arabera haztatuta)",
           "description": "",
           "keywords": "",
           "href": "/site/11-6-2/",
@@ -1367,7 +1367,7 @@
         },
         {
           "id": "11-7-1",
-          "title": "Proporción media de la superficie edificada de las ciudades que se dedica a espacios abiertos para uso público de todos, desglosada por sexo, edad y personas con discapacidad",
+          "title": "Erabilera publikorako espazio irekietarako erabiltzen diren hirien azalera eraikiaren batez besteko proportzioa, sexuaren, adinaren eta desgaitasuna duten pertsonen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/11-7-1/",
@@ -1375,7 +1375,7 @@
         },
         {
           "id": "11-7-2",
-          "title": "Proporción de personas que han sido víctimas de acoso no sexual o sexual en los últimos 12 meses, desglosada por sexo, edad, grado de discapacidad y lugar del hecho",
+          "title": "Azken 12 hilabeteetan sexu- edo sexu-jazarpenaren biktima izan ez diren pertsonen proportzioa, sexuaren, adinaren, desgaitasun-mailaren eta gertaeraren lekuaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/11-7-2/",
@@ -1383,7 +1383,7 @@
         },
         {
           "id": "11-a-1",
-          "title": "Número de países que cuentan con políticas urbanas nacionales o planes de desarrollo regionales que a) responden a la dinámica de la población, b) garantizan un desarrollo territorial equilibrado y c) aumentan el margen fiscal local",
+          "title": "Hiri-politika nazionalak edo eskualdeko garapen-planak dituzten herrialdeen kopurua, a) biztanleriaren dinamikari erantzuten diotenak, b) lurralde-garapen orekatua bermatzen dutenak eta c) tokiko zerga-marjina handitzen dutenak",
           "description": "",
           "keywords": "",
           "href": "/site/11-a-1/",
@@ -1391,7 +1391,7 @@
         },
         {
           "id": "11-b-1",
-          "title": "Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendái para la Reducción del Riesgo de Desastres 2015‑2030",
+          "title": "Hondamendi-arriskua murrizteko estrategia nazionalak onartzen eta aplikatzen dituzten herrialdeen kopurua, 2015-2030 aldirako Hondamendi Arriskua Murrizteko Sendai Esparruarekin bat etorriz",
           "description": "",
           "keywords": "",
           "href": "/site/11-b-1/",
@@ -1399,7 +1399,7 @@
         },
         {
           "id": "11-b-2",
-          "title": "Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres",
+          "title": "Hondamendi-arriskua murrizteko estrategia nazionalak erabili eta aplikatzen dituzten tokiko gobernuen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/11-b-2/",
@@ -1410,12 +1410,12 @@
   {
     "goal": {
       "id": "12",
-      "title": "Garantizar modalidades de consumo y producción sostenibles",
+      "title": "Kontsumo eta ekoizpen modalitate jasangarriak bermatzea",
       "indicators": [
         
         {
           "id": "12-1-1",
-          "title": "Número de países que elaboran, adoptan o aplican instrumentos de política destinados a apoyar la transición hacia modalidades de consumo y producción sostenibles",
+          "title": "Kontsumo eta ekoizpen iraunkorreko modalitateetarako trantsizioa bultzatzeko politika-tresnak egiten, onartzen edo aplikatzen dituzten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/12-1-1/",
@@ -1423,7 +1423,7 @@
         },
         {
           "id": "12-2-1",
-          "title": "Huella material en términos absolutos, huella material per cápita y huella material por PIB",
+          "title": "Aztarna materiala termino absolutuetan, aztarna materiala per capita eta aztarna materiala BPGaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/12-2-1/",
@@ -1431,7 +1431,7 @@
         },
         {
           "id": "12-2-2",
-          "title": "Consumo material interno en términos absolutos, consumo material interno per cápita y consumo material interno por PIB",
+          "title": "Barne-materialaren kontsumoa termino absolutuetan, barne-materialaren kontsumoa per capita eta barne-materialaren kontsumoa BPGaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/12-2-2/",
@@ -1439,7 +1439,7 @@
         },
         {
           "id": "12-3-1",
-          "title": "a) Índice de pérdidas de alimentos y b) índice de desperdicio de alimentos",
+          "title": "a) Elikagaien galeren indizea eta b) elikagaiak alferrik galtzearen indizea",
           "description": "",
           "keywords": "",
           "href": "/site/12-3-1/",
@@ -1447,7 +1447,7 @@
         },
         {
           "id": "12-4-1",
-          "title": "Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos",
+          "title": "Hondakin arriskutsuei eta beste produktu kimiko batzuei buruzko nazioarteko ingurumen-akordio aldeaniztunetan konpromisoak betetzen dituzten alderdien kopurua eta akordio horietako bakoitzean eskatzen den bezala informazioa emateko betebeharrak",
           "description": "",
           "keywords": "",
           "href": "/site/12-4-1/",
@@ -1455,7 +1455,7 @@
         },
         {
           "id": "12-4-2",
-          "title": "a) Desechos peligrosos generados per cápita y b) proporción de desechos peligrosos tratados, desglosados por tipo de tratamiento",
+          "title": "a) Per capita sortutako hondakin arriskutsuak eta b) tratatutako hondakin arriskutsuen proportzioa, tratamendu motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/12-4-2/",
@@ -1463,7 +1463,7 @@
         },
         {
           "id": "12-5-1",
-          "title": "Tasa nacional de reciclado, en toneladas de material reciclado",
+          "title": "Birziklatze tasa nazionala, birziklatutako material tonatan",
           "description": "",
           "keywords": "",
           "href": "/site/12-5-1/",
@@ -1471,7 +1471,7 @@
         },
         {
           "id": "12-6-1",
-          "title": "Número de empresas que publican informes sobre sostenibilidad",
+          "title": "Iraunkortasunari buruzko txostenak argitaratzen dituzten enpresen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/12-6-1/",
@@ -1479,7 +1479,7 @@
         },
         {
           "id": "12-7-1",
-          "title": "Número de países que aplican políticas y planes de acción sostenibles en materia de adquisiciones públicas",
+          "title": "Erosketa publikoen arloan politika eta ekintza-plan iraunkorrak aplikatzen dituzten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/12-7-1/",
@@ -1487,7 +1487,7 @@
         },
         {
           "id": "12-8-1",
-          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación de docentes y d) la evaluación de los estudiantes",
+          "title": "i) munduko herritartasunerako hezkuntza eta ii) garapen iraunkorrerako hezkuntza a) hezkuntza-politika nazionaletan, b) ikasketa-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan txertatzen diren gradua",
           "description": "",
           "keywords": "",
           "href": "/site/12-8-1/",
@@ -1495,7 +1495,7 @@
         },
         {
           "id": "12-a-1",
-          "title": "Capacidad instalada de generación de energía renovable en los países en desarrollo y en los países desarrollados (en vatios per cápita)",
+          "title": "Garapen bidean dauden herrialdeetan eta herrialde garatuetan (biztanle bakoitzeko wattetan) energia berriztagarria sortzeko instalatutako gaitasuna",
           "description": "",
           "keywords": "",
           "href": "/site/12-a-1/",
@@ -1503,7 +1503,7 @@
         },
         {
           "id": "12-b-1",
-          "title": "Aplicación de instrumentos normalizados de contabilidad para hacer un seguimiento de los aspectos económicos y ambientales de la sostenibilidad del turismo",
+          "title": "Turismoaren jasangarritasunaren ekonomia- eta ingurumen-alderdien jarraipena egiteko kontabilitate-tresna normalizatuak aplikatzea",
           "description": "",
           "keywords": "",
           "href": "/site/12-b-1/",
@@ -1511,7 +1511,7 @@
         },
         {
           "id": "12-c-1",
-          "title": "Cuantía de los subsidios a los combustibles fósiles (producción y consumo) por unidad del PIB",
+          "title": "Erregai fosilentzako dirulaguntzen zenbatekoa (ekoizpena eta kontsumoa) BPGaren unitate bakoitzeko",
           "description": "",
           "keywords": "",
           "href": "/site/12-c-1/",
@@ -1522,12 +1522,12 @@
   {
     "goal": {
       "id": "13",
-      "title": "Adoptar medidas urgentes para combatir el cambio climático y sus efectos",
+      "title": "Neurri urgenteak hartzea klima-aldaketaren eta haren ondorioen aurka egiteko",
       "indicators": [
         
         {
           "id": "13-1-1",
-          "title": "Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 personas",
+          "title": "100.000 pertsonako, hildako, desagertutako eta zuzenean hondamendiei egotzitako pertsona kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/13-1-1/",
@@ -1535,7 +1535,7 @@
         },
         {
           "id": "13-1-2",
-          "title": "Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendái para la Reducción del Riesgo de Desastres 2015‑2030",
+          "title": "Hondamendien arriskua murrizteko estrategia nazionalak onartzen eta aplikatzen dituzten herrialdeen kopurua, Hondamendien Arriskua Murrizteko Sendai-ko Esparruarekin (2015-2030) bat etorriz",
           "description": "",
           "keywords": "",
           "href": "/site/13-1-2/",
@@ -1543,7 +1543,7 @@
         },
         {
           "id": "13-1-3",
-          "title": "Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres",
+          "title": "Hondamendi-arriskua murrizteko estrategia nazionalak erabili eta aplikatzen dituzten tokiko gobernuen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/13-1-3/",
@@ -1551,7 +1551,7 @@
         },
         {
           "id": "13-2-1",
-          "title": "Número de países con contribuciones determinadas a nivel nacional, estrategias a largo plazo, planes nacionales de adaptación y comunicaciones sobre la adaptación, notificadas a la secretaría de la Convención Marco de las Naciones Unidas sobre el Cambio Climático",
+          "title": "Nazio mailan ekarpen zehatzak, epe luzerako estrategiak, egokitzapenerako plan nazionalak eta egokitzapenari buruzko komunikazioak dituzten herrialdeen kopurua, Klima Aldaketari buruzko Nazio Batuen Esparru Hitzarmeneko idazkaritzari jakinarazitakoak",
           "description": "",
           "keywords": "",
           "href": "/site/13-2-1/",
@@ -1559,7 +1559,7 @@
         },
         {
           "id": "13-2-2",
-          "title": "Emisiones totales de gases de efecto invernadero por año",
+          "title": "Berotegi-efektuko gasen guztizko isurketak urteko",
           "description": "",
           "keywords": "",
           "href": "/site/13-2-2/",
@@ -1567,7 +1567,7 @@
         },
         {
           "id": "13-3-1",
-          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación del profesorado y d) la evaluación de los estudiantes",
+          "title": "i) munduko herritartasunerako hezkuntza eta ii) garapen iraunkorrerako hezkuntza a) hezkuntza-politika nazionaletan, b) ikasketa-planetan, c) irakasleen prestakuntzan eta d) ikasleen ebaluazioan txertatzen diren gradua",
           "description": "",
           "keywords": "",
           "href": "/site/13-3-1/",
@@ -1575,7 +1575,7 @@
         },
         {
           "id": "13-a-1",
-          "title": "Cantidades proporcionadas y movilizadas en dólares de los Estados Unidos al año en relación con el objetivo actual mantenido de movilización colectiva de 100.000 millones de dólares de aquí a 2025",
+          "title": "Estatu Batuek urtean dolarretan emandako eta mobilizatutako kopuruak, hemendik 2025era bitartean 100.000 milioi dolarreko mobilizazio kolektiboaren egungo helburuari dagokionez",
           "description": "",
           "keywords": "",
           "href": "/site/13-a-1/",
@@ -1583,7 +1583,7 @@
         },
         {
           "id": "13-b-1",
-          "title": "Número de países menos adelantados y pequeños Estados insulares en desarrollo con contribuciones determinadas a nivel nacional, estrategias a largo plazo, planes nacionales de adaptación y comunicaciones sobre la adaptación, notificadas a la secretaría de la Convención Marco de las Naciones Unidas sobre el Cambio Climático",
+          "title": "Gutxien aurreratutako herrialdeen eta garatzen ari diren uharte-estatu txikien kopurua, nazio-mailan ekarpen zehatzak, epe luzerako estrategiak, egokitzapen-plan nazionalak eta egokitzapenari buruzko komunikazioak dituena, Klima Aldaketari buruzko Nazio Batuen Esparru Hitzarmeneko idazkaritzari jakinarazita",
           "description": "",
           "keywords": "",
           "href": "/site/13-b-1/",
@@ -1594,12 +1594,12 @@
   {
     "goal": {
       "id": "14",
-      "title": "Conservar y utilizar sosteniblemente los océanos, los mares y los recursos marinos para el desarrollo sostenible",
+      "title": "Ozeanoak, itsasoak eta itsas baliabideak mantentzea eta modu jasangarrian erabiltzea, garapen jasangarriari begira",
       "indicators": [
         
         {
           "id": "14-1-1",
-          "title": "a) Índice de eutrofización costera; y b) densidad de detritos plásticos",
+          "title": "a) Kostaldeko eutrofizazio-indizea; eta b) plastikozko detritoen dentsitatea",
           "description": "",
           "keywords": "",
           "href": "/site/14-1-1/",
@@ -1607,7 +1607,7 @@
         },
         {
           "id": "14-2-1",
-          "title": "Número de países que aplican enfoques basados en los ecosistemas para gestionar las zonas marinas",
+          "title": "Itsas eremuak kudeatzeko ekosistemetan oinarritutako ikuspegiak aplikatzen dituzten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/14-2-1/",
@@ -1615,7 +1615,7 @@
         },
         {
           "id": "14-3-1",
-          "title": "Acidez media del mar (pH) medida en un conjunto convenido de estaciones de muestreo representativas",
+          "title": "Itsasoaren batez besteko azidotasuna (pH) laginketa-estazio adierazgarrien multzo hitzartu batean neurtua",
           "description": "",
           "keywords": "",
           "href": "/site/14-3-1/",
@@ -1623,7 +1623,7 @@
         },
         {
           "id": "14-4-1",
-          "title": "Proporción de poblaciones de peces cuyos niveles son biológicamente sostenibles",
+          "title": "Biologikoki iraunkorrak diren mailak dituzten arrain-populazioen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/14-4-1/",
@@ -1631,7 +1631,7 @@
         },
         {
           "id": "14-5-1",
-          "title": "Cobertura de las zonas protegidas en relación con las zonas marinas",
+          "title": "Eremu babestuen estaldura, itsas eremuei dagokienez",
           "description": "",
           "keywords": "",
           "href": "/site/14-5-1/",
@@ -1639,7 +1639,7 @@
         },
         {
           "id": "14-6-1",
-          "title": "Grado de aplicación de instrumentos internacionales cuyo objetivo es combatir la pesca ilegal, no declarada y no reglamentada",
+          "title": "Legez kanpoko, aitortu gabeko eta arautu gabeko arrantzari aurre egitea helburu duten nazioarteko tresnen aplikazio-maila",
           "description": "",
           "keywords": "",
           "href": "/site/14-6-1/",
@@ -1647,7 +1647,7 @@
         },
         {
           "id": "14-7-1",
-          "title": "Proporción del PIB correspondiente a la pesca sostenible en los pequeños Estados insulares en desarrollo, en los países menos adelantados y en todos los países",
+          "title": "Arrantza iraunkorrari dagokion BPGren proportzioa garapen bidean dauden uharteetako estatu txikietan, gutxien aurreratuta dauden herrialdeetan eta herrialde guztietan",
           "description": "",
           "keywords": "",
           "href": "/site/14-7-1/",
@@ -1655,7 +1655,7 @@
         },
         {
           "id": "14-a-1",
-          "title": "Proporción del presupuesto total de investigación asignada a la investigación en el campo de la tecnología marina",
+          "title": "Itsas teknologiaren arloko ikerkuntzari esleitutako guztizko ikerketa-aurrekontuaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/14-a-1/",
@@ -1663,7 +1663,7 @@
         },
         {
           "id": "14-b-1",
-          "title": "Grado de aplicación de un marco jurídico, reglamentario, normativo o institucional que reconozca y proteja los derechos de acceso para la pesca en pequeña escala",
+          "title": "Eskala txikiko arrantzarako sarbide-eskubideak aitortzen eta babesten dituen esparru juridiko, erregelamenduzko, arauemaile edo instituzional baten aplikazio-maila",
           "description": "",
           "keywords": "",
           "href": "/site/14-b-1/",
@@ -1671,7 +1671,7 @@
         },
         {
           "id": "14-c-1",
-          "title": "Número de países que, mediante marcos jurídicos, normativos e institucionales, avanzan en la ratificación, la aceptación y la implementación de los instrumentos relacionados con los océanos que aplican el derecho internacional reflejado en la Convención de las Naciones Unidas sobre el Derecho del Mar para la conservación y el uso sostenible de los océanos y sus recursos",
+          "title": "Ozeanoak eta haien baliabideak kontserbatzeko eta modu jasangarrian erabiltzeko Itsas Zuzenbideari buruzko Nazio Batuen Konbentzioan jasotako nazioarteko zuzenbidea aplikatzen duten ozeanoekin lotutako tresnak berresten, onartzen eta ezartzen aurrera egiten duten herrialdeen kopurua, esparru juridiko, arauemaile eta instituzionalen bidez",
           "description": "",
           "keywords": "",
           "href": "/site/14-c-1/",
@@ -1682,12 +1682,12 @@
   {
     "goal": {
       "id": "15",
-      "title": "Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad",
+      "title": "Lehorreko bizitza babestea, lehengoratzea eta modu jasangarrian erabili dadila sustatzea, basoak modu jasangarrian kudeatzea, basamortutzearen aurka borrokatzea, lurren degradazioa gelditzea eta lehengoratzea, eta biodibertsitatearen galera gelditzea",
       "indicators": [
         
         {
           "id": "15-1-1",
-          "title": "Superficie forestal en proporción a la superficie total",
+          "title": "Baso-azalera azalera osoaren proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/15-1-1/",
@@ -1695,7 +1695,7 @@
         },
         {
           "id": "15-1-2",
-          "title": "Proporción de lugares importantes para la biodiversidad terrestre y del agua dulce incluidos en zonas protegidas, desglosada por tipo de ecosistema",
+          "title": "Eremu babestuetan sartutako lurreko biodibertsitaterako eta ur gezarako leku garrantzitsuen proportzioa, ekosistema motaren arabera banakatua",
           "description": "",
           "keywords": "",
           "href": "/site/15-1-2/",
@@ -1703,7 +1703,7 @@
         },
         {
           "id": "15-1-E1",
-          "title": "Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)",
+          "title": "GRAFICO.15-1-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/15-1-E1/",
@@ -1711,7 +1711,7 @@
         },
         {
           "id": "15-2-1",
-          "title": "Avances hacia la gestión forestal sostenible",
+          "title": "Aurrerapenak baso-kudeaketa iraunkorrerantz",
           "description": "",
           "keywords": "",
           "href": "/site/15-2-1/",
@@ -1719,7 +1719,7 @@
         },
         {
           "id": "15-3-1",
-          "title": "Proporción de tierras degradadas en comparación con la superficie total",
+          "title": "Degradatutako lurren proportzioa azalera osoarekin alderatuta",
           "description": "",
           "keywords": "",
           "href": "/site/15-3-1/",
@@ -1727,7 +1727,7 @@
         },
         {
           "id": "15-4-1",
-          "title": "Lugares importantes para la biodiversidad de las montañas incluidos en zonas protegidas",
+          "title": "Gune babestuetan dauden mendietako biodibertsitaterako leku garrantzitsuak",
           "description": "",
           "keywords": "",
           "href": "/site/15-4-1/",
@@ -1735,7 +1735,7 @@
         },
         {
           "id": "15-4-2",
-          "title": "a) Índice de cobertura verde de las montañas y b) proporción de terreno montañoso degradado",
+          "title": "a) Mendien estaldura berdearen indizea eta b) degradatutako lur menditsuen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/15-4-2/",
@@ -1743,7 +1743,7 @@
         },
         {
           "id": "15-5-1",
-          "title": "Índice de la Lista Roja",
+          "title": "Zerrenda Gorriaren Indizea",
           "description": "",
           "keywords": "",
           "href": "/site/15-5-1/",
@@ -1751,7 +1751,7 @@
         },
         {
           "id": "15-6-1",
-          "title": "Número de países que han adoptado marcos legislativos, administrativos y normativos para asegurar una distribución justa y equitativa de los beneficios",
+          "title": "Etekinen banaketa bidezkoa eta bidezkoa ziurtatzeko lege-, administrazio- eta arau-esparruak onartu dituzten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/15-6-1/",
@@ -1759,7 +1759,7 @@
         },
         {
           "id": "15-7-1",
-          "title": "Proporción de especímenes de flora y fauna silvestre comercializados procedentes de la caza furtiva o el tráfico ilícito",
+          "title": "Ezkutuko ehizatik edo legez kanpoko trafikotik merkaturatutako basa-flora eta faunaren espezimenen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/15-7-1/",
@@ -1767,7 +1767,7 @@
         },
         {
           "id": "15-8-1",
-          "title": "Proporción de países que han aprobado la legislación nacional pertinente y han destinado recursos suficientes para la prevención o el control de las especies exóticas invasoras",
+          "title": "Dagokion legeria nazionala onartu duten eta espezie exotiko inbaditzaileak prebenitzeko edo kontrolatzeko baliabide nahikoak erabili dituzten herrialdeen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/15-8-1/",
@@ -1775,7 +1775,7 @@
         },
         {
           "id": "15-9-1",
-          "title": "a) Número de países que han establecido metas nacionales de conformidad con la segunda Meta de Aichi del Plan Estratégico para la Diversidad Biológica 2011-2020 o metas similares en sus estrategias y planes de acción nacionales en materia de diversidad biológica y han informado de sus progresos en el logro de estas metas; y b) integración de la biodiversidad en los sistemas nacionales de contabilidad y presentación de informes, definidos como implementación del Sistema de Contabilidad Ambiental y Económica",
+          "title": "a) 2011-2020 Aniztasun Biologikorako Plan Estrategikoaren Aichiren bigarren Xedearekin bat etorriz helburu nazionalak ezarri dituzten herrialdeen kopurua, edo antzeko helburuak aniztasun biologikoaren arloko ekintza-plan eta estrategietan, eta helburu horiek lortzeko bidean egindako aurrerapenen berri eman duten herrialdeen kopurua; eta b) biodibertsitatea kontabilitaterako eta txostenak aurkezteko sistema nazionaletan integratzea, Ingurumen eta Ekonomia Kontabilitate Sistemaren inplementazio gisa definituta",
           "description": "",
           "keywords": "",
           "href": "/site/15-9-1/",
@@ -1783,7 +1783,7 @@
         },
         {
           "id": "15-a-1",
-          "title": "a) Asistencia oficial para el desarrollo destinada concretamente a la conservación y el uso sostenible de la biodiversidad y b) ingresos generados y financiación movilizada mediante instrumentos económicos pertinentes para la biodiversidad",
+          "title": "a) Garapenerako laguntza ofiziala, zehazki biodibertsitatearen kontserbaziora eta erabilera jasangarrira bideratua, eta b) sortutako diru-sarrerak eta biodibertsitaterako tresna ekonomiko egokien bidez mobilizatutako finantzaketa",
           "description": "",
           "keywords": "",
           "href": "/site/15-a-1/",
@@ -1791,7 +1791,7 @@
         },
         {
           "id": "15-b-1",
-          "title": "a) Asistencia oficial para el desarrollo destinada concretamente a la conservación y el uso sostenible de la biodiversidad y b) ingresos generados y financiación movilizada mediante instrumentos económicos pertinentes para la biodiversidad",
+          "title": "a) Garapenerako laguntza ofiziala, zehazki biodibertsitatearen kontserbaziora eta erabilera jasangarrira bideratua, eta b) sortutako diru-sarrerak eta biodibertsitaterako tresna ekonomiko egokien bidez mobilizatutako finantzaketa",
           "description": "",
           "keywords": "",
           "href": "/site/15-b-1/",
@@ -1799,7 +1799,7 @@
         },
         {
           "id": "15-c-1",
-          "title": "Proporción de especímenes de flora y fauna silvestre comercializados procedentes de la caza furtiva o el tráfico ilícito",
+          "title": "Ezkutuko ehizatik edo legez kanpoko trafikotik merkaturatutako basa-flora eta -faunaren espezieen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/15-c-1/",
@@ -1810,12 +1810,12 @@
   {
     "goal": {
       "id": "16",
-      "title": "Promover sociedades pacíficas e inclusivas para el desarrollo sostenible, facilitar el acceso a la justicia para todos y construir a todos los niveles instituciones eficaces e inclusivas que rindan cuentas",
+      "title": "Garapen jasangarrirako gizarte baketsu eta inklusiboak sustatzea, guztioi justiziarako sarbidea erraztea, eta euren jarduerak eta kontuak azaltzen dituzten erakunde eraginkorrak eta inklusiboak sortzea maila guztietan",
       "indicators": [
         
         {
           "id": "16-1-1",
-          "title": "Número de víctimas de homicidios intencionales por cada 100.000 habitantes, desglosado por sexo y edad",
+          "title": "Nahita egindako hilketen biktimen kopurua 100.000 biztanleko, sexuaren eta adinaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/16-1-1/",
@@ -1823,7 +1823,7 @@
         },
         {
           "id": "16-1-2",
-          "title": "Muertes relacionadas con conflictos por cada 100.000 habitantes, desglosadas por sexo, edad y causa",
+          "title": "100.000 biztanleko gatazkekin lotutako heriotzak, sexuaren, adinaren eta kausaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/16-1-2/",
@@ -1831,7 +1831,7 @@
         },
         {
           "id": "16-1-3",
-          "title": "Proporción de la población que ha sufrido a) violencia física, b) violencia psicológica o c) violencia sexual en los últimos 12 meses",
+          "title": "Azken 12 hilabeteetan indarkeria fisikoa, b) indarkeria psikologikoa edo c) sexu-indarkeria jasan duten biztanleen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/16-1-3/",
@@ -1839,7 +1839,7 @@
         },
         {
           "id": "16-1-4",
-          "title": "Proporción de la población que se siente segura al caminar sola en su zona de residencia después de que oscurece",
+          "title": "Ilundu ondoren bere bizilekuan bakarrik ibiltzean seguru sentitzen den biztanleriaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/16-1-4/",
@@ -1847,7 +1847,7 @@
         },
         {
           "id": "16-1-E1",
-          "title": "Población que reporta ocurrencia de delitos, violencia o vandalismo en su área (Indicador UE sdg_16_20)",
+          "title": "GRAFICO.16-1-E1-titulo",
           "description": "",
           "keywords": "",
           "href": "/site/16-1-E1/",
@@ -1855,7 +1855,7 @@
         },
         {
           "id": "16-2-1",
-          "title": "Proporción de niños de entre 1 y 17 años que han sufrido algún castigo físico o agresión psicológica a manos de sus cuidadores en el último mes",
+          "title": "Azken hilabetean zaintzaileen eskutik zigor fisikoren bat edo eraso psikologikoren bat jasan duten 1 eta 17 urte bitarteko haurren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/16-2-1/",
@@ -1863,7 +1863,7 @@
         },
         {
           "id": "16-2-2",
-          "title": "Número de víctimas de la trata de personas por cada 100.000 habitantes, desglosado por sexo, edad y tipo de explotación",
+          "title": "Pertsonen salerosketaren biktimen kopurua 100.000 biztanleko, sexuaren, adinaren eta ustiapen-motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/16-2-2/",
@@ -1871,7 +1871,7 @@
         },
         {
           "id": "16-2-3",
-          "title": "Proporción de mujeres y hombres jóvenes de entre 18 y 29 años que sufrieron violencia sexual antes de cumplir los 18 años",
+          "title": "18 urte bete aurretik sexu-indarkeria jasan zuten 18 eta 29 urte bitarteko emakume eta gizon gazteen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/16-2-3/",
@@ -1879,7 +1879,7 @@
         },
         {
           "id": "16-3-1",
-          "title": "Proporción de víctimas de a) violencia física, b) violencia psicológica o c) violencia sexual en los últimos 12 meses que han notificado su victimización a las autoridades competentes u otros mecanismos de resolución de conflictos reconocidos oficialmente",
+          "title": "a) indarkeria fisikoaren, b) indarkeria psikologikoaren edo c) sexu-indarkeriaren biktimen proportzioa, azken 12 hilabeteetan biktimizazioa agintari eskudunei edo gatazkak konpontzeko ofizialki aitortutako beste mekanismo batzuei jakinarazi dietenak",
           "description": "",
           "keywords": "",
           "href": "/site/16-3-1/",
@@ -1887,7 +1887,7 @@
         },
         {
           "id": "16-3-2",
-          "title": "Proporción de detenidos que no han sido condenados en el conjunto de la población reclusa total",
+          "title": "Preso guztien artean kondenatuak izan ez diren atxilotuen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/16-3-2/",
@@ -1895,7 +1895,7 @@
         },
         {
           "id": "16-3-3",
-          "title": "Proporción de la población que se ha visto implicada en alguna controversia en los dos últimos años y ha accedido a algún mecanismo oficial u oficioso de solución de controversias, desglosada por tipo de mecanismo",
+          "title": "Azken bi urteetan eztabaidaren batean inplikatuta egon den eta eztabaidak konpontzeko mekanismo ofizial edo ofiziosoren bat eskuratu duen biztanleriaren proportzioa, mekanismo motaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/16-3-3/",
@@ -1903,7 +1903,7 @@
         },
         {
           "id": "16-4-1",
-          "title": "Valor total de las corrientes financieras ilícitas entrantes y salientes (en dólares corrientes de los Estados Unidos)",
+          "title": "Sartzen eta irteten diren legez kanpoko finantza-korronteen guztizko balioa (Estatu Batuetako dolar arruntetan)",
           "description": "",
           "keywords": "",
           "href": "/site/16-4-1/",
@@ -1911,7 +1911,7 @@
         },
         {
           "id": "16-4-2",
-          "title": "Proporción de armas incautadas, encontradas o entregadas cuyo origen o contexto ilícitos han sido determinados o establecidos por una autoridad competente, de conformidad con los instrumentos internacionales",
+          "title": "Agintaritza eskudun batek legez kanpoko jatorria edo testuingurua zehaztu edo ezarri dien konfiskatutako, aurkitutako edo entregatutako armen proportzioa, nazioarteko tresnekin bat etorriz",
           "description": "",
           "keywords": "",
           "href": "/site/16-4-2/",
@@ -1919,7 +1919,7 @@
         },
         {
           "id": "16-5-1",
-          "title": "Proporción de personas que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a las que un funcionario público les ha pedido un soborno, durante los últimos 12 meses",
+          "title": "Gutxienez funtzionario publiko batekin harremana izan eta funtzionario publiko bati eroskeria ordaindu dioten pertsonen proportzioa, edo funtzionario publiko batek eroskeria eskatu dienen proportzioa, azken 12 hilabeteetan",
           "description": "",
           "keywords": "",
           "href": "/site/16-5-1/",
@@ -1927,7 +1927,7 @@
         },
         {
           "id": "16-5-2",
-          "title": "Proporción de negocios que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a los que un funcionario público les ha pedido un soborno, durante los últimos 12 meses",
+          "title": "Funtzionario publiko batekin gutxienez kontaktu bat izan duten eta funtzionario publiko bati eroskeria ordaindu dioten edo funtzionario publiko batek eroskeria eskatu dien negozioen proportzioa, azken 12 hilabeteetan",
           "description": "",
           "keywords": "",
           "href": "/site/16-5-2/",
@@ -1935,7 +1935,7 @@
         },
         {
           "id": "16-6-1",
-          "title": "Gastos primarios del gobierno en proporción al presupuesto aprobado originalmente, desglosados por sector (o por códigos presupuestarios o elementos similares)",
+          "title": "Gobernuaren gastu primarioak, hasieran onartutako aurrekontuaren proportzioan, sektoreka banakatuta (edo aurrekontu-kodeen edo antzeko elementuen arabera)",
           "description": "",
           "keywords": "",
           "href": "/site/16-6-1/",
@@ -1943,7 +1943,7 @@
         },
         {
           "id": "16-6-2",
-          "title": "Proporción de la población que se siente satisfecha con su última experiencia de los servicios públicos",
+          "title": "Zerbitzu publikoetan izandako azken esperientziarekin pozik dauden biztanleen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/16-6-2/",
@@ -1951,7 +1951,7 @@
         },
         {
           "id": "16-7-1",
-          "title": "Proporciones de plazas en las instituciones nacionales y locales, entre ellas: a) las asambleas legislativas, b) la administración pública y c) el poder judicial, en comparación con la distribución nacional, desglosadas por sexo, edad, personas con discapacidad y grupos de población",
+          "title": "Plaza-proportzioak nazioko eta tokiko erakundeetan, horien artean: a) legebiltzarretan, b) administrazio publikoan eta c) botere judizialean, banaketa nazionalarekin alderatuta, sexuaren, adinaren, desgaitasunen bat duten pertsonen eta biztanleria-taldeen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/16-7-1/",
@@ -1959,7 +1959,7 @@
         },
         {
           "id": "16-7-2",
-          "title": "Proporción de la población que considera que la adopción de decisiones es inclusiva y responde a sus necesidades, desglosada por sexo, edad, discapacidad y grupo de población",
+          "title": "Erabakiak hartzea inklusiboa dela eta bere beharrei erantzuten diela uste duen biztanleriaren proportzioa, sexuaren, adinaren, desgaitasunaren eta biztanleria-taldearen arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/16-7-2/",
@@ -1967,7 +1967,7 @@
         },
         {
           "id": "16-8-1",
-          "title": "Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales",
+          "title": "Garapen bidean dauden herrialdeetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan",
           "description": "",
           "keywords": "",
           "href": "/site/16-8-1/",
@@ -1975,7 +1975,7 @@
         },
         {
           "id": "16-9-1",
-          "title": "Proporción de niños menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad",
+          "title": "Agintaritza zibil baten aurrean jaio diren 5 urtetik beherako haurren proportzioa, adinaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/16-9-1/",
@@ -1983,7 +1983,7 @@
         },
         {
           "id": "16-10-1",
-          "title": "Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados de los medios de comunicación, sindicalistas y defensores de los derechos humanos, en los últimos 12 meses",
+          "title": "Kazetariak, komunikabideetako kideak, sindikalistak eta giza eskubideen defendatzaileak hiltzen, bahitzen, bortxaz desagertzen, arbitrarioki atxilotzen eta torturatzen dituzten kasu egiaztatuen kopurua, azken 12 hilabeteetan",
           "description": "",
           "keywords": "",
           "href": "/site/16-10-1/",
@@ -1991,7 +1991,7 @@
         },
         {
           "id": "16-10-2",
-          "title": "Número de países que adoptan y aplican garantías constitucionales, legales o normativas para el acceso público a la información",
+          "title": "Informazioa publikoki eskuratzeko konstituzio-, lege- edo arau-bermeak hartzen eta aplikatzen dituzten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/16-10-2/",
@@ -1999,7 +1999,7 @@
         },
         {
           "id": "16-a-1",
-          "title": "Existencia de instituciones nacionales independientes de derechos humanos, en cumplimiento de los Principios de París",
+          "title": "Giza eskubideen erakunde nazional independenteak egotea, Parisko Printzipioak betez",
           "description": "",
           "keywords": "",
           "href": "/site/16-a-1/",
@@ -2007,7 +2007,7 @@
         },
         {
           "id": "16-b-1",
-          "title": "Proporción de la población que declara haberse sentido personalmente discriminada o acosada en los últimos 12 meses por motivos de discriminación prohibidos por el derecho internacional de los derechos humanos",
+          "title": "Giza eskubideen nazioarteko zuzenbideak debekatutako diskriminazio-arrazoiengatik azken 12 hilabeteetan pertsonalki diskriminatua edo jazarria sentitu dela adierazten duen biztanleriaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/16-b-1/",
@@ -2018,12 +2018,12 @@
   {
     "goal": {
       "id": "17",
-      "title": "Fortalecer los medios de implementación y revitalizar la Alianza Mundial para el Desarrollo Sostenible",
+      "title": "Garapen Jasangarrirako Mundu Aliantza inplementatzeko eta biziberritzeko tresnak sendotzea",
       "indicators": [
         
         {
           "id": "17-1-1",
-          "title": "Total de ingresos del gobierno en proporción al PIB, desglosado por fuente",
+          "title": "Gobernuaren diru-sarrerak guztira, BPGrekiko proportzioan, iturriaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/17-1-1/",
@@ -2031,7 +2031,7 @@
         },
         {
           "id": "17-1-2",
-          "title": "Proporción del presupuesto nacional financiado por impuestos internos",
+          "title": "Barne-zergen bidez finantzatutako aurrekontu nazionalaren proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/17-1-2/",
@@ -2039,7 +2039,7 @@
         },
         {
           "id": "17-2-1",
-          "title": "Asistencia oficial para el desarrollo neta, total y para los países menos adelantados en proporción al ingreso nacional bruto (INB) de los donantes del Comité de Asistencia para el Desarrollo de la Organización de Cooperación y Desarrollo Económicos (OCDE)",
+          "title": "Ekonomia Lankidetza eta Garapenerako Antolakundeko (ELGA) Garapenerako Laguntza Batzordeko emaileen laguntza ofiziala garapen garbirako, guztirako eta aurrerapen gutxien duten herrialdeetarako, diru-sarrera nazional gordinaren (INB) proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/17-2-1/",
@@ -2047,7 +2047,7 @@
         },
         {
           "id": "17-3-1",
-          "title": "Recursos financieros adicionales movilizados para los países en desarrollo procedentes de múltiples fuentes",
+          "title": "Garapen-bidean dauden herrialdeentzat hainbat iturritatik mobilizatutako finantza-baliabide gehigarriak",
           "description": "",
           "keywords": "",
           "href": "/site/17-3-1/",
@@ -2055,7 +2055,7 @@
         },
         {
           "id": "17-3-2",
-          "title": "Volumen de remesas (en dólares de los Estados Unidos) en proporción al PIB total",
+          "title": "Diru-bidalketen bolumena (Estatu Batuetako dolarretan) BPG osoaren proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/17-3-2/",
@@ -2063,7 +2063,7 @@
         },
         {
           "id": "17-4-1",
-          "title": "Servicio de la deuda en proporción a las exportaciones de bienes y servicios",
+          "title": "Zorraren zerbitzua ondasun eta zerbitzuen esportazioen proportzioan",
           "description": "",
           "keywords": "",
           "href": "/site/17-4-1/",
@@ -2071,7 +2071,7 @@
         },
         {
           "id": "17-5-1",
-          "title": "Número de países que adoptan y aplican sistemas de promoción de las inversiones en favor de los países en desarrollo, entre ellos los países menos adelantados",
+          "title": "Garapen bidean dauden herrialdeen aldeko inbertsioak sustatzeko sistemak onartzen eta aplikatzen dituzten herrialdeen kopurua, horien artean gutxien aurreratuta dauden herrialdeak",
           "description": "",
           "keywords": "",
           "href": "/site/17-5-1/",
@@ -2079,7 +2079,7 @@
         },
         {
           "id": "17-6-1",
-          "title": "Número de abonados a servicios de banda ancha fija por cada 100 habitantes, desglosado por velocidad",
+          "title": "100 biztanleko banda zabal finkoko zerbitzuetako abonatuen kopurua, abiaduraren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/17-6-1/",
@@ -2087,7 +2087,7 @@
         },
         {
           "id": "17-7-1",
-          "title": "Total de los fondos destinados a los países en desarrollo a fin de promover el desarrollo, la transferencia y la difusión de tecnologías ecológicamente racionales",
+          "title": "Ekologikoki arrazionalak diren teknologien garapena, transferentzia eta hedapena sustatzeko garapen bidean dauden herrialdeetara bideratutako funtsen guztizkoa",
           "description": "",
           "keywords": "",
           "href": "/site/17-7-1/",
@@ -2095,7 +2095,7 @@
         },
         {
           "id": "17-8-1",
-          "title": "Proporción de personas que utilizan Internet",
+          "title": "Internet erabiltzen duten pertsonen proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/17-8-1/",
@@ -2103,7 +2103,7 @@
         },
         {
           "id": "17-9-1",
-          "title": "Valor en dólares de la asistencia financiera y técnica (incluso mediante la cooperación Norte-Sur, Sur‑Sur y triangular) prometida a los países en desarrollo",
+          "title": "Garapen bidean dauden herrialdeei agindutako laguntza finantzario eta teknikoaren balioa dolarretan (baita Ipar-Hegoa, Hegoaldea eta Hegoalde-Hiruki arteko lankidetzaren bidez ere)",
           "description": "",
           "keywords": "",
           "href": "/site/17-9-1/",
@@ -2111,7 +2111,7 @@
         },
         {
           "id": "17-10-1",
-          "title": "Promedio arancelario mundial ponderado",
+          "title": "Munduko batez besteko muga-zerga haztatua",
           "description": "",
           "keywords": "",
           "href": "/site/17-10-1/",
@@ -2119,7 +2119,7 @@
         },
         {
           "id": "17-11-1",
-          "title": "Participación de los países en desarrollo y los países menos adelantados en las exportaciones mundiales",
+          "title": "Garapen bidean dauden herrialdeen eta munduko esportazioetan gutxien aurreratuta dauden herrialdeen parte-hartzea",
           "description": "",
           "keywords": "",
           "href": "/site/17-11-1/",
@@ -2127,7 +2127,7 @@
         },
         {
           "id": "17-12-1",
-          "title": "Promedio ponderado de los aranceles que enfrentan los países en desarrollo, los países menos adelantados y los pequeños Estados insulares en desarrollo",
+          "title": "Garapen bidean dauden herrialdeek, gutxien aurreratuta dauden herrialdeek eta garapen bidean dauden uharte-estatu txikiek aurrez aurre dituzten muga-zergen batez besteko haztatua",
           "description": "",
           "keywords": "",
           "href": "/site/17-12-1/",
@@ -2135,7 +2135,7 @@
         },
         {
           "id": "17-13-1",
-          "title": "Tablero macroeconómico",
+          "title": "Panel makroekonomikoa",
           "description": "",
           "keywords": "",
           "href": "/site/17-13-1/",
@@ -2143,7 +2143,7 @@
         },
         {
           "id": "17-14-1",
-          "title": "Número de países que cuentan con mecanismos para mejorar la coherencia de las políticas de desarrollo sostenible",
+          "title": "Garapen iraunkorreko politiken koherentzia hobetzeko mekanismoak dituzten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/17-14-1/",
@@ -2151,7 +2151,7 @@
         },
         {
           "id": "17-15-1",
-          "title": "Grado de utilización de los marcos de resultados y las herramientas de planificación de los propios países por los proveedores de cooperación para el desarrollo",
+          "title": "Garapenerako lankidetzaren hornitzaileek herrialdeak planifikatzeko dituzten tresnen eta emaitza-esparruen erabilera-maila",
           "description": "",
           "keywords": "",
           "href": "/site/17-15-1/",
@@ -2159,7 +2159,7 @@
         },
         {
           "id": "17-16-1",
-          "title": "Número de países que informan de sus progresos en los marcos de múltiples interesados para el seguimiento de la eficacia de las actividades de desarrollo que apoyan el logro de los Objetivos de Desarrollo Sostenible",
+          "title": "Garapen Jasangarriko Helburuak lortzen laguntzen duten garapen-jardueren eraginkortasunaren jarraipena egiteko interesdun askoren esparruetan egindako aurrerapenen berri ematen duten herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/17-16-1/",
@@ -2167,7 +2167,7 @@
         },
         {
           "id": "17-17-1",
-          "title": "Suma en dólares de los Estados Unidos prometida a las alianzas público-privadas centradas en la infraestructura",
+          "title": "Azpiegituran oinarritutako aliantza publiko-pribatuei agindutako Estatu Batuetako dolarren batura",
           "description": "",
           "keywords": "",
           "href": "/site/17-17-1/",
@@ -2175,7 +2175,7 @@
         },
         {
           "id": "17-18-1",
-          "title": "Indicadores de la capacidad estadística",
+          "title": "Ahalmen estatistikoaren adierazleak",
           "description": "",
           "keywords": "",
           "href": "/site/17-18-1/",
@@ -2183,7 +2183,7 @@
         },
         {
           "id": "17-18-2",
-          "title": "Número de países cuya legislación nacional sobre estadísticas cumple los Principios Fundamentales de las Estadísticas Oficiales",
+          "title": "Estatistikei buruzko legeria nazionalak estatistika ofizialen oinarrizko printzipioak betetzen dituen herrialdeen kopurua",
           "description": "",
           "keywords": "",
           "href": "/site/17-18-2/",
@@ -2191,7 +2191,7 @@
         },
         {
           "id": "17-18-3",
-          "title": "Número de países que cuentan con un plan estadístico nacional plenamente financiado y en proceso de aplicación, desglosado por fuente de financiación",
+          "title": "Guztiz finantzatutako eta aplikatzeko prozesuan dagoen estatistika-plan nazionala duten herrialdeen kopurua, finantzaketa-iturriaren arabera banakatuta",
           "description": "",
           "keywords": "",
           "href": "/site/17-18-3/",
@@ -2199,7 +2199,7 @@
         },
         {
           "id": "17-19-1",
-          "title": "Valor en dólares de todos los recursos proporcionados para fortalecer la capacidad estadística de los países en desarrollo",
+          "title": "Garapen bidean dauden herrialdeen ahalmen estatistikoa indartzeko emandako baliabide guztien balioa dolarretan",
           "description": "",
           "keywords": "",
           "href": "/site/17-19-1/",
@@ -2207,7 +2207,7 @@
         },
         {
           "id": "17-19-2",
-          "title": "Proporción de países que a) han realizado al menos un censo de población y vivienda en los últimos diez años; y b) han registrado el 100% de los nacimientos y el 80% de las defunciones",
+          "title": "a) azken hamar urteetan gutxienez biztanleriaren eta etxebizitzaren zentsua egin duten herrialdeen proportzioa; eta b) jaiotzen % 100 eta heriotzen % 80 erregistratu dituzten herrialdeena",
           "description": "",
           "keywords": "",
           "href": "/site/17-19-2/",

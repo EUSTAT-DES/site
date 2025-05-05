@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js">
+<html lang="eu" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://eustat-des.github.io/data/es',
+  remoteDataBaseUrl: 'https://eustat-des.github.io/data/eu',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -42,7 +42,7 @@ var opensdg = {
   // Disaggregations which should be ignored on indicator pages.
   ignoredDisaggregations: null,
 
-  language: 'es',
+  language: 'eu',
 
   mapColors: {
     "default": [
@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Editar datos: 3.4.E2 - Indicadores para los Objetivos de Desarrollo Sostenible</title>
+    <title>Datuak editatu: 3.4.E2 - Garapen Jasangarrirako Helburuen adierazleak</title>
 
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250430094438">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250505094758">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -161,17 +161,17 @@ var translations = {
         
 
     </head>
-<body class="language-es
+<body class="language-eu
 layout-data-editor
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"POC","default_contrast":"Contraste estándar","disable_high_contrast":"Desactivar alto contraste","disclaimer":"Este es un sitio web de desarrollo.","enable_high_contrast":"Habilitar alto contraste","hide_menu":"Ocultar el menú de navegación","high_contrast":"Alto contraste","internet_explorer_message":"Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.","internet_explorer_message_title":"Este navegador de Internet ya no es compatible","logo_title":"Ir a la página de inicio","show_menu":"Mostrar el menú de navegación","skip_link":"Saltar al contenido principal","tag_line":"17 Objetivos para transformar nuestro mundo","toggle_menu":"Alternar menú. Haga clic para expandir o contraer el menú.","toggle_search":"Barra de búsqueda. Haga clic para ampliar o reducir la barra de búsqueda."};</script>
+<script>translations['header'] = {"alpha":"POC","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Eduki nagusira joan</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">Este navegador de Internet ya no es compatible</h2>
-    <p class="internet-explorer-message-body">Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.</p>
+    <h2 class="internet-explorer-message-title">Interneteko nabigatzaile hau jada ez da bateragarria</h2>
+    <p class="internet-explorer-message-body">webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.</p>
 </div>
 
 
@@ -192,7 +192,7 @@ layout-data-editor
   <div class="disclaimer-alert">
     <strong class="phase-tag">POC</strong>
     
-    Este es un sitio web de desarrollo.
+    Webgune hau garapen egoeran dago.
     
   </div>
 </div>
@@ -200,40 +200,40 @@ layout-data-editor
       </div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/site/" id="home" aria-label="Ir a la página de inicio" title="Ir a la página de inicio">
-    <img src="/site/assets/img/logo/SDG_logo_es.png" alt="Ir a la página de inicio" />
+            <a class="navbar-brand" href="/site/" id="home" aria-label="Joan hasierako orrira" title="Joan hasierako orrira">
+    <img src="/site/assets/img/logo/SDG_logo_eu.png" alt="Joan hasierako orrira" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Mostrar el menú de navegación">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Erakutsi nabigazio-menua">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/">Inicio</a>
+    <a class="nav-link" href="/site/">Hasiera</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/reporting-status">Informe de seguimiento</a>
+    <a class="nav-link" href="/site/reporting-status">Informazioaren egoera</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Datos desagregados
+                    menu.desagregaciones
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
-    <a class="dropdown-item" href="/site/territorio/">Territorio histórico</a>
+    <a class="dropdown-item" href="/site/territorio/">menu.territorio</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/municipal/">Municipio</a>
+    <a class="dropdown-item" href="/site/municipal/">menu.municipal</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/sexo/">Sexo</a>
+    <a class="dropdown-item" href="/site/sexo/">menu.sexo</a>
 </li></ul>
             </li><li class="nav-item ">
-    <a class="nav-link" href="/site/faq">Acerca de</a>
+    <a class="nav-link" href="/site/faq">FAQ</a>
 </li></ul>
     
                 </div>
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/site/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Buscar</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Buscar">
+        <label class="visually-hidden" for="indicator_search">Bilatu</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Bilatu">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Buscar en el sitio" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Bilatu web-orrian" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
@@ -250,16 +250,8 @@ layout-data-editor
   <div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
-            <span class="language-toggle-active-language">
-                ES
-            </span>
-        </li><li class="language-option-eu list-inline-item">
-            <a class="language-toggle-link" href="/site/eu/3-4-E2/data/">
-                EU
-            </a>
-        </li><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/3-4-E2/data/">
-                EN
+            <a class="language-toggle-link" href="/site/es/3-4-E2/data/">
+                Español
             </a>
         </li></ul>
 </div>
@@ -268,19 +260,11 @@ layout-data-editor
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
-            <span class="language-toggle-active-language">
-                ES
-            </span>
-        </li><li class="language-option-eu list-inline-item">
-            <a class="language-toggle-link" href="/site/eu/3-4-E2/data/">
-                EU
-            </a>
-        </li><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/3-4-E2/data/">
-                EN
+            <a class="language-toggle-link" href="/site/es/3-4-E2/data/">
+                Español
             </a>
         </li></ul>
-</div></span><a title="Habilitar alto contraste" aria-label="Habilitar alto contraste"
+</div></span><a title="" aria-label=""
     data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -296,7 +280,7 @@ data-event-label="high"
 
 <div id="main-content" class="container" role="main">
   <div class="row no-gutters">
-    <div class="col-md-12"><h1>Editar datos: 3.4.E2</h1></div>
+    <div class="col-md-12"><h1>Datuak editatu: 3.4.E2</h1></div>
   </div>
   <div class="row config-widgets">
     <div class="col-md-6 data-grid-buttons">
@@ -444,7 +428,7 @@ data-event-label="high"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Construido con Open SDG</a>
+                            <a href="https://open-sdg.org">Open SDGrekin eraikia</a>
                         </li>
                         
                         
@@ -479,12 +463,12 @@ data-event-label="high"
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'Ocultar';</script>
+    translations['general']['hide'] = 'Ezkutatu';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Buscar';</script>
+    translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250430094438'></script>
+<script src='/site/assets/js/sdg.js?v=20250505094758'></script>
 
 
 <script>
@@ -504,7 +488,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250430094438"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250505094758"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
