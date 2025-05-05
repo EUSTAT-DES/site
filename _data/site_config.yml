@@ -125,9 +125,8 @@ indicator_tabs:
   tab_3: ''
   tab_4: ''
 languages:
-  - es
   - eu
-  - en
+  - es
 languages_public: []
 logos: 
   - language: es
