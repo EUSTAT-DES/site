@@ -1,7 +1,7 @@
 ---
 title: Indicadores desagregados por territorio histórico
 language: es
-permalink: territorio/
+permalink: /es/territorio/
 layout: page
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Indicadores con datos municipales
 language: es
-permalink: municipal/
+permalink: /es/municipal/
 layout: page
 ---
 

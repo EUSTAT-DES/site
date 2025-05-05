@@ -76,10 +76,11 @@ frontpage_cards:
     button_label: ''
     button_link: ''
     rule_color: ''
-  - title: frontpage.notaprensa
-    button_label: frontpage.notaprensa
-    button_link: "https://www.eustat.eus/estadisticas/tema_1393/opt_1/tipo_6/ti_indicadores-de-la-agenda-2030-para-el-desarrollo-sostenible/temas.html#el"
-    content: frontpage.notaprensa_content
+  - title: frontpage.publicaciones
+    content: frontpage.publicaciones_content
+    rule_color: ''
+  - title: frontpage.recursosUtiles
+    content: frontpage.recursosUtiles_content
     rule_color: ''
 frontpage_goals_grid:
   title: frontpage.heading_short
@@ -192,15 +193,21 @@ menu:
     dropdown: []
   - translation_key: menu.desagregaciones
     dropdown:
-      - path: territorio/
+      - path: menu.territorioPath
         translation_key: menu.territorio
-      - path: municipal/
+      - path: menu.municipalPath
         translation_key: menu.municipal
-      - path: sexo/
+      - path: menu.sexoPath
         translation_key: menu.sexo   
-  - path: /faq
-    translation_key: menu.faq
-    dropdown: []  
+  - path: menu.masInfoPath
+    translation_key: menu.masInfo
+    dropdown: 
+      - path: menu.agenda2030Path
+        translation_key: menu.agenda2030
+      - path: menu.indicadoresPath
+        translation_key: menu.indicadores
+      - path: menu.acercaDePath
+        translation_key: menu.acercaDe   
 metadata_edit_url: metadata
 metadata_tabs:
   - scope: national
