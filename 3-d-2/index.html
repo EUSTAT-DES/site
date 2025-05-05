@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250505142703">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250505155946">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -178,32 +178,109 @@ layout-indicator
     <h2 class="internet-explorer-message-title">Interneteko nabigatzaile hau jada ez da bateragarria</h2>
     <p class="internet-explorer-message-body">webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.</p>
 </div>
-
-
 <header role="banner" class="">
-    <div class="barra_azul_cab">
-        <div id="logoMaster" class="logoMaster">
-          <a id="ctl00_Cabecera_enlaceHome" data-ajax="false" href="https://www.eustat.eus/indice.html">
-            <img src="https://www.eustat.eus/cwImages/2015/logocabecera.png" alt="eustat">
-          </a>
-          <div class="logoMasterDescripcion">
-            Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
-          </div>
+  <div class="header" >
+    <div class="header-top">
+        <div id="logo" class="logo-header">
+            <a id="logo-link" href="https://eu.eustat.eus/indice.html">
+                <img src="https://sendoamasa.github.io/site/assets/img/LogoEustat.png" alt="eustat">
+            </a>
+            <div class="logo-header-description">
+                Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
+            </div>
         </div>
-      </div>
-      <div id="disclaimer">
-        
-<div class="container">
-  <div class="disclaimer-alert">
-    <strong class="phase-tag">POC</strong>
-    
-    Webgune hau garapen egoeran dago.
-    
-  </div>
+        <div id="trigger_home" class="menu-button">
+            <img id="euskadieus-logo"src="https://sendoamasa.github.io/site/assets/img/logo-euskadi-eus.png" alt="eustat">
+            <img id="menu-button-img" src="https://www.eustat.eus/cwImages/2015/ham.png" alt="Mostrar/ocultar menu principal">
+        </div>
+    </div>
+    <div class="zutabeak">
+        <div class="o-content-zutabe">
+            <ul>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Gaiak</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Eragiketak</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://eu.eustat.eus/bancopx/spanish/indice.html">Datu Bankua</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://eu.eustat.eus/indice.html#cy">Koiunturakoa</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://eu.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Udal informazioa</a></li>
+            </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <ul>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/calendario.html">Egutegia</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://eu.eustat.eus/productosServicios/sugerencias.html">Kexak/iradokizunak</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://eu.eustat.eusprodserv/info_c.html">Informazio zerbitzua</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://eu.eustat.eus/notas_c.html">Prentsa-gunea</a></li>
+            </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <div class="rrss">
+                <span class="texto-rrss">
+                  Jarraiguzu:
+                </span>
+                <div class="iconos-rrss">
+                    <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
+                    <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
+                    <a href="http://twitter.com/eustat" target="_blank" title="X"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
+                    <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
+                    <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
+                    <a href="https://eu.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                        target="_blank" title="Rss novedades" style="display:inline-block;"><img
+                            class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- zutabeak -->
 </div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM completamente cargado y procesado');
+    var container = document.querySelector('.header');
+    var zutabeak = document.querySelector('.zutabeak');
 
-      </div>
-    <div class="container">
+    function buildCanvas() {
+        document.getElementById('trigger_home').addEventListener('click', function (e) {
+            console.log("hey");
+            
+            e.preventDefault();
+            container.classList.toggle('active');
+            zutabeak.classList.toggle('active');
+            if (container.classList.contains('active')) {
+                
+                document.getElementById('menu-button-img').src = "https://www.eustat.eus/cwImages/2015/aspa.png";
+               
+            } else {
+                document.getElementById('menu-button-img').src = "https://www.eustat.eus/cwImages/2015/ham.png";
+                
+            }
+        });
+    }
+
+    buildCanvas();
+
+    window.addEventListener('resize', function () {
+        cHeight = document.querySelector('.o-content').offsetHeight;
+    });
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 500) {
+            document.querySelector('.scrollup').style.display = 'block';
+        } else {
+            document.querySelector('.scrollup').style.display = 'none';
+        }
+    });
+});
+</script>
+  <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="Joan hasierako orrira" title="Joan hasierako orrira">
     <img src="/site/assets/img/logo/SDG_logo_eu.png" alt="Joan hasierako orrira" />
@@ -218,18 +295,26 @@ layout-indicator
 </li><li class="nav-item ">
     <a class="nav-link" href="/site/reporting-status">Informazioaren egoera</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    menu.desagregaciones
+                    Datu desagregatuak
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
-    <a class="dropdown-item" href="/site/territorio/">menu.territorio</a>
+    <a class="dropdown-item" href="/site/menu.territorioPath">Lurralde historikoa</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/municipal/">menu.municipal</a>
+    <a class="dropdown-item" href="/site/menu.municipalPath">Udalerria</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/sexo/">menu.sexo</a>
+    <a class="dropdown-item" href="/site/menu.sexoPath">sexua</a>
 </li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/faq">FAQ</a>
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-masinfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.masInfo
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-masinfo"><li class=" ">
+    <a class="dropdown-item" href="/site/menu.agenda2030Path">2030 Agenda</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/menu.indicadoresPath">Adierazleei buruzko informazio eskuragarria</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/menu.acercaDePath">Web plataformari buruz</a>
 </li></ul>
+            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -1030,7 +1115,63 @@ pertsona muturreko pobreziara eramango ditu 2030erako.</p>
             </div>
         </div>
     </div>
-    
+    <div class="pieEustat">
+  <div class="marcopie">
+      <div class="enlaces">
+          <div class="centradomini">
+              <ul class="list-group iconillo rupturasmall">
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://eu.eustat.eus/about/links_c.html">Estekak</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://eu.eustat.eus/faq_c.html">FAQ</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://eu.eustat.eus/sitemap_c.html">Mapa</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://eu.eustat.eus/accesibilidad_c.html">Erabilerraztasuna</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="centradomini">
+              <div class="Prayamini"></div>
+              <ul class="list-group iconillo rupturasmall">
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://eu.euskadi.eus/about/a_eustat_c.html">Eustati buruz</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://eu.euskadi.eus/">Egoitza elektronikoa</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://eu.eustat.eus/privacidad_c.html">Pribatutasuna</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="piederecho">
+          <div class="logos-rrss-pie">
+              <div class="logos">
+                  <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
+                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
+                          style="border-width:0px;"></a>
+                  <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
+                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
+                          style="border-width:0px;"></a>
+              </div>
+              
+          </div>
+          <div class="piederecho-texto">
+              <p class="piederechop bold">Eustat - Euskal Estatistika Erakundea - Instituto Vasco de Estadística</p>
+              <p class="piederechop">Eustat, Euskal AEko informazio estatistiko ofiziala garatu, ekoiztu eta zabaltzen duen erakunde publikoa da</p>
+              <p class="piederechop">
+                c/Donostia - San Sebastián, 1<br>
+                01010 Vitoria-Gasteiz<br>
+                Tel: (+34) 945017500<br>
+                Fax: (+34) 945017501<br>
+                webmaster_eustat@eustat.eus
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -1060,7 +1201,7 @@ pertsona muturreko pobreziara eramango ditu 2030erako.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250505142703'></script>
+<script src='/site/assets/js/sdg.js?v=20250505155946'></script>
 
 
 <script>
@@ -1080,7 +1221,7 @@ pertsona muturreko pobreziara eramango ditu 2030erako.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250505142703"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250505155946"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

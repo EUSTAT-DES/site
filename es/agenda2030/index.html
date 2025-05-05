@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Medición del progreso en los Objetivos de Desarrollo Sostenible - Indicadores para los Objetivos de Desarrollo Sostenible</title>
+    <title>Agenda 2030 - Indicadores para los Objetivos de Desarrollo Sostenible</title>
 
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250505142703">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250505155946">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -173,32 +173,109 @@ layout-page
     <h2 class="internet-explorer-message-title">Este navegador de Internet ya no es compatible</h2>
     <p class="internet-explorer-message-body">Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.</p>
 </div>
-
-
 <header role="banner" class="">
-    <div class="barra_azul_cab">
-        <div id="logoMaster" class="logoMaster">
-          <a id="ctl00_Cabecera_enlaceHome" data-ajax="false" href="https://www.eustat.eus/indice.html">
-            <img src="https://www.eustat.eus/cwImages/2015/logocabecera.png" alt="eustat">
-          </a>
-          <div class="logoMasterDescripcion">
-            Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
-          </div>
+  <div class="header" >
+    <div class="header-top">
+        <div id="logo" class="logo-header">
+            <a id="logo-link" href="https://es.eustat.eus/indice.html">
+                <img src="https://sendoamasa.github.io/site/assets/img/LogoEustat.png" alt="eustat">
+            </a>
+            <div class="logo-header-description">
+                Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
+            </div>
         </div>
-      </div>
-      <div id="disclaimer">
-        
-<div class="container">
-  <div class="disclaimer-alert">
-    <strong class="phase-tag">POC</strong>
-    
-    Este es un sitio web de desarrollo.
-    
-  </div>
+        <div id="trigger_home" class="menu-button">
+            <img id="euskadieus-logo"src="https://sendoamasa.github.io/site/assets/img/logo-euskadi-eus.png" alt="eustat">
+            <img id="menu-button-img" src="https://www.eustat.eus/cwImages/2015/ham.png" alt="Mostrar/ocultar menu principal">
+        </div>
+    </div>
+    <div class="zutabeak">
+        <div class="o-content-zutabe">
+            <ul>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Temas</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operaciones</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://es.eustat.eus/bancopx/spanish/indice.html">Banco de datos</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://es.eustat.eus/indice.html#cy">Coyuntura</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://es.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Info. municipal</a></li>
+            </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <ul>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/calendario.html">Calendario</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://es.eustat.eus/productosServicios/sugerencias.html">Quejas y sugerencias</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://es.eustat.eusprodserv/info_c.html">Servicio de información</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://es.eustat.eus/notas_c.html">Servicio de prensa</a></li>
+            </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <div class="rrss">
+                <span class="texto-rrss">
+                  Síganos:
+                </span>
+                <div class="iconos-rrss">
+                    <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/linkedin.gif"></a>
+                    <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/facebook.gif"></a>
+                    <a href="http://twitter.com/eustat" target="_blank" title="X"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/X.gif"></a>
+                    <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/BlueSky.png"></a>
+                    <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
+                        style="display:inline-block;"><img class="sociales"
+                            src="https://www.eustat.eus/cwImages/2015/youtube.png"></a>
+                    <a href="https://es.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                        target="_blank" title="Rss novedades" style="display:inline-block;"><img
+                            class="sociales" src="https://www.eustat.eus/cwImages/2015/rss2.png"></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- zutabeak -->
 </div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM completamente cargado y procesado');
+    var container = document.querySelector('.header');
+    var zutabeak = document.querySelector('.zutabeak');
 
-      </div>
-    <div class="container">
+    function buildCanvas() {
+        document.getElementById('trigger_home').addEventListener('click', function (e) {
+            console.log("hey");
+            
+            e.preventDefault();
+            container.classList.toggle('active');
+            zutabeak.classList.toggle('active');
+            if (container.classList.contains('active')) {
+                
+                document.getElementById('menu-button-img').src = "https://www.eustat.eus/cwImages/2015/aspa.png";
+               
+            } else {
+                document.getElementById('menu-button-img').src = "https://www.eustat.eus/cwImages/2015/ham.png";
+                
+            }
+        });
+    }
+
+    buildCanvas();
+
+    window.addEventListener('resize', function () {
+        cHeight = document.querySelector('.o-content').offsetHeight;
+    });
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 500) {
+            document.querySelector('.scrollup').style.display = 'block';
+        } else {
+            document.querySelector('.scrollup').style.display = 'none';
+        }
+    });
+});
+</script>
+  <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/es/" id="home" aria-label="Ir a la página de inicio" title="Ir a la página de inicio">
     <img src="/site/assets/img/logo/SDG_logo_es.png" alt="Ir a la página de inicio" />
@@ -216,15 +293,23 @@ layout-page
                     Datos desagregados
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
-    <a class="dropdown-item" href="/site/es/territorio/">Territorio histórico</a>
+    <a class="dropdown-item" href="/site/es/menu.territorioPath">Territorio histórico</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/es/municipal/">Municipio</a>
+    <a class="dropdown-item" href="/site/es/menu.municipalPath">Municipio</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/es/sexo/">Sexo</a>
+    <a class="dropdown-item" href="/site/es/menu.sexoPath">Sexo</a>
 </li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/es/faq">Acerca de</a>
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-masinfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    menu.masInfo
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-masinfo"><li class=" ">
+    <a class="dropdown-item" href="/site/es/menu.agenda2030Path">Agenda 2030</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/es/menu.indicadoresPath">Información disponible sobre los indicadores</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/es/menu.acercaDePath">Web plataformari buruz</a>
 </li></ul>
+            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -250,7 +335,7 @@ layout-page
   <div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
-            <a class="language-toggle-link" href="/site/metodologia/">
+            <a class="language-toggle-link" href="/site/agenda2030/">
                 EU
             </a>
         </li></ul>
@@ -260,7 +345,7 @@ layout-page
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
-            <a class="language-toggle-link" href="/site/metodologia/">
+            <a class="language-toggle-link" href="/site/agenda2030/">
                 EU
             </a>
         </li></ul>
@@ -284,228 +369,24 @@ data-event-label="high"
         <li class="breadcrumb-item" >
             <a href="/site/es/">Inicio</a>
         </li>
-        <li class="breadcrumb-item active">Medición del progreso en los Objetivos de Desarrollo Sostenible</li>
+        <li class="breadcrumb-item active">Agenda 2030</li>
     </ol>
 </nav>
 </div>
 <div id="main-content" class="container" role="main">
     <div>
-        <h1>Medición del progreso en los Objetivos de Desarrollo Sostenible</h1>
+        <h1>Agenda 2030</h1>
         
 
 
-    <h2 id="medición-del-progreso">Medición del progreso</h2>
+    <p>La <a href="https://www.un.org/sustainabledevelopment/es/">Agenda 2030 para el Desarrollo Sostenible</a>, adoptada por todos los Estados miembros de las Naciones Unidas en 2015, proporciona un programa para mejorar la economía, la sociedad y el medio ambiente de una forma sostenible. En esencia, los 17 Objetivos de Desarrollo Sostenible (ODS) son un llamamiento universal a la acción para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas en todo el mundo puedan disfrutar de paz y prosperidad.
+Los objetivos se sustentan en un marco de indicadores mundiales que permiten hacer el seguimiento e informar sobre los avances. Abarcan una amplia gama de cuestiones sociales, ambientales y económicas, que incluyen, entre otras, la pobreza, el hambre, la salud, la educación, la igualdad social, la innovación, el cambio climático, la biodiversidad y la justicia, con un enfoque en los más vulnerables y un compromiso de no dejar a nadie atrás. También se alienta a los distintos gobiernos a desarrollar un plan de implementación que pueda incluir indicadores desarrollados para abordar contextos y prioridades específicos para lograr los ODS.</p>
 
-<p>Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.</p>
+<p>En Euskadi, el Gobierno Vasco ha dirigido, desde el primer momento, sus esfuerzos y proyectos hacia la consecución de los Objetivos de Desarrollo Sostenible y las metas de la Agenda 2030. Así, <a href="https://www.euskadi.eus/gobierno-vasco/innovacion-social-agenda-2030/">Lehendakaritza</a> lidera las actuaciones de las instituciones vascas en relación a la Agenda 2030 y los Objetivos de Desarrollo Sostenible.</p>
 
-<p>Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar sus esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.</p>
+<p>Para la monitorización del progreso hacia los ODS en la Comunidad Autónoma de Euskadi, Eustat – Instituto Vasco de Estadística, ha desarrollado la plataforma de indicadores del <a href="https://unstats.un.org/sdgs/metadata">marco de indicadores mundiales de Naciones Unidas</a> para el conjunto de la C.A. de Euskadi y sus territorios. Una parte importante de indicadores se han definido con una metodología armonizada con todos los órganos centrales de estadísticas de las Comunidades Autónomas, garantizando así la plena comparabilidad directa de estos indicadores a nivel regional (<a href="https://eustat-des.github.io/site/assets/doc/OCECA_es.pdf">Acuerdo de los órganos centrales de estadística de las CCAA (pdf, 14Kb)</a>). También se incluyen, bien directamente entre los indicadores de Naciones Unidas o bien como indicadores relacionados, los <a href="https://ec.europa.eu/eurostat/web/sdi">indicadores de Desarrollo Sostenible de la Unión Europea</a> así como indicadores propios de la C.A. de Euskadi, elaborados en coordinación con el <a href="https://www.euskadi.eus/gobierno-vasco/innovacion-social-agenda-2030/">Foro Agenda 2030 Euskadi</a>  para el seguimiento de los objetivos de Lehendakaritza.</p>
 
-<h2 id="metodología">Metodología</h2>
-
-<p>Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
-<a href="https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf">nota técnica sobre la medición del progreso</a> utilizada por al Unidad de Estadística de Naciones Unidas.</p>
-
-<p>Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.</p>
-
-<p>Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas para el conjunto del mundo.</p>
-
-<p>La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.</p>
-
-<h3 id="indicadores-con-valores-objetivo-para-2030">Indicadores con valores objetivo para 2030</h3>
-
-<p>Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:</p>
-
-\[CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1\]
-
-<p>A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:</p>
-
-\[v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}\]
-
-<p>Por último, se asigna una puntuación a la serie según los siguientes criterios:</p>
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} \geq 0.95$</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">$0.10 \leq \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} &lt; 0.95$</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} &lt; 0.10$</td>
-  </tr>
-</tbody>
-</table>
-
-<p><br /><br /></p>
-
-<p>Donde:
-<br /><br /> 
-$𝑏$ es el año base (normalmente 2015)<br />
-$𝑡$ es el último año para el que hay dato (por ejemplo: 2022)<br />
-$𝑣_{b}$ es el valor base en el año b<br />
-$𝑣_{𝑡}$ es el valor del último año 𝑡<br />
-$𝑣_{2030}$ es el valor objetivo para 2030<br />
-$𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
-
-<p><br /><br /></p>
-<h3 id="indicadores-sin-valores-objetivo-numéricos">Indicadores sin valores objetivo numéricos</h3>
-
-<p>Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:</p>
-
-\[CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1\]
-
-<p>A continuación, se asigna una puntuación al indicador según los siguientes criterios:</p>
-
-<p>Si el aumento es deseable:</p>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} \geq 0.02$ </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">$0.005 \leq \text{CAGR}_{a} &lt; 0.02$</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} &lt; 0.005$</td>
-  </tr>
-</tbody>
-</table>
-
-<p><br /><br /></p>
-<p>Si el descenso es deseable:</p>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} \leq -0.02$ </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">$-0.02 &lt; \text{CAGR}_{a} \leq -0.005$ </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} &gt; -0.005$</td>
-  </tr>
-</tbody>
-</table>
-
-<p><br /><br />
-En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.</p>
-
-<p>Las categorías de progreso asignadas se describen a continuación:</p>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Categoría</th>
-    <th class="tg-fymr">Símbolo</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" alt="Alcanzado" width="150" /></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">Progreso razonable, pero es necesario acelerarlo</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="En progreso" width="150" /></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">Estancamiento o retroceso</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150" /></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"> - </td>
-    <td class="tg-0pky"> No evaluado </td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150" /></td>
-  </tr>
-</tbody>
-</table>
-
-<p><br /><br /></p>
-
-<h3 id="consideraciones-y-excepciones">Consideraciones y excepciones</h3>
-<p>Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:</p>
-
-<ol>
-  <li>Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.</li>
-  <li>Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta.</li>
-  <li>Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.</li>
-  <li>A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.</li>
-  <li>Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (<em>y</em>).</li>
-  <li>Se requiere un mínimo de dos años de datos para calcular la medida de progreso.</li>
-  <li>Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.</li>
-  <li>Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.</li>
-  <li>A los indicadores binarios se les asignará una de estas 2 categorías:<br />
-a. “Meta alcanzada” en caso afirmativo. <br />
-b. “Estancamiento o retroceso” si es “no”.</li>
-  <li>Excepciones específicas:</li>
-</ol>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">nº indicador</th>
-    <th class="tg-fymr">Título del indicador</th>
-    <th class="tg-fymr">Meta</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">1.a.2</td>
-    <td class="tg-0pky">Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)   </td>
-    <td class="tg-0pky">Se ha considerado como meta la media de la UE para el indicador </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">5.4.1 </td>
-    <td class="tg-0pky">Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación </td>
-    <td class="tg-0pky">Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1</td>
-  </tr>
-</tbody>
-</table>
-
+<p>El marco de indicadores está en continuo crecimiento, tanto en número como en nivel de desagregación, siguiendo el objetivo inequívoco de Eustat de ofrecer información de calidad, integrado y comparable, tanto temporal como espacialmente, y adaptado a las necesidades de monitorización de nuestra sociedad.</p>
 
 
 
@@ -531,7 +412,63 @@ b. “Estancamiento o retroceso” si es “no”.</li>
             </div>
         </div>
     </div>
-    
+    <div class="pieEustat">
+  <div class="marcopie">
+      <div class="enlaces">
+          <div class="centradomini">
+              <ul class="list-group iconillo rupturasmall">
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/about/links_c.html">Enlaces</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/faq_c.html">FAQ</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/sitemap_c.html">Mapa</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/accesibilidad_c.html">Accesibilidad</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="centradomini">
+              <div class="Prayamini"></div>
+              <ul class="list-group iconillo rupturasmall">
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.euskadi.eus/about/a_eustat_c.html">Acerca de Eustat</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.euskadi.eus/">Sede electrónica</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/privacidad_c.html">Privacidad</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="piederecho">
+          <div class="logos-rrss-pie">
+              <div class="logos">
+                  <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
+                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
+                          style="border-width:0px;"></a>
+                  <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
+                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
+                          style="border-width:0px;"></a>
+              </div>
+              
+          </div>
+          <div class="piederecho-texto">
+              <p class="piederechop bold">Eustat - Euskal Estatistika Erakundea - Instituto Vasco de Estadística</p>
+              <p class="piederechop">Eustat es el organismo público que desarrolla, produce y difunde información estadística oficial de la C.A. de Euskadi.</p>
+              <p class="piederechop">
+                c/Donostia - San Sebastián, 1<br>
+                01010 Vitoria-Gasteiz<br>
+                Tfno: (+34) 945017500<br>
+                Fax: (+34) 945017501<br>
+                webmaster_eustat@eustat.eus
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -559,7 +496,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250505142703'></script>
+<script src='/site/assets/js/sdg.js?v=20250505155946'></script>
 
 
 <script>
@@ -579,7 +516,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250505142703"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250505155946"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
