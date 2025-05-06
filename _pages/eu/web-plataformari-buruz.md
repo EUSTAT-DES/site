@@ -3,6 +3,7 @@ title: Web plataformari buruz
 language: eu
 permalink: /web-plataformari-buruz/
 layout: page
+page_ref: acerca-de
 ---
 
 Eustatek garapen jasangarriko adierazleak bistaratzeko plataforma interaktibo hau garatu du, GJHen adierazleak hedatzeko Open SDG Plataforma erabiliz.

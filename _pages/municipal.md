@@ -3,6 +3,7 @@ title: Indicadores con datos municipales
 language: es
 permalink: /es/municipal/
 layout: page
+page_ref: municipal
 ---
 
 

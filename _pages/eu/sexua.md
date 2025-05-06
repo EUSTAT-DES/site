@@ -3,6 +3,7 @@ title: Sexuaren arabera bereizitako adierazleak
 language: eu
 permalink: /sexua/
 layout: page
+page_ref: sexo
 ---
 
 <div class="container">

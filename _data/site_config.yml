@@ -193,20 +193,19 @@ menu:
     dropdown: []
   - translation_key: menu.desagregaciones
     dropdown:
-      - path: menu.territorioPath
+      - page_ref: territorio
         translation_key: menu.territorio
-      - path: menu.municipalPath
+      - page_ref: municipal
         translation_key: menu.municipal
-      - path: menu.sexoPath
+      - page_ref: sexo
         translation_key: menu.sexo   
-  - path: menu.masInfoPath
-    translation_key: menu.masInfo
+  - translation_key: menu.masInfo
     dropdown: 
-      - path: menu.agenda2030Path
+      - page_ref: agenda2030
         translation_key: menu.agenda2030
-      - path: menu.indicadoresPath
+      - page_ref: indicadores
         translation_key: menu.indicadores
-      - path: menu.acercaDePath
+      - page_ref: acerca-de
         translation_key: menu.acercaDe   
 metadata_edit_url: metadata
 metadata_tabs:

@@ -2,7 +2,7 @@
 layout: page
 title: GJH Nazioarteko erakundeetan 
 language: eu
-permalink: /gjh-Nazioarteko-erakundeetan/
+permalink: /gjh-nazioarteko-erakundeetan/
 ---
 
 ## GJH Nazioarteko erakundeetan 

@@ -3,6 +3,7 @@ title: 2030 Agenda
 language: eu
 permalink: /2030agenda/
 layout: page
+page_ref: agenda2030
 ---
 
 Nazio Batuetako estatu kide guztiek 2015ean onartutako [Garapen Iraunkorrerako 2030 Agendak](https://www.un.org/sustainabledevelopment/es/) ekonomia, gizartea eta ingurumena modu jasangarrian hobetzeko programa bat eskaintzen du. Funtsean, Garapen Jasangarriko 17 Helburuak (GJH) ekintzarako dei unibertsala dira, pobreziari amaiera emateko, planeta babesteko eta mundu osoko pertsona guztiek bakeaz eta oparotasunaz gozatzeko aukera izan dezaten bermatzeko.

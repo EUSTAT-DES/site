@@ -3,6 +3,7 @@ title: Indicadores con datos desagregados por sexo
 language: es
 permalink: /es/sexo/
 layout: page
+page_ref: sexo
 ---
 
 

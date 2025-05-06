@@ -1,7 +1,7 @@
 ---
 title: Garapen Iraunkorreko Helburuen aurrerapenaren neurketa
 language: eu
-permalink: /eu/Jarraipen-txostena/
+permalink: /eu/jarraipen-txostena/
 layout: page
 ---
 

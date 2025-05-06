@@ -3,6 +3,7 @@ title: Acerca de la plataforma web
 language: es
 permalink: /es/acerca-de-la-plataforma-web/
 layout: page
+page_ref: acerca-de
 ---
 
 Eustat ha desarrollado esta plataforma interactiva de visualización de indicadores de desarrollo sostenible utilizando la [Plataforma Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para la difusión de indicadores de ODS.
