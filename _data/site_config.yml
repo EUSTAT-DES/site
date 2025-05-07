@@ -193,19 +193,19 @@ menu:
     dropdown: []
   - translation_key: menu.desagregaciones
     dropdown:
-      - page_ref: menu.territorioPath
+      - path: menu.territorioPath
         translation_key: menu.territorio
-      - page_ref: menu.municipalPath
+      - path: menu.municipalPath
         translation_key: menu.municipal
-      - page_ref: menu.sexoPath
+      - path: menu.sexoPath
         translation_key: menu.sexo   
   - translation_key: menu.masInfo
     dropdown: 
-      - page_ref: menu.agenda2030Path
+      - path: menu.agenda2030Path
         translation_key: menu.agenda2030
-      - page_ref: menu.indicadoresPath
+      - path: menu.indicadoresPath
         translation_key: menu.indicadores
-      - page_ref: menu.acercaDePath
+      - path: menu.acercaDePath
         translation_key: menu.acercaDe   
 metadata_edit_url: metadata
 metadata_tabs:
