@@ -3,7 +3,6 @@ title: Lurralde historikoaren arabera bereizitako adierazleak
 language: eu
 permalink: /lurraldeak/
 layout: page
-page_ref: territorio
 ---
 
 <div class="container">

@@ -3,7 +3,6 @@ title: Adierazleei buruzko informazio eskuragarria
 language: eu
 permalink: /adierazleei-buruzko-informazio-eskuragarria/
 layout: page
-page_ref: indicadores
 ---
 
 ###Adierazleen aurkezpena

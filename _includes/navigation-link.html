@@ -1,56 +1,11 @@
-{% assign item = include.item %} 
-{% assign item_url = '#' %} 
-{% assign item_path_for_active_check = '#' %}
-{% assign item_is_external = false %}
-{% assign active_lang = site.active_lang | default: site.default_language | default: 'en' %}
-
-{% if item.page_ref %}
-  
-  {% assign target_page = site.pages | where_exp: "page", "page.page_ref == item.page_ref and page.lang == active_lang" | first %}
-  {% if target_page %}
-    {% assign item_url = target_page.url %}
-    {% assign item_path_for_active_check = target_page.url %}
-  {% else %}
-     {% assign default_lang_page = site.pages | where_exp: "page", "page.page_ref == item.page_ref and page.lang == site.default_language" | first %}
-     {% if default_lang_page %}
-        {% assign item_url = default_lang_page.url %}
-        {% assign item_path_for_active_check = default_lang_page.url %}
-     {% endif %}
-  {% endif %}
-  {% assign item_is_external = false %}
-
-{% elsif item.path %}
-  {% assign item_path = item.path %}
-  {% if item_path contains "://" %}
-      
-      {% assign item_url = item_path %}
-      {% assign item_path_for_active_check = item_path %}
-      {% assign item_is_external = true %}
-  {% else %}
-      
-      {% assign item_url = item_path | relative_url %} 
-      {% assign item_path_for_active_check = item_url %} 
-      {% assign item_is_external = false %}
-  {% endif %}
-{% endif %}
-
-{% assign item_text = item.translation_key | t | default: item.translation_key %}
-
-{% assign is_active = false %}
-{% if page.url == item_path_for_active_check %}
-  {% assign is_active = true %}
-{% endif %}
-{% if item_url == '/' or item_url == page.baseurl | append: '/' %}
-  {% if page.url == '/' or page.url == '/index.html' or page.url == page.baseurl or page.url == page.baseurl | append: '/index.html' %}
-     {% assign is_active = true %}
-  {% endif %}
-{% endif %}
-
-
-<li class="{% unless include.in_dropdown %}nav-item{% endunless %} {% if is_active %}active{% endif %}">
-  <a class="{% if include.in_dropdown %}dropdown-item{% else %}nav-link{% endif %}"
-     href="{{ item_url }}"
-     {% if item_is_external %}target="_blank"{% endif %}>
-     {{ item_text }}
-  </a>
+{%- assign current_path_no_slash = page.url | remove: '/' -%}
+{%- assign raw_path = include.item.path | t %}
+{%- assign item_path_no_slash = raw_path | remove: '/' -%}
+{%- assign item_path = include.item.path -%}
+{%- assign item_path_first = item_path | slice: 0 %}
+{%- if item_path_first == '/' -%}
+{%- assign item_path = item_path | slice: 1, item_path.size -%}
+{%- endif -%}
+<li class="{% unless include.in_dropdown %}nav-item{% endunless %} {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
+    <a class="{% if include.in_dropdown %}dropdown-item{% else %}nav-link{% endif %}" href="{% unless item_path contains 'http' %}{{ page.baseurl }}{% endunless %}{{ item_path }}">{{ include.item.translation_key | t }}</a>
 </li>

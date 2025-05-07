@@ -3,7 +3,6 @@ title: Información disponible sobre los indicadores
 language: es
 permalink: /es/informacion-disponible-sobre-los-indicadores/
 layout: page
-page_ref: indicadores
 ---
 
 ###Presentación de los indicadores
