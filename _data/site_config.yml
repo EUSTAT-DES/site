@@ -197,6 +197,7 @@ menu:
         translation_key: menu.territorio
       - path: menu.municipalPath
         translation_key: menu.municipal
+        page_ref: municipal
       - path: menu.sexoPath
         translation_key: menu.sexo   
   - translation_key: menu.masInfo
