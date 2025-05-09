@@ -1,7 +1,7 @@
 ---
 title: Adierazleei buruzko informazio eskuragarria
 language: eu
-permalink: /adierazleei-buruzko-informazio-eskuragarria/
+permalink: /informacion-disponible-sobre-los-indicadores/
 layout: page
 ---
 
