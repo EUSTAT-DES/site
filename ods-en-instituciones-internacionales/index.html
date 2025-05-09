@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Garapen Iraunkorreko Helburuen aurrerapenaren neurketa - Garapen Jasangarrirako Helburuen adierazleak</title>
+    <title>GJH Nazioarteko erakundeetan - Garapen Jasangarrirako Helburuen adierazleak</title>
 
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250508143134">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250509100406">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -287,36 +287,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Hasiera</a>
-</li>
-<li class="nav-item ">
+</li><li class="nav-item ">
     <a class="nav-link" href="/site/reporting-status">Informazioaren egoera</a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Datu desagregatuak
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
-    <a class="dropdown-item" href="/site/lurraldeak/">Lurralde historikoa</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="/site/udalarena/">Udalerria</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="/site/sexua/">sexua</a>
-</li>
-</ul>
+    <a class="dropdown-item" href="/site/territorio/">Lurralde historikoa</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/municipal/">Udalerria</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/sexo/">sexua</a>
+</li></ul>
             </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-masinfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    menu.masInfo
+                    Informazio gehiago
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-masinfo"><li class=" ">
-    <a class="dropdown-item" href="/site/2030agenda/">2030 Agenda</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="/site/adierazleei-buruzko-informazio-eskuragarria/">Adierazleei buruzko informazio eskuragarria</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="/site/web-plataformari-buruz/">Web plataformari buruz</a>
-</li>
-</ul>
+    <a class="dropdown-item" href="/site/agenda2030/">2030 Agenda</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/informacion-disponible-sobre-los-indicadores/">Adierazleei buruzko informazio eskuragarria</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/acerca-de-la-plataforma-web/">Web plataformari buruz</a>
+</li></ul>
             </li></ul>
     
                 </div>
@@ -341,16 +333,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   <div class="language-toggle-container d-flex">
-    <!-- DEBUG: page.url_by_language = {&quot;eu&quot;=&gt;&quot;/eu/jarraipen-txostena/&quot;, &quot;es&quot;=&gt;&quot;/site/es/eu/jarraipen-txostena/&quot;} -->
-    <!-- DEBUG: page.page_ref =  -->
-    <!-- DEBUG: page.lang =  -->
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
-            <span class="language-toggle-active-language">
-                EU
-            </span>
-        </li><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/site/es/eu/jarraipen-txostena/">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/es/ods-en-instituciones-internacionales/">
                 ES
             </a>
         </li></ul>
@@ -358,16 +343,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
-    <!-- DEBUG: page.url_by_language = {&quot;eu&quot;=&gt;&quot;/eu/jarraipen-txostena/&quot;, &quot;es&quot;=&gt;&quot;/site/es/eu/jarraipen-txostena/&quot;} -->
-    <!-- DEBUG: page.page_ref =  -->
-    <!-- DEBUG: page.lang =  -->
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
-            <span class="language-toggle-active-language">
-                EU
-            </span>
-        </li><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/site/es/eu/jarraipen-txostena/">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/es/ods-en-instituciones-internacionales/">
                 ES
             </a>
         </li></ul>
@@ -391,261 +369,46 @@ data-event-label="high"
         <li class="breadcrumb-item" >
             <a href="/site/">Hasiera</a>
         </li>
-        <li class="breadcrumb-item active">Garapen Iraunkorreko Helburuen aurrerapenaren neurketa</li>
+        <li class="breadcrumb-item active">GJH Nazioarteko erakundeetan</li>
     </ol>
 </nav>
 </div>
 <div id="main-content" class="container" role="main">
     <div>
-        <h1>Garapen Iraunkorreko Helburuen aurrerapenaren neurketa</h1>
+        <h1>GJH Nazioarteko erakundeetan</h1>
         
 
 
-    <h2 id="introducción">Introducción</h2>
+    <h2 id="gjh-nazioarteko-erakundeetan">GJH Nazioarteko erakundeetan</h2>
 
-<p>La <a href="https://www.un.org/sustainabledevelopment/es/">Agenda 2030 para el Desarrollo Sostenible</a>, adoptada por todos los Estados miembros de las Naciones Unidas en 2015, proporciona un programa para mejorar la economía, la sociedad y el medio ambiente de una forma sostenible. En esencia, los 17 Objetivos de Desarrollo Sostenible (ODS) son una llamada universal a la acción para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas en todo el mundo puedan disfrutar de paz y prosperidad.</p>
-
-<p>Los objetivos están respaldados por un marco de indicadores mundiales que permiten hacer el seguimiento e informar sobre el progreso. Cubren una amplia gama de cuestiones sociales, ambientales y económicas con un enfoque en las personas más vulnerables y el compromiso de “no dejar a nadie atrás”. Para complementar los objetivos mundiales, se alienta a los distintos gobiernos a desarrollar un plan de implementación propio que se centre en indicadores que aborden contextos y prioridades específicos para lograr los ODS.</p>
-
-<p>Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores específico que 
-incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos dentro del Foro Multiagente de Transición Social y Agenda 2030 en Euskadi.</p>
-
-<h2 id="medición-del-progreso">Medición del progreso</h2>
-
-<p>Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.</p>
-
-<p>Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar sus esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.</p>
-
-<h2 id="metodología">Metodología</h2>
-
-<p>Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
-<a href="https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf">nota técnica sobre la medición del progreso</a> utilizada por al Unidad de Estadística de Naciones Unidas.</p>
-
-<p>Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.</p>
-
-<p>Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas para el conjunto del mundo.</p>
-
-<p>La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.</p>
-
-<h3 id="indicadores-con-valores-objetivo-para-2030">Indicadores con valores objetivo para 2030</h3>
-
-<p>Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:</p>
-
-\[CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1\]
-
-<p>A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:</p>
-
-\[v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}\]
-
-<p>Por último, se asigna una puntuación a la serie según los siguientes criterios:</p>
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} \geq 0.95$</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">$0.10 \leq \frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} &lt; 0.95$</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">$\frac{v_{2030}^{e} - v_{b}}{v_{2030} - v_{b}} &lt; 0.10$</td>
-  </tr>
-</tbody>
-</table>
-
-<p><br /><br /></p>
-
-<p>Donde:
-<br /><br /> 
-𝑏 es el año base (normalmente 2015)<br />
-𝑡 es el último año para el que hay dato (por ejemplo: 2022)<br />
-𝑣𝑏 es el valor base en el año b<br />
-𝑣𝑡 es el valor del último año 𝑡<br />
-$𝑣_{2030}$ es el valor objetivo para 2030<br />
-$𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
-
-<p><br /><br /></p>
-<h3 id="indicadores-sin-valores-objetivo-numéricos">Indicadores sin valores objetivo numéricos</h3>
-
-<p>Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:</p>
-
-\[CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1\]
-
-<p>A continuación, se asigna una puntuación al indicador según los siguientes criterios:</p>
-
-<p>Si el aumento es deseable:<br /></p>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} \geq 0.02$ </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">$0.005 \leq \text{CAGR}_{a} &lt; 0.02$</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} &lt; 0.005$</td>
-  </tr>
-</tbody>
-</table>
-
-<p>Si el descenso es deseable:<br /></p>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} \leq -0.02$ </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">$-0.02 &lt; \text{CAGR}_{a} \leq -0.005$ </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">$\text{CAGR}_{a} &gt; -0.005$</td>
-  </tr>
-</tbody>
-</table>
-
-<p><br /><br />
-En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.</p>
-
-<p>Las categorías de progreso asignadas se describen a continuación:</p>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Categoría</th>
-    <th class="tg-fymr">Símbolo</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">3</td>
-    <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" alt="Alcanzado" width="150" /></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">2</td>
-    <td class="tg-0pky">Progreso razonable, pero es necesario acelerarlo</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="En progreso" width="150" /></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">1</td>
-    <td class="tg-0pky">Estancamiento o retroceso</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150" /></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"> - </td>
-    <td class="tg-0pky"> No evaluado </td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150" /></td>
-  </tr>
-</tbody>
-</table>
-
-<p><br />
-###No evaluado</p>
-
-<p>En algunos casos no es posible medir el progreso de manera fiable u objetiva:</p>
-
+<p><strong>Nazio Batuen Erakundea</strong></p>
 <ul>
-  <li>Cuando el indicador disponible para la CA de Euskadi no está alineado con la metodología del indicador oficial de las Naciones Unidas. En estos casos se utiliza un proxy o medición sustitutiva, pero en ocasiones no mide lo mismo.</li>
-  <li>Cuando no existe una serie temporal suficiente para evaluar el progreso.</li>
-  <li>Cuando la evaluación descontextualizada no es posible, dada la complejidad del tema. Por ejemplo, es el caso del indicador 2.c.1 Indicador de anomalías en los precios de los alimentos. Este indicador pretende medir la actuación de un país para mantener estables los precios de los mercados, pero cuando los precios aumentan mucho por la situación internacional (por ejemplo, en 2023-2024), el país no tiene gran capacidad para mantener los precios.</li>
+  <li>
+    <p><a href="https://unstats.un.org/sdgs/dataportal">SDG Global Database</a></p>
+  </li>
+  <li>
+    <p><a href="https://unstats.un.org/sdgs/report/2024/">Sustainable Development Goals Report 2024</a></p>
+  </li>
+  <li>
+    <p><a href="https://unstats.un.org/sdgs/dataportal">E-Handbook on Sustainable Development Goals Indicators</a></p>
+  </li>
 </ul>
 
-<p>###Datos no disponibles</p>
-
-<p>Actualmente no existen datos para este indicador, pero se están estudiando distintas fuentes para ofrecer datos próximamente.</p>
-
-<p>###No aplicable</p>
-
-<p>Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:</p>
-
+<p><strong>Europar Batasuna</strong></p>
 <ul>
-  <li>No corresponde, por su nivel de desarrollo: Por ejemplo, el indicador 10.6.1 Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales no es adecuado para Euskadi, ya que no es un país en desarrollo.</li>
-  <li>Lo que se quiere medir, no existe o no es significativo: por ejemplo, el indicador 3.3.3 Incidencia de la malaria por cada 1.000 habitantes no es aplicable, puesto que se trata de una enfermedad tropical, inexistente en Euskadi.</li>
-  <li>Se refiere a una norma o estructura institucional que no corresponde a Euskadi: por ejemplo, el indicador 12.4.1 Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos, se refiere a un acuerdo internacional suscrito por los estados, por lo que no se puede aplicar a Euskadi.</li>
-  <li>Se trata de indicadores de medición global: por ejemplo, el indicador 17.10.1 Promedio arancelario mundial ponderado.</li>
+  <li>
+    <p><a href="https://ec.europa.eu/eurostat/web/sdi/overview">Europako Batzordearen adierazleak</a></p>
+  </li>
+  <li>
+    <p><a href="https://ec.europa.eu/eurostat/web/sdi/database">Eurostat datubasea</a></p>
+  </li>
+  <li>
+    <p><a href="https://ec.europa.eu/eurostat/documents/15234730/19397895/KS-05-24-071-EN-N.pdf/730c983a-fa93-6ce2-7905-2379de04f3e9?version=1.0&amp;t=1718611411114">Monitoring report on progress towards the SDGs in an EU context - 2024</a></p>
+  </li>
+  <li>
+    <p><a href="https://ec.europa.eu/eurostat/documents/4031688/19398139/KS-05-24-072-EN-N.pdf/021a09dd-277d-87d1-e347-867f0263ab59?version=1.1&amp;t=1718618520865">Overview of progress towards the SDGs in an EU context - 2024</a></p>
+  </li>
 </ul>
-
-<p><br /><br /></p>
-
-<h3 id="consideraciones-y-excepciones">Consideraciones y excepciones</h3>
-<p>Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:</p>
-
-<ol>
-  <li>Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.</li>
-  <li>Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta.</li>
-  <li>Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.</li>
-  <li>A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.</li>
-  <li>Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (<em>y</em>).</li>
-  <li>Se requiere un mínimo de dos años de datos para calcular la medida de progreso.</li>
-  <li>Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.</li>
-  <li>Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.</li>
-  <li>A los indicadores binarios se les asignará una de estas 2 categorías:<br />
-a. “Meta alcanzada” en caso afirmativo. <br />
-b. “Estancamiento o retroceso” si es “no”.</li>
-  <li>Excepciones específicas:</li>
-</ol>
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-fymr">nº indicador</th>
-    <th class="tg-fymr">Título del indicador</th>
-    <th class="tg-fymr">Meta</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">1.a.2</td>
-    <td class="tg-0pky">Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)   </td>
-    <td class="tg-0pky">Se ha considerado como meta la media de de la UE para el indicador </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">5.4.1 </td>
-    <td class="tg-0pky">Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación </td>
-    <td class="tg-0pky">Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1</td>
-  </tr>
-</tbody>
-</table>
 
 
 
@@ -755,7 +518,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250508143134'></script>
+<script src='/site/assets/js/sdg.js?v=20250509100406'></script>
 
 
 <script>
@@ -775,7 +538,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250508143134"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250509100406"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
