@@ -1,9 +1,8 @@
 ---
 title: Sexuaren arabera bereizitako adierazleak
 language: eu
-permalink: /sexua/
+permalink: /sexo/
 layout: page
-page_ref: sexo
 ---
 
 <div class="container">

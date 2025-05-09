@@ -1,7 +1,7 @@
 ---
 title: Lurralde historikoaren arabera bereizitako adierazleak
 language: eu
-permalink: /lurraldeak/
+permalink: /territorio/
 layout: page
 ---
 

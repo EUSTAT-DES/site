@@ -1,9 +1,8 @@
 ---
 title: Indicadores con datos municipales
 language: eu
-permalink: /udalarena/
+permalink: /municipal/
 layout: page
-page_ref: municipal
 ---
 
 Indicadores con datos municipales

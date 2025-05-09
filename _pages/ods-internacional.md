@@ -5,8 +5,6 @@ language: es
 permalink: /es/ods-en-instituciones-internacionales/
 ---
 
-## ODS en Instituciones Internacionales
-
 **Naciones Unidas**
 - [SDG Global Database](https://unstats.un.org/sdgs/dataportal)
 

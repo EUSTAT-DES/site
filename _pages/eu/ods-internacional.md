@@ -2,7 +2,7 @@
 layout: page
 title: GJH Nazioarteko erakundeetan 
 language: eu
-permalink: /gjh-nazioarteko-erakundeetan/
+permalink: /ods-en-instituciones-internacionales/
 ---
 
 ## GJH Nazioarteko erakundeetan 

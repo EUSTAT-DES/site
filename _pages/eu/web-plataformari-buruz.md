@@ -1,7 +1,7 @@
 ---
 title: Web plataformari buruz
 language: eu
-permalink: /web-plataformari-buruz/
+permalink: /acerca-de-la-plataforma-web/
 layout: page
 ---
 

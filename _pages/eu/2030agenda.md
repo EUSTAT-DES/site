@@ -1,7 +1,7 @@
 ---
 title: 2030 Agenda
 language: eu
-permalink: /2030agenda/
+permalink: /agenda2030/
 layout: page
 ---
 
