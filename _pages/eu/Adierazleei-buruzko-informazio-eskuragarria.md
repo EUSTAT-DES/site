@@ -17,5 +17,5 @@ Adierazle bakoitzaren orrialdearen behealdean erlaitz hauek agertzen dira:
 -	Informazio gehiago: atal honetan jasotzen da munduko edo Europako adierazlearen deskribapena eta justifikazioa, Euskal AEn eskuragarri dagoen adierazleak Nazio Batuen (edo, hala badagokio, Europar Batasunaren) adierazlearen baldintzak betetzen dituen ala ez, eta adierazlearen nazioarteko emaitzak. Munduko adierazlearen kalkuluari buruzko informazioa ere jasotzen du.
 
 ###GJHetako aurrerapenaren ebaluazioa
-Plataformak jarraipen-txosten bat du, Euskal Autonomia Erkidegoan Garapen Iraunkorreko Helburuak (GJH) lortzeko egindako aurrerapenaren deskribapen orokorra ematen duena. Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus [Aurrerapena neurtzeko metodologia](/jarraipen-txostena/)
+Plataformak jarraipen-txosten bat du, Euskal Autonomia Erkidegoan Garapen Jasangarrirako Helburuak (GJH) lortzeko egindako aurrerapenaren deskribapen orokorra ematen duena. Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus [Aurrerapena neurtzeko metodologia](/jarraipen-txostena/)
 
