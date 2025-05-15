@@ -6,15 +6,15 @@
     <div class="header-top">
         <div id="logo" class="logo-header">
             <a id="logo-link" href="https://{{ page.language }}.eustat.eus/indice.html">
-                <img src="{{ '/assets/img/LogoEustat.png | relative_url }}" alt="eustat">
+                <img src="{{ 'assets/img/LogoEustat.png | relative_url }}" alt="eustat">
             </a>
             <div class="logo-header-description">
                 Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
             </div>
         </div>
         <div id="trigger_home" class="menu-button">
-            <img id="euskadieus-logo"src="{{ '/assets/img/logo-euskadi-eus.png | relative_url }}" alt="eustat">
-            <img id="menu-button-img" src="{{ '/assets/img/ham.png | relative_url }}" alt="Mostrar/ocultar menu principal">
+            <img id="euskadieus-logo"src="{{ 'assets/img/logo-euskadi-eus.png | relative_url }}" alt="eustat">
+            <img id="menu-button-img" src="{{ 'assets/img/ham.png | relative_url }}" alt="Mostrar/ocultar menu principal">
         </div>
     </div>
     <div class="zutabeak">
@@ -79,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
             zutabeak.classList.toggle('active');
             if (container.classList.contains('active')) {
                 
-                document.getElementById('menu-button-img').src = "{{ '/assets/img/aspa.png | relative_url }}";
+                document.getElementById('menu-button-img').src = "{{ 'assets/img/aspa.png | relative_url }}";
                
             } else {
-                document.getElementById('menu-button-img').src = "{{ '/assets/img/ham.png | relative_url }}";
+                document.getElementById('menu-button-img').src = "{{ 'assets/img/ham.png | relative_url }}";
                 
             }
         });
