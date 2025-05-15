@@ -156,7 +156,7 @@ map_layers:
     max_zoom: 14
     staticBorders: true
 map_options:
-  disaggregation_controls: true
+  disaggregation_controls: false
   minZoom: 5
   maxZoom: 14
   tileURL: 'https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png'
