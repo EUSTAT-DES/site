@@ -2,7 +2,7 @@
 {% include header.html %}
 
 <!-- Asignar los datos desde el CSV -->
-{% assign reporting_data = site.data.progreso %}
+{% assign reporting_data = site.data.csv.progreso %}
 
 <!-- Definir el orden correcto de los objetivos -->
 {% assign ordered_goals = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17" | split: "," %}
