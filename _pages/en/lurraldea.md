@@ -1,7 +1,7 @@
 ---
 title: Indicators disaggregated by province
 language: en
-permalink: en/territorio/
+permalink: en/lurraldea/
 layout: page
 ---
 
