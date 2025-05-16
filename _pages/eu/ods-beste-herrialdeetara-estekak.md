@@ -2,7 +2,7 @@
 layout: page
 title: GJH beste herrialde batzuetan 
 language: eu
-permalink: /indicadores-ods-en-otros-paises/
+permalink: /herrialdeak/
 ---
 
 Hona hemen zenbait herrialdetako GJHen adierazleei buruzko plataformak. Zerrenda ez dago guztiz osatua:
