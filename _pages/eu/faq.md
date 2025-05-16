@@ -1,7 +1,7 @@
 ---
 title: Adierazleen sistema
 language: eu
-permalink: /eu/faq/
+permalink: /faq/
 layout: page
 ---
 
