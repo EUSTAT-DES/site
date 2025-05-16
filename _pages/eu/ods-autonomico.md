@@ -2,7 +2,7 @@
 layout: page
 title: GJH beste Autonomia Erkidego batzuetan 
 language: eu
-permalink: /indicadores-ods-en-otras-comunidades-autonomas/
+permalink: /erkidegoak/
 ---
 
 Hona hemen 2030 Agendaren adierazleei buruzko informazioa ematen duten Autonomia Erkidegoak:
