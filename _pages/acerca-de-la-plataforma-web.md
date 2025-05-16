@@ -1,7 +1,7 @@
 ---
 title: Acerca de la plataforma web
 language: es
-permalink: /es/acerca-de-la-plataforma-web/
+permalink: /es/plataforma/
 layout: page
 ---
 
