@@ -21,3 +21,5 @@ remote_data_prefix: "https://eustat.github.io/sdg-data-prod"
 analytics:
   # For production, you likely want to enter a Google Analytics code below.
   ga_prod: 'G-0VJB97F8XM'
+
+goal_image_base: 'https://eustat.github.io/assets/img/goals'
