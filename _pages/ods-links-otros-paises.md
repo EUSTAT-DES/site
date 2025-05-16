@@ -2,7 +2,7 @@
 layout: page
 title: Indicadores ODS en otros países 
 language: es
-permalink: /es/indicadores-ods-en-otros-paises/
+permalink: /es/herrialdeak/
 ---
 
 La siguiente lista muestra algunas de las plataformas sobre los ODS de distintos países. La lista no es exhaustiva:
