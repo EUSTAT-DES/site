@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eu" class="no-js">
+<html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://eustat-des.github.io/data/eu',
+  remoteDataBaseUrl: 'https://eustat-des.github.io/data/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -42,7 +42,7 @@ var opensdg = {
   // Disaggregations which should be ignored on indicator pages.
   ignoredDisaggregations: null,
 
-  language: 'eu',
+  language: 'en',
 
   mapColors: {
     "default": [
@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Indicators disaggregated by sex - Garapen Jasangarrirako Helburuen adierazleak</title>
+    <title>Indicators disaggregated by sex - Indicators For The Sustainable Development Goals</title>
 
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250515140206">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -161,23 +161,23 @@ var translations = {
         
 
     </head>
-<body class="language-eu
+<body class="language-en
 layout-page
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"POC","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."};</script>
+<script>translations['header'] = {"alpha":"POC","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website.","enable_high_contrast":"Enable high contrast","hide_menu":"Hide navigation menu","high_contrast":"High contrast","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","show_menu":"Show navigation menu","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Eduki nagusira joan</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">Interneteko nabigatzaile hau jada ez da bateragarria</h2>
-    <p class="internet-explorer-message-body">webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.</p>
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
 </div>
 <header role="banner" class="">
   <div class="header" >
     <div class="header-top">
         <div id="logo" class="logo-header">
-            <a id="logo-link" href="https://eu.eustat.eus/indice.html">
+            <a id="logo-link" href="https://en.eustat.eus/indice.html">
                 <img src="" alt="eustat">
             </a>
             <div class="logo-header-description">
@@ -192,25 +192,25 @@ layout-page
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Gaiak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Eragiketak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://eu.eustat.eus/bancopx/spanish/indice.html">Datu Bankua</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://eu.eustat.eus/indice.html#cy">Koiunturakoa</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://eu.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Udal informazioa</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Themes</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operations</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://en.eustat.eus/bancopx/spanish/indice.html">Data Bank</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://en.eustat.eus/indice.html#cy">Economic & Social Trends</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://en.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Municipalities information</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/calendario.html">Egutegia</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://eu.eustat.eus/productosServicios/sugerencias.html">Kexak/iradokizunak</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://eu.eustat.eusprodserv/info_c.html">Informazio zerbitzua</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://eu.eustat.eus/notas_c.html">Prentsa-gunea</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/calendario.html">Calendar</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://en.eustat.eus/productosServicios/sugerencias.html">Complaints and Suggestions</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://en.eustat.eusprodserv/info_c.html">Information Service</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://en.eustat.eus/notas_c.html">Press Service</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <div class="rrss">
                 <span class="texto-rrss">
-                  Jarraiguzu:
+                  Follow Us:
                 </span>
                 <div class="iconos-rrss">
                     <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
@@ -228,7 +228,7 @@ layout-page
                     <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
                         style="display:inline-block;"><img class="sociales" alt="Youtube"
                             src="/site/assets/img/rrss/youtube.png"></a>
-                    <a href="https://eu.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                    <a href="https://en.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
                         target="_blank" title="Rss novedades" style="display:inline-block;"><img
                             class="sociales" alt="Rss novedades" src="/site/assets/img/rrss/rss2.png"></a>
                 </div>
@@ -277,48 +277,48 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
   <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/site/" id="home" aria-label="Joan hasierako orrira" title="Joan hasierako orrira">
-    <img src="/site/assets/img/logo/SDG_logo_eu.png" alt="Joan hasierako orrira" />
+            <a class="navbar-brand" href="/site/en/" id="home" aria-label="Go to homepage" title="Go to homepage">
+    <img src="/site/assets/img/logo/SDG_logo_en.png" alt="Go to homepage" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Erakutsi nabigazio-menua">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/">Hasiera</a>
+    <a class="nav-link" href="/site/en/">Home</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/reporting-status">Jarraipen txostena</a>
+    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Datu desagregatuak
+                    menu.desagregaciones
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
-    <a class="dropdown-item" href="/site/territorio/">Lurralde historikoa</a>
+    <a class="dropdown-item" href="/site/en/territorio/">menu.territorio</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/municipal/">Udalerria</a>
+    <a class="dropdown-item" href="/site/en/municipal/">menu.municipal</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/sexo/">Sexua</a>
+    <a class="dropdown-item" href="/site/en/sexo/">menu.sexo</a>
 </li></ul>
             </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-masinfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Informazio gehiago
+                    menu.masInfo
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-masinfo"><li class=" ">
-    <a class="dropdown-item" href="/site/agenda2030/">2030 Agenda</a>
+    <a class="dropdown-item" href="/site/en/agenda2030/">menu.agenda2030</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/informacion-disponible-sobre-los-indicadores/">Adierazleei buruzko informazio eskuragarria</a>
+    <a class="dropdown-item" href="/site/en/informacion-disponible-sobre-los-indicadores/">menu.indicadores</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/acerca-de-la-plataforma-web/">Web plataformari buruz</a>
+    <a class="dropdown-item" href="/site/en/acerca-de-la-plataforma-web/">menu.acercaDe</a>
 </li></ul>
             </li></ul>
     
                 </div>
                 <div class="header-search-bar">
-                    <form class="align-self-lg-end" id="search" action="/site/search/">
+                    <form class="align-self-lg-end" id="search" action="/site/en/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Bilatu</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Bilatu">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Bilatu web-orrian" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
@@ -334,22 +334,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/site/es/en/sexo/">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/sexo/">
+                EU
+            </a>
+        </li><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/es/sexo/">
                 ES
             </a>
+        </li><li class="language-option-en list-inline-item">
+            <span class="language-toggle-active-language">
+                EN
+            </span>
         </li></ul>
 </div>
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/site/es/en/sexo/">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/sexo/">
+                EU
+            </a>
+        </li><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/site/es/sexo/">
                 ES
             </a>
+        </li><li class="language-option-en list-inline-item">
+            <span class="language-toggle-active-language">
+                EN
+            </span>
         </li></ul>
-</div></span><a title="" aria-label=""
+</div></span><a title="Enable high contrast" aria-label="Enable high contrast"
     data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -367,7 +383,7 @@ data-event-label="high"
     <nav>
     <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         <li class="breadcrumb-item" >
-            <a href="/site/">Hasiera</a>
+            <a href="/site/en/">Home</a>
         </li>
         <li class="breadcrumb-item active">Indicators disaggregated by sex</li>
     </ol>
@@ -394,15 +410,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/1/" title=" 1" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/1.png" alt="Pobreziaren amaiera" width="80" height="80" class="goal-icon-1 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/1/" title=" 1" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/1.png" alt="No poverty" width="80" height="80" class="goal-icon-1 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/1/">Pobreziaren amaiera</a>
+                <a href="/site/en/1/">No poverty</a>
                 
             </h3>
         </div>
@@ -417,8 +433,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">1.2.1</span>
-          <a href="/site/1-2-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Pobreziaren atalase nazionalaren azpitik bizi den biztanleriaren proportzioa, sexuaren eta adinaren arabera banakatuta
+          <a href="/site/en/1-2-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of population living below the national poverty line, by sex and age
           </a>
         </li>
       
@@ -431,8 +447,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">1.2.2</span>
-          <a href="/site/1-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Pobrezian bizi diren adin guztietako gizon, emakume eta haurren proportzioa, dimentsio guztietan, definizio nazionalen arabera
+          <a href="/site/en/1-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions
           </a>
         </li>
       
@@ -445,8 +461,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">1.3.1</span>
-          <a href="/site/1-3-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Gizarte-babeseko gutxieneko sistemek edo mailek estalitako biztanleriaren proportzioa, sexuaren arabera banakatuta, honako hauek bereiziz: haurrak, langabeak, adinekoak, desgaitasuna duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak
+          <a href="/site/en/1-3-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of population covered by social protection floors/systems, by sex, distinguishing children, unemployed persons, older persons, persons with disabilities, pregnant women, newborns, work-injury victims and the poor and the vulnerable
           </a>
         </li>
       
@@ -459,8 +475,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">1.5.1</span>
-          <a href="/site/1-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            100.000 biztanleko hondamenen ondorioz hildako, desagertutako eta eragindako pertsonen kopurua
+          <a href="/site/en/1-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
           </a>
         </li>
       
@@ -637,15 +653,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/2/" title=" 2" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/2.png" alt="Goserik ez" width="80" height="80" class="goal-icon-2 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/2/" title=" 2" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/2.png" alt="Zero hunger" width="80" height="80" class="goal-icon-2 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/2/">Goserik ez</a>
+                <a href="/site/en/2/">Zero hunger</a>
                 
             </h3>
         </div>
@@ -700,8 +716,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">2.2.2</span>
-          <a href="/site/2-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Malnutrizioaren prebalentzia (altuerarako pisua, OMEko haurren hazkunde-patroien medianaren &gt; +2 edo &lt; -2 desbiderapen tipikoa) 5 urtetik beherako haurren artean, motaren arabera banakatuta (emaziazioa eta gehiegizko pisua)
+          <a href="/site/en/2-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Prevalence of malnutrition (weight for height &gt;+2 or &lt;-2 standard deviation from the median of the WHO Child Growth Standards) among children under 5 years of age, by type (wasting and overweight)
           </a>
         </li>
       
@@ -714,7 +730,7 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">2.2.E1</span>
-          <a href="/site/2-2-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+          <a href="/site/en/2-2-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
             GRAFICO.2-2-E1-titulo
           </a>
         </li>
@@ -860,15 +876,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/3/" title=" 3" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/3.png" alt="Osasuna eta ongizatea" width="80" height="80" class="goal-icon-3 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/3/" title=" 3" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/3.png" alt="Good health and well-being" width="80" height="80" class="goal-icon-3 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/3/">Osasuna eta ongizatea</a>
+                <a href="/site/en/3/">Good health and well-being</a>
                 
             </h3>
         </div>
@@ -931,8 +947,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.2.1</span>
-          <a href="/site/3-2-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            5 urtetik beherako haurren heriotza-tasa
+          <a href="/site/en/3-2-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Under‑5 mortality rate
           </a>
         </li>
       
@@ -945,8 +961,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.2.2</span>
-          <a href="/site/3-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Jaioberrien heriotza-tasa
+          <a href="/site/en/3-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Neonatal mortality rate
           </a>
         </li>
       
@@ -959,8 +975,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.3.1</span>
-          <a href="/site/3-3-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            GIBak eragindako infekzio berrien kopurua infektatu gabeko 1.000 biztanleko, sexuaren, adinaren eta funtsezko herrien arabera banakatuta
+          <a href="/site/en/3-3-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations
           </a>
         </li>
       
@@ -973,8 +989,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.3.2</span>
-          <a href="/site/3-3-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            100.000 biztanleko tuberkulosiaren intzidentzia
+          <a href="/site/en/3-3-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Tuberculosis incidence per 100,000 population
           </a>
         </li>
       
@@ -987,8 +1003,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.3.3</span>
-          <a href="/site/3-3-3/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            1.000 biztanleko malariaren intzidentzia
+          <a href="/site/en/3-3-3/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Malaria incidence per 1,000 population
           </a>
         </li>
       
@@ -1001,8 +1017,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.3.4</span>
-          <a href="/site/3-3-4/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            B hepatitisaren intzidentzia 100.000 biztanleko
+          <a href="/site/en/3-3-4/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Hepatitis B incidence per 100,000 population
           </a>
         </li>
       
@@ -1015,8 +1031,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.4.1</span>
-          <a href="/site/3-4-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Gaixotasun kardiobaskularrei, minbiziari, diabetesari edo arnas gaixotasun kronikoei egotzitako heriotza-tasa
+          <a href="/site/en/3-4-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease
           </a>
         </li>
       
@@ -1029,8 +1045,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.4.2</span>
-          <a href="/site/3-4-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Suizidioagatiko heriotza-tasa
+          <a href="/site/en/3-4-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Suicide mortality rate
           </a>
         </li>
       
@@ -1043,7 +1059,7 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.4.E1</span>
-          <a href="/site/3-4-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+          <a href="/site/en/3-4-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
             Tasa de participación en los programas de cribado poblacional de cáncer (<b>Indicador Gobierno Vasco</b>)
           </a>
         </li>
@@ -1057,7 +1073,7 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.4.E2</span>
-          <a href="/site/3-4-E2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+          <a href="/site/en/3-4-E2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
             Esperanza de vida y esperanza de vida en buena salud (<b>Indicador Gobierno Vasco</b>)
           </a>
         </li>
@@ -1071,8 +1087,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.5.1</span>
-          <a href="/site/3-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Substantzia adiktiboen abusuak eragindako nahasmenduen tratamenduen estaldura (farmakologikoak eta psikosozialak eta errehabilitazio- eta poststratamendu-zerbitzuak)
+          <a href="/site/en/3-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders
           </a>
         </li>
       
@@ -1085,8 +1101,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.6.1</span>
-          <a href="/site/3-6-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Trafiko-istripuek eragindako lesioen ondoriozko heriotza-tasa
+          <a href="/site/en/3-6-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Death rate due to road traffic injuries
           </a>
         </li>
       
@@ -1099,8 +1115,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.8.1</span>
-          <a href="/site/3-8-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Oinarrizko osasun-zerbitzuen estaldura
+          <a href="/site/en/3-8-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Coverage of essential health services
           </a>
         </li>
       
@@ -1113,8 +1129,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.9.3</span>
-          <a href="/site/3-9-3/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Nahi gabeko intoxikazioei egotzitako heriotza-tasa
+          <a href="/site/en/3-9-3/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Mortality rate attributed to unintentional poisoning
           </a>
         </li>
       
@@ -1127,8 +1143,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.a.1</span>
-          <a href="/site/3-a-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Egungo tabako-kontsumoaren prebalentzia 15 urtetik aurrera (adin egokituak)
+          <a href="/site/en/3-a-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Age-standardized prevalence of current tobacco use among persons aged 15 years and older
           </a>
         </li>
       
@@ -1141,8 +1157,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">3.c.1</span>
-          <a href="/site/3-c-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Osasun-langileen dentsitatea eta banaketa
+          <a href="/site/en/3-c-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Health worker density and distribution
           </a>
         </li>
       
@@ -1223,15 +1239,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/4/" title=" 4" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/4.png" alt="Kalitatezko hezkuntza" width="80" height="80" class="goal-icon-4 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/4/" title=" 4" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/4.png" alt="Quality education" width="80" height="80" class="goal-icon-4 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/4/">Kalitatezko hezkuntza</a>
+                <a href="/site/en/4/">Quality education</a>
                 
             </h3>
         </div>
@@ -1358,8 +1374,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">4.1.1</span>
-          <a href="/site/4-1-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Haur eta nerabeen proportzioa, a) 2. edo 3. graduetan, b) lehen hezkuntzaren amaieran eta c) beheko bigarren hezkuntzaren amaieran, gutxieneko gaitasun-maila bat lortu dutenak i) irakurketan eta ii) matematikan, sexuaren arabera banakatuta
+          <a href="/site/en/4-1-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of children and young people (a) in grades 2/3; (b) at the end of primary; and (c) at the end of lower secondary achieving at least a minimum proficiency level in (i) reading and (ii) mathematics, by sex
           </a>
         </li>
       
@@ -1372,7 +1388,7 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">4.1.E1</span>
-          <a href="/site/4-1-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+          <a href="/site/en/4-1-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
             Tasa de abandono escolar prematuro de la población de 18-24 años
           </a>
         </li>
@@ -1386,8 +1402,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">4.2.2</span>
-          <a href="/site/4-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Antolatutako ikaskuntzan parte hartzeko tasa (lehen hezkuntzan sartzeko adin ofiziala baino urtebete lehenago), sexuaren arabera banakatuta
+          <a href="/site/en/4-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Participation rate in organized learning (one year before the official primary entry age), by sex
           </a>
         </li>
       
@@ -1400,8 +1416,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">4.3.1</span>
-          <a href="/site/4-3-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Gazteek eta helduek azken 12 hilabeteetan hezkuntzan eta prestakuntza akademikoan eta ez-akademikoan izandako parte-hartze tasa, sexuaren arabera banakatuta
+          <a href="/site/en/4-3-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex
           </a>
         </li>
       
@@ -1414,8 +1430,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">4.4.1</span>
-          <a href="/site/4-4-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Informazioaren eta komunikazioaren teknologian (IKT) gaitasuna duten gazteen eta helduen proportzioa, gaitasun motaren arabera banakatuta
+          <a href="/site/en/4-4-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of youth and adults with information and communications technology (ICT) skills, by type of skill
           </a>
         </li>
       
@@ -1428,8 +1444,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">4.5.1</span>
-          <a href="/site/4-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Parekotasun-indizeak (emakumeen eta gizonen artean, landako eta hiriko eremuen artean, goiko eta beheko aberastasun-kintilen artean, eta ezinduak, herri indigenak eta gatazkek eragindakoak bezalako taldeen artean, datuak izan ahala) zerrenda honetako hezkuntza-adierazle guztiak banakatzeko
+          <a href="/site/en/4-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Parity indices (female/male, rural/urban, bottom/top wealth quintile and others such as disability status, indigenous peoples and conflict-affected, as data become available) for all education indicators on this list that can be disaggregated
           </a>
         </li>
       
@@ -1442,8 +1458,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">4.6.1</span>
-          <a href="/site/4-6-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            a) alfabetatzean eta b) aritmetikan gutxienez gaitasun funtzionaleko maila finkoa lortu duen adin-talde jakin bateko biztanleriaren proportzioa, sexuaren arabera banakatuta
+          <a href="/site/en/4-6-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of population in a given age group achieving at least a fixed level of proficiency in functional (a) literacy and (b) numeracy skills, by sex
           </a>
         </li>
       
@@ -1496,15 +1512,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/5/" title=" 5" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/5.png" alt="Genero berdintasuna" width="80" height="80" class="goal-icon-5 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/5/" title=" 5" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/5.png" alt="Gender equality" width="80" height="80" class="goal-icon-5 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/5/">Genero berdintasuna</a>
+                <a href="/site/en/5/">Gender equality</a>
                 
             </h3>
         </div>
@@ -1659,8 +1675,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">5.4.1</span>
-          <a href="/site/5-4-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Etxeko lanetan eta ordaindu gabeko laguntzan emandako denboraren proportzioa, sexuaren, adinaren eta kokapenaren arabera banakatuta
+          <a href="/site/en/5-4-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of time spent on unpaid domestic and care work, by sex, age and location
           </a>
         </li>
       
@@ -1673,8 +1689,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">5.a.1</span>
-          <a href="/site/5-a-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            a) Jabetza-eskubideak edo nekazaritza-lurren gaineko eskubide seguruak dituzten nekazarien guztizkoaren proportzioa, sexuaren arabera banakatuta; eta b) emakumeen proportzioa nekazaritza-lurren gaineko eskubideen jabeen edo titularren artean, edukitza-motaren arabera banakatuta
+          <a href="/site/en/5-a-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            (a) Proportion of total agricultural population with ownership or secure rights over agricultural land, by sex; and (b) share of women among owners or rights-bearers of agricultural land, by type of tenure
           </a>
         </li>
       
@@ -1687,8 +1703,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">5.b.1</span>
-          <a href="/site/5-b-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Telefono mugikorra duten pertsonen proportzioa, sexuaren arabera banakatuta
+          <a href="/site/en/5-b-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of individuals who own a mobile telephone, by sex
           </a>
         </li>
       
@@ -1729,15 +1745,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/6/" title=" 6" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/6.png" alt="Ur garbia eta saneamendua" width="80" height="80" class="goal-icon-6 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/6/" title=" 6" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/6.png" alt="Clean water and sanitation" width="80" height="80" class="goal-icon-6 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/6/">Ur garbia eta saneamendua</a>
+                <a href="/site/en/6/">Clean water and sanitation</a>
                 
             </h3>
         </div>
@@ -1932,15 +1948,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/7/" title=" 7" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/7.png" alt="Energia eskuragarria eta garbia" width="80" height="80" class="goal-icon-7 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/7/" title=" 7" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/7.png" alt="Affordable and clean energy" width="80" height="80" class="goal-icon-7 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/7/">Energia eskuragarria eta garbia</a>
+                <a href="/site/en/7/">Affordable and clean energy</a>
                 
             </h3>
         </div>
@@ -2135,15 +2151,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/8/" title=" 8" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/8.png" alt="Lan duina eta hazkunde ekonomikoa" width="80" height="80" class="goal-icon-8 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/8/" title=" 8" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/8.png" alt="Decent work and economic growth" width="80" height="80" class="goal-icon-8 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/8/">Lan duina eta hazkunde ekonomikoa</a>
+                <a href="/site/en/8/">Decent work and economic growth</a>
                 
             </h3>
         </div>
@@ -2310,8 +2326,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">8.10.2</span>
-          <a href="/site/8-10-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Banku batean, beste finantza-erakunde batean edo diru mugikorreko zerbitzuen hornitzaile batean kontu bat duten helduen proportzioa (15 urtetik aurrera)
+          <a href="/site/en/8-10-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider
           </a>
         </li>
       
@@ -2324,8 +2340,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">8.5.1</span>
-          <a href="/site/8-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Landunen batez besteko diru-sarrerak orduko, sexuaren, adinaren, okupazioaren eta desgaitasuna duten pertsonen arabera banakatuta
+          <a href="/site/en/8-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Average hourly earnings of employees, by sex, age, occupation and persons with disabilities
           </a>
         </li>
       
@@ -2338,8 +2354,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">8.5.2</span>
-          <a href="/site/8-5-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Langabezia-tasa, sexuaren, adinaren eta desgaitasuna duten pertsonen arabera banakatuta
+          <a href="/site/en/8-5-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Unemployment rate, by sex, age and persons with disabilities
           </a>
         </li>
       
@@ -2352,7 +2368,7 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">8.5.E1</span>
-          <a href="/site/8-5-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+          <a href="/site/en/8-5-E1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
             Tasa de ocupación de la población (<b>Indicador UE sdg_08_30</b>)
           </a>
         </li>
@@ -2366,8 +2382,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">8.6.1</span>
-          <a href="/site/8-6-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Ikasten ez duten, enplegaturik ez duten eta gaikuntzarik jasotzen ez duten gazteen proportzioa (15-24 urte)
+          <a href="/site/en/8-6-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of youth (aged 15–24 years) not in education, employment or training
           </a>
         </li>
       
@@ -2388,15 +2404,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/9/" title=" 9" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/9.png" alt="Industria, berrikuntza eta azpiegiturak" width="80" height="80" class="goal-icon-9 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/9/" title=" 9" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure" width="80" height="80" class="goal-icon-9 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/9/">Industria, berrikuntza eta azpiegiturak</a>
+                <a href="/site/en/9/">Industry, innovation and infrastructure</a>
                 
             </h3>
         </div>
@@ -2583,8 +2599,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">9.2.2</span>
-          <a href="/site/9-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Manufaktura-sektorearen enplegua guztizko enpleguaren proportzioan
+          <a href="/site/en/9-2-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Manufacturing employment as a proportion of total employment
           </a>
         </li>
       
@@ -2601,15 +2617,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/10/" title=" 10" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/10.png" alt="Desberdintasunak murriztea" width="80" height="80" class="goal-icon-10 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/10/" title=" 10" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/10.png" alt="Reduced inequalities" width="80" height="80" class="goal-icon-10 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/10/">Desberdintasunak murriztea</a>
+                <a href="/site/en/10/">Reduced inequalities</a>
                 
             </h3>
         </div>
@@ -2804,15 +2820,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/11/" title=" 11" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/11.png" alt="Hiri eta komunitate jasangarriak" width="80" height="80" class="goal-icon-11 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/11/" title=" 11" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/11.png" alt="Sustainable cities and communities" width="80" height="80" class="goal-icon-11 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/11/">Hiri eta komunitate jasangarriak</a>
+                <a href="/site/en/11/">Sustainable cities and communities</a>
                 
             </h3>
         </div>
@@ -2843,8 +2859,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">11.5.1</span>
-          <a href="/site/11-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            100.000 pertsonako, zuzenean hondamendiei egotzitako hildako, desagertutako eta kaltetutako pertsonen kopurua
+          <a href="/site/en/11-5-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
           </a>
         </li>
       
@@ -3017,15 +3033,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/12/" title=" 12" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/12.png" alt="Ekoizpen eta kontsumo arduratsuak" width="80" height="80" class="goal-icon-12 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/12/" title=" 12" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/12.png" alt="Responsible consumption and production" width="80" height="80" class="goal-icon-12 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/12/">Ekoizpen eta kontsumo arduratsuak</a>
+                <a href="/site/en/12/">Responsible consumption and production</a>
                 
             </h3>
         </div>
@@ -3220,15 +3236,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/13/" title=" 13" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/13.png" alt="Klimaren aldeko ekintza" width="80" height="80" class="goal-icon-13 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/13/" title=" 13" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/13.png" alt="Climate action" width="80" height="80" class="goal-icon-13 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/13/">Klimaren aldeko ekintza</a>
+                <a href="/site/en/13/">Climate action</a>
                 
             </h3>
         </div>
@@ -3263,8 +3279,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">13.1.1</span>
-          <a href="/site/13-1-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            100.000 pertsonako, hildako, desagertutako eta zuzenean hondamendiei egotzitako pertsona kopurua
+          <a href="/site/en/13-1-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
           </a>
         </li>
       
@@ -3433,15 +3449,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/14/" title=" 14" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/14.png" alt="Itsaspeko bizitza" width="80" height="80" class="goal-icon-14 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/14/" title=" 14" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/14.png" alt="Life below water" width="80" height="80" class="goal-icon-14 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/14/">Itsaspeko bizitza</a>
+                <a href="/site/en/14/">Life below water</a>
                 
             </h3>
         </div>
@@ -3636,15 +3652,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/15/" title=" 15" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/15.png" alt="Lehorreko ekosistemetako bizitza" width="80" height="80" class="goal-icon-15 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/15/" title=" 15" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/15.png" alt="Life on land" width="80" height="80" class="goal-icon-15 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/15/">Lehorreko ekosistemetako bizitza</a>
+                <a href="/site/en/15/">Life on land</a>
                 
             </h3>
         </div>
@@ -3839,15 +3855,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/16/" title=" 16" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/16.png" alt="Bakea, justizia eta instituzio sendoak" width="80" height="80" class="goal-icon-16 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/16/" title=" 16" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/16.png" alt="Peace, justice and strong institutions" width="80" height="80" class="goal-icon-16 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/16/">Bakea, justizia eta instituzio sendoak</a>
+                <a href="/site/en/16/">Peace, justice and strong institutions</a>
                 
             </h3>
         </div>
@@ -3886,8 +3902,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">16.1.4</span>
-          <a href="/site/16-1-4/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Ilundu ondoren bere bizilekuan bakarrik ibiltzean seguru sentitzen den biztanleriaren proportzioa
+          <a href="/site/en/16-1-4/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of population that feel safe walking alone around the area they live after dark
           </a>
         </li>
       
@@ -3900,8 +3916,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">16.3.2</span>
-          <a href="/site/16-3-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Preso guztien artean kondenatuak izan ez diren atxilotuen proportzioa
+          <a href="/site/en/16-3-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Unsentenced detainees as a proportion of overall prison population
           </a>
         </li>
       
@@ -3914,8 +3930,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">16.6.2</span>
-          <a href="/site/16-6-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Zerbitzu publikoetan izandako azken esperientziarekin pozik dauden biztanleen proportzioa
+          <a href="/site/en/16-6-2/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of population satisfied with their last experience of public services
           </a>
         </li>
       
@@ -4072,15 +4088,15 @@ data-event-label="high"
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
             <!-- Icono del Objetivo -->
             
-            <a href="/site/17/" title=" 17" style="margin-right: 15px;">
-                <img src="https://eustat-des.github.io/site/assets/img/goals/eu/17.png" alt="Helburuak lortzeko aliantzak" width="80" height="80" class="goal-icon-17 goal-icon-image goal-icon-image-" />
+            <a href="/site/en/17/" title=" 17" style="margin-right: 15px;">
+                <img src="https://eustat-des.github.io/site/assets/img/goals/en/17.png" alt="Partnerships for the goals" width="80" height="80" class="goal-icon-17 goal-icon-image goal-icon-image-" />
             </a>
             
             
             <!-- Título del Objetivo -->
             <h3 style="margin: 0;">
                 
-                <a href="/site/17/">Helburuak lortzeko aliantzak</a>
+                <a href="/site/en/17/">Partnerships for the goals</a>
                 
             </h3>
         </div>
@@ -4131,8 +4147,8 @@ data-event-label="high"
       
         <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
           <span style="flex-shrink: 0;">17.8.1</span>
-          <a href="/site/17-8-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            Internet erabiltzen duten pertsonen proportzioa
+          <a href="/site/en/17-8-1/" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+            Proportion of individuals using the Internet
           </a>
         </li>
       
@@ -4292,12 +4308,12 @@ data-event-label="high"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Open SDGrekin eraikia</a>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
                         </li>
                         
                         
                         <li>
-                            <a href="/site/config">Configuration</a>
+                            <a href="/site/en/config">Configuration</a>
                         </li>
                         </ul>
                 </div>
@@ -4310,13 +4326,13 @@ data-event-label="high"
           <div class="centradomini">
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/about/links_c.html">Estekak</a></li>
+                          data-ajax="false" href="https://en.eustat.eus/about/links_c.html">Links</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/faq_c.html">FAQ</a></li>
+                          data-ajax="false" href="https://en.eustat.eus/faq_c.html">FAQ</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/sitemap_c.html">Mapa</a></li>
+                          data-ajax="false" href="https://en.eustat.eus/sitemap_c.html">Map</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/accesibilidad_c.html">Erabilerraztasuna</a>
+                          data-ajax="false" href="https://en.eustat.eus/accesibilidad_c.html">Accessibility</a>
                   </li>
               </ul>
           </div>
@@ -4324,11 +4340,11 @@ data-event-label="high"
               <div class="Prayamini"></div>
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.euskadi.eus/about/a_eustat_c.html">Eustati buruz</a></li>
+                          data-ajax="false" href="https://en.euskadi.eus/about/a_eustat_c.html">About Eustat</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.euskadi.eus/">Egoitza elektronikoa</a></li>
+                          data-ajax="false" href="https://en.euskadi.eus/">Electronic Office</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://eu.eustat.eus/privacidad_c.html">Pribatutasuna</a></li>
+                          data-ajax="false" href="https://en.eustat.eus/privacidad_c.html">Privacy</a></li>
               </ul>
           </div>
       </div>
@@ -4336,23 +4352,23 @@ data-event-label="high"
           <div class="logos-rrss-pie">
               <div class="logos">
                   <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
-                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                      href="https://en.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
                           style="border-width:0px;"></a>
                   <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
-                      href="https://eu.eustat.eus/about/aenor_c.html"><img
+                      href="https://en.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
                           style="border-width:0px;"></a>
               </div>
               
           </div>
           <div class="piederecho-texto">
-              <p class="piederechop bold">Eustat - Euskal Estatistika Erakundea - Instituto Vasco de Estadística</p>
-              <p class="piederechop">Eustat, Euskal AEko informazio estatistiko ofiziala garatu, ekoiztu eta zabaltzen duen erakunde publikoa da</p>
+              <p class="piederechop bold">Eustat - Basque Statistics Institute</p>
+              <p class="piederechop">Eustat is the public organization that develops, produces and distributes official statistical information of the Basque Country</p>
               <p class="piederechop">
                 c/Donostia - San Sebastián, 1<br>
                 01010 Vitoria-Gasteiz<br>
-                Tel: (+34) 945017500<br>
+                Phone: (+34) 945017500<br>
                 Fax: (+34) 945017501<br>
                 webmaster_eustat@eustat.eus
               </p>
@@ -4383,12 +4399,12 @@ data-event-label="high"
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'Ezkutatu';</script>
+    translations['general']['hide'] = 'hide';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Bilatu';</script>
+    translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250515140206'></script>
+<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
 
 
 <script>
@@ -4408,7 +4424,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250515140206"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
