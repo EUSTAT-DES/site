@@ -1,7 +1,7 @@
 ---
 title: Indicadores de Desarrollo Sostenible
 language: es
-permalink: /fes/faq/
+permalink: /es/faq/
 layout: page
 ---
 
