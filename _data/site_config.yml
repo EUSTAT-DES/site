@@ -194,19 +194,19 @@ menu:
     dropdown: []
   - translation_key: menu.desagregaciones
     dropdown:
-      - path: /territorio/
+      - path: /lurraldea/
         translation_key: menu.territorio
-      - path: /municipal/
+      - path: /udalerria/
         translation_key: menu.municipal
-      - path: /sexo/
+      - path: /sexua/
         translation_key: menu.sexo   
   - translation_key: menu.masInfo
     dropdown: 
       - path: /agenda2030/
         translation_key: menu.agenda2030
-      - path: /informacion-disponible-sobre-los-indicadores/
+      - path: /aurkezpena/
         translation_key: menu.indicadores
-      - path: /acerca-de-la-plataforma-web/
+      - path: /plataforma/
         translation_key: menu.acercaDe   
 metadata_edit_url: metadata
 metadata_tabs:

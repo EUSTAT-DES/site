@@ -1,9 +1,11 @@
 ---
 layout: page
 title: ODS en Instituciones Internacionales 
-language: es
-permalink: /es/nazioartea/
+language: en
+permalink: /en/nazioartea/
 ---
+
+ITZULTZEKO
 
 **Naciones Unidas**
 - [SDG Global Database](https://unstats.un.org/sdgs/dataportal)

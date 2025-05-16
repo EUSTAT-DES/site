@@ -1,9 +1,11 @@
 ---
-title: Lurralde historikoaren arabera bereizitako adierazleak
-language: eu
-permalink: /territorio/
+title: Indicators disaggregated by province
+language: en
+permalink: en/lurraldea/
 layout: page
 ---
+
+Indicadores con datos municipales
 
 <div class="container">
   {% assign indicators = site.data.csv.territorio %}
