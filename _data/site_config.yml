@@ -51,10 +51,10 @@ data_fields:
 date_formats: 
   - type: standard
     language: en
-    format: '%B %d, %Y'
+    format: '%Y.%m.%d'
   - type: standard
     language: es
-    format: '%d de %B de %Y'
+    format: '%d.%m.%Y'
   - type: standard
     language: eu
     format: "%Y.%m.%d"
@@ -128,6 +128,7 @@ indicator_tabs:
 languages:
   - eu
   - es
+  - en
 languages_public: []
 logos: 
   - language: es
