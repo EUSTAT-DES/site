@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
+
+        <script>
+// This is where we initialise any global variables, namespaced in "opensdg".
+var opensdg = {
+
+  // A base URL for asynchronous calls to SDG data.
+  remoteDataBaseUrl: 'https://eustat-des.github.io/data/es',
+
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
+  },
+
+  // A hook which can be replaced to alter whether/how the values that are
+  // displayed on indicator tables/graphs get rounded. A "context" parameter
+  // is also passed which contains additional information.
+  dataRounding: function(value, context) {
+    // Alterations go here.
+    return value;
+  },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
+  language: 'es',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
+};
+
+</script>
+
+        <script>
+// JavaScript container for translation data.
+var translations = {
+  //Javascript version of the "t" filter from jekyll-open-sdg-plugins.
+  t: function(key) {
+
+    if (!key || typeof key !== 'string') {
+      return '';
+    }
+
+    // The majority of uses of this function are to translate disaggregation
+    // data. To spare data providers of needing to enter "data." in front of
+    // their disaggregation data, we specifically look for that here.
+    if (typeof this.data === 'object' && this.data !== null && this.data[key]) {
+      return this.data[key];
+    }
+
+    var originalKey = key;
+    var drilled = this;
+    var levelsDrilled = 0;
+    var levels = key.split('.');
+
+    for (var level in levels) {
+      // If we have drilled down to soon, abort.
+      if (typeof drilled !== 'object') {
+        break;
+      }
+
+      if (levels[level] in drilled) {
+        drilled = drilled[levels[level]];
+        levelsDrilled += 1;
+      }
+    }
+
+    // If we didn't drill the right number of levels, return the original string.
+    if (levels.length != levelsDrilled) {
+      return originalKey;
+    }
+
+    // Otherwise we must have drilled all the way.
+    return drilled;
+  },
+};
+</script>
+
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title and meta description
+        ================================================== -->
+
+        
+    <title>Indicadores de Desarrollo Sostenible - Indicadores para los Objetivos de Desarrollo Sostenible</title>
+
+
+
+        
+        <meta name="robots" content="noindex, nofollow">
+        
+
+        <!--[if IE 9]>
+        <script src="/site/assets/js/lib/classList.js"></script>
+        <![endif]-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/site/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/site/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/site/assets/img/favicons/favicon.ico" />
+
+        
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516134353">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
+        <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
+        <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
+
+        
+
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/site/assets/css/ie.css">
+        <![endif]-->
+
+        
+
+    </head>
+<body class="language-es
+layout-page
+">
+<!-- <div class="container"> -->
+
+<script>translations['header'] = {"alpha":"POC","default_contrast":"Contraste estándar","disable_high_contrast":"Desactivar alto contraste","disclaimer":"Este es un sitio web de desarrollo.","enable_high_contrast":"Habilitar alto contraste","hide_menu":"Ocultar el menú de navegación","high_contrast":"Alto contraste","internet_explorer_message":"Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.","internet_explorer_message_title":"Este navegador de Internet ya no es compatible","logo_title":"Ir a la página de inicio","show_menu":"Mostrar el menú de navegación","skip_link":"Saltar al contenido principal","tag_line":"17 Objetivos para transformar nuestro mundo","toggle_menu":"Alternar menú. Haga clic para expandir o contraer el menú.","toggle_search":"Barra de búsqueda. Haga clic para ampliar o reducir la barra de búsqueda."};</script>
+
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Saltar al contenido principal</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">Este navegador de Internet ya no es compatible</h2>
+    <p class="internet-explorer-message-body">Hemos detectado que está utilizando Internet Explorer para visitar este sitio web. Internet Explorer ahora está siendo eliminado por Microsoft. Como resultado, este sitio web ya no es compatible con ninguna versión de Internet Explorer. Algunas características de este sitio no funcionarán. Debe usar un navegador moderno como Edge, Chrome, Firefox o Safari. Si tiene dificultades para instalar o acceder a un navegador diferente, comuníquese con su equipo de soporte de TI.</p>
+</div>
+<header role="banner" class="">
+  <div class="header" >
+    <div class="header-top">
+        <div id="logo" class="logo-header">
+            <a id="logo-link" href="https://es.eustat.eus/indice.html">
+                <img src="/site/assets/img/LogoEustat.png" alt="eustat">
+            </a>
+            <div class="logo-header-description">
+                Euskal Estatistika Erakundea<br>Instituto Vasco de Estadística
+            </div>
+        </div>
+        <div id="trigger_home" class="menu-button">
+            <img id="euskadieus-logo"src="/siteassets/img/logo-euskadi-eus.png" alt="eustat">
+            <img id="menu-button-img" src="/site/assets/img/ham.png" alt="Mostrar/ocultar menu principal">
+        </div>
+    </div>
+    <div class="zutabeak">
+        <div class="o-content-zutabe">
+            <ul>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Temas</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://es.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operaciones</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://es.eustat.eus/bancopx/spanish/indice.html">Banco de datos</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://es.eustat.eus/indice.html#cy">Coyuntura</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://es.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Info. municipal</a></li>
+            </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <ul>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://es.eustat.eus/estadisticas/calendario.html">Calendario</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://es.eustat.eus/productosServicios/sugerencias.html">Quejas y sugerencias</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://es.eustat.eusprodserv/info_c.html">Servicio de información</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://es.eustat.eus/notas_c.html">Servicio de prensa</a></li>
+            </ul>
+        </div>
+        <div class="o-content-zutabe">
+            <div class="rrss">
+                <span class="texto-rrss">
+                  Síganos:
+                </span>
+                <div class="iconos-rrss">
+                    <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
+                        style="display:inline-block;"><img class="sociales" alt="LinkedIn"
+                            src="/site/assets/img/rrss/linkedin.gif'"></a>
+                    <a href="http://www.facebook.com/eustat" target="_blank" title="Facebook"
+                        style="display:inline-block;"><img class="sociales" alt="Facebook"
+                            src="/site/assets/img/rrss/facebook.gif'"></a>
+                    <a href="http://twitter.com/eustat" target="_blank" title="X"
+                        style="display:inline-block;"><img class="sociales" alt="X"
+                            src="/site/assets/img/rrss/X.gif'"></a>
+                    <a href="https://bsky.app/profile/eustat.eus" target="_blank" title="BlueSky"
+                        style="display:inline-block;"><img class="sociales" alt="BlueSky"
+                            src="/site/assets/img/rrss/BlueSky.png'"></a>
+                    <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
+                        style="display:inline-block;"><img class="sociales" alt="Youtube"
+                            src="/site/assets/img/rrss/youtube.png'"></a>
+                    <a href="https://es.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                        target="_blank" title="Rss novedades" style="display:inline-block;"><img
+                            class="sociales" alt="Rss novedades" src="/site/assets/img/rrss/rss2.png'"></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- zutabeak -->
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM completamente cargado y procesado');
+    var container = document.querySelector('.header');
+    var zutabeak = document.querySelector('.zutabeak');
+
+    function buildCanvas() {
+        document.getElementById('trigger_home').addEventListener('click', function (e) {
+            console.log("hey");
+            
+            e.preventDefault();
+            container.classList.toggle('active');
+            zutabeak.classList.toggle('active');
+            if (container.classList.contains('active')) {
+                
+                document.getElementById('menu-button-img').src = "/site/assets/img/aspa.png";
+               
+            } else {
+                document.getElementById('menu-button-img').src = "/site/assets/img/ham.png";
+                
+            }
+        });
+    }
+
+    buildCanvas();
+
+    window.addEventListener('resize', function () {
+        cHeight = document.querySelector('.o-content').offsetHeight;
+    });
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 500) {
+            document.querySelector('.scrollup').style.display = 'block';
+        } else {
+            document.querySelector('.scrollup').style.display = 'none';
+        }
+    });
+});
+</script>
+  <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/site/es/" id="home" aria-label="Ir a la página de inicio" title="Ir a la página de inicio">
+    <img src="/site/assets/img/logo/SDG_logo_es.png" alt="Ir a la página de inicio" />
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Mostrar el menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/site/es/">Inicio</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/es/reporting-status">Informe de seguimiento</a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Datos desagregados
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
+    <a class="dropdown-item" href="/site/es/lurraldea/">Territorio histórico</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/es/udalerria/">Municipio</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/es/sexua/">Sexo</a>
+</li></ul>
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-masinfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Más información
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-masinfo"><li class=" ">
+    <a class="dropdown-item" href="/site/es/agenda2030/">Agenda 2030</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/es/aurkezpena/">Información disponible sobre los indicadores</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/site/es/plataforma/">Web plataformari buruz</a>
+</li></ul>
+            </li></ul>
+    
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/site/es/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Buscar</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Buscar">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Buscar en el sitio" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
+
+
+
+
+
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/fes/faq/">
+                EU
+            </a>
+        </li><li class="language-option-es list-inline-item">
+            <span class="language-toggle-active-language">
+                ES
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/site/en/fes/faq/">
+                EN
+            </a>
+        </li></ul>
+</div>
+
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
+            <a class="language-toggle-link" href="/site/fes/faq/">
+                EU
+            </a>
+        </li><li class="language-option-es list-inline-item">
+            <span class="language-toggle-active-language">
+                ES
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/site/en/fes/faq/">
+                EN
+            </a>
+        </li></ul>
+</div></span><a title="Habilitar alto contraste" aria-label="Habilitar alto contraste"
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="top" tabindex=-1></div>
+
+
+<div class="container">
+    <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        <li class="breadcrumb-item" >
+            <a href="/site/es/">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Indicadores de Desarrollo Sostenible</li>
+    </ol>
+</nav>
+</div>
+<div id="main-content" class="container" role="main">
+    <div>
+        <h1>Indicadores de Desarrollo Sostenible</h1>
+        
+
+
+    <h2 id="contenido">Contenido</h2>
+
+<ul>
+  <li><a href="#introducción">Introducción</a></li>
+  <li><a href="#indicadores-disponibles-en-la-ca-de-euskadi">Indicadores disponibles en la C.A. de Euskadi</a></li>
+  <li><a href="#presentación-de-los-indicadores">Presentación de los indicadores</a></li>
+  <li><a href="#metadatos-y-fuentes-de-datos-para-el-indicador-disponible-e-indicadores-mundiales-y-europeos">Metadatos y fuentes de datos para el indicador disponible e indicadores mundiales y europeos</a></li>
+  <li><a href="#evaluación-del-progreso-en-los-ods">Evaluación del progreso en los ODS</a></li>
+  <li><a href="#cada-cuánto-tiempo-se-actualizan-los-datos">¿Cada cuánto tiempo se actualizan los datos?</a></li>
+  <li><a href="#a-quién-está-dirigido-este-sitio-web">¿A quién está dirigido este sitio web?</a></li>
+  <li><a href="#comunidades-autónomas-que-informan-sobre-los-indicadores-de-la-agenda-2030">Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030</a></li>
+  <li><a href="#países-que-informan-sobre-los-indicadores-de-la-agenda-2030">Países que informan sobre los indicadores de la Agenda 2030</a></li>
+  <li><a href="#acerca-de-este-sitio-web">Acerca de este sitio web</a></li>
+  <li><a href="#uso-de-apis">Uso de APIs</a></li>
+  <li><a href="#se-puede-copiar-este-sitio-web">¿Se puede copiar este sitio web?</a></li>
+  <li><a href="#es-accesible-este-sitio-web">¿Es accesible este sitio web?</a></li>
+</ul>
+
+<h2 id="introducción">Introducción</h2>
+
+<p>La <a href="https://www.un.org/sustainabledevelopment/es/">Agenda 2030 para el Desarrollo Sostenible</a>, adoptada por todos los Estados miembros de las Naciones Unidas en 2015, proporciona un programa para mejorar la economía, la sociedad y el medio ambiente de una forma sostenible. En esencia, los 17 Objetivos de Desarrollo Sostenible (ODS) son un llamamiento universal a la acción para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas en todo el mundo puedan disfrutar de paz y prosperidad.</p>
+
+<p>Los objetivos se sustentan en un marco de indicadores mundiales que permiten hacer el seguimiento e informar sobre los avances. Abarcan una amplia gama de cuestiones sociales, ambientales y económicas, que incluyen, entre otras, la pobreza, el hambre, la salud, la educación, la igualdad social, la innovación, el cambio climático, la biodiversidad y la justicia, con un enfoque en los más vulnerables y un compromiso de no dejar a nadie atrás. También se alienta a los distintos gobiernos a desarrollar un plan de implementación que pueda incluir indicadores desarrollados para abordar contextos y prioridades específicos para lograr los ODS.</p>
+
+<h2 id="indicadores-disponibles-en-la-ca-de-euskadi">Indicadores disponibles en la C.A. de Euskadi</h2>
+
+<p>Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno Vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye un número importante de indicadores cuya metodología ha sido armonizada con todos los órganos centrales de estadística de las Comunidades Autónomas, garantizando así la plena comparabilidad directa de estos indicadores a nivel regional. <a href="/site/assets/doc/OCECA_es.pdf">Acuerdo de los órganos centrales de estadística de las CCAA (pdf, 14Kb)</a>.</p>
+
+<p>Se incluyen también indicadores de seguimiento de las ambiciones y objetivos del Gobierno Vasco, elaborados en coordinación con el <a href="https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/">Foro Multiagente de Transición Social y Agenda 2030 en Euskadi</a>.</p>
+
+<p>Se ha intentado que los indicadores disponibles en la C.A. de Euskadi sean comparables con los indicadores del <a href="https://unstats.un.org/sdgs/metadata">marco de indicadores mundiales de Naciones Unidas</a> o con los <a href="https://ec.europa.eu/eurostat/web/sdi">indicadores de Desarrollo Sostenible de la Unión Europea</a>. En el caso de que el indicador disponible en la C.A. de Euskadi no sea comparable con el indicador mundial o europeo, así se indica en sus metadatos.</p>
+
+<h2 id="presentación-de-los-indicadores">Presentación de los indicadores</h2>
+
+<p>Los datos relevantes para cada indicador se presentan en un gráfico y una tabla. Esta presentación se complementa para algunos indicadores con un mapa interactivo que muestra los datos de las comarcas o municipios vascos. Sin embargo, algunos indicadores no pueden representarse a partir de datos. Cuando sucede esto, se muestran textos explicativos con enlaces a información temáticamente relevante sobre los indicadores.</p>
+
+<h2 id="metadatos-y-fuentes-de-datos-para-el-indicador-disponible-e-indicadores-mundiales-y-europeos">Metadatos y fuentes de datos para el indicador disponible e indicadores mundiales y europeos</h2>
+
+<p>En la parte inferior de las páginas de los indicadores se encuentran las pestañas “Ficha metodológica”, “Descripción del indicador” y “Fuentes de datos”.</p>
+
+<p>La pestaña “Ficha metodológica” aporta información sobre el indicador disponible en la C.A. de Euskadi y su forma de cálculo.</p>
+
+<p>La pestaña “Descripción del indicador” contiene la descripción y la justificación del indicador mundial o europeo, una evaluación de si el indicador disponible en la C.A. de Euskadi cumple o no los requisitos del indicador de Naciones Unidas (o Unión Europea en su caso), y los resultados a nivel internacional. En “Descripción del indicador” también se encuentra un documento PDF para cada indicador que contiene información sobre el cálculo del indicador mundial.</p>
+
+<p>En “Fuentes de datos” se encuentran enlaces a la organización u organizaciones que proporcionaron los datos para el indicador y, cuando es posible, enlaces directos a las fuentes de datos específicas.</p>
+
+<h2 id="evaluación-del-progreso-en-los-ods">Evaluación del progreso en los ODS</h2>
+
+<p>La plataforma incorpora un informe de seguimiento que proporciona una descripción general del progreso en la consecución de los Objetivos de Desarrollo Sostenible (ODS) en la Comunidad Autónoma de Euskadi. 
+Para saber más sobre el procedimiento para evaluar el progreso, ver  <a href="https://eustat-des.github.io/site/metodologia/">Metodología para la medición del progreso</a>.</p>
+
+<h2 id="cada-cuánto-tiempo-se-actualizan-los-datos">¿Cada cuánto tiempo se actualizan los datos?</h2>
+
+<p>Se agregan datos tan pronto como se hayan obtenido y verificado. Esto incluye datos nuevos y actualizaciones de los datos que ya están publicados.</p>
+
+<h2 id="a-quién-está-dirigido-este-sitio-web">¿A quién está dirigido este sitio web?</h2>
+
+<p>Este sitio está dirigido a las distintas administraciones para la toma de decisiones sobre políticas públicas, a los ciudadanos interesados, y analistas de datos.</p>
+
+<h2 id="comunidades-autónomas-que-informan-sobre-los-indicadores-de-la-agenda-2030">Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030</h2>
+<p>La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:</p>
+
+<ul>
+  <li>Andalucía: <a href="https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm">https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm</a> <br /></li>
+  <li>Aragón: <a href="https://ods-aragon.github.io/">https://ods-aragon.github.io/</a> <br /></li>
+  <li>Asturias, Principado de: <a href="https://sadeiasturias.github.io/indicadores-ods-asturias/">https://sadeiasturias.github.io/indicadores-ods-asturias/</a> <br /></li>
+  <li>Baleares, Islas: <a href="https://ibestat.es/edatos/apps/ods/">https://ibestat.es/edatos/apps/ods/</a> <br /></li>
+  <li>Canarias: <a href="https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/">https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/</a> <br /></li>
+  <li>Cantabria: <a href="https://ods-cantabria.github.io/ods-cantabria/">https://ods-cantabria.github.io/ods-cantabria/</a> <br /></li>
+  <li>Castilla-La Mancha: <a href="https://estadistica.castillalamancha.es/agenda-2030">https://estadistica.castillalamancha.es/agenda-2030</a> <br /></li>
+  <li>Castilla y León: <a href="https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html">https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html</a> <br /></li>
+  <li>Cataluña: <a href="https://www.idescat.cat/dades/ods/nu/?lang=es">https://www.idescat.cat/dades/ods/nu/?lang=es</a> <br /></li>
+  <li>Comunidad Valenciana: <a href="https://pegv.gva.es/es/ods">https://pegv.gva.es/es/ods</a> <br /></li>
+  <li>Extremadura: <a href="https://www.juntaex.es/ieex/agenda-2030">https://www.juntaex.es/ieex/agenda-2030</a> <br /></li>
+  <li>Galicia: <a href="https://www.ige.gal/web/mostrar_marco.jsp?idioma=es&amp;app=ODS">https://www.ige.gal/web/mostrar_marco.jsp?idioma=es&amp;app=ODS</a> <br /></li>
+  <li>La Rioja: <a href="https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja">https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja</a> <br /></li>
+  <li>Madrid, Comunidad de: <a href="https://www.madrid.org/iestadis/ODS/ODS_CM.htm">https://www.madrid.org/iestadis/ODS/ODS_CM.htm</a> <br /></li>
+  <li>Murcia, Región de: <a href="https://transparencia.carm.es/agenda-2030#gsc.tab=0">https://transparencia.carm.es/agenda-2030#gsc.tab=0</a> <br /></li>
+  <li>Navarra, Comunidad Foral: <a href="https://nastat.navarra.es/es/indicadores/indicadores-ods">https://nastat.navarra.es/es/indicadores/indicadores-ods</a> <br /></li>
+</ul>
+
+<h2 id="países-que-informan-sobre-los-indicadores-de-la-agenda-2030">Países que informan sobre los indicadores de la Agenda 2030</h2>
+<p>La siguiente lista muestra algunas de las plataformas sobre los ODS de los distintos países. La lista no es exhaustiva:</p>
+
+<ul>
+  <li>Albania: <a href="http://www.instat.gov.al/en/sdgs/">http://www.instat.gov.al/en/sdgs/</a> <br /></li>
+  <li>Armenia: <a href="https://sdg.armstat.am/">https://sdg.armstat.am/</a> <br /></li>
+  <li>Australia: <a href="https://www.sdgdata.gov.au/">https://www.sdgdata.gov.au/</a> <br /></li>
+  <li>Austria: <a href="https://www.statistik.at/services/tools/services/indikatorensysteme/sdgs">https://www.statistik.at/services/tools/services/indikatorensysteme/sdgs</a> <br /></li>
+  <li>Azerbaijan: <a href="http://sdg.azstat.org/">http://sdg.azstat.org/</a> <br /></li>
+  <li>Bielorrusia: <a href="http://sdgplatform.belstat.gov.by/en/sites/belstatfront/home.html">http://sdgplatform.belstat.gov.by/en/sites/belstatfront/home.html</a> <br /></li>
+  <li>Bélgica: <a href="http://www.indicators.be/en/t/SDG/">http://www.indicators.be/en/t/SDG/</a> <br /></li>
+  <li>Bosnia y Herzegovina: <a href="https://sdg.bhas.gov.ba/">https://sdg.bhas.gov.ba/</a> <br /></li>
+  <li>Brasil: <a href="https://odsbrasil.gov.br/">https://odsbrasil.gov.br/</a> <br /></li>
+  <li>Canadá: <a href="https://www144.statcan.gc.ca/sdg-odd/index-eng.htm">https://www144.statcan.gc.ca/sdg-odd/index-eng.htm</a> <br /></li>
+  <li>Croacia: <a href="https://croatianbureauofstatistics.github.io/sdg-indicators/">https://croatianbureauofstatistics.github.io/sdg-indicators/</a> <br /></li>
+  <li>Chequia: <a href="https://www.sdg-data.cz/en">https://www.sdg-data.cz/en</a> <br /></li>
+  <li>República Democrática del Congo: <a href="https://odd-dashboard.cd/en/">https://odd-dashboard.cd/en/</a> <br /></li>
+  <li>Dinamarca: <a href="https://dst.dk/en/Statistik/Sdg">https://dst.dk/en/Statistik/Sdg</a> <br /></li>
+  <li>Eslovaquia: <a href="https://agenda2030.statistics.sk/Agenda2030/en/home/">https://agenda2030.statistics.sk/Agenda2030/en/home/</a> <br /></li>
+  <li>Eslovenia: <a href="http://www.stat.si/Pages/en/goals">http://www.stat.si/Pages/en/goals</a> <br /></li>
+  <li>España: <a href="http://ine.es/dynt3/ODS/en/index.htm">http://ine.es/dynt3/ODS/en/index.htm</a> <br /></li>
+  <li>Estados Unidos: <a href="https://sdg.data.gov/">https://sdg.data.gov/</a> <br /></li>
+  <li>Estonia: <a href="https://www.stat.ee/en/find-statistics/statistics-theme/sustainable-development">https://www.stat.ee/en/find-statistics/statistics-theme/sustainable-development</a> <br /></li>
+  <li>Francia: <a href="https://www.insee.fr/fr/statistiques/2654964">https://www.insee.fr/fr/statistiques/2654964</a> <br /></li>
+  <li>Georgia: <a href="https://sdg.gov.ge/intro">https://sdg.gov.ge/intro</a> <br /></li>
+  <li>Ghana: <a href="https://sustainabledevelopment-ghana.github.io/">https://sustainabledevelopment-ghana.github.io/</a> <br /></li>
+  <li>Grecia: <a href="http://www.statistics.gr/en/sdgs">http://www.statistics.gr/en/sdgs</a> <br /></li>
+  <li>Hungría: <a href="http://www.ksh.hu/sdg">http://www.ksh.hu/sdg</a> <br /></li>
+  <li>Islandia: <a href="https://visar.hagstofa.is/heimsmarkmidin/en/">https://visar.hagstofa.is/heimsmarkmidin/en/</a> <br /></li>
+  <li>Islas Feroe: <a href="https://sdg.hagstova.fo/sdg-site/en/">https://sdg.hagstova.fo/sdg-site/en/</a> <br /></li>
+  <li>Irlanda: <a href="https://irelandsdg.geohive.ie/">https://irelandsdg.geohive.ie/</a> <br /></li>
+  <li>Israel: <a href="https://www.cbs.gov.il/en/subjects/Pages/Sustainable-Development.aspx">https://www.cbs.gov.il/en/subjects/Pages/Sustainable-Development.aspx</a> <br /></li>
+  <li>Italia: <a href="https://www.istat.it/en/well-being-and-sustainability/sustainable-development-goals">https://www.istat.it/en/well-being-and-sustainability/sustainable-development-goals</a> <br /></li>
+  <li>Japón: <a href="https://www.mofa.go.jp/mofaj/gaiko/oda/sdgs/statistics/index.html">https://www.mofa.go.jp/mofaj/gaiko/oda/sdgs/statistics/index.html</a> <br /></li>
+  <li>Kazajistán: <a href="https://kazstat.github.io/sdg-site-kazstat/en/">https://kazstat.github.io/sdg-site-kazstat/en/</a> <br /></li>
+  <li>Kirguistán: <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">https://sustainabledevelopment-kyrgyzstan.github.io/</a> <br /></li>
+  <li>Laos: <a href="https://www.lsb.gov.la/sdg/en/">https://www.lsb.gov.la/sdg/en/</a> <br /></li>
+  <li>Liechtenstein: <a href="https://www.statistikportal.li/de/uebersichten-indikatoren/indikatoren-nachhaltige-entwicklung">https://www.statistikportal.li/de/uebersichten-indikatoren/indikatoren-nachhaltige-entwicklung</a> <br /></li>
+  <li>Lituania: <a href="https://osp.stat.gov.lt/en/darnaus-vystymosi-rodikliai">https://osp.stat.gov.lt/en/darnaus-vystymosi-rodikliai</a> <br /></li>
+  <li>Luxemburgo: <a href="https://statistiques.public.lu/en/donnees/themes/odd.html">https://statistiques.public.lu/en/donnees/themes/odd.html</a> <br /></li>
+  <li>México: <a href="http://www.agenda2030.mx/">http://www.agenda2030.mx/</a> <br /></li>
+  <li>Mongolia: <a href="http://sdg.1212.mn/EN/Home/Information">http://sdg.1212.mn/EN/Home/Information</a> <br /></li>
+  <li>Montenegro: <a href="https://www.sdgmontenegro.me/">https://www.sdgmontenegro.me/</a> <br /></li>
+  <li>Países Bajos: <a href="https://www.sdgnederland.nl/sdgs/">https://www.sdgnederland.nl/sdgs/</a> <br /></li>
+  <li>Polonia: <a href="https://sdg.gov.pl/en/">https://sdg.gov.pl/en/</a> <br /></li>
+  <li>Portugal: <a href="https://www.ine.pt/xportal/xmain?xpid=INE&amp;xpgid=ine_perfsdg&amp;xlang=en">https://www.ine.pt/xportal/xmain?xpid=INE&amp;xpgid=ine_perfsdg&amp;xlang=en</a> <br /></li>
+  <li>Reino Unido: <a href="https://sustainabledevelopment-uk.github.io/">https://sustainabledevelopment-uk.github.io/</a> <br /></li>
+  <li>República de Moldavia: <a href="https://statistica.gov.md/en/sustainable-development-goals-183.html">https://statistica.gov.md/en/sustainable-development-goals-183.html</a> <br /></li>
+  <li>Rumanía: <a href="http://www.insse.ro/cms/files/Web_IDD_BD_en/index.htm">http://www.insse.ro/cms/files/Web_IDD_BD_en/index.htm</a> <br /></li>
+  <li>Rusia: <a href="https://eng.rosstat.gov.ru/sdg">https://eng.rosstat.gov.ru/sdg</a> <br /></li>
+  <li>Ruanda: <a href="https://sustainabledevelopment-rwanda.github.io/">https://sustainabledevelopment-rwanda.github.io/</a> <br /></li>
+  <li>Serbia: <a href="http://sdg.indikatori.rs/en-us/">http://sdg.indikatori.rs/en-us/</a> <br /></li>
+  <li>Sudáfrica: <a href="http://www.statssa.gov.za/MDG/SDG_Baseline_Report_2017.pdf">http://www.statssa.gov.za/MDG/SDG_Baseline_Report_2017.pdf</a> <br /></li>
+  <li>Suiza: <a href="https://www.bfs.admin.ch/bfs/en/home/statistics/sustainable-development.html">https://www.bfs.admin.ch/bfs/en/home/statistics/sustainable-development.html</a> <br /></li>
+  <li>Tayikistán: <a href="https://www.stat.tj/tj/targets">https://www.stat.tj/tj/targets</a> <br /></li>
+  <li>Turquía: <a href="https://statswiki.unece.org/sdg.tuik.gov.tr/en/">https://statswiki.unece.org/sdg.tuik.gov.tr/en/</a> <br /></li>
+  <li>Ucrania: <a href="http://www.sdg.ukrstat.gov.ua/">http://www.sdg.ukrstat.gov.ua/</a> <br /></li>
+</ul>
+
+<h2 id="acerca-de-este-sitio-web">Acerca de este sitio web</h2>
+
+<p>Eustat ha desarrollado esta plataforma de visualización de indicadores de desarrollo sostenible interactivo utilizando la <a href="https://open-sdg.readthedocs.io/en/latest/quick-start/">Plataforma Open SDG</a> para la difusión de indicadores de ODS.</p>
+
+<h2 id="uso-de-apis">Uso de APIs</h2>
+
+<p>Los datos y metadatos de la plataforma están disponibles en rutas predecibles y documentadas y, por lo tanto, se puede acceder a ellos mediante programación como se describe a continuación:</p>
+
+<p>datos: https://eustat-des.github.io/data/lenguaje/data/codigoindicador.json   (por ejemplo:  https://eustat-des.github.io/data/es/data/1-2-1.json)<br />
+metadatos: https://eustat-des.github.io/data/lenguaje/meta/codigoindicador.json  (por ejemplo:  https://eustat-des.github.io/data/es/meta/1-2-1.json)<br /></p>
+
+<h2 id="se-puede-copiar-este-sitio-web">¿Se puede copiar este sitio web?</h2>
+<p>Sí. Consulte la <a href="https://open-sdg.readthedocs.io/en/latest/quick-start/">Guía de inicio rápido de Open SDG</a> para obtener instrucciones técnicas sobre la forma más rápida de tener una copia de la plataforma Open SDG en funcionamiento.</p>
+
+<h2 id="es-accesible-este-sitio-web">¿Es accesible este sitio web?</h2>
+<p>Open SDG pretende ser lo más accesible y utilizable posible para todos los usuarios y trabaja para alcanzar el nivel AA de Pautas de accesibilidad al contenido web (WCAG 2.0).</p>
+
+<p><a href="#top">Volver arriba</a></p>
+
+
+
+    </div>
+</div>
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Construido con Open SDG</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/site/es/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pieEustat">
+  <div class="marcopie">
+      <div class="enlaces">
+          <div class="centradomini">
+              <ul class="list-group iconillo rupturasmall">
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/about/links_c.html">Enlaces</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/faq_c.html">FAQ</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/sitemap_c.html">Mapa</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/accesibilidad_c.html">Accesibilidad</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="centradomini">
+              <div class="Prayamini"></div>
+              <ul class="list-group iconillo rupturasmall">
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.euskadi.eus/about/a_eustat_c.html">Acerca de Eustat</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.euskadi.eus/">Sede electrónica</a></li>
+                  <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
+                          data-ajax="false" href="https://es.eustat.eus/privacidad_c.html">Privacidad</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="piederecho">
+          <div class="logos-rrss-pie">
+              <div class="logos">
+                  <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
+                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
+                          style="border-width:0px;"></a>
+                  <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
+                      href="https://es.eustat.eus/about/aenor_c.html"><img
+                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
+                          style="border-width:0px;"></a>
+              </div>
+              
+          </div>
+          <div class="piederecho-texto">
+              <p class="piederechop bold">Eustat - Euskal Estatistika Erakundea - Instituto Vasco de Estadística</p>
+              <p class="piederechop">Eustat es el organismo público que desarrolla, produce y difunde información estadística oficial de la C.A. de Euskadi.</p>
+              <p class="piederechop">
+                c/Donostia - San Sebastián, 1<br>
+                01010 Vitoria-Gasteiz<br>
+                Tfno: (+34) 945017500<br>
+                Fax: (+34) 945017501<br>
+                webmaster_eustat@eustat.eus
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+
+
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'Ocultar';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Buscar';</script>
+
+<script src='/site/assets/js/sdg.js?v=20250516134353'></script>
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],  // Permite $...$ y \(...\) para matemáticas en línea
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],  // Permite $$...$$ y \[...\] para ecuaciones en bloque
+      tags: 'none'  // Desactiva la numeración automática de ecuaciones
+    },
+    svg: {
+      fontCache: 'global'  // Optimiza el rendimiento al reutilizar fuentes matemáticas
+    }
+  };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    
+    
+    <script src="/site/assets/js/custom.js?v=20250516134353"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
+</script>
+
+
+</body>
+</html>
