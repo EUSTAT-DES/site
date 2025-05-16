@@ -1,5 +1,3 @@
-
-
 ---
 title: Agenda 2030
 language: en
