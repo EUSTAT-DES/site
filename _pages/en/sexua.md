@@ -1,7 +1,7 @@
 ---
 title: Indicators disaggregated by sex
 language: en
-permalink: en/sexo/
+permalink: en/sexua/
 layout: page
 ---
 
