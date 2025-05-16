@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1941,7 +1941,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>13 Take urgent action to combat climate change and its impacts</p>
+            <ol>
+  <li>Take urgent action to combat climate change and its impacts</li>
+</ol>
 
           
         </td>
@@ -1957,7 +1959,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Porcentaje de gobiernos locales que adoptan e implementan estrategias locales de reducción del riesgo de desastres mediante planes territoriales de emergencias y planes municipales de emergencias</p>
+            <p>Percentage of local governments that adopt and implement local disaster risk  reduction strategies through territorial emergency plans and municipal emergency plans</p>
 
           
         </td>
@@ -1973,27 +1975,27 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Theoretical formula </th>
         <td>
           
-            <p><b>Porcentaje de municipios que disponen de un plan municipal de emergencias</b></p>
+            <p><b>Percentage of municipalities that have a municipal emergency plan</b></p>
 
-\[PMUN_{RRD\, municipal}^{t} = \frac{MUN_{RRD\, municipal}^{t}}{MUN^{t}} \cdot 100\]
+\[PMUN_{DRR\, municipal}^{t} = \frac{MUN_{DRR\, municipal}^{t}}{MUN^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$MUN_{RRD\, municipal}^{t} =$ número de gobiernos locales con planes municipales de emergencias en el año $t$</p>
+<p>$MUN_{DRR\, municipal}^{t} =$ number of local governments with municipal emergency plans in the year $t$</p>
 
-<p>$MUN^{t} =$ número de gobiernos locales en el año $t$</p>
+<p>$MUN^{t} =$ number of local governments in the year $t$</p>
 
-<p><br /><br /></p>
+<p><br /></p>
 
-<p><b>Porcentaje de municipios cubiertos por un plan territorial de emergencias</b></p>
+<p><b>Percentage of municipalities covered by a territorial emergency plan</b></p>
 
-\[PMUN_{RRD\, territorial}^{t} = \frac{MUN_{RRD\, territorial}^{t}}{MUN^{t}} \cdot 100\]
+\[PMUN_{DRR\, territorial}^{t} = \frac{MUN_{DRR\, territorial}^{t}}{MUN^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$MUN_{RRD\, territorial}^{t} =$ número de gobiernos locales con planes territoriales de emergencias en el año $t$</p>
+<p>$MUN_{DDR\, territorial}^{t} =$ number of local governments with territorial emergency plans in the year $t$</p>
 
-<p>$MUN^{t} =$ número de gobiernos locales en el año $t$</p>
+<p>$MUN^{t} =$ number of local governments in the year $t$</p>
 
           
         </td>
@@ -2009,7 +2011,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Territorio histórico/Comarca/Municipio</p>
+            <p>Province/County/Municipality</p>
 
           
         </td>
@@ -2042,12 +2044,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>En Euskadi, según determina el Plan de Protección Civil de Euskadi – LABI, deben elaborar 
-y aprobar planes municipales de emergencia (PEM) los municipios con población superior a 20.000 habitantes.</p>
+<p>In the Basque Country, according to the Basque Civil Protection Plan (LABI), municipalities 
+with a population of over 20,000 must prepare and approve municipal emergency plans (PEM).</p>
 
-<p>Para los municipios de más de 5.000 habitantes, en coherencia con la normativa estatal reguladora de las 
-Bases del Régimen Local, esta directriz es recomendatoria. En 2024, el 96% de los municipios de 5.000 a 20.000 habitantes 
-y el 25% de los municipios de 1.000 a 5.000 habitantes disponen de Plan de Emergencia Municipal homologado.</p>
+<p>For municipalities with more than 5,000 inhabitants, in accordance with the state regulations 
+governing the Bases of the Local Government, this guideline is recommendatory. In 2024, 96% of 
+municipalities with 5,000 to 20,000 inhabitants and 25% of municipalities with 1,000 to 5,000 
+inhabitants have an approved Municipal Emergency Plan.</p>
 
           
         </td>
@@ -2120,33 +2123,13 @@ y el 25% de los municipios de 1.000 a 5.000 habitantes disponen de Plan de Emerg
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.29
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -2262,31 +2245,27 @@ y el 25% de los municipios de 1.000 a 5.000 habitantes disponen de Plan de Emerg
         <th scope="row">Rationale </th>
         <td>
           
-            <p>El Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030 fue adoptado por los 
-Estados Miembros de las Naciones Unidas en marzo de 2015 como una política global de 
-reducción del riesgo de desastres. El resultado esperado del Marco de Sendai es lograr 
-“la reducción sustancial del riesgo de desastres y de las pérdidas en vidas, medios de 
-subsistencia y salud y en los activos económicos, físicos, sociales, culturales y 
-ambientales de las personas, las empresas, las comunidades y los países”.</p>
+            <p>The Sendai Framework for Disaster Risk Reduction 2015-2030 was adopted by UN Member States in 
+March 2015 as a global policy of disaster risk reduction. The expected outcome of the Sendai Framework 
+is to realize “The substantial reduction of disaster risk and losses in lives, livelihoods 
+and health and in the economic, physical, social, cultural and environmental assets of persons, 
+businesses, communities and countries”.</p>
 
-<p>Entre las metas globales del Marco de Sendai, la “Meta E: Aumentar sustancialmente 
-el número de países con estrategias nacionales y locales de reducción del riesgo 
-de desastres para 2020” tiene por objeto mejorar el progreso y la cobertura globales 
-de las estrategias y políticas nacionales y locales de reducción del riesgo de desastres.</p>
+<p>Among the Sendai Framework global targets, “Target E: Substantially increase the number of 
+countries with national and local disaster risk reduction strategies by 2020” aims to enhance 
+the global progress and coverage of national and local disaster risk reduction strategies and policies.</p>
 
-<p>Los objetivos de los planes, estrategias y políticas nacionales de reducción del riesgo 
-de desastres son prevenir nuevos riesgos de desastres y reducir los existentes mediante 
-la implementación de medidas económicas, estructurales, legales, sociales, de salud, culturales, 
-educativas, ambientales, tecnológicas, políticas e institucionales integradas e inclusivas que 
-prevengan y reduzcan la exposición a los peligros y la vulnerabilidad a los desastres, aumenten 
-la preparación para la respuesta y la recuperación y, de ese modo, fortalezcan la resiliencia.</p>
+<p>The objectives of the national DRR plans, strategies and policies are to prevent new and reduce 
+existing disaster risk through the implementation of integrated and inclusive economic, structural, 
+legal, social, health, cultural, educational, environmental, technological, political and institutional 
+measures that prevent and reduce hazard exposure and vulnerability to disaster, increase preparedness 
+for response and recovery, and thus strengthen resilience.</p>
 
-<p>Aumentar la proporción de gobiernos locales que adoptan e implementan estrategias locales de 
-reducción del riesgo de desastres, como lo exige el Marco de Sendai, contribuirá al desarrollo 
-sostenible y fortalecerá la resiliencia económica, social, sanitaria y ambiental. Sus perspectivas económicas, 
-ambientales y sociales incluirían la erradicación de la pobreza, la resiliencia urbana y la adaptación al cambio climático.</p>
+<p>Increasing the proportion of local governments that adopt and implement local disaster risk reduction 
+strategies, which the Sendai Framework calls for, will contribute to sustainable development and 
+strengthen economic, social, health and environmental resilience.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -2302,7 +2281,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos de Naciones Unidas.</p>
+            <p>The available indicator complies with United Nations metadata.</p>
 
           
         </td>
@@ -2328,7 +2307,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-13-01-03.pdf">Metadata 13-1-3.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-13-01-03.pdf">Metadata 13-1-3.pdf</a></p>
 
           
         </td>
@@ -2508,7 +2487,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -2528,7 +2507,7 @@ ambientales y sociales incluirían la erradicación de la pobreza, la resilienci
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

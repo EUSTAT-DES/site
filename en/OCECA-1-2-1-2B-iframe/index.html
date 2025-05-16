@@ -143,7 +143,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -789,7 +789,9 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>1 End poverty in all its forms everywhere</p>
+            <ol>
+  <li>End poverty in all its forms everywhere</li>
+</ol>
 
           
         </td>
@@ -805,7 +807,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Proporción de personas con ingresos con alquiler imputado por unidad de consumo por debajo del 60% de la mediana autonómica de los ingresos con alquiler imputado por unidad de consumo (escala OCDE modificada)</p>
+            <p>Proportion of people with income with imputed rent per unit of consumption under 60% of the median income for the autonomous community with  imputed rent per unit of consumption (modified OECD scale)</p>
 
           
         </td>
@@ -824,11 +826,11 @@ data-event-label="Change to indicator.sources tab"
             
 \[PPRPRAI_{CCAA}^{t} = \frac{PRPRAI_{CCAA}^{t}}{P^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$PRPRAI_{CCAA}^{t} =$ población en riesgo de pobreza relativa con alquiler imputado considerando el umbral autonómico de pobreza (60% de la mediana autonómica de los ingresos con alquiler imputado por unidad de consumo -escala OCDE modificada-) en el año $t$</p>
+<p>$PRPRAI_{CCAA}^{t} =$ population at risk of relative poverty with imputed rent considering the poverty line of the autonomous community (60% of median income in the autonomous community with imputed rent per unit of consumption (modified OECD scale) in year $t$</p>
 
-<p>$P^{t} =$ población total en el año  $t$</p>
+<p>$P^{t} =$ total population in year $t$</p>
 
           
         </td>
@@ -865,20 +867,18 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Observations </th>
         <td>
           
-            <p>El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, 
-que asigna un peso de 1 a la primera persona de 14 o más años, un peso de 0,5 al resto 
-de personas de 14 o más años y un peso de 0,3 a las personas de menos de 14 años.</p>
+            <p>The number of consumption units in a household 
+is calculated using the modified OECD scale, which assigns a weight of 1 to the 
+first person aged 14 or over, a weight of 0.5 for other people aged 14 or over 
+and a weight of 0.3 for people under 14 years of age.</p>
 
-<p>El alquiler imputado se aplica a los hogares que no pagan un alquiler completo por
- ser propietarios o por ocupar una vivienda alquilada a un precio inferior al de 
-mercado o a título gratuito para así equiparar las rentas con aquellos que sí lo pagan.</p>
+<p>Imputed rent is applied to households that do not pay full rent because they own or occupy a dwelling 
+rented at below market rate or rent-free, in order to equalize rents with those that do pay full rent.</p>
 
-<p>El valor que se imputa es el equivalente al alquiler que se pagaría en el mercado por una 
-vivienda similar a la ocupada, menos cualquier alquiler realmente abonado. En esta 
-variable también se incluye el alquiler imputado de la vivienda cuando la misma 
-está proporcionada por la empresa en la que trabaja algún miembro del hogar. 
-Asimismo se deducen de los ingresos totales del hogar los intereses de los 
-préstamos solicitados para la compra de la vivienda principal.</p>
+<p>The imputed value is the equivalent of the market rent that would be paid for a dwelling similar to 
+the one occupied, less any rent actually paid. This variable also includes the imputed rent for the 
+dwelling when it is provided by the company where a household member works. Interest on loans taken 
+out to purchase the primary residence is also deducted from the household’s total income.</p>
 
           
         </td>
@@ -967,7 +967,7 @@ préstamos solicitados para la compra de la vivienda principal.</p>
         <th scope="row">Data last updated </th>
         <td>
           
-            2025.04.22
+            2024.07.29
           
         </td>
         </tr>
@@ -982,7 +982,7 @@ préstamos solicitados para la compra de la vivienda principal.</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            2025.03.15
+            2024.07.29
           
         </td>
         </tr>
@@ -1245,7 +1245,7 @@ préstamos solicitados para la compra de la vivienda principal.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1265,7 +1265,7 @@ préstamos solicitados para la compra de la vivienda principal.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

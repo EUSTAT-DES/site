@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1087,7 +1087,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>4 Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</p>
+            <ol>
+  <li>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</li>
+</ol>
 
           
         </td>
@@ -1103,7 +1105,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Proporción de personas de 15 años que han alcanzado al menos el nivel 2 de competencia en lectura y  en matemáticas, desglosada por sexo</p>
+            <p>Proportion of 15-year-olds who have achieved at least level 2 proficiency  in i) reading and ii) mathematics, by sex</p>
 
           
         </td>
@@ -1120,14 +1122,14 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[PPN2_{competencia}^{t} = \frac{PN2_{competencia}^{t}}{P_{15}^{t}}\]
+\[PPN2_{proficiency}^{t} = \frac{PN2_{proficiency}^{t}}{P_{15}^{t}}\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$PN2_{competencia}^{t} =$ número de personas de 15 años que han alcanzado o superado el 
-nivel mínimo de competencia del nivel de educación 2 en la materia o competencia en el año $t$</p>
+<p>$PN2_{proficiency}^{t} =$ 15-year-old population that has reached at least level 2 
+proficiency in the subject in year $t$</p>
 
-<p>$P_{15}^{t} =$ población de 15 años en el año $t$</p>
+<p>$P_{15}^{t} =$ population aged 15 in year $t$</p>
 
           
         </td>
@@ -1143,9 +1145,9 @@ nivel mínimo de competencia del nivel de educación 2 en la materia o competenc
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Tipo de competencia (materia): Comprensión lectora; matemáticas</p>
+            <p>Type of proficiency (subject): Reading comprehension, mathematics</p>
 
-<p>Sexo</p>
+<p>Sex</p>
 
           
         </td>
@@ -1178,37 +1180,47 @@ nivel mínimo de competencia del nivel de educación 2 en la materia o competenc
         <td>
           
             
-<p>El Programa para la evaluación internacional de los estudiantes utiliza un sistema de puntuaciones, donde no hay una puntuación máxima ni mínima. Los resultados se escalan de manera que respondan a una distribución normal con una media de 500 puntos y una desviación típica de 100 puntos.</p>
-
-<p>Para ayudar a interpretar esas puntuaciones, se establecen categorías de competencia en lectura:</p>
-
-<ul>
-  <li>Inferior al nivel 1c: puntuación inferior a 189,33</li>
-  <li>Nivel 1c: puntuación entre 189,33 y 262,03</li>
-  <li>Nivel 1b: puntuación entre 262,04 y 334,74</li>
-  <li>Nivel 1a: puntuación entre 334,75 y 407,46</li>
-  <li>Nivel 2: puntuación entre 407,47 y 480,17</li>
-  <li>Nivel 3: puntuación entre 480,18 y 552,88</li>
-  <li>Nivel 4: puntuación entre 552,89 y 625,60</li>
-  <li>Nivel 5: puntuación entre 625,61 y 698,31</li>
-  <li>Nivel 6: puntuación superior a 698,31</li>
-</ul>
-
-<p>Una persona alcanza al menos el nivel 2 de competencia en lectura cuando, para un texto de extensión media, puede identificar la idea principal, entender las relaciones entre sus partes, interpretar el significado de una parte limitada del texto a través de inferencias básicas, localizar uno o más fragmentos de información atendiendo a múltiples criterios parcialmente implícitos, reflexionar sobre el propósito general o específico del texto, comparar afirmaciones y evaluar los razonamientos en que estas se apoyan estableciendo conexiones entre el texto y el conocimiento externo.</p>
-
-<p>Se establecen estas categorías de competencia en matemáticas:</p>
+<p>The Programme for International Student Assessment uses a scoring system with 
+no minimum or maximum score. The results are scaled to fit a normal distribution 
+with a mean of 500 and a standard deviation of 100. To aid in the interpretation 
+of these scores, reading proficiency categories are established:</p>
 
 <ul>
-  <li>Inferior al nivel 1: puntuación inferior a 357,77</li>
-  <li>Nivel 1: puntuación entre 357,77 y 420,06</li>
-  <li>Nivel 2: puntuación entre 420,07 y 482,37</li>
-  <li>Nivel 3: puntuación entre 482,38 y 544,67</li>
-  <li>Nivel 4: puntuación entre 544,68 y 606,98</li>
-  <li>Nivel 5: puntuación entre 606,99 y 669,29</li>
-  <li>Nivel 6: puntuación superior a 669,29</li>
+  <li>Below Level 1c: score below 189.33</li>
+  <li>Level 1c: score between 189.33 and 262.03</li>
+  <li>Level 1b: score between 262.04 and 334.74</li>
+  <li>Level 1a: score between 334.75 and 407.46</li>
+  <li>Level 2: score between 407.47 and 480.17</li>
+  <li>Level 3: score between 480.18 and 552.88</li>
+  <li>Level 4: score between 552.89 and 625.60</li>
+  <li>Level 5: score between 625.61 and 698.31</li>
+  <li>Level 6: score above 698.31</li>
 </ul>
 
-<p>Una persona alcanza al menos el nivel 2 de competencia en matemáticas cuando sabe interpretar y reconocer situaciones en contextos que solo requieren una inferencia directa, extraer información pertinente de una sola fuente y hacer uso de un único modo de representación, utilizar algoritmos, fórmulas, procedimientos o convenciones elementales para resolver problemas relacionados con números enteros y efectuar razonamientos directos e interpretaciones literales de los resultados.</p>
+<p>A person reaches at least Level 2 reading proficiency when, for a text of average length, 
+he or she can identify the main idea, understand the relationships between its parts, 
+interpret the meaning of a limited part of the text through basic inferences, locate one 
+or more pieces of information according to multiple partially implicit criteria, reflect 
+on the general or specific purpose of the text, compare statements and evaluate the reasoning 
+on which they are based by establishing connections between the text and external knowledge.</p>
+
+<p>The following proficiency categories are established in mathematics:</p>
+
+<ul>
+  <li>Below Level 1: score below 357.77</li>
+  <li>Level 1: score between 357.77 and 420.06</li>
+  <li>Level 2: score between 420.07 and 482.37</li>
+  <li>Level 3: score between 482.38 and 544.67</li>
+  <li>Level 4: score between 544.68 and 606.98</li>
+  <li>Level 5: score between 606.99 and 669.29</li>
+  <li>Level 6: score above 669.29</li>
+</ul>
+
+<p>An individual achieves at least Level 2 proficiency in mathematics when he or she can interpret 
+and recognize situations in contexts that only require direct inference, extract relevant information 
+from a single source and make use of a single mode of representation, use elementary algorithms, 
+formulas, procedures or conventions to solve problems related to integers and carry out direct reasoning 
+and literal interpretations of the results.</p>
 
           
         </td>
@@ -1297,7 +1309,7 @@ nivel mínimo de competencia del nivel de educación 2 en la materia o competenc
         <th scope="row">Data last updated </th>
         <td>
           
-            2025.04.22
+            2024.10.29
           
         </td>
         </tr>
@@ -1312,7 +1324,7 @@ nivel mínimo de competencia del nivel de educación 2 en la materia o competenc
         <th scope="row">Metadata last updated </th>
         <td>
           
-            2025.04.29
+            2024.10.29
           
         </td>
         </tr>
@@ -1443,15 +1455,15 @@ nivel mínimo de competencia del nivel de educación 2 en la materia o competenc
         <th scope="row">Rationale </th>
         <td>
           
-            <p>El indicador pretende medir el porcentaje de niños y jóvenes que han alcanzado los
-resultados mínimos de aprendizaje en lectura y matemáticas durante o al final de las etapas 
-pertinentes de la educación. Cuanto mayor sea la cifra, mayor será la proporción de niños
- y/o jóvenes que alcanzan al menos la competencia mínima en el dominio respectivo (lectura o matemáticas).</p>
+            <p>The indicator aims to measure the percentage of children and young people who have achieved the 
+minimum learning outcomes in reading and mathematics during or at the end of the relevant stages of 
+education. The higher the figure, the higher the proportion of children and/or young people reaching 
+at least minimum proficiency in the respective domain (reading or mathematic).</p>
 
-<p>Los resultados de aprendizaje de las evaluaciones transnacionales de aprendizaje son directamente 
-comparables para todos los países que participaron en las mismas evaluaciones transnacionales de aprendizaje.</p>
+<p>Learning outcomes from cross-national learning assessment are directly comparable for all countries 
+which participated in the same cross-national learning assessments.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1467,7 +1479,7 @@ comparables para todos los países que participaron en las mismas evaluaciones t
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos de Naciones Unidas.</p>
+            <p>The available indicator complies with United Nations metadata.</p>
 
           
         </td>
@@ -1484,9 +1496,9 @@ comparables para todos los países que participaron en las mismas evaluaciones t
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=4.1.1&amp;seriesCode=SE_TOT_PRFL&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20LOWSEC%20%7C%20SKILL_READ"> Proporción de niños y jóvenes que alcanzan un nivel mínimo de competencia en lectura en la educación secundaria inferior (%) SE_TOT_PRFL</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=4.1.1&amp;seriesCode=SE_TOT_PRFL&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20LOWSEC%20%7C%20SKILL_READ"> Proportion of children and young people achieving a minimum proficiency level in reading (%) SE_TOT_PRFL</a> UNSTATS</p>
 
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=4.1.1&amp;seriesCode=SE_TOT_PRFL&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20LOWSEC%20%7C%20SKILL_MATH"> Proporción de niños y jóvenes que alcanzan un nivel mínimo de competencia en matemáticas en la educación secundaria inferior (%) SE_TOT_PRFL</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=4.1.1&amp;seriesCode=SE_TOT_PRFL&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=BOTHSEX%20%7C%20LOWSEC%20%7C%20SKILL_MATH"> Series: Proportion of children and young people achieving a minimum proficiency level in mathematics (%) SE_TOT_PRFL</a> UNSTATS</p>
 
           
         </td>
@@ -1507,7 +1519,7 @@ comparables para todos los países que participaron en las mismas evaluaciones t
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-04-01-01.pdf">Metadatos 4-1-1.pdf </a>(solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-04-01-01.pdf">Metadata 4-1-1.pdf </a></p>
 
           
         </td>
@@ -1678,7 +1690,7 @@ comparables para todos los países que participaron en las mismas evaluaciones t
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1698,7 +1710,7 @@ comparables para todos los países que participaron en las mismas evaluaciones t
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1331,7 +1331,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>11 Make cities and human settlements inclusive, safe, resilient and sustainable</p>
+            <ol>
+  <li>Make cities and human settlements inclusive, safe, resilient and sustainable</li>
+</ol>
 
           
         </td>
@@ -1347,7 +1349,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Proporción de indemnizaciones por daños personales, pérdidas pecuniarias  y daños de bienes pagadas y/o provisionadas (pendientes de liquidación o pago)  en relación al PIB a precios corrientes</p>
+            <p>Proportion of compensation for personal injury, pecuniary loss and property  damage paid and/or provisioned (pending settlement or payment) in relation to  GDP at current prices</p>
 
           
         </td>
@@ -1367,19 +1369,19 @@ data-event-label="Change to indicator.global_metadata tab"
 
 \[IUIPC_{refT}^{T} = 1\]
 
-\[IUIPC_{refT}^{t-1} = IUIPC_{refT}^{t} \cdot \frac{(100+TIPC_{dic}^{t})}{100} \quad \mathrm t=\mathrm T,\mathrm T-1,\dots,\mathrm 2\]
+\[IUIPC_{refT}^{t-1} = IUIPC_{refT}^{t} \cdot \frac{(100+TIPC_{dec}^{t})}{100} \quad \mathrm t=\mathrm T,\mathrm T-1,\dots,\mathrm 2\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$IDP^{t}$ = indemnizaciones por daños personales pagadas y/o provisionadas en el año $t$ a precios del año $T$</p>
+<p>$IDP^{t}$ = compensation for personal injuries paid and/or provisioned in year $t$ at prices of year $T$</p>
 
-<p>$IPP^{t}$ = indemnizaciones por pérdidas pecuniarias pagadas y/o provisionadas en el año $t$ a precios del año $T$</p>
+<p>$IPP^{t}$ = compensation for pecuniary losses paid and/or provisioned in year $t$ at prices of year $T$</p>
 
-<p>$IDB^{t}$ = indemnizaciones por daños de bienes pagadas y/o provisionadas en el año $t$ a precios del año $T$</p>
+<p>$IDB^{t}$ = compensation for property damage paid and/or provisioned in year $t$ at prices of year $T$</p>
 
-<p>$TIPC_{dic}^{t}$ = tasa de variación anual del IPC nacional en el mes de diciembre del año $t$</p>
+<p>$TIPC_{dec}^{t}$ = annual variation rate of the national CPI in December of year $t$</p>
 
-<p>$PIB^{t}$ = producto interior bruto en términos corrientes en el año $t$</p>
+<p>$PIB^{t}$ = gross domestic product at current prices in year $t$</p>
 
           
         </td>
@@ -1395,7 +1397,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Territorio histórico</p>
+            <p>Province</p>
 
           
         </td>
@@ -1427,7 +1429,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Observations </th>
         <td>
           
-            <p>Las indemnizaciones se asignan al lugar y año de ocurrencia del siniestro,  no incluyendo los siniestros ocurridos en el extranjero</p>
+            <p>Compensation is assigned to the place and year of occurrence of the accident,  accidents occurred abroad not included.</p>
 
           
         </td>
@@ -1511,33 +1513,13 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.04.22
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.08
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1772,17 +1754,16 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Rationale </th>
         <td>
           
-            <p>El Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030 fue 
-adoptado por los Estados miembros de las Naciones Unidas en marzo de 2015 
-como una política global de reducción del riesgo de desastres.</p>
+            <p>The Sendai Framework for Disaster Risk Reduction 2015-2030 was adopted by 
+UN Member States in March 2015 as a global policy of disaster risk reduction.</p>
 
-<p>Entre sus metas se encuentra la Meta C: Reducir las pérdidas económicas directas 
-por desastres en relación con el producto interno bruto (PIB) mundial para 2030.</p>
+<p>Its targets include Target C: Reduce direct disaster economic loss in relation 
+to global GDP by 2030.</p>
 
-<p>La consecución de sus metas contribuirá al desarrollo sostenible y fortalecerá la 
-resiliencia económica, social, sanitaria y ambiental.</p>
+<p>The achievement of its targets will contribute to sustainable development and 
+strengthen economic, social, health and environmental resilience.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1798,7 +1779,7 @@ resiliencia económica, social, sanitaria y ambiental.</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible no cumple con los metadatos de Naciones Unidas,  pero aporta información similar</p>
+            <p>The available indicator does not comply with United Nations metadata but provides similar information</p>
 
           
         </td>
@@ -1824,7 +1805,7 @@ resiliencia económica, social, sanitaria y ambiental.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-02.pdf">Metadatos 1-5-2.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-05-02.pdf">Metadata 1-5-2.pdf</a></p>
 
           
         </td>
@@ -1995,7 +1976,7 @@ resiliencia económica, social, sanitaria y ambiental.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -2015,7 +1996,7 @@ resiliencia económica, social, sanitaria y ambiental.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1367,7 +1367,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>6 Ensure availability and sustainable management of water and sanitation for all</p>
+            <ol>
+  <li>Ensure availability and sustainable management of water and sanitation for all</li>
+</ol>
 
           
         </td>
@@ -1384,15 +1386,22 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>El indicador está constituido por 2 series:</p>
+<p>The indicator is made up of 2 series:</p>
 
-<p><b> - Proporción de flujos de aguas residuales domésticas tratadas de manera adecuada</b>: Proporción de la carga contaminante 
-    correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes que depuran sus aguas 
-    residuales reduciendo su nivel de contaminación hasta un límte aceptable para las aguas receptoras</p>
-
-<p><b> - Proporción de flujos de aguas residuales domésticas conectadas a un sistema de colectores</b>: Proporción de la carga contaminante 
-    correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes conectadas a un sistema 
-    de conductos que recoja y conduzca sus aguas residuales hasta una instalación de tratamiento o a un punto de vertido final</p>
+<ul>
+  <li>
+    <p>Proportion of safely treated domestic wastewater flows: Proportion of the pollution 
+ load corresponding to urban agglomerations with more than 2,000 population equivalents 
+ that treat their wastewater, reducing their pollution level to an acceptable limit for 
+ the receiving waters</p>
+  </li>
+  <li>
+    <p>Proportion of domestic wastewater flows connected to a collection system: Proportion 
+ of the pollution load corresponding to urban agglomerations with more than 2,000 population 
+ equivalents connected to a conduit system that collects and conveys their wastewater to a 
+ treatment facility or final discharge point</p>
+  </li>
+</ul>
 
           
         </td>
@@ -1409,31 +1418,34 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p><b>Proporción de flujos de aguas residuales domésticas tratadas de manera adecuada</b></p>
+<p><b>Proportion of safely treated domestic wastewater flows</b></p>
 
-\[PCC_{\text{depuración}}^{t} =
-  \left( \frac{CC_{\text{depuración}}^{t}}{CC^{t}} \cdot 100 \right)\]
+\[PCC_{\text{purification}}^{t} =
+  \left( \frac{CC_{\text{purification}}^{t}}{CC^{t}} \cdot 100 \right)\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$CC_{\text{depuración}}^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de 
-2.000 habitantes equivalentes que depuran adecuadamente sus aguas residuales en el año $t$</p>
+<p>$CC_{\text{purification}}^{t} =$ pollution load corresponding to urban agglomerations 
+with more than 2,000 population equivalents that adequately treat their wastewater in year $t$</p>
 
-<p>$CC^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes en el año $t$</p>
+<p>$CC^{t} =$ pollution load corresponding to urban agglomerations with more than 2,000 
+ population equivalents in year $t$</p>
 
 <p><br /></p>
 
-<p><b>Proporción de flujos de aguas residuales domésticas conectadas a un sistema de colectores</b></p>
+<p><b>Proportion of domestic wastewater flows connected to a collection system</b></p>
 
-\[PCC_{\text{colectores}}^{t} =
-  \left( \frac{CC_{\text{colectores}}^{t}}{CC^{t}} \cdot 100 \right)\]
+\[PCC_{\text{collectors}}^{t} =
+  \left( \frac{CC_{\text{collectors}}^{t}}{CC^{t}} \cdot 100 \right)\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$CC_{\text{colectores}}^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de 2.000 
-habitantes equivalentes conectadas a un sistema de colectores de aguas residuales en el año $t$</p>
+<p>$CC_{\text{collectors}}^{t} =$ pollution load corresponding to urban agglomerations 
+with more than 2,000 population equivalents connected to a conduit system that collects 
+and conveys their wastewater to a treatment facility or final discharge point $t$</p>
 
-<p>$CC^{t} =$ carga contaminante correspondiente a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes en el año $t$</p>
+<p>$CC^{t} =$ pollution load corresponding to urban agglomerations with more than 2,000 
+population equivalents in year $t$</p>
 
           
         </td>
@@ -1471,19 +1483,20 @@ habitantes equivalentes conectadas a un sistema de colectores de aguas residuale
         <td>
           
             
-<p>La carga contaminante de una aglomeración urbana se mide en habitantes equivalentes, definiéndose un 
-habitante equivalente como la carga orgánica biodegradable con una demanda bioquímica de oxígeno de 
-cinco días de 60 gramos de oxígeno por día. Un habitante equivalente viene a representar la carga 
-orgánica biodegradable generada por una persona en un día en una vivienda normal.</p>
+<p>The pollution load of an urban agglomeration is measured in equivalent inhabitants, 
+with an equivalent inhabitant defined as the biodegradable organic load with a five-day 
+biochemical oxygen demand of 60 grams of oxygen per day. An equivalent inhabitant 
+represents the biodegradable organic load generated by one person in one day in a typical home.</p>
 
-<p>Se debe tener en cuenta que la carga contaminante de una aglomeración urbana no solo incluye 
-la contaminación debida a las excreciones humanas, sino también la contaminación procedente 
-de aquellos locales utilizados para efectuar una actividad comercial o industrial, siempre 
-que sea de naturaleza orgánica biodegradable. Así pues, el número de habitantes equivalentes de 
-una aglomeración urbana siempre es superior a su número de habitantes reales.</p>
+<p>It should be noted that the pollution load of an urban agglomeration not only includes 
+pollution due to human excrement, but also pollution from premises used for commercial<br />
+or industrial activities, provided that it is biodegradable organic. Therefore, the number 
+of equivalent inhabitants of an urban agglomeration is always greater than its actual number 
+of inhabitants.</p>
 
-<p>Este indicador solo tiene en cuenta a las aglomeraciones urbanas de más de 2.000 habitantes equivalentes, 
-en consonancia con los artículos 3 y 4 de la Directiva 91/271/CEE sobre el tratamiento de las aguas residuales urbanas.</p>
+<p>This indicator only takes into account urban agglomerations with more than 2,000 population 
+equivalents, in accordance with Articles 3 and 4 of Directive 91/271/EEC on urban wastewater 
+treatment.</p>
 
           
         </td>
@@ -1572,7 +1585,7 @@ en consonancia con los artículos 3 y 4 de la Directiva 91/271/CEE sobre el trat
         <th scope="row">Data last updated </th>
         <td>
           
-            2025.04.22
+            2024.10.29
           
         </td>
         </tr>
@@ -1587,7 +1600,7 @@ en consonancia con los artículos 3 y 4 de la Directiva 91/271/CEE sobre el trat
         <th scope="row">Metadata last updated </th>
         <td>
           
-            2025.04.29
+            2024.10.29
           
         </td>
         </tr>
@@ -1719,32 +1732,28 @@ en consonancia con los artículos 3 y 4 de la Directiva 91/271/CEE sobre el trat
         <td>
           
             
-<p>Los datos sobre aguas residuales son cruciales para promover estrategias de uso sostenible y 
-seguro de las aguas residuales o su reutilización en beneficio de la salud de la población 
-mundial y el medio ambiente global, pero también para responder a las crecientes demandas 
-de agua, el aumento de las cargas de contaminación del agua y los impactos del cambio 
-climático en los recursos hídricos.</p>
+<p>Wastewater data are crucial to promote strategies for sustainable and safe wastewater 
+use or reuse to the benefit of the world’s population health and the global environment, 
+but also to respond to growing water demands, increasing water pollution loads, and climate 
+change impacts on water resources.</p>
 
-<p>El Objetivo de Desarrollo Sostenible 6 (ODS 6) trata de garantizar la disponibilidad 
-y sostenibilidad del agua y el saneamiento para todos para 2030. La meta 6.3 de los 
-ODS se propone mejorar la calidad del agua ambiental, que es esencial para proteger 
-tanto los ecosistemas como la salud humana, eliminando, minimizando y reduciendo s
-ignificativamente las diferentes corrientes de contaminación en los cuerpos de agua.</p>
+<p>Sustainable Development Goal 6 (SDG 6) is about ensuring the availability and sustainability 
+of water and sanitation for all by 2030. SDG Target 6.3 sets out to improve ambient water 
+quality, which is essential to protecting both ecosystem and human health, by eliminating, 
+minimizing and significantly reducing different streams of pollution into water bodies.</p>
 
-<p>El propósito de monitorear el progreso utilizando el indicador 6.3.1 de los ODS es proporcionar 
-la información necesaria y oportuna a los tomadores de decisiones y las partes interesadas 
-para que tomen decisiones informadas para acelerar el progreso hacia la reducción de la 
-contaminación del agua, minimizando la liberación de productos químicos peligrosos y 
-aumentando el tratamiento y la reutilización de las aguas residuales.</p>
+<p>The purpose of monitoring progress using SDG indicator 6.3.1 is to provide necessary and timely 
+information to decision makers and stakeholders to make informed decisions to accelerate progress 
+towards reducing water pollution, minimizing release of hazardous chemicals and increasing wastewater 
+treatment and reuse.</p>
 
-<p>La redacción de la meta cubre el reciclaje de aguas residuales y la reutilización segura con 
-implicancias en la eficiencia del uso del agua, aunque no se aborda completamente en el indicador 
-y la metodología globales. El indicador 6.3.1 de los ODS rastrea la proporción de flujos de 
-aguas residuales de hogares, servicios y actividades económicas industriales que son tratados 
-de manera segura en la fuente o mediante plantas centralizadas de tratamiento de aguas residuales 
-antes de ser descargados al medio ambiente, del volumen total de aguas residuales generadas.</p>
+<p>The target wording covers wastewater recycling and safe reuse with implication on water use efficiency, 
+although it is not fully addressed by the global indicator and methodology. SDG indicator 6.3.1 tracks 
+the proportion of wastewater flows from households, services and industrial economic activities that 
+are safely treated at the source or through centralized wastewater treatment plants before being discharged 
+into the environment, out of the total volume of wastewater generated.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1760,7 +1769,7 @@ antes de ser descargados al medio ambiente, del volumen total de aguas residuale
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas, pero aporta información similar.</p>
+            <p>The available indicator does not comply with United Nations metadata but provides similar information.</p>
 
           
         </td>
@@ -1786,7 +1795,7 @@ antes de ser descargados al medio ambiente, del volumen total de aguas residuale
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-06-03-01.pdf">Metadatos 6-3-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-06-03-01.pdf">Metadata 6-3-1.pdf</a></p>
 
           
         </td>
@@ -1957,7 +1966,7 @@ antes de ser descargados al medio ambiente, del volumen total de aguas residuale
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1977,7 +1986,7 @@ antes de ser descargados al medio ambiente, del volumen total de aguas residuale
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

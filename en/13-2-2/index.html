@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -2427,7 +2427,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>13 Take urgent action to combat climate change and its impacts</p>
+            <ol>
+  <li>Take urgent action to combat climate change and its impacts</li>
+</ol>
 
           
         </td>
@@ -2443,7 +2445,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Emisiones totales de gases de efecto invernadero (GEI), emisiones totales de GEI por unidad de PIB real,  per cápita, y tasas de variación respecto a las emisiones en los años 1990 y 2005</p>
+            <p>Total greenhouse gas (GHG) emissions, total GHG emissions per unit of real GDP, per capita,  and rates of change relative to emissions in the years 1990 and 2005</p>
 
           
         </td>
@@ -2460,33 +2462,33 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p><b>Emisiones totales de gases de efecto invernadero por unidad de PIB</b></p>
+<p><b>Total greenhouse gas emissions per unit of GDP</b></p>
 
 \[PPIBGEI^{t} = \frac{GEI^{t}}{PIB_{2022}^{t}}\]
 
-<p><b>Emisiones totales de gases de efecto invernadero per cápita</b></p>
+<p><b>Total greenhouse gas emissions per capita</b></p>
 
 \[GEIPC^{t} = \frac{GEI^{t}}{P^{t}}\]
 
-<p><b>Emisiones de gases de efecto invernadero respecto al año 1990</b></p>
+<p><b>Greenhouse gas emissions compared to 1990</b></p>
 
 \[TVGEI_{1990}^{t} = \frac{GEI^{t}-GEI^{1990}}{GEI^{1990}} \cdot 100\]
 
-<p><b>Emisiones de gases de efecto invernadero respecto al año 2005</b></p>
+<p><b>Greenhouse gas emissions compared to 2005</b></p>
 
 \[TVGEI_{2005}^{t} = \frac{GEI^{t}-GEI^{2005}}{GEI^{2005}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$GEI^{t} =$ emisiones de gases de efecto invernadero en el año $t$</p>
+<p>$GEI^{t} =$ greenhouse gas emissions in year $t$</p>
 
-<p>$PIB_{2022}^{t} =$ producto interior bruto en volumen encadenado con referencia 2022 en el año $t$</p>
+<p>$PIB_{2022}^{t} =$ gross domestic product in chained volume with reference to 2022 en el año $t$</p>
 
-<p>$P^{t} =$ población a 1 de julio en el año $t$</p>
+<p>$P^{t} =$ population as of July 1 of year $t$</p>
 
-<p>$GEI^{1990} =$ emisiones de gases de efecto invernadero en el año 1990</p>
+<p>$GEI^{1990} =$ greenhouse gas emissions in 1990</p>
 
-<p>$GEI^{2005} =$ emisiones de gases de efecto invernadero en el año 2005</p>
+<p>$GEI^{2005} =$ greenhouse gas emissions in 2005</p>
 
           
         </td>
@@ -2596,33 +2598,13 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.09
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -2747,35 +2729,29 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Rationale </th>
         <td>
           
-            <p>El objetivo último de la Convención Marco sobre el Cambio Climático (CMNUCC) es lograr 
-la estabilización de las concentraciones de gases de efecto invernadero en la atmósfera a 
-un nivel que impida interferencias antropogénicas peligrosas en el sistema climático. 
-La estimación de los niveles de emisiones y absorciones de gases de efecto invernadero (GEI) 
-es un elemento importante de los esfuerzos para lograr este objetivo.</p>
+            <p>The ultimate objective of the Climate Change Convention (UNFCCC) is to achieve the stabilization of 
+greenhouse gas concentrations in the atmosphere at a level that would prevent dangerous 
+anthropogenic interference with the climate system. Estimating the levels of greenhouse gas (GHG) 
+emissions and removals is an important element of the efforts to achieve this objective.</p>
 
-<p>El Acuerdo de París adoptado en 2015 marca el último paso en la evolución del régimen de 
-cambio climático de la ONU y se basa en el trabajo realizado en el marco de la Convención. 
-Su objetivo principal es fortalecer la respuesta mundial a la amenaza del cambio 
-climático manteniendo el aumento de la temperatura global en este siglo muy por debajo de los 
-2 grados Celsius con respecto a los niveles preindustriales y proseguir los esfuerzos para 
-limitar el aumento de la temperatura aún más a 1,5 grados Celsius. El Acuerdo también tiene 
-como objetivo fortalecer la capacidad de los países para hacer frente a los impactos del 
-cambio climático.</p>
+<p>The Paris Agreement adopted in 2015 marks the latest step in the evolution of the UN climate change 
+regime and builds on the work undertaken under the Convention. Its central aim is to strengthen the 
+global response to the threat of climate change by keeping a global temperature rise this century well 
+below 2 degrees Celsius above pre-industrial levels and to pursue efforts to limit the temperature 
+increase even further to 1.5 degrees Celsius. The Agreement also aims to strengthen the ability of 
+countries to deal with the impacts of climate change.</p>
 
-<p>El indicador forma parte del conjunto de indicadores de los Objetivos de Desarrollo 
-Sostenible (ODS) de la UE. La normativa europea del clima establece un marco para la acción 
-climática y aumenta la ambición de la UE para 2030, con un nuevo objetivo de reducir 
-las emisiones netas de gases de efecto invernadero (GEI) en al menos un 55 % para 
-ese año (en comparación con 1990) y lograr la neutralidad climática para 2050.</p>
+<p>The indicator is part of the EU Sustainable Development Goals (SDG) indicator set. The European Climate 
+Law sets out a framework for climate action and increases the EU’s ambition for 2030, with a new goal 
+to reduce net greenhouse gas (GHG) emissions by at least 55 % by that year (compared to 1990) and to 
+achieve climate-neutrality by 2050.</p>
 
-<p>El año 1990 se utiliza como referencia en la mayoría de los acuerdos climáticos 
-internacionales (Kioto, Naciones Unidas). El año 2005 es el año base utilizado por la 
-Directiva del reparto del esfuerzo de mitigación de los gases de efecto 
-invernadero (ETS, sistema de comercio de emisiones de la UE), 
-debido a que existe mayor disponibilidad de datos detallados sectoriales a partir
-de esa fecha.</p>
+<p>The year 1990 is used as the reference year in most international climate agreements (Kyoto, United 
+Nations). The year 2005 is the base year used by the Greenhouse Gas Mitigation Effort Sharing Directive 
+(ETS, EU Emissions Trading System) due to the greater availability of detailed sectoral data from that 
+date onwards.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas, Eurostat</p>
+<p>Source: United Nations Statistics Division, Eurostat</p>
 
           
         </td>
@@ -2791,7 +2767,7 @@ de esa fecha.</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>La serie “emisiones totales de gases de efecto invernadero por año” cumple con los metadatos de  Naciones Unidas. Se presentan, además, otras series relacionadas con los objetivos europeos.</p>
+            <p>The “total annual greenhouse gas emissions” series complies with United Nations metadata. Other series related to European targets are also presented.</p>
 
           
         </td>
@@ -2807,7 +2783,7 @@ de esa fecha.</p>
         <th scope="row">International results </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_13_10/default/table?lang=en&amp;category=sdg.sdg_13"> Emisiones netas de gases de efecto invernadero (sdg_13_10)</a> Eurostat</p>
+            <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_13_10/default/table?lang=en&amp;category=sdg.sdg_13"> Net greenhouse gas emissions (sdg_13_10)</a> Eurostat</p>
 
           
         </td>
@@ -2828,7 +2804,7 @@ de esa fecha.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-02.pdf">Metadatos 13-2-2.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-13-02-02.pdf">Metadata 13-2-2.pdf</a></p>
 
           
         </td>
@@ -2999,7 +2975,7 @@ de esa fecha.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -3019,7 +2995,7 @@ de esa fecha.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

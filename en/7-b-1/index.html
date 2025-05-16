@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1488,7 +1488,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>7 Ensure access to affordable, reliable, sustainable and modern energy for all</p>
+            <ol>
+  <li>Ensure access to affordable, reliable, sustainable and modern energy for all</li>
+</ol>
 
           
         </td>
@@ -1505,8 +1507,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Capacidad instalada de las instalaciones que generan electricidad 
-a partir de fuentes de energía renovables dividida por la población</p>
+<p>Installed renewable electricity-generating capacity divided by population</p>
 
           
         </td>
@@ -1523,13 +1524,13 @@ a partir de fuentes de energía renovables dividida por la población</p>
         <td>
           
             
-\[CINSTPC_{renovable}^{t} = \frac{CINST_{renovable}^{t}}{P^{t}} \cdot 100\]
+\[CINSTPC_{renewable}^{t} = \frac{CINST_{renewable}^{t}}{P^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$CINST_{renovable}^{t} =$ capacidad instalada de generación de energía eléctrica procedente de fuentes renovables en el año $t$</p>
+<p>$CINST_{renewable}^{t} =$ installed renewable electricity-generating capacity in year $t$</p>
 
-<p>$P^{t} =$ población total en el año  $t$</p>
+<p>$P^{t} =$ total population in year $t$</p>
 
           
         </td>
@@ -1546,7 +1547,7 @@ a partir de fuentes de energía renovables dividida por la población</p>
         <td>
           
             
-<p>Tipo de fuente de energía renovable: hidraúlica, fotovoltaica, eólica, solar térmica</p>
+<p>Type of renewable energy source: hydraulic, photovoltaic, wind, solar thermal</p>
 
           
         </td>
@@ -1640,33 +1641,13 @@ a partir de fuentes de energía renovables dividida por la población</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.03.28
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1792,47 +1773,43 @@ a partir de fuentes de energía renovables dividida por la población</p>
         <td>
           
             
-<p>La infraestructura y las tecnologías necesarias para suministrar 
-servicios energéticos modernos y sostenibles abarcan una
-amplia gama de equipos y dispositivos que se utilizan en numerosos 
-sectores económicos. No existe un mecanismo fácilmente disponible 
-para recopilar, agregar y medir la contribución de este grupo dispar de 
-productos a la prestación de servicios energéticos modernos y sostenibles.</p>
+<p>The infrastructure and technologies required to supply modern 
+and sustainable energy services cover a wide range of equipment 
+and devices that are used across numerous economic sectors. There 
+is no readily available mechanism to collect, aggregate and measure 
+the contribution of this disparate group of products to the delivery 
+of modern and sustainable energy services.</p>
 
-<p>Sin embargo, una parte importante de la cadena de suministro de energía 
-que puede medirse fácilmente es la infraestructura utilizada para 
-producir electricidad.</p>
+<p>However, one major part of the energy supply chain that can be readily 
+measured is the infrastructure used to produce electricity.</p>
 
-<p>Las energías renovables se consideran una forma sostenible de suministro 
-de energía, ya que su uso actual no suele agotar su disponibilidad para 
-su uso en el futuro. El enfoque de este indicador en la electricidad 
-refleja el énfasis del objetivo en las fuentes modernas de energía y 
-es particularmente relevante para los países en desarrollo donde la 
-demanda de electricidad suele ser alta y su disponibilidad es limitada.</p>
+<p>Renewables are considered a sustainable form of energy supply, as their 
+current use does not usually deplete their availability to be used in 
+the future. The focus of this indicator on electricity reflects the 
+emphasis of the target on modern sources of energy and is particularly 
+relevant for developing countries where the demand for electricity is often 
+high and its availability is constrained.</p>
 
-<p>Además, el enfoque en las energías renovables refleja el hecho de que las 
-tecnologías utilizadas para producir electricidad renovable son 
-generalmente modernas y más sostenibles que las no renovables, 
-en particular en los subsectores de mayor crecimiento de la generación 
-de electricidad a partir de energía eólica y solar.</p>
+<p>Furthermore, the focus on renewables reflects the fact that the technologies 
+used to produce renewable electricity are generally modern and more 
+sustainable than non-renewables, particularly in the fastest growing sub-sectors 
+of electricity generation from wind and solar energy.</p>
 
-<p>La división de la capacidad de electricidad renovable por población 
-(para producir una medida de vatios per cápita) propone escalar los datos 
-de capacidad para tener en cuenta la gran variación de necesidades entre 
-países. Utiliza la población en lugar del PIB para escalar los datos, 
-porque este es el indicador más básico de la demanda de servicios 
-energéticos modernos y sostenibles en un país.</p>
+<p>The division of renewable electricity capacity by population (to produce a 
+measure of Watts per capita) is proposing to scale the capacity data to account 
+for the large variation in needs between countries. It uses population rather 
+than GDP to scale the data, because this is the most basic indicator of the 
+demand for modern and sustainable energy services in a country.</p>
 
-<p>Este indicador también debería complementar los indicadores 
-7.1.1 y 7.2.1. Con respecto al acceso a la electricidad, proporcionará 
-información adicional sobre la proporción de personas con acceso a la 
-electricidad al mostrar cuánta infraestructura está disponible 
-para brindar ese acceso (en términos de la cantidad de capacidad por persona). 
-El enfoque en la capacidad renovable también agregará valor al indicador 
-de energías renovables existente (7.2.1) al mostrar cuánto contribuye 
-la energía renovable a la necesidad de un mejor acceso a la electricidad.</p>
+<p>This indicator should also complement indicators 7.1.1 and 7.2.1. With respect 
+to electricity access, it will provide additional information to the proportion 
+of people with electricity access by showing how much infrastructure is available 
+to deliver that access (in terms of the amount of capacity per person). The focus 
+on renewable capacity will also add value to the existing renewables indicator 
+(7.2.1) by showing how much renewable energy is contributing to the need for 
+improved electricity access.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1848,7 +1825,7 @@ la energía renovable a la necesidad de un mejor acceso a la electricidad.</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+            <p>The available indicator complies with United Nations metadata.</p>
 
           
         </td>
@@ -1865,7 +1842,7 @@ la energía renovable a la necesidad de un mejor acceso a la electricidad.</p>
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=7.b.1&amp;seriesCode=EG_EGY_RNEW&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ALL">Capacidad instalada de generación de electricidad renovable (vatios per cápita) EG_EGY_RNEW</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=7.b.1&amp;seriesCode=EG_EGY_RNEW&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ALL">Installed renewable electricity-generating capacity (watts per capita) EG_EGY_RNEW</a> UNSTATS</p>
 
           
         </td>
@@ -1886,7 +1863,7 @@ la energía renovable a la necesidad de un mejor acceso a la electricidad.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-07-0b-01.pdf">Metadatos 7-b-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-07-0b-01.pdf">Metadata 7-b-1.pdf</a></p>
 
           
         </td>
@@ -2066,7 +2043,7 @@ la energía renovable a la necesidad de un mejor acceso a la electricidad.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -2086,7 +2063,7 @@ la energía renovable a la necesidad de un mejor acceso a la electricidad.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

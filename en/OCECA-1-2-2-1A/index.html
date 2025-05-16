@@ -143,7 +143,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1161,7 +1161,9 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>1 End poverty in all its forms everywhere</p>
+            <ol>
+  <li>End poverty in all its forms everywhere</li>
+</ol>
 
           
         </td>
@@ -1178,7 +1180,7 @@ data-event-label="Change to indicator.sources tab"
         <td>
           
             
-<p>Proporción de personas que están en al menos uno de los tres criterios del riesgo de  pobreza o exclusión social: en riesgo de pobreza relativa (considerando  el umbral nacional de pobreza), viviendo en hogares con carencia material  severa o viviendo en hogares con baja intensidad de trabajo</p>
+<p>Proportion of people who are in at least one of the three situations of risk of poverty or social  exclusion: at risk of relative poverty (considering the national poverty line), living in households  with severe material deprivation or living in households with low work intensity</p>
 
           
         </td>
@@ -1196,11 +1198,11 @@ data-event-label="Change to indicator.sources tab"
           
             \[AROPE_{NAC}^{t} = \frac{PRPES_{NAC}^{t}}{P^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$PRPES_{NAC}^{t} =$ población en riesgo de pobreza o exclusión social el año $t$, considerando el umbral nacional de pobreza</p>
+<p>$PRPES_{NAC}^{t} =$ population at risk of poverty or social exclusion in year $t$, considering the national poverty line</p>
 
-<p>$P^{t} =$ población total en el año  $t$</p>
+<p>$P^{t} =$ total population in year $t$</p>
 
           
         </td>
@@ -1237,54 +1239,50 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Observations </th>
         <td>
           
-            <p>El indicador mide la proporción de personas que cumplen al menos uno de los siguientes criterios:</p>
+            <p>The indicator measures the proportion of people who meet at least one of the following criteria:</p>
 
-<p><b>Personas en riesgo de pobreza relativa:</b> personas con ingresos por unidad de consumo por
-debajo del 60% de la mediana (escala OCDE modificada).</p>
+<p><b>People at risk of relative poverty:</b> people with income per consumption unit below 60% of the median (modified OECD scale)</p>
 
-<p>El número de unidades de consumo de un hogar se calcula utilizando la escala OCDE modificada, 
-que asigna un peso de 1 a la primera  persona de 14 o más años, un peso de 0,5 al resto de personas de 
-14 o más años y un peso de 0,3 a las personas de menos de 14 años.&lt;/p&gt;</p>
+<p>The number of consumption units in a household 
+is calculated using the modified OECD scale, which assigns a weight of 1 to the 
+first person aged 14 or over, a weight of 0.5 for other people aged 14 or over 
+and a weight of 0.3 for people under 14 years of age.</p>
 
-<p><b>Personas en situación de carencia material y social severa:</b> personas que padecen al menos 
-siete de la siguiente lista de trece limitaciones (siete definidas a nivel de hogar y seis a nivel de persona):</p>
+<p><b>People in situations of severe material and social deprivation:</b> people who suffer from at least seven 
+of the following list of thirteen limitations (seven defined at the household level and six at the individual level):</p>
 
-<p>A nivel de hogar:</p>
+<p>At the household level:</p>
 <ol>
-  <li>No puede permitirse ir de vacaciones al menos una semana al año.</li>
-  <li>No puede permitirse una comida de carne, pollo o pescado al menos cada dos días.</li>
-  <li>No puede permitirse mantener la vivienda con una temperatura adecuada.</li>
-  <li>No tiene capacidad para afrontar gastos imprevistos.</li>
-  <li>Ha tenido retrasos en el pago de gastos relacionados con la vivienda principal 
-(hipoteca o alquiler, recibos de gas, comunidad, etc) o en
-compras a plazos en los últimos 12 meses.</li>
-  <li>No puede permitirse disponer de un automóvil.</li>
-  <li>No puede sustituir muebles estropeados o viejos.</li>
+  <li>You can’t afford to go on vacation for at least one week a year.</li>
+  <li>You cannot afford a meal of meat, chicken or fish at least every other day.</li>
+  <li>You cannot afford to keep the home at an adequate temperature.</li>
+  <li>You do not have the capacity to face unforeseen expenses.</li>
+  <li>You have had delays in the payment of expenses related to the main home (mortgage or rent, gas bills, community…) 
+ or in installment purchases in the last 12 months.</li>
+  <li>You can’t afford a car.</li>
+  <li>You cannot replace damaged or old furniture.</li>
 </ol>
 
-<p>A nivel de persona:</p>
+<p>At the individual level:</p>
 <ol>
-  <li>No puede permitirse sustituir ropa estropeada por otra nueva.</li>
-  <li>No puede permitirse tener dos pares de zapatos en buenas condiciones.</li>
-  <li>No puede permitirse reunirse con amigos/familia para comer o tomar algo al menos una vez al mes.</li>
-  <li>No puede permitirse participar regularmente en actividades de ocio.</li>
-  <li>No puede permitirse gastar una pequeña cantidad de dinero en sí mismo.</li>
-  <li>No puede permitirse conexión a internet.</li>
+  <li>You cannot afford to replace damaged clothes with new ones.</li>
+  <li>You can’t afford to have two pairs of shoes in good condition.</li>
+  <li>You can’t afford to meet friends/family for food or drinks at least once a month.</li>
+  <li>You cannot afford to regularly participate in leisure activities.</li>
+  <li>You can’t afford to spend a small amount of money on yourself.</li>
+  <li>Cannot afford internet connection.</li>
 </ol>
 
-<p>En el caso de menores de 16 años no se dispone de los seis conceptos enumerados anteriormente a 
-nivel de persona. Para estos menores los valores de esos elementos se imputan a partir de los valores
-recogidos para los miembros de su hogar con 16 o más años.</p>
+<p>In the case of minors under 16 years of age, the six concepts listed above are not available at the individual level. 
+For these minors, the values of these elements are imputed from the values collected for the members of their household aged 16 or over.</p>
 
-<p><b>Baja intensidad en el empleo:</b> son los hogares en los que sus miembros en edad de trabajar 
-(personas de 18 a 64 años, excluyendo los estudiantes de 18 a 24 años, los jubilados o retirados, 
-así como las personas inactivas entre 60 y 64 cuya fuente principal de ingresos del hogar sean las pensiones)
-lo hicieron menos del 20% del total de su potencial de trabajo durante el año de referencia.
-Esta variable no se aplica en el caso de las personas de 65 y más años.</p>
+<p><b>Low work intensity:</b> these are households in which their working age members (people from 18 to 64 years old, excluding 
+students from 18 to 24 years old, retirees or retirees, as well as inactive people between 60 and 64 whose main source of household income 
+are pensions) worked less than 20% of their total work potential during the reference year. 
+This variable does not apply for people aged 65 and over.</p>
 
-<p>Los datos a partir del 2022 del Indicador de pobreza y exclusion AROPE se calculan con la nueva 
-definicion de la tasa (metodología Eurostat del año 2021), mientras que los datos anteriores corresponden 
-a la definición antigua.</p>
+<p>Data from 2022 onwards for the AROPE Poverty and Exclusion Indicator are calculated using the new definition of the rate (Eurostat 
+methodology from 2021), while previous data correspond to the old definition.</p>
 
           
         </td>
@@ -1373,7 +1371,7 @@ a la definición antigua.</p>
         <th scope="row">Data last updated </th>
         <td>
           
-            2025.05.08
+            2024.07.29
           
         </td>
         </tr>
@@ -1388,7 +1386,7 @@ a la definición antigua.</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            2024.11.28
+            2024.07.29
           
         </td>
         </tr>
@@ -1699,7 +1697,7 @@ a la definición antigua.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1719,7 +1717,7 @@ a la definición antigua.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -761,7 +761,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>9 Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation</p>
+            <ol>
+  <li>Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation</li>
+</ol>
 
           
         </td>
@@ -777,7 +779,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Proporción del valor añadido bruto del sector manufacturero correspondiente a las actividades de media-alta y alta tecnología</p>
+            <p>Proportion of gross value added of the manufacturing sector corresponding to medium-high and high technology activities</p>
 
           
         </td>
@@ -794,12 +796,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>\(PVAB_{manufacturero\,media-alta\, y\, alta}^{t} = \frac{VAB_{manufacturero\,media-alta\, y\, alta}^{t}}{VAB_{manufacturero}^{t}} \cdot 100\)
-donde:</p>
+\[PVAB_{manufacturing\, medium-high\, and\, high}^{t} = \frac{VAB_{manufacturing\, medium-high\, and\, high}^{t}}{VAB_{manufacturing}^{t}} \cdot 100\]
 
-<p>$VAB_{manufacturero\,media-alta\, y\, alta}^{t}$ = valor añadido bruto correspondiente a las ctividades manufactureras de media-alta y alta tecnología en el año $t$</p>
+<p>where:</p>
 
-<p>$VAB_{manufacturero}^{t}$ = valor añadido bruto total del sector manufacturero en el año $t$</p>
+<p>$VAB_{manufacturing\, medium-high\, and\, high}^{t} $ = gross value added of the manufacturing sector corresponding to medium-high and high technology activities in year $t$</p>
+
+<p>$VAB_{manufacturing}^{t} $ = gross value added of the manufacturing sector in year $t$</p>
 
           
         </td>
@@ -837,25 +840,24 @@ donde:</p>
         <td>
           
             
-<p>Se consideran actividades manufactureras de media-alta y alta tecnología las actividades 
-con CNAE-2009:</p>
+<p>Medium-high and high technology manufacturing activities are considered activities with CNAE-2009:</p>
 
-<p>Media-alta tecnología</p>
+<p>Medium-high technology</p>
 <ul>
-  <li>20: Industria química</li>
-  <li>25.4: Fabricación de armas y municiones</li>
-  <li>27 a 29: Fabricación de material y equipo eléctrico; Fabricación de maquinaria 
-y equipo n.c.o.p;   Fabricación de vehículos de motor, remolques y semirremolques</li>
-  <li>30 excepto 30.1 y 30.3: Fabricación de otro material de transporte excepto 
-construcción naval, construcción aeronáutica y espacial y su maquinaria</li>
-  <li>32.5: Fabricación de instrumentos y suministros médicos y odontológicos</li>
+  <li>20: Chemical industry</li>
+  <li>25.4: Manufacture of weapons and ammunition</li>
+  <li>27 to 29: Manufacture of electrical material and equipment; Manufacture of machinery and equipment n.c.o.p; 
+Manufacture of vehicles motor, trailers and semi-trailers</li>
+  <li>30 except 30.1 and 30.3: Manufacture of other transport material except shipbuilding, aeronautical construction 
+and spacecraft and its machinery</li>
+  <li>32.5: Manufacture of medical and dental instruments and supplies</li>
 </ul>
 
-<p>Alta tecnología</p>
+<p>High technology</p>
 <ul>
-  <li>21: Fabricación de productos farmaceúticos</li>
-  <li>26: Fabricación de productos informáticos, electrónicos y ópticos</li>
-  <li>30.3: Construcción aeronáutica y espacial y su maquinaria</li>
+  <li>21: Manufacture of pharmaceuticals</li>
+  <li>26: Manufacture of computer, electronic and optical products</li>
+  <li>30.3: Aeronautical and space construction and its machinery</li>
 </ul>
 
           
@@ -940,33 +942,13 @@ construcción naval, construcción aeronáutica y espacial y su maquinaria</li>
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.04
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1092,16 +1074,15 @@ construcción naval, construcción aeronáutica y espacial y su maquinaria</li>
         <td>
           
             
-<p>El desarrollo industrial generalmente implica una transición estructural desde 
-actividades basadas en recursos y de baja tecnología a actividades manufactureras de MAT.</p>
+<p>Industrial development generally entails a structural transition from resource-based and low technology 
+activities to MHT manufacturing activities.</p>
 
-<p>Una estructura de producción moderna y altamente compleja ofrece mejores oportunidades 
-para el desarrollo de habilidades y la innovación tecnológica. Las actividades 
-de MHT generalmente corresponden a las industrias con mayor valor agregado y 
-productividad laboral. El aumento de la participación de los sectores de MAT 
-también refleja el impacto de la innovación.</p>
+<p>A modern, highly complex production structure offers better opportunities for skills development 
+and technological innovation. MHT activities generally correspond to the industries with higher 
+value addition and labour productivity. Increasing the share of MHT sectors also reflects the 
+impact of innovation.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1117,7 +1098,7 @@ también refleja el impacto de la innovación.</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+            <p>The available indicator complies with United Nations metadata.</p>
 
           
         </td>
@@ -1134,7 +1115,7 @@ también refleja el impacto de la innovación.</p>
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.b.1&amp;seriesCode=NV_IND_TECH&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ISIC3_D">Proporción del valor añadido de las manufacturas de tecnología media y alta en el valor añadido total (%) NV_IND_TECH</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=9.b.1&amp;seriesCode=NV_IND_TECH&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ISIC3_D">Proportion of medium and high-tech manufacturing value added in total value added (%) NV_IND_TECH</a> UNSTATS</p>
 
           
         </td>
@@ -1155,7 +1136,7 @@ también refleja el impacto de la innovación.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-09-0B-01.pdf">Metadatos 9-b-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-09-0B-01.pdf">Metadata 9-b-1.pdf</a></p>
 
           
         </td>
@@ -1223,7 +1204,7 @@ también refleja el impacto de la innovación.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1243,7 +1224,7 @@ también refleja el impacto de la innovación.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

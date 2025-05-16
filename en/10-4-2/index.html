@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1247,7 +1247,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>10 Reduce inequality within and among countries</p>
+            <ol>
+  <li>Reduce inequality within and among countries</li>
+</ol>
 
           
         </td>
@@ -1264,12 +1266,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Índice de Gini de la renta disponible equivalente per cápita después de transferencias sociales (postfiscal).</p>
+<p>The Gini index measures the statistical dispersion in income distribution 
+within a population. It is used to compare inequality in income distribution 
+across different territories.</p>
 
-<p>El Índice de Gini mide la dispersión estadística en la distribución del ingreso en una población. 
-Se utiliza para comparar la desigualdad en la distribución de los ingresos en distintos
-territorios. Su valor está entre 0 y 100, de manera que cuanto más próximo sea a 100, mayor será la 
-concentración de los ingresos y cuanto más próximo a 0, más equitativa es la distribución de la riqueza.</p>
+<p>Its value is between 0 and 100, so the closer it is to 100, the greater the 
+concentration of income, and the closer it is to 0, the more equitable the 
+distribution of wealth.</p>
 
           
         </td>
@@ -1286,15 +1289,13 @@ concentración de los ingresos y cuanto más próximo a 0, más equitativa es la
         <td>
           
             
-\[I_{gini}^{t}= \frac{\sum_{i=1}^{n-1} (P_i^{t} - Y_i^{t})}{\sum_{i=1}^{n-1} P_i^{t}}\]
+\[I^{t}_{GINI} = \frac{A^t}{(A + B)^t}\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$P_i^{t} =$ proporción acumulada de personas, ordenadas por ingreso ascendente, en el año $t$</p>
+<p>$A^{t} =$ Area over the Lorenz curve in the year $t$</p>
 
-<p>$Y_i^{t} =$ proporción acumulada de ingresos correspondientes a esas personas en el año $t$</p>
-
-<p>$n =$ número total de personas</p>
+<p>$B^{t} =$ Area under the Lorenz curve in the year $t$</p>
 
           
         </td>
@@ -1326,20 +1327,8 @@ concentración de los ingresos y cuanto más próximo a 0, más equitativa es la
       
       
       
-      
-      <tr>
-        <th scope="row">Observations </th>
-        <td>
-          
-            
-<p>La renta equivalente es un valor derivado de los ingresos totales de un hogar y del número y la edad de las personas que viven de estos ingresos.</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1410,7 +1399,7 @@ concentración de los ingresos y cuanto más próximo a 0, más equitativa es la
         <th scope="row">Data last updated </th>
         <td>
           
-            2025.05.08
+            2024.10.29
           
         </td>
         </tr>
@@ -1425,7 +1414,7 @@ concentración de los ingresos y cuanto más próximo a 0, más equitativa es la
         <th scope="row">Metadata last updated </th>
         <td>
           
-            2025.04.14
+            2024.10.29
           
         </td>
         </tr>
@@ -1557,22 +1546,20 @@ concentración de los ingresos y cuanto más próximo a 0, más equitativa es la
         <td>
           
             
-<p>El indicador de Impacto Redistributivo de la Política Fiscal demuestra en un marco 
-contable la cantidad total en la que la actual desigualdad de ingresos se reduce o 
-aumenta mediante la ejecución de la política fiscal (incluidos los impuestos directos 
-e indirectos; las contribuciones a la seguridad social y a las pensiones de vejez; 
-las transferencias directas en efectivo o cuasiefectivo; y los subsidios).</p>
+<p>The Redistributive Impact of Fiscal Policy indicator demonstrates in an 
+accounting framework the total amount by which current income inequality 
+is reduced or increased by the current execution of fiscal policy (including 
+direct and indirect taxes; social insurance and old-age pension contributions; 
+direct cash or near-cash transfers; and subsidies).</p>
 
-<p>Por ejemplo, si el Impacto Redistributivo de la Política Fiscal es positivo, 
-eso indica que el efecto neto de la política fiscal es reducir el índice de Gini respecto 
-de lo que sería de otra manera sin la política fiscal (en un sentido contable, no como un 
-contrafactual económico).</p>
+<p>For example, if the Redistributive Impact of Fiscal Policy is positive, that 
+indicates that the net effect of Fiscal Policy is to reduce the Gini index from 
+what it otherwise would be without Fiscal Policy (in an accounting sense, not 
+as an economic counterfactual).</p>
 
-<p>El indicador permite a los responsables de las políticas y a las 
-comunidades más amplias de partes interesadas y promotoras hacer un seguimiento sistemático del 
-progreso a nivel de país en la contribución de la política fiscal a sociedades más equitativas.</p>
-
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>The indicator allows policy makers and the broader stakeholder and advocacy 
+communities to systematically track progress at the country level in the 
+contribution of fiscal policy to more equitable societies.</p>
 
           
         </td>
@@ -1588,7 +1575,7 @@ progreso a nivel de país en la contribución de la política fiscal a sociedade
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador cumple parcialmente con los metadatos del indicador de Naciones Unidas. Se presenta la serie correspondiente al índice de Gini postfiscal, pero no el índice de Gini prefiscal.</p>
+            <p>The indicator partially complies with the UN indicator metadata.</p>
 
           
         </td>
@@ -1614,7 +1601,7 @@ progreso a nivel de país en la contribución de la política fiscal a sociedade
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-10-04-02.pdf">Metadatos 10-4-2.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-10-04-02.pdf">Metadata 10-4-2.pdf</a></p>
 
           
         </td>
@@ -1785,7 +1772,7 @@ progreso a nivel de país en la contribución de la política fiscal a sociedade
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1805,7 +1792,7 @@ progreso a nivel de país en la contribución de la política fiscal a sociedade
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

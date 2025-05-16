@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1653,7 +1653,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>2 End hunger, achieve food security and improved nutrition and promote sustainable agriculture</p>
+            <ol>
+  <li>End hunger, achieve food security and improved nutrition and promote sustainable agriculture</li>
+</ol>
 
           
         </td>
@@ -1669,7 +1671,13 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Ammonia emissions ($NH_3$) from agriculture and livestock</p>
+            
+<p>Available series:</p>
+
+<p><b> - Ammonia (NH3) emissions from agriculture and livestock</b></p>
+
+<p><b> - Ammonia (NH3) emissions from agriculture and livestock per hectare:</b> 
+Ammonia (NH3) emissions from agriculture and livestock farming per hectare of cropland, meadows and pastures</p>
 
           
         </td>
@@ -1686,13 +1694,31 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[ENH3_{agriculture\, y\, livestock}^{t} = ENH3_{agriculture}^{t} + ENH3_{livestock}^{t}\]
+<p><b> Ammonia (NH3) emissions from agriculture and livestock</b></p>
+
+\[ENH3_{agriculture\, and\, livestock}^{t} = ENH3_{agriculture}^{t} + ENH3_{livestock}^{t}\]
 
 <p>where:</p>
 
-<p>$ENH3_{agriculture}^{t}$ $NH_3$ emmisions from agriculture in the year $t$</p>
+<p>$ENH3_{agriculture}^{t}$ = NH3 emmisions from agriculture in the year $t$</p>
 
-<p>$ENH3_{livestock}^{t}$ $NH_3$ emmisions from livestock in the year $t$</p>
+<p>$ENH3_{livestock}^{t}$ = NH3 emmisions from livestock in the year $t$</p>
+
+<p><br /></p>
+
+<p><b>Ammonia (NH3) emissions from agriculture and livestock per hectare</b></p>
+
+\[ENH3S_{agriculture\, and\, livestock}^{t} = \frac{ENH3_{agriculture}^{t} + ENH3_{livestock}^{t}}{S_{cropland}^{t} + S_{meadows\, and\, pastures}^{t}}\]
+
+<p>where:</p>
+
+<p>$ENH3_{agriculture}^{t}$ = NH3 emmisions from agriculture in the year $t$</p>
+
+<p>$ENH3_{livestock}^{t}$ = NH3 emmisions from livestock in the year $t$</p>
+
+<p>$S_{cropland}^{t}$ = croplands area in year $t$</p>
+
+<p>$S_{meadows\, and\, pastures}^{t}$ = meadows and pastures area in year $t$</p>
 
           
         </td>
@@ -1990,7 +2016,7 @@ integrated into the European Commission’s priorities within the framework of t
 These emissions result from manure management, applications of inorganic nitrogen fertilisers 
 and animal manure applied to soil, as well as urine and dung deposited by grazing animals.</p>
 
-<p>Ammonia ($NH_3$) is a colorless, pungent-smelling, corrosive gas produced by the decomposition 
+<p>Ammonia (NH3) is a colorless, pungent-smelling, corrosive gas produced by the decomposition 
 of plant organic matter and human and animal excrement. When released into the atmosphere, 
 ammonia contributes to air pollution. The agricultural sector remains the largest contributor 
 to ammonia emissions in the EU.</p>
@@ -2227,7 +2253,7 @@ reduction commitments for Member States and the EU for five major air pollutants
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -2247,7 +2273,7 @@ reduction commitments for Member States and the EU for five major air pollutants
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

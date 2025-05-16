@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1647,7 +1647,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>11 Make cities and human settlements inclusive, safe, resilient and sustainable</p>
+            <ol>
+  <li>Make cities and human settlements inclusive, safe, resilient and sustainable</li>
+</ol>
 
           
         </td>
@@ -1663,7 +1665,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Residuos urbanos recogidos per cápita y proporción de residuos urbanos tratados (incinerados,  vertidos y reciclados) en relación al total de residuos urbanos generados. Se  consideran residuos urbanos los procedentes de los hogares y del sector servicios  (comercios, oficinas e instituciones públicas o privadas), cuya gestión es asumida por  las entidades locales</p>
+            <p>Urban waste collected per capita and proportion of urban waste treated  (incinerated, landfilled, and recycled) in relation to total urban waste  generated. Urban waste is considered to be waste from households and the  service sector (businesses, offices, and public or private institutions),  the management of which is assumed by local authorities.</p>
 
           
         </td>
@@ -1680,39 +1682,37 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p><b> Residuos urbanos recogidos per cápita</b></p>
+<p><b> Urban waste collected per capita</b></p>
 
 \[RURP^{t} = \frac{RUR^{t}}{P^{t}}\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$RUR^{t} =$ cantidad de residuos urbanos recogidos en el año $t$</p>
+<p>$RUR^{t} =$ amount of urban waste collected in year $t$</p>
 
-<p>$P^{t} =$ población a 1 de julio del año $t$</p>
+<p>$P^{t} =$ population as of 1 July of year $t$</p>
 
 <p><br /></p>
 
-<p><b> Proporción de residuos urbanos recogidos y gestionados en instalaciones controladas</b></p>
+<p><b> Proportion of urban waste collected and managed in controlled facilities</b></p>
 
 \[PRUR^{t} = \frac{RUG^{t}}{RUR^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$RUG^{t} =$ cantidad de residuos urbanos generados en el año $t$</p>
+<p>$RUG^{t} =$ amount of urban waste generated in year $t$</p>
 
-<p>$RUR^{t} =$ cantidad de residuos urbanos recogidos y gestionados en instalaciones controladas en el año $t$</p>
+<p>$RUR^{t} =$ amount of urban waste collected and managed in controlled facilities in year $t$</p>
 
 <p><br /></p>
 
-<p><b> Proporción de residuos urbanos tratados, por operación de tratamiento</b></p>
+<p><b> Proportion of urban waste treated, per treatment operation</b></p>
 
-<p>\(PRU_{tratamiento}^{t} = \frac{RU_{tratamiento}^{t}}{RU^{t}} \cdot 100\) <br /></p>
+<p>\(PRU_{treatment}^{t} = \frac{RU_{treatment}^{t}}{RU^{t}} \cdot 100\) <br /></p>
 
-<p>donde:</p>
+<p>$RU_{treatment}^{t} =$ amount of urban waste treated (by type of treatment) in year $t$</p>
 
-<p>$RU_{tratamiento}^{t} =$ cantidad de residuos urbanos tratados (según tipo de tratamiento) en el año $t$</p>
-
-<p>$RUR^{t} =$ cantidad total de residuos urbanos recogidos y gestionados en instalaciones controladas en el año $t$</p>
+<p>$RUR^{t} =$ amount of urban waste collected and managed in controlled facilities in year $t$</p>
 
           
         </td>
@@ -1728,10 +1728,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Operación de tratamiento de residuos: reciclaje, incineración con recuperación de energía,
-depósito en vertedero</p>
+            <p>Waste treatment operations: recycling; incineration with energy recovery; landfill disposal</p>
 
-<p>Territorio histórico</p>
+<p>Province</p>
 
           
         </td>
@@ -1764,7 +1763,7 @@ depósito en vertedero</p>
         <td>
           
             
-<p>Se entiende por residuos urbanos los residuos domésticos y comerciales, procedentes  de hogares y del sector servicios (comercio, oficinas e instituciones) gestionados por  las entidades locales, no incluyéndose los residuos comerciales gestionados por canales  privados distintos al municipal, ni residuos procedentes de la industria.</p>
+<p>Urban waste is understood to mean domestic and commercial waste from homes and  the service sector (commerce, offices, and institutions) managed by local authorities.  It does not include commercial waste managed by private channels other than municipal  waste or waste from industry.</p>
 
           
         </td>
@@ -1848,33 +1847,13 @@ depósito en vertedero</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.29
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1999,19 +1978,20 @@ depósito en vertedero</p>
         <th scope="row">Rationale </th>
         <td>
           
-            <p>Los hogares y empresas urbanas generan cantidades sustanciales de residuos que deben recolectarse regularmente, 
-reciclarse o tratarse y eliminarse adecuadamente para mantener condiciones de vida saludables 
-e higiénicas.</p>
+            <p>Urban households and businesses produce substantial amounts of solid waste that 
+must be collected regularly, recycled or treated and disposed properly in order 
+to maintain healthy and sanitary living conditions.</p>
 
-<p>Muchas ciudades enfrentan cada vez más desafíos en la gestión de residuos
-debido a la rápida urbanización, la falta de capacidad técnica y financiera o la baja prioridad 
-política. Además, cuanto mayor es el nivel de ingresos de una ciudad, mayor es la cantidad de 
-residuos sólidos que se producen.</p>
+<p>Many cities are increasingly facing solid waste management challenges due to rapid 
+urbanization, lack of technical and financial capacity or low policy priority. In 
+addition, the higher the income level of a city, the greater the amount of the solid 
+waste produced.</p>
 
-<p>Por lo tanto, el crecimiento económico que experimentarán los países en desarrollo y emergentes 
-planteará mayores desafíos a los gobiernos locales en la gestión de residuos en las próximas décadas.</p>
+<p>Therefore, the economic growth to be experienced in the developing and emerging 
+countries will pose greater challenges in solid waste management to local governments 
+in the next decades.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -2027,7 +2007,7 @@ planteará mayores desafíos a los gobiernos locales en la gestión de residuos 
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos de Naciones Unidas</p>
+            <p>The available indicator complies with United Nations metadata</p>
 
           
         </td>
@@ -2044,7 +2024,7 @@ planteará mayores desafíos a los gobiernos locales en la gestión de residuos 
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=11.6.1&amp;seriesCode=EN_REF_WASCOL&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=NOCITI"> Cobertura de recolección de residuos sólidos municipales, por ciudades (%) EN_REF_WASCOL</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=11.6.1&amp;seriesCode=EN_REF_WASCOL&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=NOCITI"> Municipal Solid Waste collection coverage, by cities (%) EN_REF_WASCOL</a> UNSTATS</p>
 
           
         </td>
@@ -2065,7 +2045,7 @@ planteará mayores desafíos a los gobiernos locales en la gestión de residuos 
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-11-06-01.pdf">Metadatos 11-6-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-11-06-01.pdf">Metadata 11-6-1.pdf</a></p>
 
           
         </td>
@@ -2236,7 +2216,7 @@ planteará mayores desafíos a los gobiernos locales en la gestión de residuos 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -2256,7 +2236,7 @@ planteará mayores desafíos a los gobiernos locales en la gestión de residuos 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

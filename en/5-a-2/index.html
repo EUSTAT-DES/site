@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1283,7 +1283,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>5 Achieve gender equality and empower all women and girls</p>
+            <ol>
+  <li>Achieve gender equality and empower all women and girls</li>
+</ol>
 
           
         </td>
@@ -1299,7 +1301,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Grado en que el marco jurídico (incluido el derecho consuetudinario) garantiza la  igualdad de derechos de la mujer a la propiedad o el control de tierras medido a  partir de la evaluación de seis proxies.</p>
+            <p>Extent to which the legal framework (including customary law) guarantees women’s equal  rights to own or control land, measured by assessing six proxies.</p>
 
           
         </td>
@@ -1316,7 +1318,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[MJDMPT^{t} = \begin{cases} 1 &amp; \text{Si ninguno de los proxies está presente en la legislación en el año 𝑡} \\ 2 &amp; \text{Si uno de los proxies está presente en la legislación en el año 𝑡} \\ 3 &amp; \text{Si dos de los proxies están presentes en la legislación en el año 𝑡} \\ 4 &amp; \text{Si tres de los proxies están presentes en la legislación en el año 𝑡} \\ 5 &amp; \text{Si cuatro de los proxies están presentes en la legislación en el año 𝑡} \\ 6 &amp; \text{Si cinco o seis de los proxies están presentes en la legislación en el año 𝑡} \end{cases}\]
+\[MJDMPT^{t} = \begin{cases} 1 &amp; \text{If none of the proxies are present in the legislation in the year 𝑡} \\ 2 &amp; \text{If one of the proxies is present in the legislation in the year 𝑡} \\ 3 &amp; \text{If two of the proxies are present in the legislation in the year 𝑡} \\ 4 &amp; \text{If three of the proxies are present in the legislation in the year 𝑡} \\ 5 &amp; \text{If four of the proxies are present in the legislation in the year 𝑡} \\ 6 &amp; \text{If five or six of the proxies are present in the legislation in the year 𝑡} \end{cases}\]
 
           
         </td>
@@ -1354,17 +1356,19 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>El indicador mide el nivel en el que el marco normativo garantiza la igualdad de derechos de
-la mujer a la propiedad y el control de tierras, contrastando el marco legal frente
-a seis proxies aceptados internacionalmente, en concreto en la Convención sobre la eliminación de todas las 
-formas de discriminación contra la mujer (CEDAW) y las Directrices voluntarias sobre la 
-gobernanza responsable de la tenencia de la tierra (VGGT):<br />
- -Proxy A: Registro conjunto de tierras obligatorio o incentivado
- -Proxy B: Obligación del consentimiento conyugal para transacciones de tierras<br />
- -Proxy C: Igualdad de derechos de herencia<br />
- -Proxy D: Asignación de recursos financieros para incrementar la tenencia y control de tierras por parte de la mujer<br />
- -Proxy E: En sistemas legales que reconocen el derecho consuetudinario, existencia de protección explícita sobre los derechos de la mujer a la propiedad<br />
- -Proxy F: Cuotas obligatorias en la gestión y administración de tierras</p>
+<p>The indicator “measures” the level to which a country’s legal framework supports women’s land rights, by 
+testing that framework against six proxies drawn from international law and internationally accepted good 
+practices, in particular the Convention on the Elimination of Discrimination Against Women (CEDAW) 
+and the Voluntary Guidelines for the Responsible Governance of the Tenure of Land Fisheries and Forestry (VGGT):</p>
+<ul>
+  <li>Proxy A: Joint registration of land is compulsory or encouraged through economic incentives</li>
+  <li>Proxy B: Compulsory spousal consent for land transactions</li>
+  <li>Proxy C: Women’s and girls’ equal inheritance rights</li>
+  <li>Proxy D: Allocation of financial resources to increase women’s ownership and control over land</li>
+  <li>Proxy E: In legal systems that recognize customary land tenure, the existence of explicit protection of the 
+land rights of women</li>
+  <li>Proxy F: Mandatory quotas for women’s participation in land management and administration institutions</li>
+</ul>
 
           
         </td>
@@ -1437,33 +1441,13 @@ gobernanza responsable de la tenencia de la tierra (VGGT):<br />
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.03.25
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1580,31 +1564,26 @@ gobernanza responsable de la tenencia de la tierra (VGGT):<br />
         <td>
           
             
-<p>El indicador 5.a.2 mide en qué medida el marco jurídico de los países 
-(incluido el derecho consuetudinario) garantiza la igualdad de derechos de las mujeres 
-en materia de propiedad y/o control de la tierra.</p>
+<p>Indicator 5.a.2 measures the extent to which countries’ legal framework (including customary law) 
+guarantees women’s equal rights to land ownership and/or control.</p>
 
-<p>El enfoque en la tierra del indicador 5.a.2 refleja el reconocimiento 
-de que la tierra es un recurso económico clave inextricablemente vinculado al acceso, 
-uso y control de otros recursos económicos y productivos. Es un insumo clave para la 
-producción agrícola; puede facilitar el acceso a servicios financieros y de extensión 
-o para unirse a organizaciones de productores. Además, puede generar ingresos 
-directamente si se alquila o se vende.</p>
+<p>The focus on land of Indicator 5.a.2 reflects the recognition that land is a key economic resource 
+inextricably linked to access to, use of and control over other economic and productive resources. 
+It is a key input for agricultural production; it can facilitate access to financial and extension 
+services or to join producer organisations. Moreover, it can generate income directly if rented or sold.</p>
 
-<p>También reconoce que la propiedad y/o el control de la tierra por parte de las 
-mujeres es fundamental para la reducción de la pobreza, la seguridad alimentaria, la inclusión 
-y los objetivos generales de desarrollo sostenible. Por último, la igualdad de género 
-en la propiedad y el control de la tierra es un derecho humano. Por ejemplo, 
-el Pacto Internacional de Derechos Civiles y Políticos (PIDCP) garantiza la igualdad 
-entre mujeres y hombres y prohíbe la discriminación por motivos de sexo en su artículo 2.</p>
+<p>It also acknowledges that women’s ownership of and/or control of land is critical for poverty reduction, 
+food security, inclusiveness and overall sustainable development objectives. Finally, gender equality 
+in land ownership and control is a human right. For example, the International Covenant on Civil and 
+Political Rights (ICCPR) guarantees equality between women and men, and prohibits discrimination based 
+on sex in Article 2.</p>
 
-<p>El artículo 26 del PIDCP consagra la igualdad ante la ley y puede aplicarse para 
-defender el derecho de las mujeres a la no discriminación y la igualdad, incluidos 
-los derechos económicos y sociales. Además, la Convención sobre la eliminación de todas 
-las formas de discriminación contra la mujer (CEDAW) destaca que la discriminación 
-contra la mujer “viola los principios de igualdad de derechos y respeto a la dignidad humana”.</p>
+<p>Article 26 of the ICCPR enshrines equality before the law and can be applied to defend women’s right to 
+non-discrimination and equality, including economic and social rights. Further, the Convention on the 
+Elimination of Discrimination Against Women (CEDAW), emphasizes that discrimination against women 
+“violates the principles of equality of rights and respect for human dignity”.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1620,7 +1599,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos del indicador de Naciones Unidas.</p>
+            <p>The available indicator complies with United Nations metadata.</p>
 
           
         </td>
@@ -1637,7 +1616,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
         <td>
           
             
-<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=5.a.2&amp;seriesCode=SG_LGL_LNDFEMOD&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Grado en que el marco jurídico (incluido el derecho consuetudinario) garantiza la igualdad de derechos de las mujeres a la propiedad y/o control de la tierra (1=Sin evidencia a 6=Niveles más altos de garantías) SG_LGL_LNDFEMOD</a> UNSTATS</p>
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=5.a.2&amp;seriesCode=SG_LGL_LNDFEMOD&amp;areaCode=  276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Degree to which the legal framework (including customary law) guarantees women’s equal rights to land ownership and/or control (1=No evidence to 6=Highest levels of guarantees) SG_LGL_LNDFEMOD</a> UNSTATS</p>
 
           
         </td>
@@ -1658,7 +1637,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-05-0A-02.pdf">Metadatos 5-a-2.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-05-0A-02.pdf">Metadata 5-a-2.pdf</a></p>
 
           
         </td>
@@ -1829,7 +1808,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1849,7 +1828,7 @@ contra la mujer “viola los principios de igualdad de derechos y respeto a la d
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

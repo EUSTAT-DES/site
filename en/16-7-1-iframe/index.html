@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1641,7 +1641,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>16 Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels</p>
+            <ol>
+  <li>Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels</li>
+</ol>
 
           
         </td>
@@ -1657,7 +1659,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Ratio de la proporción de mujeres en el sector público respecto a la proporción de mujeres en la población entre 16 y 64 años, por institución pública</p>
+            <p>Ratio of the proportion of women in the public sector to the proportion of women in the population aged 16 to 64, by public institution</p>
 
           
         </td>
@@ -1676,21 +1678,21 @@ data-event-label="Change to indicator.global_metadata tab"
             
 \[RM_{SP}^{t} = \frac{PM_{SP}^{t}}{PM_{16-64}^{t}}\]
 
-<p>siendo:</p>
+<p>being:</p>
 
-\[PM_{SP}^{t} = \frac{P_{SP\, mujeres}^{t}}{P_{SP}^{t}} \cdot 100\]
+\[PM_{SP}^{t} = \frac{P_{SP\, women}^{t}}{P_{SP}^{t}} \cdot 100\]
 
-\[PM_{16-64}^{t} = \frac{P_{16-64\, mujeres}^{t}}{P_{16-64}^{t}} \cdot 100\]
+\[PM_{16-64}^{t} = \frac{P_{16-64\, women}^{t}}{P_{16-64}^{t}} \cdot 100\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$P_{SP\, mujeres}^{t} =$ mujeres al servicio del sector público a 1 de enero del año $t$</p>
+<p>$P_{SP\, women}^{t} =$ women in public service as of January 1 of year $t$</p>
 
-<p>$P_{SP}^{t} =$ personas al servicio del sector público a 1 de enero del año $t$</p>
+<p>$P_{SP}^{t} =$ people in public service as of January 1 of year $t$</p>
 
-<p>$P_{16-64\, mujeres}^{t} =$ mujeres entre 16 y 64 años a 1 de enero del año $t$</p>
+<p>$P_{16-64\, women}^{t} =$ women aged 16-64 as of 1 January of year $t$</p>
 
-<p>$P_{16-64}^{t} =$ personas entre 16 y 64 años a 1 de enero del año $t$</p>
+<p>$P_{16-64}^{t} =$ people aged 16-64 as of 1 January of year $t$</p>
 
           
         </td>
@@ -1707,7 +1709,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Institución pública: sector público (total), sector público autonómico, sector público local, sector público estatal, instituciones sanitarias autonómicas, centros educativos no universitarios autonómicos, diputaciones forales, ayuntamientos, universidades, policía autonómica, administración de justicia autonómica, administración de justicia del Estado, fuerzas armadas, fuerzas y cuerpos de seguridad del Estado.</p>
+<p>Public institution: public sector (total); autonomous public sector; local public sector; state public sector; autonomous health institutions; autonomous non-university educational centers; provincial governments; town councils; universities; autonomous police; autonomous justice administration; state justice administration; armed forces; state security forces and bodies</p>
 
           
         </td>
@@ -1739,13 +1741,12 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Observations </th>
         <td>
           
-            <p>El valor de referencia de este indicador es 1, que se tiene cuando la representación de la 
-mujer en la administración pública analizada es perfectamente proporcional a su presencia 
-en la población entre 16 y 64 años.</p>
+            <p>The reference value of this indicator is 1, which means the representation of women in the public 
+administration analyzed is perfectly proportional to their presence in the population between 16 
+and 64 years old.</p>
 
-<p>Si el indicador toma un valor menor que 1 significa que la mujer está 
-infrarepresentada, mientras que si toma un valor mayor que 1 significa que 
-está sobrerepresentada.</p>
+<p>If the indicator takes a value less than 1 it means that women are underrepresented, while if it 
+takes a value greater than 1 it means that they are overrepresented.</p>
 
           
         </td>
@@ -1829,33 +1830,13 @@ está sobrerepresentada.</p>
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.29
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -2084,30 +2065,26 @@ está sobrerepresentada.</p>
         <th scope="row">Rationale </th>
         <td>
           
-            <p>El servicio público es la base del gobierno, donde se desarrollan e implementan las 
-políticas y programas públicos y donde la sociedad interactúa con el gobierno. En la 
-mayoría de los países, el servicio público es también el mayor empleador. Es en este 
-contexto que el ODS 16, en su meta 16.7, alienta a los países a garantizar que el 
-servicio público sea representativo de las personas a las que sirve “en todos 
-los niveles”.</p>
+            <p>The public service is the bedrock of government – where the development and implementation of public 
+policies and programmes takes place and where society interacts with the government. In most countries, 
+the public service is also the single largest employer. It is in this context that SDG 16, under its target 16.7, 
+encourages countries to ensure that the public service is representative of the people it serves “at all 
+levels”.</p>
 
-<p>El indicador 16.7.1 se centra en la representación proporcional en las instituciones 
-públicas; mide el grado en que las instituciones públicas de un país son representativas 
-de la población general. La representación proporcional (también conocida como 
-“representación descriptiva”) en el servicio público se relaciona con el grado en que 
-la composición del servicio público refleja los diversos grupos sociodemográficos de 
-la población nacional. El supuesto subyacente es que cuando el servicio público 
-refleja la diversidad social de una nación, esto puede conducir a una mayor 
-legitimidad del servicio público a los ojos de los ciudadanos, ya que los 
-funcionarios públicos se asemejan a las personas a las que prestan servicios.</p>
+<p>Indicator 16.7.1 focuses on proportional representation in public institutions; it measures the extent to 
+which a country’s public institutions are representative of the general population. Proportional 
+representation (also known as ‘descriptive representation’) in the public service is concerned with the 
+extent to which the composition of the public service mirrors the various socio-demographic groups in the 
+national population. The underlying assumption is that when the public service reflects the social diversity 
+of a nation, this may lead to greater legitimacy of the public service in the eyes of citizens, as public servants 
+resemble the people they provide services to.</p>
 
-<p>Se ha descubierto que la representación proporcional está asociada con niveles más 
-altos de confianza en las instituciones públicas, ya que las personas perciben 
-procesos de formulación de políticas más inclusivos para mejorar la calidad y la equidad 
-de las decisiones políticas y ayudar a frenar la influencia indebida de intereses 
-creados sobre la toma de decisiones.</p>
+<p>Proportional representation has been found to be associated
+with higher levels of trust in public institutions, as people perceive more inclusive policymaking processes 
+to improve the quality and fairness of policy decisions, and to help curb the undue influence of vested 
+interests over decision-making.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -2123,7 +2100,7 @@ creados sobre la toma de decisiones.</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple parcialmente con los metadatos de Naciones Unidas. Se centra en el subindicador b).</p>
+            <p>The available indicator partially complies with the United Nations metadata. It focuses on sub-indicator b).</p>
 
           
         </td>
@@ -2139,7 +2116,7 @@ creados sobre la toma de decisiones.</p>
         <th scope="row">International results </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=16.7.1&amp;seriesCode=SG_DMK_PARLMP_LC&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Ratio de mujeres miembros de los parlamentos (Relación de la proporción de mujeres en el parlamento con la proporción de mujeres en la población nacional, con la edad de elegibilidad como límite inferior), Cámara Baja o Unicameral SG_DMK_PARLMP_LC</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=16.7.1&amp;seriesCode=SG_DMK_PARLMP_LC&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total"> Ratio for female members of parliaments (Ratio of the proportion of women in parliament in the proportion of women in the national population with the age of eligibility as a lower bound boundary), Lower Chamber or Unicameral SG_DMK_PARLMP_LC</a> UNSTATS</p>
 
           
         </td>
@@ -2160,7 +2137,7 @@ creados sobre la toma de decisiones.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-16-07-01b.pdf">Metadatos 16-7-1(b).pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-16-07-01b.pdf">Metadata 16-7-1(b).pdf</a></p>
 
           
         </td>
@@ -2228,7 +2205,7 @@ creados sobre la toma de decisiones.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -2248,7 +2225,7 @@ creados sobre la toma de decisiones.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

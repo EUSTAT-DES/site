@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1087,7 +1087,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>9 Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation</p>
+            <ol>
+  <li>Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation</li>
+</ol>
 
           
         </td>
@@ -1103,7 +1105,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Emisiones de PM10 y PM2,5 por unidad de valor añadido del sector manufacturero</p>
+            <p>PM10 and PM2.5 emissions per unit of added value in the manufacturing sector</p>
 
           
         </td>
@@ -1120,13 +1122,14 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-\[PVABEPM_{manufacturero}^{t} = \frac{EPM_{manufacturero}^{t}}{VAB_{manufacturero\, 2022}^{t}}\]
+\[PVABEPM_{manufacturing}^{t} = \frac{EPM_{manufacturing}^{t}}{VAB_{manufacturing\, 2022}^{t}}\]
 
-<p>donde:</p>
+<p>where:</p>
 
-<p>$EPM_{manufacturero}^{t} =$ emisiones de partículas en suspensión del sector manufacturero en el año $t$</p>
+<p>$EPM_{manufacturing}^{t} =$ emissions of suspended particles from the manufacturing sector in year $t$</p>
 
-<p>$VAB_{manufacturero\, 2022}^{t} =$ valor añadido bruto del sector manufacturero en volumen encadenado con referencia 2022 en el año  $t$</p>
+<p>$VAB_{manufacturing\, 2022}^{t} =$ Gross added value of the manufacturing sector in chained volume with 
+reference to 2022 in year $t$</p>
 
           
         </td>
@@ -1143,7 +1146,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Partículas en suspensión: partículas de tamaño inferior a 10 micras (PM10); partículas de tamaño inferior a 2,5 micras (PM25)</p>
+<p>Suspended particles: particles smaller than 10 microns (PM10); particles smaller than 2.5 microns (PM25)</p>
 
           
         </td>
@@ -1248,33 +1251,13 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.05.08
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.04
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1400,36 +1383,32 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>El indicador forma parte del conjunto de indicadores de los Objetivos de Desarrollo 
-Sostenible (ODS) de la UE. Se utiliza para supervisar el progreso hacia el ODS 9 sobre 
-industria, innovación e infraestructura, que está integrado en las prioridades de la 
-Comisión Europea en el marco del Pacto Verde Europeo, una economía al servicio de las 
-personas y un modo de vida europeo.</p>
+<p>The indicator is part of the EU Sustainable Development Goals (SDG) indicator set. 
+It is used to monitor progress towards  SDG 9 on industry, innovation and infrastructure; 
+which is embedded in the European Commission’s Priorities under the European Green Deal, 
+Economy that works for people and European way of life.</p>
 
-<p>El ODS 9 reconoce la importancia del progreso tecnológico y la innovación para 
-encontrar soluciones duraderas a los desafíos sociales, económicos y medioambientales, 
-como la creación de nuevos puestos de trabajo y la promoción de la eficiencia energética 
-y de los recursos. Para fomentar la innovación y el espíritu emprendedor, el ODS 9 
-también busca aumentar el acceso a los servicios financieros para las pequeñas empresas 
-y reducir la brecha digital aumentando el acceso a las tecnologías de la información y la comunicación.</p>
+<p>SDG 9 recognises the importance of technological progress and innovation for finding lasting 
+solutions to social, economic and environmental challenges such as the creation of new jobs 
+and promotion of resource and energy efficiency. To foster innovation and entrepreneurship, 
+SDG 9 also seeks to increase access to financial services for small-scale enterprises and to 
+bridge the digital divide by increasing access to information and communication technologies.</p>
 
-<p>Este indicador mide la intensidad de las emisiones de partículas en suspensión (PM10 y PM2,5) 
-del sector manufacturero (sector C de la NACE Rev. 2). Las emisiones atmosféricas se definen como 
-flujos de materiales gaseosos y particulados emitidos a la atmósfera.</p>
+<p>This indicator measures the emissions intensity of particulate matter (PM10 and PM2.5) from the 
+manufacturing sector (NACE Rev. 2 sector ‘C’). Air emissions are defined as flows of gaseous and 
+particulate materials emitted into the atmosphere.</p>
 
-<p>Las partículas finas y gruesas 
-(PM10) tienen un diámetro inferior a 10 micrómetros y pueden llegar a las zonas más profundas de 
-los pulmones, donde pueden causar inflamación y agravar el estado de salud de las personas que 
-padecen enfermedades cardíacas y pulmonares.</p>
+<p>Fine and coarse particulates (PM10) are less than 10 micrometres in diameter and can be carried 
+deep into the lungs, where they can cause inflammation and exacerbate the condition of people 
+suffering from heart and lung diseases.</p>
 
-<p>Las partículas finas (PM2,5) tienen un 
-diámetro inferior a 2,5 micrómetros y, por tanto, son un subconjunto de las partículas PM10. 
-Sus efectos negativos para la salud son más graves que los de las PM10 porque pueden llegar a 
-mayores niveles en los pulmones y pueden ser más tóxicas.</p>
+<p>Fine particulates (PM2.5) are less than 2.5 micrometres in diameter and are therefore a subset 
+of the PM10 particles. Their negative health impacts are more serious than PM10 because they can 
+be drawn further into the lungs and may be more toxic.</p>
 
-<p>La intensidad de las emisiones 
-se calcula dividiendo las emisiones de PM del sector por su valor añadido bruto (VAB), que 
-se define como la producción (a precios básicos) menos el consumo intermedio (a precios de comprador).</p>
+<p>Emission intensity is calculated by dividing the sector’s PM emissions by its gross value added 
+(GVA), which is defined as output (at basic prices) minus intermediate consumption (at purchaser 
+prices).</p>
 
 <p>Fuente: Eurostat</p>
 
@@ -1447,7 +1426,7 @@ se define como la producción (a precios básicos) menos el consumo intermedio (
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible cumple con los metadatos del indicador de la Unión Europea.</p>
+            <p>The available indicator complies with European Union metadata.</p>
 
           
         </td>
@@ -1464,7 +1443,7 @@ se define como la producción (a precios básicos) menos el consumo intermedio (
         <td>
           
             
-<p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_09_70/default/table?lang=en&amp;category=sdg.sdg_09">Intensidad de las emisiones atmosféricas de la industria (sdg_09_70)</a> Eurostat</p>
+<p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_09_70/default/table?lang=en&amp;category=sdg.sdg_09">Air emission intensity from industry (sdg_09_70)</a> Eurostat</p>
 
           
         </td>
@@ -1485,7 +1464,7 @@ se define como la producción (a precios básicos) menos el consumo intermedio (
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_09_70_esmsip2.htm">Metadatos sdg_09_70.pdf</a> (solo en inglés)</p>
+            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_09_70_esmsip2.htm">Metadata sdg_09_70.pdf</a></p>
 
           
         </td>
@@ -1656,7 +1635,7 @@ se define como la producción (a precios básicos) menos el consumo intermedio (
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1676,7 +1655,7 @@ se define como la producción (a precios básicos) menos el consumo intermedio (
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

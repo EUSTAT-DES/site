@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -941,7 +941,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>6 Ensure availability and sustainable management of water and sanitation for all</p>
+            <ol>
+  <li>Ensure availability and sustainable management of water and sanitation for all</li>
+</ol>
 
           
         </td>
@@ -957,7 +959,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Volumen de agua suministrado a los consumidores finales por medio de sistemas de abastecimiento urbano</p>
+            <p>Volume of water supplied to final consumers through urban supply systems</p>
 
           
         </td>
@@ -973,7 +975,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Theoretical formula </th>
         <td>
           
-            \[VOL_{agua}^{t}\]
+            \[VOL_{water}^{t}\]
 
           
         </td>
@@ -989,10 +991,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Available disaggregations </th>
         <td>
           
-            
-<p>Tipo de uso: doméstico, industrial, comercial, público, agropecuario, otros usos</p>
+            <p>Type of use: domestic, industrial, commercial, public, agricultural, other uses</p>
 
-<p>Territorio histórico</p>
+<p>Province</p>
 
           
         </td>
@@ -1025,9 +1026,10 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>El uso público incluye consumo propio de las entidades suministradoras y suministros gratuitos</p>
+<p>Public use includes the supplier entities’ own consumption and free supplies.</p>
 
-<p>El uso agropecuario no incluye el consumo de las Comunidades de Regantes, y usos agropecurios en general de la CAE</p>
+<p>Agricultural use does not include consumption by Irrigation Communities and agricultural 
+uses in general in the Autonomous Community of the Basque Country.</p>
 
           
         </td>
@@ -1100,33 +1102,13 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2025.04.22
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2025.04.29
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1252,22 +1234,22 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>El propósito de este indicador es mostrar el grado de explotación de los recursos hídricos 
-para satisfacer la demanda nacional. Mide la presión de un país sobre sus recursos hídricos 
-y, por lo tanto, el desafío que supone para la sostenibilidad de su uso. Monitorea el 
-progreso en materia de extracción y suministro de agua dulce para abordar la escasez 
-de agua, es decir, el componente ambiental de la meta 6.4.</p>
+<p>The purpose of this indicator is to show the degree to which water resources 
+are being exploited to meet the country’s water demand. It measures a country’s 
+pressure on its water resources and therefore the challenge on the sustainability 
+of its water use. It tracks progress regarding “withdrawals and supply of 
+freshwater to address water scarcity”, i.e. the environmental component of target 6.4.</p>
 
-<p>El indicador muestra en qué medida se utilizan ya los recursos hídricos y señala la 
-importancia de políticas eficaces de gestión de la oferta y la demanda. Indica la 
-probabilidad de un aumento de la competencia y los conflictos entre los diferentes 
-usos y usuarios del agua en una situación de creciente escasez. Un mayor estrés hídrico, 
-reflejado en un aumento del valor del indicador, tiene efectos potencialmente 
-negativos en la sostenibilidad de los recursos naturales y en el desarrollo económico. 
-Por otro lado, valores bajos del indicador indican que el agua no representa un desafío 
-particular para el desarrollo económico y la sostenibilidad.</p>
+<p>The indicator shows to what extent water resources are already used, and signals the 
+importance of effective supply and demand management policies. It indicates the 
+likelihood of increasing competition and conflict between different water uses and users 
+in a situation of increasing water scarcity. Increased water stress, shown by an increase 
+in the value of the indicator, has potentially negative effects on the sustainability 
+of the natural resources and on economic development. On the other hand, low values of 
+the indicator indicate that water does not represent a particular challenge for economic 
+development and sustainability.</p>
 
-<p>Fuente: División de Estadísticas de las Naciones Unidas</p>
+<p>Source: United Nations Statistics Division</p>
 
           
         </td>
@@ -1283,7 +1265,7 @@ particular para el desarrollo económico y la sostenibilidad.</p>
         <th scope="row">Comparability between the available indicator and the UN indicator </th>
         <td>
           
-            <p>El indicador disponible no cumple los metadatos de Naciones Unidas, mide la  extracción de recursos hídricos pero no el estrés hídrico.</p>
+            <p>The available indicator does not comply with the United Nations metadata requirements.  The available indicator measures water resource extraction but not water stress.</p>
 
           
         </td>
@@ -1299,7 +1281,7 @@ particular para el desarrollo económico y la sostenibilidad.</p>
         <th scope="row">International results </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.4.2&amp;seriesCode=ER_H2O_STRESS&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=TOTAL">Nivel de estrés hídrico: extracción de agua dulce como proporción de los recursos de agua dulce disponibles (%) ER_H2O_STRESS</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=6.4.2&amp;seriesCode=ER_H2O_STRESS&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=TOTAL">Level of water stress: freshwater withdrawal as a proportion of available freshwater resources (%) ER_H2O_STRESS</a> UNSTATS</p>
 
           
         </td>
@@ -1320,7 +1302,7 @@ particular para el desarrollo económico y la sostenibilidad.</p>
         <th scope="row">Link to UN metadata </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-06-04-02.pdf">Metadatos 6-4-2.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-06-04-02.pdf">Metadata 6-4-2.pdf</a></p>
 
           
         </td>
@@ -1388,7 +1370,7 @@ particular para el desarrollo económico y la sostenibilidad.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1408,7 +1390,7 @@ particular para el desarrollo económico y la sostenibilidad.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

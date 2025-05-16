@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516071720">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250516125818">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1087,7 +1087,9 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Goal </th>
         <td>
           
-            <p>2 End hunger, achieve food security and improved nutrition and promote sustainable agriculture</p>
+            <ol>
+  <li>End hunger, achieve food security and improved nutrition and promote sustainable agriculture</li>
+</ol>
 
           
         </td>
@@ -1103,8 +1105,10 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definition </th>
         <td>
           
-            <p>Food Consumer Price Index and annual variation rate</p>
-<p>This indicator is composed of two time series:<br /> - Consumer Price Index for Food<br /> - Year-on-year variation rate in food consumer prices</p>
+            <p>This indicator is composed of two time series:</p>
+
+<p><b>- Indicator of Food Price Anomalies (IFPA)</b> 
+<b>- Consumer Food Price Index</b></p>
 
           
         </td>
@@ -1121,22 +1125,23 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p><b>Consumer Price Index for Food</b></p>
+<p><b>Indicator of Food Price Anomalies (IFPA)</b></p>
+
+\[IFPA^{t} = \frac{1}{12} \cdot \sum_{m=1}^{12} IFPA_{m}^{t}\]
+
+<p>where:</p>
+
+<p>$IFPA_{m}^{t}$ = food price anomaly indicator for month $m$ of year $t$</p>
+
+<p><br /></p>
+
+<p><b>Consumer Food Price Index</b></p>
 
 \[IPC_{food}^{t} = \frac{1}{12} \cdot \sum_{m=1}^{12} IPC_{food,m}^{t}\]
 
 <p>where:</p>
 
-<p>$IPC_{food,m}^{t}$ consumer price index for food for the month $m$ of year $t$</p>
-
-<p><b>Year-on-year variation rate in food consumer prices</b></p>
-
-\[TVIPC_{t} = \left( \frac{IPC_{food}^{t}}{IPC_{food}^{t-1}} - 1 \right) \cdot 100\]
-
-<p>$IPC_{food,m}^{t}$ consumer price index for food in the year $t$</p>
-
-<p>$IPC_{food,m}^{t-1}$ consumer price index for food in the year $t-1$, considering that annual 
-consumer price indices are calculated as the arithmetic mean of the monthly consumer price indices.</p>
+<p>$IPC_{food,m}^{t}$ = consumer price index for food in month $m$ of year $t$</p>
 
           
         </td>
@@ -1152,7 +1157,7 @@ consumer price indices are calculated as the arithmetic mean of the monthly cons
         <th scope="row">Available disaggregations </th>
         <td>
           
-            <p>Products: food (all), bread and cereals</p>
+            <p>Products: food (all), cereals and derivatives, bread, eggs, milk, oils and fats, fresh fruits and vegetables</p>
 
 <p>Province</p>
 
@@ -1259,33 +1264,13 @@ consumer price indices are calculated as the arithmetic mean of the monthly cons
       
       
       
-      
-      <tr>
-        <th scope="row">Data last updated </th>
-        <td>
-          
-            2024.07.29
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Metadata last updated </th>
-        <td>
           
-            2024.07.29
-          
-        </td>
-        </tr>
+      
+      
+      
         
-      
-  
+          
   </tbody>
 </table>
 
@@ -1647,7 +1632,7 @@ macroeconomic context, and external shocks.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250516071720'></script>
+<script src='/site/assets/js/sdg.js?v=20250516125818'></script>
 
 
 <script>
@@ -1667,7 +1652,7 @@ macroeconomic context, and external shocks.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250516071720"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250516125818"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
