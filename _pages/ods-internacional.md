@@ -2,7 +2,7 @@
 layout: page
 title: ODS en Instituciones Internacionales 
 language: es
-permalink: /es/ods-en-instituciones-internacionales/
+permalink: /es/nazioartea/
 ---
 
 **Naciones Unidas**
