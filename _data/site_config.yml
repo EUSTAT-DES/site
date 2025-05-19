@@ -142,17 +142,17 @@ logos:
     alt: Go to homepage
 map_layers:
   - subfolder: Territorio
-    label: data.territorio
+    label: general.territorio
     min_zoom: 5
     max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
-    label: data.comarca
+    label: general.comarca
     min_zoom: 7
     max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
-    label: data.municipio
+    label: general.municipio
     min_zoom: 9
     max_zoom: 14
     staticBorders: true
