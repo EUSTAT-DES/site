@@ -31,7 +31,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Gizarte-babeseko gutxieneko sistemek edo mailek estalitako biztanleriaren proportzioa, sexuaren arabera banakatuta, honako hauek bereiziz: haurrak, langabeak, adinekoak, desgaitasuna duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak",
+          "title": "Babes sozialeko sistema baten edo gutxieneko maila baten estaldura duen biztanleriaren proportzioa, sexuaren arabera banatuta, eta honako hauek bereiziz: haurrak, langabetuak, adinekoak, desgaitasunen bat duten pertsonak, haurdun dauden emakumeak, jaioberriak, lan-istripuen biktimak, pobreak eta kalteberak",
           "description": "",
           "keywords": "",
           "href": "/site/1-3-1/",
@@ -55,7 +55,7 @@
         },
         {
           "id": "1-5-1",
-          "title": "100.000 biztanleko hondamenen ondorioz hildako, desagertutako eta eragindako pertsonen kopurua",
+          "title": "Hondamendiekin zuzenean lotutako hildako, desagertutako eta kaltetutako pertsonen kopurua 100.000 biztanleko",
           "description": "",
           "keywords": "",
           "href": "/site/1-5-1/",
@@ -95,7 +95,7 @@
         },
         {
           "id": "1-a-2",
-          "title": "Funtsezko zerbitzuetara (hezkuntza, osasuna eta gizarte-babesa) bideratzen den guztizko gastu publikoaren proportzioa",
+          "title": "Guztizko gastu publikotik oinarrizko zerbitzuetara (hezkuntza, osasuna eta babes soziala) bideratzen den proportzioa",
           "description": "",
           "keywords": "",
           "href": "/site/1-a-2/",
@@ -103,7 +103,7 @@
         },
         {
           "id": "1-b-1",
-          "title": "Gastu publiko soziala pobreen alde",
+          "title": "Pobreen aldeko gastu sozial publikoa",
           "description": "",
           "keywords": "",
           "href": "/site/1-b-1/",
@@ -119,7 +119,7 @@
         
         {
           "id": "2-1-1",
-          "title": "Subalimentazioaren prebalentzia",
+          "title": "Azpielikaduraren prebalentzia",
           "description": "",
           "keywords": "",
           "href": "/site/2-1-1/",
@@ -127,7 +127,7 @@
         },
         {
           "id": "2-1-2",
-          "title": "Elikadura-segurtasun eza moderatu edo larriaren prebalentzia herritarren artean, elikadura-segurtasun ezaren esperientzia-eskalaren arabera",
+          "title": "Elikaduran segurtasun falta moderatu edo larria duten biztanleen prebalentzia, elikadura-segurtasunaren esperientzia-eskalaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/2-1-2/",
@@ -407,7 +407,7 @@
         },
         {
           "id": "3-7-2",
-          "title": "Nerabeen (10-14 urte eta 15-19 urte) ugalkortasun-tasa adin-talde horretako 1.000 emakumeko",
+          "title": "Emakume nerabeen ugalkortasuna (10 eta 14 urte artean eta 15 eta 19 urte artean), adin-talde horretako 1.000 emakumeko",
           "description": "",
           "keywords": "",
           "href": "/site/3-7-2/",
