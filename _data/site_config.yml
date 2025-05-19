@@ -142,22 +142,22 @@ logos:
     alt: Go to homepage
 map_layers:
   - subfolder: Territorio
-    label: Territorio
+    label: data.territorio
     min_zoom: 5
     max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
-    label: Comarca
+    label: data.comarca
     min_zoom: 7
     max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
-    label: Municipio
+    label: data.municipio
     min_zoom: 9
     max_zoom: 14
     staticBorders: true
 map_options:
-  disaggregation_controls: false
+  disaggregation_controls: true
   minZoom: 5
   maxZoom: 14
   tileURL: 'https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png'
