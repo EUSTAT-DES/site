@@ -2814,14 +2814,14 @@ body {
   background: white;
   padding-top: 0;
   margin: 0;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.42857143; }
 
 /* Regla para alto contraste */
 body.contrast-high .header {
   background-color: #000000; }
 
-header.container {
+header .container {
   margin-top: 15px; }
 
 .header {
@@ -2889,7 +2889,7 @@ header.container {
   padding: 5px 20px 5px 5px;
   font-size: 14px; }
 
-@media (max-width: 420px) {
+@media (max-width: 560px) {
   .header .logo-header-description {
     display: none; } }
 @media (max-width: 770px) {
