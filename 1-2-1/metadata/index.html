@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250519080511">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250519082636">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -735,7 +735,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nPobrezia erlatiboaren arrisku-adierazlea (At-Risk-of-Poverty Rate ingelesez) edo diru-pobrezia \nEuropar Batasunean pobreziaren jarraipena egiteko funtsezko adierazleetako bat da.\n\nAdierazle horrek ez ditu neurtzen aberastasuna eta pobrezia, baizik eta diru-sarrera txikiak, beste batzuekin alderatuta \nHorrek ez du esan nahi, nahitaez, bizi-maila baxua denik.\n\nPobrezia-arriskuaren tasa pertsonen proportzioa da \nerrenta erabilgarri baliokidea (transferentzia sozialen ondoren) \npobreziaren arrisku-atalasea, konbentzio bidez EBn finkatuta dagoena, \nErrenta erabilgarri baliokidearen batez bestekoaren % 60, transferentzien ondoren \nlurralde batean.\n\nEtxekoen unitatearen tamainan eta osaeran dauden desberdintasunen eragina kontuan hartzeko, \netxekoen unitate baten diru-sarrera erabilgarria (guztizko diru-sarrera, zergen eta bestelako kenkarien ondoren, \ngastatzeko edo aurrezteko), heldu bihurtutako etxekoen unitateko kideen kopuruarekin zatitzen da. \nbaliokideak (kontsumo-unitateak). EBn baliokidetasun-faktore bat aplikatzen da, \n1994an proposatutako ELGAren eskala aldatua.\n\n  Iturria: Eurostat\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nEuropar Batasunean pobreziaren jarraipena egiteko adierazle gakoetako bat pobrezia erlatiboaren arriskuaren adierazlea \n(At-Risk-of-Poverty Rate, ingelesez) edo diru-pobrezia izenekoa da. \n\nAdierazle horrek ez du neurtzen ez aberastasuna ez pobrezia, baizik eta diru-sarrera baxuak, lurraldeko beste biztanle \nbatzuekin alderatuta, nahiz eta horrek ez duen zertan bizi-maila baxua adierazi. \n\nPobrezia-arriskuaren tasa honela zehazten da: pobrezia-arriskuaren atalasea baino errenta baliokide eskuragarri \nbaxuagoa duten pertsonen proportzioa (transferentzia sozialen ostean). EBn atalase hori hitzarmen bidez zehazten \nda: errenta baliokide eskuragarriaren medianaren % 60, lurralde bateko transferentzia sozialen ostean. \n\nAldeek etxe baten tamainan eta osaeran duten eragina kontuan hartzeko, etxe baten diru-sarrera eskuragarria \n(diru-sarrerak guztira, gastatzeko edo aurrezteko moduan daudenak, zergak eta beste kenkari batzuk aplikatu ondoren) \nzatitu egin behar da heldu bihurtu diren etxeko kide baliokideen arabera (kontsumo-unitateak). EBn aplikatzen den \nbaliokidetasun-faktorea ELGAren eskala aldatuaren arabera kalkulatzen da (1994an proposatua). \n\n\nIturria: Eurostat\n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1013,7 +1013,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250519080511'></script>
+<script src='/site/assets/js/sdg.js?v=20250519082636'></script>
 
 
 <script>
@@ -1033,7 +1033,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250519080511"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250519082636"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
