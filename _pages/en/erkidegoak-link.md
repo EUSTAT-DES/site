@@ -1,9 +1,11 @@
 ---
 layout: page
 title: Indicadores ODS en otras Comunidades Autónomas
-language: es
-permalink: /es/erkidegoak/
+language: en
+permalink: /en/erkidegoak/
 ---
+
+ITZULTZEKO
 
 La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
 

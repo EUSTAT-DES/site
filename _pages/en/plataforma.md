@@ -1,9 +1,11 @@
 ---
 title: Acerca de la plataforma web
-language: es
-permalink: /es/plataforma/
+language: en
+permalink: /en/plataforma/
 layout: page
 ---
+
+ITZULTZEKO
 
 Eustat ha desarrollado esta plataforma interactiva de visualización de indicadores de desarrollo sostenible utilizando la [Plataforma Open SDG](https://open-sdg.readthedocs.io/en/latest/quick-start/) para la difusión de indicadores de ODS.
 

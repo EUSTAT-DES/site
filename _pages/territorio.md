@@ -1,7 +1,7 @@
 ---
 title: Indicadores desagregados por territorio histórico
 language: es
-permalink: /es/territorio/
+permalink: /es/lurraldea/
 layout: page
 ---
 

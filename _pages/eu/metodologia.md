@@ -1,9 +1,10 @@
 ---
-title: Garapen Iraunkorreko Helburuen aurrerapenaren neurketa
+title: Garapen Jasangarrirako Helburuen aurrerapenaren neurketa
 language: eu
 permalink: /metodologia/
 layout: page
 ---
+
 
 ## Introducción
 

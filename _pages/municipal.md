@@ -1,7 +1,7 @@
 ---
 title: Indicadores con datos municipales
 language: es
-permalink: /es/municipal/
+permalink: /es/udalerria/
 layout: page
 ---
 

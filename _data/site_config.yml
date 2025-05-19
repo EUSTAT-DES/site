@@ -51,10 +51,10 @@ data_fields:
 date_formats: 
   - type: standard
     language: en
-    format: '%B %d, %Y'
+    format: '%Y.%m.%d'
   - type: standard
     language: es
-    format: '%d de %B de %Y'
+    format: '%d.%m.%Y'
   - type: standard
     language: eu
     format: "%Y.%m.%d"
@@ -128,6 +128,7 @@ indicator_tabs:
 languages:
   - eu
   - es
+  - en
 languages_public: []
 logos: 
   - language: es
@@ -141,22 +142,22 @@ logos:
     alt: Go to homepage
 map_layers:
   - subfolder: Territorio
-    label: Territorio
+    label: general.territorio
     min_zoom: 5
     max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
-    label: Comarca
+    label: general.comarca
     min_zoom: 7
     max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
-    label: Municipio
+    label: general.municipio
     min_zoom: 9
     max_zoom: 14
     staticBorders: true
 map_options:
-  disaggregation_controls: false
+  disaggregation_controls: true
   minZoom: 5
   maxZoom: 14
   tileURL: 'https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png'
@@ -193,19 +194,19 @@ menu:
     dropdown: []
   - translation_key: menu.desagregaciones
     dropdown:
-      - path: /territorio/
+      - path: /lurraldea/
         translation_key: menu.territorio
-      - path: /municipal/
+      - path: /udalerria/
         translation_key: menu.municipal
-      - path: /sexo/
+      - path: /sexua/
         translation_key: menu.sexo   
   - translation_key: menu.masInfo
     dropdown: 
       - path: /agenda2030/
         translation_key: menu.agenda2030
-      - path: /informacion-disponible-sobre-los-indicadores/
+      - path: /aurkezpena/
         translation_key: menu.indicadores
-      - path: /acerca-de-la-plataforma-web/
+      - path: /plataforma/
         translation_key: menu.acercaDe   
 metadata_edit_url: metadata
 metadata_tabs:

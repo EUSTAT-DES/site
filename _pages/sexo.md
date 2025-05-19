@@ -1,7 +1,7 @@
 ---
 title: Indicadores con datos desagregados por sexo
 language: es
-permalink: /es/sexo/
+permalink: /es/sexua/
 layout: page
 ---
 
