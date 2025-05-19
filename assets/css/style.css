@@ -3199,6 +3199,10 @@ ul.iconillo {
   .ods-item {
     flex: 1;
     /* Asegura que los íconos ocupen todo el ancho disponible */
+    max-width: 6%;
+    /* Aproximadamente 20 íconos por línea en pantallas grandes */ } }
+@media only screen and (min-width: 1400px) {
+  .ods-item {
     max-width: 5%;
     /* Aproximadamente 20 íconos por línea en pantallas grandes */ } }
 @media only screen and (max-width: 768px) {
