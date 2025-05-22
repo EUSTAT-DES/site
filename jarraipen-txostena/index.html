@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="eu" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://eustat-des.github.io/data/en',
+  remoteDataBaseUrl: 'https://eustat-des.github.io/data/eu',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -42,7 +42,7 @@ var opensdg = {
   // Disaggregations which should be ignored on indicator pages.
   ignoredDisaggregations: null,
 
-  language: 'en',
+  language: 'eu',
 
   mapColors: {
     "default": [
@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Reporting status - Indicators For The Sustainable Development Goals</title>
+    <title>Informazioaren egoera - Garapen Jasangarrirako Helburuen adierazleak</title>
 
 
 
@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250522123356">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250522132719">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -161,23 +161,23 @@ var translations = {
         
 
     </head>
-<body class="language-en
+<body class="language-eu
 layout-progrestatus
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"POC","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website.","enable_high_contrast":"Enable high contrast","hide_menu":"Hide navigation menu","high_contrast":"High contrast","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","show_menu":"Show navigation menu","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
+<script>translations['header'] = {"alpha":"POC","default_contrast":"Kontraste estandarra","disable_high_kontrast":"Desaktibatu kontraste handia","disclaimer":"Webgune hau garapen egoeran dago.","enable_high_kontrast":"Kontraste handia gaitu","hide_menu":"Ezkutatu nabigazio-menua","high_contrast":"Kontraste handia","internet_explorer_message":"webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.","internet_explorer_message_title":"Interneteko nabigatzaile hau jada ez da bateragarria","logo_title":"Joan hasierako orrira","show_menu":"Erakutsi nabigazio-menua","skip_link":"Eduki nagusira joan","tag_line":"Gure mundua eraldatzeko 17 helburu","toggle_menu":"Txandakatu menua. Egin klik menua zabaltzeko edo uzkurtzeko.","toggle_search":"Bilaketa-barra. Egin klik bilaketa-barra handitzeko edo murrizteko."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Eduki nagusira joan</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
-    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
+    <h2 class="internet-explorer-message-title">Interneteko nabigatzaile hau jada ez da bateragarria</h2>
+    <p class="internet-explorer-message-body">webgune hau bisitatzeko Internet Explorer erabiltzen ari zarela antzeman dugu. Microsoft orain Internet Explorer ezabatzen ari da. Ondorioz, webgune hau ez da bateragarria Internet Explorer-en inongo bertsiorekin. Gune honen ezaugarri batzuek ez dute funtzionatuko. Nabigatzaile moderno bat erabili behar duzu, hala nola Edge, Chrome, Firefox edo Safari. Beste nabigatzaile bat instalatzeko edo erabiltzeko zailtasunak badituzu, zure IT ekipoarekin harremanetan jarri.</p>
 </div>
 <header role="banner" class="">
   <div class="header" >
     <div class="header-top">
         <div id="logo" class="logo-header">
-            <a id="logo-link" href="https://en.eustat.eus/indice.html">
+            <a id="logo-link" href="https://eu.eustat.eus/indice.html">
                 <img src="/site/assets/img/LogoEustat.png" alt="eustat">
             </a>
             <div class="logo-header-description">
@@ -192,25 +192,25 @@ layout-progrestatus
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Themes</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operations</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://en.eustat.eus/bancopx/spanish/indice.html">Data Bank</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://en.eustat.eus/indice.html#cy">Economic & Social Trends</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://en.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Municipalities information</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Gaiak</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://eu.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Eragiketak</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://eu.eustat.eus/bancopx/spanish/indice.html">Datu Bankua</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://eu.eustat.eus/indice.html#cy">Koiunturakoa</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://eu.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Udal informazioa</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/calendario.html">Calendar</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://en.eustat.eus/productosServicios/sugerencias.html">Complaints and Suggestions</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://en.eustat.eusprodserv/info_c.html">Information Service</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://en.eustat.eus/notas_c.html">Press Service</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://eu.eustat.eus/estadisticas/calendario.html">Egutegia</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://eu.eustat.eus/productosServicios/sugerencias.html">Kexak/iradokizunak</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://eu.eustat.eusprodserv/info_c.html">Informazio zerbitzua</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://eu.eustat.eus/notas_c.html">Prentsa-gunea</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <div class="rrss">
                 <span class="texto-rrss">
-                  Follow Us:
+                  Jarraiguzu:
                 </span>
                 <div class="iconos-rrss">
                     <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
@@ -228,7 +228,7 @@ layout-progrestatus
                     <a href="https://www.youtube.com/user/eustat1986/" target="_blank" title="Youtube"
                         style="display:inline-block;"><img class="sociales" alt="Youtube"
                             src="/site/assets/img/rrss/youtube.png"></a>
-                    <a href="https://en.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
+                    <a href="https://eu.eustat.eus/web/comun/extractorclobRSS.ashx?id=/rss/novedades_c.xml"
                         target="_blank" title="Rss novedades" style="display:inline-block;"><img
                             class="sociales" alt="Rss novedades" src="/site/assets/img/rrss/rss2.png"></a>
                 </div>
@@ -277,48 +277,48 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
   <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/site/en/" id="home" aria-label="Go to homepage" title="Go to homepage">
-    <img src="/site/assets/img/logo/SDG_logo_en.png" alt="Go to homepage" />
+            <a class="navbar-brand" href="/site/" id="home" aria-label="Joan hasierako orrira" title="Joan hasierako orrira">
+    <img src="/site/assets/img/logo/SDG_logo_eu.png" alt="Joan hasierako orrira" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Erakutsi nabigazio-menua">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/en/">Home</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
+    <a class="nav-link" href="/site/">Hasiera</a>
+</li><li class="nav-item active">
+    <a class="nav-link" href="/site/jarraipen-txostena">Jarraipen txostena</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    menu.desagregaciones
+                    Datu desagregatuak
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-desagregaciones"><li class=" ">
-    <a class="dropdown-item" href="/site/en/lurraldea/">menu.territorio</a>
+    <a class="dropdown-item" href="/site/lurraldea/">Lurralde historikoa</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/en/udalerria/">menu.municipal</a>
+    <a class="dropdown-item" href="/site/udalerria/">Udalerria</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/en/sexua/">menu.sexo</a>
+    <a class="dropdown-item" href="/site/sexua/">Sexua</a>
 </li></ul>
             </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-masinfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    menu.masInfo
+                    Informazio gehiago
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-masinfo"><li class=" ">
-    <a class="dropdown-item" href="/site/en/agenda2030/">menu.agenda2030</a>
+    <a class="dropdown-item" href="/site/agenda2030/">2030 Agenda</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/en/aurkezpena/">menu.indicadores</a>
+    <a class="dropdown-item" href="/site/aurkezpena/">Adierazleei buruzko informazio eskuragarria</a>
 </li><li class=" ">
-    <a class="dropdown-item" href="/site/en/plataforma/">menu.acercaDe</a>
+    <a class="dropdown-item" href="/site/plataforma/">Web plataformari buruz</a>
 </li></ul>
             </li></ul>
     
                 </div>
                 <div class="header-search-bar">
-                    <form class="align-self-lg-end" id="search" action="/site/en/search/">
+                    <form class="align-self-lg-end" id="search" action="/site/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search">Search</label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <label class="visually-hidden" for="indicator_search">Bilatu</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Bilatu">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Bilatu web-orrian" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
@@ -335,17 +335,17 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
-            <a class="language-toggle-link" href="/site/reporting-status/">
+            <span class="language-toggle-active-language">
                 EU
-            </a>
+            </span>
         </li><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/site/es/reporting-status/">
+            <a class="language-toggle-link" href="/site/es/jarraipen-txostena/">
                 ES
             </a>
         </li><li class="language-option-en list-inline-item">
-            <span class="language-toggle-active-language">
+            <a class="language-toggle-link" href="/site/en/jarraipen-txostena/">
                 EN
-            </span>
+            </a>
         </li></ul>
 </div>
 
@@ -353,19 +353,19 @@ document.addEventListener('DOMContentLoaded', function () {
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
-            <a class="language-toggle-link" href="/site/reporting-status/">
+            <span class="language-toggle-active-language">
                 EU
-            </a>
+            </span>
         </li><li class="language-option-es list-inline-item">
-            <a class="language-toggle-link" href="/site/es/reporting-status/">
+            <a class="language-toggle-link" href="/site/es/jarraipen-txostena/">
                 ES
             </a>
         </li><li class="language-option-en list-inline-item">
-            <span class="language-toggle-active-language">
+            <a class="language-toggle-link" href="/site/en/jarraipen-txostena/">
                 EN
-            </span>
+            </a>
         </li></ul>
-</div></span><a title="Enable high contrast" aria-label="Enable high contrast"
+</div></span><a title="" aria-label=""
     data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -392,13 +392,15 @@ data-event-label="high"
   <div>
     <h1>
   
-    Reporting status
+    Informazioaren egoera
   
 </h1>
 
 
 <div class="reporting-status-description">
-  <p>Reporting status provides an overview of how much Sustainable Development Goal (SDG) data Basque Country reports.</p>
+  <p>Jarraipen-txostenak Euskal Autonomia Erkidegoan Garapen Jasangarrirako Helburuak (GJH) lortzeko egindako aurrerapenaren deskribapen orokorra ematen du.</p>
+
+<p>Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="https://eustat-des.github.io/site/metodologia">Aurrerapena neurtzeko metodologia</a>.</p>
 
 </div>
 
@@ -415,13 +417,13 @@ data-event-label="high"
 
     <div class="goal goal-overall">
         <div class="frame goal-tiles">
-            <img src="/site/assets/img/SDG Wheel_Transparent-01.png" alt="Sustainable Development Goals" width="100" height="100" class="goal-icon-image goal-icon-image-"/>
+            <img src="/site/assets/img/SDG Wheel_Transparent-01.png" alt="Garapen Jasangarrirako Helburuak" width="100" height="100" class="goal-icon-image goal-icon-image-"/>
         </div>
         <div class="details">
             <h2 class="status-goal">
-                Overall reporting status
+                Txostenen egoera orokorra
             </h2>
-            <span class="total"><span>257</span> indicators</span>
+            <span class="total"><span>257</span> adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -432,7 +434,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">70</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">27.24%</span>
                     </div>
                     
@@ -443,7 +445,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">36</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">14.01%</span>
                     </div>
                     
@@ -454,7 +456,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">27</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">10.51%</span>
                     </div>
                     
@@ -465,7 +467,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">18</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">7.0%</span>
                     </div>
                     
@@ -476,7 +478,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">96</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">37.35%</span>
                     </div>
                     
@@ -487,7 +489,7 @@ data-event-label="high"
                         <span class="status notapplicable">
                             <span class="status-inner">10</span>
                         </span>
-                        <strong>Not applicable</strong>
+                        <strong>Ez aplikagarria</strong>
                         <span class="value">3.89%</span>
                     </div>
                     
@@ -499,32 +501,32 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:27.237354085603112%" title="On track or target met: 27.24%"></span>
+                <span class="alcanzado" style="width:27.237354085603112%" title="Helburua lortuta edo lortzeko bidean: 27.24%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:14.007782101167315%" title="Fair progress but acceleration needed: 14.01%"></span>
+                <span class="progreso" style="width:14.007782101167315%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 14.01%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:10.505836575875486%" title="Stagnation or regression: 10.51%"></span>
+                <span class="retroceso" style="width:10.505836575875486%" title="Geldialdia edo atzerakada: 10.51%"></span>
                 
                 
                 
                 
-                <span class="noevaluado" style="width:7.003891050583658%" title="No assessment: 7.0%"></span>
+                <span class="noevaluado" style="width:7.003891050583658%" title="Ebaluatu gabea: 7.0%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:37.35408560311284%" title="No data available: 37.35%"></span>
+                <span class="notstarted" style="width:37.35408560311284%" title="Eskuragarri ez dauden datuak: 37.35%"></span>
                 
                 
                 
                 
-                <span class="notapplicable" style="width:3.8910505836575875%" title="Not applicable: 3.89%"></span>
+                <span class="notapplicable" style="width:3.8910505836575875%" title="Ez aplikagarria: 3.89%"></span>
                 
                 
             </div>
@@ -536,7 +538,7 @@ data-event-label="high"
 
   <!-- Reporte por objetivo -->
   <div>
-    <h2>Status by goal</h2>
+    <h2>Helburuen araberako egoera</h2>
     
     
 
@@ -549,15 +551,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/1/" title="View targets and indicators for Goal 1" aria-label="View targets and indicators for Goal 1">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/1.png" alt="No poverty" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
+            <a href="/site/1/" title="Ikusi Helburuaren helmugak eta adierazleak 1" aria-label="Ikusi Helburuaren helmugak eta adierazleak 1">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/1.png" alt="Pobreziaren amaiera" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/1/">No poverty</a>
+                <a href="/site/1/">Pobreziaren amaiera</a>
             </h3>
-            <span class="total">13 indicators</span>
+            <span class="total">13 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -568,7 +570,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">5</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">38.46%</span>
                     </div>
                     
@@ -579,7 +581,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">23.08%</span>
                     </div>
                     
@@ -593,7 +595,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">15.38%</span>
                     </div>
                     
@@ -604,7 +606,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">15.38%</span>
                     </div>
                     
@@ -615,7 +617,7 @@ data-event-label="high"
                         <span class="status notapplicable">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Not applicable</strong>
+                        <strong>Ez aplikagarria</strong>
                         <span class="value">7.69%</span>
                     </div>
                     
@@ -627,12 +629,12 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:38.46153846153847%" title="On track or target met: 38.46%"></span>
+                <span class="alcanzado" style="width:38.46153846153847%" title="Helburua lortuta edo lortzeko bidean: 38.46%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:23.076923076923077%" title="Fair progress but acceleration needed: 23.08%"></span>
+                <span class="progreso" style="width:23.076923076923077%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 23.08%"></span>
                 
                 
                 
@@ -640,17 +642,17 @@ data-event-label="high"
                 
                 
                 
-                <span class="noevaluado" style="width:15.384615384615385%" title="No assessment: 15.38%"></span>
+                <span class="noevaluado" style="width:15.384615384615385%" title="Ebaluatu gabea: 15.38%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:15.384615384615385%" title="No data available: 15.38%"></span>
+                <span class="notstarted" style="width:15.384615384615385%" title="Eskuragarri ez dauden datuak: 15.38%"></span>
                 
                 
                 
                 
-                <span class="notapplicable" style="width:7.6923076923076925%" title="Not applicable: 7.69%"></span>
+                <span class="notapplicable" style="width:7.6923076923076925%" title="Ez aplikagarria: 7.69%"></span>
                 
                 
             </div>
@@ -666,15 +668,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/2/" title="View targets and indicators for Goal 2" aria-label="View targets and indicators for Goal 2">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/2.png" alt="Zero hunger" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
+            <a href="/site/2/" title="Ikusi Helburuaren helmugak eta adierazleak 2" aria-label="Ikusi Helburuaren helmugak eta adierazleak 2">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/2.png" alt="Goserik ez" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/2/">Zero hunger</a>
+                <a href="/site/2/">Goserik ez</a>
             </h3>
-            <span class="total">17 indicators</span>
+            <span class="total">17 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -685,7 +687,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">11.76%</span>
                     </div>
                     
@@ -696,7 +698,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">17.65%</span>
                     </div>
                     
@@ -707,7 +709,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">23.53%</span>
                     </div>
                     
@@ -718,7 +720,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">5.88%</span>
                     </div>
                     
@@ -729,7 +731,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">7</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">41.18%</span>
                     </div>
                     
@@ -744,27 +746,27 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:11.76470588235294%" title="On track or target met: 11.76%"></span>
+                <span class="alcanzado" style="width:11.76470588235294%" title="Helburua lortuta edo lortzeko bidean: 11.76%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:17.647058823529413%" title="Fair progress but acceleration needed: 17.65%"></span>
+                <span class="progreso" style="width:17.647058823529413%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 17.65%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:23.52941176470588%" title="Stagnation or regression: 23.53%"></span>
+                <span class="retroceso" style="width:23.52941176470588%" title="Geldialdia edo atzerakada: 23.53%"></span>
                 
                 
                 
                 
-                <span class="noevaluado" style="width:5.88235294117647%" title="No assessment: 5.88%"></span>
+                <span class="noevaluado" style="width:5.88235294117647%" title="Ebaluatu gabea: 5.88%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:41.17647058823529%" title="No data available: 41.18%"></span>
+                <span class="notstarted" style="width:41.17647058823529%" title="Eskuragarri ez dauden datuak: 41.18%"></span>
                 
                 
                 
@@ -783,15 +785,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/3/" title="View targets and indicators for Goal 3" aria-label="View targets and indicators for Goal 3">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/3.png" alt="Good health and well-being" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
+            <a href="/site/3/" title="Ikusi Helburuaren helmugak eta adierazleak 3" aria-label="Ikusi Helburuaren helmugak eta adierazleak 3">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/3.png" alt="Osasuna eta ongizatea" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/3/">Good health and well-being</a>
+                <a href="/site/3/">Osasuna eta ongizatea</a>
             </h3>
-            <span class="total">30 indicators</span>
+            <span class="total">30 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -802,7 +804,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">10</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">33.33%</span>
                     </div>
                     
@@ -813,7 +815,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">10.0%</span>
                     </div>
                     
@@ -824,7 +826,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">6</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">20.0%</span>
                     </div>
                     
@@ -835,7 +837,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">13.33%</span>
                     </div>
                     
@@ -846,7 +848,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">7</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">23.33%</span>
                     </div>
                     
@@ -861,27 +863,27 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:33.33333333333333%" title="On track or target met: 33.33%"></span>
+                <span class="alcanzado" style="width:33.33333333333333%" title="Helburua lortuta edo lortzeko bidean: 33.33%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:10.0%" title="Fair progress but acceleration needed: 10.0%"></span>
+                <span class="progreso" style="width:10.0%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 10.0%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:20.0%" title="Stagnation or regression: 20.0%"></span>
+                <span class="retroceso" style="width:20.0%" title="Geldialdia edo atzerakada: 20.0%"></span>
                 
                 
                 
                 
-                <span class="noevaluado" style="width:13.333333333333334%" title="No assessment: 13.33%"></span>
+                <span class="noevaluado" style="width:13.333333333333334%" title="Ebaluatu gabea: 13.33%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:23.333333333333332%" title="No data available: 23.33%"></span>
+                <span class="notstarted" style="width:23.333333333333332%" title="Eskuragarri ez dauden datuak: 23.33%"></span>
                 
                 
                 
@@ -900,15 +902,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/4/" title="View targets and indicators for Goal 4" aria-label="View targets and indicators for Goal 4">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/4.png" alt="Quality education" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
+            <a href="/site/4/" title="Ikusi Helburuaren helmugak eta adierazleak 4" aria-label="Ikusi Helburuaren helmugak eta adierazleak 4">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/4.png" alt="Kalitatezko hezkuntza" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/4/">Quality education</a>
+                <a href="/site/4/">Kalitatezko hezkuntza</a>
             </h3>
-            <span class="total">13 indicators</span>
+            <span class="total">13 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -919,7 +921,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">6</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">46.15%</span>
                     </div>
                     
@@ -930,7 +932,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">23.08%</span>
                     </div>
                     
@@ -941,7 +943,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">7.69%</span>
                     </div>
                     
@@ -955,7 +957,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">23.08%</span>
                     </div>
                     
@@ -970,17 +972,17 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:46.15384615384615%" title="On track or target met: 46.15%"></span>
+                <span class="alcanzado" style="width:46.15384615384615%" title="Helburua lortuta edo lortzeko bidean: 46.15%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:23.076923076923077%" title="Fair progress but acceleration needed: 23.08%"></span>
+                <span class="progreso" style="width:23.076923076923077%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 23.08%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:7.6923076923076925%" title="Stagnation or regression: 7.69%"></span>
+                <span class="retroceso" style="width:7.6923076923076925%" title="Geldialdia edo atzerakada: 7.69%"></span>
                 
                 
                 
@@ -988,7 +990,7 @@ data-event-label="high"
                 
                 
                 
-                <span class="notstarted" style="width:23.076923076923077%" title="No data available: 23.08%"></span>
+                <span class="notstarted" style="width:23.076923076923077%" title="Eskuragarri ez dauden datuak: 23.08%"></span>
                 
                 
                 
@@ -1007,15 +1009,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/5/" title="View targets and indicators for Goal 5" aria-label="View targets and indicators for Goal 5">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/5.png" alt="Gender equality" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
+            <a href="/site/5/" title="Ikusi Helburuaren helmugak eta adierazleak 5" aria-label="Ikusi Helburuaren helmugak eta adierazleak 5">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/5.png" alt="Genero berdintasuna" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/5/">Gender equality</a>
+                <a href="/site/5/">Genero berdintasuna</a>
             </h3>
-            <span class="total">14 indicators</span>
+            <span class="total">14 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1026,7 +1028,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">28.57%</span>
                     </div>
                     
@@ -1037,7 +1039,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">21.43%</span>
                     </div>
                     
@@ -1048,7 +1050,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">21.43%</span>
                     </div>
                     
@@ -1062,7 +1064,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">28.57%</span>
                     </div>
                     
@@ -1077,17 +1079,17 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:28.57142857142857%" title="On track or target met: 28.57%"></span>
+                <span class="alcanzado" style="width:28.57142857142857%" title="Helburua lortuta edo lortzeko bidean: 28.57%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:21.428571428571427%" title="Fair progress but acceleration needed: 21.43%"></span>
+                <span class="progreso" style="width:21.428571428571427%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 21.43%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:21.428571428571427%" title="Stagnation or regression: 21.43%"></span>
+                <span class="retroceso" style="width:21.428571428571427%" title="Geldialdia edo atzerakada: 21.43%"></span>
                 
                 
                 
@@ -1095,7 +1097,7 @@ data-event-label="high"
                 
                 
                 
-                <span class="notstarted" style="width:28.57142857142857%" title="No data available: 28.57%"></span>
+                <span class="notstarted" style="width:28.57142857142857%" title="Eskuragarri ez dauden datuak: 28.57%"></span>
                 
                 
                 
@@ -1114,15 +1116,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/6/" title="View targets and indicators for Goal 6" aria-label="View targets and indicators for Goal 6">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/6.png" alt="Clean water and sanitation" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
+            <a href="/site/6/" title="Ikusi Helburuaren helmugak eta adierazleak 6" aria-label="Ikusi Helburuaren helmugak eta adierazleak 6">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/6.png" alt="Ur garbia eta saneamendua" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/6/">Clean water and sanitation</a>
+                <a href="/site/6/">Ur garbia eta saneamendua</a>
             </h3>
-            <span class="total">11 indicators</span>
+            <span class="total">11 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1133,7 +1135,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">36.36%</span>
                     </div>
                     
@@ -1144,7 +1146,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">9.09%</span>
                     </div>
                     
@@ -1155,7 +1157,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">9.09%</span>
                     </div>
                     
@@ -1166,7 +1168,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">9.09%</span>
                     </div>
                     
@@ -1177,7 +1179,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">36.36%</span>
                     </div>
                     
@@ -1192,27 +1194,27 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:36.36363636363637%" title="On track or target met: 36.36%"></span>
+                <span class="alcanzado" style="width:36.36363636363637%" title="Helburua lortuta edo lortzeko bidean: 36.36%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:9.090909090909092%" title="Fair progress but acceleration needed: 9.09%"></span>
+                <span class="progreso" style="width:9.090909090909092%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 9.09%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:9.090909090909092%" title="Stagnation or regression: 9.09%"></span>
+                <span class="retroceso" style="width:9.090909090909092%" title="Geldialdia edo atzerakada: 9.09%"></span>
                 
                 
                 
                 
-                <span class="noevaluado" style="width:9.090909090909092%" title="No assessment: 9.09%"></span>
+                <span class="noevaluado" style="width:9.090909090909092%" title="Ebaluatu gabea: 9.09%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:36.36363636363637%" title="No data available: 36.36%"></span>
+                <span class="notstarted" style="width:36.36363636363637%" title="Eskuragarri ez dauden datuak: 36.36%"></span>
                 
                 
                 
@@ -1231,15 +1233,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/7/" title="View targets and indicators for Goal 7" aria-label="View targets and indicators for Goal 7">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/7.png" alt="Affordable and clean energy" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
+            <a href="/site/7/" title="Ikusi Helburuaren helmugak eta adierazleak 7" aria-label="Ikusi Helburuaren helmugak eta adierazleak 7">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/7.png" alt="Energia eskuragarria eta garbia" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/7/">Affordable and clean energy</a>
+                <a href="/site/7/">Energia eskuragarria eta garbia</a>
             </h3>
-            <span class="total">6 indicators</span>
+            <span class="total">6 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1250,7 +1252,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">66.67%</span>
                     </div>
                     
@@ -1261,7 +1263,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">16.67%</span>
                     </div>
                     
@@ -1278,7 +1280,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">16.67%</span>
                     </div>
                     
@@ -1293,23 +1295,23 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:66.66666666666666%" title="On track or target met: 66.67%"></span>
+                <span class="alcanzado" style="width:66.66666666666666%" title="Helburua lortuta edo lortzeko bidean: 66.67%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:16.666666666666664%" title="Fair progress but acceleration needed: 16.67%"></span>
-                
-                
-                
-                
-                
+                <span class="progreso" style="width:16.666666666666664%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 16.67%"></span>
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:16.666666666666664%" title="No data available: 16.67%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:16.666666666666664%" title="Eskuragarri ez dauden datuak: 16.67%"></span>
                 
                 
                 
@@ -1328,15 +1330,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/8/" title="View targets and indicators for Goal 8" aria-label="View targets and indicators for Goal 8">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/8.png" alt="Decent work and economic growth" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
+            <a href="/site/8/" title="Ikusi Helburuaren helmugak eta adierazleak 8" aria-label="Ikusi Helburuaren helmugak eta adierazleak 8">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/8.png" alt="Lan duina eta hazkunde ekonomikoa" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/8/">Decent work and economic growth</a>
+                <a href="/site/8/">Lan duina eta hazkunde ekonomikoa</a>
             </h3>
-            <span class="total">17 indicators</span>
+            <span class="total">17 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1347,7 +1349,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">17.65%</span>
                     </div>
                     
@@ -1358,7 +1360,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">5</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">29.41%</span>
                     </div>
                     
@@ -1372,7 +1374,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">17.65%</span>
                     </div>
                     
@@ -1383,7 +1385,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">6</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">35.29%</span>
                     </div>
                     
@@ -1398,12 +1400,12 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:17.647058823529413%" title="On track or target met: 17.65%"></span>
+                <span class="alcanzado" style="width:17.647058823529413%" title="Helburua lortuta edo lortzeko bidean: 17.65%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:29.411764705882355%" title="Fair progress but acceleration needed: 29.41%"></span>
+                <span class="progreso" style="width:29.411764705882355%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 29.41%"></span>
                 
                 
                 
@@ -1411,12 +1413,12 @@ data-event-label="high"
                 
                 
                 
-                <span class="noevaluado" style="width:17.647058823529413%" title="No assessment: 17.65%"></span>
+                <span class="noevaluado" style="width:17.647058823529413%" title="Ebaluatu gabea: 17.65%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:35.294117647058826%" title="No data available: 35.29%"></span>
+                <span class="notstarted" style="width:35.294117647058826%" title="Eskuragarri ez dauden datuak: 35.29%"></span>
                 
                 
                 
@@ -1435,15 +1437,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/9/" title="View targets and indicators for Goal 9" aria-label="View targets and indicators for Goal 9">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
+            <a href="/site/9/" title="Ikusi Helburuaren helmugak eta adierazleak 9" aria-label="Ikusi Helburuaren helmugak eta adierazleak 9">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/9.png" alt="Industria, berrikuntza eta azpiegiturak" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/9/">Industry, innovation and infrastructure</a>
+                <a href="/site/9/">Industria, berrikuntza eta azpiegiturak</a>
             </h3>
-            <span class="total">13 indicators</span>
+            <span class="total">13 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1454,7 +1456,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">23.08%</span>
                     </div>
                     
@@ -1465,7 +1467,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">23.08%</span>
                     </div>
                     
@@ -1476,7 +1478,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">30.77%</span>
                     </div>
                     
@@ -1490,7 +1492,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">23.08%</span>
                     </div>
                     
@@ -1505,17 +1507,17 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:23.076923076923077%" title="On track or target met: 23.08%"></span>
+                <span class="alcanzado" style="width:23.076923076923077%" title="Helburua lortuta edo lortzeko bidean: 23.08%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:23.076923076923077%" title="Fair progress but acceleration needed: 23.08%"></span>
+                <span class="progreso" style="width:23.076923076923077%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 23.08%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:30.76923076923077%" title="Stagnation or regression: 30.77%"></span>
+                <span class="retroceso" style="width:30.76923076923077%" title="Geldialdia edo atzerakada: 30.77%"></span>
                 
                 
                 
@@ -1523,7 +1525,7 @@ data-event-label="high"
                 
                 
                 
-                <span class="notstarted" style="width:23.076923076923077%" title="No data available: 23.08%"></span>
+                <span class="notstarted" style="width:23.076923076923077%" title="Eskuragarri ez dauden datuak: 23.08%"></span>
                 
                 
                 
@@ -1542,15 +1544,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/10/" title="View targets and indicators for Goal 10" aria-label="View targets and indicators for Goal 10">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/10.png" alt="Reduced inequalities" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
+            <a href="/site/10/" title="Ikusi Helburuaren helmugak eta adierazleak 10" aria-label="Ikusi Helburuaren helmugak eta adierazleak 10">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/10.png" alt="Desberdintasunak murriztea" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/10/">Reduced inequalities</a>
+                <a href="/site/10/">Desberdintasunak murriztea</a>
             </h3>
-            <span class="total">14 indicators</span>
+            <span class="total">14 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1564,7 +1566,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">7.14%</span>
                     </div>
                     
@@ -1575,7 +1577,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">14.29%</span>
                     </div>
                     
@@ -1586,7 +1588,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">7.14%</span>
                     </div>
                     
@@ -1597,7 +1599,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">9</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">64.29%</span>
                     </div>
                     
@@ -1608,7 +1610,7 @@ data-event-label="high"
                         <span class="status notapplicable">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Not applicable</strong>
+                        <strong>Ez aplikagarria</strong>
                         <span class="value">7.14%</span>
                     </div>
                     
@@ -1623,27 +1625,27 @@ data-event-label="high"
                 
                 
                 
-                <span class="progreso" style="width:7.142857142857142%" title="Fair progress but acceleration needed: 7.14%"></span>
+                <span class="progreso" style="width:7.142857142857142%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 7.14%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:14.285714285714285%" title="Stagnation or regression: 14.29%"></span>
+                <span class="retroceso" style="width:14.285714285714285%" title="Geldialdia edo atzerakada: 14.29%"></span>
                 
                 
                 
                 
-                <span class="noevaluado" style="width:7.142857142857142%" title="No assessment: 7.14%"></span>
+                <span class="noevaluado" style="width:7.142857142857142%" title="Ebaluatu gabea: 7.14%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:64.28571428571429%" title="No data available: 64.29%"></span>
+                <span class="notstarted" style="width:64.28571428571429%" title="Eskuragarri ez dauden datuak: 64.29%"></span>
                 
                 
                 
                 
-                <span class="notapplicable" style="width:7.142857142857142%" title="Not applicable: 7.14%"></span>
+                <span class="notapplicable" style="width:7.142857142857142%" title="Ez aplikagarria: 7.14%"></span>
                 
                 
             </div>
@@ -1659,15 +1661,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/11/" title="View targets and indicators for Goal 11" aria-label="View targets and indicators for Goal 11">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/11.png" alt="Sustainable cities and communities" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
+            <a href="/site/11/" title="Ikusi Helburuaren helmugak eta adierazleak 11" aria-label="Ikusi Helburuaren helmugak eta adierazleak 11">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/11.png" alt="Hiri eta komunitate jasangarriak" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/11/">Sustainable cities and communities</a>
+                <a href="/site/11/">Hiri eta komunitate jasangarriak</a>
             </h3>
-            <span class="total">15 indicators</span>
+            <span class="total">15 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1678,7 +1680,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">9</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">60.0%</span>
                     </div>
                     
@@ -1689,7 +1691,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">6.67%</span>
                     </div>
                     
@@ -1700,7 +1702,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">13.33%</span>
                     </div>
                     
@@ -1714,7 +1716,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">20.0%</span>
                     </div>
                     
@@ -1729,17 +1731,17 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:60.0%" title="On track or target met: 60.0%"></span>
+                <span class="alcanzado" style="width:60.0%" title="Helburua lortuta edo lortzeko bidean: 60.0%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:6.666666666666667%" title="Fair progress but acceleration needed: 6.67%"></span>
+                <span class="progreso" style="width:6.666666666666667%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 6.67%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:13.333333333333334%" title="Stagnation or regression: 13.33%"></span>
+                <span class="retroceso" style="width:13.333333333333334%" title="Geldialdia edo atzerakada: 13.33%"></span>
                 
                 
                 
@@ -1747,7 +1749,7 @@ data-event-label="high"
                 
                 
                 
-                <span class="notstarted" style="width:20.0%" title="No data available: 20.0%"></span>
+                <span class="notstarted" style="width:20.0%" title="Eskuragarri ez dauden datuak: 20.0%"></span>
                 
                 
                 
@@ -1766,15 +1768,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/12/" title="View targets and indicators for Goal 12" aria-label="View targets and indicators for Goal 12">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/12.png" alt="Responsible consumption and production" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
+            <a href="/site/12/" title="Ikusi Helburuaren helmugak eta adierazleak 12" aria-label="Ikusi Helburuaren helmugak eta adierazleak 12">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/12.png" alt="Ekoizpen eta kontsumo arduratsuak" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/12/">Responsible consumption and production</a>
+                <a href="/site/12/">Ekoizpen eta kontsumo arduratsuak</a>
             </h3>
-            <span class="total">13 indicators</span>
+            <span class="total">13 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1785,7 +1787,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">5</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">38.46%</span>
                     </div>
                     
@@ -1796,7 +1798,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">7.69%</span>
                     </div>
                     
@@ -1813,7 +1815,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">6</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">46.15%</span>
                     </div>
                     
@@ -1824,7 +1826,7 @@ data-event-label="high"
                         <span class="status notapplicable">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Not applicable</strong>
+                        <strong>Ez aplikagarria</strong>
                         <span class="value">7.69%</span>
                     </div>
                     
@@ -1836,28 +1838,28 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:38.46153846153847%" title="On track or target met: 38.46%"></span>
+                <span class="alcanzado" style="width:38.46153846153847%" title="Helburua lortuta edo lortzeko bidean: 38.46%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:7.6923076923076925%" title="Fair progress but acceleration needed: 7.69%"></span>
-                
-                
-                
-                
-                
+                <span class="progreso" style="width:7.6923076923076925%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 7.69%"></span>
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:46.15384615384615%" title="No data available: 46.15%"></span>
                 
                 
                 
                 
-                <span class="notapplicable" style="width:7.6923076923076925%" title="Not applicable: 7.69%"></span>
+                
+                <span class="notstarted" style="width:46.15384615384615%" title="Eskuragarri ez dauden datuak: 46.15%"></span>
+                
+                
+                
+                
+                <span class="notapplicable" style="width:7.6923076923076925%" title="Ez aplikagarria: 7.69%"></span>
                 
                 
             </div>
@@ -1873,15 +1875,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/13/" title="View targets and indicators for Goal 13" aria-label="View targets and indicators for Goal 13">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/13.png" alt="Climate action" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
+            <a href="/site/13/" title="Ikusi Helburuaren helmugak eta adierazleak 13" aria-label="Ikusi Helburuaren helmugak eta adierazleak 13">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/13.png" alt="Klimaren aldeko ekintza" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/13/">Climate action</a>
+                <a href="/site/13/">Klimaren aldeko ekintza</a>
             </h3>
-            <span class="total">8 indicators</span>
+            <span class="total">8 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1892,7 +1894,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">37.5%</span>
                     </div>
                     
@@ -1903,7 +1905,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">12.5%</span>
                     </div>
                     
@@ -1920,7 +1922,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">25.0%</span>
                     </div>
                     
@@ -1931,7 +1933,7 @@ data-event-label="high"
                         <span class="status notapplicable">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>Not applicable</strong>
+                        <strong>Ez aplikagarria</strong>
                         <span class="value">25.0%</span>
                     </div>
                     
@@ -1943,28 +1945,28 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:37.5%" title="On track or target met: 37.5%"></span>
+                <span class="alcanzado" style="width:37.5%" title="Helburua lortuta edo lortzeko bidean: 37.5%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:12.5%" title="Fair progress but acceleration needed: 12.5%"></span>
-                
-                
-                
-                
-                
+                <span class="progreso" style="width:12.5%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 12.5%"></span>
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:25.0%" title="No data available: 25.0%"></span>
                 
                 
                 
                 
-                <span class="notapplicable" style="width:25.0%" title="Not applicable: 25.0%"></span>
+                
+                <span class="notstarted" style="width:25.0%" title="Eskuragarri ez dauden datuak: 25.0%"></span>
+                
+                
+                
+                
+                <span class="notapplicable" style="width:25.0%" title="Ez aplikagarria: 25.0%"></span>
                 
                 
             </div>
@@ -1980,15 +1982,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/14/" title="View targets and indicators for Goal 14" aria-label="View targets and indicators for Goal 14">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/14.png" alt="Life below water" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
+            <a href="/site/14/" title="Ikusi Helburuaren helmugak eta adierazleak 14" aria-label="Ikusi Helburuaren helmugak eta adierazleak 14">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/14.png" alt="Itsaspeko bizitza" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/14/">Life below water</a>
+                <a href="/site/14/">Itsaspeko bizitza</a>
             </h3>
-            <span class="total">10 indicators</span>
+            <span class="total">10 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -1999,7 +2001,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">20.0%</span>
                     </div>
                     
@@ -2019,7 +2021,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">8</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">80.0%</span>
                     </div>
                     
@@ -2034,7 +2036,7 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:20.0%" title="On track or target met: 20.0%"></span>
+                <span class="alcanzado" style="width:20.0%" title="Helburua lortuta edo lortzeko bidean: 20.0%"></span>
                 
                 
                 
@@ -2048,7 +2050,7 @@ data-event-label="high"
                 
                 
                 
-                <span class="notstarted" style="width:80.0%" title="No data available: 80.0%"></span>
+                <span class="notstarted" style="width:80.0%" title="Eskuragarri ez dauden datuak: 80.0%"></span>
                 
                 
                 
@@ -2067,15 +2069,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/15/" title="View targets and indicators for Goal 15" aria-label="View targets and indicators for Goal 15">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/15.png" alt="Life on land" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
+            <a href="/site/15/" title="Ikusi Helburuaren helmugak eta adierazleak 15" aria-label="Ikusi Helburuaren helmugak eta adierazleak 15">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/15.png" alt="Lehorreko ekosistemetako bizitza" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/15/">Life on land</a>
+                <a href="/site/15/">Lehorreko ekosistemetako bizitza</a>
             </h3>
-            <span class="total">14 indicators</span>
+            <span class="total">14 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -2086,7 +2088,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">21.43%</span>
                     </div>
                     
@@ -2097,7 +2099,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">21.43%</span>
                     </div>
                     
@@ -2111,7 +2113,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">7.14%</span>
                     </div>
                     
@@ -2122,7 +2124,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">7</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">50.0%</span>
                     </div>
                     
@@ -2137,12 +2139,12 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:21.428571428571427%" title="On track or target met: 21.43%"></span>
+                <span class="alcanzado" style="width:21.428571428571427%" title="Helburua lortuta edo lortzeko bidean: 21.43%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:21.428571428571427%" title="Fair progress but acceleration needed: 21.43%"></span>
+                <span class="progreso" style="width:21.428571428571427%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 21.43%"></span>
                 
                 
                 
@@ -2150,12 +2152,12 @@ data-event-label="high"
                 
                 
                 
-                <span class="noevaluado" style="width:7.142857142857142%" title="No assessment: 7.14%"></span>
+                <span class="noevaluado" style="width:7.142857142857142%" title="Ebaluatu gabea: 7.14%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:50.0%" title="No data available: 50.0%"></span>
+                <span class="notstarted" style="width:50.0%" title="Eskuragarri ez dauden datuak: 50.0%"></span>
                 
                 
                 
@@ -2174,15 +2176,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/16/" title="View targets and indicators for Goal 16" aria-label="View targets and indicators for Goal 16">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/16.png" alt="Peace, justice and strong institutions" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
+            <a href="/site/16/" title="Ikusi Helburuaren helmugak eta adierazleak 16" aria-label="Ikusi Helburuaren helmugak eta adierazleak 16">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/16.png" alt="Bakea, justizia eta instituzio sendoak" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/16/">Peace, justice and strong institutions</a>
+                <a href="/site/16/">Bakea, justizia eta instituzio sendoak</a>
             </h3>
-            <span class="total">25 indicators</span>
+            <span class="total">25 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -2193,7 +2195,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">12.0%</span>
                     </div>
                     
@@ -2204,7 +2206,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">4.0%</span>
                     </div>
                     
@@ -2215,7 +2217,7 @@ data-event-label="high"
                         <span class="status retroceso">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>Stagnation or regression</strong>
+                        <strong>Geldialdia edo atzerakada</strong>
                         <span class="value">16.0%</span>
                     </div>
                     
@@ -2226,7 +2228,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">1</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">4.0%</span>
                     </div>
                     
@@ -2237,7 +2239,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">14</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">56.0%</span>
                     </div>
                     
@@ -2248,7 +2250,7 @@ data-event-label="high"
                         <span class="status notapplicable">
                             <span class="status-inner">2</span>
                         </span>
-                        <strong>Not applicable</strong>
+                        <strong>Ez aplikagarria</strong>
                         <span class="value">8.0%</span>
                     </div>
                     
@@ -2260,32 +2262,32 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:12.0%" title="On track or target met: 12.0%"></span>
+                <span class="alcanzado" style="width:12.0%" title="Helburua lortuta edo lortzeko bidean: 12.0%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:4.0%" title="Fair progress but acceleration needed: 4.0%"></span>
+                <span class="progreso" style="width:4.0%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 4.0%"></span>
                 
                 
                 
                 
-                <span class="retroceso" style="width:16.0%" title="Stagnation or regression: 16.0%"></span>
+                <span class="retroceso" style="width:16.0%" title="Geldialdia edo atzerakada: 16.0%"></span>
                 
                 
                 
                 
-                <span class="noevaluado" style="width:4.0%" title="No assessment: 4.0%"></span>
+                <span class="noevaluado" style="width:4.0%" title="Ebaluatu gabea: 4.0%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:56.00000000000001%" title="No data available: 56.0%"></span>
+                <span class="notstarted" style="width:56.00000000000001%" title="Eskuragarri ez dauden datuak: 56.0%"></span>
                 
                 
                 
                 
-                <span class="notapplicable" style="width:8.0%" title="Not applicable: 8.0%"></span>
+                <span class="notapplicable" style="width:8.0%" title="Ez aplikagarria: 8.0%"></span>
                 
                 
             </div>
@@ -2301,15 +2303,15 @@ data-event-label="high"
 
     <div class="goal reporting-status-item">
         <div class="frame goal-tiles">
-            <a href="/site/en/17/" title="View targets and indicators for Goal 17" aria-label="View targets and indicators for Goal 17">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/17.png" alt="Partnerships for the goals" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
+            <a href="/site/17/" title="Ikusi Helburuaren helmugak eta adierazleak 17" aria-label="Ikusi Helburuaren helmugak eta adierazleak 17">
+            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/17.png" alt="Helburuak lortzeko aliantzak" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
             </a>
         </div>
         <div class="details">
             <h3 class="status-goal">
-                <a href="/site/en/17/">Partnerships for the goals</a>
+                <a href="/site/17/">Helburuak lortzeko aliantzak</a>
             </h3>
-            <span class="total">24 indicators</span>
+            <span class="total">24 adierazle</span>
             
             <div class="summary">
                 <div class="statuses">
@@ -2320,7 +2322,7 @@ data-event-label="high"
                         <span class="status alcanzado">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>On track or target met</strong>
+                        <strong>Helburua lortuta edo lortzeko bidean</strong>
                         <span class="value">16.67%</span>
                     </div>
                     
@@ -2331,7 +2333,7 @@ data-event-label="high"
                         <span class="status progreso">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Fair progress but acceleration needed</strong>
+                        <strong>Arrazoizko aurrerapena, baina bizkortu egin behar da</strong>
                         <span class="value">12.5%</span>
                     </div>
                     
@@ -2345,7 +2347,7 @@ data-event-label="high"
                         <span class="status noevaluado">
                             <span class="status-inner">4</span>
                         </span>
-                        <strong>No assessment</strong>
+                        <strong>Ebaluatu gabea</strong>
                         <span class="value">16.67%</span>
                     </div>
                     
@@ -2356,7 +2358,7 @@ data-event-label="high"
                         <span class="status notstarted">
                             <span class="status-inner">10</span>
                         </span>
-                        <strong>No data available</strong>
+                        <strong>Eskuragarri ez dauden datuak</strong>
                         <span class="value">41.67%</span>
                     </div>
                     
@@ -2367,7 +2369,7 @@ data-event-label="high"
                         <span class="status notapplicable">
                             <span class="status-inner">3</span>
                         </span>
-                        <strong>Not applicable</strong>
+                        <strong>Ez aplikagarria</strong>
                         <span class="value">12.5%</span>
                     </div>
                     
@@ -2379,12 +2381,12 @@ data-event-label="high"
                 
                 
                 
-                <span class="alcanzado" style="width:16.666666666666664%" title="On track or target met: 16.67%"></span>
+                <span class="alcanzado" style="width:16.666666666666664%" title="Helburua lortuta edo lortzeko bidean: 16.67%"></span>
                 
                 
                 
                 
-                <span class="progreso" style="width:12.5%" title="Fair progress but acceleration needed: 12.5%"></span>
+                <span class="progreso" style="width:12.5%" title="Arrazoizko aurrerapena, baina bizkortu egin behar da: 12.5%"></span>
                 
                 
                 
@@ -2392,17 +2394,17 @@ data-event-label="high"
                 
                 
                 
-                <span class="noevaluado" style="width:16.666666666666664%" title="No assessment: 16.67%"></span>
+                <span class="noevaluado" style="width:16.666666666666664%" title="Ebaluatu gabea: 16.67%"></span>
                 
                 
                 
                 
-                <span class="notstarted" style="width:41.66666666666667%" title="No data available: 41.67%"></span>
+                <span class="notstarted" style="width:41.66666666666667%" title="Eskuragarri ez dauden datuak: 41.67%"></span>
                 
                 
                 
                 
-                <span class="notapplicable" style="width:12.5%" title="Not applicable: 12.5%"></span>
+                <span class="notapplicable" style="width:12.5%" title="Ez aplikagarria: 12.5%"></span>
                 
                 
             </div>
@@ -2413,7 +2415,7 @@ data-event-label="high"
     
   </div>
 
-  <a href="#top">Back to top</a>
+  <a href="#top">Gora itzuli</a>
 </div>
 <footer role="contentinfo">
     <div class="container">
@@ -2422,12 +2424,12 @@ data-event-label="high"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                            <a href="https://open-sdg.org">Open SDGrekin eraikia</a>
                         </li>
                         
                         
                         <li>
-                            <a href="/site/en/config">Configuration</a>
+                            <a href="/site/config">Configuration</a>
                         </li>
                         </ul>
                 </div>
@@ -2440,13 +2442,13 @@ data-event-label="high"
           <div class="centradomini">
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/about/links_c.html">Links</a></li>
+                          data-ajax="false" href="https://eu.eustat.eus/about/links_c.html">Estekak</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/faq_c.html">FAQ</a></li>
+                          data-ajax="false" href="https://eu.eustat.eus/faq_c.html">FAQ</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/sitemap_c.html">Map</a></li>
+                          data-ajax="false" href="https://eu.eustat.eus/sitemap_c.html">Mapa</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/accesibilidad_c.html">Accessibility</a>
+                          data-ajax="false" href="https://eu.eustat.eus/accesibilidad_c.html">Erabilerraztasuna</a>
                   </li>
               </ul>
           </div>
@@ -2454,11 +2456,11 @@ data-event-label="high"
               <div class="Prayamini"></div>
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.euskadi.eus/about/a_eustat_c.html">About Eustat</a></li>
+                          data-ajax="false" href="https://eu.euskadi.eus/about/a_eustat_c.html">Eustati buruz</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.euskadi.eus/">Electronic Office</a></li>
+                          data-ajax="false" href="https://eu.euskadi.eus/">Egoitza elektronikoa</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/privacidad_c.html">Privacy</a></li>
+                          data-ajax="false" href="https://eu.eustat.eus/privacidad_c.html">Pribatutasuna</a></li>
               </ul>
           </div>
       </div>
@@ -2466,23 +2468,23 @@ data-event-label="high"
           <div class="logos-rrss-pie">
               <div class="logos">
                   <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
-                      href="https://en.eustat.eus/about/aenor_c.html"><img
+                      href="https://eu.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
                           style="border-width:0px;"></a>
                   <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
-                      href="https://en.eustat.eus/about/aenor_c.html"><img
+                      href="https://eu.eustat.eus/about/aenor_c.html"><img
                           src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
                           style="border-width:0px;"></a>
               </div>
               
           </div>
           <div class="piederecho-texto">
-              <p class="piederechop bold">Eustat - Basque Statistics Institute</p>
-              <p class="piederechop">Eustat is the public organization that develops, produces and distributes official statistical information of the Basque Country</p>
+              <p class="piederechop bold">Eustat - Euskal Estatistika Erakundea - Instituto Vasco de Estadística</p>
+              <p class="piederechop">Eustat, Euskal AEko informazio estatistiko ofiziala garatu, ekoiztu eta zabaltzen duen erakunde publikoa da</p>
               <p class="piederechop">
                 c/Donostia - San Sebastián, 1<br>
                 01010 Vitoria-Gasteiz<br>
-                Phone: (+34) 945017500<br>
+                Tel: (+34) 945017500<br>
                 Fax: (+34) 945017501<br>
                 webmaster_eustat@eustat.eus
               </p>
@@ -2513,12 +2515,12 @@ data-event-label="high"
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'hide';</script>
+    translations['general']['hide'] = 'Ezkutatu';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Search';</script>
+    translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250522123356'></script>
+<script src='/site/assets/js/sdg.js?v=20250522132719'></script>
 
 
 <script>
@@ -2538,7 +2540,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250522123356"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250522132719"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
