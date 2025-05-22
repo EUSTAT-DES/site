@@ -34,7 +34,7 @@ create_pages:
     layout: goals
     title: general.goals
   - filename: ''
-    folder: /reporting-status
+    folder: /jarraipen-txostena
     layout: progrestatus
     title: status.reporting_status
   - filename: ''
@@ -189,7 +189,7 @@ menu:
   - path: /
     translation_key: general.home
     dropdown: []
-  - path: /reporting-status
+  - path: /jarraipen-txostena
     translation_key: menu.reporting_status
     dropdown: []
   - translation_key: menu.desagregaciones
