@@ -2824,6 +2824,9 @@ body.contrast-high .header {
 header .container {
   margin-top: 15px; }
 
+.frontpage-goals-grid {
+  margin: 0px 0 20px 0; }
+
 .header {
   background-color: #013161; }
 
