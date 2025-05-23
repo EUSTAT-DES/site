@@ -4,13 +4,13 @@
           <div class="centradomini">
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/about/links_c.html">{{ site.data.strings[page.language].links }}</a></li>
+                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/about/links_c.html">{{ footer.links | t }}</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/faq_c.html">{{ site.data.strings[page.language].faq }}</a></li>
+                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/faq_c.html">{{ footer.faq | t }}</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/sitemap_c.html">{{ site.data.strings[page.language].map }}</a></li>
+                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/sitemap_c.html">{{ footer.map | t }}</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/accesibilidad_c.html">{{ site.data.strings[page.language].accessibility }}</a>
+                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/accesibilidad_c.html">{{ footer.accessibility | t }}</a>
                   </li>
               </ul>
           </div>
@@ -18,11 +18,11 @@
               <div class="Prayamini"></div>
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://{{ page.language }}.euskadi.eus/about/a_eustat_c.html">{{ site.data.strings[page.language].about_eustat }}</a></li>
+                          data-ajax="false" href="https://{{ page.language }}.euskadi.eus/about/a_eustat_c.html">{{ footer.about_eustat | t }}</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://{{ page.language }}.euskadi.eus/">{{ site.data.strings[page.language].electronic_office }}</a></li>
+                          data-ajax="false" href="https://{{ page.language }}.euskadi.eus/">{{ footer.electronic_office | t }}</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/privacidad_c.html">{{ site.data.strings[page.language].privacy }}</a></li>
+                          data-ajax="false" href="https://{{ page.language }}.eustat.eus/privacidad_c.html">{{ footer.privacy | t }}</a></li>
               </ul>
           </div>
       </div>
@@ -31,24 +31,24 @@
               <div class="logos">
                   <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
                       href="https://{{ page.language }}.eustat.eus/about/aenor_c.html"><img
-                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="{{ site.data.strings[page.language].aenor }}"
+                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="{{ footer.aenor }}"
                           style="border-width:0px;"></a>
                   <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
                       href="https://{{ page.language }}.eustat.eus/about/aenor_c.html"><img
-                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="{{ site.data.strings[page.language].aenor }}"
+                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="{{ footer.aenor }}"
                           style="border-width:0px;"></a>
               </div>
               
           </div>
           <div class="piederecho-texto">
-              <p class="piederechop bold">{{ site.data.strings[page.language].eustat_full_name }}</p>
-              <p class="piederechop">{{ site.data.strings[page.language].eustat_description }}</p>
+              <p class="piederechop bold">{{ footer.eustat_full_name | t }}</p>
+              <p class="piederechop">{{ footer.eustat_description | t }}</p>
               <p class="piederechop">
-                {{ site.data.strings[page.language].address }}<br>
-                {{ site.data.strings[page.language].postal_code }}<br>
-                {{ site.data.strings[page.language].phone }}<br>
-                {{ site.data.strings[page.language].fax }}<br>
-                {{ site.data.strings[page.language].email }}
+                {{ footer.address | t }}<br>
+                {{ footer.postal_code | t }}<br>
+                {{ footer.phone | t }}<br>
+                {{ footer.fax | t }}<br>
+                {{ footer.email | t }}
               </p>
           </div>
       </div>

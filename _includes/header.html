@@ -20,25 +20,25 @@
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_0/id_All/temalista.html">{{ site.data.strings[page.language].themes }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_1/id_All/temalista.html">{{ site.data.strings[page.language].operations }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://{{ page.language }}.eustat.eus/bancopx/spanish/indice.html">{{ site.data.strings[page.language].database }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://{{ page.language }}.eustat.eus/indice.html#cy">{{ site.data.strings[page.language].situation }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://{{ page.language }}.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">{{ site.data.strings[page.language].municipal_info }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_0/id_All/temalista.html">{{ header.themes | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_1/id_All/temalista.html">{{ header.operations }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://{{ page.language }}.eustat.eus/bancopx/spanish/indice.html">{{ header.database | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://{{ page.language }}.eustat.eus/indice.html#cy">{{ header.situation | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://{{ page.language }}.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">{{ header.municipal_info | t }}</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/calendario.html">{{ site.data.strings[page.language].calendar }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/productosServicios/sugerencias.html">{{ site.data.strings[page.language].complaints_suggestions }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://{{ page.language }}.eustat.eusprodserv/info_c.html">{{ site.data.strings[page.language].info_service }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://{{ page.language }}.eustat.eus/notas_c.html">{{ site.data.strings[page.language].press_service }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/calendario.html">{{ header.calendar | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/productosServicios/sugerencias.html">{{ header.complaints_suggestions | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://{{ page.language }}.eustat.eusprodserv/info_c.html">{{ header.info_service | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://{{ page.language }}.eustat.eus/notas_c.html">{{ header.press_service | t }}</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <div class="rrss">
                 <span class="texto-rrss">
-                  {{ site.data.strings[page.language].follow_us }}
+                  {{ header.follow_us }}
                 </span>
                 <div class="iconos-rrss">
                     <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
