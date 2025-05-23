@@ -18,14 +18,12 @@ Los datos y metadatos de esta plataforma están disponibles mediante rutas prede
 ###  Datos completos
 Archivos CSV y JSON con los datos totalmente desagregados:
 
+- `https://eustat-des.github.io/data/es/data/codigoindicador.csv`  
+  Ejemplo: [1-2-1.csv](https://eustat-des.github.io/data/es/data/1-2-1.csv)
+
 - `https://eustat-des.github.io/data/es/data/codigoindicador.json`  
   Ejemplo: [1-2-1.json](https://eustat-des.github.io/data/es/data/1-2-1.json)
 
-###  Metadatos
-Contienen información metodológica, fuente, periodicidad y definiciones:
-
-- `https://eustat-des.github.io/data/es/meta/codigoindicador.json`  
-  Ejemplo: [1-2-1.json](https://eustat-des.github.io/data/es/meta/1-2-1.json)
 
 ###  Datos "headline"
 Valores agregados por idioma:
@@ -36,19 +34,6 @@ Valores agregados por idioma:
 
 (Disponibles también en formato JSON)
 
-###  Edges
-Relaciones entre desagregaciones posibles:
-
-- `es/edges/codigoindicador.json`  
-- `eu/edges/codigoindicador.json`  
-- `en/edges/codigoindicador.json`
-
-###  Datos combinados (datos + edges)
-Archivo JSON que combina datos desagregados y relaciones:
-
-- `es/comb/codigoindicador.json`  
-- `eu/comb/codigoindicador.json`  
-- `en/comb/codigoindicador.json`
 
 ###  Descarga masiva (ZIP)
 Todos los indicadores en formato CSV:
