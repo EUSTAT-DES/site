@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250526100215">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250526101139">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -379,16 +379,6 @@ data-event-label="high"
 <div id="top" tabindex=-1></div>
 
 
-<div class="container">
-    <nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        <li class="breadcrumb-item" >
-            <a href="/site/en/">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Acerca de la plataforma web</li>
-    </ol>
-</nav>
-</div>
 <div id="main-content" class="container main-content-pages" role="main">
     <div>
         <h1>Acerca de la plataforma web</h1>
@@ -397,7 +387,7 @@ data-event-label="high"
 
     <h2 id="sustainable-development-indicators-platform">Sustainable Development Indicators Platform</h2>
 
-<p><strong>Eustat</strong> has developed this interactive platform for visualizing Sustainable Development Goal (SDG) indicators using the <a href="https://open-sdg.readthedocs.io/en/latest/quick-start/">Open SDG Platform</a>, an open-source solution designed to facilitate the dissemination of SDG data.</p>
+<p><strong>Eustat</strong> has developed this interactive platform for visualizing Sustainable Development Goal (SDG) indicators using the <a href="https://open-sdg.org/">Open SDG Platform</a>, an open-source solution designed to facilitate the dissemination of SDG data.</p>
 
 <p>This website is reusable. Any institution can replicate it by following the steps described in the <a href="https://open-sdg.readthedocs.io/en/latest/quick-start/">Open SDG Quick Start Guide</a>.</p>
 
@@ -406,51 +396,40 @@ data-event-label="high"
 <p>The data and metadata on this platform are available through predictable and documented paths, enabling programmatic use. The main access points are described below:</p>
 
 <h3 id="complete-data">Complete Data</h3>
+
 <p>CSV and JSON files with fully disaggregated data:</p>
 
 <ul>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">https://eustat-des.github.io/data/es/data/indicatorcode.csv</code>
-Example: <a href="https://eustat-des.github.io/data/es/data/1-2-1.csv">1-2-1.csv</a></p>
+    <p><code class="language-plaintext highlighter-rouge">https://eustat-des.github.io/data/en/data/**indicatorcode**.csv</code><br />
+Example: <a href="https://eustat.github.io/sdg-data-prod/en/data/1-2-1.csv">https://eustat.github.io/sdg-data-prod/en/data/1-2-1.csv</a></p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">https://eustat-des.github.io/data/es/data/indicatorcode.json</code>
-Example: <a href="https://eustat-des.github.io/data/es/data/1-2-1.json">1-2-1.json</a></p>
+    <p><code class="language-plaintext highlighter-rouge">https://eustat-des.github.io/data/en/data/**indicatorcode**.json</code><br />
+Example: <a href="https://eustat.github.io/sdg-data-prod/en/data/1-2-1.json">https://eustat.github.io/sdg-data-prod/en/data/1-2-1.json</a></p>
   </li>
 </ul>
-
-<h3 id="headline-data">Headline Data</h3>
-<p>Aggregated values ​​by language:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">es/headline/5-a-1.csv</code></li>
-  <li><code class="language-plaintext highlighter-rouge">eu/headline/5-a-1.csv</code></li>
-  <li><code class="language-plaintext highlighter-rouge">en/headline/5-to-1.csv</code></li>
-</ul>
-
-<p>(Also available in JSON format)</p>
 
 <h3 id="bulk-download-zip">Bulk Download (ZIP)</h3>
 <p>All indicators in CSV format:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">es/zip/all_indicators.zip</code></li>
-  <li><code class="language-plaintext highlighter-rouge">eu/zip/all_indicators.zip</code></li>
-  <li><code class="language-plaintext highlighter-rouge">en/zip/all_indicators.zip</code></li>
+  <li><a href="https://eustat.github.io/sdg-data-prod/en/zip/all_indicators.zip">https://eustat.github.io/sdg-data-prod/en/zip/all_indicators.zip</a></li>
+  <li><a href="https://eustat.github.io/sdg-data-prod/es/zip/all_indicators.zip">https://eustat.github.io/sdg-data-prod/es/zip/all_indicators.zip</a></li>
+  <li><a href="https://eustat.github.io/sdg-data-prod/eu/zip/all_indicators.zip">https://eustat.github.io/sdg-data-prod/eu/zip/all_indicators.zip</a></li>
 </ul>
 
-<h3 id="translations">Translations</h3>
-<p>Contains all the text used in the platform, by language:</p>
+<h3 id="disaggregations-report">Disaggregations Report</h3>
+
+<p>Tables showing information about all disaggregations used in the data, by dimension/category and by indicator.</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">es/translations/translations.json</code></li>
-  <li><code class="language-plaintext highlighter-rouge">eu/translations/translations.json</code></li>
-  <li><code class="language-plaintext highlighter-rouge">en/translations/translations.json</code></li>
+  <li><a href="https://eustat.github.io/sdg-data-prod/disaggregations.html">https://eustat.github.io/sdg-data-prod/disaggregations.html</a></li>
 </ul>
 
 <h2 id="accessibility">Accessibility</h2>
 
-<p>The Open SDG platform is designed to be accessible and compliant with level <strong>AA</strong> of the Web Content Accessibility Guidelines (WCAG 2.0) (https://www.w3.org/TR/WCAG20/).</p>
+<p>The Open SDG platform is designed to be accessible and compliant with level <strong>AA</strong> of the <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG 2.0)</a>.</p>
 
 
 
@@ -559,7 +538,7 @@ Example: <a href="https://eustat-des.github.io/data/es/data/1-2-1.json">1-2-1.js
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250526100215'></script>
+<script src='/site/assets/js/sdg.js?v=20250526101139'></script>
 
 
 <script>
@@ -579,7 +558,7 @@ Example: <a href="https://eustat-des.github.io/data/es/data/1-2-1.json">1-2-1.js
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250526100215"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250526101139"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
