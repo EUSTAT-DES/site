@@ -165,7 +165,7 @@ map_options:
     id: ''
     accessToken: ''
     attribution: <a href="https://www.geo.euskadi.eus/" title="Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi">geoEuskadi</a>
-  colorRange: chroma.brewer.BuGn 
+  colorRange: myMapColorFunction 
   noValueColor: '#f0f0f0'
   styleNormal:
     weight: 1
