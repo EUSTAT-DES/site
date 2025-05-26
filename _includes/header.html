@@ -1,5 +1,5 @@
 {% include multilingual-js.html key="header" %}
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">{{ page.t.data.header.skip_link }}</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">{{ page.t.header.skip_link }}</a>
 {% include components/header/internet-explorer-message.html %}
 <header role="banner" class="">
   <div class="header" >
@@ -20,25 +20,25 @@
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_0/id_All/temalista.html">{{ data.header.themes | t }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_1/id_All/temalista.html">{{ data.header.operations }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://{{ page.language }}.eustat.eus/bancopx/spanish/indice.html">{{ data.header.database | t }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://{{ page.language }}.eustat.eus/indice.html#cy">{{ data.header.situation | t }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://{{ page.language }}.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">{{ data.header.municipal_info | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_0/id_All/temalista.html">{{ page.t.header.themes }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/opt_1/id_All/temalista.html">{{ page.t.header.operations }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://{{ page.language }}.eustat.eus/bancopx/spanish/indice.html">{{ page.t.header.database }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://{{ page.language }}.eustat.eus/indice.html#cy">{{ page.t.header.situation }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://{{ page.language }}.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">{{ page.t.header.municipal_info }}</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/calendario.html">{{ data.header.calendar | t }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/productosServicios/sugerencias.html">{{ data.header.complaints_suggestions | t }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://{{ page.language }}.eustat.eusprodserv/info_c.html">{{ data.header.info_service | t }}</a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://{{ page.language }}.eustat.eus/notas_c.html">{{ data.header.press_service | t }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://{{ page.language }}.eustat.eus/estadisticas/calendario.html">{{ page.t.header.calendar }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://{{ page.language }}.eustat.eus/productosServicios/sugerencias.html">{{ page.t.header.complaints_suggestions }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://{{ page.language }}.eustat.eusprodserv/info_c.html">{{ page.t.header.info_service }}</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://{{ page.language }}.eustat.eus/notas_c.html">{{ page.t.header.press_service }}</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <div class="rrss">
                 <span class="texto-rrss">
-                  {{ data.header.follow_us }}
+                  {{ page.t.header.follow_us }}
                 </span>
                 <div class="iconos-rrss">
                     <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             {% include components/header/logo.html %}
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ page.t.data.header.show_menu }}">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ page.t.header.show_menu }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
