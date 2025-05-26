@@ -14,7 +14,9 @@ Medir de cerca el progreso de cada indicador no solo ilustra dónde se está pro
 ## Metodología  
    
 Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
-[nota técnica sobre la medición del progreso](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) utilizada por al Unidad de Estadística de Naciones Unidas.  
+[nota técnica sobre la medición del progreso de 2023](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) utilizada por la División de Estadística de Naciones Unidas.  
+
+Al evaluar el progreso de los ODS, la dirección normativa de una serie de datos indica el resultado deseable para su valor. Un valor más alto es deseable para series de datos con una dirección normativa creciente; lo contrario ocurre con aquellas con una dirección normativa decreciente. La dirección deseada para cada indicador o serie se ha tomado de la [nota técnica sobre la medición del progreso de 2024](https://unstats.un.org/sdgs/files/report/2024/Technical_Note_for_Progress_Assessment_2024.pdf)
 
 Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.
 

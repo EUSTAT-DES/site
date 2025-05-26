@@ -34,7 +34,7 @@ create_pages:
     layout: goals
     title: general.goals
   - filename: ''
-    folder: /reporting-status
+    folder: /jarraipen-txostena
     layout: progrestatus
     title: status.reporting_status
   - filename: ''
@@ -51,13 +51,13 @@ data_fields:
 date_formats: 
   - type: standard
     language: en
-    format: '%Y.%m.%d'
+    format: '%Y/%m/%d'
   - type: standard
     language: es
-    format: '%d.%m.%Y'
+    format: '%d/%m/%Y'
   - type: standard
     language: eu
-    format: "%Y.%m.%d"
+    format: "%Y/%m/%d"
 disclaimer:
   phase: ''
   message: ''
@@ -142,17 +142,17 @@ logos:
     alt: Go to homepage
 map_layers:
   - subfolder: Territorio
-    label: general.territorio
+    label: indicator.territorio
     min_zoom: 5
     max_zoom: 6
     staticBorders: true
   - subfolder: Comarca
-    label: general.comarca
+    label: indicator.comarca
     min_zoom: 7
     max_zoom: 8
     staticBorders: true
   - subfolder: Municipio
-    label: general.municipio
+    label: indicator.municipio
     min_zoom: 9
     max_zoom: 14
     staticBorders: true
@@ -189,7 +189,7 @@ menu:
   - path: /
     translation_key: general.home
     dropdown: []
-  - path: /reporting-status
+  - path: /jarraipen-txostena
     translation_key: menu.reporting_status
     dropdown: []
   - translation_key: menu.desagregaciones

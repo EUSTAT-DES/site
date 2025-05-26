@@ -4,7 +4,7 @@ body {
   background: white;
   padding-top: 0; 
   margin: 0;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.42857143;
 }
 
@@ -13,8 +13,12 @@ body.contrast-high .header {
     background-color: #000000;
 }
 
-header.container{
+header .container{
   margin-top: 15px;
+}
+
+.frontpage-goals-grid{
+  margin: 0px 0 20px 0;
 }
 
 .header{
@@ -91,7 +95,7 @@ header.container{
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 560px) {
   .header .logo-header-description {
     display: none;
   }
@@ -390,6 +394,12 @@ ul.iconillo {
     }
     .ods-item {
         flex: 1; /* Asegura que los íconos ocupen todo el ancho disponible */
+        max-width: 6%; /* Aproximadamente 20 íconos por línea en pantallas grandes */
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .ods-item {
         max-width: 5%; /* Aproximadamente 20 íconos por línea en pantallas grandes */
     }
 }
