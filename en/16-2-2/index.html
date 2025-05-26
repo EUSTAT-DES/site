@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250523152405">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250526085423">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -173,7 +173,7 @@ layout-indicator
 
 <script>translations['header'] = {"alpha":"POC","calendar":"Calendar","complaints_suggestions":"Complaints and Suggestions","database":"Data Bank","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website.","enable_high_contrast":"Enable high contrast","follow_us":"Follow Us:","hide_menu":"Hide navigation menu","high_contrast":"High contrast","info_service":"Information Service","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","municipal_info":"Municipalities information","operations":"Operations","press_service":"Press Service","show_menu":"Show navigation menu","situation":"Economic & Social Trends","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","themes":"Themes","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"></a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div class="container internet-explorer-message">
     <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
     <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
@@ -197,25 +197,25 @@ layout-indicator
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_0/id_All/temalista.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_1/id_All/temalista.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://en.eustat.eus/bancopx/spanish/indice.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://en.eustat.eus/indice.html#cy"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://en.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp"></a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Themes</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operations</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://en.eustat.eus/bancopx/spanish/indice.html">Data Bank</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://en.eustat.eus/indice.html#cy">Economic & Social Trends</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://en.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Municipalities information</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/calendario.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://en.eustat.eus/productosServicios/sugerencias.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://en.eustat.eusprodserv/info_c.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://en.eustat.eus/notas_c.html"></a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/calendario.html">Calendar</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://en.eustat.eus/productosServicios/sugerencias.html">Complaints and Suggestions</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://en.eustat.eusprodserv/info_c.html">Information Service</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://en.eustat.eus/notas_c.html">Press Service</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <div class="rrss">
                 <span class="texto-rrss">
-                  
+                  Follow Us:
                 </span>
                 <div class="iconos-rrss">
                     <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a class="navbar-brand" href="/site/en/" id="home" aria-label="Go to homepage" title="Go to homepage">
     <img src="/site/assets/img/logo/SDG_logo_en.png" alt="Go to homepage" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
@@ -1550,13 +1550,13 @@ crime.</p>
           <div class="centradomini">
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/about/links_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/about/links_c.html">Links</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/faq_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/faq_c.html">FAQ</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/sitemap_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/sitemap_c.html">Map</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/accesibilidad_c.html"></a>
+                          data-ajax="false" href="https://en.eustat.eus/accesibilidad_c.html">Accessibility</a>
                   </li>
               </ul>
           </div>
@@ -1564,11 +1564,11 @@ crime.</p>
               <div class="Prayamini"></div>
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.euskadi.eus/about/a_eustat_c.html"></a></li>
+                          data-ajax="false" href="https://en.euskadi.eus/about/a_eustat_c.html">About Eustat</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.euskadi.eus/"></a></li>
+                          data-ajax="false" href="https://en.euskadi.eus/">Electronic Office</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/privacidad_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/privacidad_c.html">Privacy</a></li>
               </ul>
           </div>
       </div>
@@ -1577,24 +1577,24 @@ crime.</p>
               <div class="logos">
                   <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
                       href="https://en.eustat.eus/about/aenor_c.html"><img
-                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt=""
+                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
                           style="border-width:0px;"></a>
                   <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
                       href="https://en.eustat.eus/about/aenor_c.html"><img
-                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt=""
+                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
                           style="border-width:0px;"></a>
               </div>
               
           </div>
           <div class="piederecho-texto">
-              <p class="piederechop bold"></p>
-              <p class="piederechop"></p>
+              <p class="piederechop bold">Eustat - Basque Statistics Institute</p>
+              <p class="piederechop">Eustat is the public organization that develops, produces and distributes official statistical information of the Basque Country</p>
               <p class="piederechop">
-                <br>
-                <br>
-                <br>
-                <br>
-                
+                c/Donostia - San Sebastián, 1<br>
+                01010 Vitoria-Gasteiz<br>
+                Phone: (+34) 945017500<br>
+                Fax: (+34) 945017501<br>
+                webmaster_eustat@eustat.eus
               </p>
           </div>
       </div>
@@ -1630,7 +1630,7 @@ crime.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250523152405'></script>
+<script src='/site/assets/js/sdg.js?v=20250526085423'></script>
 
 
 <script>
@@ -1650,7 +1650,7 @@ crime.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250523152405"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250526085423"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
