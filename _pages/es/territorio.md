@@ -7,11 +7,9 @@ layout: page
 
 
 <div class="container">
-  {% assign indicators = site.data.csv.territorio %}
-  {% assign ordered_goals = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17" | split: "," %}
 
   <!-- Mostrar indicadores agrupados en orden de objetivos -->
-  {% for goal_number in ordered_goals %}
+  {% for goal_number in site.data.goals %}
     {% assign goal_details = goal_number | sdg_lookup %}
 
     <div class="goal reporting-status-item">
@@ -36,8 +34,8 @@ layout: page
 
         <!-- Listado de Indicadores -->
 <ul style="list-style: none; padding: 0; margin-top: 10px;">
-  {% for indicator_row in indicators %}
-    {% assign indicator_number = indicator_row.Indicator | remove: "#" %}
+  {% for indicator_row in site.data.indicators %}
+    {% assign indicator_number = indicator_file[0] %}
     {% assign indicator_goal = indicator_number | split: "-" | first %}
     {% if indicator_goal == goal_number %}
       {% assign indicator = indicator_number | sdg_lookup %}
@@ -55,4 +53,6 @@ layout: page
     </div>
     <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
   {% endfor %}
+  <pre>{{ site.data.goals | inspect }}</pre>
+  <pre>{{ site.data.indicators | inspect }}</pre>
 </div>
