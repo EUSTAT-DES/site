@@ -53,6 +53,5 @@ layout: page
     </div>
     <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
   {% endfor %}
-  <pre>{{ site.data.goals | inspect }}</pre>
-  <pre>{{ site.data.indicators | inspect }}</pre>
+  <pre>{{ site.data.reporting | inspect }}</pre>
 </div>
