@@ -9,7 +9,7 @@ layout: page
 <div class="container">
 
   <!-- Mostrar indicadores agrupados en orden de objetivos -->
-  {% for goal_number in page.goals %}
+  {% for goal_number in site.data.goals %}
     {% assign goal_details = goal_number | sdg_lookup %}
 
     <div class="goal reporting-status-item">
@@ -34,7 +34,7 @@ layout: page
 
         <!-- Listado de Indicadores -->
 <ul style="list-style: none; padding: 0; margin-top: 10px;">
-  {% for indicator_row in page.indicators %}
+  {% for indicator_row in site.data.indicators %}
     {% assign indicator_number = indicator_file[0] %}
     {% assign indicator_goal = indicator_number | split: "-" | first %}
     {% if indicator_goal == goal_number %}
@@ -53,5 +53,6 @@ layout: page
     </div>
     <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
   {% endfor %}
+  <pre>{{ page.goals | inspect }}</pre>
   <pre>{{ page.indicators | inspect }}</pre>
 </div>
