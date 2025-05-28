@@ -119,7 +119,7 @@ var translations = {
         
     <title>
         
-        Proporción de personas en riesgo de pobreza relativa con alquiler imputado, considerando el umbral autonómico de pobreza - Indicators For The Sustainable Development Goals
+        Proporción de personas en riesgo de pobreza relativa con alquiler imputado, considerando el umbral autonómico de pobreza - general.site_title
     </title>
 
 
@@ -143,7 +143,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250528141106">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250528150418">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -169,7 +169,7 @@ layout-indicator-iframe
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"POC","calendar":"Calendar","complaints_suggestions":"Complaints and Suggestions","database":"Data Bank","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website.","enable_high_contrast":"Enable high contrast","follow_us":"Follow Us:","hide_menu":"Hide navigation menu","high_contrast":"High contrast","info_service":"Information Service","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","municipal_info":"Municipalities information","operations":"Operations","press_service":"Press Service","show_menu":"Show navigation menu","situation":"Economic & Social Trends","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","themes":"Themes","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
+<script>translations['header'] = null;</script>
 
 
 <script type="text/template" id="item_template">
@@ -187,15 +187,15 @@ layout-indicator-iframe
       >
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %><h6><% } else { %><h5><% } %>
           <span aria-hidden="true"><%=translations.t(fieldItem.label)%><i class="fa fa-chevron-down"></i></span>
-          <span class="sr-only">Show sub-categories: <%=translations.t(fieldItem.label)%></span>
+          <span class="sr-only"> <%=translations.t(fieldItem.label)%></span>
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %></h6><% } else { %></h5><% } %>
       </button>
       <div class="variable-options">
         <fieldset>
-          <legend class="sr-only">Sub-categories - <%=translations.t(fieldItem.field)%></legend>
+          <legend class="sr-only"> - <%=translations.t(fieldItem.field)%></legend>
           <div>
-            <button data-type="select">Select all</button>
-            <button data-type="clear">Clear all</button>
+            <button data-type="select"></button>
+            <button data-type="clear"></button>
           </div>
           <% _.each(fieldItem.values, function(item) { %>
             <label>
@@ -206,10 +206,10 @@ layout-indicator-iframe
       </div>
 
       <% if(allowedFields.indexOf(fieldItem.field) == -1) { %>
-        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">Available when '<%= translations.t(_.find(edges, { To: fieldItem.field }).From) %>' is selected
+        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
         </div>
         <div class="no-data-hint" id="no-data-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
-          No options available because of filters above
+          
         </div>
       <% }%>
 
@@ -221,9 +221,9 @@ layout-indicator-iframe
   
   <% if(units.length > 1) { %>
   
-    <h4>Unit of Measurement</h4>
+    <h4></h4>
     <fieldset>
-      <legend class="sr-only">Unit of Measurement</legend>
+      <legend class="sr-only"></legend>
       <% _.each(units, function(unitsItem, index) { %>
         <% var checked = (selectedUnit) ? (selectedUnit==unitsItem) : (index==0); %>
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
@@ -238,9 +238,9 @@ layout-indicator-iframe
   
   <% if(serieses.length > 1) { %>
   
-    <h4>Series</h4>
+    <h4></h4>
     <fieldset>
-      <legend class="sr-only">Series</legend>
+      <legend class="sr-only"></legend>
       <% _.each(serieses, function(seriesItem, index) { %>
         <% var isProxy = (proxySerieses.includes(seriesItem)) %>
         <% var checked = (selectedSeries) ? (selectedSeries==seriesItem) : (index==0); %>
@@ -252,9 +252,9 @@ layout-indicator-iframe
   
 </script>
 
-<script>translations['indicator'] = {"affirmative":"Yes","annotation_2030_target":"2030 target","annotation_series_break":"Series break","announce_data_added":"Chart and table updated to include data.","announce_data_not_available":"Chart and table shows no data.","announce_data_removed":"Chart and table updated to exclude data.","announce_series_switched":"Chart and table updated to show a different series.","announce_unit_switched":"Chart and table updated to show a different unit.","apply":"Apply","cancel":"Cancel","change_breakdowns":"Change breakdowns","chart":"Chart","chart_annotation":"Chart annotation","clear_all":"Clear all","clear_selections":"Clear selections","comarca":"Counties","data_keyboard_navigation":"Press enter to browse data points with left and right arrow keys.","data_not_available":"This data is not available. Please choose alternative data to display.","data_tabular_alternative":"For tabular data alternative see Table tab.","dataset_size_warning":"There are too many datasets to show on the chart. Not all will be shown until you remove some selections.","download_chart":"Download chart data (.csv)","download_chart_image":"Download chart image (.png)","download_chart_image_title":"Download chart image as PNG","download_csv":"Download data (.csv)","download_csv_title":"Download data as CSV","download_geojson":"Download map data (.geojson)","download_geojson_title":"Download map data as GeoJSON","download_headline":"Download headline data (.csv)","download_headline_title":"Download headline data as CSV","download_source":"Download source data (.csv)","download_source_for_disaggregations":"Download source data for disaggregations (.csv)","download_source_sdmx":"Download source SDMX (.xml)","download_source_sdmx_title":"Download source data as SDMX","download_source_title":"Download source data as CSV","download_table":"Download table data (.csv)","edit":"Edit Indicator","edit_configuration":"Edit Configuration","edit_data":"Edit Data","edit_metadata":"Edit Metadata","empty_metadata_placeholder":"Not available for this indicator","empty_metadata_placeholder_sources":"Not available for this source","footnote":"Footnote","geographical_area":"Geographical Area","global_metadata":"Description of the indicator","global_metadata_blurb":"This table provides information on metadata for SDG indicators as defined by the UN Statistical Commission. <a href=\"https://unstats.un.org/sdgs/metadata/\">Complete global metadata</a> is provided by the UN Statistics Division.","headline_data":"Headline data","legend_help":"Click on the legend to remove individual lines from the chart.","loading":"Loading","loading_map":"Loading map","map":"Map","map_fullscreen":"View map fullscreen","map_fullscreen_exit":"Exit fullscreen map","map_search":"Map search","map_search_cancel":"Clear map search","map_search_hide":"Hide map search","map_search_show":"Show map search","map_slider_back":"View map data for previous time period","map_slider_forward":"View map data for next time period","map_slider_keyboard":"View map data throughout time period by using left and right arrow keys","map_slider_mouse":"Navigate map data by time period","map_year_slider":"Year slider","map_zoom_home":"Reset to default map zoom","map_zoom_in":"Zoom in on map","map_zoom_out":"Zoom out on map","meta_europea":"European goal","municipio":"Municipalities","national_metadata":"Methodological sheet","national_metadata_blurb":"This table provides metadata for the actual indicator available from %country.name statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from %country.adjective statistics, this table should be consulted for information on national methodology and other %country.adjective-specific metadata information.","negative":"No","next":"Next indicator","no_data_hint":"No options available because of filters above","no_headline_data":"No headline data available","note":"note","plot_legend_description":"Plot legend: list of lines included in chart","previous":"Previous indicator","proxy":"Proxy","proxy_description":"This indicator contains some alternative data to those specified by the United Nations (UN). This indicator is the most suitable match currently available.","select_all":"Select all","series":"Series","series_help":"Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.","source":"Source","sources":"Sources","status":"Indicator status","sub_categories":"Sub-categories","sub_categories_show":"Show sub-categories:","table":"Table","table_column_sort":"Click to sort by this column","tags":"Tags","territorio":"Provinces","total":"Total","unit":"Unit","unit_of_measurement":"Unit of Measurement","units_type":"Units type","variable_hint":"Available when '%field' is selected","view_indicator_list":"View this goal's indicator list"};</script>
+<script>translations['indicator'] = null;</script>
 
-<script>translations['data'] = {"Year":"Year"};</script>
+<script>translations['data'] = null;</script>
 
 
 <div class="heading goal-banner indicator goal-">
@@ -300,7 +300,7 @@ layout-indicator-iframe
   id="indicatorData"
   data-indicatorid='indicator_OCECA-1-2-1-2B'
   data-id="OCECA-1-2-1-2B"
-  data-country="Basque Country"
+  data-country="general.pais"
   data-charttitle=""
   data-charttitles="[]"
   data-measurementunit=""
@@ -332,8 +332,8 @@ layout-indicator-iframe
 <div id="units"></div>
 <div id="toolbar">
   <span id="series-help">
-    <h4>Sub-categories</h4>
-    <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+    <h4></h4>
+    <p></p>
   </span>
   <div id="fields">
     <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
@@ -352,14 +352,14 @@ layout-indicator-iframe
   <div id="datatables">
 
     
-    <a role="button" href="https://eustat-des.github.io/data/en/headline/OCECA-1-2-1-2B.csv" class="btn btn-primary btn-download" download="indicator_OCECA-1-2-1-2B.csv" tabindex="0" role="button">Download headline data (.csv)</a>
+    <a role="button" href="https://eustat-des.github.io/data/en/headline/OCECA-1-2-1-2B.csv" class="btn btn-primary btn-download" download="indicator_OCECA-1-2-1-2B.csv" tabindex="0" role="button"></a>
     
-    <a role="button" href="https://eustat-des.github.io/data/en/data/OCECA-1-2-1-2B.csv" class="btn btn-primary btn-download" download='indicator_OCECA-1-2-1-2B.csv' tabindex='0' role='button'>Download source data (.csv)</a>
+    <a role="button" href="https://eustat-des.github.io/data/en/data/OCECA-1-2-1-2B.csv" class="btn btn-primary btn-download" download='indicator_OCECA-1-2-1-2B.csv' tabindex='0' role='button'></a>
 
-    <p class="no-js-disaggregation-hint">Download source data for disaggregations (.csv)</p>
+    <p class="no-js-disaggregation-hint"></p>
 
     
-    <h3>Headline data</h3>
+    <h3></h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
       <caption></caption>
       <thead>
@@ -452,13 +452,13 @@ layout-indicator-iframe
   <div id="datatableFooter">
     
     
-    <p>Geographical Area: </p>
+    <p>: </p>
     
     
-    <p>Unit of Measurement: </p>
+    <p>: </p>
     
     
-    <p>Footnote: </p>
+    <p>: </p>
     
   </div>
   
@@ -473,7 +473,7 @@ layout-indicator-iframe
   <div class="async-loaded mt-4" style="display:none;">
 
     <div style="display: none;">
-    <span id="table-alternative">For tabular data alternative see Table tab.</span>
+    <span id="table-alternative"></span>
   </div>
   <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
     
@@ -499,7 +499,7 @@ data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
         
-      >Chart</button>
+      >indicator.chart</button>
     </li>
     
     <li role="presentation"
@@ -523,7 +523,7 @@ data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
         
-      >Table</button>
+      >indicator.table</button>
     </li>
     
   </ul>
@@ -535,8 +535,8 @@ data-event-label="Change to Table tab"
           
 
     <div id="dataset-size-warning" style="display:none" role="alert">
-      <i class="fa fa-bolt"><span class="sr-only">Warning:</span></i>
-      There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+      <i class="fa fa-bolt"><span class="sr-only"></span></i>
+      
     </div>
 
     
@@ -567,7 +567,7 @@ data-event-label="Change to Table tab"
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
@@ -581,7 +581,7 @@ data-event-label="Change to Table tab"
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        >Footnote:</dt>
+        >indicator.footnote:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
@@ -590,7 +590,7 @@ data-event-label="Change to Table tab"
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="DATA_LAST_UPDATE"
-        >Data last updated:</dt>
+        >metadata_fields.national_data_update_url:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="DATA_LAST_UPDATE"
@@ -606,10 +606,10 @@ data-event-label="Change to Table tab"
       <div id="chartSelectionDownload" class="clearfix">
         <button
           id="btnSave"
-          title="Download chart image as PNG"
-          aria-label="Download chart image as PNG"
+          title=""
+          aria-label=""
           class='btn btn-primary btn-download'>
-          Download chart image (.png)
+          
         </button><!--
    --></div>
     </div>
@@ -622,7 +622,7 @@ data-event-label="Change to Table tab"
       
         <div role="tabpanel" class="tab-pane " id="tableview">
           <div style="display: none;">
-            <span id="column-sort-info">Click to sort by this column</span>
+            <span id="column-sort-info"></span>
           </div>
           <div id="selectionsTable"></div>
 <dl id="tableTargetLines" class="clearfix"></dl>
@@ -637,7 +637,7 @@ data-event-label="Change to Table tab"
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of Measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
@@ -651,7 +651,7 @@ data-event-label="Change to Table tab"
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        >Footnote:</dt>
+        >indicator.footnote:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
@@ -660,7 +660,7 @@ data-event-label="Change to Table tab"
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="DATA_LAST_UPDATE"
-        >Data last updated:</dt>
+        >metadata_fields.national_data_update_url:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="DATA_LAST_UPDATE"
@@ -706,7 +706,7 @@ data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.national_metadata tab"
 
-            >Methodological sheet</button>
+            >indicator.national_metadata</button>
         </li>
     
         
@@ -727,7 +727,7 @@ data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.sources tab"
 
-            >Sources</button>
+            >indicator.sources</button>
         </li>
     
         
@@ -750,7 +750,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>This table provides metadata for the actual indicator available from Basque Country statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from from the Basque Country statistics, this table should be consulted for information on national methodology and other from the Basque Country-specific metadata information.</p>
+                <p>indicator.national_metadata_blurb</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -770,7 +770,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Target </th>
+        <th scope="row">metadata_fields.meta_global </th>
         <td>
           
             <p>1.a Ensure significant mobilization of resources from a variety of sources, including through enhanced development cooperation, in order to provide adequate and predictable means for developing countries, in particular least developed countries, to implement programmes and policies to end poverty in all its dimensions</p>
@@ -786,7 +786,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Goal </th>
+        <th scope="row">metadata_fields.objetivo_global </th>
         <td>
           
             <p>1- End poverty in all its forms everywhere</p>
@@ -802,7 +802,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Definition </th>
+        <th scope="row">metadata_fields.definicion </th>
         <td>
           
             <p>Proportion of people with income with imputed rent per unit of consumption under 60% of the median income for the autonomous community with  imputed rent per unit of consumption (modified OECD scale)</p>
@@ -818,7 +818,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Theoretical formula </th>
+        <th scope="row">metadata_fields.formula </th>
         <td>
           
             
@@ -846,7 +846,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Frequency </th>
+        <th scope="row">metadata_fields.periodicidad </th>
         <td>
           
             <p>Cuatrienal</p>
@@ -862,7 +862,7 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
-        <th scope="row">Observations </th>
+        <th scope="row">metadata_fields.observaciones </th>
         <td>
           
             <p>The number of consumption units in a household 
@@ -889,7 +889,7 @@ out to purchase the primary residence is also deducted from the household’s to
       
       
       <tr>
-        <th scope="row">OCECA </th>
+        <th scope="row">metadata_fields.texto_oceca </th>
         <td>
           
             <p><img src="/site/assets/img/oceca/ocecas_image.png" style="width: 200px; float: left; margin-right: 10px;" alt="Logotipo OCECAS" /> Indicador calculado utilizando una metodología armonizada entre los órganos centrales de estadística de las comunidades autónomas.</p>
@@ -962,7 +962,7 @@ out to purchase the primary residence is also deducted from the household’s to
       
       
       <tr>
-        <th scope="row">Data last updated </th>
+        <th scope="row">metadata_fields.national_data_update_url </th>
         <td>
           
             2024/07/29
@@ -977,7 +977,7 @@ out to purchase the primary residence is also deducted from the household’s to
       
       
       <tr>
-        <th scope="row">Metadata last updated </th>
+        <th scope="row">metadata_fields.national_metadata_update_url </th>
         <td>
           
             2024/07/29
@@ -1015,7 +1015,7 @@ out to purchase the primary residence is also deducted from the household’s to
     <div class="col-md-6">
         
         
-        <h4>Source 1</h4>
+        <h4> 1</h4>
         
         <table class="table indicator-source-table">
             
@@ -1028,14 +1028,14 @@ out to purchase the primary residence is also deducted from the household’s to
             
             
             <tr>
-                <th scope="row">Organisation</th>
+                <th scope="row"></th>
                 <td>Departamento de Bienestar, Juventud y Reto Demográfico</td>
             </tr>
             
             
             
             <tr>
-                <th scope="row">Periodicity</th>
+                <th scope="row"></th>
                 <td>Bienal</td>
             </tr>
             
@@ -1048,7 +1048,7 @@ out to purchase the primary residence is also deducted from the household’s to
             
             
             <tr>
-                <th scope="row">Link to data source</th>
+                <th scope="row"></th>
                 
                 <td><a href="https://www.euskadi.eus/encuesta-de-pobreza-y-desigualdades-sociales-epds/web01-s2enple/es/">Encuesta de pobreza y desigualdades sociales (EPDS)</a></td>
                 
@@ -1070,7 +1070,7 @@ out to purchase the primary residence is also deducted from the household’s to
     <div class="col-md-6">
         
         
-        <h4>Source 2</h4>
+        <h4> 2</h4>
         
         <table class="table indicator-source-table">
             
@@ -1083,14 +1083,14 @@ out to purchase the primary residence is also deducted from the household’s to
             
             
             <tr>
-                <th scope="row">Organisation</th>
+                <th scope="row"></th>
                 <td>Instituto Nacional de Estadística (INE)</td>
             </tr>
             
             
             
             <tr>
-                <th scope="row">Periodicity</th>
+                <th scope="row"></th>
                 <td>Anual</td>
             </tr>
             
@@ -1103,7 +1103,7 @@ out to purchase the primary residence is also deducted from the household’s to
             
             
             <tr>
-                <th scope="row">Link to data source</th>
+                <th scope="row"></th>
                 
                 <td><a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176807&menu=ultiDatos&idp=1254735976608">Encuesta de condiciones de vida</a></td>
                 
@@ -1138,7 +1138,7 @@ out to purchase the primary residence is also deducted from the household’s to
         
         <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                <p>This table provides information on metadata for SDG indicators as defined by the UN Statistical Commission. <a href="https://unstats.un.org/sdgs/metadata/">Complete global metadata</a> is provided by the UN Statistics Division.</p>
+                <p>indicator.global_metadata_blurb</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1238,12 +1238,12 @@ out to purchase the primary residence is also deducted from the household’s to
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = 'hide';</script>
+    translations['general']['hide'] = '';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = 'Search';</script>
+    translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250528141106'></script>
+<script src='/site/assets/js/sdg.js?v=20250528150418'></script>
 
 
 <script>
@@ -1263,7 +1263,7 @@ out to purchase the primary residence is also deducted from the household’s to
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250528141106"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250528150418"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
