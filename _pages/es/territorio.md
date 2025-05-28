@@ -9,50 +9,42 @@ layout: page
 <div class="container">
 
   <!-- Mostrar indicadores agrupados en orden de objetivos -->
-  {% for goal_number in site.data.goals %}
-    {% assign goal_details = goal_number | sdg_lookup %}
+  {%- assign goals = page.indicators | group_by: 'goal_number' -%}
+  {%- for goal in goals -%}
+    {% assign goal_details = goal.name | sdg_lookup %}
 
     <div class="goal reporting-status-item">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-            <!-- Icono del Objetivo -->
-            {% if goal_details.icon %}
-            <a href="{{ goal_details.url }}" title="{{ page.t.goal.goal_details }} {{ goal_details.number }}" style="margin-right: 15px;">
-                <img src="{{ goal_details.icon }}" alt="{{ goal_details.short | escape }}" width="80" height="80" class="goal-icon-{{ goal_details.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
-            </a>
-            {% endif %}
-            
-            <!-- Título del Objetivo -->
-            <h3 style="margin: 0;">
-                {% if goal_details.short %}
-                <a href="{{ goal_details.url }}">{{ goal_details.short }}</a>
-                {% else %}
-                Objetivo {{ goal_number }}
-                {% endif %}
-            </h3>
-        </div>
-
-        <!-- Listado de Indicadores -->
-<ul style="list-style: none; padding: 0; margin-top: 10px;">
-  {% for indicator_row in site.data.indicators %}
-    {% assign indicator_number = indicator_file[0] %}
-    {% assign indicator_goal = indicator_number | split: "-" | first %}
-    {% if indicator_goal == goal_number %}
-      {% assign indicator = indicator_number | sdg_lookup %}
-      {% if indicator %}
-        <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-          <span style="flex-shrink: 0;">{{ indicator.number }}</span>
-          <a href="{{ indicator.url }}" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-            {{ indicator.name }}
+      <!-- Cabecera del Objetivo -->
+      <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <!-- Icono del Objetivo -->
+        {% if goal_details.icon %}
+          <a href="{{ goal_details.url }}" title="{{ page.t.goal.goal_details }} {{ goal_details.number }}" style="margin-right: 15px;">
+              <img src="{{ goal_details.icon }}" alt="{{ goal_details.short | escape }}" width="80" height="80" class="goal-icon-{{ goal_details.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}"/>
           </a>
-        </li>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-</ul>
+        {% endif %}
+        
+        <!-- Título del Objetivo -->
+        <h3 style="margin: 0;">
+            {% if goal_details.short %}
+              <a href="{{ goal_details.url }}">{{ goal_details.short }}</a>
+            {% else %}
+              Objetivo {{ goal.name }}
+            {% endif %}
+        </h3>
+      </div>
+
+      <!-- Listado de Indicadores -->
+      <ul style="list-style: none; padding: 0; margin-top: 10px;">
+        {% for indicator in goal.items %}
+          <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+            <span style="flex-shrink: 0;">{{ indicator.number }}</span>
+            <a href="{{ indicator.url }}" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+              {{ indicator.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
     <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
   {% endfor %}
-  <pre>{{ page.goals | inspect }}</pre>
-  <pre>{{ page.indicators | inspect }}</pre>
 </div>
