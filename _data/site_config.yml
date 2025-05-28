@@ -58,9 +58,18 @@ date_formats:
   - type: standard
     language: eu
     format: "%Y/%m/%d"
-desagregacion_territorial_keyword: "Territorio histórico"
-desagregacion_municipio_keyword: "Municipio"
-desagregacion_sexo_keyword: "Sexo"
+desagregacion_territorial_keyword:
+  eu: "Lurralde historikoa"
+  es: "Territorio histórico"
+  en: "Province"
+desagregacion_municipio_keyword: 
+  eu: "Udalerria"
+  es: "Municipio"
+  en: "Municipalities"
+desagregacion_sexo_keyword: 
+  eu: "Sexua"
+  es: "Sexo"
+  en: "Sex"
 disclaimer:
   phase: ''
   message: ''
