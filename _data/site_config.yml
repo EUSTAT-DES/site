@@ -59,6 +59,8 @@ date_formats:
     language: eu
     format: "%Y/%m/%d"
 desagregacion_territorial_keyword: "Territorio histórico"
+desagregacion_municipio_keyword: "Municipio"
+desagregacion_sexo_keyword: "Sexo"
 disclaimer:
   phase: ''
   message: ''
