@@ -58,6 +58,7 @@ date_formats:
   - type: standard
     language: eu
     format: "%Y/%m/%d"
+desagregacion_territorial_keyword: "Territorio histórico"
 disclaimer:
   phase: ''
   message: ''

@@ -36,16 +36,17 @@ layout: page
       <!-- Listado de Indicadores -->
       <ul style="list-style: none; padding: 0; margin-top: 10px;">
         {% for indicator in goal.items %}
-          <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-            <span style="flex-shrink: 0;">{{ indicator.number }}</span>
-            <a href="{{ indicator.url }}" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
-              {{ indicator.name }}
-            </a>
-          </li>
+          {%- if indicator.desagregacion contains site.desagregacion_territorial_keyword -%}
+            <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
+              <span style="flex-shrink: 0;">{{ indicator.number }}</span>
+              <a href="{{ indicator.url }}" style="text-decoration: underline; color: #0056b3; margin-left: 1em; flex-grow: 1;">
+                {{ indicator.name }}
+              </a>
+            </li>
+          {%- endif -%}	
         {% endfor %}
       </ul>
     </div>
     <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
   {% endfor %}
-  <pre>{{ page.indicators | inspect }}</pre>
 </div>
