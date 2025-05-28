@@ -47,4 +47,5 @@ layout: page
     </div>
     <hr style="border: 0; border-top: 1px solid #ccc; margin: 20px 0;">
   {% endfor %}
+  <pre>{{ page.indicators | inspect }}</pre>
 </div>
