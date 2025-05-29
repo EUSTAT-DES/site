@@ -119,9 +119,9 @@ var translations = {
         
     <title>
         
-         15.b.1 -
+        Indicator 15.b.1 -
         
-        (a) Official development assistance on conservation and sustainable use of biodiversity; and (b) revenue generated and finance mobilized from biodiversity-relevant economic instruments - general.site_title
+        (a) Official development assistance on conservation and sustainable use of biodiversity; and (b) revenue generated and finance mobilized from biodiversity-relevant economic instruments - Indicators For The Sustainable Development Goals
     </title>
 
 
@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250528150418">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250529060729">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -171,12 +171,12 @@ layout-indicator
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = null;</script>
+<script>translations['header'] = {"alpha":"POC","calendar":"Calendar","complaints_suggestions":"Complaints and Suggestions","database":"Data Bank","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website.","enable_high_contrast":"Enable high contrast","follow_us":"Follow Us:","hide_menu":"Hide navigation menu","high_contrast":"High contrast","info_service":"Information Service","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","logo_title":"Go to homepage","municipal_info":"Municipalities information","operations":"Operations","press_service":"Press Service","show_menu":"Show navigation menu","situation":"Economic & Social Trends","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","themes":"Themes","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
-<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"></a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title"></h2>
-    <p class="internet-explorer-message-body"></p>
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
 </div>
 <header role="banner" class="">
   <div class="header" >
@@ -197,25 +197,25 @@ layout-indicator
     <div class="zutabeak">
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_0/id_All/temalista.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_1/id_All/temalista.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://en.eustat.eus/bancopx/spanish/indice.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://en.eustat.eus/indice.html#cy"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://en.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp"></a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_0/id_All/temalista.html">Themes</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_02" data-ajax="false" href="https://en.eustat.eus/estadisticas/opt_1/id_All/temalista.html">Operations</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_03" data-ajax="false" href="https://en.eustat.eus/bancopx/spanish/indice.html">Data Bank</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_04" data-ajax="false" onclick="cambiaTemasOperaciones(2);" href="https://en.eustat.eus/indice.html#cy">Economic & Social Trends</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL01_05" data-ajax="false" href="https://en.eustat.eus/municipal/datos_estadisticos/info_territorial_c.asp">Municipalities information</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <ul>
-                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/calendario.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://en.eustat.eus/productosServicios/sugerencias.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://en.eustat.eusprodserv/info_c.html"></a></li>
-                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://en.eustat.eus/notas_c.html"></a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_01" data-ajax="false" href="https://en.eustat.eus/estadisticas/calendario.html">Calendar</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_02" data-ajax="false" href="https://en.eustat.eus/productosServicios/sugerencias.html">Complaints and Suggestions</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_03" data-ajax="false" href="https://en.eustat.eusprodserv/info_c.html">Information Service</a></li>
+                <li><a id="ctl00_Cabecera_cabCOL02_04" data-ajax="false" href="https://en.eustat.eus/notas_c.html">Press Service</a></li>
             </ul>
         </div>
         <div class="o-content-zutabe">
             <div class="rrss">
                 <span class="texto-rrss">
-                  
+                  Follow Us:
                 </span>
                 <div class="iconos-rrss">
                     <a href="https://es.linkedin.com/company/eustat" target="_blank" title="LinkedIn"
@@ -282,18 +282,18 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
   <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
-            <a class="navbar-brand" href="/site/en/" id="home" aria-label="" title="">
+            <a class="navbar-brand" href="/site/en/" id="home" aria-label="Go to homepage" title="Go to homepage">
     <img src="/site/assets/img/logo/SDG_logo_en.png" alt="Go to homepage" />
 </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Show navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/en/">general.home</a>
+    <a class="nav-link" href="/site/en/">Home</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/jarraipen-txostena">menu.reporting_status</a>
+    <a class="nav-link" href="/site/en/jarraipen-txostena">Reporting Status</a>
 </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-desagregaciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     menu.desagregaciones
                 </a>
@@ -320,10 +320,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/site/en/search/">
     <div class="input-group">
-        <label class="visually-hidden" for="indicator_search"></label>
-        <input class="form-control" type="search" name="q" id="indicator_search" title="">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
         <span class="input-group-append">
-            <button class="btn btn-outline-secondary ms-n5" aria-label="" id="search-btn" type="submit">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Site search" id="search-btn" type="submit">
                 <i class="fa fa-search"></i>
             </button>
         </span>
@@ -341,15 +341,15 @@ document.addEventListener('DOMContentLoaded', function () {
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
             <a class="language-toggle-link" href="/site/15-b-1/">
-                
+                EU
             </a>
         </li><li class="language-option-es list-inline-item">
             <a class="language-toggle-link" href="/site/es/15-b-1/">
-                
+                ES
             </a>
         </li><li class="language-option-en list-inline-item">
             <span class="language-toggle-active-language">
-                
+                EN
             </span>
         </li></ul>
 </div>
@@ -359,18 +359,18 @@ document.addEventListener('DOMContentLoaded', function () {
     <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-eu list-inline-item">
             <a class="language-toggle-link" href="/site/15-b-1/">
-                
+                EU
             </a>
         </li><li class="language-option-es list-inline-item">
             <a class="language-toggle-link" href="/site/es/15-b-1/">
-                
+                ES
             </a>
         </li><li class="language-option-en list-inline-item">
             <span class="language-toggle-active-language">
-                
+                EN
             </span>
         </li></ul>
-</div></span><a title="" aria-label=""
+</div></span><a title="Enable high contrast" aria-label="Enable high contrast"
     data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -400,15 +400,15 @@ data-event-label="high"
       >
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %><h6><% } else { %><h5><% } %>
           <span aria-hidden="true"><%=translations.t(fieldItem.label)%><i class="fa fa-chevron-down"></i></span>
-          <span class="sr-only"> <%=translations.t(fieldItem.label)%></span>
+          <span class="sr-only">Show sub-categories: <%=translations.t(fieldItem.label)%></span>
         <% if(allowedFields.indexOf(fieldItem.field) == -1) { %></h6><% } else { %></h5><% } %>
       </button>
       <div class="variable-options">
         <fieldset>
-          <legend class="sr-only"> - <%=translations.t(fieldItem.field)%></legend>
+          <legend class="sr-only">Sub-categories - <%=translations.t(fieldItem.field)%></legend>
           <div>
-            <button data-type="select"></button>
-            <button data-type="clear"></button>
+            <button data-type="select">Select all</button>
+            <button data-type="clear">Clear all</button>
           </div>
           <% _.each(fieldItem.values, function(item) { %>
             <label>
@@ -419,10 +419,10 @@ data-event-label="high"
       </div>
 
       <% if(allowedFields.indexOf(fieldItem.field) == -1) { %>
-        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
+        <div class="variable-hint" id="variable-hint-<%=fieldItem.field.replace(/ /g, '-')%>">Available when '<%= translations.t(_.find(edges, { To: fieldItem.field }).From) %>' is selected
         </div>
         <div class="no-data-hint" id="no-data-hint-<%=fieldItem.field.replace(/ /g, '-')%>">
-          
+          No options available because of filters above
         </div>
       <% }%>
 
@@ -434,9 +434,9 @@ data-event-label="high"
   
   <% if(units.length > 1) { %>
   
-    <h4></h4>
+    <h4>Unit of Measurement</h4>
     <fieldset>
-      <legend class="sr-only"></legend>
+      <legend class="sr-only">Unit of Measurement</legend>
       <% _.each(units, function(unitsItem, index) { %>
         <% var checked = (selectedUnit) ? (selectedUnit==unitsItem) : (index==0); %>
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
@@ -451,9 +451,9 @@ data-event-label="high"
   
   <% if(serieses.length > 1) { %>
   
-    <h4></h4>
+    <h4>Series</h4>
     <fieldset>
-      <legend class="sr-only"></legend>
+      <legend class="sr-only">Series</legend>
       <% _.each(serieses, function(seriesItem, index) { %>
         <% var isProxy = (proxySerieses.includes(seriesItem)) %>
         <% var checked = (selectedSeries) ? (selectedSeries==seriesItem) : (index==0); %>
@@ -465,9 +465,9 @@ data-event-label="high"
   
 </script>
 
-<script>translations['indicator'] = null;</script>
+<script>translations['indicator'] = {"affirmative":"Yes","annotation_2030_target":"2030 target","annotation_series_break":"Series break","announce_data_added":"Chart and table updated to include data.","announce_data_not_available":"Chart and table shows no data.","announce_data_removed":"Chart and table updated to exclude data.","announce_series_switched":"Chart and table updated to show a different series.","announce_unit_switched":"Chart and table updated to show a different unit.","apply":"Apply","cancel":"Cancel","change_breakdowns":"Change breakdowns","chart":"Chart","chart_annotation":"Chart annotation","clear_all":"Clear all","clear_selections":"Clear selections","comarca":"Counties","data_keyboard_navigation":"Press enter to browse data points with left and right arrow keys.","data_not_available":"This data is not available. Please choose alternative data to display.","data_tabular_alternative":"For tabular data alternative see Table tab.","dataset_size_warning":"There are too many datasets to show on the chart. Not all will be shown until you remove some selections.","download_chart":"Download chart data (.csv)","download_chart_image":"Download chart image (.png)","download_chart_image_title":"Download chart image as PNG","download_csv":"Download data (.csv)","download_csv_title":"Download data as CSV","download_geojson":"Download map data (.geojson)","download_geojson_title":"Download map data as GeoJSON","download_headline":"Download headline data (.csv)","download_headline_title":"Download headline data as CSV","download_source":"Download source data (.csv)","download_source_for_disaggregations":"Download source data for disaggregations (.csv)","download_source_sdmx":"Download source SDMX (.xml)","download_source_sdmx_title":"Download source data as SDMX","download_source_title":"Download source data as CSV","download_table":"Download table data (.csv)","edit":"Edit Indicator","edit_configuration":"Edit Configuration","edit_data":"Edit Data","edit_metadata":"Edit Metadata","empty_metadata_placeholder":"Not available for this indicator","empty_metadata_placeholder_sources":"Not available for this source","footnote":"Footnote","geographical_area":"Geographical Area","global_metadata":"Description of the indicator","global_metadata_blurb":"This table provides information on metadata for SDG indicators as defined by the UN Statistical Commission. <a href=\"https://unstats.un.org/sdgs/metadata/\">Complete global metadata</a> is provided by the UN Statistics Division.","headline_data":"Headline data","legend_help":"Click on the legend to remove individual lines from the chart.","loading":"Loading","loading_map":"Loading map","map":"Map","map_fullscreen":"View map fullscreen","map_fullscreen_exit":"Exit fullscreen map","map_search":"Map search","map_search_cancel":"Clear map search","map_search_hide":"Hide map search","map_search_show":"Show map search","map_slider_back":"View map data for previous time period","map_slider_forward":"View map data for next time period","map_slider_keyboard":"View map data throughout time period by using left and right arrow keys","map_slider_mouse":"Navigate map data by time period","map_year_slider":"Year slider","map_zoom_home":"Reset to default map zoom","map_zoom_in":"Zoom in on map","map_zoom_out":"Zoom out on map","meta_europea":"European goal","municipio":"Municipalities","national_metadata":"Methodological sheet","national_metadata_blurb":"This table provides metadata for the actual indicator available from %country.name statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from %country.adjective statistics, this table should be consulted for information on national methodology and other %country.adjective-specific metadata information.","negative":"No","next":"Next indicator","no_data_hint":"No options available because of filters above","no_headline_data":"No headline data available","note":"note","plot_legend_description":"Plot legend: list of lines included in chart","previous":"Previous indicator","proxy":"Proxy","proxy_description":"This indicator contains some alternative data to those specified by the United Nations (UN). This indicator is the most suitable match currently available.","select_all":"Select all","series":"Series","series_help":"Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.","source":"Source","sources":"Sources","status":"Indicator status","sub_categories":"Sub-categories","sub_categories_show":"Show sub-categories:","table":"Table","table_column_sort":"Click to sort by this column","tags":"Tags","territorio":"Provinces","total":"Total","unit":"Unit","unit_of_measurement":"Unit of Measurement","units_type":"Units type","variable_hint":"Available when '%field' is selected","view_indicator_list":"View this goal's indicator list"};</script>
 
-<script>translations['data'] = null;</script>
+<script>translations['data'] = {"Year":"Year"};</script>
 
 
 <div class="container">
@@ -476,71 +476,71 @@ data-event-label="high"
 <div class="ods-navigation d-flex justify-content-center">
     
         <a href="/site/en/1/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/1.png" alt=" 1 - global_goals.1-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/1.png" alt="Goal 1 - No poverty" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/2/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/2.png" alt=" 2 - global_goals.2-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/2.png" alt="Goal 2 - Zero hunger" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/3/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/3.png" alt=" 3 - global_goals.3-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/3.png" alt="Goal 3 - Good health and well-being" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/4/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/4.png" alt=" 4 - global_goals.4-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/4.png" alt="Goal 4 - Quality education" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/5/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/5.png" alt=" 5 - global_goals.5-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/5.png" alt="Goal 5 - Gender equality" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/6/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/6.png" alt=" 6 - global_goals.6-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/6.png" alt="Goal 6 - Clean water and sanitation" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/7/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/7.png" alt=" 7 - global_goals.7-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/7.png" alt="Goal 7 - Affordable and clean energy" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/8/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/8.png" alt=" 8 - global_goals.8-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/8.png" alt="Goal 8 - Decent work and economic growth" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/9/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/9.png" alt=" 9 - global_goals.9-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/9.png" alt="Goal 9 - Industry, innovation and infrastructure" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/10/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/10.png" alt=" 10 - global_goals.10-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/10.png" alt="Goal 10 - Reduced inequalities" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/11/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/11.png" alt=" 11 - global_goals.11-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/11.png" alt="Goal 11 - Sustainable cities and communities" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/12/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/12.png" alt=" 12 - global_goals.12-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/12.png" alt="Goal 12 - Responsible consumption and production" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/13/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/13.png" alt=" 13 - global_goals.13-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/13.png" alt="Goal 13 - Climate action" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/14/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/14.png" alt=" 14 - global_goals.14-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/14.png" alt="Goal 14 - Life below water" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/15/" class="ods-item  ods-selected ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/15.png" alt=" 15 - global_goals.15-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/15.png" alt="Goal 15 - Life on land" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/16/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/16.png" alt=" 16 - global_goals.16-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/16.png" alt="Goal 16 - Peace, justice and strong institutions" class="goal-icon-image"/>
         </a>
     
         <a href="/site/en/17/" class="ods-item ">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/en/17.png" alt=" 17 - global_goals.17-short" class="goal-icon-image"/>
+            <img src="https://eustat-des.github.io/site/assets/img/goals/en/17.png" alt="Goal 17 - Partnerships for the goals" class="goal-icon-image"/>
         </a>
     
 </div>
@@ -554,9 +554,9 @@ data-event-label="high"
         <div class="row">
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/site/en/15/" aria-label=" 15" title=" 15">
+                <a href="/site/en/15/" aria-label="View targets and indicators for Goal 15" title="View targets and indicators for Goal 15">
                     <img src="https://eustat-des.github.io/site/assets/img/goals/en/15.png"
-                        alt="global_goals.15-short -  15"
+                        alt="Life on land - Goal 15"
                         id="goal-15"
                         class="goal-icon-image goal-icon-image-" />
                 </a>
@@ -567,7 +567,7 @@ data-event-label="high"
                 <h1>
                     
                         
-                             15.b.1
+                            Indicator 15.b.1
                         
                     
                     
@@ -593,12 +593,12 @@ data-event-label="high"
             <div class="text-left">
                 <a class="btn btn-primary G15-background" href="/site/en/15-a-1/" aria-labelledby="previous-link">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                    <span id="previous-link" class="d-none d-md-inline"></span>
+                    <span id="previous-link" class="d-none d-md-inline">Previous indicator</span>
                 </a>
             </div>
             <div class="text-right">
                 <a class="btn btn-primary G15-background" href="/site/en/15-c-1/" aria-labelledby="next-link">
-                    <span id="next-link" class="d-none d-md-inline"></span>
+                    <span id="next-link" class="d-none d-md-inline">Next indicator</span>
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                 </a>
             </div>
@@ -620,7 +620,7 @@ data-event-label="high"
   
 <div class="row indicator-progress">
     <div class="col-sm-2 progress-status-heading">
-        status.progress_status
+        Progress
     </div>
     <div class="col-sm-10">
         
@@ -630,13 +630,13 @@ data-event-label="high"
             
                 
                     <div class="progress-status-label">
-                        status.no_data_available
+                        No data available
                     </div>
                 
             
             
                 <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/notstarted.png" alt="status.no_data_available" />
+                    <img src="/site/assets/img/progress/notstarted.png" alt="No data available" />
                 </div>
             
         </div>
@@ -658,7 +658,7 @@ data-event-label="high"
   id="indicatorData"
   data-indicatorid='indicator_15-b-1'
   data-id="15-b-1"
-  data-country="general.pais"
+  data-country="Basque Country"
   data-charttitle="(a) Official development assistance on conservation and sustainable use of biodiversity; and (b) revenue generated and finance mobilized from biodiversity-relevant economic instruments"
   data-charttitles="[]"
   data-measurementunit=""
@@ -706,7 +706,7 @@ data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.national_metadata tab"
 
-            >indicator.national_metadata</button>
+            >Methodological sheet</button>
         </li>
     
         
@@ -727,7 +727,7 @@ data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.sources tab"
 
-            >indicator.sources</button>
+            >Sources</button>
         </li>
     
         
@@ -748,13 +748,13 @@ data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.global_metadata tab"
 
-            >indicator.global_metadata</button>
+            >Description of the indicator</button>
         </li>
     
     
     
         <li role="presentation" class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab"></a>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab">Edit Indicator</a>
         </li>
     
 </ul>
@@ -772,7 +772,7 @@ data-event-label="Change to indicator.global_metadata tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>indicator.national_metadata_blurb</p>
+                <p>This table provides metadata for the actual indicator available from Basque Country statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from from the Basque Country statistics, this table should be consulted for information on national methodology and other from the Basque Country-specific metadata information.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -782,7 +782,7 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       <tr>
-        <th scope="row">metadata_fields.indicador_disponible </th>
+        <th scope="row">Available indicator </th>
         <td>
           
             <p>GRAFICO.nodisponible</p>
@@ -941,7 +941,7 @@ data-event-label="Change to indicator.global_metadata tab"
         
         <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                <p>indicator.global_metadata_blurb</p>
+                <p>This table provides information on metadata for SDG indicators as defined by the UN Statistical Commission. <a href="https://unstats.un.org/sdgs/metadata/">Complete global metadata</a> is provided by the UN Statistics Division.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -966,7 +966,7 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       <tr>
-        <th scope="row">metadata_fields.justificacion_global </th>
+        <th scope="row">Rationale </th>
         <td>
           
             <p>a) Total ODA flows to developing countries on the DAC List of ODA Recipients quantify the public effort 
@@ -995,7 +995,7 @@ in a consistent and comparable way across countries.</p>
       
       
       <tr>
-        <th scope="row">metadata_fields.dato_global </th>
+        <th scope="row">International results </th>
         <td>
           
             <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=15.b.1&amp;seriesCode=DC_ODA_BDVL&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">
@@ -1017,7 +1017,7 @@ Total official development assistance for biodiversity, by recipient countries (
       
       
       <tr>
-        <th scope="row">metadata_fields.indicador_meta_enlace </th>
+        <th scope="row">Link to UN metadata </th>
         <td>
           
             <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-15-0b-01.pdf">Metadata 15-b-1.pdf</a></p>
@@ -1062,15 +1062,15 @@ Total official development assistance for biodiversity, by recipient countries (
   
 
 
-  <a class="btn btn-primary" href="data"></a>
+  <a class="btn btn-primary" href="data">Edit Data</a>
   
 
   
-  <a class="btn btn-primary" href="metadata"></a>
+  <a class="btn btn-primary" href="metadata">Edit Metadata</a>
   
 
   
-  <a class="btn btn-primary" href="config"></a>
+  <a class="btn btn-primary" href="config">Edit Configuration</a>
   
 
 </div>
@@ -1083,7 +1083,7 @@ Total official development assistance for biodiversity, by recipient countries (
   </div>
 </div>
 
-  <a href="#top"></a>
+  <a href="#top">Back to top</a>
 </div>
 
 <footer role="contentinfo">
@@ -1093,7 +1093,7 @@ Total official development assistance for biodiversity, by recipient countries (
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org"></a>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
                         </li>
                         
                         
@@ -1111,13 +1111,13 @@ Total official development assistance for biodiversity, by recipient countries (
           <div class="centradomini">
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/about/links_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/about/links_c.html">Links</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/faq_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/faq_c.html">FAQ</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/sitemap_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/sitemap_c.html">Map</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL01_04" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/accesibilidad_c.html"></a>
+                          data-ajax="false" href="https://en.eustat.eus/accesibilidad_c.html">Accessibility</a>
                   </li>
               </ul>
           </div>
@@ -1125,11 +1125,11 @@ Total official development assistance for biodiversity, by recipient countries (
               <div class="Prayamini"></div>
               <ul class="list-group iconillo rupturasmall">
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_01" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.euskadi.eus/about/a_eustat_c.html"></a></li>
+                          data-ajax="false" href="https://en.euskadi.eus/about/a_eustat_c.html">About Eustat</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_02" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.euskadi.eus/"></a></li>
+                          data-ajax="false" href="https://en.euskadi.eus/">Electronic Office</a></li>
                   <li class="bloquenubessmall"><a id="ctl00_Pie_pieCOL02_03" class="list-group-item2 enlaceblanco"
-                          data-ajax="false" href="https://en.eustat.eus/privacidad_c.html"></a></li>
+                          data-ajax="false" href="https://en.eustat.eus/privacidad_c.html">Privacy</a></li>
               </ul>
           </div>
       </div>
@@ -1138,24 +1138,24 @@ Total official development assistance for biodiversity, by recipient countries (
               <div class="logos">
                   <a id="ctl00_Pie_pieCOL03_07" data-ajax="false"
                       href="https://en.eustat.eus/about/aenor_c.html"><img
-                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt=""
+                          src="https://www.eustat.eus/cwImages/2015/aenor_2022_c.png" alt="AENOR"
                           style="border-width:0px;"></a>
                   <a id="ctl00_Pie_pieCOL03_07b" data-ajax="false"
                       href="https://en.eustat.eus/about/aenor_c.html"><img
-                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt=""
+                          src="https://www.eustat.eus/cwImages/2015/logo_ENS_2022.png" alt="AENOR"
                           style="border-width:0px;"></a>
               </div>
               
           </div>
           <div class="piederecho-texto">
-              <p class="piederechop bold"></p>
-              <p class="piederechop"></p>
+              <p class="piederechop bold">Eustat - Basque Statistics Institute</p>
+              <p class="piederechop">Eustat is the public organization that develops, produces and distributes official statistical information of the Basque Country</p>
               <p class="piederechop">
-                <br>
-                <br>
-                <br>
-                <br>
-                
+                c/Donostia - San Sebastián, 1<br>
+                01010 Vitoria-Gasteiz<br>
+                Phone: (+34) 945017500<br>
+                Fax: (+34) 945017501<br>
+                webmaster_eustat@eustat.eus
               </p>
           </div>
       </div>
@@ -1186,12 +1186,12 @@ Total official development assistance for biodiversity, by recipient countries (
 
 
 <script>translations['general'] = translations['general'] || {};
-    translations['general']['hide'] = '';</script>
+    translations['general']['hide'] = 'hide';</script>
 
 <script>translations['search'] = translations['search'] || {};
-    translations['search']['search'] = '';</script>
+    translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250528150418'></script>
+<script src='/site/assets/js/sdg.js?v=20250529060729'></script>
 
 
 <script>
@@ -1211,7 +1211,7 @@ Total official development assistance for biodiversity, by recipient countries (
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250528150418"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250529060729"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
