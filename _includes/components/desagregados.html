@@ -2,7 +2,7 @@
   {%- assign goals = page.indicators | group_by: 'goal_number' -%}
   {%- for goal in goals -%}
     {% assign goal_details = goal.name | sdg_lookup %}
-    {%- if goal.name !== "OCECA" -%}
+    {%- if goal.name != "OCECA" -%}
       <div class="goal reporting-status-item">
         <!-- Cabecera del Objetivo -->
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
