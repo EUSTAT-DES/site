@@ -1,11 +1,10 @@
 ---
-title: Indicadores con datos municipales
+title: Udalerriaren arabera bereizitako adierazleak
 language: eu
 permalink: /udalerria/
 layout: page
 ---
 
-Indicadores con datos municipales
 
 <div class="container">
 <p>Desagregatzeak azpikategoria desberdinetako datuak bereizita erakustea esan nahi du, azterketa zehatzagoa egin ahal izateko; adibidez, emakumeen eta gizonen datuak bereizita, edo adingabeen eta helduen datuak bereizita ematea.</p>
