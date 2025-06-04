@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250602092422">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250604054344">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -649,7 +649,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Proporción media de la población que se siente muy o bastante satisfecha con el funcionamiento de los servicios públicos en materia de enseñanza, asistencia sanitaria, gestión de pensiones, administración de justicia, seguridad ciudadana, servicios sociales, transporte público, obras públicas y ayuda a personas dependientes.");
+        var currentValue = normalizeCurrentValue('definicion', "Ondoko zerbitzu publikoen funtzionamenduarekin oso edo nahiko pozik sentitzen diren biztanleen batez besteko proportzioa: irakaskuntza, osasun arreta, pentsioen kudeaketa, justizia-administrazioa, herritarren segurtasuna, gizarte-zerbitzuak, garraio publikoa, herri-lanak eta mendeko pertsonentzako laguntza. ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -663,7 +663,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\n$$PPS^t = \\frac{1}{n} \\sum_{i=1}^{n} PPS_{i}^{t}$$\n\nnon:\n\n$PPS_{i}^{t} =$ $t$ urtean zerbitzu publikoen funtzionamenduarekin pozik dagoen biztanleriaren \nproportzioa honako arlo hauetarako: hezkuntza, osasun-arreta, pentsioen kudeaketa, \njustizia-administrazioa, herritarren segurtasuna, gizarte-zerbitzuak, garraio publikoa, herri-lanak \neta mendeko pertsonentzako laguntza \n");
+        var currentValue = normalizeCurrentValue('formula', "\n$$PPS^t = \\frac{1}{n} \\sum_{i=1}^{n} PPS_{i}^{t}$$\n\nnon:\n\n$PPS_{i}^{t} =$ $t$ urtean ondoko arloetako zerbitzu publikoen funtzionamenduarekin pozik dagoen biztanleriaren \nproportzioa: hezkuntza, osasun-arreta, pentsioen kudeaketa, \njustizia-administrazioa, herritarren segurtasuna, gizarte-zerbitzuak, garraio publikoa, herri-lanak \neta mendeko pertsonentzako laguntza \n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -723,7 +723,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "Los gobiernos tienen la obligación de proporcionar una amplia gama de servicios públicos \nque satisfagan las expectativas de sus ciudadanos en términos de acceso, capacidad de \nrespuesta y fiabilidad/calidad. \n\nCuando los ciudadanos no pueden permitirse algunos servicios esenciales, cuando su \nacceso geográfico o electrónico a los servicios y a la información es difícil, cuando \nlos servicios prestados no responden a sus necesidades y son de mala calidad, los \nciudadanos tenderán naturalmente a manifestar una menor satisfacción no solo con \nestos servicios, sino también con las instituciones públicas y los gobiernos. \n\nEn este sentido, se ha demostrado que la experiencia de los ciudadanos con los \nservicios públicos de primera línea afecta a su confianza en las instituciones públicas \n(OCDE 2017, Confianza y políticas públicas: cómo una mejor gobernanza puede ayudar a \nreconstruir la confianza pública; Eurofound 2018, Cambio social y confianza en \nlas instituciones).\n\nConscientes de esta estrecha relación entre la prestación y el rendimiento de los servicios, \nla satisfacción de los ciudadanos y la confianza pública, los gobiernos están cada vez \nmás interesados ​​en comprender mejor las necesidades, experiencias y preferencias de \nlos ciudadanos para poder proporcionar servicios más específicos, incluso para las \npoblaciones desatendidas.\n\nMedir la satisfacción con los servicios públicos es el núcleo de un enfoque centrado en \nlos ciudadanos para la prestación de servicios y un indicador de resultados importante \ndel desempeño general del gobierno.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Gobernuek zerbitzu publiko ugari eskaini behar dituzte, herritarren itxaropenak asetzeko, \nsarbideari, erantzuteko gaitasunari eta fidagarritasunari/kalitateari dagokienez. \n\nHerritarrek funtsezko zerbitzu batzuk baliatu ezin dituztenean, zerbitzuetarako eta informaziorako \nsarbide geografikoa edo elektronikoa zaila denean, emandako zerbitzuek beren premiei erantzuten \nez dietenean eta kalitate txarrekoak direnean, herritarrek, berez, zerbitzu horiekin ez ezik, \nerakunde publikoekin eta gobernuekin ere gogobetetze txikiagoa adierazteko joera izango dute. \n\nIldo horretan, frogatu da herritarrek lehen lerroko zerbitzu publikoekin duten esperientziak \neragina duela erakunde publikoekiko konfiantzan (ELGA 2017, Konfiantza eta politika publikoak: \ngobernantza hobeak nola lagun dezakeen konfiantza publikoa berreraikitzen; Eurofound 2018, Aldaketa \nsoziala eta erakundeekiko konfiantza). \n\nZerbitzuen prestazioaren eta errendimenduaren, herritarren gogobetetzearen eta konfiantza publikoaren \narteko harreman estu horren jakitun, gobernuek gero eta interes handiagoa dute herritarren beharrak, \nesperientziak eta lehentasunak hobeto ulertzeko, hartara zerbitzu espezifikoagoak emateko  moduan \nizateko, baita arreta jasotzen ez duten biztanleentzat ere. \n\nZerbitzu publikoekiko gogobetetasuna neurtzea da herritarrak erdigunean jartzen dituen ikuspegiaren \nmuina zerbitzuak emateko. Aldi berean, gobernuaren jardun orokorraren emaitzen adierazle garrantzitsua \nere bada. \n\n\nIturria: Nazio Batuen Estatistika Sekzioa \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -989,7 +989,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250602092422'></script>
+<script src='/site/assets/js/sdg.js?v=20250604054344'></script>
 
 
 <script>
@@ -1009,7 +1009,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250602092422"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250604054344"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

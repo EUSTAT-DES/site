@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250602092422">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250604054344">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -649,7 +649,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Total de ingresos consolidados de las administraciones públicas vascas en proporción al PIB a precios corrientes");
+        var currentValue = normalizeCurrentValue('definicion', "EAEko administrazio publikoen diru-sarrera bateratuak, guztira, BPG-rekiko proportzioan, uneko prezioetan.");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -675,6 +675,18 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('desagregacion', "\nLurralde historikoa \n");
+        var propertyEditor = editor.getEditor('root.desagregacion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: desagregacion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
     
@@ -693,7 +705,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "Los ingresos consolidados de las administraciones vascas se obtienen sumando los ingresos de la \ncomunidad autónoma y las \nentidades locales, restando las transferencias entre ellas (tanto corrientes como de capital), \npara evitar doble contabilización.\n\nLos indicadores territorializados Araba/Álava, Bizkaia y Gipuzkoa, se corresponden con los \ndatos de las entidades locales de cada territorio histórico, sin incluir los ingresos \nde la administración autonómica ni consolidación de transferencias.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "EAEko administrazioen diru-sarrera bateratuak autonomia-erkidegoen eta toki-erakundeen \ndiru-sarrerak batuz lortzen dira, haien arteko transferentziak kenduta (arruntak zein \nkapitalekoak), kontabilizazio bikoitza saihesteko. \n\nArabako, Bizkaiko eta Gipuzkoako lurraldekako adierazleak bat datoz lurralde historiko \nbakoitzeko toki-erakundeen datuekin, administrazio autonomikoaren diru-sarrerak eta \ntransferentzien kontsolidazioa kontuan hartu gabe. \n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -711,7 +723,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "La política fiscal es el uso del nivel y la composición del gasto y los ingresos del \ngobierno general y del sector público, así como la acumulación conexa de activos y \npasivos gubernamentales, para alcanzar objetivos como la estabilización de la economía, \nla reasignación de recursos y la redistribución del ingreso. \n\nAdemás de la movilización de ingresos, las unidades gubernamentales también pueden \nfinanciar una parte de sus actividades en un período específico mediante préstamos o \nadquiriendo fondos de fuentes distintas de las transferencias obligatorias, por \nejemplo, ingresos por intereses, ventas incidentales de bienes y servicios o la renta \nde activos del subsuelo. \n\nEl indicador 17.1.1 Ingresos gubernamentales totales como proporción del PIB, por \nfuente, permite comprender la movilización de ingresos internos de los países en \nforma de fuentes tributarias y no tributarias. El indicador proporcionará a los analistas \nun conjunto de datos comparables entre países que resalta la relación entre los cuatro \ntipos principales de ingresos, así como la \"carga tributaria\" relativa (ingresos en \nforma de impuestos) y la \"carga fiscal\" (ingresos en forma de impuestos más \ncontribuciones sociales).\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Zerga-politika gobernu orokorraren eta sektore publikoaren gastu eta diru-sarreren mailaz \neta osaeraz ari da, baita gobernuko aktibo eta pasiboak elkarri lotuta pilatzeaz ere, \nekonomia egonkortzea, baliabideak berresleitzea eta diru-sarrerak birbanatzea bezalako \nhelburuak lortzeko. \n\nDiru-sarreren mobilizazioaz gain, gobernu-unitateek beren jardueren zati bat finantza \ndezakete aldi jakin batean, maileguen bidez edo nahitaezko transferentziak ez diren \niturrietako funtsak eskuratuz, hala nola interesengatiko sarrerak, ondasunen eta zerbitzuen \nustekabeko salmentak edo zorupeko aktiboen errenta. \n\n17.1.1 adierazleak (Gobernuaren guztizko diru-sarrerak, guztira, BPGd-ren proportzio gisa), \niturriaren arabera, herrialdeen barneko diru-sarreren mobilizazioa zerga-iturri gisa (eta \nez tributu-iturri gisa) ulertzeko modua ematen du. Adierazleak datu-multzo bat emango die \nanalistei, herrialdeen artean alderatzeko modukoa, lau diru-sarrera mota nagusien arteko \nerlazioa nabarmentzen duena, baita \"zerga karga\" erlatiboa (zerga bidezko sarrerak) eta \n\"zerga-karga\" ere (zerga bidezko sarrerak gehi kontribuzio sozialak). \n\n\nIturria: Nazio Batuen Estatistika Sekzioa \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -989,7 +1001,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250602092422'></script>
+<script src='/site/assets/js/sdg.js?v=20250604054344'></script>
 
 
 <script>
@@ -1009,7 +1021,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250602092422"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250604054344"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

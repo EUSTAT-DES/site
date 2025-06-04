@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250602092422">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250604054344">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -649,7 +649,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "\nValor lógico que indica si se ha realizado a) al menos un censo de población y vivienda en los últimos diez años, b) se ha registrado el 100% de los nacimientos y al menos el 80% de las defunciones");
+        var currentValue = normalizeCurrentValue('definicion', "\nBalio logikoa adierazten duena a) azken hamar urteetan gutxienez biztanleria- eta etxebizitza-errolda  bat egin den, eta b) jaiotzen % 100 eta heriotzen % 80 gutxienez erregistratu den. ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -711,7 +711,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "\nLos censos de población y vivienda son una de las principales fuentes de datos necesarios para \nformular, implementar y monitorear políticas y programas orientados al desarrollo \nsocioeconómico inclusivo y la sostenibilidad ambiental. \nLos censos de población y vivienda son una fuente importante para el suministro de datos \ndesagregados necesarios para la medición del progreso de la Agenda 2030 para el Desarrollo \nSostenible, especialmente en el contexto de la evaluación de la situación de las personas \nen función de los ingresos, el sexo, la edad, la raza, el origen étnico, el estatus migratorio, \nla discapacidad y la ubicación geográfica u otras características. \n\nLa introducción del indicador 17.19.2b como parte del marco global de los ODS refleja el \nreconocimiento del papel fundamental del sistema de registro civil para el \nfuncionamiento de las sociedades, y las ventajas jurídicas y protectoras que ofrece a las \npersonas. \n\nEl propósito esencial del sistema de registro civil es proporcionar documentos legales de \ninterés directo para las personas. Aparte de la importancia directa y general del registro civil \npara las autoridades públicas, en el sentido de que la información recopilada mediante el \nmétodo de registro proporciona datos esenciales para la preparación y planificación nacional y \nregional de programas médicos y de atención de la salud, el papel que desempeña el registro civil \nen la comprobación, el establecimiento, la implementación y la realización de muchos de los \nderechos humanos consagrados en declaraciones y convenciones internacionales refleja una \nde sus contribuciones más importantes al funcionamiento normal de las sociedades.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "\nBiztanleriaren eta etxebizitzen erroldak datu-iturri nagusietako bat dira garapen sozioekonomiko \ninklusibora eta ingurumen-jasangarritasunera bideratutako politikak eta programak formulatu, \ninplementatu eta ikuskatzeko. Biztanleriaren eta etxebizitzen erroldak iturri garrantzitsua dira \nGarapen Jasangarrirako 2030 Agendaren aurrerapena neurtzeko beharrezkoak diren datu bereiziak emateko, \nbereziki pertsonen egoeraren ebaluazioaren testuinguruan, diru-sarreren, sexuaren, adinaren, arrazaren, \njatorri etnikoaren, migrazio-estatusaren, desgaitasunaren eta kokapen geografikoaren edo beste ezaugarri \nbatzuen arabera. \n\n17.19.2b adierazlea GJHen esparru globalaren zati gisa sartzeak erakusten du erregistro zibileko \nsistemak funtsezko zeregina duela gizarteen funtzionamendurako, eta horrek abantaila juridikoak eta \nbabesleak eskaintzen dizkiela pertsonei. \n\nErregistro zibileko sistemaren funtsezko helburua da pertsonentzat interes zuzena duten legezko \ndokumentuak ematea. Erregistro zibilak agintari publikoentzat duen garrantzi zuzenaz eta orokorraz \ngain, erregistro-metodoaren bidez bildutako informazioak funtsezko datuak ematen baititu medikuntza- \neta osasun-programen prestaketa eta plangintza nazional eta erregionalerako, erregistro zibilak \nnazioarteko adierazpen eta konbentzioetan jasotako giza eskubide asko egiaztatzean, ezartzean eta \ngauzatzean betetzen duen zeregina gizartearen funtzionamendu normalean egiten duen ekarpen \ngarrantzitsuenetako bat da. \n\n\nIturria: Nazio Batuen Estatistika Sekzioa \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -989,7 +989,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250602092422'></script>
+<script src='/site/assets/js/sdg.js?v=20250604054344'></script>
 
 
 <script>
@@ -1009,7 +1009,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250602092422"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250604054344"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

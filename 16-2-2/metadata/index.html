@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250602092422">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250604054344">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -649,7 +649,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Número de víctimas detectadas de trata de seres humanos con fines de explotación sexual, laboral, obtención de órganos, matrimonios  forzados, criminalidad forzada y/o mendicidad por cada 100.000 habitantes");
+        var currentValue = normalizeCurrentValue('definicion', "Zenbat biktima detektatu diren sexu-esplotaziorako, lan-esplotaziorako, organoak lortzeko, behartutako ezkontzarako, behartutako kriminalizaziorako edo eskaletasunerako giza salerosketarako, 100.000 biztanleko ");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -705,7 +705,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('observaciones', "\nSe puede producir cierta sobrestimación del indicador, ya que una misma persona ha \npodido ser víctima detectada de tráfico de personas en dos o más tipos de explotación \ny no es posible su identificación por motivos de confidencialidad. Así mismo, \nse puede producir cierta sobrestimación del indicador a nivel estatal, dado que una \nmisma persona ha podido ser víctima detectada de tráfico de personas en dos o más \ncomunidades autónomas diferentes y no es posible su identificación por motivos \nde confidencialidad.\n\nTrata de seres humanos: captación, transporte, traslado, acogida o recepción de \npersonas, recurriendo a la amenaza o al uso de la fuerza u otras formas de coacción, \nal rapto, al fraude, al engaño, al abuso de poder o de una situación de vulnerabilidad \no a la concesión o recepción de pagos o beneficios para obtener el consentimiento \nde una persona que tenga autoridad sobre otra, con fines de explotación. Esa \nexplotación incluirá, como mínimo, la explotación de la prostitución ajena u otras \nformas de explotación sexual, los trabajos o servicios forzados, la esclavitud o \nlas prácticas análogas a la esclavitud, la servidumbre o la extracción de órganos.\n");
+        var currentValue = normalizeCurrentValue('observaciones', "\nGerta daiteke adierazle hau gehiegi handitzea, pertsona bera pertsona-trafikoaren biktima izan delako \nbi esplotazio-motatan edo gehiagotan eta ezin izan delako identifikatu konfidentzialtasun-arrazoien \nzioz. Era berean, adierazlea Estatu-mailan ere gerta liteke gainestimazioa izatea, pertsona bat bi \nautonomia-erkidegotan edo gehiagotan identifikatu delako pertsona-trafikoaren biktima gisa eta ez ezin \ndelako identifikatu konfidentzialtasun-arrazoien ondorioz. \n\nPertsonen salerosketa: pertsonak hartu, garraiatu, lekualdatu edo jasotzea, mehatxupean edo indarrera \njoz nahiz beste hertsatze-modu batzuk baliatuz, besteak beste bahiketa, iruzurra, engainua, botere-gehiegikeria \nedo zaurgarritasun-egoera, edo ordainketak edo onurak jasoz edo emanez pertsona baten gaineko boterea duen \npertsona baten baimena lortzeko esplotaziorako. Esplotazioaren barruan sartzen dira, besteak beste -eta \ngutxienez-, besteren prostituzioa esplotatzea, beste sexu-esplotazio mota batzuk, lan edo zerbitzu behartuak, \nesklabotza edo antzeko praktikak, morrontza edo organoen erauzketa. \n");
         var propertyEditor = editor.getEditor('root.observaciones');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -735,7 +735,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('justificacion_global', "La trata de personas es un delito grave y una grave violación de los derechos humanos. \nTodos los días, las víctimas son explotadas en restaurantes, granjas, sitios de \nconstrucción, burdeles, fábricas, mercados, minas y en los hogares de personas en todas \npartes, pero se sabe poco sobre la prevalencia y las características de este delito. \nSe necesitan mejores datos para fundamentar respuestas más eficaces y proporcionar \na los responsables de las políticas y a los profesionales la información y el \nanálisis que necesitan para afinar las medidas contra la trata y mejorar la prevención.\n\nEste indicador tiene por objeto medir la prevalencia de la trata de personas según \nel perfil de las víctimas y las formas de explotación, y hacer un seguimiento de \nlos avances mundiales, regionales y nacionales en la lucha contra este delito.\n\nFuente: División de Estadísticas de las Naciones Unidas\n");
+        var currentValue = normalizeCurrentValue('justificacion_global', "Pertsonen salerosketa delitu larria eta giza eskubideen urraketa larria da. Egunero, biktimak \nesplotatzen dira jatetxe, baserri, eraikuntza-leku, putetxe, lantegi, merkatu, meategi edo etxeetan, \nleku guztietan, baina ezer gutxi dakigu delitu honen prebalentziari eta ezaugarriei buruz. Datu \nhobeak behar dira erantzun eraginkorragoak emateko eta politiken arduradunei eta profesionalei \nbeharrezkoa zaien informazioa eta azterketak emateko, prebentzioa hobetu eta salerosketaren aurka \negiteko neurriak fintze aldera. \n\nAdierazle honen helburua da pertsonen salerosketaren prebalentzia neurtzea, biktimen profilaren eta \nesplotazio-moduen arabera, eta munduan, eskualdeetan eta estatuetan delitu honen aurkako borrokan \negondako aurrerapenen jarraipena egitea. \n\n\nIturria: Nazio Batuen Estatistika Sekzioa \n");
         var propertyEditor = editor.getEditor('root.justificacion_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1001,7 +1001,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250602092422'></script>
+<script src='/site/assets/js/sdg.js?v=20250604054344'></script>
 
 
 <script>
@@ -1021,7 +1021,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250602092422"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250604054344"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
