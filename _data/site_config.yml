@@ -289,9 +289,7 @@ site_config_form:
   dropdowns: []
   repository_link: /tree/develop/_data
   translation_link: ''
-time_series_attributes:
-  - field: COMMENT_TS
-    label: indicator.footnote
+time_series_attributes: []
   - field: DATA_LAST_UPDATE
     label: metadata_fields.national_data_update_url
 use_new_config_forms: true
