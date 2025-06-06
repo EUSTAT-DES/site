@@ -23,7 +23,7 @@
         },
         {
           "id": "1-2-2",
-          "title": "Proporción de hombres, mujeres y niños de todas las edades que viven en la pobreza, en todas sus dimensiones, con arreglo a las definiciones nacionales",
+          "title": "Proporción de hombres, mujeres y niños/as de todas las edades que viven en la pobreza, en todas sus dimensiones, con arreglo a las definiciones nacionales",
           "description": "",
           "keywords": "",
           "href": "/site/es/1-2-2/",
@@ -31,7 +31,7 @@
         },
         {
           "id": "1-3-1",
-          "title": "Proporción de la población cubierta por sistemas o niveles mínimos de protección social, desglosada por sexo, distinguiendo entre los niños, los desempleados, los ancianos, las personas con discapacidad, las mujeres embarazadas, los recién nacidos, las víctimas de accidentes de trabajo, los pobres y los vulnerables",
+          "title": "Proporción de la población cubierta por sistemas o niveles mínimos de protección social, desglosada por sexo, distinguiendo entre los niños/as, los desempleados/as, los ancianos/as, las personas con discapacidad, las mujeres embarazadas, los recién nacidos/as, las víctimas de accidentes de trabajo, las y los pobres y los vulnerables",
           "description": "",
           "keywords": "",
           "href": "/site/es/1-3-1/",
@@ -135,7 +135,7 @@
         },
         {
           "id": "2-2-1",
-          "title": "Prevalencia del retraso del crecimiento (estatura para la edad, desviación típica < -2 de la mediana de los patrones de crecimiento infantil de la Organización Mundial de la Salud (OMS)) entre los niños menores de 5 años",
+          "title": "Prevalencia del retraso del crecimiento (estatura para la edad, desviación típica < -2 de la mediana de los patrones de crecimiento infantil de la Organización Mundial de la Salud (OMS)) entre las y los niños menores de 5 años",
           "description": "",
           "keywords": "",
           "href": "/site/es/2-2-1/",
@@ -143,7 +143,7 @@
         },
         {
           "id": "2-2-2",
-          "title": "Prevalencia de la malnutrición (peso para la estatura, desviación típica > +2 o < -2 de la mediana de los patrones de crecimiento infantil de la OMS) entre los niños menores de 5 años, desglosada por tipo (emaciación y sobrepeso)",
+          "title": "Prevalencia de la malnutrición (peso para la estatura, desviación típica > +2 o < -2 de la mediana de los patrones de crecimiento infantil de la OMS) entre las y los niños menores de 5 años, desglosada por tipo (emaciación y sobrepeso)",
           "description": "",
           "keywords": "",
           "href": "/site/es/2-2-2/",
@@ -287,7 +287,7 @@
         },
         {
           "id": "3-2-1",
-          "title": "Tasa de mortalidad de niños menores de 5 años",
+          "title": "Tasa de mortalidad de niños/as menores de 5 años",
           "description": "",
           "keywords": "",
           "href": "/site/es/3-2-1/",
@@ -303,7 +303,7 @@
         },
         {
           "id": "3-3-1",
-          "title": "Número de nuevas infecciones por el VIH por cada 1.000 habitantes no infectados, desglosado por sexo, edad y poblaciones clave",
+          "title": "Número de nuevas infecciones por el VIH por cada 1.000 habitantes no infectados/as, desglosado por sexo, edad y poblaciones clave",
           "description": "",
           "keywords": "",
           "href": "/site/es/3-3-1/",
@@ -519,7 +519,7 @@
         
         {
           "id": "4-1-1",
-          "title": "Proporción de niños y adolescentes que, a) en los grados 2 o 3, b) al final de la educación primaria y c) al final de la educación secundaria inferior, han alcanzado al menos un nivel mínimo de competencia en i) lectura y ii) matemáticas, desglosada por sexo",
+          "title": "Proporción de niños/as y adolescentes que, a) en los grados 2 o 3, b) al final de la educación primaria y c) al final de la educación secundaria inferior, han alcanzado al menos un nivel mínimo de competencia en i) lectura y ii) matemáticas, desglosada por sexo",
           "description": "",
           "keywords": "",
           "href": "/site/es/4-1-1/",
@@ -543,7 +543,7 @@
         },
         {
           "id": "4-2-1",
-          "title": "Proporción de niños de 24 a 59 meses cuyo desarrollo es adecuado en cuanto a la salud, el aprendizaje y el bienestar psicosocial, desglosada por sexo",
+          "title": "Proporción de niños/as de 24 a 59 meses cuyo desarrollo es adecuado en cuanto a la salud, el aprendizaje y el bienestar psicosocial, desglosada por sexo",
           "description": "",
           "keywords": "",
           "href": "/site/es/4-2-1/",
@@ -559,7 +559,7 @@
         },
         {
           "id": "4-3-1",
-          "title": "Tasa de participación de jóvenes y adultos en la educación y formación académica y no académica en los últimos 12 meses, desglosada por sexo",
+          "title": "Tasa de participación de jóvenes y adultos/as en la educación y formación académica y no académica en los últimos 12 meses, desglosada por sexo",
           "description": "",
           "keywords": "",
           "href": "/site/es/4-3-1/",
@@ -567,7 +567,7 @@
         },
         {
           "id": "4-4-1",
-          "title": "Proporción de jóvenes y adultos con competencias en tecnología de la información y las comunicaciones (TIC), desglosada por tipo de competencia",
+          "title": "Proporción de jóvenes y adultos/as con competencias en tecnología de la información y las comunicaciones (TIC), desglosada por tipo de competencia",
           "description": "",
           "keywords": "",
           "href": "/site/es/4-4-1/",
@@ -575,7 +575,7 @@
         },
         {
           "id": "4-5-1",
-          "title": "Índices de paridad (entre mujeres y hombres, zonas rurales y urbanas, quintiles de riqueza superior e inferior y grupos como los discapacitados, los pueblos indígenas y los afectados por los conflictos, a medida que se disponga de datos) para todos los indicadores de educación de esta lista que puedan desglosarse",
+          "title": "Índices de paridad (entre mujeres y hombres, zonas rurales y urbanas, quintiles de riqueza superior e inferior y grupos como las y los discapacitados, los pueblos indígenas y las y los afectados por los conflictos, a medida que se disponga de datos) para todos los indicadores de educación de esta lista que puedan desglosarse",
           "description": "",
           "keywords": "",
           "href": "/site/es/4-5-1/",
@@ -1023,7 +1023,7 @@
         },
         {
           "id": "8-10-2",
-          "title": "Proporción de adultos (a partir de 15 años de edad) que tienen una cuenta en un banco u otra institución financiera o un proveedor de servicios de dinero móvil",
+          "title": "Proporción de adultos/as (a partir de 15 años de edad) que tienen una cuenta en un banco u otra institución financiera o un proveedor de servicios de dinero móvil",
           "description": "",
           "keywords": "",
           "href": "/site/es/8-10-2/",
@@ -1127,7 +1127,7 @@
         },
         {
           "id": "9-5-2",
-          "title": "Número de investigadores (en equivalente a tiempo completo) por cada millón de habitantes",
+          "title": "Número de personas investigadoras (en equivalente a tiempo completo) por cada millón de habitantes",
           "description": "",
           "keywords": "",
           "href": "/site/es/9-5-2/",
@@ -1223,7 +1223,7 @@
         },
         {
           "id": "10-7-1",
-          "title": "Costo de la contratación sufragado por el empleado en proporción a los ingresos mensuales percibidos en el país de destino",
+          "title": "Costo de la contratación sufragado por el empleado/a en proporción a los ingresos mensuales percibidos en el país de destino",
           "description": "",
           "keywords": "",
           "href": "/site/es/10-7-1/",
@@ -1247,7 +1247,7 @@
         },
         {
           "id": "10-7-4",
-          "title": "Proporción de la población integrada por refugiados, desglosada por país de origen",
+          "title": "Proporción de la población integrada por refugiados/as, desglosada por país de origen",
           "description": "",
           "keywords": "",
           "href": "/site/es/10-7-4/",
@@ -1567,7 +1567,7 @@
         },
         {
           "id": "13-3-1",
-          "title": "global_indicators.13-3-1-title",
+          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación de docentes y d) la evaluación de los estudiantes",
           "description": "",
           "keywords": "",
           "href": "/site/es/13-3-1/",
@@ -1975,7 +1975,7 @@
         },
         {
           "id": "16-9-1",
-          "title": "Proporción de niños menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad",
+          "title": "Proporción de niños/as menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad",
           "description": "",
           "keywords": "",
           "href": "/site/es/16-9-1/",
@@ -1983,7 +1983,7 @@
         },
         {
           "id": "16-10-1",
-          "title": "Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados de los medios de comunicación, sindicalistas y defensores de los derechos humanos, en los últimos 12 meses",
+          "title": "Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados/as de los medios de comunicación, sindicalistas y defensores/as de los derechos humanos, en los últimos 12 meses",
           "description": "",
           "keywords": "",
           "href": "/site/es/16-10-1/",
@@ -2079,7 +2079,7 @@
         },
         {
           "id": "17-6-1",
-          "title": "Número de abonados a servicios de banda ancha fija por cada 100 habitantes, desglosado por velocidad",
+          "title": "Número de abonados/as a servicios de banda ancha fija por cada 100 habitantes, desglosado por velocidad",
           "description": "",
           "keywords": "",
           "href": "/site/es/17-6-1/",
