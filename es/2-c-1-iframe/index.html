@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250609140358">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250609143138">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -360,7 +360,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Indicador de anomalías en los precios de los alimentos&quot;,&quot;Índice de precio de los alimentos&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Alimento&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Alimentos (total)&quot;,&quot;Pan y cereales&quot;,&quot;Pan&quot;,&quot;Cereales y derivados&quot;,&quot;Huevos&quot;,&quot;Leche&quot;,&quot;Aceites y grasas&quot;,&quot;Frutas frescas&quot;,&quot;Legumbres y hortalizas frescas&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Alimento&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio histórico&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Índice&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Indicador de anomalías en los precios de los alimentos&quot;,&quot;Índice de precio de los alimentos&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Alimento&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Pan&quot;,&quot;Cereales y derivados&quot;,&quot;Huevos&quot;,&quot;Leche&quot;,&quot;Aceites y grasas&quot;,&quot;Frutas frescas&quot;,&quot;Legumbres y hortalizas frescas&quot;,&quot;Pan y cereales&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Alimento&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio histórico&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Índice&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -395,15 +395,955 @@ layout-indicator-iframe
   <div id="datatables">
 
     
+    <a role="button" href="https://eustat-des.github.io/data/es/headline/2-c-1.csv" class="btn btn-primary btn-download" download="indicator_2-c-1.csv" tabindex="0" role="button">Descargar los datos de los titulares (.csv)</a>
+    
     <a role="button" href="https://eustat-des.github.io/data/es/data/2-c-1.csv" class="btn btn-primary btn-download" download='indicator_2-c-1.csv' tabindex='0' role='button'>Descargar datos de origen (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Descargar los datos de origen para los desgloses (.csv)</p>
 
     
-    <h3>No hay datos principales disponibles</h3>
+    <h3>Datos principales</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Índice de precios de los alimentos</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Series</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>2.6</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>-1.0</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>0.6</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>-0.3</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>0.3</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>-0.9</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>-0.5</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>-0.4</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>0.2</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>-0.3</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>1.9</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>0.4</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>-0.9</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-0.2</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>0.0</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>-0.5</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>0.1</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>0.5</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>-0.4</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>-0.5</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>0.2</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>-0.2</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Indicador de anomalías en los precios de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>129.1</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>95.6</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>83.9</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>87.3</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>100.0</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>92.1</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>64.9</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>70.6</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>67.7</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>94.7</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>85.0</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>98.2</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>84.1</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>123.7</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>73.2</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>83.3</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>90.6</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>93.3</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>79.1</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>89.9</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>76.2</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>111.4</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>89.3</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Índice de precio de los alimentos</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Área geográfica: </p>
+    
+    
+    <p>Unidad de medida: </p>
+    
+    
+    <p>Nota: </p>
+    
+  </div>
   
 
 </div>
@@ -1228,7 +2168,7 @@ el contexto macroeconómico y los shocks externos.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250609140358'></script>
+<script src='/site/assets/js/sdg.js?v=20250609143138'></script>
 
 
 <script>
@@ -1248,7 +2188,7 @@ el contexto macroeconómico y los shocks externos.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250609140358"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250609143138"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
