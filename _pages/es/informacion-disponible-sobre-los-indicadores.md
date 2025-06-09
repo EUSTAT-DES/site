@@ -7,11 +7,12 @@ layout: page
 
 ### Presentación de los indicadores
 
-En la página de inicio de esta plataforma, seleccionando cada uno de los 17 Objetivos, se puede acceder a las metas establecidas para el objetivo, y los indicadores correspondientes. 
+En la página de inicio de esta plataforma, seleccionando cada uno de los 17 Objetivos, se puede acceder a las metas establecidas para el objetivo, y los indicadores correspondientes. La gran mayoría de los indicadores incluidos en esta plataforma son los establecidos por la ONU a nivel global; también se incluyen algunos indicadores europeos, así como algunos indicadores propios del Gobierno Vasco. 
+Los datos disponibles para la C.A. de Euskadi no siempre corresponden exactamente a los criterios de medición establecidos para los indicadores globales y europeos. En esos casos, el indicador que se presenta para la C.A. de Euskadi es el más próximo disponible. 
 Los datos relevantes para cada indicador se presentan en un gráfico y una tabla. Esta presentación se complementa para algunos indicadores con un mapa interactivo que muestra los datos de las comarcas o municipios vascos. 
-Tanto los datos nuevos como las actualizaciones de los datos que ya están publicados se agregan tan pronto como se hayan obtenido y verificado.
+Tanto los datos nuevos como las actualizaciones de los datos que ya están publicados se agregan tan pronto como se hayan obtenido y verificado. 
 Algunos indicadores no pueden representarse a partir de datos. Cuando sucede esto, se muestran textos explicativos con enlaces a información temáticamente relevante sobre los indicadores.
-En la parte inferior de la página de cada indicador se muestran las pestañas siguientes:
+En la parte inferior de la página de cada indicador se muestran las pestañas siguientes: 
 
 -	Ficha metodológica: aporta información sobre el indicador disponible en la C.A. de Euskadi y su forma de cálculo.
   
