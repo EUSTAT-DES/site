@@ -559,7 +559,7 @@
         },
         {
           "id": "4-3-1",
-          "title": "Tasa de participación de jóvenes y adultos/as en la educación y formación académica y no académica en los últimos 12 meses, desglosada por sexo",
+          "title": "Tasa de participación de personas jóvenes y adultas en la educación y formación académica y no académica en los últimos 12 meses, desglosada por sexo",
           "description": "",
           "keywords": "",
           "href": "/site/es/4-3-1/",
@@ -567,7 +567,7 @@
         },
         {
           "id": "4-4-1",
-          "title": "Proporción de jóvenes y adultos/as con competencias en tecnología de la información y las comunicaciones (TIC), desglosada por tipo de competencia",
+          "title": "Proporción de personas jóvenes y adultas con competencias en tecnología de la información y las comunicaciones (TIC), desglosada por tipo de competencia",
           "description": "",
           "keywords": "",
           "href": "/site/es/4-4-1/",
@@ -967,7 +967,7 @@
         },
         {
           "id": "8-6-1",
-          "title": "Proporción de jóvenes (entre 15 y 24 años) que no cursan estudios, no están empleados ni reciben capacitación",
+          "title": "Proporción de jóvenes (entre 15 y 24 años) que no cursan estudios, no están empleados/as ni reciben capacitación",
           "description": "",
           "keywords": "",
           "href": "/site/es/8-6-1/",
@@ -975,7 +975,7 @@
         },
         {
           "id": "8-7-1",
-          "title": "Proporción y número de niños de entre 5 y 17 años que realizan trabajo infantil, desglosados por sexo y edad",
+          "title": "Proporción y número de niños/as de entre 5 y 17 años que realizan trabajo infantil, desglosados por sexo y edad",
           "description": "",
           "keywords": "",
           "href": "/site/es/8-7-1/",
@@ -1015,7 +1015,7 @@
         },
         {
           "id": "8-10-1",
-          "title": "a) Número de sucursales de bancos comerciales por cada 100.000 adultos y b) número de cajeros automáticos por cada 100.000 adultos",
+          "title": "a) Número de sucursales de bancos comerciales por cada 100.000 personas adultas y b) número de cajeros automáticos por cada 100.000 adultos",
           "description": "",
           "keywords": "",
           "href": "/site/es/8-10-1/",
@@ -1039,7 +1039,7 @@
         },
         {
           "id": "8-b-1",
-          "title": "Existencia de una estrategia nacional organizada y en marcha para el empleo de los jóvenes, como estrategia independiente o como parte de una estrategia nacional de empleo",
+          "title": "Existencia de una estrategia nacional organizada y en marcha para el empleo de las personas jóvenes, como estrategia independiente o como parte de una estrategia nacional de empleo",
           "description": "",
           "keywords": "",
           "href": "/site/es/8-b-1/",
@@ -1487,7 +1487,7 @@
         },
         {
           "id": "12-8-1",
-          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación de docentes y d) la evaluación de los estudiantes",
+          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación de docentes y d) la evaluación de las y los estudiantes",
           "description": "",
           "keywords": "",
           "href": "/site/es/12-8-1/",
@@ -1567,7 +1567,7 @@
         },
         {
           "id": "13-3-1",
-          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación de docentes y d) la evaluación de los estudiantes",
+          "title": "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación de docentes y d) la evaluación de las y los estudiantes",
           "description": "",
           "keywords": "",
           "href": "/site/es/13-3-1/",
@@ -1855,7 +1855,7 @@
         },
         {
           "id": "16-2-1",
-          "title": "Proporción de niños de entre 1 y 17 años que han sufrido algún castigo físico o agresión psicológica a manos de sus cuidadores en el último mes",
+          "title": "Proporción de niños y niñas de entre 1 y 17 años que han sufrido algún castigo físico o agresión psicológica a manos de sus cuidadores en el último mes",
           "description": "",
           "keywords": "",
           "href": "/site/es/16-2-1/",
@@ -1887,7 +1887,7 @@
         },
         {
           "id": "16-3-2",
-          "title": "Proporción de detenidos que no han sido condenados en el conjunto de la población reclusa total",
+          "title": "Proporción de personas detenidas que no han sido condenadas en el conjunto de la población reclusa total",
           "description": "",
           "keywords": "",
           "href": "/site/es/16-3-2/",
@@ -2279,7 +2279,7 @@
         },
         {
           "id": "OCECA-9-4-1-5",
-          "title": "Emisiones de CO2 respecto al año 1990",
+          "title": "Emisiones de $CO_2$ respecto al año 1990",
           "description": "",
           "keywords": "",
           "href": "/site/es/OCECA-9-4-1-5/",
@@ -2287,7 +2287,7 @@
         },
         {
           "id": "OCECA-9-4-1-6",
-          "title": "Emisiones de CO2 respecto al año 2005",
+          "title": "Emisiones de $CO_2$ respecto al año 2005",
           "description": "",
           "keywords": "",
           "href": "/site/es/OCECA-9-4-1-6/",
