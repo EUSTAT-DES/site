@@ -13,8 +13,18 @@ body.contrast-high .header {
     background-color: #000000;
 }
 
+#logo-link{
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
 header .container{
   margin-top: 15px;
+}
+
+.main-content-pages{
+  padding: 0px 10vw 50px !important;
+  text-align: justify;
 }
 
 .frontpage-goals-grid{

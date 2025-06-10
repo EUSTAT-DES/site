@@ -7,10 +7,15 @@ layout: page
 
 ### Adierazleen aurkezpena
 
-Plataforma honen hasierako orrian, 17 helburuetako bakoitza hautatuta, helbururako ezarritako jomugetara eta dagozkion adierazleetara sar daiteke.
-Adierazle bakoitzerako datu garrantzitsuak grafiko batean eta taula batean aurkezten dira. Aurkezpen hori, adierazle batzuetarako, euskal eskualde edo udalerrien datuak erakusten dituen mapa interaktibo batekin osatzen da. 
-Bai datu berriak, baita dagoeneko argitaratuta daudenen eguneratzeak ere, lortu eta egiaztatu bezain laster gehitzen dira.
-Adierazle batzuk ezin dira datuetan oinarrituta irudikatu. Hori gertatzen denean, gaiari buruzko azalpen-testuak erakusten dira, informazio adierazgarrirako estekak barneratuz.
+Plataforma honen hasierako orrian, 17 helburuetako bakoitza hautatuta, helbururako ezarritako jomugetara eta dagozkion adierazleetara sar daiteke. 
+Plataforma honetako adierazle gehienak NBEk maila globalean ezarritakoak dira; Europako adierazle batzuk eta Eusko Jaurlaritzaren adierazle propio batzuk ere aurkezten dira. 
+
+Euskal Autonomia Erkidegorako eskuragarri dauden datuak ez datoz beti guztiz bat adierazle globaletarako eta europarretarako ezarritako neurketa-irizpideekin. Kasu horietan, Euskal AErako eskuragarri dagoen adierazle hurbilena aurkezten da. 
+
+Adierazle bakoitzerako datu garrantzitsuak grafiko batean eta taula batean aurkezten dira. Aurkezpen hori, adierazle batzuetarako, euskal eskualde edo udalerrien datuak erakusten dituen mapa interaktibo batekin osatzen da. Bai datu berriak, baita dagoeneko argitaratuta daudenen eguneratzeak ere, lortu eta egiaztatu bezain laster gehitzen dira. 
+
+Adierazle batzuk ezin dira datuetan oinarrituta irudikatu. Hori gertatzen denean, gaiari buruzko azalpen-testuak erakusten dira, informazio adierazgarrirako estekak barneratuz. 
+
 Adierazle bakoitzaren orrialdearen behealdean erlaitz hauek agertzen dira:
 
 -	Metodologia-fitxa: Euskal Autonomia Erkidegoan eskuragarri dagoen adierazleari eta hura kalkulatzeko moduari buruzko informazioa ematen du.

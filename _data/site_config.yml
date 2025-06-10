@@ -58,6 +58,18 @@ date_formats:
   - type: standard
     language: eu
     format: "%Y/%m/%d"
+desagregacion_territorial_keyword:
+  eu: "Lurralde historikoa"
+  es: "Territorio histórico"
+  en: "Province"
+desagregacion_municipio_keyword: 
+  eu: "Udalerria"
+  es: "Municipio"
+  en: "Municipalities"
+desagregacion_sexo_keyword: 
+  eu: "Sexua"
+  es: "Sexo"
+  en: "Sex"
 disclaimer:
   phase: ''
   message: ''
@@ -165,7 +177,7 @@ map_options:
     id: ''
     accessToken: ''
     attribution: <a href="https://www.geo.euskadi.eus/" title="Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi">geoEuskadi</a>
-  colorRange: chroma.brewer.BuGn 
+  colorRange: chroma.brewer.BuGn
   noValueColor: '#f0f0f0'
   styleNormal:
     weight: 1

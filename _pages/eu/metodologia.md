@@ -6,45 +6,33 @@ layout: page
 ---
 
 
-## Introducción
 
-La [Agenda 2030 para el Desarrollo Sostenible](https://www.un.org/sustainabledevelopment/es/), adoptada por todos los Estados miembros de las Naciones Unidas en 2015, proporciona un programa para mejorar la economía, la sociedad y el medio ambiente de una forma sostenible. En esencia, los 17 Objetivos de Desarrollo Sostenible (ODS) son una llamada universal a la acción para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas en todo el mundo puedan disfrutar de paz y prosperidad.  
+## Aurrerapenaren neurketa 
 
-Los objetivos están respaldados por un marco de indicadores mundiales que permiten hacer el seguimiento e informar sobre el progreso. Cubren una amplia gama de cuestiones sociales, ambientales y económicas con un enfoque en las personas más vulnerables y el compromiso de “no dejar a nadie atrás”. Para complementar los objetivos mundiales, se alienta a los distintos gobiernos a desarrollar un plan de implementación propio que se centre en indicadores que aborden contextos y prioridades específicos para lograr los ODS.  
+Aurrerapena informazio fidagarriarekin neurtu eta jarraipena egitea funtsezkoa da Euskal Autonomia Erkidegoa GJHak lortzeko bidean aurrera nola doan ulertzeko.
+Adierazle bakoitzaren aurrerapena hurbiletik neurtzeak erakusten du non ari garen aurrera egiten, eta zer arlotan ez den aurrerapenik lortzen ari eta zertan zentratu behar diren ahaleginak. Horrez gain, aukera ematen du Euskal Autonomia Erkidegoa 2030 Agenda nola gauzatzean ari den modu ireki eta gardenean jakinarazteko. Jarraipen-txostena helburu desberdinak lortzeko politiken eta ekintzen arrakasta hobeto ulertzeko tresna izan daiteke. Halaber, seinale argia izan daiteke, ebidentzian oinarritutako politika eraginkorrak doitu edo garatu ahal izateko, eta hala, helburuak lortzen direla bermatzen laguntzeko.
 
-Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno vasco se ha comprometido, se ha desarrollado un marco de indicadores específico que 
-incluye indicadores diseñados en coordinación con los organismos de estadística de las comunidades autónomas, e indicadores definidos dentro del Foro Multiagente de Transición Social y Agenda 2030 en Euskadi.
-
-## Medición del progreso  
-
-Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.  
-
-Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar sus esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.
  
-## Metodología  
+## Metodologia  
    
-Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
-[nota técnica sobre la medición del progreso](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) utilizada por al Unidad de Estadística de Naciones Unidas.  
+Ebaluazio sinple eta gardena egiteko asmoz, Nazio Batuen Estatistika Unitateak erabiltzen duen  
+[aurrerapenaren neurketari buruzko ohar teknikoan](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf)oinarritutako metodologia garatu da.
+Adierazle batek hainbat datu-serie eta/edo desagregazio izan ditzake (adina, sexua, kokapena, etab.). Kasu horietan, aurrerapena ebaluatzeko, Euskal Autonomia Erkidegoko biztanle guztiak hobekien islatzen dituzten serieen eta desagregazioen datuak baino ez dira hautatzen.
+Nazio Batuek mundu osorako ezarritako helburua aplikatzen da Euskal Autonomia Erkidegoan.
+Ebaluazioak puntuazio bat ematen dio adierazle bakoitzari. 2030erako zenbakizko helburuak dituzten adierazleak eta ez dituztenak bereizten dira.
+  
 
-Al evaluar el progreso de los ODS, la dirección normativa de una serie de datos indica el resultado deseable para su valor. Un valor más alto es deseable para series de datos con una dirección normativa creciente; lo contrario ocurre con aquellas con una dirección normativa decreciente. La dirección deseada para cada indicador o serie se ha tomado de la [nota técnica sobre la medición del progreso de 2024](https://unstats.un.org/sdgs/files/report/2024/Technical_Note_for_Progress_Assessment_2024.pdf)
+### 2030erako helburu-balioak dituzten adierazleak
 
-Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.
-
-Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas para el conjunto del mundo. 
-
-La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.  
-
-### Indicadores con valores objetivo para 2030
-
-Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:
+2030erako helburu-balioak dituzten adierazleentzat, gutxienez bi datu-puntu desberdin baldin badituzte (bat oinarri-lerrorako, normalean 2015, eta beste bat azken urterako), hazkunde-tasen kalkuluaren bidez puntuazio bat esleitzen zaie. Horretarako, lehenik eta behin, erreferentzia-urtearen (b) eta datuak eskuragarri dauden azken urtearen (t) arteko urteko hazkunde-tasa konposatu erreala (𝐶𝐴𝐺𝑅𝑎) kalkulatzen da:
 
 $$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1$$
 
-<p>A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:</p>
+<p>Ondoren, aurreko urratseko 𝐶𝐴𝐺𝑅𝑎 erabiltzen da seriean 2030erako espero den balioa (𝑣2030𝑒) estrapolatzeko, egungo aurrerabide-erritmoari eusten zaiola suposatuz:</p>
 
 $$v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}$$
 
-Por último, se asigna una puntuación a la serie según los siguientes criterios:
+Azkenik, serieari puntuazio bat ematen zaio, irizpide hauen arabera:
 
 
 <style type="text/css">
@@ -60,8 +48,8 @@ Por último, se asigna una puntuación a la serie según los siguientes criterio
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
+    <th class="tg-fymr">Puntuazioa</th>
+    <th class="tg-fymr">Baldintza</th>
   </tr>
 </thead>
 <tbody>
@@ -84,29 +72,30 @@ Por último, se asigna una puntuación a la serie según los siguientes criterio
 
 Donde:
 <br><br> 
-𝑏 es el año base (normalmente 2015)<br>
-𝑡 es el último año para el que hay dato (por ejemplo: 2022)<br>
-𝑣𝑏 es el valor base en el año b<br>
-𝑣𝑡 es el valor del último año 𝑡<br>
-$𝑣_{2030}$ es el valor objetivo para 2030<br>
-$𝑣_{2030}^{e}$ es el valor esperado para 2030
+𝑏 da oinarri-urtea (normalean 2015)<br>
+𝑡 da datua eskuragarri dagoen azken urtea (adibidez: 2022)<br>
+𝑣𝑏 da oinarri-balioa b urtean<br>
+𝑣𝑡 da 𝑡 azken urteko balioa<br>
+$𝑣_{2030}$ da 2030erako helburu-balioa<br>
+$𝑣_{2030}^{e}$ da 2030erako espero den balioa
 
 <br><br> 
-### Indicadores sin valores objetivo numéricos 
+### Zenbakizko helburu-baliorik gabeko adierazleak 
 
-Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:
+2030erako helburu-baliorik ez duten eta gutxienez bi datu-puntu dituzten adierazleei puntuazio bat ematen zaie, urteko hazkunde-tasa konposatua kalkulatuz. Lehenik, oinarrizko lerroaren (b) eta datuak eskuragarri dauden azken urtearen (t) arteko urteko hazkunde-tasa konposatu erreala kalkulatzen da:
 
 $$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1$$
 
-A continuación, se asigna una puntuación al indicador según los siguientes criterios:
+Ondoren, serieari puntuazio bat ematen zaio, irizpide hauen arabera:
 
-Si el aumento es deseable:<br>
+Igoera desiragarria bada:
+<br>
 
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
+    <th class="tg-fymr">Puntuazioa</th>
+    <th class="tg-fymr">Baldintza</th>
   </tr>
 </thead>
 <tbody>
@@ -126,14 +115,14 @@ Si el aumento es deseable:<br>
 </table>
 
 
-Si el descenso es deseable:<br>
+Jaitsiera desiragarria bada:<br>
 
 
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Condición</th>
+    <th class="tg-fymr">Puntuazioa</th>
+    <th class="tg-fymr">Baldintza</th>
   </tr>
 </thead>
 <tbody>
@@ -153,103 +142,102 @@ Si el descenso es deseable:<br>
 </table>
 
 <br><br>
-En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
+Kasu batzuetan, serieko balioak hazkunde-tasak dira (adibidez, 8.1.1 adierazlea: biztanleko BPGren urteko hazkunde-tasa). Hazkunde-tasen CAGR kalkulatzeak ez luke zentzurik, eta adituen irizpidea erabiltzen da puntuazioa esleitzeko.
 
 
-Las categorías de progreso asignadas se describen a continuación:
+Hona hemen esleitutako aurrerapen-kategoriak:
 
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-fymr">Puntuación</th>
-    <th class="tg-fymr">Categoría</th>
-    <th class="tg-fymr">Símbolo</th>
+    <th class="tg-fymr">Puntuazioa</th>
+    <th class="tg-fymr">Kategoria</th>
+    <th class="tg-fymr">Sinboloa</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td class="tg-0pky">3</td>
-    <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
+    <td class="tg-0pky">Lortu den edo lortzeko bidean dagoen helburua</td>
     <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" alt="Alcanzado" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">2</td>
-    <td class="tg-0pky">Progreso razonable, pero es necesario acelerarlo</td>
+    <td class="tg-0pky">Arrazoizko aurrerapena, baina bizkortu egin behar da</td>
     <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="En progreso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">1</td>
-    <td class="tg-0pky">Estancamiento o retroceso</td>
+    <td class="tg-0pky">Geldialdia edo atzerakada</td>
     <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky"> - </td>
-    <td class="tg-0pky"> No evaluado </td>
+    <td class="tg-0pky"> Ebaluatu gabe </td>
     <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150"></td>
   </tr>
 </tbody>
 </table>
 
 <br>
-###No evaluado
+###Ebaluatu gabe
 
-En algunos casos no es posible medir el progreso de manera fiable u objetiva:
+Kasu batzuetan, ezinezkoa da aurrerapena modu fidagarrian edo objektiboan neurtzea:
+-	Euskal Autonomia Erkidegorako eskuragarri dagoen adierazlea Nazio Batuen adierazle ofizialaren metodologiarekin lerrokatuta ez dagoenean. Kasu horietan proxy edo ordezko neurketa bat erabiltzen da, baina batzuetan ez du gauza bera neurtzen.
+-	Aurrerapena ebaluatzeko denborazko serie nahikorik ez dagoenean.
+-	Testuingurutik kanpoko ebaluazioa ezinezkoa denean, gaiaren konplexutasuna dela eta. Adibidez, 2.c.1 adierazlearen kasua da (Elikagaien prezioen anomalien adierazlea). Adierazle honek neurtu nahi duten herrialde batek egiten duena merkatuen prezioak egonkor mantentzeko, baina nazioarteko egoeragatik prezioak asko igotzen direnean (adibidez, 2023-2024an), herrialdeak ez du ahalmen handirik prezioei eusteko.
 
--	Cuando el indicador disponible para la CA de Euskadi no está alineado con la metodología del indicador oficial de las Naciones Unidas. En estos casos se utiliza un proxy o medición sustitutiva, pero en ocasiones no mide lo mismo.
--	Cuando no existe una serie temporal suficiente para evaluar el progreso. 
--	Cuando la evaluación descontextualizada no es posible, dada la complejidad del tema. Por ejemplo, es el caso del indicador 2.c.1 Indicador de anomalías en los precios de los alimentos. Este indicador pretende medir la actuación de un país para mantener estables los precios de los mercados, pero cuando los precios aumentan mucho por la situación internacional (por ejemplo, en 2023-2024), el país no tiene gran capacidad para mantener los precios. 
+###Datu eskuragarririk ez
 
-###Datos no disponibles
+Gaur egun ez dago adierazle horretarako daturik, baina iturri desberdinak aztertzen ari dira laster datuak emateko.
 
-Actualmente no existen datos para este indicador, pero se están estudiando distintas fuentes para ofrecer datos próximamente.
+###Ez aplikagarria
 
-###No aplicable
-
-Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:
-
--	No corresponde, por su nivel de desarrollo: Por ejemplo, el indicador 10.6.1 Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales no es adecuado para Euskadi, ya que no es un país en desarrollo.
--	Lo que se quiere medir, no existe o no es significativo: por ejemplo, el indicador 3.3.3 Incidencia de la malaria por cada 1.000 habitantes no es aplicable, puesto que se trata de una enfermedad tropical, inexistente en Euskadi.
--	Se refiere a una norma o estructura institucional que no corresponde a Euskadi: por ejemplo, el indicador 12.4.1 Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos, se refiere a un acuerdo internacional suscrito por los estados, por lo que no se puede aplicar a Euskadi.
--	Se trata de indicadores de medición global: por ejemplo, el indicador 17.10.1 Promedio arancelario mundial ponderado.
+Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi direla medio:
+-	Ez dagokio, duen garapen-mailagatik: adibidez, 10.6.1 adierazlea Garapen bidean dauden herrialdetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan, ez da egokia Euskadirentzat, ez baita garapen bidean dagoen herrialdea.
+-	Neurtu nahi dena, ez dago edo ez da esanguratsua: adibidez, 3.3.3 adierazlea Malariaren intzidentzia 1.000 biztanleko, ez da aplikagarria, gaixotasun tropikala baita, Euskadin ez dagoena.
+-	Euskadiri ez dagokion arau edo egitura instituzional bati buruzkoa da: adibidez, 12.4.1 adierazlea Hondakin arriskutsuei eta beste produktu kimiko batzuei buruzko nazioarteko ingurumen-akordio aldeaniztunetan konpromisoak eta informazioa transmititzeko betebeharrak betetzen dituzten alderdien kopurua, akordio horietako bakoitzean eskatzen den bezala, estatuek sinatutako nazioarteko akordio bati dagokio, eta, beraz, ezin zaio Euskadiri aplikatu.
+-	Neurketa globaleko adierazleak dira: adibidez, 17.10.1 adierazlea Munduko batez besteko muga-zerga haztatua.
 
 <br><br>  
 
 
-### Consideraciones y excepciones  
-Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:  
+### Kontsiderazioak eta salbuespenak  
+Datuen izaera dela eta, zenbait gogoeta eta salbuespen definitu dira:  
 
-1. Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.
-2. Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta. 
-3. Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.   
-4. A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.   
-5. Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (*y*).  
-6. Se requiere un mínimo de dos años de datos para calcular la medida de progreso. 
-7. Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.  
-8. Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.  
-9. A los indicadores binarios se les asignará una de estas 2 categorías:  
-   a. “Meta alcanzada” en caso afirmativo.   
-   b. “Estancamiento o retroceso” si es “no”.  
-10. Excepciones específicas:
+1. Azken urteko balioak helburua betetzen duenean, helburua lortu dela ulertuko da, azken urteetako joera gorabehera.
+2. Azken urteko balioa % 0 edo % 100 ingurukoa denean ( % 1eko gehieneko aldea), helburua hori izanik, helmuga lortu dela ulertuko da.
+3. 2015ean daturik ez dagoenean, 2015aren ondoren edo aurretik eskuragarri dagoen lehen urtea erabiltzen da, gutxienez 2 balio izatea ahalbidetzen duena.
+4. Ez bada helburu datarik zehazten, suposatuko da 2030 dela helburu epea.
+5. Helburuko urtea iragana bada, helmugako metodologia erabiliz ebaluatzen da (y) helmugako urtera arte.
+6. Gutxienez bi urteko datuak behar dira aurrerapen-neurria kalkulatzeko. 
+7. Aurrerapen-estimazioek errealitatea gehiegi sinplifikatzen dute. Beharrezkoa da aurrerapenari testuingurua ematea beste informazio batzuekin.
+8. Datuek politiken eragina islatzeko denbora behar da; denbora-seriea zenbat eta luzeagoa izan, orduan eta hobea izango da aurrerapena neurtzeko metodologia.
+9. Adierazle bitarrei bi kategoria hauetako bat esleituko zaie:
+  a. "Lortutako helburua" baiezkoa bada.
+  b. "Geldialdia edo atzerakada", ezezkoa bada.
+ 
+10. Salbuespen espezifikoak:
 
 
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-fymr">nº indicador</th>
-    <th class="tg-fymr">Título del indicador</th>
-    <th class="tg-fymr">Meta</th>
+    <th class="tg-fymr">Adierazle zkia.</th>
+    <th class="tg-fymr">Adierazlearen izena	Helmuga</th>
+    <th class="tg-fymr">Helmuga</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td class="tg-0pky">1.a.2</td>
-    <td class="tg-0pky">Proporción del gasto público total que se dedica a servicios esenciales (educación, salud y protección social)   </td>
-    <td class="tg-0pky">Se ha considerado como meta la media de de la UE para el indicador </td>
+    <td class="tg-0pky">Funtsezko zerbitzuetara (hezkuntza, osasuna eta gizarte-babesa) bideratzen den guztizko gastu publikoaren proportzioa</td>
+    <td class="tg-0pky">Helburutzat hartu da EBren batez bestekoa adierazlearentzat</td>
   </tr>
   <tr>
     <td class="tg-0pky">5.4.1 </td>
-    <td class="tg-0pky">Proporción de tiempo dedicado al trabajo doméstico y asistencial no remunerado, desglosada por sexo, edad y ubicación </td>
-    <td class="tg-0pky">Para poder calcular el progreso hacia el objetivo de reparto equitativo de las funciones parentales y las responsabilidades familiares, se valora la relación entre la proporción de tiempo de las mujeres y el de los hombres, con un objetivo deseado de 1</td>
+    <td class="tg-0pky">Etxeko lanetan eta ordaindu gabeko laguntzan emandako denboraren proportzioa, sexuaren, adinaren eta kokapenaren arabera banakatuta</td>
+    <td class="tg-0pky">Guraso-funtzioak eta familia-erantzukizunak modu ekitatiboan banatzeko helbururantz egindako aurrerapena kalkulatu ahal izateko, emakumeen eta gizonen denbora-proportzioaren arteko erlazioa balioesten da, 1eko balioa helburu desiragarritzat hartuta</td>
   </tr>
 </tbody>
 </table>
