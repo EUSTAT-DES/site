@@ -1,5 +1,5 @@
 ---
-title: About Sustainable Development indicators
+title: Available information about the indicators
 language: en
 permalink: /en/aurkezpena/
 layout: page
