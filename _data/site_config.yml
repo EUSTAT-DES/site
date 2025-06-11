@@ -235,7 +235,7 @@ news:
   category_links: false
 observation_attributes:
   - field: COMMENT_OBS
-    label: indicator.Nota
+    label: indicator.footnote
 progress_status:
   status_heading: status.progress_status
   status_help: status.progress_status
