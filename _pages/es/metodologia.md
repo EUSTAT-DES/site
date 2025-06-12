@@ -5,13 +5,13 @@ permalink: /es/metodologia/
 layout: page
 ---
 
-## Medición del progreso  
+## 1. Medición del progreso  
 
 Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.  
 
-Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar sus esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.
+Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar los esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.
  
-## Metodología  
+## 2. Metodología  
    
 Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
 [nota técnica sobre la medición del progreso de 2023](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) utilizada por la División de Estadística de Naciones Unidas.  
@@ -24,11 +24,11 @@ Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas par
 
 La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.  
 
-### Indicadores con valores objetivo para 2030
+### 2.1 Indicadores con valores objetivo para 2030
 
 Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:
 
-$$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1$$
+$$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1$$ 
 
 <p>A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:</p>
 
@@ -71,7 +71,6 @@ Por último, se asigna una puntuación a la serie según los siguientes criterio
 </table>
 
 <br><br>  
-
 Donde:
 <br><br> 
 $𝑏$ es el año base (normalmente 2015)<br>
@@ -82,7 +81,7 @@ $𝑣_{2030}$ es el valor objetivo para 2030<br>
 $𝑣_{2030}^{e}$ es el valor esperado para 2030
 
 <br><br> 
-### Indicadores sin valores objetivo numéricos 
+### 2.2 Indicadores sin valores objetivo numéricos 
 
 Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:
 
@@ -118,7 +117,6 @@ A continuación, se asigna una puntuación al indicador según los siguientes cr
 <br><br> 
 <p>Si el descenso es deseable:</p>
 
-
 <table class="tg">
 <thead>
   <tr>
@@ -145,6 +143,8 @@ A continuación, se asigna una puntuación al indicador según los siguientes cr
 <br><br>
 En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
 
+
+### 2.3 Categorías de progreso
 
 Las categorías de progreso asignadas se describen a continuación:
 
@@ -181,7 +181,16 @@ Las categorías de progreso asignadas se describen a continuación:
 </table>
 
 <br>
-### No evaluado
+#### 2.3.1 Meta alcanzada o en vías de alcanzarla
+La meta está alcanzada o está en vías de alcanzarla para 2030.
+
+#### 2.3.2 Progreso razonable, pero es necesario acelerarlo
+Ha habido un progreso en el indicador, pero para alcanzar la meta en 2030 es necesario acelerar el progreso
+
+#### 2.3.3 Estancamiento o retroceso
+No ha habido progreso o se ha retrocedido y es improbable que se alcance la meta en 2030.
+
+#### 2.3.4 No evaluado
 
 En algunos casos no es posible medir el progreso de manera fiable u objetiva:
 
@@ -189,11 +198,11 @@ En algunos casos no es posible medir el progreso de manera fiable u objetiva:
 -	Cuando no existe una serie temporal suficiente para evaluar el progreso. 
 -	Cuando la evaluación descontextualizada no es posible, dada la complejidad del tema. Por ejemplo, es el caso del indicador 2.c.1 Indicador de anomalías en los precios de los alimentos. Este indicador pretende medir la actuación de un país para mantener estables los precios de los mercados, pero cuando los precios aumentan mucho por la situación internacional (por ejemplo, en 2023-2024), el país no tiene gran capacidad para mantener los precios. 
 
-### Datos no disponibles
+#### 2.3.5 Datos no disponibles
 
 Actualmente no existen datos para este indicador, pero se están estudiando distintas fuentes para ofrecer datos próximamente.
 
-### No aplicable
+#### 2.3.6 No aplicable
 
 Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:
 
@@ -205,7 +214,7 @@ Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motiv
 <br><br>    
 
 
-### Consideraciones y excepciones    
+### 2.4 Consideraciones y excepciones    
 Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:  
 
 1. Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.
