@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250612112449">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250612124011">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -385,13 +385,13 @@ data-event-label="high"
         
 
 
-    <h2 id="medición-del-progreso">Medición del progreso</h2>
+    <h2 id="1-medición-del-progreso">1. Medición del progreso</h2>
 
 <p>Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.</p>
 
-<p>Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar sus esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.</p>
+<p>Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar los esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.</p>
 
-<h2 id="metodología">Metodología</h2>
+<h2 id="2-metodología">2. Metodología</h2>
 
 <p>Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
 <a href="https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf">nota técnica sobre la medición del progreso de 2023</a> utilizada por la División de Estadística de Naciones Unidas.</p>
@@ -404,7 +404,7 @@ data-event-label="high"
 
 <p>La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.</p>
 
-<h3 id="indicadores-con-valores-objetivo-para-2030">Indicadores con valores objetivo para 2030</h3>
+<h3 id="21-indicadores-con-valores-objetivo-para-2030">2.1 Indicadores con valores objetivo para 2030</h3>
 
 <p>Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:</p>
 
@@ -449,9 +449,8 @@ data-event-label="high"
 </tbody>
 </table>
 
-<p><br /><br /></p>
-
-<p>Donde:
+<p><br /><br /><br />
+Donde:
 <br /><br /> 
 $𝑏$ es el año base (normalmente 2015)<br />
 $𝑡$ es el último año para el que hay dato (por ejemplo: 2022)<br />
@@ -461,7 +460,7 @@ $𝑣_{2030}$ es el valor objetivo para 2030<br />
 $𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
 
 <p><br /><br /></p>
-<h3 id="indicadores-sin-valores-objetivo-numéricos">Indicadores sin valores objetivo numéricos</h3>
+<h3 id="22-indicadores-sin-valores-objetivo-numéricos">2.2 Indicadores sin valores objetivo numéricos</h3>
 
 <p>Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:</p>
 
@@ -523,6 +522,8 @@ $𝑣_{2030}^{e}$ es el valor esperado para 2030</p>
 <p><br /><br />
 En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.</p>
 
+<h3 id="23-categorías-de-progreso">2.3 Categorías de progreso</h3>
+
 <p>Las categorías de progreso asignadas se describen a continuación:</p>
 
 <table class="tg">
@@ -558,7 +559,16 @@ En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo,
 </table>
 
 <p><br /></p>
-<h3 id="no-evaluado">No evaluado</h3>
+<h4 id="231-meta-alcanzada-o-en-vías-de-alcanzarla">2.3.1 Meta alcanzada o en vías de alcanzarla</h4>
+<p>La meta está alcanzada o está en vías de alcanzarla para 2030.</p>
+
+<h4 id="232-progreso-razonable-pero-es-necesario-acelerarlo">2.3.2 Progreso razonable, pero es necesario acelerarlo</h4>
+<p>Ha habido un progreso en el indicador, pero para alcanzar la meta en 2030 es necesario acelerar el progreso</p>
+
+<h4 id="233-estancamiento-o-retroceso">2.3.3 Estancamiento o retroceso</h4>
+<p>No ha habido progreso o se ha retrocedido y es improbable que se alcance la meta en 2030.</p>
+
+<h4 id="234-no-evaluado">2.3.4 No evaluado</h4>
 
 <p>En algunos casos no es posible medir el progreso de manera fiable u objetiva:</p>
 
@@ -568,11 +578,11 @@ En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo,
   <li>Cuando la evaluación descontextualizada no es posible, dada la complejidad del tema. Por ejemplo, es el caso del indicador 2.c.1 Indicador de anomalías en los precios de los alimentos. Este indicador pretende medir la actuación de un país para mantener estables los precios de los mercados, pero cuando los precios aumentan mucho por la situación internacional (por ejemplo, en 2023-2024), el país no tiene gran capacidad para mantener los precios.</li>
 </ul>
 
-<h3 id="datos-no-disponibles">Datos no disponibles</h3>
+<h4 id="235-datos-no-disponibles">2.3.5 Datos no disponibles</h4>
 
 <p>Actualmente no existen datos para este indicador, pero se están estudiando distintas fuentes para ofrecer datos próximamente.</p>
 
-<h3 id="no-aplicable">No aplicable</h3>
+<h4 id="236-no-aplicable">2.3.6 No aplicable</h4>
 
 <p>Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:</p>
 
@@ -585,7 +595,7 @@ En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo,
 
 <p><br /><br /></p>
 
-<h3 id="consideraciones-y-excepciones">Consideraciones y excepciones</h3>
+<h3 id="24-consideraciones-y-excepciones">2.4 Consideraciones y excepciones</h3>
 <p>Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:</p>
 
 <ol>
@@ -733,7 +743,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250612112449'></script>
+<script src='/site/assets/js/sdg.js?v=20250612124011'></script>
 
 
 <script>
@@ -753,7 +763,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250612112449"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250612124011"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
