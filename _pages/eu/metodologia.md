@@ -16,9 +16,14 @@ Adierazle bakoitzaren aurrerapena hurbiletik neurtzeak erakusten du non ari gare
 ## Metodologia  
    
 Ebaluazio sinple eta gardena egiteko asmoz, Nazio Batuen Estatistika Unitateak erabiltzen duen  
-[aurrerapenaren neurketari buruzko ohar teknikoan](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf)oinarritutako metodologia garatu da.
+[aurrerapenaren neurketari buruzko ohar teknikoan](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf)oinarritutako metodologia garatu da. 
+
+GJHen aurrerapena ebaluatzean, zenbait daturen noranzko normatiboak adierazten du haien balioarentzat nahi den emaitza. Balio altuago bat desiragarria da noranzko normatibo gero eta handiagoa duten datu-serieetarako; kontrakoa gertatzen da noranzko normatibo gero eta txikiagoa dutenetarako. Adierazle edo serie bakoitzerako nahi den helbidea [2024ko aurrerapenaren neurketari buruzko ohar tekniko](https://unstats.un.org/sdgs/files/report/2024/Technical_Note_for_Progress_Assessment_2024.pdf)tik  hartu da. 
+
 Adierazle batek hainbat datu-serie eta/edo desagregazio izan ditzake (adina, sexua, kokapena, etab.). Kasu horietan, aurrerapena ebaluatzeko, Euskal Autonomia Erkidegoko biztanle guztiak hobekien islatzen dituzten serieen eta desagregazioen datuak baino ez dira hautatzen.
+
 Nazio Batuek mundu osorako ezarritako helburua aplikatzen da Euskal Autonomia Erkidegoan.
+
 Ebaluazioak puntuazio bat ematen dio adierazle bakoitzari. 2030erako zenbakizko helburuak dituzten adierazleak eta ez dituztenak bereizten dira.
   
 
@@ -180,18 +185,18 @@ Hona hemen esleitutako aurrerapen-kategoriak:
 </table>
 
 <br>
-###Ebaluatu gabe
+### Ebaluatu gabe
 
 Kasu batzuetan, ezinezkoa da aurrerapena modu fidagarrian edo objektiboan neurtzea:
 -	Euskal Autonomia Erkidegorako eskuragarri dagoen adierazlea Nazio Batuen adierazle ofizialaren metodologiarekin lerrokatuta ez dagoenean. Kasu horietan proxy edo ordezko neurketa bat erabiltzen da, baina batzuetan ez du gauza bera neurtzen.
 -	Aurrerapena ebaluatzeko denborazko serie nahikorik ez dagoenean.
 -	Testuingurutik kanpoko ebaluazioa ezinezkoa denean, gaiaren konplexutasuna dela eta. Adibidez, 2.c.1 adierazlearen kasua da (Elikagaien prezioen anomalien adierazlea). Adierazle honek neurtu nahi duten herrialde batek egiten duena merkatuen prezioak egonkor mantentzeko, baina nazioarteko egoeragatik prezioak asko igotzen direnean (adibidez, 2023-2024an), herrialdeak ez du ahalmen handirik prezioei eusteko.
 
-###Datu eskuragarririk ez
+### Datu eskuragarririk ez
 
 Gaur egun ez dago adierazle horretarako daturik, baina iturri desberdinak aztertzen ari dira laster datuak emateko.
 
-###Ez aplikagarria
+### Ez aplikagarria
 
 Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi direla medio:
 -	Ez dagokio, duen garapen-mailagatik: adibidez, 10.6.1 adierazlea Garapen bidean dauden herrialdetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan, ez da egokia Euskadirentzat, ez baita garapen bidean dagoen herrialdea.
