@@ -181,7 +181,7 @@ Las categorías de progreso asignadas se describen a continuación:
 </table>
 
 <br>
-###No evaluado
+### No evaluado
 
 En algunos casos no es posible medir el progreso de manera fiable u objetiva:
 
@@ -189,11 +189,11 @@ En algunos casos no es posible medir el progreso de manera fiable u objetiva:
 -	Cuando no existe una serie temporal suficiente para evaluar el progreso. 
 -	Cuando la evaluación descontextualizada no es posible, dada la complejidad del tema. Por ejemplo, es el caso del indicador 2.c.1 Indicador de anomalías en los precios de los alimentos. Este indicador pretende medir la actuación de un país para mantener estables los precios de los mercados, pero cuando los precios aumentan mucho por la situación internacional (por ejemplo, en 2023-2024), el país no tiene gran capacidad para mantener los precios. 
 
-###Datos no disponibles
+### Datos no disponibles
 
 Actualmente no existen datos para este indicador, pero se están estudiando distintas fuentes para ofrecer datos próximamente.
 
-###No aplicable
+### No aplicable
 
 Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:
 
