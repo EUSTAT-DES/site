@@ -7,15 +7,15 @@ layout: page
 
 
 
-## Aurrerapenaren neurketa 
+## 1. Aurrerapenaren neurketa 
 
-Aurrerapena informazio fidagarriarekin neurtu eta jarraipena egitea funtsezkoa da Euskal Autonomia Erkidegoa GJHak lortzeko bidean aurrera nola doan ulertzeko.
+Aurrerapena informazio fidagarriarekin neurtu eta jarraipena egitea funtsezkoa da Euskal Autonomia Erkidegoa GJHak lortzeko bidean aurrera nola doan ulertzeko. 
 Adierazle bakoitzaren aurrerapena hurbiletik neurtzeak erakusten du non ari garen aurrera egiten, eta zer arlotan ez den aurrerapenik lortzen ari eta zertan zentratu behar diren ahaleginak. Horrez gain, aukera ematen du Euskal Autonomia Erkidegoa 2030 Agenda nola gauzatzean ari den modu ireki eta gardenean jakinarazteko. Jarraipen-txostena helburu desberdinak lortzeko politiken eta ekintzen arrakasta hobeto ulertzeko tresna izan daiteke. Halaber, seinale argia izan daiteke, ebidentzian oinarritutako politika eraginkorrak doitu edo garatu ahal izateko, eta hala, helburuak lortzen direla bermatzen laguntzeko.
 
  
-## Metodologia  
+## 2. Metodologia  
    
-Ebaluazio sinple eta gardena egiteko asmoz, Nazio Batuen Estatistika Unitateak erabiltzen duen  
+Ebaluazio sinple eta gardena egiteko asmoz, Nazio Batuen Estatistika Dibisioak erabiltzen duen  
 [aurrerapenaren neurketari buruzko ohar teknikoan](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf)oinarritutako metodologia garatu da. 
 
 GJHen aurrerapena ebaluatzean, zenbait daturen noranzko normatiboak adierazten du haien balioarentzat nahi den emaitza. Balio altuago bat desiragarria da noranzko normatibo gero eta handiagoa duten datu-serieetarako; kontrakoa gertatzen da noranzko normatibo gero eta txikiagoa dutenetarako. Adierazle edo serie bakoitzerako nahi den helbidea [2024ko aurrerapenaren neurketari buruzko ohar tekniko](https://unstats.un.org/sdgs/files/report/2024/Technical_Note_for_Progress_Assessment_2024.pdf)tik  hartu da. 
@@ -27,7 +27,7 @@ Nazio Batuek mundu osorako ezarritako helburua aplikatzen da Euskal Autonomia Er
 Ebaluazioak puntuazio bat ematen dio adierazle bakoitzari. 2030erako zenbakizko helburuak dituzten adierazleak eta ez dituztenak bereizten dira.
   
 
-### 2030erako helburu-balioak dituzten adierazleak
+### 2.1 2030erako helburu-balioak dituzten adierazleak
 
 2030erako helburu-balioak dituzten adierazleentzat, gutxienez bi datu-puntu desberdin baldin badituzte (bat oinarri-lerrorako, normalean 2015, eta beste bat azken urterako), hazkunde-tasen kalkuluaren bidez puntuazio bat esleitzen zaie. Horretarako, lehenik eta behin, erreferentzia-urtearen (b) eta datuak eskuragarri dauden azken urtearen (t) arteko urteko hazkunde-tasa konposatu erreala (𝐶𝐴𝐺𝑅𝑎) kalkulatzen da:
 
@@ -75,7 +75,7 @@ Azkenik, serieari puntuazio bat ematen zaio, irizpide hauen arabera:
 
 <br><br>  
 
-Donde:
+Non:
 <br><br> 
 𝑏 da oinarri-urtea (normalean 2015)<br>
 𝑡 da datua eskuragarri dagoen azken urtea (adibidez: 2022)<br>
@@ -85,7 +85,7 @@ $𝑣_{2030}$ da 2030erako helburu-balioa<br>
 $𝑣_{2030}^{e}$ da 2030erako espero den balioa
 
 <br><br> 
-### Zenbakizko helburu-baliorik gabeko adierazleak 
+### 2.2 Zenbakizko helburu-baliorik gabeko adierazleak 
 
 2030erako helburu-baliorik ez duten eta gutxienez bi datu-puntu dituzten adierazleei puntuazio bat ematen zaie, urteko hazkunde-tasa konposatua kalkulatuz. Lehenik, oinarrizko lerroaren (b) eta datuak eskuragarri dauden azken urtearen (t) arteko urteko hazkunde-tasa konposatu erreala kalkulatzen da:
 
@@ -119,9 +119,7 @@ Igoera desiragarria bada:
 </tbody>
 </table>
 
-
 Jaitsiera desiragarria bada:<br>
-
 
 <table class="tg">
 <thead>
@@ -149,6 +147,8 @@ Jaitsiera desiragarria bada:<br>
 <br><br>
 Kasu batzuetan, serieko balioak hazkunde-tasak dira (adibidez, 8.1.1 adierazlea: biztanleko BPGren urteko hazkunde-tasa). Hazkunde-tasen CAGR kalkulatzeak ez luke zentzurik, eta adituen irizpidea erabiltzen da puntuazioa esleitzeko.
 
+
+### 2.3 Aurrerapen-kategoriak
 
 Hona hemen esleitutako aurrerapen-kategoriak:
 
@@ -185,18 +185,28 @@ Hona hemen esleitutako aurrerapen-kategoriak:
 </table>
 
 <br>
-### Ebaluatu gabe
+
+#### 2.3.1 Erdietsi den edo erdiesteko bidean dagoen helmuga
+Helmuga erdietsi da, edo 2030erako erdiesteko bidean dago.
+
+#### 2.3.2 Arrazoizko aurrerapena, baina bizkortu egin behar da
+Adierazlean aurrerapena egon da, baina 2030ean helmugara erdietsi ahal izateko, aurrerapena bizkortu egin behar da.
+
+#### 2.3.3 Geldialdia edo atzerakada
+Ez da aurrerapenik izan edo atzera egin da eta ez da espero 2030ean helmuga erdiestea.
+
+#### 2.3.4 Ebaluatu gabe
 
 Kasu batzuetan, ezinezkoa da aurrerapena modu fidagarrian edo objektiboan neurtzea:
 -	Euskal Autonomia Erkidegorako eskuragarri dagoen adierazlea Nazio Batuen adierazle ofizialaren metodologiarekin lerrokatuta ez dagoenean. Kasu horietan proxy edo ordezko neurketa bat erabiltzen da, baina batzuetan ez du gauza bera neurtzen.
 -	Aurrerapena ebaluatzeko denborazko serie nahikorik ez dagoenean.
 -	Testuingurutik kanpoko ebaluazioa ezinezkoa denean, gaiaren konplexutasuna dela eta. Adibidez, 2.c.1 adierazlearen kasua da (Elikagaien prezioen anomalien adierazlea). Adierazle honek neurtu nahi duten herrialde batek egiten duena merkatuen prezioak egonkor mantentzeko, baina nazioarteko egoeragatik prezioak asko igotzen direnean (adibidez, 2023-2024an), herrialdeak ez du ahalmen handirik prezioei eusteko.
 
-### Datu eskuragarririk ez
+#### 2.3.5 Datu eskuragarririk ez
 
 Gaur egun ez dago adierazle horretarako daturik, baina iturri desberdinak aztertzen ari dira laster datuak emateko.
 
-### Ez aplikagarria
+### 2.3.6 Ez aplikagarria
 
 Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi direla medio:
 -	Ez dagokio, duen garapen-mailagatik: adibidez, 10.6.1 adierazlea Garapen bidean dauden herrialdetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan, ez da egokia Euskadirentzat, ez baita garapen bidean dagoen herrialdea.
@@ -206,22 +216,20 @@ Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi
 
 <br><br>  
 
-
-### Kontsiderazioak eta salbuespenak  
+### 2.4 Kontsiderazioak eta salbuespenak  
 Datuen izaera dela eta, zenbait gogoeta eta salbuespen definitu dira:  
 
-1. Azken urteko balioak helburua betetzen duenean, helburua lortu dela ulertuko da, azken urteetako joera gorabehera.
+1. Azken urteko balioak helburua betetzen duenean, helmuga erdietsi dela ulertuko da, azken urteetako joera gorabehera.
 2. Azken urteko balioa % 0 edo % 100 ingurukoa denean ( % 1eko gehieneko aldea), helburua hori izanik, helmuga lortu dela ulertuko da.
 3. 2015ean daturik ez dagoenean, 2015aren ondoren edo aurretik eskuragarri dagoen lehen urtea erabiltzen da, gutxienez 2 balio izatea ahalbidetzen duena.
 4. Ez bada helburu datarik zehazten, suposatuko da 2030 dela helburu epea.
-5. Helburuko urtea iragana bada, helmugako metodologia erabiliz ebaluatzen da (y) helmugako urtera arte.
+5. Helburu urtea iragana bada, helmugako metodologia erabiliz ebaluatzen da (y) helmugako urtera arte.
 6. Gutxienez bi urteko datuak behar dira aurrerapen-neurria kalkulatzeko. 
 7. Aurrerapen-estimazioek errealitatea gehiegi sinplifikatzen dute. Beharrezkoa da aurrerapenari testuingurua ematea beste informazio batzuekin.
 8. Datuek politiken eragina islatzeko denbora behar da; denbora-seriea zenbat eta luzeagoa izan, orduan eta hobea izango da aurrerapena neurtzeko metodologia.
 9. Adierazle bitarrei bi kategoria hauetako bat esleituko zaie:
-  a. "Lortutako helburua" baiezkoa bada.
+  a. "Erdietsitako helmuga" baiezkoa bada.
   b. "Geldialdia edo atzerakada", ezezkoa bada.
- 
 10. Salbuespen espezifikoak:
 
 
@@ -237,7 +245,7 @@ Datuen izaera dela eta, zenbait gogoeta eta salbuespen definitu dira:
   <tr>
     <td class="tg-0pky">1.a.2</td>
     <td class="tg-0pky">Funtsezko zerbitzuetara (hezkuntza, osasuna eta gizarte-babesa) bideratzen den guztizko gastu publikoaren proportzioa</td>
-    <td class="tg-0pky">Helburutzat hartu da EBren batez bestekoa adierazlearentzat</td>
+    <td class="tg-0pky">Helmugatzat hartu da EBren batez bestekoa adierazlearentzat</td>
   </tr>
   <tr>
     <td class="tg-0pky">5.4.1 </td>
