@@ -5,7 +5,7 @@ permalink: /agenda2030/
 layout: page
 ---
 
-Nazio Batuetako estatu kide guztiek 2015ean onartutako [Garapen Jasangarrirako 2030 Agendak](https://www.un.org/sustainabledevelopment/es/) ekonomia, gizartea eta ingurumena modu jasangarrian hobetzeko programa bat eskaintzen du. Funtsean, Garapen Jasangarrirako 17 Helburuak (GJH) ekintzarako dei unibertsala dira, pobreziari amaiera emateko, planeta babesteko eta mundu osoko pertsona guztiek bakeaz eta oparotasunaz gozatzeko aukera izan dezaten bermatzeko.
+Nazio Batuetako estatu kide guztiek 2015ean onartutako [Garapen Jasangarrirako 2030 Agendak](https://www.un.org/sustainabledevelopment/) ekonomia, gizartea eta ingurumena modu jasangarrian hobetzeko programa bat eskaintzen du. Funtsean, Garapen Jasangarrirako 17 Helburuak (GJH) ekintzarako dei unibertsala dira, pobreziari amaiera emateko, planeta babesteko eta mundu osoko pertsona guztiek bakeaz eta oparotasunaz gozatzeko aukera izan dezaten bermatzeko.
 
 Helburuen oinarrian munduko adierazle-marko bat da, jarraipena egin eta aurrerapenei buruzko informazioa ematea ahalbidetzen duena. Gizarte-, ingurumen- eta ekonomia-gai ugari biltzen dituzte, besteak beste, pobrezia, gosea, osasuna, hezkuntza, gizarte-berdintasuna, berrikuntza, klima-aldaketa, biodibertsitatea eta justizia, ahulenen ikuspegitik eta inor atzean ez uzteko konpromisoarekin. Era berean, gobernuei eskatzen zaie inplementazio planak garatzeko, GJHak lortzeko beraien testuinguru eta lehentasun espezifikoei heltzen dieten adierazleak ere barnera ditzaketenak. 
 

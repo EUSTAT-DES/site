@@ -26,4 +26,4 @@ Adierazle bakoitzaren orrialdearen behealdean erlaitz hauek agertzen dira:
 
 ### GJHetako aurrerapenaren ebaluazioa
 
-Plataformak jarraipen-txosten bat du, Euskal Autonomia Erkidegoan Garapen Jasangarrirako Helburuak (GJH) lortzeko egindako aurrerapenaren deskribapen orokorra ematen duena. Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus [Aurrerapena neurtzeko metodologia](https://eustat-des.github.io/site/metodologia/)
+Plataformak jarraipen-txosten bat du, Euskal Autonomia Erkidegoan Garapen Jasangarrirako Helburuak (GJH) lortzeko egindako aurrerapenaren deskribapen orokorra ematen duena. Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus [Garapen Jasangarrirako Helburuen aurrerapenaren neurketa](https://eustat-des.github.io/site/metodologia/)
