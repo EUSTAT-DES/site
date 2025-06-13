@@ -46,7 +46,6 @@ Por último, se asigna una puntuación a la serie según los siguientes criterio
 .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
-
 <table class="tg">
 <thead>
   <tr>
@@ -69,7 +68,6 @@ Por último, se asigna una puntuación a la serie según los siguientes criterio
   </tr>
 </tbody>
 </table>
-
 <br><br>  
 Donde:
 <br><br> 
@@ -79,7 +77,6 @@ $𝑣_{b}$ es el valor base en el año b<br>
 $𝑣_{𝑡}$ es el valor del último año 𝑡<br>
 $𝑣_{2030}$ es el valor objetivo para 2030<br>
 $𝑣_{2030}^{e}$ es el valor esperado para 2030
-
 <br><br> 
 ### 2.2 Indicadores sin valores objetivo numéricos 
 
@@ -212,7 +209,6 @@ Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motiv
 -	Se trata de indicadores de medición global: por ejemplo, el indicador 17.10.1 Promedio arancelario mundial ponderado.
 
 <br><br>    
-
 
 ### 2.4 Consideraciones y excepciones    
 Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:  
