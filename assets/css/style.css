@@ -2832,6 +2832,14 @@ header .container {
   padding: 0px 10vw 50px !important;
   text-align: justify; }
 
+.main-content-pages h1,
+.main-content-pages h2,
+.main-content-pages h3,
+.main-content-pages h4,
+.main-content-pages h5,
+.main-content-pages h6 {
+  text-align: left; }
+
 .frontpage-goals-grid {
   margin: 0px 0 20px 0; }
 
