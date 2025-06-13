@@ -10,6 +10,7 @@ layout: page
 ## 1. Aurrerapenaren neurketa 
 
 Aurrerapena informazio fidagarriarekin neurtu eta jarraipena egitea funtsezkoa da Euskal Autonomia Erkidegoa GJHak lortzeko bidean aurrera nola doan ulertzeko. 
+
 Adierazle bakoitzaren aurrerapena hurbiletik neurtzeak erakusten du non ari garen aurrera egiten, eta zer arlotan ez den aurrerapenik lortzen ari eta zertan zentratu behar diren ahaleginak. Horrez gain, aukera ematen du Euskal Autonomia Erkidegoa 2030 Agenda nola gauzatzean ari den modu ireki eta gardenean jakinarazteko. Jarraipen-txostena helburu desberdinak lortzeko politiken eta ekintzen arrakasta hobeto ulertzeko tresna izan daiteke. Halaber, seinale argia izan daiteke, ebidentzian oinarritutako politika eraginkorrak doitu edo garatu ahal izateko, eta hala, helburuak lortzen direla bermatzen laguntzeko.
 
  
@@ -49,7 +50,6 @@ Azkenik, serieari puntuazio bat ematen zaio, irizpide hauen arabera:
 .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
-
 <table class="tg">
 <thead>
   <tr>
@@ -72,9 +72,7 @@ Azkenik, serieari puntuazio bat ematen zaio, irizpide hauen arabera:
   </tr>
 </tbody>
 </table>
-
 <br><br>  
-
 Non:
 <br><br> 
 𝑏 da oinarri-urtea (normalean 2015)<br>
@@ -83,7 +81,6 @@ Non:
 𝑣𝑡 da 𝑡 azken urteko balioa<br>
 $𝑣_{2030}$ da 2030erako helburu-balioa<br>
 $𝑣_{2030}^{e}$ da 2030erako espero den balioa
-
 <br><br> 
 ### 2.2 Zenbakizko helburu-baliorik gabeko adierazleak 
 
@@ -206,14 +203,13 @@ Kasu batzuetan, ezinezkoa da aurrerapena modu fidagarrian edo objektiboan neurtz
 
 Gaur egun ez dago adierazle horretarako daturik, baina iturri desberdinak aztertzen ari dira laster datuak emateko.
 
-### 2.3.6 Ez aplikagarria
+#### 2.3.6 Ez aplikagarria
 
 Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi direla medio:
 -	Ez dagokio, duen garapen-mailagatik: adibidez, 10.6.1 adierazlea Garapen bidean dauden herrialdetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan, ez da egokia Euskadirentzat, ez baita garapen bidean dagoen herrialdea.
 -	Neurtu nahi dena, ez dago edo ez da esanguratsua: adibidez, 3.3.3 adierazlea Malariaren intzidentzia 1.000 biztanleko, ez da aplikagarria, gaixotasun tropikala baita, Euskadin ez dagoena.
 -	Euskadiri ez dagokion arau edo egitura instituzional bati buruzkoa da: adibidez, 12.4.1 adierazlea Hondakin arriskutsuei eta beste produktu kimiko batzuei buruzko nazioarteko ingurumen-akordio aldeaniztunetan konpromisoak eta informazioa transmititzeko betebeharrak betetzen dituzten alderdien kopurua, akordio horietako bakoitzean eskatzen den bezala, estatuek sinatutako nazioarteko akordio bati dagokio, eta, beraz, ezin zaio Euskadiri aplikatu.
 -	Neurketa globaleko adierazleak dira: adibidez, 17.10.1 adierazlea Munduko batez besteko muga-zerga haztatua.
-
 <br><br>  
 
 ### 2.4 Kontsiderazioak eta salbuespenak  
