@@ -82,7 +82,9 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @return null
  */
 function updateHeadlineColor(contrast, chartInfo, indicatorId) {
-    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
+    var matches = indicatorId.match(/(\d+)-/);
+    var goalNumber = matches ? parseInt(matches[1]) : 1;
+
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
