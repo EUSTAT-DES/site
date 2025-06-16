@@ -47,7 +47,7 @@
             this.allDisaggregations = this.getAllDisaggregations();
             this.hasSeries = (this.allSeries.length > 0);
             this.hasUnits = (this.allUnits.length > 0);
-            this.hasDisaggregations = this.hasDissagregationsWithValues();
+            this.hasDisaggregations = this.hasDisaggregationsWithValues();
             this.hasDisaggregationsWithMultipleValuesFlag = this.hasDisaggregationsWithMultipleValues();
         },
 
