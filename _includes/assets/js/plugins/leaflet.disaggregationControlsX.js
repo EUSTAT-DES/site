@@ -171,7 +171,7 @@
             return valuesInOrder;
         },
 
-        hasDissagregationsWithValues: function () {
+        hasDisaggregationsWithValues: function () {
             var hasDisaggregations = false;
             this.allDisaggregations.forEach(function(disaggregation) {
                 if (disaggregation.values.length > 0 && disaggregation.values[0] !== '') {
