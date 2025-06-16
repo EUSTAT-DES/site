@@ -52,9 +52,7 @@
         },
 
         getFeatures: function() {
-            return this.plugin.getVisibleLayers().toGeoJSON().features.filter(function(feature) {
-                return typeof feature.properties.disaggregations !== 'undefined';
-            });
+            return this.plugin.getVisibleLayers().toGeoJSON().features;);
         },
 
         getStartingDisaggregation: function(features, startValues) {
