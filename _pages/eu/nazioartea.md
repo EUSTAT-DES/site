@@ -5,7 +5,6 @@ language: eu
 permalink: /nazioartea/
 ---
 
-## GJH Nazioarteko erakundeetan 
 
 **Nazio Batuen Erakundea**
 - [SDG Global Database](https://unstats.un.org/sdgs/dataportal)
