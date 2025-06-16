@@ -54,7 +54,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     maxZoom: 10,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
-    noValueColor: '#f0f0f0',
+    noValueColor: '#66f0f0f0',
     styleNormal: {
       weight: 1,
       opacity: 1,
@@ -104,15 +104,16 @@ opensdg.autotrack = function(preset, category, action, label) {
           break;
         }
       }
-      if (overrideColorRange && typeof colorRange === 'function') {
-        var indicatorId = options.indicatorId.replace('indicator_', ''),
-            indicatorIdParts = indicatorId.split('-'),
-            goalId = (indicatorIdParts.length > 0) ? indicatorIdParts[0] : null,
-            indicatorIdDots = indicatorIdParts.join('.');
-        colorRange = colorRange(indicatorIdDots, goalId);
-      }
       options.mapOptions.colorRange = (overrideColorRange) ? colorRange : defaults.colorRange;
     }
+
+    // Support multiple colorsets
+    if (Array.isArray(options.mapOptions.colorRange[0])) {
+      this.goalNumber = parseInt(options.indicatorId.slice(options.indicatorId.indexOf('_')+1,options.indicatorId.indexOf('-')));
+      options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber-1];
+      console.log("goal: ",this.goalNumber);
+    }
+
 
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     this.mapLayers = [];
@@ -120,16 +121,16 @@ opensdg.autotrack = function(preset, category, action, label) {
     this._precision = options.precision;
     this.precisionItems = options.precisionItems;
     this._decimalSeparator = options.decimalSeparator;
+    this._thousandsSeparator = options.thousandsSeparator;
     this.currentDisaggregation = 0;
     this.dataSchema = options.dataSchema;
     this.viewHelpers = options.viewHelpers;
     this.modelHelpers = options.modelHelpers;
     this.chartTitles = options.chartTitles;
+    this.chartSubtitles = options.chartSubtitles;
     this.proxy = options.proxy;
     this.proxySerieses = options.proxySerieses;
     this.startValues = options.startValues;
-    this.configObsAttributes = [{"field":"COMMENT_OBS","label":"indicator.footnote"}];
-    this.allObservationAttributes = options.allObservationAttributes;
 
     // Require at least one geoLayer.
     if (!options.mapLayers || !options.mapLayers.length) {
@@ -166,18 +167,21 @@ opensdg.autotrack = function(preset, category, action, label) {
       var currentSeries = this.disaggregationControls.getCurrentSeries(),
           currentUnit = this.disaggregationControls.getCurrentUnit(),
           newTitle = null;
+          newSubtitle = null;
       if (this.modelHelpers.GRAPH_TITLE_FROM_SERIES) {
         newTitle = currentSeries;
       }
       else {
         var currentTitle = $('#map-heading').text();
+        var currentSubtitle = $('#map-subheading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
       if (newTitle) {
-        if (this.proxy === 'proxy' || this.proxySerieses.includes(currentSeries)) {
-            newTitle += ' ' + this.viewHelpers.PROXY_PILL;
-        }
-        $('#map-heading').html(newTitle);
+        $('#map-heading').text(newTitle);
+      }
+      if (newSubtitle) {
+        $('#map-subheading').text(newSubtitle);
       }
     },
 
@@ -211,27 +215,9 @@ opensdg.autotrack = function(preset, category, action, label) {
     getTooltipContent: function(feature) {
       var tooltipContent = feature.properties.name;
       var tooltipData = this.getData(feature.properties);
-      var plugin = this;
       if (typeof tooltipData === 'number') {
         tooltipContent += ': ' + this.alterData(tooltipData);
       }
-      if (feature.properties.observation_attributes) {
-        var obsAtts = feature.properties.observation_attributes[plugin.currentDisaggregation][plugin.currentYear],
-            footnoteNumbers = [];
-        if (obsAtts) {
-          Object.keys(obsAtts).forEach(function(field) {
-            if (obsAtts[field]) {
-              var hashKey = field + '|' + obsAtts[field];
-              var footnoteNumber = plugin.allObservationAttributes[hashKey].footnoteNumber;
-              footnoteNumbers.push(plugin.viewHelpers.getObservationAttributeFootnoteSymbol(footnoteNumber));
-            }
-          });
-          if (footnoteNumbers.length > 0) {
-            tooltipContent += ' ' + footnoteNumbers.join(' ');
-          }
-        }
-      }
-
       return tooltipContent;
     },
 
@@ -330,21 +316,15 @@ opensdg.autotrack = function(preset, category, action, label) {
       opensdg.dataDisplayAlterations.forEach(function(callback) {
         value = callback(value);
       });
-      if (typeof value !== 'number') {
-        if (this._precision || this._precision === 0) {
-          value = Number.parseFloat(value).toFixed(this._precision);
-        }
-        if (this._decimalSeparator) {
-          value = value.toString().replace('.', this._decimalSeparator);
-        }
+      if (this._precision || this._precision === 0) {
+        value = Number((+(Math.round(+(value + 'e' + this._precision)) + 'e' + -this._precision)).toFixed(this._precision));
+        value = Number.parseFloat(value).toFixed(this._precision);
       }
-      else {
-        var localeOpts = {};
-        if (this._precision || this._precision === 0) {
-            localeOpts.minimumFractionDigits = this._precision;
-            localeOpts.maximumFractionDigits = this._precision;
-        }
-        value = value.toLocaleString(opensdg.language, localeOpts);
+      if (this._decimalSeparator) {
+        value = value.toString().replace('.', this._decimalSeparator);
+      }
+      if (this._thousandsSeparator) {
+        value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, this._thousandsSeparator);
       }
       return value;
     },
@@ -613,6 +593,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
         else {
           plugin.updateTitle();
+          plugin.updateFooterFields();
           plugin.updatePrecision();
         }
 
@@ -1241,28 +1222,28 @@ $(document).ready(function() {
     });
 });
 opensdg.chartColors = function(indicatorId) {
-  var colorSet = "accessible";
-  var numberOfColors = 0;
+  var colorSet = "goal";
+  var numberOfColors = 9;
   var customColorList = [];
 
   this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
-  this.goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
-                ['e5b735', '896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
-                ['4c9f38', '2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'],
-                ['c5192d', '760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'],
-                ['ff3a21', 'b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'],
-                ['26bde2', '167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'],
-                ['fcc30b', '977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'],
-                ['a21942', '610f27', 'c7758d', '610F28', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'],
-                ['fd6925', '973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'],
-                ['dd1367', '840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'd5358b', '580729', 'f1a0c2'],
-                ['fd9d24', '653e0e', 'fed7a7', 'b16d19', 'fdba65', 'b14a1e', 'fd976b', '000000', 'fed2bf'],
-                ['c9992d', '785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'],
-                ['3f7e44', '254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'],
-                ['0a97d9', '065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'],
-                ['56c02b', '337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'],
-                ['00689d', '00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'],
-                ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
+  this.goalColors = [['891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
+                ['896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
+                ['2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'],
+                ['760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'],
+                ['b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'],
+                ['167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'],
+                ['977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'],
+                ['610f27', 'c7758d', 'ecd1d9', '811434', 'b44667', '400a1a', '400a1a', 'd9a3b3'],
+                ['973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'],
+                ['840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'd5358b', '580729', 'f1a0c2'],
+                ['653e0e', 'fed7a7', 'b16d19', 'fdba65', 'b14a1e', 'fd976b', '000000', 'fed2bf'],
+                ['785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'],
+                ['254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'],
+                ['065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'],
+                ['337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'],
+                ['00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'],
+                ['0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
   this.colorSets = {'classic':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdg':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
                   'goal': this.goalColors[this.goalNumber-1],
@@ -3292,7 +3273,7 @@ var mapView = function () {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
-      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":14,"tileURL":"https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png","tileOptions":{"id":"","accessToken":"","attribution":"<a href=\"https://www.geo.euskadi.eus/\" title=\"Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi\">geoEuskadi</a>"},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":""}},
+      mapOptions: {"disaggregation_controls":true,"minZoom":5,"maxZoom":14,"tileURL":"https://www.geo.euskadi.eus/geoeuskadi/rest/services/U11/WMTS_GRIS/MapServer/WMTS/tile/1.0.0/U11_WMTS_GRIS/default/default028mm/{z}/{y}/{x}.png","tileOptions":{"id":"","accessToken":"","attribution":"<a href=\"https://www.geo.euskadi.eus/\" title=\"Eusko Jaurlaritza/Gobierno Vasco - geoEuskadi\">geoEuskadi</a>"},"colorRange":[["#FCE9EB","#F7BDC4","#F2929D","#ED6676","#E83A4F","#E5243B","#B71D2F","#891623","#5C0E18","#2E070C"],["#FCF8EB","#F7E9C2","#F2DB9A","#EDCD72","#E8BE49","#E5B735","#CEA530","#A08025","#735C1B","#453710"],["#EDF5EB","#C9E2C3","#A6CF9C","#82BC74","#5EA94C","#4C9F38","#3D7F2D","#2E5F22","#1E4016","#0F200B"],["#F9E8EA","#EEBAC0","#E28C96","#D65E6C","#CB3042","#C5192D","#9E1424","#760F1B","#4F0A12","#270509"],["#FFEBE9","#FFC4BC","#FF9D90","#FF7564","#FF4E37","#FF3A21","#CC2E1A","#992314","#66170D","#330C07"],["#E9F8FB","#BEEBF6","#93DEF0","#67D1EA","#3CC4E5","#26BDE2","#1E97B5","#177188","#0F4C5A","#08262D"],["#FFF9E7","#FEEDB6","#FEE185","#FDD554","#FCC923","#FCC30B","#CA9C09","#977507","#654E04","#322702"],["#F6E8EC","#E3BAC6","#D18CA1","#BE5E7B","#AB3055","#A21942","#821435","#610F28","#410A1A","#20050D"],["#FFF0E9","#FED2BE","#FEB492","#FE9666","#FD783B","#FD6925","#CA541E","#983F16","#652A0F","#331507"],["#FCE7F0","#F5B8D1","#EE89B3","#E75A95","#E02B76","#DD1367","#B10F52","#850B3E","#580829","#2C0415"],["#FFF5E6","#FEE2B3","#FECE80","#FEBA4D","#FDA71A","#FD9D00","#CA7E00","#985E00","#653F00","#331F00"],["#FAF5EA","#EFE0C0","#E4CC96","#D9B86C","#CEA342","#C9992D","#A17A24","#795C1B","#503D12","#281F09"],["#ECF2EC","#C5D8C7","#9FBFA2","#79A57C","#528B57","#3F7E44","#326536","#264C29","#19321B","#0D190E"],["#E7F5FB","#B6E0F4","#85CBEC","#54B6E4","#23A1DD","#0A97D9","#0879AE","#065B82","#043C57","#021E2B"],["#EEF9EA","#CCECBF","#ABE095","#89D36B","#67C640","#56C02B","#459A22","#34731A","#224D11","#112609"],["#E6F0F5","#B3D2E2","#80B4CE","#4D95BA","#1A77A7","#00689D","#00537E","#003E5E","#002A3F","#00151F"],["#E8EDF0","#BAC8D2","#8CA4B5","#5E7F97","#305A79","#19486A","#143A55","#0F2B40","#0A1D2A","#050E15"]],"noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":""}},
       mapLayers: [{"subfolder":"Territorio","label":"indicator.territorio","min_zoom":5,"max_zoom":6,"staticBorders":true},{"subfolder":"Comarca","label":"indicator.comarca","min_zoom":7,"max_zoom":8,"staticBorders":true},{"subfolder":"Municipio","label":"indicator.municipio","min_zoom":9,"max_zoom":14,"staticBorders":true}],
       precision: precision,
       precisionItems: precisionItems,
@@ -3553,10 +3534,20 @@ function alterChartConfig(config, info) {
  */
 function updateChartTitle(chartTitle, isProxy) {
     if (typeof chartTitle !== 'undefined') {
-        if (isProxy) {
-            chartTitle += ' ' + PROXY_PILL;
-        }
-        $('.chart-title').html(chartTitle);
+      if (isProxy) {
+          chartTitle += ' ' + PROXY_PILL;
+      }
+      $('.chart-title').html(chartTitle);
+    }
+}
+
+/**
+ * @param {String} chartSubtitle
+ * @return null
+ */
+function updateChartSubtitle(chartSubtitle) {
+    if (typeof chartSubtitle !== 'undefined') {
+        $('.chart-subtitle').text(chartSubtitle);
     }
 }
 
@@ -3605,6 +3596,26 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
 }
 
 /**
+ * @param {String} contrast
+ * @param {Object} chartInfo
+ * @return null
+ */
+function updateHeadlineColor(contrast, chartInfo, indicatorId) {
+    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
+    if (chartInfo.data.datasets.length > 0) {
+        var firstDataset = chartInfo.data.datasets[0];
+        var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
+        if (isHeadline) {
+            var newColor = getHeadlineColor(contrast, goalNumber);
+            firstDataset.backgroundColor = newColor;
+            firstDataset.borderColor = newColor;
+            firstDataset.pointBackgroundColor = newColor;
+            firstDataset.pointBorderColor = newColor;
+        }
+    }
+}
+
+/**
  * @param {Array} unit
  * @return null
  */
@@ -3630,29 +3641,18 @@ function updateIndicatorDataSeriesStatus(series) {
 
 /**
  * @param {String} contrast
- * @param {Object} chartInfo
- * @return null
- */
-function updateHeadlineColor(contrast, chartInfo) {
-    if (chartInfo.data.datasets.length > 0) {
-        var firstDataset = chartInfo.data.datasets[0];
-        var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
-        if (isHeadline) {
-            var newColor = getHeadlineColor(contrast);
-            firstDataset.backgroundColor = newColor;
-            firstDataset.borderColor = newColor;
-            firstDataset.pointBackgroundColor = newColor;
-            firstDataset.pointBorderColor = newColor;
-        }
-    }
-}
-
-/**
- * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
-function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '#55a6e5' : '#004466';
+//Override: No Headline Color
+//function getHeadlineColor(contrast) {
+    //return isHighContrast(contrast) ? '#55a6e5' : '#e5243b#dda63a#4c9f38#c5192d#ff3a21#26bde2#fcc30b#a21942#fd6925#dd1367#fd9d24#bf8b2e#3f7e44#0a97d9#56c02b#00689d#19486a';
+function getHeadlineColor(contrast, goalNumber) {
+
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
+  var headlineColor = headlineColors[goalNumber-1];
+  var htmlString = '' + headlineColor + '';
+  console.log("goalNumber: ", htmlString);
+    return isHighContrast(contrast) ? '#55a6e5' : htmlString;
 }
 
 /**
@@ -3684,7 +3684,7 @@ function setPlotEvents(chartInfo) {
     window.addEventListener('contrastChange', function (e) {
         var gridColor = getGridColor(e.detail);
         var tickColor = getTickColor(e.detail);
-        updateHeadlineColor(e.detail, VIEW._chartInstance);
+        updateHeadlineColor(e.detail, VIEW._chartInstance, chartInfo.indicatorId);
         updateGraphAnnotationColors(e.detail, VIEW._chartInstance);
         VIEW._chartInstance.options.scales.y.title.color = tickColor;
         VIEW._chartInstance.options.scales.x.title.color = tickColor;
@@ -3701,7 +3701,7 @@ function setPlotEvents(chartInfo) {
         $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
     });
 
-    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
+    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload');
     createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
     createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
 
@@ -3764,10 +3764,15 @@ function createPlot(chartInfo, helpers) {
     alterChartConfig(chartConfig, chartInfo);
     if (isHighContrast()) {
         updateGraphAnnotationColors('high', chartConfig);
-        updateHeadlineColor('high', chartConfig);
+        //Override: No headline color
+        //updateHeadlineColor('high', chartConfig);
+        updateHeadlineColor('high', chartConfig, chartInfo.indicatorId);
+
     }
     else {
-        updateHeadlineColor('default', chartConfig);
+      //Override: No headline color
+      //updateHeadlineColor('default', chartConfig);
+      updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
     }
     refreshChartLineWrapping(chartConfig);
 
@@ -3788,8 +3793,11 @@ function createPlot(chartInfo, helpers) {
         createPlot(chartInfo);
         return;
     }
+
     updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
-    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    // Override: No headline color
+    //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig, chartInfo.indicatorId);
 
     if (chartInfo.selectedUnit) {
         updatedConfig.options.scales.y.title.text = translations.t(chartInfo.selectedUnit);
@@ -3840,7 +3848,8 @@ function generateChartLegend(chart) {
     text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
     _.each(chart.data.datasets, function (dataset) {
         text.push('<li>');
-        text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+        //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+        text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
         text.push('</span>');
         text.push(translations.t(dataset.label));
