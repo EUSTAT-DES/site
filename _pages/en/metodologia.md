@@ -69,7 +69,7 @@ Finally, a score is assigned to the series according to the following criteria:
 </tbody>
 </table>
 <br><br>  
-Donde:
+Where:
 <br><br> 
 $𝑏$ is the base year (usually 2015)<br>
 $𝑡$ is the last year for which there is data (for example: 2022)<br>
