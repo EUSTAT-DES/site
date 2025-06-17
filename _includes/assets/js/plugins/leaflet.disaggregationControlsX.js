@@ -47,12 +47,14 @@
             this.allDisaggregations = this.getAllDisaggregations();
             this.hasSeries = (this.allSeries.length > 0);
             this.hasUnits = (this.allUnits.length > 0);
-            this.hasDisaggregations = this.hasDisaggregationsWithValues();
+            this.hasDisaggregations = this.hasDissagregationsWithValues();
             this.hasDisaggregationsWithMultipleValuesFlag = this.hasDisaggregationsWithMultipleValues();
         },
 
         getFeatures: function() {
-            return this.plugin.getVisibleLayers().toGeoJSON().features;);
+            return this.plugin.getVisibleLayers().toGeoJSON().features.filter(function(feature) {
+                return typeof feature.properties.disaggregations !== 'undefined';
+            });
         },
 
         getStartingDisaggregation: function(features, startValues) {
@@ -171,7 +173,7 @@
             return valuesInOrder;
         },
 
-        hasDisaggregationsWithValues: function () {
+        hasDissagregationsWithValues: function () {
             var hasDisaggregations = false;
             this.allDisaggregations.forEach(function(disaggregation) {
                 if (disaggregation.values.length > 0 && disaggregation.values[0] !== '') {
