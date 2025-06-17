@@ -7,8 +7,8 @@ layout: page
 
 
 <div class="container">
-<p>Desagregar significa mostrar los datos de distintas subcategorías por separado, para posibilitar un análisis más detallado; por ejemplo, diferenciando los datos de mujeres y de hombres, o de las personas menores de edad y de las adultas.</p>
-<p>Esta plataforma pretende ofrecer datos desagregados por distintas variables, pero esto no es posible para todos los indicadores.  Esta es la lista de indicadores para los que en estos momentos hay información desagregada por sexo; es una lista en proceso de crecimiento, que irá ampliándose a medida que aumente la disponibilidad de nuevos datos desagregados.</p>
+<p>Disaggregation means showing data from different subcategories separately to enable more detailed analysis; for example, differentiating data for women and men, or for minors and adults.</p>
+<p>This platform aims to offer disaggregated data by different variables, but this is not possible for all indicators. This is the list of indicators for which disaggregated information by sex is currently available; it is a growing list that will be expanded as new disaggregated data become available.</p>
 <br>
 {% assign keyword = site.desagregacion_sexo_keyword[page.language] %}
 {% include components/desagregados.html desagregacion_keyword=keyword %}
