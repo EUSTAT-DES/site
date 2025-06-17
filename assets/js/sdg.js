@@ -738,7 +738,7 @@ opensdg.autotrack = function(preset, category, action, label) {
       display = display && typeof feature.properties.name !== 'undefined';
       display = display && typeof feature.properties.geocode !== 'undefined';
       display = display && typeof feature.properties.values !== 'undefined';
-      display = display && (typeof feature.properties.disaggregations !== 'undefined' || (typeof feature.properties.values !== 'undefined' && feature.properties.values.length > 0));
+      display = display && typeof feature.properties.disaggregations !== 'undefined';
       return display;
     },
 
