@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250618123018">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250618135434">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -2695,13 +2695,13 @@ dituzten adierazle makroekonomiko garrantzitsuak biltzen dituen panel makroekono
             
 <p><b>BPG errealaren urte arteko aldakuntza-tasa</b></p>
 
-\[TVPIB^{t} = \left(\frac{PIB_{2022}^{t}}{PIB_{2022}^{t-1}} - 1 \right) \cdot 100\]
+\[TVBPG^{t} = \left(\frac{BPG_{2022}^{t}}{BPG_{2022}^{t-1}} - 1 \right) \cdot 100\]
 
 <p>non:</p>
 
-<p>$PIB_{2022}^{t} =$ barne-produktu gordina, kateatutako bolumenean, 2022 erreferentziarekin $t$ urtean</p>
+<p>$BPG_{2022}^{t} =$ barne-produktu gordina, kateatutako bolumenean, 2022 erreferentziarekin $t$ urtean</p>
 
-<p>$PIB_{2022}^{t-1} =$ barne-produktu gordina, kateatutako bolumenean, 2022 erreferentziarekin $t-1$ urtean</p>
+<p>$BPG_{2022}^{t-1} =$ barne-produktu gordina, kateatutako bolumenean, 2022 erreferentziarekin $t-1$ urtean</p>
 
 <p><br /></p>
 
@@ -2719,13 +2719,13 @@ dituzten adierazle makroekonomiko garrantzitsuak biltzen dituen panel makroekono
 
 <p><b>Kontsumoko prezioen indizearen urte arteko aldakuntza-tasa</b></p>
 
-\[TVIPC^{t} = \left(\frac{IPC^{t}}{IPC^{t-1}} - 1 \right) \cdot 100\]
+\[TVKPI^{t} = \left(\frac{KPI^{t}}{KPI^{t-1}} - 1 \right) \cdot 100\]
 
 <p>non:</p>
 
-<p>$IPC^{t} =$ kontsumoko prezioen indizea $t$ urtean</p>
+<p>$KPI^{t} =$ kontsumoko prezioen indizea $t$ urtean</p>
 
-<p>$IPC^{t-1} =$ Kontsumoko prezioen indizearen $t-1$ urtean, kontuan hartuta urteko kontsumo-prezioen indizeak hileko kontsumo-prezioen indizeen batez besteko aritmetiko gisa kalkulatzen direla</p>
+<p>$KPI^{t-1} =$ Kontsumoko prezioen indizearen $t-1$ urtean, kontuan hartuta urteko kontsumo-prezioen indizeak hileko kontsumo-prezioen indizeen batez besteko aritmetiko gisa kalkulatzen direla</p>
 
 <p><br /></p>
 
@@ -2733,7 +2733,7 @@ dituzten adierazle makroekonomiko garrantzitsuak biltzen dituen panel makroekono
 
 <p>$VR^{t} =$ atzerrira bidalitako diru-igorpenen bolumena $t$ urtean<br /></p>
 
-<p>$PIB^{t} =$ producto interior bruto a precios corrientes en el año $t$</p>
+<p>$BPG^{t} =$ producto interior bruto a precios corrientes en el año $t$</p>
 
 <p>honakoa adierazten badugu:</p>
 
@@ -2753,19 +2753,19 @@ dituzten adierazle makroekonomiko garrantzitsuak biltzen dituen panel makroekono
 
 <p><b>Administrazio publiko autonomikoaren zor gordina, gehiegizko defizitaren protokoloaren arabera, BPGrekiko proportzioan</b></p>
 
-\[PPIBDBPDE^{t} = \frac{DBPDE^{t}}{PIB^{t}} \cdot 100\]
+\[PBPGDBPDE^{t} = \frac{DBPDE^{t}}{BPG^{t}} \cdot 100\]
 
 <p>non:</p>
 
 <p>$DBPDE^{t} =$ zor gordin publikoa, gehiegizko defizitaren protokoloaren arabera $t$ urtean</p>
 
-<p>$PIB^{t} =$ barne produktu gordina uneko prezioetan $t$ urtean</p>
+<p>$BPG^{t} =$ barne produktu gordina uneko prezioetan $t$ urtean</p>
 
 <p><br /></p>
 
 <p><b>Administrazio publiko autonomikoaren diru-sarrera fiskalak, BPGrekiko proportzioan</b></p>
 
-\[PPIBIF^{t} = \frac{D.211^{t} + D.212^{t} + D.214^{t} + D.29^{t} + D.51^{t} + D.59^{t} + D.91^{t} + D.611^{t} + D.613^{t}}{PIB^{t}} \cdot 100\]
+\[PBPGIF^{t} = \frac{D.211^{t} + D.212^{t} + D.214^{t} + D.29^{t} + D.51^{t} + D.59^{t} + D.91^{t} + D.611^{t} + D.613^{t}}{BPG^{t}} \cdot 100\]
 
 <p>non:</p>
 
@@ -2781,19 +2781,19 @@ dituzten adierazle makroekonomiko garrantzitsuak biltzen dituen panel makroekono
   <li>$D.613^{t} =$ familien konturako gizarte-kotizazio efektiboak $t$ urtean</li>
 </ul>
 
-<p>$PIB^{t} =$ barne produktu gordina uneko prezioetan $t$ urtean</p>
+<p>$BPG^{t} =$ barne produktu gordina uneko prezioetan $t$ urtean</p>
 
 <p><br /></p>
 
 <p><b>Administrazio publiko autonomikoaren zerga-saldoa, BPGrekiko proportzioan</b></p>
 
-\[PPIBSF^{t} = \frac{SF^{t}}{PIB^{t}} \cdot 100\]
+\[PBPGSF^{t} = \frac{SF^{t}}{BPG^{t}} \cdot 100\]
 
 <p>non:</p>
 
 <p>$SF^{t} =$ autonomia-erkidegoetako administrazioen zerga-saldoa (finantzatzeko gaitasuna edo beharra) $t$ urtean</p>
 
-<p>$PIB^{t} =$ barne produktu gordina uneko prezioetan $t$ urtean</p>
+<p>$BPG^{t} =$ barne produktu gordina uneko prezioetan $t$ urtean</p>
 
           
         </td>
@@ -2934,7 +2934,7 @@ dituzten adierazle makroekonomiko garrantzitsuak biltzen dituen panel makroekono
         <th scope="row">Metadatuen azken eguneratze-data </th>
         <td>
           
-            2025/06/06
+            2025/06/18
           
         </td>
         </tr>
@@ -3604,7 +3604,7 @@ Hazkunde ekonomiko indartsuago eta jasangarriago batek langabezia-tasa txikiagoa
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250618123018'></script>
+<script src='/site/assets/js/sdg.js?v=20250618135434'></script>
 
 
 <script>
@@ -3624,7 +3624,7 @@ Hazkunde ekonomiko indartsuago eta jasangarriago batek langabezia-tasa txikiagoa
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250618123018"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250618135434"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
