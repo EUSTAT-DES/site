@@ -157,22 +157,22 @@ Las categorías de progreso asignadas se describen a continuación:
   <tr>
     <td class="tg-0pky">3</td>
     <td class="tg-0pky">Meta alcanzada o en vías de alcanzarla</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" alt="Alcanzado" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/alcanzado.png" alt="Alcanzado" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">2</td>
     <td class="tg-0pky">Progreso razonable, pero es necesario acelerarlo</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="En progreso" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/en_progreso.png" alt="En progreso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">1</td>
     <td class="tg-0pky">Estancamiento o retroceso</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/retroceso.png" alt="Retroceso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky"> - </td>
     <td class="tg-0pky"> No evaluado </td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/no_evaluado.png" alt="No evaluado" width="150"></td>
   </tr>
 </tbody>
 </table>
