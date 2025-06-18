@@ -1,23 +1,21 @@
 ---
 layout: page
-title: ODS en Instituciones Internacionales 
+title: SDG in International Organizations 
 language: en
 permalink: /en/nazioartea/
 ---
 
-ITZULTZEKO
-
-**Naciones Unidas**
+**United Nations**
 - [SDG Global Database](https://unstats.un.org/sdgs/dataportal)
 
 - [Sustainable Development Goals Report 2024](https://unstats.un.org/sdgs/report/2024/)
 
 - [E-Handbook on Sustainable Development Goals Indicators](https://unstats.un.org/sdgs/dataportal)
 
-**Unión Europea**
-- [Indicadores de la Comisión Europea](https://ec.europa.eu/eurostat/web/sdi/overview)
+**European Union**
+- [European Comission Indicators](https://ec.europa.eu/eurostat/web/sdi/overview)
 
-- [Base de datos Eurostat](https://ec.europa.eu/eurostat/web/sdi/database)
+- [Eurostat Data Base](https://ec.europa.eu/eurostat/web/sdi/database)
 
 - [Monitoring report on progress towards the SDGs in an EU context - 2024](https://ec.europa.eu/eurostat/documents/15234730/19397895/KS-05-24-071-EN-N.pdf/730c983a-fa93-6ce2-7905-2379de04f3e9?version=1.0&t=1718611411114)
 
