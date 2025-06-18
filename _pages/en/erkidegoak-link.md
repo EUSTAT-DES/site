@@ -1,27 +1,27 @@
 ---
 layout: page
-title: Indicadores ODS en otras Comunidades Autónomas
+title: SDG in other Autonomous Communities
 language: en
 permalink: /en/erkidegoak/
 ---
 
-ITZULTZEKO
 
-La siguiente lista muestra las Comunidades Autónomas que informan sobre los indicadores de la Agenda 2030:
+The following list shows the Autonomous Communities that report on the 2030 Agenda indicators: 
 
-*   [Andalucía](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm)
-*   [Aragón](https://ods-aragon.github.io/)
-*   [Principado de Asturias](https://sadeiasturias.github.io/indicadores-ods-asturias/)
-*   [Islas Baleares](https://ibestat.es/edatos/apps/ods/)
-*   [Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/)
+*   [Andalusia](https://www.juntadeandalucia.es/institutodeestadisticaycartografia/ods/index.htm)
+*   [Aragon](https://ods-aragon.github.io/)
+*   [Asturias](https://sadeiasturias.github.io/indicadores-ods-asturias/)
+*   [Balearic Islands](https://ibestat.es/edatos/apps/ods/)
+*   [Canary Islands](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/)
 *   [Cantabria](https://ods-cantabria.github.io/ods-cantabria/)
-*   [Castilla-La Mancha](https://estadistica.castillalamancha.es/agenda-2030)
-*   [Castilla y León](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html)
-*   [Cataluña](https://www.idescat.cat/dades/ods/nu/?lang=es)
-*   [Comunidad Valenciana](https://pegv.gva.es/es/ods)
+*   [Castile-La Mancha](https://estadistica.castillalamancha.es/agenda-2030)
+*   [Castile and León](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html)
+*   [Catalonia](https://www.idescat.cat/dades/ods/nu/?lang=es)
+*   [Community of Madrid](https://www.madrid.org/iestadis/ODS/ODS_CM.htm)
 *   [Extremadura](https://www.juntaex.es/ieex/agenda-2030)
+*   [Foral Community of Navarre](https://nastat.navarra.es/es/indicadores/indicadores-ods)
 *   [Galicia](https://www.ige.gal/web/mostrar_marco.jsp?idioma=es&app=ODS)
 *   [La Rioja](https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja)
-*   [Comunidad de Madrid](https://www.madrid.org/iestadis/ODS/ODS_CM.htm)
-*   [Región de Murcia](https://transparencia.carm.es/agenda-2030#gsc.tab=0)
-*   [Comunidad Foral Navarra](https://nastat.navarra.es/es/indicadores/indicadores-ods)
+*   [Murcia Region](https://transparencia.carm.es/agenda-2030#gsc.tab=0)
+*   [Valencian Community](https://pegv.gva.es/es/ods)
+
