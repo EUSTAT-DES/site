@@ -17,7 +17,7 @@ Adierazle bakoitzaren aurrerapena hurbiletik neurtzeak erakusten du non ari gare
 ## 2. Metodologia  
    
 Ebaluazio sinple eta gardena egiteko asmoz, Nazio Batuen Estatistika Dibisioak erabiltzen duen  
-[aurrerapenaren neurketari buruzko ohar teknikoan](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf)oinarritutako metodologia garatu da. 
+[aurrerapenaren neurketari buruzko ohar teknikoan](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) oinarritutako metodologia garatu da. 
 
 GJHen aurrerapena ebaluatzean, zenbait daturen noranzko normatiboak adierazten du haien balioarentzat nahi den emaitza. Balio altuago bat desiragarria da noranzko normatibo gero eta handiagoa duten datu-serieetarako; kontrakoa gertatzen da noranzko normatibo gero eta txikiagoa dutenetarako. Adierazle edo serie bakoitzerako nahi den helbidea [2024ko aurrerapenaren neurketari buruzko ohar tekniko](https://unstats.un.org/sdgs/files/report/2024/Technical_Note_for_Progress_Assessment_2024.pdf)tik  hartu da. 
 
@@ -161,22 +161,22 @@ Hona hemen esleitutako aurrerapen-kategoriak:
   <tr>
     <td class="tg-0pky">3</td>
     <td class="tg-0pky">Lortu den edo lortzeko bidean dagoen helburua</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/alcanzado.png?raw=true" alt="Alcanzado" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/alcanzado.png" alt="Alcanzado" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">2</td>
     <td class="tg-0pky">Arrazoizko aurrerapena, baina bizkortu egin behar da</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/en_progreso.png?raw=true" alt="En progreso" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/en_progreso.png" alt="En progreso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">1</td>
     <td class="tg-0pky">Geldialdia edo atzerakada</td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/retroceso.png?raw=true" alt="Retroceso" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/retroceso.png" alt="Retroceso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky"> - </td>
     <td class="tg-0pky"> Ebaluatu gabe </td>
-    <td class="tg-0pky"><img src="https://github.com/EUSTAT-DES/site/blob/develop/assets/img/progress/no_evaluado.png?raw=true" alt="No evaluado" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/no_evaluado.png" alt="No evaluado" width="150"></td>
   </tr>
 </tbody>
 </table>
