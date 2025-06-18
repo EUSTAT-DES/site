@@ -158,14 +158,6 @@
           "status": "notstarted"
         },
         {
-          "id": "2-2-4",
-          "title": "Prevalence of minimum dietary diversity, by population group (children aged 6 to 23.9 months and non-pregnant women aged 15 to 49 years)",
-          "description": "",
-          "keywords": "",
-          "href": "/site/2-2-4/",
-          "status": "notstarted"
-        },
-        {
           "id": "2-2-E1",
           "title": "Helduen obesitate-tasa, gorputz-masaren indizearen arabera (GMI) (EBren sdg_02_10 adierazlea)",
           "description": "",
@@ -1004,14 +996,6 @@
           "keywords": "",
           "href": "/site/8-9-1/",
           "status": "complete"
-        },
-        {
-          "id": "8-9-2",
-          "title": "Employed persons in the tourism industries",
-          "description": "",
-          "keywords": "",
-          "href": "/site/8-9-2/",
-          "status": "notstarted"
         },
         {
           "id": "8-10-1",
@@ -2223,7 +2207,7 @@
         
         {
           "id": "OCECA-1-2-1-1A",
-          "title": "Pobrezia erlatiboan egoteko arriskuan dauden pertsonen ehunekoa, estatu mailako pobrezia-muga kontuan hartuta",
+          "title": "Pobrezia erlatiboan egoteko arriskuan dauden pertsonen ehunekoa, estatu mailako atalasea kontuan hartuta",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-1-2-1-1A/",
@@ -2231,7 +2215,7 @@
         },
         {
           "id": "OCECA-1-2-1-2A",
-          "title": "Pobrezia erlatiboan egoteko arriskuan dauden pertsonen ehunekoa, alokairua imputatuta, estatu mailako pobrezia-muga kontuan hartuta",
+          "title": "Pobrezia erlatiboan egoteko arriskuan dauden pertsonen ehunekoa, alokairua inputatuta, estatu mailako atalasea kontuan hartuta",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-1-2-1-2A/",
@@ -2239,7 +2223,7 @@
         },
         {
           "id": "OCECA-1-2-1-2B",
-          "title": "Pobrezia erlatiboan egoteko arriskuan dauden pertsonen ehunekoa, alokairua imputatuta, erkidego mailako pobrezia-muga erabilita",
+          "title": "Pobrezia erlatiboan egoteko arriskuan dauden pertsonen ehunekoa, alokairua inputatuta, erkidego mailako atalasea erabilita",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-1-2-1-2B/",
@@ -2247,7 +2231,7 @@
         },
         {
           "id": "OCECA-1-2-2-1A",
-          "title": "Pobreziako edo gizarte-bazterketako arriskuan dauden pertsonen proportzioa: AROPE adierazlea, estatu mailako pobrezia-muga kontuan hartuta",
+          "title": "Pobreziako edo gizarte-bazterketako arriskuan dauden pertsonen proportzioa: AROPE adierazlea, estatu mailako atalasea kontuan hartuta",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-1-2-2-1A/",
