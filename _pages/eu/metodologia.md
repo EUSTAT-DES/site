@@ -161,22 +161,22 @@ Hona hemen esleitutako aurrerapen-kategoriak:
   <tr>
     <td class="tg-0pky">3</td>
     <td class="tg-0pky">Lortu den edo lortzeko bidean dagoen helburua</td>
-    <td class="tg-0pky"><img src="/site/assets/img/progress/alcanzado.png" alt="Alcanzado" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/alcanzado.png" alt="Alcanzado" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">2</td>
     <td class="tg-0pky">Arrazoizko aurrerapena, baina bizkortu egin behar da</td>
-    <td class="tg-0pky"><img src="/site/assets/img/progress/en_progreso.png" alt="En progreso" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/en_progreso.png" alt="En progreso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky">1</td>
     <td class="tg-0pky">Geldialdia edo atzerakada</td>
-    <td class="tg-0pky"><img src="/site/assets/img/progress/retroceso.png" alt="Retroceso" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/retroceso.png" alt="Retroceso" width="150"></td>
   </tr>
   <tr>
     <td class="tg-0pky"> - </td>
     <td class="tg-0pky"> Ebaluatu gabe </td>
-    <td class="tg-0pky"><img src="/site/assets/img/progress/no_evaluado.png" alt="No evaluado" width="150"></td>
+    <td class="tg-0pky"><img src="/assets/img/progress/no_evaluado.png" alt="No evaluado" width="150"></td>
   </tr>
 </tbody>
 </table>
