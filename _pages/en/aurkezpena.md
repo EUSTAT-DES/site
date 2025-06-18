@@ -26,5 +26,5 @@ At the bottom of each indicator page the following tabs are displayed:
 
 ### Assessing progress on the SDGs 
 
-The platform includes a monitoring report that provides an overview of progress toward achieving the Sustainable Development Goals (SDGs) in the Basque Country. For more information on the progress assessment process, see [Measuring progress on the Sustainable Development Goals](/en/metodologia/) 
+The platform includes a monitoring report that provides an overview of progress toward achieving the Sustainable Development Goals (SDGs) in the Basque Country. For more information on the progress assessment process, see [Measuring progress on the Sustainable Development Goals](/site/en/metodologia/) 
 
