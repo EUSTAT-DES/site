@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ODS en Instituciones Internacionales 
+title: ODS en Organizaciones Internacionales 
 language: es
 permalink: /es/nazioartea/
 ---
