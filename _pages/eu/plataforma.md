@@ -21,24 +21,24 @@ Plataforma horren datuak eta metadatuak aurreikusteko eta dokumentatzeko moduko 
 Adierazle jakin baten CSV eta JSON fitxategiak, datuak erabat bereizita azaltzen direla:
 
 - `https://eustat-des.github.io/data/eu/data/**adierazlearen-kodea**.csv`  
-  Adibidea: [https://eustat.github.io/sdg-data-prod/eu/data/1-2-1.csv](https://eustat.github.io/sdg-data-prod/eu/data/1-2-1.csv)
+  Adibidea: [https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.csv](https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.csv)
 
 - `https://eustat-des.github.io/data/eu/data/**adierazlearen-kodea**.json`  
-  Adibidea: [https://eustat.github.io/sdg-data-prod/eu/data/1-2-1.json](https://eustat.github.io/sdg-data-prod/eu/data/1-2-1.json)
+  Adibidea: [https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.json](https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.json)
 
 ###  Deskarga masiboa (ZIP)
 
 Adierazle guztiak jeitsi CSV formatuan:
 
-- [https://eustat.github.io/sdg-data-prod/eu/zip/all_indicators.zip](https://eustat.github.io/sdg-data-prod/eu/zip/all_indicators.zip)
-- [https://eustat.github.io/sdg-data-prod/es/zip/all_indicators.zip](https://eustat.github.io/sdg-data-prod/es/zip/all_indicators.zip)
-- [https://eustat.github.io/sdg-data-prod/en/zip/all_indicators.zip](https://eustat.github.io/sdg-data-prod/en/zip/all_indicators.zip)
+- [https://sdg.eustat.eus/sdg-data-prod/eu/zip/all_indicators.zip](https://sdg.eustat.eus/sdg-data-prod/eu/zip/all_indicators.zip)
+- [https://sdg.eustat.eus/sdg-data-prod/es/zip/all_indicators.zip](https://sdg.eustat.eus/sdg-data-prod/es/zip/all_indicators.zip)
+- [https://sdg.eustat.eus/sdg-data-prod/en/zip/all_indicators.zip](https://sdg.eustat.eus/sdg-data-prod/en/zip/all_indicators.zip)
 
 ### Desagregazioak jasotzen dituen txostena
 
 Datuetan erabilitako desagregazio guztiei buruzko informazioa erakusten duten taulak, dimentsioaren/kategoriaren eta adierazlearen arabera (txostena ingelesez bakarrik):
 
-- [https://eustat.github.io/sdg-data-prod/disaggregations.html](https://eustat.github.io/sdg-data-prod/disaggregations.html)
+- [https://sdg.eustat.eus/sdg-data-prod/disaggregations.html](https://sdg.eustat.eus/sdg-data-prod/disaggregations.html)
 
 ## Irisgarritasuna
 

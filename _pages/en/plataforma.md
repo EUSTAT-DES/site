@@ -20,23 +20,23 @@ The data and metadata on this platform are available through predictable and doc
 CSV and JSON files with fully disaggregated data:
 
 - `https://eustat-des.github.io/data/en/data/**indicatorcode**.csv`  
-  Example: [https://eustat.github.io/sdg-data-prod/en/data/1-2-1.csv](https://eustat.github.io/sdg-data-prod/en/data/1-2-1.csv)
+  Example: [https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.csv](https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.csv)
 
 - `https://eustat-des.github.io/data/en/data/**indicatorcode**.json`  
-  Example: [https://eustat.github.io/sdg-data-prod/en/data/1-2-1.json](https://eustat.github.io/sdg-data-prod/en/data/1-2-1.json)
+  Example: [https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.json](https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.json)
 
 ### Bulk Download (ZIP)
 All indicators in CSV format:
 
-- [https://eustat.github.io/sdg-data-prod/en/zip/all_indicators.zip](https://eustat.github.io/sdg-data-prod/en/zip/all_indicators.zip)
-- [https://eustat.github.io/sdg-data-prod/es/zip/all_indicators.zip](https://eustat.github.io/sdg-data-prod/es/zip/all_indicators.zip)
-- [https://eustat.github.io/sdg-data-prod/eu/zip/all_indicators.zip](https://eustat.github.io/sdg-data-prod/eu/zip/all_indicators.zip)  
+- [https://sdg.eustat.eus/sdg-data-prod/en/zip/all_indicators.zip](https://sdg.eustat.eus/sdg-data-prod/en/zip/all_indicators.zip)
+- [https://sdg.eustat.eus/sdg-data-prod/es/zip/all_indicators.zip](https://sdg.eustat.eus/sdg-data-prod/es/zip/all_indicators.zip)
+- [https://sdg.eustat.eus/sdg-data-prod/eu/zip/all_indicators.zip](https://sdg.eustat.eus/sdg-data-prod/eu/zip/all_indicators.zip)  
 
 ### Disaggregations Report
 
 Tables showing information about all disaggregations used in the data, by dimension/category and by indicator.
 
-- [https://eustat.github.io/sdg-data-prod/disaggregations.html](https://eustat.github.io/sdg-data-prod/disaggregations.html)
+- [https://sdg.eustat.eus/sdg-data-prod/disaggregations.html](https://sdg.eustat.eus/sdg-data-prod/disaggregations.html)
 
 ## Accessibility
 
