@@ -160,7 +160,7 @@ Hona hemen esleitutako aurrerapen-kategoriak:
 <tbody>
   <tr>
     <td class="tg-0pky">3</td>
-    <td class="tg-0pky">Lortu den edo lortzeko bidean dagoen helburua</td>
+    <td class="tg-0pky">Xedea lortuta edo lortzeko bidean</td>
     <td class="tg-0pky"><img src="https://raw.githubusercontent.com/EUSTAT-DES/site/develop/assets/img/progress/alcanzado.png" alt="Alcanzado" width="150"></td>
   </tr>
   <tr>
@@ -183,14 +183,14 @@ Hona hemen esleitutako aurrerapen-kategoriak:
 
 <br>
 
-#### 2.3.1 Erdietsi den edo erdiesteko bidean dagoen helmuga
-Helmuga erdietsi da, edo 2030erako erdiesteko bidean dago.
+#### 2.3.1 Xedea lortuta edo lortzeko bidean
+Xedea lortu da, edo 2030erako lortzeko bidean dago.
 
 #### 2.3.2 Arrazoizko aurrerapena, baina bizkortu egin behar da
-Adierazlean aurrerapena egon da, baina 2030ean helmugara erdietsi ahal izateko, aurrerapena bizkortu egin behar da.
+Adierazlean aurrera egin da, baina 2030ean xedea lortu ahal izateko, aurrerapena bizkortu egin behar da.
 
 #### 2.3.3 Geldialdia edo atzerakada
-Ez da aurrerapenik izan edo atzera egin da eta ez da espero 2030ean helmuga erdiestea.
+Ez da aurrerapenik izan edo atzera egin da eta ez da espero 2030ean xedea lortzea.
 
 #### 2.3.4 Ebaluatu gabe
 
@@ -206,7 +206,7 @@ Gaur egun ez dago adierazle horretarako daturik, baina iturri desberdinak aztert
 #### 2.3.6 Ez aplikagarria
 
 Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi direla medio:
--	Ez dagokio, duen garapen-mailagatik: adibidez, 10.6.1 adierazlea Garapen bidean dauden herrialdetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan, ez da egokia Euskadirentzat, ez baita garapen bidean dagoen herrialdea.
+-	Ez dagokio, garapen-mailagatik: adibidez, 10.6.1 adierazlea Garapen bidean dauden herrialdetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan, ez da egokia Euskadirentzat, ez baita garapen bidean dagoen herrialdea.
 -	Neurtu nahi dena, ez dago edo ez da esanguratsua: adibidez, 3.3.3 adierazlea Malariaren intzidentzia 1.000 biztanleko, ez da aplikagarria, gaixotasun tropikala baita, Euskadin ez dagoena.
 -	Euskadiri ez dagokion arau edo egitura instituzional bati buruzkoa da: adibidez, 12.4.1 adierazlea Hondakin arriskutsuei eta beste produktu kimiko batzuei buruzko nazioarteko ingurumen-akordio aldeaniztunetan konpromisoak eta informazioa transmititzeko betebeharrak betetzen dituzten alderdien kopurua, akordio horietako bakoitzean eskatzen den bezala, estatuek sinatutako nazioarteko akordio bati dagokio, eta, beraz, ezin zaio Euskadiri aplikatu.
 -	Neurketa globaleko adierazleak dira: adibidez, 17.10.1 adierazlea Munduko batez besteko muga-zerga haztatua.
@@ -215,8 +215,8 @@ Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi
 ### 2.4 Kontsiderazioak eta salbuespenak  
 Datuen izaera dela eta, zenbait gogoeta eta salbuespen definitu dira:  
 
-1. Azken urteko balioak helburua betetzen duenean, helmuga erdietsi dela ulertuko da, azken urteetako joera gorabehera.
-2. Azken urteko balioa % 0 edo % 100 ingurukoa denean ( % 1eko gehieneko aldea), helburua hori izanik, helmuga lortu dela ulertuko da.
+1. Azken urteko balioak helburua betetzen duenean, xedea lortu dela ulertuko da, azken urteetako joera gorabehera.
+2. Azken urteko balioa % 0 edo % 100 ingurukoa denean ( % 1eko gehieneko aldea), helburua hori izanik, xedea lortu dela ulertuko da.
 3. 2015ean daturik ez dagoenean, 2015aren ondoren edo aurretik eskuragarri dagoen lehen urtea erabiltzen da, gutxienez 2 balio izatea ahalbidetzen duena.
 4. Ez bada helburu datarik zehazten, suposatuko da 2030 dela helburu epea.
 5. Helburu urtea iragana bada, helmugako metodologia erabiliz ebaluatzen da (y) helmugako urtera arte.
@@ -224,24 +224,24 @@ Datuen izaera dela eta, zenbait gogoeta eta salbuespen definitu dira:
 7. Aurrerapen-estimazioek errealitatea gehiegi sinplifikatzen dute. Beharrezkoa da aurrerapenari testuingurua ematea beste informazio batzuekin.
 8. Datuek politiken eragina islatzeko denbora behar da; denbora-seriea zenbat eta luzeagoa izan, orduan eta hobea izango da aurrerapena neurtzeko metodologia.
 9. Adierazle bitarrei bi kategoria hauetako bat esleituko zaie:
-  a. "Erdietsitako helmuga" baiezkoa bada.
-  b. "Geldialdia edo atzerakada", ezezkoa bada.
+  a. Baiezkoa bada, "Xedea lortuta".
+  b. Ezezkoa bada, "Geldialdia edo atzerakada".
 10. Salbuespen espezifikoak:
 
 
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-fymr">Adierazle zkia.</th>
-    <th class="tg-fymr">Adierazlearen izena	Helmuga</th>
-    <th class="tg-fymr">Helmuga</th>
+    <th class="tg-fymr">Adierazle zk.</th>
+    <th class="tg-fymr">Adierazlearen izena</th>
+    <th class="tg-fymr">Xedea</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td class="tg-0pky">1.a.2</td>
-    <td class="tg-0pky">Funtsezko zerbitzuetara (hezkuntza, osasuna eta gizarte-babesa) bideratzen den guztizko gastu publikoaren proportzioa</td>
-    <td class="tg-0pky">Helmugatzat hartu da EBren batez bestekoa adierazlearentzat</td>
+    <td class="tg-0pky">Oinarrizko zerbitzuetara (hezkuntza, osasuna eta gizarte-babesa) bideratzen den guztizko gastu publikoaren proportzioa</td>
+    <td class="tg-0pky">Xedetzat hartu da EBko batez bestekoa adierazlean</td>
   </tr>
   <tr>
     <td class="tg-0pky">5.4.1 </td>
