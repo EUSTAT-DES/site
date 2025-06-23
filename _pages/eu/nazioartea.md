@@ -18,6 +18,6 @@ permalink: /nazioartea/
 
 - [Eurostat datubasea](https://ec.europa.eu/eurostat/web/sdi/database)
 
-- [Monitoring report on progress towards the SDGs in an EU context - 2024](https://ec.europa.eu/eurostat/documents/15234730/19397895/KS-05-24-071-EN-N.pdf/730c983a-fa93-6ce2-7905-2379de04f3e9?version=1.0&t=1718611411114)
+- [Monitoring report on progress towards the SDGs in an EU context - 2025](https://ec.europa.eu/eurostat/documents/15234730/21637496/KS-01-24-018-EN-N.pdf/897a6d1f-d3b7-0b34-86b0-0cdaec00e494?version=1.0&t=1748938863594)
 
-- [Overview of progress towards the SDGs in an EU context - 2024](https://ec.europa.eu/eurostat/documents/4031688/19398139/KS-05-24-072-EN-N.pdf/021a09dd-277d-87d1-e347-867f0263ab59?version=1.1&t=1718618520865)
+- [Overview of progress towards the SDGs in an EU context - 2025](https://ec.europa.eu/eurostat/documents/4031688/21633693/KS-01-24-019-EN-N.pdf/f9dadd64-0f61-0ccf-3a17-0faef59f2cd9?version=1.0&t=1748954046467)
