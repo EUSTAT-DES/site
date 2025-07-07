@@ -52,7 +52,7 @@ En "Fuentes de datos" se encuentran enlaces a la organización u organizaciones 
 ## Evaluación del progreso en los ODS
 
 La plataforma incorpora un informe de seguimiento que proporciona una descripción general del progreso en la consecución de los Objetivos de Desarrollo Sostenible (ODS) en la Comunidad Autónoma de Euskadi. 
-Para saber más sobre el procedimiento para evaluar el progreso, ver  [Metodología para la medición del progreso](https://eustat-des.github.io/site/metodologia/).
+Para saber más sobre el procedimiento para evaluar el progreso, ver  [Metodología para la medición del progreso]({{site.baseurl}}/metodologia/).
 
 ## ¿Cada cuánto tiempo se actualizan los datos?
 
