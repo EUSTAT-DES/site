@@ -31,7 +31,7 @@ Los objetivos se sustentan en un marco de indicadores mundiales que permiten hac
 
 ## Indicadores disponibles en la C.A. de Euskadi
 
-Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno Vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye un número importante de indicadores cuya metodología ha sido armonizada con todos los órganos centrales de estadística de las Comunidades Autónomas, garantizando así la plena comparabilidad directa de estos indicadores a nivel regional. [Acuerdo de los órganos centrales de estadística de las CCAA (pdf, 14Kb)](/site/assets/doc/OCECA_es.pdf).
+Para apoyar la implementación interna en la Comunidad Autónoma de Euskadi de los ODS con los que el Gobierno Vasco se ha comprometido, se ha desarrollado un marco de indicadores que incluye un número importante de indicadores cuya metodología ha sido armonizada con todos los órganos centrales de estadística de las Comunidades Autónomas, garantizando así la plena comparabilidad directa de estos indicadores a nivel regional. [Acuerdo de los órganos centrales de estadística de las CCAA (pdf, 14Kb)]({{site.baseurl}}/assets/doc/OCECA_es.pdf).
 
 Se incluyen también indicadores de seguimiento de las ambiciones y objetivos del Gobierno Vasco, elaborados en coordinación con el [Foro Multiagente de Transición Social y Agenda 2030 en Euskadi](https://www.euskadi.eus/foro-multiagente/web01-a2lehetr/es/).
 
@@ -56,7 +56,7 @@ En "Fuentes de datos" se encuentran enlaces a la organización u organizaciones 
 ## Evaluación del progreso en los ODS
 
 La plataforma incorpora un informe de seguimiento que proporciona una descripción general del progreso en la consecución de los Objetivos de Desarrollo Sostenible (ODS) en la Comunidad Autónoma de Euskadi. 
-Para saber más sobre el procedimiento para evaluar el progreso, ver  [Metodología para la medición del progreso](https://eustat-des.github.io/site/metodologia/).
+Para saber más sobre el procedimiento para evaluar el progreso, ver  [Metodología para la medición del progreso]({{site.baseurl}}/metodologia/).
 
 ## ¿Cada cuánto tiempo se actualizan los datos?
 
