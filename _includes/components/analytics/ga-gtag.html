@@ -1,0 +1,70 @@
+{%- comment -%}
+Añadimos nuestro dataLayer dinámico aquí.
+Se ejecutará siempre antes del script de GTM que está más abajo.
+{%- endcomment -%}
+<script>
+  // Inicializar el dataLayer de forma segura.
+  window.dataLayer = window.dataLayer || [];
+
+  // --- Dimensiones Personalizadas ---
+
+  // 1. Hizkuntza (Idioma):
+  var pageLanguage = '{{ page.lang | default: site.default_language }}'.toUpperCase();
+  if (pageLanguage == 'EU') {
+        pageLanguage = 'E'; // Euskera
+    } else if (pageLanguage == 'ES') {
+        pageLanguage = 'C'; // Castellano
+    } else if (pageLanguage == 'EN') {
+        pageLanguage = 'I'; // Inglés
+    } 
+
+  // 2. Gaia (Tema/Tipo de Contenido):
+  var pageTopic = 'Página General';
+  {% if page.layout == 'indicator' %}
+    {% assign pageTopic = 'Indicador' %}
+  {% elsif page.layout == 'goal' %}
+    {% assign pageTopic = 'ODS' %}
+  {% elsif page.layout == 'frontpage' %}
+    {% assign pageTopic = 'Portada' %}
+  {% endif %}
+
+  // 3. Eragiketa kodea (Código de Operación/ID):
+  var pageOperationCode = 'N/A';
+  {% if page.indicator.id %}
+    {% assign pageOperationCode = page.indicator.id %}
+  {% elsif page.goal.number %}
+    {% assign pageOperationCode = "ODS-" | append: page.goal.number %}
+  {% endif %}
+  
+  // 4. Dokumentu mota (Tipo de Documento):
+  var pageDocumentType = 'Página';
+  {% if page.layout == 'indicator' %}
+    {% assign pageDocumentType = 'Indicador' %}
+  {% endif %}
+
+  // 5. Formatua (Formato):
+  var pageFormat = 'HTML';
+
+  // --- Empujamos los datos al dataLayer ---
+  window.dataLayer.push({
+    'dimension1': pageLanguage,
+    'dimension2': '{{ pageTopic }}',
+    'dimension3': '{{ pageOperationCode }}',
+    'dimension4': '{{ pageDocumentType }}',
+    'dimension5': pageFormat
+  });
+</script>
+
+
+{%- comment -%}
+Este es el código original de Open SDG para GTM. Lo dejamos intacto.
+Ahora leerá el dataLayer que hemos preparado justo arriba.
+{%- endcomment -%}
+<!-- Google Tag Manager -->
+<script {% if site.cookie_consent_form.enabled %}type="text/plain" data-type="application/javascript" data-name="google-analytics"{% endif %}>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ site.analytics.gtm }}');</script>
+<!-- End Google Tag Manager -->
