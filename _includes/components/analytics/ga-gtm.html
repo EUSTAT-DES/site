@@ -7,8 +7,6 @@ Se ejecutará siempre antes del script de GTM que está más abajo.
   window.dataLayer = window.dataLayer || [];
 
   // --- Dimensiones Personalizadas ---
-
-  // 1. Hizkuntza (Idioma):
   var pageLanguage = '{{ page.language | default: site.default_language }}'.toUpperCase();
   if (pageLanguage == 'EU') {
         pageLanguage = 'E'; // Euskera
@@ -18,28 +16,19 @@ Se ejecutará siempre antes del script de GTM que está más abajo.
         pageLanguage = 'I'; // Inglés
     } 
 
-  // 2. Gaia (Tema/Tipo de Contenido):
   var pageTopic = 'N/A';
   {% if page.goal.number %}
     {% assign pageTopic = "ODS_" | append: page.goal.number %}
   {% endif %}
 
-  // 3. Eragiketa kodea (Código de Operación/ID):
-  var pageOperationCode = '099901';
-  
-  // 4. Dokumentu mota (Tipo de Documento):
-  var pageDocumentType = 'INDICADOR';
-
-  // 5. Formatua (Formato):
-  var pageFormat = 'ASP';
-
-  // --- Empujamos los datos al dataLayer ---
   window.dataLayer.push({
+    'pageCategory': 'signup',
+    'visitorType': 'high-value',
     'dimension1': pageLanguage,
     'dimension2': '{{ pageTopic }}',
-    'dimension3': pageOperationCode,
-    'dimension4': pageDocumentType,
-    'dimension5': pageFormat
+    'dimension3': '099901',
+    'dimension4': 'INDICADOR',
+    'dimension5': 'ASP'
   });
 </script>
 
