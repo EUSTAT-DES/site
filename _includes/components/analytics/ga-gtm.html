@@ -19,38 +19,26 @@ Se ejecutará siempre antes del script de GTM que está más abajo.
     } 
 
   // 2. Gaia (Tema/Tipo de Contenido):
-  var pageTopic = 'Página General';
-  {% if page.layout == 'indicator' %}
-    {% assign pageTopic = 'Indicador' %}
-  {% elsif page.layout == 'goal' %}
-    {% assign pageTopic = 'ODS' %}
-  {% elsif page.layout == 'frontpage' %}
-    {% assign pageTopic = 'Portada' %}
+  var pageTopic = 'N/A';
+  {% if page.goal.number %}
+    {% assign pageTopic = "ODS_" | append: page.goal.number %}
   {% endif %}
 
   // 3. Eragiketa kodea (Código de Operación/ID):
-  var pageOperationCode = 'N/A';
-  {% if page.indicator.id %}
-    {% assign pageOperationCode = page.indicator.id %}
-  {% elsif page.goal.number %}
-    {% assign pageOperationCode = "ODS-" | append: page.goal.number %}
-  {% endif %}
+  var pageOperationCode = '099901';
   
   // 4. Dokumentu mota (Tipo de Documento):
-  var pageDocumentType = 'Página';
-  {% if page.layout == 'indicator' %}
-    {% assign pageDocumentType = 'Indicador' %}
-  {% endif %}
+  var pageDocumentType = 'INDICADOR';
 
   // 5. Formatua (Formato):
-  var pageFormat = 'HTML';
+  var pageFormat = 'ASP';
 
   // --- Empujamos los datos al dataLayer ---
   window.dataLayer.push({
     'dimension1': pageLanguage,
     'dimension2': '{{ pageTopic }}',
-    'dimension3': '{{ pageOperationCode }}',
-    'dimension4': '{{ pageDocumentType }}',
+    'dimension3': pageOperationCode,
+    'dimension4': pageDocumentType,
     'dimension5': pageFormat
   });
 </script>
