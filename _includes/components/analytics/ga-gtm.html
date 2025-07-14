@@ -9,7 +9,7 @@ Se ejecutará siempre antes del script de GTM que está más abajo.
   // --- Dimensiones Personalizadas ---
 
   // 1. Hizkuntza (Idioma):
-  var pageLanguage = '{{ page.lang | default: site.default_language }}'.toUpperCase();
+  var pageLanguage = '{{ page.language | default: site.default_language }}'.toUpperCase();
   if (pageLanguage == 'EU') {
         pageLanguage = 'E'; // Euskera
     } else if (pageLanguage == 'ES') {
