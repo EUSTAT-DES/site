@@ -8,7 +8,7 @@ permalink: /en/nazioartea/
 **United Nations**
 - [SDG Global Database](https://unstats.un.org/sdgs/dataportal)
 
-- [Sustainable Development Goals Report 2024](https://unstats.un.org/sdgs/report/2024/)
+- [Sustainable Development Goals Report 2025](https://unstats.un.org/sdgs/report/2025/)
 
 - [E-Handbook on Sustainable Development Goals Indicators](https://unstats.un.org/sdgs/dataportal)
 
