@@ -1,34 +1,58 @@
 {%- comment -%}
 Añadimos nuestro dataLayer dinámico aquí.
-Se ejecutará siempre antes del script de GTM que está más abajo.
+TODA la lógica se resuelve en el servidor con Liquid.
 {%- endcomment -%}
+
+{%- comment -%} --- Definición de Dimensiones con Liquid --- {%- endcomment -%}
+
+{%- comment -%} 1. Hizkuntza (Idioma) {%- endcomment -%}
+{%- assign lang_code = page.language | default: site.default_language | upcase -%}
+{%- if lang_code == 'EU' -%}
+  {%- assign dimension1_value = 'E' -%}
+{%- elsif lang_code == 'ES' -%}
+  {%- assign dimension1_value = 'C' -%}
+{%- elsif lang_code == 'EN' -%}
+  {%- assign dimension1_value = 'I' -%}
+{%- else -%}
+  {%- assign dimension1_value = lang_code -%}
+{%- endif -%}
+
+{%- comment -%} 2. Gaia (Tema): Formato ODS_X {%- endcomment -%}
+{%- assign dimension2_value = 'N/A' -%}
+{%- if page.goal.number -%}
+  {%- assign dimension2_value = "ODS_" | append: page.goal.number -%}
+{%- elsif page.indicator.goal -%}
+  {%- assign goal_num = page.indicator.goal -%}
+  {%- assign dimension2_value = "ODS_" | append: goal_num -%}
+{%- endif -%}
+
+{%- comment -%} 3. Eragiketa kodea (Código de operación): Valor fijo {%- endcomment -%}
+{%- assign dimension3_value = '099901' -%}
+
+{%- comment -%} 4. Dokumentu mota (Tipo de documento): Dinámico (indicator/goal/frontpage/page){%- endcomment -%}
+{%- assign dimension4_value = 'INDICADORES' -%}
+{%- if page.layout == 'indicator' -%}
+  {%- assign dimension4_value = 'VISOR_ODS' -%}
+{%- endif -%}
+  
+{%- comment -%} 5. Formatua (Formato): Valor fijo {%- endcomment -%}
+{%- assign dimension5_value = 'ASP' -%}
+
+
 <script>
   // Inicializar el dataLayer de forma segura.
   window.dataLayer = window.dataLayer || [];
 
-  // --- Dimensiones Personalizadas ---
-  var pageLanguage = '{{ page.language | default: site.default_language }}'.toUpperCase();
-  if (pageLanguage == 'EU') {
-        pageLanguage = 'E'; // Euskera
-    } else if (pageLanguage == 'ES') {
-        pageLanguage = 'C'; // Castellano
-    } else if (pageLanguage == 'EN') {
-        pageLanguage = 'I'; // Inglés
-    } 
-
-  var pageTopic = 'N/A';
-  {% if page.goal.number %}
-    {% assign pageTopic = "ODS_" | append: page.goal.number %}
-  {% endif %}
-
+  // Empujamos los datos al dataLayer.
+  // Todos los valores han sido pre-calculados por Jekyll/Liquid.
   window.dataLayer.push({
     'pageCategory': 'signup',
     'visitorType': 'high-value',
-    'dimension1': pageLanguage,
-    'dimension2': '{{ pageTopic }}',
-    'dimension3': '099901',
-    'dimension4': 'INDICADOR',
-    'dimension5': 'ASP'
+    'dimension1': '{{ dimension1_value }}',
+    'dimension2': '{{ dimension2_value }}',
+    'dimension3': '{{ dimension3_value }}',
+    'dimension4': '{{ dimension4_value }}',
+    'dimension5': '{{ dimension5_value }}'
   });
 </script>
 
