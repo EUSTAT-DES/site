@@ -20,10 +20,10 @@ Plataforma horren datuak eta metadatuak aurreikusteko eta dokumentatzeko moduko 
 
 Adierazle jakin baten CSV eta JSON fitxategiak, datuak erabat bereizita azaltzen direla:
 
-- `https://eustat-des.github.io/data/eu/data/**adierazlearen-kodea**.csv`  
+- `https://sdg.eustat.eus/sdg-data-prod/eu/data/**adierazlearen-kodea**.csv`  
   Adibidea: [https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.csv](https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.csv)
 
-- `https://eustat-des.github.io/data/eu/data/**adierazlearen-kodea**.json`  
+- `https://sdg.eustat.eus/sdg-data-prod/eu/data/**adierazlearen-kodea**.json`  
   Adibidea: [https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.json](https://sdg.eustat.eus/sdg-data-prod/eu/data/1-2-1.json)
 
 ###  Deskarga masiboa (ZIP)
