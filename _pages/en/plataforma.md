@@ -19,10 +19,10 @@ The data and metadata on this platform are available through predictable and doc
 
 CSV and JSON files with fully disaggregated data:
 
-- `https://eustat-des.github.io/data/en/data/**indicatorcode**.csv`  
+- `https://sdg.eustat.eus/sdg-data-prod/en/data/**indicatorcode**.csv`  
   Example: [https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.csv](https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.csv)
 
-- `https://eustat-des.github.io/data/en/data/**indicatorcode**.json`  
+- `https://sdg.eustat.eus/sdg-data-prod/en/data/**indicatorcode**.json`  
   Example: [https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.json](https://sdg.eustat.eus/sdg-data-prod/en/data/1-2-1.json)
 
 ### Bulk Download (ZIP)
