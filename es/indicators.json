@@ -315,7 +315,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/es/3-3-3/",
-          "status": "complete"
+          "status": "notapplicable"
         },
         {
           "id": "3-3-4",
@@ -1715,7 +1715,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/es/15-4-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "15-4-2",
@@ -2259,6 +2259,22 @@
           "description": "",
           "keywords": "",
           "href": "/site/es/OCECA-6-1-1/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-8-9-1-3AB4AB",
+          "title": "Pernoctaciones de turistas y proporción de pernoctaciones en los dos meses de máxima ocupación sobre el total de pernoctaciones de turistas",
+          "description": "",
+          "keywords": "",
+          "href": "/site/es/OCECA-8-9-1-3AB4AB/",
+          "status": "complete"
+        },
+        {
+          "id": "OCECA-8-9-1-3CD",
+          "title": "Proporción del gasto en viajes culturales sobre el gasto en viajes",
+          "description": "",
+          "keywords": "",
+          "href": "/site/es/OCECA-8-9-1-3CD/",
           "status": "complete"
         },
         {
