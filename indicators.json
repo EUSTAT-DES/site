@@ -315,7 +315,7 @@
           "description": "",
           "keywords": "",
           "href": "/site/3-3-3/",
-          "status": "notapplicable"
+          "status": "complete"
         },
         {
           "id": "3-3-4",
@@ -2263,7 +2263,7 @@
         },
         {
           "id": "OCECA-8-9-1-3AB4AB",
-          "title": "Turisten gaualdiak eta okupazio goreneko bi hilabeteetako gaualdien proportzioa turisten gaualdi guztiekiko",
+          "title": "Turisten ostatu-gauak biztanleko, eta okupazio goreneko bi hilabeteetako turisten ostatu-gauen proportzioa turisten ostatu-gau guztiekiko",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-8-9-1-3AB4AB/",
@@ -2271,7 +2271,7 @@
         },
         {
           "id": "OCECA-8-9-1-3CD",
-          "title": "Kultura-bidaietako gastuaren proportzioa bidaietako gastuaren gainean",
+          "title": "Kultura-bidaietako gastuaren proportzioa bidaietako gastuarekiko",
           "description": "",
           "keywords": "",
           "href": "/site/OCECA-8-9-1-3CD/",
