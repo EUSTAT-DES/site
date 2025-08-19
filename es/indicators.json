@@ -1167,11 +1167,11 @@
         },
         {
           "id": "10-3-1",
-          "title": "Proporción de la población que declara haberse sentido personalmente discriminada o acosada en los últimos 12 meses por motivos de discriminación prohibidos por el derecho internacional de los derechos humanos",
+          "title": "Prevalencia (%) de personas que se sienten discriminadas (por su edad, sexo, lugar de nacimiento, ...) por sexo",
           "description": "",
           "keywords": "",
           "href": "/site/es/10-3-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "10-4-1",
@@ -1991,11 +1991,11 @@
         },
         {
           "id": "16-b-1",
-          "title": "Proporción de la población que declara haberse sentido personalmente discriminada o acosada en los últimos 12 meses por motivos de discriminación prohibidos por el derecho internacional de los derechos humanos",
+          "title": "Prevalencia (%) de personas que se sienten discriminadas (por su edad, sexo, lugar de nacimiento, ...) por sexo",
           "description": "",
           "keywords": "",
           "href": "/site/es/16-b-1/",
-          "status": "notstarted"
+          "status": "complete"
         }]
     }
   },

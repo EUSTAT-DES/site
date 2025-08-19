@@ -1055,7 +1055,7 @@
         },
         {
           "id": "9-2-1",
-          "title": "Manufaktura-sektorearen balio erantsia, BPGaren eta per capita kopuruaren proportzioan",
+          "title": "Manufaktura-sektorearen balio erantsia, BPGarekiko proportzioan eta per capita",
           "description": "",
           "keywords": "",
           "href": "/site/9-2-1/",
@@ -1167,11 +1167,11 @@
         },
         {
           "id": "10-3-1",
-          "title": "Azken 12 hilabeteetan giza eskubideen nazioarteko zuzenbideak debekatutako diskriminazio-arrazoiengatik pertsonalki diskriminatua edo jazarria sentitu dela adierazi duen biztanleriaren proportzioa",
+          "title": "Diskriminatuta sentitzen diren pertsonen prebalentzia ( %) (adinagatik, sexuagatik, jaioterriagatik...), sexuaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/10-3-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "10-4-1",
@@ -1991,11 +1991,11 @@
         },
         {
           "id": "16-b-1",
-          "title": "Giza eskubideen nazioarteko zuzenbideak debekatutako diskriminazio-arrazoiengatik azken 12 hilabeteetan pertsonalki diskriminatua edo jazarria sentitu dela adierazten duen biztanleriaren proportzioa",
+          "title": "Diskriminatuta sentitzen diren pertsonen prebalentzia ( %) (adinagatik, sexuagatik, jaioterriagatik...), sexuaren arabera",
           "description": "",
           "keywords": "",
           "href": "/site/16-b-1/",
-          "status": "notstarted"
+          "status": "complete"
         }]
     }
   },

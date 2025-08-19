@@ -1167,11 +1167,11 @@
         },
         {
           "id": "10-3-1",
-          "title": "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law",
+          "title": "Prevalence (%) of people who feel discriminated against (due to their age, sex, place of birth, etc.) by sex",
           "description": "",
           "keywords": "",
           "href": "/site/en/10-3-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "10-4-1",
@@ -1991,11 +1991,11 @@
         },
         {
           "id": "16-b-1",
-          "title": "Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law",
+          "title": "Prevalence (%) of people who feel discriminated against (due to their age, sex, place of birth, etc.) by sex",
           "description": "",
           "keywords": "",
           "href": "/site/en/16-b-1/",
-          "status": "notstarted"
+          "status": "complete"
         }]
     }
   },
