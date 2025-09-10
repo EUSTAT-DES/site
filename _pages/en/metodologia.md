@@ -204,7 +204,6 @@ There is currently no data for this indicator, but various sources are being stu
 Certain indicators cannot be applied to the Basque Country for various reasons:
 
 -	Not applicable, due to its level of development: For example, indicator 10.6.1 Proportion of members and voting rights of developing countries in international organizations is not appropriate for the Basque Country, since it is not a developing country. 
--	What is to be measured does not exist or is not significant: for example, indicator 3.3.3 Incidence of malaria per 1,000 inhabitants is not applicable, since it is a tropical disease, non-existent in the Basque Country. 
 -	It refers to a standard or institutional structure that does not apply to the Basque Country: for example, indicator 12.4.1 Number of parties to international multilateral environmental agreements on hazardous waste and other chemicals that comply with their commitments and obligations to transmit information as required by each of these agreements, refers to an international agreement signed by the states, so it cannot be applied to the Basque Country. 
 -	They are global measurement indicators: for example, indicator 17.10.1 Weighted average world tariff.
 
