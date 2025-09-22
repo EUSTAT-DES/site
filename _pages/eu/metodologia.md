@@ -207,7 +207,6 @@ Gaur egun ez dago adierazle horretarako daturik, baina iturri desberdinak aztert
 
 Adierazle batzuk ezin dira Euskal Autonomia Erkidegoan aplikatu, hainbat arrazoi direla medio:
 -	Ez dagokio, garapen-mailagatik: adibidez, 10.6.1 adierazlea Garapen bidean dauden herrialdetako kideen eta boto-eskubideen proportzioa nazioarteko erakundeetan, ez da egokia Euskadirentzat, ez baita garapen bidean dagoen herrialdea.
--	Neurtu nahi dena, ez dago edo ez da esanguratsua: adibidez, 3.3.3 adierazlea Malariaren intzidentzia 1.000 biztanleko, ez da aplikagarria, gaixotasun tropikala baita, Euskadin ez dagoena.
 -	Euskadiri ez dagokion arau edo egitura instituzional bati buruzkoa da: adibidez, 12.4.1 adierazlea Hondakin arriskutsuei eta beste produktu kimiko batzuei buruzko nazioarteko ingurumen-akordio aldeaniztunetan konpromisoak eta informazioa transmititzeko betebeharrak betetzen dituzten alderdien kopurua, akordio horietako bakoitzean eskatzen den bezala, estatuek sinatutako nazioarteko akordio bati dagokio, eta, beraz, ezin zaio Euskadiri aplikatu.
 -	Neurketa globaleko adierazleak dira: adibidez, 17.10.1 adierazlea Munduko batez besteko muga-zerga haztatua.
 <br><br>  

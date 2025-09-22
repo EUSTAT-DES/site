@@ -204,7 +204,6 @@ Actualmente no existen datos para este indicador, pero se están estudiando dist
 Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:
 
 -	No corresponde, por su nivel de desarrollo: Por ejemplo, el indicador 10.6.1 Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales no es adecuado para Euskadi, ya que no es un país en desarrollo.
--	Lo que se quiere medir, no existe o no es significativo: por ejemplo, el indicador 3.3.3 Incidencia de la malaria por cada 1.000 habitantes no es aplicable, puesto que se trata de una enfermedad tropical, inexistente en Euskadi.
 -	Se refiere a una norma o estructura institucional que no corresponde a Euskadi: por ejemplo, el indicador 12.4.1 Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos, se refiere a un acuerdo internacional suscrito por los estados, por lo que no se puede aplicar a Euskadi.
 -	Se trata de indicadores de medición global: por ejemplo, el indicador 17.10.1 Promedio arancelario mundial ponderado.
 
