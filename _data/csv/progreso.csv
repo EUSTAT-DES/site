@@ -1,7 +1,7 @@
 goal,status,count,percentage,total
-overall,alcanzado,93,36.04651162790697,258
+overall,alcanzado,94,36.434108527131784,258
 overall,noevaluado,15,5.813953488372093,258
-overall,notapplicable,11,4.263565891472868,258
+overall,notapplicable,10,3.875968992248062,258
 overall,notstarted,85,32.945736434108525,258
 overall,progreso,26,10.077519379844961,258
 overall,retroceso,28,10.852713178294573,258
@@ -66,8 +66,8 @@ overall,retroceso,28,10.852713178294573,258
 15,noevaluado,2,13.333333333333334,15
 15,notstarted,7,46.666666666666664,15
 15,progreso,2,13.333333333333334,15
-16,alcanzado,4,16.0,25
-16,notapplicable,2,8.0,25
+16,alcanzado,5,20.0,25
+16,notapplicable,1,4.0,25
 16,notstarted,12,48.0,25
 16,progreso,3,12.0,25
 16,retroceso,4,16.0,25
