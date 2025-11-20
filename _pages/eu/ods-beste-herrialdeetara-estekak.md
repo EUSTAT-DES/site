@@ -47,6 +47,7 @@ Hona hemen zenbait herrialdetako GJHen adierazleei buruzko plataformak. Zerrenda
 *   [Kroazia](https://croatianbureauofstatistics.github.io/sdg-indicators/)
 *   [Laos](https://www.lsb.gov.la/sdg/en/)
 *   [Liechtenstein](https://www.statistikportal.li/de/uebergreifendes-indikatoren/indikatoren-nachhaltige-entwicklung)
+*   [Lituania](https://sdg.stat.gov.lt/)
 *   [Luxenburgo](https://statistiques.public.lu/en/donnees/themes/odd.html)
 *   [Mexiko](http://www.agenda2030.mx/)
 *   [Moldaviako Errepublika](https://statisticamd.github.io/sdg-site-moldova/)
