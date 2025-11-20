@@ -39,6 +39,7 @@ The following list shows some of the SDG platforms from different countries. The
 *   [Kyrgyz Republic](https://sustainabledevelopment-kyrgyzstan.github.io/)
 *   [Lao](https://www.lsb.gov.la/sdg/en/)
 *   [Liechtenstein](https://www.statistikportal.li/de/uebergreifendes-indikatoren/indikatoren-nachhaltige-entwicklung)
+*   [Lithuania](https://sdg.stat.gov.lt/)
 *   [Luxemburg](https://statistiques.public.lu/en/donnees/themes/odd.html)
 *   [Mexico](http://www.agenda2030.mx/)
 *   [Mongolia](http://sdg.1212.mn/EN/Home/Information)
