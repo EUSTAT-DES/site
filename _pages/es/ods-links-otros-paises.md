@@ -42,6 +42,7 @@ La siguiente lista muestra algunas de las plataformas sobre los ODS de distintos
 *   [Kirguistán](https://sustainabledevelopment-kyrgyzstan.github.io/)
 *   [Laos](https://www.lsb.gov.la/sdg/en/)
 *   [Liechtenstein](https://www.statistikportal.li/de/uebergreifendes-indikatoren/indikatoren-nachhaltige-entwicklung)
+*   [Lituania](https://sdg.stat.gov.lt/)
 *   [Luxemburgo](https://statistiques.public.lu/en/donnees/themes/odd.html)
 *   [México](http://www.agenda2030.mx/)
 *   [Mongolia](http://sdg.1212.mn/EN/Home/Information)
