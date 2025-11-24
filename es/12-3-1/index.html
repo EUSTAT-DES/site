@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20251124130344">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20251124144007">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -670,7 +670,7 @@ data-event-label="high"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype="line"
+  data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
@@ -1053,7 +1053,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Indicador disponible </th>
         <td>
           
-            <p>La CA de Euskadi no elabora estadísticas oficiales continuas con la metodología del indicador</p>
+            <p>a) Índice de pérdidas de alimentos y b) índice de desperdicio de alimentos</p>
 
           
         </td>
@@ -1069,38 +1069,149 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Meta </th>
+        <td>
+          
+            <p>12.3- De aquí a 2030, reducir a la mitad el desperdicio de alimentos per cápita mundial en la venta al por menor y a nivel de los consumidores y reducir las pérdidas de alimentos en las cadenas de producción y suministro, incluidas las pérdidas posteriores a la cosecha</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Objetivo </th>
+        <td>
+          
+            <p>12- Garantizar modalidades de consumo y producción sostenibles</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definición del indicador </th>
+        <td>
+          
+            
+<p>Series disponibles:
+<b> - Porcentaje de pérdida alimentaria:</b>  Alimentos perdidos en las fases de producción primaria y manufactura, con respecto a la producción total de alimentos. 
+<b> - Desperdicio alimentario:</b>  Cantidad de alimentos desperdiciados en la distribución, el consumo fuera del hogar (restaurantes, hoteles, comedores escolares…) y los hogares 
+<b> - Desperdicio alimentario per capita:</b> Cantidad de alimentos desperdiciados en la distribución, el consumo fuera del hogar (restaurantes, hoteles, comedores escolares…) y los hogares, por habitante</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Fórmula teórica </th>
+        <td>
+          
+            
+<p><b> Porcentaje de pérdida alimentaria</b></p>
+
+<p>\(PPA^{t} = \frac{PA_{producción\, primaria\, y\, manufactura}^{t}}{{PRA_{producción\, primaria\, y\, manufactura}^{t}} \cdot 100\) <br /></p>
+
+<p>donde:</p>
+
+<p>$PA_{producción\, primaria\, y\, manufactura}^{t} =$ pérdidas de alimentos en producción primaria y manufactura en el año $t$</p>
+
+<p>$PRA_{producción\, primaria\, y\, manufactura}^{t} =$ total de alimentos producidos en producción primaria y manufactura en el año $t$</p>
+
+<p><br /></p>
+
+<p><b> Desperdicio alimentario</b></p>
+
+<p>\(DA_{distribución, consumo\, fuera\, y\, hogares}^{t} = {DA_{distribución}^{t} + DA_{consumo\, fuera}^{t} + DA_{hogares}^{t}}\) <br /></p>
+
+<p>donde:</p>
+
+<p>$DA_{distribución}^{t} = $ desperdicio alimentario del sector de la distribución en el año $t$</p>
+
+<p>$DA_{consumo\, fuera}^{t} = $ desperdicio alimentario del sector de la hostelería en el año $t$</p>
+
+<p>$DA_{hogares}^{t} = $ desperdicio alimentario en los hogares en el año $t$</p>
+
+<p><br /></p>
+
+<p><b> Desperdicio alimentario per capita</b></p>
+
+<p>\(DAPC_{distribución, consumo\, fuera\, y\, hogares}^{t} = \frac{DA_{distribución}^{t} + DA_{consumo\, fuera}^{t} + DA_{hogares}^{t}}{P^{t}}\) <br /></p>
+
+<p>donde:</p>
+
+<p>$DA_{distribución}^{t} = $ desperdicio alimentario del sector de la distribución en el año $t$</p>
+
+<p>$DA_{consumo\, fuera}^{t} = $ desperdicio alimentario del sector de la hostelería en el año $t$</p>
+
+<p>$DA_{hogares}^{t} = $ desperdicio alimentario en los hogares en el año $t$</p>
+
+<p>$P^{t} = $ población a 1 de julio del año $t$</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Periodicidad </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Cuatrienal</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Observaciones </th>
+        <td>
           
-      
-      
-      
+            
+<p>Los alimentos incluyen tanto las partes comestibles como las no comestibles (por ejemplo las espinas de los pescados).
+Se consideran pérdida o desperdicio todos aquellos alimentos desechados como residuos.</p>
+
+          
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
+  
       
       
       
@@ -1176,7 +1287,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Fecha última actualización metadatos </th>
         <td>
           
-            05/11/2025
+            24/11/2025
           
         </td>
         </tr>
@@ -1553,7 +1664,7 @@ Porcentaje de pérdida de alimentos (%) AG_FLS_PC</a> UNSTATS</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20251124130344'></script>
+<script src='/site/assets/js/sdg.js?v=20251124144007'></script>
 
 
 <script>
@@ -1573,7 +1684,7 @@ Porcentaje de pérdida de alimentos (%) AG_FLS_PC</a> UNSTATS</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20251124130344"></script><script>
+    <script src="/site/assets/js/custom.js?v=20251124144007"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

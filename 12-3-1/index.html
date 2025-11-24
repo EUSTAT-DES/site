@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20251124130344">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20251124144007">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -670,7 +670,7 @@ data-event-label="high"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype="line"
+  data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
@@ -1053,7 +1053,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Eskuragarri dagoen adierazlea </th>
         <td>
           
-            <p>Euskal AEk ez du estatistika jarraitu eta ofizialik egiten adierazlearen metodologiarekin</p>
+            <p>a) Elikagaien galeren indizea eta b) elikagaien xahuketa indizea</p>
 
           
         </td>
@@ -1069,38 +1069,148 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Xedea </th>
+        <td>
+          
+            <p>12.3- 2030. urterako, munduan, txikizkako salmentan eta kontsumitzaileen artean per capita alferrik galtzen diren elikagaien kopurua erdira murriztea, eta ekoizpen‐ eta horniketa‐kateetako elikagai‐galerak murriztea, uztaren ondorengo galerak barne</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Helburua </th>
+        <td>
+          
+            <p>12- Kontsumo eta ekoizpen modalitate jasangarriak bermatzea</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definizioa </th>
+        <td>
+          
+            <p>Eskuragarri dauden serieak:
+<b> - Elikagai galeraren ehunekoa:</b>  Elikagaien ekoizpen primarioko eta manufakturako faseetan galdutako elikagaiak, ekoitzitako elikagai guztiarekiko.
+<b> - Elikagai xahuketa:</b>  Elikagaien banaketan, etxetik kanpoko kontsumoan (jatetxeetan, hoteletan, eskola-jantokietan…) eta etxeetan xahututako elikagaien kopurua.
+<b> - Elikagai xahuketa per capita:</b> Elikagaien banaketan, etxetik kanpoko kontsumoan (jatetxeetan, hoteletan, eskola-jantokietan…) eta etxeetan xahututako elikagaien kopurua, biztanleko.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Formula teorikoa </th>
+        <td>
+          
+            
+<p><b> Elikagai galeraren ehunekoa</b></p>
+
+<p>\(EGE^{t} = \frac{EG_{ekoizpen\, primarioa\, eta\, manufaktura}^{t}}{{EE_{ekoizpen\, primarioa\, eta\, manufaktura}^{t}} \cdot 100\) <br /></p>
+
+<p>non:</p>
+
+<p>$EG_{ekoizpen\, primarioa\, eta\, manufaktura}^{t} =$ ekoizpen primario eta manufaktura faseetan galdutako elikagaiak $t$ urtean</p>
+
+<p>$EE_{ekoizpen\, primarioa\, eta\, manufaktura}^{t} =$ ekoizpen primario eta manufaktura faseetan ekoitzitako elikagaiak $t$ urtean</p>
+
+<p><br /></p>
+
+<p><b> Elikagai xahuketa</b></p>
+
+<p>\(EX_{banaketa, kanpoko\, kontsumoa\, eta\, etxeak}^{t} = {EX_{banaketa}^{t} + EX_{kanpoko\, kontsumoa}^{t} + EX_{etxeak}^{t}}\) <br /></p>
+
+<p>non:</p>
+
+<p>$EX_{banaketa}^{t} = $ banaketa sektorean xahututako elikagai kopurua $t$ urtean</p>
+
+<p>$EX_{kanpoko\, kontsumoa}^{t} = $ etxetik kanpoko kontsumoan xahututako elikagai kopurua $t$ urtean</p>
+
+<p>$EX_{etxeak}^{t} = $ etxeetan xahututako elikagai kopurua $t$ urtean</p>
+
+<p><br /></p>
+
+<p><b> Elikagai xahuketa per capita</b></p>
+
+<p>\(EXPC_{banaketa, kanpoko\, kontsumoa\, eta\, etxeak}^{t} = \frac{EX_{banaketa}^{t} + EX_{kanpoko\, kontsumoa}^{t} + EX_{etxeak}^{t}}{P^{t}}\) <br /></p>
+
+<p>non:</p>
+
+<p>$EX_{banaketa}^{t} = $ banaketa sektorean xahututako elikagai kopurua $t$ urtean</p>
+
+<p>$EX_{kanpoko\, kontsumoa}^{t} = $ etxetik kanpoko kontsumoan xahututako elikagai kopurua $t$ urtean</p>
+
+<p>$EX_{etxeak}^{t} = $ etxeetan xahututako elikagai kopurua $t$ urtean</p>
+
+<p>$P^{t} = $ biztanleria $t$ urteko uztailaren 1ean</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Aldizkakotasuna </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Lau urtean behin</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Oharra </th>
+        <td>
           
-      
-      
-      
+            
+<p>Elikagaien artean kontatzen dira jangarriak diren zatiak eta jangarriak ez direnak (adib. arrainen hezurrak).
+Galdu edo xahututako elikagaitzat hartzen dira hondakin bihurtutako elikagai guztiak.</p>
+
+          
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
+  
       
       
       
@@ -1176,7 +1286,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Metadatuen azken eguneratze-data </th>
         <td>
           
-            2025/11/05
+            2025/11/24
           
         </td>
         </tr>
@@ -1347,16 +1457,16 @@ pribatuari, alferrik galtzen diren elikagaien kopurua murrizte aldera.</p>
           
             
 <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&amp;seriesCode=AG_FOOD_WST_PC&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ALL">
-Alferrik galdutako elikagaiak, per capita (KG) AG_FOOD_WST_PC</a> UNSTATS</p>
+Elikagai xahuketa, per capita (KG) AG_FOOD_WST_PC</a> UNSTATS</p>
 
 <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&amp;seriesCode=AG_FOOD_WST&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ALL">
-Alferrik galdutako elikagaiak (tonak) AG_FOOD_WST</a> UNSTATS</p>
+Elikagai xahuketa (tonak) AG_FOOD_WST</a> UNSTATS</p>
 
 <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&amp;seriesCode=AG_FLS_INDEX&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ALP">
 Elikagaien galeraren munduko indizea AG_FLS_INDEX</a> UNSTATS</p>
 
 <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.3.1&amp;seriesCode=AG_FLS_PCT&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=ALP">
-Alferrik galdutako elikagaien ehunekoa (%) AG_FLS_PC</a> UNSTATS</p>
+Elikagai galeraren ehunekoa (%) AG_FLS_PC</a> UNSTATS</p>
 
           
         </td>
@@ -1549,7 +1659,7 @@ Alferrik galdutako elikagaien ehunekoa (%) AG_FLS_PC</a> UNSTATS</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20251124130344'></script>
+<script src='/site/assets/js/sdg.js?v=20251124144007'></script>
 
 
 <script>
@@ -1569,7 +1679,7 @@ Alferrik galdutako elikagaien ehunekoa (%) AG_FLS_PC</a> UNSTATS</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20251124130344"></script><script>
+    <script src="/site/assets/js/custom.js?v=20251124144007"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

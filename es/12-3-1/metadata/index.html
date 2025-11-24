@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20251124130344">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20251124144007">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -605,7 +605,7 @@ data-event-label="high"
     // Set values according to this site's configuration.
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_disponible', "La CA de Euskadi no elabora estadísticas oficiales continuas con la metodología del indicador");
+        var currentValue = normalizeCurrentValue('indicador_disponible', "a) Índice de pérdidas de alimentos y b) índice de desperdicio de alimentos");
         var propertyEditor = editor.getEditor('root.indicador_disponible');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -619,18 +619,90 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.indicador_onu_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('meta_global', "12.3- De aquí a 2030, reducir a la mitad el desperdicio de alimentos per cápita mundial en la venta al por menor y a nivel de los consumidores y reducir las pérdidas de alimentos en las cadenas de producción y suministro, incluidas las pérdidas posteriores a la cosecha");
+        var propertyEditor = editor.getEditor('root.meta_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: meta_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.meta_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('objetivo_global', "12- Garantizar modalidades de consumo y producción sostenibles");
+        var propertyEditor = editor.getEditor('root.objetivo_global');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: objetivo_global');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.objetivo_global'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('definicion', "\nSeries disponibles:\n<b> - Porcentaje de pérdida alimentaria:</b>  Alimentos perdidos en las fases de producción primaria y manufactura, con respecto a la producción total de alimentos. \n<b> - Desperdicio alimentario:</b>  Cantidad de alimentos desperdiciados en la distribución, el consumo fuera del hogar (restaurantes, hoteles, comedores escolares...) y los hogares \n<b> - Desperdicio alimentario per capita:</b> Cantidad de alimentos desperdiciados en la distribución, el consumo fuera del hogar (restaurantes, hoteles, comedores escolares...) y los hogares, por habitante");
+        var propertyEditor = editor.getEditor('root.definicion');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: definicion');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.definicion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('formula', "\n<b> Porcentaje de pérdida alimentaria</b> \n\n$$PPA^{t} = \\frac{PA_{producción\\, primaria\\, y\\, manufactura}^{t}}{{PRA_{producción\\, primaria\\, y\\, manufactura}^{t}} \\cdot 100$$ <br>\n\ndonde:\n\n$PA_{producción\\, primaria\\, y\\, manufactura}^{t} =$ pérdidas de alimentos en producción primaria y manufactura en el año $t$  \n\n$PRA_{producción\\, primaria\\, y\\, manufactura}^{t} =$ total de alimentos producidos en producción primaria y manufactura en el año $t$\n\n<br>\n\n<b> Desperdicio alimentario</b> \n\n$$DA_{distribución, consumo\\, fuera\\, y\\, hogares}^{t} = {DA_{distribución}^{t} + DA_{consumo\\, fuera}^{t} + DA_{hogares}^{t}}$$ <br> \n\ndonde:\n\n$DA_{distribución}^{t} = $ desperdicio alimentario del sector de la distribución en el año $t$ \n\n$DA_{consumo\\, fuera}^{t} = $ desperdicio alimentario del sector de la hostelería en el año $t$ \n\n$DA_{hogares}^{t} = $ desperdicio alimentario en los hogares en el año $t$ \n\n<br>\n\n<b> Desperdicio alimentario per capita</b>\n\n$$DAPC_{distribución, consumo\\, fuera\\, y\\, hogares}^{t} = \\frac{DA_{distribución}^{t} + DA_{consumo\\, fuera}^{t} + DA_{hogares}^{t}}{P^{t}}$$ <br> \n\ndonde:\n\n$DA_{distribución}^{t} = $ desperdicio alimentario del sector de la distribución en el año $t$ \n\n$DA_{consumo\\, fuera\\}^{t} = $ desperdicio alimentario del sector de la hostelería en el año $t$ \n\n$DA_{hogares}^{t} = $ desperdicio alimentario en los hogares en el año $t$ \n\n$P^{t} = $ población a 1 de julio del año $t$ \n");
+        var propertyEditor = editor.getEditor('root.formula');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: formula');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.formula'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.desagregacion'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('periodicidad', "Cuatrienal");
+        var propertyEditor = editor.getEditor('root.periodicidad');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: periodicidad');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.periodicidad'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('observaciones', "\nLos alimentos incluyen tanto las partes comestibles como las no comestibles (por ejemplo las espinas de los pescados).\nSe consideran pérdida o desperdicio todos aquellos alimentos desechados como residuos.");
+        var propertyEditor = editor.getEditor('root.observaciones');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: observaciones');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.observaciones'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.texto_oceca'));
@@ -671,7 +743,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-03-01A.pdf\">Metadatos 12-3-1(a).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-03-01B.pdf\">Metadatos 12-3-1(b).pdf</a> (solo en inglés)\n");
+        var currentValue = normalizeCurrentValue('indicador_meta_enlace', "<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-03-01A.pdf\">Metadatos 12-3-1(a).pdf</a> (solo en inglés)\n\n<a href=\"https://unstats.un.org/sdgs/metadata/files/Metadata-12-03-01B.pdf\">Metadatos 12-3-1(b).pdf</a> (solo en inglés)");
         var propertyEditor = editor.getEditor('root.indicador_meta_enlace');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -721,7 +793,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-11-05");
+        var currentValue = normalizeCurrentValue('national_metadata_updated_date', "2025-11-24");
         var propertyEditor = editor.getEditor('root.national_metadata_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -905,7 +977,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20251124130344'></script>
+<script src='/site/assets/js/sdg.js?v=20251124144007'></script>
 
 
 <script>
@@ -925,7 +997,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20251124130344"></script><script>
+    <script src="/site/assets/js/custom.js?v=20251124144007"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
