@@ -158,6 +158,14 @@
           "status": "notstarted"
         },
         {
+          "id": "2-2-4",
+          "title": "Elikadura-aniztasunaren gutxieneko atalasearen prebalentzia, biztanleria-taldearen arabera (6-23,9 hilabeteko haurrak eta haurdun ez dauden 15 eta 49 urte bitarteko emakumeak)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/2-2-4/",
+          "status": "notstarted"
+        },
+        {
           "id": "2-2-E1",
           "title": "Helduen obesitate-tasa, gorputz-masaren indizearen arabera (GMI) (EBren sdg_02_10 adierazlea)",
           "description": "",
@@ -996,6 +1004,14 @@
           "keywords": "",
           "href": "/site/8-9-1/",
           "status": "complete"
+        },
+        {
+          "id": "8-9-2",
+          "title": "Turismoaren sektoreko langileak",
+          "description": "",
+          "keywords": "",
+          "href": "/site/8-9-2/",
+          "status": "notstarted"
         },
         {
           "id": "8-10-1",

@@ -158,6 +158,14 @@
           "status": "notstarted"
         },
         {
+          "id": "2-2-4",
+          "title": "Prevalencia del umbral mínimo de diversidad alimentaria, por grupo de población (niños de 6 a 23,9 meses y mujeres no embarazadas de 15 a 49 años)",
+          "description": "",
+          "keywords": "",
+          "href": "/site/es/2-2-4/",
+          "status": "notstarted"
+        },
+        {
           "id": "2-2-E1",
           "title": "Tasa de obesidad de la población adulta según el índice de masa corporal (IMC) (Indicador UE sdg_02_10)",
           "description": "",
@@ -996,6 +1004,14 @@
           "keywords": "",
           "href": "/site/es/8-9-1/",
           "status": "complete"
+        },
+        {
+          "id": "8-9-2",
+          "title": "Personas empleadas en el sector del turismo",
+          "description": "",
+          "keywords": "",
+          "href": "/site/es/8-9-2/",
+          "status": "notstarted"
         },
         {
           "id": "8-10-1",
