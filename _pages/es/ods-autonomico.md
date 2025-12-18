@@ -14,7 +14,7 @@ La siguiente lista muestra las Comunidades Autónomas que informan sobre los ind
 *   [Canarias](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/)
 *   [Cantabria](https://ods-cantabria.github.io/ods-cantabria/)
 *   [Castilla-La Mancha](https://estadistica.castillalamancha.es/agenda-2030)
-*   [Castilla y León](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html)
+*   [Castilla y León](https://servicios4.jcyl.es/ods2030/)
 *   [Cataluña](https://www.idescat.cat/dades/ods/nu/?lang=es)
 *   [Comunidad Valenciana](https://pegv.gva.es/es/ods)
 *   [Extremadura](https://www.juntaex.es/ieex/agenda-2030)
