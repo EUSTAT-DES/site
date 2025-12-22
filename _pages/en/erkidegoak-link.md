@@ -15,7 +15,7 @@ The following list shows the Autonomous Communities that report on the 2030 Agen
 *   [Canary Islands](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/)
 *   [Cantabria](https://ods-cantabria.github.io/ods-cantabria/)
 *   [Castile-La Mancha](https://estadistica.castillalamancha.es/agenda-2030)
-*   [Castile and León](https://estadistica.jcyl.es/web/es/estadisticas-temas/indicadores-agenda-2030-para.html)
+*   [Castile and León](https://servicios4.jcyl.es/ods2030/)
 *   [Catalonia](https://www.idescat.cat/dades/ods/nu/?lang=es)
 *   [Community of Madrid](https://www.madrid.org/iestadis/ODS/ODS_CM.htm)
 *   [Extremadura](https://www.juntaex.es/ieex/agenda-2030)
