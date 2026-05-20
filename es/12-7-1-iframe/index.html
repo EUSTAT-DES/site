@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103519">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520122130">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -360,7 +360,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Nivel de implementación de las políticas de contratación pública sostenible&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Índice&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
@@ -395,15 +395,95 @@ layout-indicator-iframe
   <div id="datatables">
 
     
+    <a role="button" href="https://eustat-des.github.io/data/es/headline/12-7-1.csv" class="btn btn-primary btn-download" download="indicator_12-7-1.csv" tabindex="0" role="button">Descargar los datos de los titulares (.csv)</a>
+    
     <a role="button" href="https://eustat-des.github.io/data/es/data/12-7-1.csv" class="btn btn-primary btn-download" download='indicator_12-7-1.csv' tabindex='0' role='button'>Descargar datos de origen (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Descargar los datos de origen para los desgloses (.csv)</p>
 
     
-    <h3>No hay datos principales disponibles</h3>
+    <h3>Datos principales</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Nivel de implementación de las políticas de contratación pública sostenible</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Series</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>79</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Nivel de implementación de las políticas de contratación pública sostenible</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2025</td>
+          
+          
+          
+          <td>84</td>
+          
+          
+          
+          <td>Índice</td>
+          
+          
+          
+          <td class="table-value">Nivel de implementación de las políticas de contratación pública sostenible</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Área geográfica: </p>
+    
+    
+    <p>Unidad de medida: </p>
+    
+    
+    <p>Nota: </p>
+    
+  </div>
   
 
 </div>
@@ -728,7 +808,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Indicador disponible </th>
         <td>
           
-            <p>La CA de Euskadi no elabora estadísticas oficiales continuas con la metodología del indicador</p>
+            <p>Nivel de implementación de las políticas de contratación pública sostenible</p>
 
           
         </td>
@@ -776,23 +856,82 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Definición del indicador </th>
+        <td>
+          
+            <p>Nivel de implementación de las políticas de contratación pública sostenible (CPS).</p>
+
+<p>El indicador se calcula a través de un cuestionario del Programa de Naciones Unidas para el Medio 
+Ambiente, que contiene 6 apartados:</p>
+
+<ul>
+  <li>A: Existencia de una política, un plan de acción y/o unos requisitos reglamentarios en materia de CPS</li>
+  <li>B: Marco normativo de la contratación pública que favorece la CPS</li>
+  <li>C: Apoyo práctico a los profesionales de la contratación pública en la aplicación de la CPS</li>
+  <li>D: Criterios de contratación / normas de compra / requisitos de la CPS</li>
+  <li>E: Existencia de un sistema de control de la CPS</li>
+  <li>F: Proporción de compra sostenible de productos/servicios prioritarios</li>
+</ul>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Fórmula teórica </th>
+        <td>
+          
+            \[P_{t} = PA_{t} \cdot  (PB_{t} + PC_{t} + PD_{t} + PE_{t} + PF_{t})\]
+
+<p>donde:</p>
+
+<p>$PA_{t}$ = puntuación del apartado A del cuestionario en el año $t$</p>
+
+<p>$PB_{t}$ = puntuación del apartado B del cuestionario en el año $t$</p>
+
+<p>$PC_{t}$ = puntuación del apartado C del cuestionario en el año $t$</p>
+
+<p>$PD_{t}$ = puntuación del apartado D del cuestionario en el año $t$</p>
+
+<p>$PE_{t}$ = puntuación del apartado E del cuestionario en el año $t$</p>
+
+<p>$PF_{t}$ = puntuación del apartado F del cuestionario en el año $t$</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Periodicidad </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Trienal</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
+      
+  
       
       
       
@@ -875,8 +1014,18 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Fecha última actualización datos </th>
+        <td>
           
+            20/05/2026
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1069,7 +1218,8 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Justificación </th>
         <td>
           
-            <p>La contratación pública posee un enorme poder adquisitivo, representando un promedio del 12% del 
+            
+<p>La contratación pública posee un enorme poder adquisitivo, representando un promedio del 12% del 
 producto interno bruto (PIB) en los países de la OCDE y hasta el 30% del PIB en muchos países en desarrollo.
 Aprovechar este poder adquisitivo mediante la adquisición de bienes y servicios más sostenibles 
 puede contribuir a impulsar los mercados hacia la sostenibilidad, reducir los impactos negativos 
@@ -1096,7 +1246,7 @@ información fiable y actualizada sobre las actividades y organizaciones que par
         <th scope="row">Comparabilidad entre el indicador disponible en la C.A. de Euskadi y el indicador de Naciones Unidas/Unión Europea </th>
         <td>
           
-            <p>EAEn eskuragarri dagoen adierazleak Nazio Batuen adierazlearen metadatuak betetzen ditu.</p>
+            <p>El indicador disponible cumple con los metadatos de Naciones Unidas.</p>
 
           
         </td>
@@ -1107,8 +1257,20 @@ información fiable y actualizada sobre las actividades y organizaciones que par
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Resultados internacionales </th>
+        <td>
           
+            
+<p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.7.1&amp;seriesCode=SG_SCP_PROCN&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=HIGIMP"> Número de países que implementan políticas y planes de acción de contratación pública sostenible (nivel alto) SG_SCP_PROCN</a> UNSTATS</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1189,7 +1351,7 @@ información fiable y actualizada sobre las actividades y organizaciones que par
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520103519'></script>
+<script src='/site/assets/js/sdg.js?v=20260520122130'></script>
 
 
 <script>
@@ -1209,7 +1371,7 @@ información fiable y actualizada sobre las actividades y organizaciones que par
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520103519"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520122130"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

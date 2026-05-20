@@ -140,7 +140,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103519">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520122130">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -649,7 +649,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('definicion', "Kontratazio publiko jasangarrirako (KPJ) politiken ezarpen maila ");
+        var currentValue = normalizeCurrentValue('definicion', "Kontratazio publiko jasangarrirako (KPJ) politiken ezarpen maila.\n\nNazio Batuen Ingurumen Programako galdetegi baten bidez kalkulatzen da adierazlea. Galdetegiak sei atal ditu:\n\n- A: KPJren arloan politika, ekintza-plan eta/edo arauzko baldintzak izatea \n- B: KPJ bultzatzen duen kontratazio publikoaren arau-esparrua \n- C: Kontratazio publikoko profesionalei laguntza praktikoa ematea KPJ aplikatzean \n- D: Kontratazio irizpideak / erosketa arauak / KPJ baldintzak \n- E: KPJ kontrolatzeko sistema izatea \n- F: Lehentasunezko produktu/zerbitzuen erosketa jasangarriaren proportzioa\n");
         var propertyEditor = editor.getEditor('root.definicion');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -663,7 +663,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('formula', "\nNazio Batuen Ingurumen Programako galdetegi baten bidez kalkulatzen da adierazlea. Sei atal ditu:\n\n - A: KPJren arloan politika, ekintza-plan eta/edo arauzko baldintzak izatea\n - B: KPJ bultzatzen duen kontratazio publikoaren arau-esparrua \n - C: Kontratazio publikoko profesionalei laguntza praktikoa ematea KPJ aplikatzean \n - D: Kontratazio irizpideak / erosketa arauak / KPJ baldintzak \n - E: KPJ kontrolatzeko sistema izatea \n - F: Lehentasunezko produktu/zerbitzuen erosketa jasangarriaren proportzioa \n\nGaldetegiaren puntuazioa honela kalkulatzen da:\n\n\n  $$P_{t} = PA_{t} \\cdot  (PB_{t} + PC_{t} + PD_{t} + PE_{t} + PF_{t})$$\n\n\nnon:\n\n $PA_{t}$ = galdetegiaren A ataleko puntuazioa $t$ urtean \n $PB_{t}$ = galdetegiaren B ataleko puntuazioa $t$ urtean \n $PC_{t}$ = galdetegiaren C ataleko puntuazioa $t$ urtean \n $PD_{t}$ = galdetegiaren D ataleko puntuazioa $t$ urtean \n $PE_{t}$ = galdetegiaren E ataleko puntuazioa $t$ urtean \n $PF_{t}$ = galdetegiaren F ataleko puntuazioa $t$ urtean \n");
+        var currentValue = normalizeCurrentValue('formula', "$$P_{t} = PA_{t} \\cdot  (PB_{t} + PC_{t} + PD_{t} + PE_{t} + PF_{t})$$\n\nnon:\n\n$PA_{t}$ = galdetegiaren A ataleko puntuazioa $t$ urtean\n\n$PB_{t}$ = galdetegiaren B ataleko puntuazioa $t$ urtean\n\n$PC_{t}$ = galdetegiaren C ataleko puntuazioa $t$ urtean\n\n$PD_{t}$ = galdetegiaren D ataleko puntuazioa $t$ urtean\n\n$PE_{t}$ = galdetegiaren E ataleko puntuazioa $t$ urtean\n\n$PF_{t}$ = galdetegiaren F ataleko puntuazioa $t$ urtean\n");
         var propertyEditor = editor.getEditor('root.formula');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -763,7 +763,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dato_global', "\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.7.1&seriesCode=SG_SCP_PROCN&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=HIGIMP” \"> Kontratazio publiko jasangarriko politikak eta ekintza-planak ezartzen dituzten herrialdeen kopurua (maila altua) SG_SCP_PROCN</a> UNSTATS ");
+        var currentValue = normalizeCurrentValue('dato_global', "\n\n<a href=\"https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=12.7.1&seriesCode=SG_SCP_PROCN&areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&period=3&table=HIGIMP\"> Kontratazio publiko jasangarriko politikak eta ekintza-planak ezartzen dituzten herrialdeen kopurua (maila altua) SG_SCP_PROCN</a> UNSTATS ");
         var propertyEditor = editor.getEditor('root.dato_global');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -815,7 +815,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('national_data_updated_date', "");
+        var currentValue = normalizeCurrentValue('national_data_updated_date', "2026-05-20");
         var propertyEditor = editor.getEditor('root.national_data_updated_date');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -1049,7 +1049,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520103519'></script>
+<script src='/site/assets/js/sdg.js?v=20260520122130'></script>
 
 
 <script>
@@ -1069,7 +1069,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520103519"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520122130"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
