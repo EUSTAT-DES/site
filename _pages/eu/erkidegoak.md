@@ -14,7 +14,7 @@ Hona hemen 2030 Agendaren adierazleei buruzko informazioa ematen duten Autonomia
 *   [Errioxa](https://www.larioja.org/estadistica/es/objetivos-desarrollo-sostenible-rioja)
 *   [Extremadura](https://www.juntaex.es/ieex/agenda-2030)
 *   [Galizia](https://www.ige.gal/web/mostrar_marco.jsp?idioma=es&app=ODS)
-*   [Gaztela eta Leon](https://servicios4.jcyl.es/ods2030/)
+*   [Gaztela eta Leon](https://servicios4.jcyl.es/estadistica/ods2030/)
 *   [Gaztela-Mantxa](https://estadistica.castillalamancha.es/agenda-2030)
 *   [Kanariak](https://www3.gobiernodecanarias.org/aplicaciones/appsistac/ods/)
 *   [Kantabria](https://ods-cantabria.github.io/ods-cantabria/)
