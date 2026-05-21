@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520134721">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260521072949">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1186,17 +1186,19 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definizioa </th>
         <td>
           
-            <p>Kontratazio publiko jasangarrirako (KPJ) politiken ezarpen maila.</p>
+            <p>Kontratazio publiko jasangarrirako (KPJ) politiken ezarpen maila (0-100).</p>
 
-<p>Nazio Batuen Ingurumen Programako galdetegi baten bidez kalkulatzen da adierazlea. Galdetegiak sei atal ditu:</p>
+<p>Nazio Batuen Ingurumen Programako galdetegi baten bidez kalkulatzen da adierazlea, 0 eta 100 arteko puntuazioa esleituz.</p>
+
+<p>Galdetegiak sei atal ditu:</p>
 
 <ul>
-  <li>A: KPJren arloan politika, ekintza-plan eta/edo arauzko baldintzak izatea</li>
-  <li>B: KPJ bultzatzen duen kontratazio publikoaren arau-esparrua</li>
-  <li>C: Kontratazio publikoko profesionalei laguntza praktikoa ematea KPJ aplikatzean</li>
-  <li>D: Kontratazio irizpideak / erosketa arauak / KPJ baldintzak</li>
-  <li>E: KPJ kontrolatzeko sistema izatea</li>
-  <li>F: Lehentasunezko produktu/zerbitzuen erosketa jasangarriaren proportzioa</li>
+  <li>A: KPJren arloan politika, ekintza-plan eta/edo arauzko baldintzak izatea (0-1 puntu)</li>
+  <li>B: KPJ bultzatzen duen kontratazio publikoaren arau-esparrua (0-20 puntu)</li>
+  <li>C: Kontratazio publikoko profesionalei laguntza praktikoa ematea KPJ aplikatzean (0-20 puntu)</li>
+  <li>D: Kontratazio irizpideak / erosketa arauak / KPJ baldintzak (0-20 puntu)</li>
+  <li>E: KPJ kontrolatzeko sistema izatea (0-20 puntu)</li>
+  <li>F: Lehentasunezko produktu/zerbitzuen erosketa jasangarriaren proportzioa (0-20 puntu)</li>
 </ul>
 
           
@@ -1358,7 +1360,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Metadatuen azken eguneratze-data </th>
         <td>
           
-            2026/05/20
+            2026/05/21
           
         </td>
         </tr>
@@ -1814,7 +1816,7 @@ jarduera eta erakundeei buruz.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520134721'></script>
+<script src='/site/assets/js/sdg.js?v=20260521072949'></script>
 
 
 <script>
@@ -1834,7 +1836,7 @@ jarduera eta erakundeei buruz.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520134721"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260521072949"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

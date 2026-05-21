@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520134721">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260521072949">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1186,18 +1186,20 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definición del indicador </th>
         <td>
           
-            <p>Nivel de implementación de las políticas de contratación pública sostenible (CPS).</p>
+            <p>Nivel de implementación de las políticas de contratación pública sostenible (0-100).</p>
 
 <p>El indicador se calcula a través de un cuestionario del Programa de Naciones Unidas para el Medio 
-Ambiente, que contiene 6 apartados:</p>
+Ambiente, en el que se obtiene una puntuación de entre 0 y 100.</p>
+
+<p>El cuestionario contiene 6 apartados:</p>
 
 <ul>
-  <li>A: Existencia de una política, un plan de acción y/o unos requisitos reglamentarios en materia de CPS</li>
-  <li>B: Marco normativo de la contratación pública que favorece la CPS</li>
-  <li>C: Apoyo práctico a los profesionales de la contratación pública en la aplicación de la CPS</li>
-  <li>D: Criterios de contratación / normas de compra / requisitos de la CPS</li>
-  <li>E: Existencia de un sistema de control de la CPS</li>
-  <li>F: Proporción de compra sostenible de productos/servicios prioritarios</li>
+  <li>A: Existencia de una política, un plan de acción y/o unos requisitos reglamentarios en materia de CPS (0-1 punto)</li>
+  <li>B: Marco normativo de la contratación pública que favorece la CPS (0-20 puntos)</li>
+  <li>C: Apoyo práctico a los profesionales de la contratación pública en la aplicación de la CPS (0-20 puntos)</li>
+  <li>D: Criterios de contratación / normas de compra / requisitos de la CPS (0-20 puntos)</li>
+  <li>E: Existencia de un sistema de control de la CPS (0-20 puntos)</li>
+  <li>F: Proporción de compra sostenible de productos/servicios prioritarios (0-20 puntos)</li>
 </ul>
 
           
@@ -1359,7 +1361,7 @@ Ambiente, que contiene 6 apartados:</p>
         <th scope="row">Fecha última actualización metadatos </th>
         <td>
           
-            20/05/2026
+            21/05/2026
           
         </td>
         </tr>
@@ -1815,7 +1817,7 @@ información fiable y actualizada sobre las actividades y organizaciones que par
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520134721'></script>
+<script src='/site/assets/js/sdg.js?v=20260521072949'></script>
 
 
 <script>
@@ -1835,7 +1837,7 @@ información fiable y actualizada sobre las actividades y organizaciones que par
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520134721"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260521072949"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

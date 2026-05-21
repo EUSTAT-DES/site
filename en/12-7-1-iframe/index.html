@@ -145,7 +145,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520134721">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260521072949">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -862,18 +862,20 @@ data-event-label="Change to indicator.global_metadata tab"
         <td>
           
             
-<p>Level of implementation of sustainable public procurement (SPP) policies.</p>
+<p>Level of implementation of sustainable public procurement (SPP) policies (0-100).</p>
 
 <p>The indicator is calculated using a questionnaire from the United Nations Environment Programme, 
-which contains 6 sections:</p>
+which assigns a score between 0 and 100.</p>
+
+<p>The questionnaire contains 6 sections:</p>
 
 <ul>
-  <li>A: Existence of an SPP policy/action plan and/or SPP regulatory requirements</li>
-  <li>B: The public procurement regulatory framework is conducive to SPP</li>
-  <li>C: Practical support delivered to procurement practitioners in the implementation of SPP</li>
-  <li>D: SPP purchasing criteria / buying standards / requirements</li>
-  <li>E: Existence of an SPP monitoring system</li>
-  <li>F: Percentage of sustainable public procurement</li>
+  <li>A: Existence of an SPP policy/action plan and/or SPP regulatory requirements (0-1 points)</li>
+  <li>B: The public procurement regulatory framework is conducive to SPP (0-20 points)</li>
+  <li>C: Practical support delivered to procurement practitioners in the implementation of SPP (0-20 points)</li>
+  <li>D: SPP purchasing criteria / buying standards / requirements (0-20 points)</li>
+  <li>E: Existence of an SPP monitoring system (0-20 points)</li>
+  <li>F: Percentage of sustainable public procurement (0-20 points)</li>
 </ul>
 
           
@@ -1035,7 +1037,7 @@ which contains 6 sections:</p>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            2026/05/20
+            2026/05/21
           
         </td>
         </tr>
@@ -1354,7 +1356,7 @@ involved in SPP.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520134721'></script>
+<script src='/site/assets/js/sdg.js?v=20260521072949'></script>
 
 
 <script>
@@ -1374,7 +1376,7 @@ involved in SPP.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520134721"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260521072949"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
