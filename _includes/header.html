@@ -96,9 +96,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function () {
         if (window.scrollY > 500) {
-            document.querySelector('.scrollup').style.display = 'block';
+            var btn = document.querySelector('.scrollup');
+            if (btn) { btn.style.display = 'block'; }
         } else {
-            document.querySelector('.scrollup').style.display = 'none';
+            var btn = document.querySelector('.scrollup');
+            if (btn) { btn.style.display = 'none'; }
         }
     });
 });
