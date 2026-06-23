@@ -628,3 +628,6 @@ ul.iconillo {
         }
     }
 }
+.leaflet-tooltip {
+  pointer-events: none !important;
+}
