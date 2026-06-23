@@ -3376,3 +3376,6 @@ ul.iconillo {
       color: black !important; }
   .layout-progrestatus.contrast-high #main-content .statuses .status.notstarted {
     border: 1px solid white !important; }
+
+.leaflet-tooltip {
+  pointer-events: none !important; }
