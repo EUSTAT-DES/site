@@ -252,10 +252,41 @@ news:
 observation_attributes:
   - field: COMMENT_OBS
     label: indicator.footnote
+auto_progress_calculation: true
 progress_status:
   status_heading: status.progress_status
   status_help: status.progress_status
   status_types:
+    - value: target_achieved
+      label: status.alcanzado
+      image: assets/img/progress/alcanzado.png
+      alt: status.alcanzado
+      hide_on_goal_pages: false
+    - value: on_track
+      label: status.en_progreso
+      image: assets/img/progress/en_progreso.png
+      alt: status.en_progreso
+      hide_on_goal_pages: false
+    - value: progress_made
+      label: status.en_progreso
+      image: assets/img/progress/en_progreso.png
+      alt: status.en_progreso
+      hide_on_goal_pages: false
+    - value: limited_progress
+      label: status.retroceso
+      image: assets/img/progress/retroceso.png
+      alt: status.retroceso
+      hide_on_goal_pages: false
+    - value: deterioration
+      label: status.retroceso
+      image: assets/img/progress/retroceso.png
+      alt: status.retroceso
+      hide_on_goal_pages: false
+    - value: not_available
+      label: status.no_evaluado
+      image: assets/img/progress/no_evaluado.png
+      alt: status.no_evaluado
+      hide_on_goal_pages: false
     - value: alcanzado
       label: status.alcanzado
       image: assets/img/progress/alcanzado.png
