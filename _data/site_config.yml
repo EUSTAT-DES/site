@@ -262,12 +262,12 @@ progress_status:
       image: assets/img/progress/alcanzado.png
       alt: status.alcanzado
       hide_on_goal_pages: false
-    - value: on_track
+    - value: substantial_progress
       label: status.en_progreso
       image: assets/img/progress/en_progreso.png
       alt: status.en_progreso
       hide_on_goal_pages: false
-    - value: progress_made
+    - value: moderate_progress
       label: status.en_progreso
       image: assets/img/progress/en_progreso.png
       alt: status.en_progreso
