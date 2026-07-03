@@ -258,6 +258,11 @@ progress_status:
   status_help: status.progress_status
   status_types:
     # === Estados Eurostat (generados por motor automático) ===
+    - value: target_achieved
+      label: status.meta_alcanzada
+      image: assets/img/progress/alcanzado.png
+      alt: status.meta_alcanzada
+      hide_on_goal_pages: false
     - value: significant_progress
       label: status.progreso_significativo
       image: assets/img/progress/alcanzado.png
