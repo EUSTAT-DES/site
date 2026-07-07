@@ -27,10 +27,7 @@ jobs:
     - name: Set the REPOSITORY_URL_SITE environment variable
       run: echo "REPOSITORY_URL_SITE=https://github.com/$GITHUB_REPOSITORY" >> $GITHUB_ENV
     - name: Download progreso.csv from data
-      run: |
-        curl -f -o _data/csv/progreso.csv \
-          https://eustat-des.github.io/data/progreso.csv || \
-          echo "Warning: progreso.csv not available, using existing file"
+      run: curl -f -o _data/csv/progreso.csv https://eustat-des.github.io/data/progreso.csv
     - name: Build the site
       run: |
         gem install bundler

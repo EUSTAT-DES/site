@@ -37,10 +37,7 @@ jobs:
       with:
         ruby-version: '3.2.2'
     - name: Download progreso.csv from data
-      run: |
-        curl -f -o _data/csv/progreso.csv \
-          https://sdg.eustat.eus/sdg-data-prod/progreso.csv || \
-          echo "Warning: progreso.csv not available, using existing file"
+      run: curl -f -o _data/csv/progreso.csv https://sdg.eustat.eus/sdg-data-prod/progreso.csv
     - name: Build the site
       run: |
         gem install bundler
