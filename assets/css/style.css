@@ -3197,7 +3197,6 @@ ul.iconillo {
   margin-bottom: 5px;
   margin-right: 10px; }
   .layout-progrestatus #main-content .statuses > div .status {
-    border: none !important;
     color: #0b0c0c;
     font-weight: normal;
     border: none;
@@ -3245,6 +3244,8 @@ ul.iconillo {
       .layout-progrestatus #main-content .statuses > div .status.notapplicable .status-inner {
         background-color: rgba(255, 255, 255, 0.8);
         background: rgba(255, 255, 255, 0.8); }
+    .layout-progrestatus #main-content .statuses > div .status.notapplicable {
+      border: none; }
     .layout-progrestatus #main-content .statuses > div .status .status-inner {
       padding: 0 2px;
       border-radius: 5px;
