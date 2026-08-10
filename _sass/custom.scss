@@ -462,7 +462,6 @@ ul.iconillo {
                 margin-right: 10px;
 
                 .status {
-                    border: none !important;
                     @include status;
                     display: inline-block;
                     margin-right: 3px;
@@ -471,12 +470,14 @@ ul.iconillo {
                     width: 40px;
                     text-align: center;
                     font-size: $fontSize;
-
-  .status-inner {
-    padding: 0 2px;
-    border-radius: 5px; // Mantén los bordes redondeados si es necesario.
-    color: #000; // Texto negro para todos.
-}
+                    &.notapplicable {
+                        border: none;
+                    }
+                    .status-inner {
+                        padding: 0 2px;
+                        border-radius: 5px;
+                        color: #000;
+                    }
                 }
             }
         }
