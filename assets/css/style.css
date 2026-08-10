@@ -2770,14 +2770,14 @@ header .container {
   justify-content: space-between;
   align-items: center;
   padding-left: 0.5rem;
-  min-height: 48.73px; }
+  height: 50px; }
 
 .header .logo-header {
   display: flex;
   align-items: center; }
 
 .header .logo-header img {
-  width: 9em; }
+  height: 50px; }
 
 .header #euskadieus-logo {
   width: 9em; }
@@ -3153,14 +3153,38 @@ ul.iconillo {
   background: #45ba80; }
 
 .progreso {
+  background-color: #b5e61d;
+  background: #b5e61d; }
+
+.retroceso {
+  background-color: #ff7f27;
+  background: #ff7f27; }
+
+.noevaluado {
+  background-color: #ccd5dd;
+  background: #ccd5dd; }
+
+.significant-progress {
+  background-color: #45ba80;
+  background: #45ba80; }
+
+.moderate-progress {
+  background-color: #b5e61d;
+  background: #b5e61d; }
+
+.no-progress {
   background-color: #fec329;
   background: #fec329; }
 
-.retroceso {
+.moderate-deterioration {
+  background-color: #ff7f27;
+  background: #ff7f27; }
+
+.significant-deterioration {
   background-color: #db405a;
   background: #db405a; }
 
-.noevaluado {
+.not-available {
   background-color: #ccd5dd;
   background: #ccd5dd; }
 
@@ -3251,12 +3275,30 @@ ul.iconillo {
     background-color: #45ba80;
     background: #45ba80; }
   .layout-progrestatus #main-content .goal-stats .progreso {
+    background-color: #b5e61d;
+    background: #b5e61d; }
+  .layout-progrestatus #main-content .goal-stats .retroceso {
+    background-color: #ff7f27;
+    background: #ff7f27; }
+  .layout-progrestatus #main-content .goal-stats .noevaluado {
+    background-color: #ccd5dd;
+    background: #ccd5dd; }
+  .layout-progrestatus #main-content .goal-stats .significant-progress {
+    background-color: #45ba80;
+    background: #45ba80; }
+  .layout-progrestatus #main-content .goal-stats .moderate-progress {
+    background-color: #b5e61d;
+    background: #b5e61d; }
+  .layout-progrestatus #main-content .goal-stats .no-progress {
     background-color: #fec329;
     background: #fec329; }
-  .layout-progrestatus #main-content .goal-stats .retroceso {
+  .layout-progrestatus #main-content .goal-stats .moderate-deterioration {
+    background-color: #ff7f27;
+    background: #ff7f27; }
+  .layout-progrestatus #main-content .goal-stats .significant-deterioration {
     background-color: #db405a;
     background: #db405a; }
-  .layout-progrestatus #main-content .goal-stats .noevaluado {
+  .layout-progrestatus #main-content .goal-stats .not-available {
     background-color: #ccd5dd;
     background: #ccd5dd; }
 .layout-progrestatus #main-content .divider {
