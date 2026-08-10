@@ -49,7 +49,7 @@ header .container{
   justify-content: space-between;
   align-items: center;
   padding-left: 0.5rem;
-  min-height: 48.73px;
+  height: 50px;
 }
 
 .header .logo-header{
@@ -58,7 +58,7 @@ header .container{
 }
 
 .header .logo-header img{
-  width: 9em;
+  height: 50px;
 }
 .header  #euskadieus-logo{
   width: 9em;
@@ -431,11 +431,18 @@ ul.iconillo {
 }
 
 
-// Nuevos estados
+// Nuevos estados (legacy)
 .alcanzado {background-color: #45ba80; background: #45ba80;}
-.progreso {background-color: #fec329; background: #fec329;}
-.retroceso {background-color: #db405a; background: #db405a;}
+.progreso {background-color: #b5e61d; background: #b5e61d;}
+.retroceso {background-color: #ff7f27; background: #ff7f27;}
 .noevaluado {background-color: #ccd5dd; background: #ccd5dd;}
+// Nuevos estados (Eurostat)
+.significant-progress {background-color: #45ba80; background: #45ba80;}
+.moderate-progress {background-color: #b5e61d; background: #b5e61d;}
+.no-progress {background-color: #fec329; background: #fec329;}
+.moderate-deterioration {background-color: #ff7f27; background: #ff7f27;}
+.significant-deterioration {background-color: #db405a; background: #db405a;}
+.not-available {background-color: #ccd5dd; background: #ccd5dd;}
 
 
 // Progress status
@@ -496,16 +503,18 @@ ul.iconillo {
                 background-color: $status-backgroundColor-notstarted;
                 background: $status-backgroundColor-notstarted;
             }
-// Otros estados de progreso
-
-                        .alcanzado {background-color: #45ba80;
-                                   background: #45ba80;}
-                        .progreso {background-color: #fec329;
-                                               background: #fec329;}
-                        .retroceso {background-color: #db405a;
-                                           background: #db405a;}
-                        .noevaluado {background-color: #ccd5dd;
-                                       background: #ccd5dd;}
+// Otros estados de progreso (legacy)
+                        .alcanzado {background-color: #45ba80; background: #45ba80;}
+                        .progreso {background-color: #b5e61d; background: #b5e61d;}
+                        .retroceso {background-color: #ff7f27; background: #ff7f27;}
+                        .noevaluado {background-color: #ccd5dd; background: #ccd5dd;}
+// Otros estados de progreso (Eurostat)
+                        .significant-progress {background-color: #45ba80; background: #45ba80;}
+                        .moderate-progress {background-color: #b5e61d; background: #b5e61d;}
+                        .no-progress {background-color: #fec329; background: #fec329;}
+                        .moderate-deterioration {background-color: #ff7f27; background: #ff7f27;}
+                        .significant-deterioration {background-color: #db405a; background: #db405a;}
+                        .not-available {background-color: #ccd5dd; background: #ccd5dd;}
         }
         .divider {
             height: 15px;
