@@ -37,11 +37,14 @@
                     {% for status_type in status_types %}
                     {% assign status_stats = overall_data | where: "status", status_type.value | first %}
                     {% if status_stats %}
+                    {% assign _t_key_o = 'status.' | append: status_type.value | append: '_mixto' %}
+                    {% assign _t_label_o = _t_key_o | t %}
+                    {% if _t_label_o == _t_key_o %}{% assign _t_label_o = status_type.label | t %}{% endif %}
                     <div>
                         <span class="status {{ status_type.value | slugify }}">
                             <span class="status-inner">{{ status_stats.count }}</span>
                         </span>
-                        <strong>{{ status_type.label | t }}</strong>
+                        <strong>{{ _t_label_o }}</strong>
                         <span class="value">{{ status_stats.percentage | round: 2 }}%</span>
                     </div>
                     {% endif %}
@@ -53,7 +56,10 @@
                 {% for status_type in status_types %}
                 {% assign status_stats = overall_data | where: "status", status_type.value | first %}
                 {% if status_stats %}
-                <span class="{{ status_type.value | slugify }}" style="width:{{ status_stats.percentage }}%" title="{{ status_type.label | t }}: {{ status_stats.percentage | round: 2 }}%"></span>
+                {% assign _t_key_o = 'status.' | append: status_type.value | append: '_mixto' %}
+                {% assign _t_label_o = _t_key_o | t %}
+                {% if _t_label_o == _t_key_o %}{% assign _t_label_o = status_type.label | t %}{% endif %}
+                <span class="{{ status_type.value | slugify }}" style="width:{{ status_stats.percentage }}%" title="{{ _t_label_o }}: {{ status_stats.percentage | round: 2 }}%"></span>
                 {% endif %}
                 {% endfor %}
             </div>
@@ -93,11 +99,14 @@
                     {% for status_type in status_types %}
                     {% assign status_stats = goal_data | where: "status", status_type.value | first %}
                     {% if status_stats %}
+                    {% assign _t_key_g = 'status.' | append: status_type.value | append: '_mixto' %}
+                    {% assign _t_label_g = _t_key_g | t %}
+                    {% if _t_label_g == _t_key_g %}{% assign _t_label_g = status_type.label | t %}{% endif %}
                     <div>
                         <span class="status {{ status_type.value | slugify }}">
                             <span class="status-inner">{{ status_stats.count }}</span>
                         </span>
-                        <strong>{{ status_type.label | t }}</strong>
+                        <strong>{{ _t_label_g }}</strong>
                         <span class="value">{{ status_stats.percentage | round: 2 }}%</span>
                     </div>
                     {% endif %}
@@ -109,7 +118,10 @@
                 {% for status_type in status_types %}
                 {% assign status_stats = goal_data | where: "status", status_type.value | first %}
                 {% if status_stats %}
-                <span class="{{ status_type.value | slugify }}" style="width:{{ status_stats.percentage }}%" title="{{ status_type.label | t }}: {{ status_stats.percentage | round: 2 }}%"></span>
+                {% assign _t_key_g = 'status.' | append: status_type.value | append: '_mixto' %}
+                {% assign _t_label_g = _t_key_g | t %}
+                {% if _t_label_g == _t_key_g %}{% assign _t_label_g = status_type.label | t %}{% endif %}
+                <span class="{{ status_type.value | slugify }}" style="width:{{ status_stats.percentage }}%" title="{{ _t_label_g }}: {{ status_stats.percentage | round: 2 }}%"></span>
                 {% endif %}
                 {% endfor %}
             </div>
