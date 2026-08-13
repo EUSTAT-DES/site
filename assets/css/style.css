@@ -3262,10 +3262,6 @@ ul.iconillo {
     .layout-progrestatus #main-content .goal-stats {
       -ms-high-contrast-adjust: none;
       forced-color-adjust: none; } }
-  .layout-progrestatus #main-content .goal-stats span {
-    display: inline-block;
-    height: 10px;
-    font-weight: bold; }
   .layout-progrestatus #main-content .goal-stats .notapplicable {
     background-color: repeating-linear-gradient(135deg, #757575, white 10px, #757575 10px, white 20px);
     background: repeating-linear-gradient(135deg, #757575, white 10px, #757575 10px, white 20px); }
@@ -3302,12 +3298,16 @@ ul.iconillo {
   .layout-progrestatus #main-content .goal-stats .not-available {
     background-color: #ccd5dd;
     background: #ccd5dd; }
+.layout-progrestatus #main-content .goal-overall .goal-stats span {
+  display: inline-block;
+  height: 10px;
+  font-weight: bold; }
 .layout-progrestatus #main-content .divider {
   height: 15px; }
 .layout-progrestatus #main-content .goal {
   clear: left;
   margin-bottom: 4px;
-  padding-bottom: 4px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ccc; }
   .layout-progrestatus #main-content .goal .total {
     line-height: 1.2;
@@ -3343,7 +3343,7 @@ ul.iconillo {
       .layout-progrestatus #main-content .details h2 {
         display: inline-block; } }
   .layout-progrestatus #main-content .details h3 {
-    margin-top: 10px;
+    margin-top: 2px;
     line-height: 1.2; }
     @media screen and (min-width: 520px) {
       .layout-progrestatus #main-content .details h3 {
@@ -3358,6 +3358,54 @@ ul.iconillo {
   width: 100%; }
 .layout-progrestatus #main-content .goal-overall {
   margin-bottom: 20px; }
+.layout-progrestatus #main-content .reporting-status-item .goal-stats span {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  position: relative;
+  cursor: default;
+  font-weight: normal;
+  padding: 12px; }
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span .status-inner {
+    padding: 0 2px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2; }
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span.notapplicable .status-inner {
+    background: rgba(255, 255, 255, 0.8); }
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 3px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.85);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 101; }
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]::after {
+    content: attr(title);
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: normal;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 100;
+    line-height: 25px; }
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]:hover::before, .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]:hover::after {
+    opacity: 1; }
 .layout-progrestatus #main-content .reporting-status-item {
   margin-bottom: 20px; }
 .layout-progrestatus.contrast-high #main-content .goal-tiles img {
