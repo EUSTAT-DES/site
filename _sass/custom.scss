@@ -491,11 +491,6 @@ ul.iconillo {
             border: 1px solid $color-dark;
             font-size: 0;
             margin-top: 10px;
-            & span {
-                display: inline-block;
-                height: 10px;
-                font-weight: bold;
-            }
             .notapplicable {
                 background-color: $status-backgroundColor-notapplicable;
                 background: $status-backgroundColor-notapplicable;
@@ -517,14 +512,19 @@ ul.iconillo {
                         .significant-deterioration {background-color: #db405a; background: #db405a;}
                         .not-available {background-color: #ccd5dd; background: #ccd5dd;}
         }
+        .goal-overall .goal-stats span {
+            display: inline-block;
+            height: 10px;
+            font-weight: bold;
+        }
         .divider {
             height: 15px;
         }
         .goal {
             clear: left;
             margin-bottom: 4px;
-            padding-bottom: 4px;
-            border-bottom: 1px solid $horizontalRule-color;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #ccc;
             .total {
                 line-height: 1.2;
                 font-size: $fontSize;
@@ -566,7 +566,7 @@ ul.iconillo {
                 }
             }
             h3 {
-                margin-top: 10px;
+                margin-top: 2px;
                 @media screen and (min-width: 520px) {
                     display: inline-block;
                 }
@@ -586,6 +586,69 @@ ul.iconillo {
         }
         .goal-overall {
             margin-bottom: 20px;
+        }
+
+        .reporting-status-item .goal-stats {
+            & span {
+                display: inline-block;
+                font-size: $fontSize;
+                text-align: center;
+                color: #000;
+                position: relative;
+                cursor: default;
+                font-weight: normal;
+                padding: 12px;
+                .status-inner {
+                    padding: 0 2px;
+                    border-radius: 5px;
+                    position: relative;
+                    z-index: 2;
+                }
+                &.notapplicable .status-inner {
+                    background: rgba(255, 255, 255, 0.8);
+                }
+                // Tooltip bocadillo
+                &[title] {
+                    // Triángulo (flecha)
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: calc(100% + 3px);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border: 5px solid transparent;
+                        border-top-color: rgba(0, 0, 0, 0.85);
+                        pointer-events: none;
+                        opacity: 0;
+                        transition: opacity 0.15s;
+                        z-index: 101;
+                    }
+                    // Cuerpo del bocadillo
+                    &::after {
+                        content: attr(title);
+                        position: absolute;
+                        bottom: calc(100% + 12px);
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: rgba(0, 0, 0, 0.85);
+                        color: #fff;
+                        padding: 2px 8px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        font-weight: normal;
+                        white-space: nowrap;
+                        pointer-events: none;
+                        opacity: 0;
+                        transition: opacity 0.15s;
+                        z-index: 100;
+                        line-height: 25px;
+                    }
+                    &:hover::before,
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 

@@ -92,28 +92,7 @@
             <h3 class="status-goal">
                 <a href="{{ goal_details.url }}">{{ goal_details.short }}</a>
             </h3>
-            <span class="total">{{ goal_totals }} {{ indicators_plural }}</span>
             {% if goal_totals > 0 %}
-            <div class="summary">
-                <div class="statuses">
-                    {% for status_type in status_types %}
-                    {% assign status_stats = goal_data | where: "status", status_type.value | first %}
-                    {% if status_stats %}
-                    {% assign _t_key_g = 'status.' | append: status_type.value | append: '_mixto' %}
-                    {% assign _t_label_g = _t_key_g | t %}
-                    {% if _t_label_g == _t_key_g %}{% assign _t_label_g = status_type.label | t %}{% endif %}
-                    <div>
-                        <span class="status {{ status_type.value | slugify }}">
-                            <span class="status-inner">{{ status_stats.count }}</span>
-                        </span>
-                        <strong>{{ _t_label_g }}</strong>
-                        <span class="value">{{ status_stats.percentage | round: 2 }}%</span>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                    <br style="clear:both;">
-                </div>
-            </div>
             <div class="goal-stats">
                 {% for status_type in status_types %}
                 {% assign status_stats = goal_data | where: "status", status_type.value | first %}
@@ -121,7 +100,7 @@
                 {% assign _t_key_g = 'status.' | append: status_type.value | append: '_mixto' %}
                 {% assign _t_label_g = _t_key_g | t %}
                 {% if _t_label_g == _t_key_g %}{% assign _t_label_g = status_type.label | t %}{% endif %}
-                <span class="{{ status_type.value | slugify }}" style="width:{{ status_stats.percentage }}%" title="{{ _t_label_g }}: {{ status_stats.percentage | round: 2 }}%"></span>
+                <span class="{{ status_type.value | slugify }}" style="width:{{ status_stats.percentage }}%" title="{{ _t_label_g }}: {{ status_stats.percentage | round: 2 }}%"><span class="status-inner">{{ status_stats.count }}</span></span>
                 {% endif %}
                 {% endfor %}
             </div>
