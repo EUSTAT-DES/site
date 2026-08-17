@@ -3319,7 +3319,8 @@ ul.iconillo {
     display: inline-block;
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    margin-left: 10px; }
     @media screen and (min-width: 520px) {
       .layout-progrestatus #main-content .goal .total {
         margin-left: 10px; } }
@@ -3366,7 +3367,7 @@ ul.iconillo {
   position: relative;
   cursor: default;
   font-weight: normal;
-  padding: 12px; }
+  padding: 12px 0; }
   .layout-progrestatus #main-content .reporting-status-item .goal-stats span .status-inner {
     padding: 0 2px;
     border-radius: 5px;
@@ -3375,19 +3376,11 @@ ul.iconillo {
   .layout-progrestatus #main-content .reporting-status-item .goal-stats span.notapplicable .status-inner {
     background: rgba(255, 255, 255, 0.8); }
   .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]::before {
-    content: "";
-    position: absolute;
-    bottom: calc(100% + 3px);
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid transparent;
-    border-top-color: rgba(0, 0, 0, 0.85);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.15s;
-    z-index: 101; }
+    content: none; }
   .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]::after {
-    content: attr(title);
+    content: none; }
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span .goal-bar-tooltip {
+    display: none;
     position: absolute;
     bottom: calc(100% + 12px);
     left: 50%;
@@ -3400,14 +3393,47 @@ ul.iconillo {
     font-weight: normal;
     white-space: nowrap;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.15s;
     z-index: 100;
     line-height: 25px; }
-  .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]:hover::before, .layout-progrestatus #main-content .reporting-status-item .goal-stats span[title]:hover::after {
-    opacity: 1; }
+    .layout-progrestatus #main-content .reporting-status-item .goal-stats span .goal-bar-tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: var(--arrow-offset, 50%);
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-top-color: rgba(0, 0, 0, 0.85); }
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span:hover .goal-bar-tooltip {
+    display: block; }
 .layout-progrestatus #main-content .reporting-status-item {
   margin-bottom: 20px; }
+@media only screen and (max-width: 576px) {
+  .layout-progrestatus #main-content .reporting-status-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+  .layout-progrestatus #main-content .reporting-status-item .frame {
+    width: auto;
+    float: none;
+    display: inline-block;
+    margin-bottom: 5px; }
+    .layout-progrestatus #main-content .reporting-status-item .frame img {
+      width: 60px;
+      height: 60px; }
+  .layout-progrestatus #main-content .reporting-status-item .details {
+    flex: 1;
+    min-width: 0;
+    float: none;
+    margin-left: 10px; }
+    .layout-progrestatus #main-content .reporting-status-item .details h3 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-left: 0; }
+  .layout-progrestatus #main-content .reporting-status-item > .goal-stats {
+    width: 100%;
+    clear: both; }
+  .layout-progrestatus #main-content a[href="#top"] {
+    width: auto; } }
 .layout-progrestatus.contrast-high #main-content .goal-tiles img {
   background-color: black !important; }
 .layout-progrestatus.contrast-high #main-content .goal-stats {

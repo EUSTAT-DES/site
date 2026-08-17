@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260813103900">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260817113322">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -2064,6 +2064,97 @@ data-event-label="high"
 
   <a href="#top">Volver arriba</a>
 </div>
+
+<script>
+(function () {
+  // En móvil: mover goal-stats fuera de details para que ocupe ancho completo
+  function reorderForMobile() {
+    document.querySelectorAll('.reporting-status-item').forEach(function (item) {
+      var details = item.querySelector('.details');
+      var goalStats = item.querySelector('.goal-stats');
+      var br = item.querySelector('br[style]');
+      if (!details || !goalStats) return;
+      if (window.innerWidth <= 576) {
+        if (goalStats.parentNode === details) {
+          item.insertBefore(goalStats, br || null);
+          details.style.flex = '1';
+          details.style.minWidth = '0';
+          details.style.float = 'none';
+        }
+      } else {
+        if (goalStats.parentNode === item) {
+          details.appendChild(goalStats);
+          details.style.flex = '';
+          details.style.minWidth = '';
+          details.style.float = '';
+        }
+      }
+    });
+  }
+
+  // Añadir span.total con el total de indicadores por objetivo
+  document.querySelectorAll('.reporting-status-item').forEach(function (item) {
+    var spans = item.querySelectorAll('.goal-stats span[title] .status-inner');
+    var total = 0;
+    spans.forEach(function (s) { total += parseInt(s.textContent) || 0; });
+    if (total > 0) {
+      var details = item.querySelector('.details');
+      var goalStats = item.querySelector('.goal-stats');
+      if (details && goalStats) {
+        var totalSpan = document.createElement('span');
+        totalSpan.className = 'total';
+        totalSpan.textContent = total + ' ' + (opensdg.language === 'eu' ? 'adierazle' : opensdg.language === 'es' ? 'indicadores' : 'indicators');
+        details.insertBefore(totalSpan, goalStats.parentNode === details ? goalStats : null);
+      }
+    }
+  });
+
+  reorderForMobile();
+  window.addEventListener('resize', reorderForMobile);
+
+  // Tooltip bocadillo con flecha alineada al número
+  document.querySelectorAll('.reporting-status-item .goal-stats span[title]').forEach(function (span) {
+    var text = span.getAttribute('title');
+    if (!text) return;
+    var tip = document.createElement('span');
+    tip.className = 'goal-bar-tooltip';
+    tip.textContent = text;
+    span.appendChild(tip);
+
+    span.addEventListener('mouseenter', function () {
+      var spanRect = span.getBoundingClientRect();
+      var spanCenter = spanRect.left + spanRect.width / 2;
+
+      if (window.innerWidth <= 576) {
+        // Móvil: tooltip al ancho de la barra, alineado a su borde izquierdo
+        var barRect = span.parentNode.getBoundingClientRect();
+        tip.style.left = (barRect.left - spanRect.left) + 'px';
+        tip.style.right = '';
+        tip.style.transform = 'none';
+        tip.style.width = barRect.width + 'px';
+        tip.style.whiteSpace = 'normal';
+        tip.style.textAlign = 'center';
+        requestAnimationFrame(function () {
+          var newTipRect = tip.getBoundingClientRect();
+          var arrowPct = (spanCenter - newTipRect.left) / newTipRect.width * 100;
+          arrowPct = Math.max(5, Math.min(95, arrowPct));
+          tip.style.setProperty('--arrow-offset', arrowPct + '%');
+        });
+      } else {
+        // Escritorio: tooltip centrado sobre el número, ancho según texto
+        tip.style.left = '50%';
+        tip.style.right = '';
+        tip.style.transform = 'translateX(-50%)';
+        tip.style.width = '';
+        tip.style.whiteSpace = 'nowrap';
+        tip.style.textAlign = '';
+        tip.style.setProperty('--arrow-offset', '50%');
+      }
+    });
+  });
+})();
+</script>
+
 <footer role="contentinfo">
     <div class="container">
         <div class="row">
@@ -2203,7 +2294,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260813103900'></script>
+<script src='/site/assets/js/sdg.js?v=20260817113322'></script>
 
 
 <script>
@@ -2223,7 +2314,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260813103900"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260817113322"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
