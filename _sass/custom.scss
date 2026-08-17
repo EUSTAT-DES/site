@@ -651,6 +651,50 @@ ul.iconillo {
     }
 
     @media only screen and (max-width: 576px) {
+        #main-content .goal-overall {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        #main-content .goal-overall .frame {
+            width: auto;
+            float: none;
+            display: inline-block;
+            margin-bottom: 5px;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        #main-content .goal-overall .details {
+            flex: 1;
+            min-width: 0;
+            float: none;
+            margin-left: 10px;
+            h2 {
+                margin-top: 0;
+                margin-left: 0;
+                display: block;
+            }
+        }
+        #main-content .goal-overall > .summary,
+        #main-content .goal-overall > .goal-stats {
+            width: 100%;
+            clear: both;
+        }
+        #main-content .goal-overall > .summary .statuses {
+            width: 100%;
+        }
+        #main-content .goal-overall > .statuses {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #main-content .goal-overall > .statuses > div,
+        #main-content .goal-overall .statuses > div {
+            display: block;
+            margin-left: 5px;
+            margin-top: 10px;
+        }
         #main-content .reporting-status-item {
             display: flex;
             flex-wrap: wrap;

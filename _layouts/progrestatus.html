@@ -118,6 +118,7 @@
 (function () {
   // En móvil: mover goal-stats fuera de details para que ocupe ancho completo
   function reorderForMobile() {
+    // Per-goal items
     document.querySelectorAll('.reporting-status-item').forEach(function (item) {
       var details = item.querySelector('.details');
       var goalStats = item.querySelector('.goal-stats');
@@ -139,6 +140,46 @@
         }
       }
     });
+
+    // Overall block: mover .statuses y .goal-stats fuera de .details
+    var overall = document.querySelector('.goal-overall');
+    if (overall) {
+      var details = overall.querySelector(':scope > .details');
+      var statuses = overall.querySelector('.statuses');
+      var goalStats = overall.querySelector(':scope > .details > .goal-stats, :scope > .goal-stats');
+      var directBr = null;
+      overall.childNodes.forEach(function(n) { if (n.nodeName === 'BR') directBr = n; });
+      if (window.innerWidth <= 576) {
+        if (statuses && statuses.parentNode !== overall) {
+          overall.insertBefore(statuses, directBr);
+          statuses.style.width = '100%';
+          statuses.style.boxSizing = 'border-box';
+        }
+        if (goalStats && goalStats.parentNode !== overall) {
+          overall.insertBefore(goalStats, directBr);
+        }
+        if (details) {
+          details.style.flex = '1';
+          details.style.minWidth = '0';
+          details.style.float = 'none';
+        }
+      } else {
+        var summary = overall.querySelector('.summary');
+        if (statuses && statuses.parentNode === overall && summary) {
+          summary.appendChild(statuses);
+          statuses.style.width = '';
+          statuses.style.boxSizing = '';
+        }
+        if (goalStats && goalStats.parentNode === overall) {
+          details.appendChild(goalStats);
+        }
+        if (details) {
+          details.style.flex = '';
+          details.style.minWidth = '';
+          details.style.float = '';
+        }
+      }
+    }
   }
 
   // Añadir span.total con el total de indicadores por objetivo
