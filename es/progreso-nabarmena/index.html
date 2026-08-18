@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260818091301">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260818125013">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -402,29 +402,36 @@ data-event-label="high"
 
   <!-- Cabecera: volver al informe -->
   <nav aria-label="" style="margin-bottom: 20px;">
-    <a href="/site/jarraipen-txostena/" class="back-link">
+    
+    <a href="/site/es/jarraipen-txostena/" class="back-link">
       &#8592; Informe de seguimiento
     </a>
   </nav>
 
   <!-- Título de la categoría -->
-  <div class="categoria-header" style="display: flex; align-items: center; margin-bottom: 30px; gap: 16px;">
-    
-      <img src="/site/assets/img/progress/alcanzado.png" alt="Progreso significativo / Meta alcanzada o en vías de alcanzarla" width="48" height="48" />
-    
-    <div>
-      <h1 style="margin: 0;">Progreso significativo / Meta alcanzada o en vías de alcanzarla</h1>
-      <p style="margin: 4px 0 0; color: #555;">
-        95
+  <div class="categoria-header" style="margin-bottom: 30px;">
+    <h1 style="margin: 0 0 12px 0;">Progreso significativo / Meta alcanzada o en vías de alcanzarla</h1>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      
+        <div class="progress-status">
+          <div class="progress-status-image">
+            <img src="/site/assets/img/progress/alcanzado.png" alt="Progreso significativo / Meta alcanzada o en vías de alcanzarla" />
+          </div>
+        </div>
+      
+      <span class="total">
+        <span>95</span>
         indicadores
-      </p>
+      </span>
     </div>
   </div>
 
-  <!-- Indicadores agrupados por objetivo — orden numérico derivado del CSV -->
+  <!-- Orden de goals: sacado de progreso.csv que ya viene ordenado numéricamente por el build -->
+  
   
 
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -462,407 +469,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
     
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/10/" title=" 10" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/10.png" alt="Reducción de las Desigualdades" width="80" height="80" class="goal-icon-10 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Reducción de las Desigualdades</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">10.1.1</span>
-              <a href="/site/es/10-1-1/">Tasas de crecimiento per cápita de los gastos o ingresos de los hogares del 40% más pobre de la población y la población total</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/11/" title=" 11" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/11.png" alt="Ciudades y comunidades sostenibles" width="80" height="80" class="goal-icon-11 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Ciudades y comunidades sostenibles</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">11.3.2</span>
-              <a href="/site/es/11-3-2/">Proporción de ciudades que cuentan con una estructura de participación directa de la sociedad civil en la planificación y la gestión urbanas y funcionan con regularidad y democráticamente</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.4.1</span>
-              <a href="/site/es/11-4-1/">Total de gastos per cápita destinados a la preservación, protección y conservación de todo el patrimonio cultural y natural, desglosado por fuente de financiación (pública y privada), tipo de patrimonio (cultural y natural) y nivel de gobierno (nacional, regional y local/municipal)</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.5.1</span>
-              <a href="/site/es/11-5-1/">Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 personas</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.5.2</span>
-              <a href="/site/es/11-5-2/">Pérdidas económicas directas atribuidas a los desastres en relación con el producto interno bruto (PIB) mundial</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.6.1</span>
-              <a href="/site/es/11-6-1/">Proporción de residuos sólidos municipales recogidos y administrados en instalaciones controladas con respecto al total de residuos municipales generados, desglosada por ciudad</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.6.2</span>
-              <a href="/site/es/11-6-2/">Niveles medios anuales de partículas finas en suspensión (por ejemplo, PM2.5 y PM10) en las ciudades (ponderados según la población)</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.7.1</span>
-              <a href="/site/es/11-7-1/">Proporción media de la superficie edificada de las ciudades que se dedica a espacios abiertos para uso público de todos, desglosada por sexo, edad y personas con discapacidad</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.a.1</span>
-              <a href="/site/es/11-a-1/">Número de países que cuentan con políticas urbanas nacionales o planes de desarrollo regionales que a) responden a la dinámica de la población, b) garantizan un desarrollo territorial equilibrado y c) aumentan el margen fiscal local</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.b.1</span>
-              <a href="/site/es/11-b-1/">Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendái para la Reducción del Riesgo de Desastres 2015‑2030</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">11.b.2</span>
-              <a href="/site/es/11-b-2/">Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/12/" title=" 12" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/12.png" alt="Producción y Consumo Responsables" width="80" height="80" class="goal-icon-12 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Producción y Consumo Responsables</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">12.1.1</span>
-              <a href="/site/es/12-1-1/">Número de países que elaboran, adoptan o aplican instrumentos de política destinados a apoyar la transición hacia modalidades de consumo y producción sostenibles</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">12.2.2</span>
-              <a href="/site/es/12-2-2/">Consumo material interno en términos absolutos, consumo material interno per cápita y consumo material interno por PIB</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">12.5.1</span>
-              <a href="/site/es/12-5-1/">Tasa nacional de reciclado, en toneladas de material reciclado</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">12.6.1</span>
-              <a href="/site/es/12-6-1/">Número de empresas que publican informes sobre sostenibilidad</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">12.7.1</span>
-              <a href="/site/es/12-7-1/">Número de países que aplican políticas y planes de acción sostenibles en materia de adquisiciones públicas</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">12.a.1</span>
-              <a href="/site/es/12-a-1/">Capacidad instalada de generación de energía renovable en los países en desarrollo y en los países desarrollados (en vatios per cápita)</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/13/" title=" 13" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/13.png" alt="Acción por el Clima" width="80" height="80" class="goal-icon-13 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Acción por el Clima</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">13.1.1</span>
-              <a href="/site/es/13-1-1/">Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 personas</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">13.1.2</span>
-              <a href="/site/es/13-1-2/">Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendái para la Reducción del Riesgo de Desastres 2015‑2030</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">13.1.3</span>
-              <a href="/site/es/13-1-3/">Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">13.2.1</span>
-              <a href="/site/es/13-2-1/">Número de países con contribuciones determinadas a nivel nacional, estrategias a largo plazo, planes nacionales de adaptación y comunicaciones sobre la adaptación, notificadas a la secretaría de la Convención Marco de las Naciones Unidas sobre el Cambio Climático</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">13.2.2</span>
-              <a href="/site/es/13-2-2/">Emisiones totales de gases de efecto invernadero por año</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/14/" title=" 14" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/14.png" alt="Vida Submarina" width="80" height="80" class="goal-icon-14 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Vida Submarina</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">14.3.1</span>
-              <a href="/site/es/14-3-1/">Acidez media del mar (pH) medida en un conjunto convenido de estaciones de muestreo representativas</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">14.5.1</span>
-              <a href="/site/es/14-5-1/">Cobertura de las zonas protegidas en relación con las zonas marinas</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/15/" title=" 15" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/15.png" alt="Vida de Ecosistemas Terrestres" width="80" height="80" class="goal-icon-15 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Vida de Ecosistemas Terrestres</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">15.1.1</span>
-              <a href="/site/es/15-1-1/">Superficie forestal en proporción a la superficie total</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">15.2.1</span>
-              <a href="/site/es/15-2-1/">Avances hacia la gestión forestal sostenible</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">15.4.2</span>
-              <a href="/site/es/15-4-2/">a) Índice de cobertura verde de las montañas y b) proporción de terreno montañoso degradado</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">15.8.1</span>
-              <a href="/site/es/15-8-1/">Proporción de países que han aprobado la legislación nacional pertinente y han destinado recursos suficientes para la prevención o el control de las especies exóticas invasoras</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/16/" title=" 16" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/16.png" alt="Paz, justicia e instituciones fuertes" width="80" height="80" class="goal-icon-16 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Paz, justicia e instituciones fuertes</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">16.1.1</span>
-              <a href="/site/es/16-1-1/">Número de víctimas de homicidios intencionales por cada 100.000 habitantes, desglosado por sexo y edad</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">16.1.2</span>
-              <a href="/site/es/16-1-2/">Muertes relacionadas con conflictos por cada 100.000 habitantes, desglosadas por sexo, edad y causa</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">16.10.1</span>
-              <a href="/site/es/16-10-1/">Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados/as de los medios de comunicación, sindicalistas y defensores/as de los derechos humanos, en los últimos 12 meses</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">16.6.1</span>
-              <a href="/site/es/16-6-1/">Gastos primarios del gobierno en proporción al presupuesto aprobado originalmente, desglosados por sector (o por códigos presupuestarios o elementos similares)</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">16.9.1</span>
-              <a href="/site/es/16-9-1/">Proporción de niños/as menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/es/17/" title=" 17" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/es/17.png" alt="Alianzas para Lograr los Objetivos" width="80" height="80" class="goal-icon-17 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Alianzas para Lograr los Objetivos</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">17.18.2</span>
-              <a href="/site/es/17-18-2/">Número de países cuya legislación nacional sobre estadísticas cumple los Principios Fundamentales de las Estadísticas Oficiales</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">17.18.3</span>
-              <a href="/site/es/17-18-3/">Número de países que cuentan con un plan estadístico nacional plenamente financiado y en proceso de aplicación, desglosado por fuente de financiación</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">17.19.2</span>
-              <a href="/site/es/17-19-2/">Proporción de países que a) han realizado al menos un censo de población y vivienda en los últimos diez años; y b) han registrado el 100% de los nacimientos y el 80% de las defunciones</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">17.2.1</span>
-              <a href="/site/es/17-2-1/">Asistencia oficial para el desarrollo neta, total y para los países menos adelantados en proporción al ingreso nacional bruto (INB) de los donantes del Comité de Asistencia para el Desarrollo de la Organización de Cooperación y Desarrollo Económicos (OCDE)</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">17.3.1</span>
-              <a href="/site/es/17-3-1/">Recursos financieros adicionales movilizados para los países en desarrollo procedentes de múltiples fuentes</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">17.6.1</span>
-              <a href="/site/es/17-6-1/">Número de abonados/as a servicios de banda ancha fija por cada 100 habitantes, desglosado por velocidad</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">17.8.1</span>
-              <a href="/site/es/17-8-1/">Proporción de personas que utilizan Internet</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -906,7 +515,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -1010,7 +621,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -1054,7 +667,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -1104,7 +719,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -1148,7 +765,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -1198,7 +817,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -1272,7 +893,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -1334,6 +957,423 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/10/" title=" 10" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/10.png" alt="Reducción de las Desigualdades" width="80" height="80" class="goal-icon-10 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Reducción de las Desigualdades</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">10.1.1</span>
+              <a href="/site/es/10-1-1/">Tasas de crecimiento per cápita de los gastos o ingresos de los hogares del 40% más pobre de la población y la población total</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/11/" title=" 11" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/11.png" alt="Ciudades y comunidades sostenibles" width="80" height="80" class="goal-icon-11 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Ciudades y comunidades sostenibles</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">11.3.2</span>
+              <a href="/site/es/11-3-2/">Proporción de ciudades que cuentan con una estructura de participación directa de la sociedad civil en la planificación y la gestión urbanas y funcionan con regularidad y democráticamente</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.4.1</span>
+              <a href="/site/es/11-4-1/">Total de gastos per cápita destinados a la preservación, protección y conservación de todo el patrimonio cultural y natural, desglosado por fuente de financiación (pública y privada), tipo de patrimonio (cultural y natural) y nivel de gobierno (nacional, regional y local/municipal)</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.5.1</span>
+              <a href="/site/es/11-5-1/">Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 personas</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.5.2</span>
+              <a href="/site/es/11-5-2/">Pérdidas económicas directas atribuidas a los desastres en relación con el producto interno bruto (PIB) mundial</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.6.1</span>
+              <a href="/site/es/11-6-1/">Proporción de residuos sólidos municipales recogidos y administrados en instalaciones controladas con respecto al total de residuos municipales generados, desglosada por ciudad</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.6.2</span>
+              <a href="/site/es/11-6-2/">Niveles medios anuales de partículas finas en suspensión (por ejemplo, PM2.5 y PM10) en las ciudades (ponderados según la población)</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.7.1</span>
+              <a href="/site/es/11-7-1/">Proporción media de la superficie edificada de las ciudades que se dedica a espacios abiertos para uso público de todos, desglosada por sexo, edad y personas con discapacidad</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.a.1</span>
+              <a href="/site/es/11-a-1/">Número de países que cuentan con políticas urbanas nacionales o planes de desarrollo regionales que a) responden a la dinámica de la población, b) garantizan un desarrollo territorial equilibrado y c) aumentan el margen fiscal local</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.b.1</span>
+              <a href="/site/es/11-b-1/">Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendái para la Reducción del Riesgo de Desastres 2015‑2030</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">11.b.2</span>
+              <a href="/site/es/11-b-2/">Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/12/" title=" 12" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/12.png" alt="Producción y Consumo Responsables" width="80" height="80" class="goal-icon-12 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Producción y Consumo Responsables</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">12.1.1</span>
+              <a href="/site/es/12-1-1/">Número de países que elaboran, adoptan o aplican instrumentos de política destinados a apoyar la transición hacia modalidades de consumo y producción sostenibles</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">12.2.2</span>
+              <a href="/site/es/12-2-2/">Consumo material interno en términos absolutos, consumo material interno per cápita y consumo material interno por PIB</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">12.5.1</span>
+              <a href="/site/es/12-5-1/">Tasa nacional de reciclado, en toneladas de material reciclado</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">12.6.1</span>
+              <a href="/site/es/12-6-1/">Número de empresas que publican informes sobre sostenibilidad</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">12.7.1</span>
+              <a href="/site/es/12-7-1/">Número de países que aplican políticas y planes de acción sostenibles en materia de adquisiciones públicas</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">12.a.1</span>
+              <a href="/site/es/12-a-1/">Capacidad instalada de generación de energía renovable en los países en desarrollo y en los países desarrollados (en vatios per cápita)</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/13/" title=" 13" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/13.png" alt="Acción por el Clima" width="80" height="80" class="goal-icon-13 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Acción por el Clima</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">13.1.1</span>
+              <a href="/site/es/13-1-1/">Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 personas</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">13.1.2</span>
+              <a href="/site/es/13-1-2/">Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendái para la Reducción del Riesgo de Desastres 2015‑2030</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">13.1.3</span>
+              <a href="/site/es/13-1-3/">Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">13.2.1</span>
+              <a href="/site/es/13-2-1/">Número de países con contribuciones determinadas a nivel nacional, estrategias a largo plazo, planes nacionales de adaptación y comunicaciones sobre la adaptación, notificadas a la secretaría de la Convención Marco de las Naciones Unidas sobre el Cambio Climático</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">13.2.2</span>
+              <a href="/site/es/13-2-2/">Emisiones totales de gases de efecto invernadero por año</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/14/" title=" 14" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/14.png" alt="Vida Submarina" width="80" height="80" class="goal-icon-14 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Vida Submarina</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">14.3.1</span>
+              <a href="/site/es/14-3-1/">Acidez media del mar (pH) medida en un conjunto convenido de estaciones de muestreo representativas</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">14.5.1</span>
+              <a href="/site/es/14-5-1/">Cobertura de las zonas protegidas en relación con las zonas marinas</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/15/" title=" 15" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/15.png" alt="Vida de Ecosistemas Terrestres" width="80" height="80" class="goal-icon-15 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Vida de Ecosistemas Terrestres</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">15.1.1</span>
+              <a href="/site/es/15-1-1/">Superficie forestal en proporción a la superficie total</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">15.2.1</span>
+              <a href="/site/es/15-2-1/">Avances hacia la gestión forestal sostenible</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">15.4.2</span>
+              <a href="/site/es/15-4-2/">a) Índice de cobertura verde de las montañas y b) proporción de terreno montañoso degradado</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">15.8.1</span>
+              <a href="/site/es/15-8-1/">Proporción de países que han aprobado la legislación nacional pertinente y han destinado recursos suficientes para la prevención o el control de las especies exóticas invasoras</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/16/" title=" 16" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/16.png" alt="Paz, justicia e instituciones fuertes" width="80" height="80" class="goal-icon-16 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Paz, justicia e instituciones fuertes</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">16.1.1</span>
+              <a href="/site/es/16-1-1/">Número de víctimas de homicidios intencionales por cada 100.000 habitantes, desglosado por sexo y edad</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">16.1.2</span>
+              <a href="/site/es/16-1-2/">Muertes relacionadas con conflictos por cada 100.000 habitantes, desglosadas por sexo, edad y causa</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">16.10.1</span>
+              <a href="/site/es/16-10-1/">Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados/as de los medios de comunicación, sindicalistas y defensores/as de los derechos humanos, en los últimos 12 meses</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">16.6.1</span>
+              <a href="/site/es/16-6-1/">Gastos primarios del gobierno en proporción al presupuesto aprobado originalmente, desglosados por sector (o por códigos presupuestarios o elementos similares)</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">16.9.1</span>
+              <a href="/site/es/16-9-1/">Proporción de niños/as menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/es/17/" title=" 17" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/es/17.png" alt="Alianzas para Lograr los Objetivos" width="80" height="80" class="goal-icon-17 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Alianzas para Lograr los Objetivos</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">17.18.2</span>
+              <a href="/site/es/17-18-2/">Número de países cuya legislación nacional sobre estadísticas cumple los Principios Fundamentales de las Estadísticas Oficiales</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">17.18.3</span>
+              <a href="/site/es/17-18-3/">Número de países que cuentan con un plan estadístico nacional plenamente financiado y en proceso de aplicación, desglosado por fuente de financiación</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">17.19.2</span>
+              <a href="/site/es/17-19-2/">Proporción de países que a) han realizado al menos un censo de población y vivienda en los últimos diez años; y b) han registrado el 100% de los nacimientos y el 80% de las defunciones</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">17.2.1</span>
+              <a href="/site/es/17-2-1/">Asistencia oficial para el desarrollo neta, total y para los países menos adelantados en proporción al ingreso nacional bruto (INB) de los donantes del Comité de Asistencia para el Desarrollo de la Organización de Cooperación y Desarrollo Económicos (OCDE)</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">17.3.1</span>
+              <a href="/site/es/17-3-1/">Recursos financieros adicionales movilizados para los países en desarrollo procedentes de múltiples fuentes</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">17.6.1</span>
+              <a href="/site/es/17-6-1/">Número de abonados/as a servicios de banda ancha fija por cada 100 habitantes, desglosado por velocidad</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">17.8.1</span>
+              <a href="/site/es/17-8-1/">Proporción de personas que utilizan Internet</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
   
 
   <a href="#top">Volver arriba</a>
@@ -1478,7 +1518,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260818091301'></script>
+<script src='/site/assets/js/sdg.js?v=20260818125013'></script>
 
 
 <script>
@@ -1498,7 +1538,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260818091301"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260818125013"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

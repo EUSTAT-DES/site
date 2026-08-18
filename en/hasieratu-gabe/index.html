@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260818091301">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260818125013">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -402,29 +402,36 @@ data-event-label="high"
 
   <!-- Cabecera: volver al informe -->
   <nav aria-label="" style="margin-bottom: 20px;">
-    <a href="/site/jarraipen-txostena/" class="back-link">
+    
+    <a href="/siteen/jarraipen-txostena/" class="back-link">
       &#8592; Monitoring report
     </a>
   </nav>
 
   <!-- Título de la categoría -->
-  <div class="categoria-header" style="display: flex; align-items: center; margin-bottom: 30px; gap: 16px;">
-    
-      <img src="/site/assets/img/progress/no_evaluado.png" alt="No data available" width="48" height="48" />
-    
-    <div>
-      <h1 style="margin: 0;">No data available</h1>
-      <p style="margin: 4px 0 0; color: #555;">
-        85
+  <div class="categoria-header" style="margin-bottom: 30px;">
+    <h1 style="margin: 0 0 12px 0;">No data available</h1>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      
+        <div class="progress-status">
+          <div class="progress-status-image">
+            <img src="/site/assets/img/progress/no_evaluado.png" alt="No data available" />
+          </div>
+        </div>
+      
+      <span class="total">
+        <span>85</span>
         indicators
-      </p>
+      </span>
     </div>
   </div>
 
-  <!-- Indicadores agrupados por objetivo — orden numérico derivado del CSV -->
+  <!-- Orden de goals: sacado de progreso.csv que ya viene ordenado numéricamente por el build -->
+  
   
 
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -456,7 +463,371 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/2/" title=" 2" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/2.png" alt="Zero hunger" width="80" height="80" class="goal-icon-2 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Zero hunger</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">2.2.3</span>
+              <a href="/site/en/2-2-3/">Prevalence of anaemia in women aged 15 to 49 years, by pregnancy status (percentage)</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">2.2.4</span>
+              <a href="/site/en/2-2-4/">Prevalence of minimum dietary diversity, by population group (children aged 6 to 23.9 months and non-pregnant women aged 15 to 49 years)</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">2.5.1</span>
+              <a href="/site/en/2-5-1/">Number of (a) plant and (b) animal genetic resources for food and agriculture secured in either medium- or long-term conservation facilities</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">2.5.2</span>
+              <a href="/site/en/2-5-2/">Proportion of local breeds classified as being at risk of extinction</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">2.a.2</span>
+              <a href="/site/en/2-a-2/">Total official flows (official development assistance plus other official flows) to the agriculture sector</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">2.b.1</span>
+              <a href="/site/en/2-b-1/">Agricultural export subsidies</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/3/" title=" 3" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/3.png" alt="Good health and well-being" width="80" height="80" class="goal-icon-3 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Good health and well-being</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">3.3.5</span>
+              <a href="/site/en/3-3-5/">Number of people requiring interventions against neglected tropical diseases</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">3.9.1</span>
+              <a href="/site/en/3-9-1/">Mortality rate attributed to household and ambient air pollution</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">3.b.2</span>
+              <a href="/site/en/3-b-2/">Total net official development assistance to medical research and basic health sectors</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">3.b.3</span>
+              <a href="/site/en/3-b-3/">Health product access index</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">3.d.1</span>
+              <a href="/site/en/3-d-1/">International Health Regulations (IHR) capacity and health emergency preparedness</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">3.d.2</span>
+              <a href="/site/en/3-d-2/">Percentage of bloodstream infections due to selected antimicrobial-resistant organisms</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/4/" title=" 4" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/4.png" alt="Quality education" width="80" height="80" class="goal-icon-4 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Quality education</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">4.2.1</span>
+              <a href="/site/en/4-2-1/">Proportion of children aged 24–59 months who are developmentally on track in health, learning and psychosocial well-being, by sex</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">4.7.1</span>
+              <a href="/site/en/4-7-1/">Extent to which (i) global citizenship education and (ii) education for sustainable development are mainstreamed in (a) national education policies; (b) curricula; (c) teacher education; and (d) student assessment</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">4.b.1</span>
+              <a href="/site/en/4-b-1/">Volume of official development assistance flows for scholarships</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/5/" title=" 5" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/5.png" alt="Gender equality" width="80" height="80" class="goal-icon-5 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Gender equality</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">5.3.2</span>
+              <a href="/site/en/5-3-2/">Proportion of girls and women aged 15–49 years who have undergone female genital mutilation, by age</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">5.6.1</span>
+              <a href="/site/en/5-6-1/">Proportion of women aged 15–49 years who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">5.6.2</span>
+              <a href="/site/en/5-6-2/">Number of countries with laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">5.c.1</span>
+              <a href="/site/en/5-c-1/">Proportion of countries with systems to track and make public allocations for gender equality and women’s empowerment</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/6/" title=" 6" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/6.png" alt="Clean water and sanitation" width="80" height="80" class="goal-icon-6 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Clean water and sanitation</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">6.4.1</span>
+              <a href="/site/en/6-4-1/">Change in water-use efficiency over time</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">6.5.1</span>
+              <a href="/site/en/6-5-1/">Degree of integrated water resources management</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">6.6.1</span>
+              <a href="/site/en/6-6-1/">Change in the extent of water-related ecosystems over time</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">6.a.1</span>
+              <a href="/site/en/6-a-1/">Amount of water- and sanitation-related official development assistance that is part of a government-coordinated spending plan</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/7/" title=" 7" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/7.png" alt="Affordable and clean energy" width="80" height="80" class="goal-icon-7 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Affordable and clean energy</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">7.a.1</span>
+              <a href="/site/en/7-a-1/">International financial flows to developing countries in support of clean energy research and development and renewable energy production, including in hybrid systems</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/8/" title=" 8" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/8.png" alt="Decent work and economic growth" width="80" height="80" class="goal-icon-8 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Decent work and economic growth</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">8.3.1</span>
+              <a href="/site/en/8-3-1/">Proportion of informal employment in total employment, by sector and sex</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">8.4.1</span>
+              <a href="/site/en/8-4-1/">Material footprint, material footprint per capita, and material footprint per GDP</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">8.8.2</span>
+              <a href="/site/en/8-8-2/">Level of national compliance with labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation, by sex and migrant status</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">8.9.2</span>
+              <a href="/site/en/8-9-2/">Employed persons in the tourism industries</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">8.a.1</span>
+              <a href="/site/en/8-a-1/">Aid for Trade commitments and disbursements</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
+    
+    
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          
+            <a href="/site/en/9/" title=" 9" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="https://eustat-des.github.io/site/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure" width="80" height="80" class="goal-icon-9 goal-icon-image goal-icon-image-" />
+            </a>
+          
+          <h3 style="margin: 0;">Industry, innovation and infrastructure</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          
+            
+            <li>
+              <span class="indicator-number">9.3.2</span>
+              <a href="/site/en/9-3-2/">Proportion of small-scale industries with a loan or line of credit</a>
+            </li>
+          
+            
+            <li>
+              <span class="indicator-number">9.a.1</span>
+              <a href="/site/en/9-a-1/">Total official international support (official development assistance plus other official flows) to infrastructure</a>
+            </li>
+          
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+    
+  
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -518,7 +889,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -562,7 +935,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -606,7 +981,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -632,7 +1009,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -700,7 +1079,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -762,7 +1143,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -854,7 +1237,9 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
+    
   
+    
     
     
     <div class="goal reporting-status-item categoria-goal-block">
@@ -928,352 +1313,7 @@ data-event-label="high"
         </ul>
       </div>
       <hr class="categoria-separator">
-  
     
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/2/" title=" 2" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/2.png" alt="Zero hunger" width="80" height="80" class="goal-icon-2 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Zero hunger</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">2.2.3</span>
-              <a href="/site/en/2-2-3/">Prevalence of anaemia in women aged 15 to 49 years, by pregnancy status (percentage)</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">2.2.4</span>
-              <a href="/site/en/2-2-4/">Prevalence of minimum dietary diversity, by population group (children aged 6 to 23.9 months and non-pregnant women aged 15 to 49 years)</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">2.5.1</span>
-              <a href="/site/en/2-5-1/">Number of (a) plant and (b) animal genetic resources for food and agriculture secured in either medium- or long-term conservation facilities</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">2.5.2</span>
-              <a href="/site/en/2-5-2/">Proportion of local breeds classified as being at risk of extinction</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">2.a.2</span>
-              <a href="/site/en/2-a-2/">Total official flows (official development assistance plus other official flows) to the agriculture sector</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">2.b.1</span>
-              <a href="/site/en/2-b-1/">Agricultural export subsidies</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/3/" title=" 3" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/3.png" alt="Good health and well-being" width="80" height="80" class="goal-icon-3 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Good health and well-being</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">3.3.5</span>
-              <a href="/site/en/3-3-5/">Number of people requiring interventions against neglected tropical diseases</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">3.9.1</span>
-              <a href="/site/en/3-9-1/">Mortality rate attributed to household and ambient air pollution</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">3.b.2</span>
-              <a href="/site/en/3-b-2/">Total net official development assistance to medical research and basic health sectors</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">3.b.3</span>
-              <a href="/site/en/3-b-3/">Health product access index</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">3.d.1</span>
-              <a href="/site/en/3-d-1/">International Health Regulations (IHR) capacity and health emergency preparedness</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">3.d.2</span>
-              <a href="/site/en/3-d-2/">Percentage of bloodstream infections due to selected antimicrobial-resistant organisms</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/4/" title=" 4" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/4.png" alt="Quality education" width="80" height="80" class="goal-icon-4 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Quality education</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">4.2.1</span>
-              <a href="/site/en/4-2-1/">Proportion of children aged 24–59 months who are developmentally on track in health, learning and psychosocial well-being, by sex</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">4.7.1</span>
-              <a href="/site/en/4-7-1/">Extent to which (i) global citizenship education and (ii) education for sustainable development are mainstreamed in (a) national education policies; (b) curricula; (c) teacher education; and (d) student assessment</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">4.b.1</span>
-              <a href="/site/en/4-b-1/">Volume of official development assistance flows for scholarships</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/5/" title=" 5" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/5.png" alt="Gender equality" width="80" height="80" class="goal-icon-5 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Gender equality</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">5.3.2</span>
-              <a href="/site/en/5-3-2/">Proportion of girls and women aged 15–49 years who have undergone female genital mutilation, by age</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">5.6.1</span>
-              <a href="/site/en/5-6-1/">Proportion of women aged 15–49 years who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">5.6.2</span>
-              <a href="/site/en/5-6-2/">Number of countries with laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">5.c.1</span>
-              <a href="/site/en/5-c-1/">Proportion of countries with systems to track and make public allocations for gender equality and women’s empowerment</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/6/" title=" 6" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/6.png" alt="Clean water and sanitation" width="80" height="80" class="goal-icon-6 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Clean water and sanitation</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">6.4.1</span>
-              <a href="/site/en/6-4-1/">Change in water-use efficiency over time</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">6.5.1</span>
-              <a href="/site/en/6-5-1/">Degree of integrated water resources management</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">6.6.1</span>
-              <a href="/site/en/6-6-1/">Change in the extent of water-related ecosystems over time</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">6.a.1</span>
-              <a href="/site/en/6-a-1/">Amount of water- and sanitation-related official development assistance that is part of a government-coordinated spending plan</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/7/" title=" 7" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/7.png" alt="Affordable and clean energy" width="80" height="80" class="goal-icon-7 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Affordable and clean energy</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">7.a.1</span>
-              <a href="/site/en/7-a-1/">International financial flows to developing countries in support of clean energy research and development and renewable energy production, including in hybrid systems</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/8/" title=" 8" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/8.png" alt="Decent work and economic growth" width="80" height="80" class="goal-icon-8 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Decent work and economic growth</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">8.3.1</span>
-              <a href="/site/en/8-3-1/">Proportion of informal employment in total employment, by sector and sex</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">8.4.1</span>
-              <a href="/site/en/8-4-1/">Material footprint, material footprint per capita, and material footprint per GDP</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">8.8.2</span>
-              <a href="/site/en/8-8-2/">Level of national compliance with labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation, by sex and migrant status</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">8.9.2</span>
-              <a href="/site/en/8-9-2/">Employed persons in the tourism industries</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">8.a.1</span>
-              <a href="/site/en/8-a-1/">Aid for Trade commitments and disbursements</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
-  
-    
-    
-    <div class="goal reporting-status-item categoria-goal-block">
-        <!-- Cabecera del Objetivo -->
-        <div style="display: flex; align-items: center; margin-bottom: 15px;">
-          
-            <a href="/site/en/9/" title=" 9" style="margin-right: 15px; flex-shrink: 0;">
-              <img src="https://eustat-des.github.io/site/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure" width="80" height="80" class="goal-icon-9 goal-icon-image goal-icon-image-" />
-            </a>
-          
-          <h3 style="margin: 0;">Industry, innovation and infrastructure</h3>
-        </div>
-
-        <!-- Lista de indicadores -->
-        <ul class="categoria-indicator-list">
-          
-            
-            <li>
-              <span class="indicator-number">9.3.2</span>
-              <a href="/site/en/9-3-2/">Proportion of small-scale industries with a loan or line of credit</a>
-            </li>
-          
-            
-            <li>
-              <span class="indicator-number">9.a.1</span>
-              <a href="/site/en/9-a-1/">Total official international support (official development assistance plus other official flows) to infrastructure</a>
-            </li>
-          
-        </ul>
-      </div>
-      <hr class="categoria-separator">
   
 
   <a href="#top">Back to top</a>
@@ -1418,7 +1458,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260818091301'></script>
+<script src='/site/assets/js/sdg.js?v=20260818125013'></script>
 
 
 <script>
@@ -1438,7 +1478,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260818091301"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260818125013"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
