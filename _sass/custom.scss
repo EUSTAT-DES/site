@@ -456,6 +456,17 @@ ul.iconillo {
             strong {
                 font-weight: normal;
             }
+            .status-category-link {
+                font-weight: normal;
+                color: $text-color;
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-underline-offset: 2px;
+                &:hover {
+                    color: #0056b3;
+                    text-decoration-style: solid;
+                }
+            }
             > div {
                 display: inline-block;
                 margin-bottom: 5px;
@@ -778,4 +789,54 @@ ul.iconillo {
 }
 .leaflet-tooltip {
   pointer-events: none !important;
+}
+
+// Layout de categoría de progreso (lista de indicadores por estado)
+.layout-progrestatus-categoria {
+  padding-top: 20px;
+
+  .back-link {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 14px;
+    &:hover { text-decoration: underline; }
+  }
+
+  .categoria-goal-block {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .categoria-separator {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+
+  .categoria-indicator-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 14px;
+
+      .indicator-number {
+        flex-shrink: 0;
+        min-width: 60px;
+        color: #555;
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: underline;
+        color: #0056b3;
+        flex-grow: 1;
+        &:hover { color: #003d80; }
+      }
+    }
+  }
 }

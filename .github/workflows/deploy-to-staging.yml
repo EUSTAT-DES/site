@@ -28,6 +28,8 @@ jobs:
       run: echo "REPOSITORY_URL_SITE=https://github.com/$GITHUB_REPOSITORY" >> $GITHUB_ENV
     - name: Download progreso.csv from data
       run: curl -f -o _data/csv/progreso.csv https://eustat-des.github.io/data/progreso.csv
+    - name: Download progreso_indicadores.csv from data
+      run: curl -f -o _data/csv/progreso_indicadores.csv https://eustat-des.github.io/data/progreso_indicadores.csv
     - name: Build the site
       run: |
         gem install bundler

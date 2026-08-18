@@ -1,0 +1,78 @@
+{% include head.html %}
+{% include header.html %}
+
+{% assign status_value = page.status_value %}
+{% assign status_types = site.progress_status.status_types %}
+{% assign status_type = status_types | where: "value", status_value | first %}
+
+{% assign _t_key = 'status.' | append: status_value | append: '_mixto' %}
+{% assign _t_label = _t_key | t %}
+{% if _t_label == _t_key %}
+  {% if status_type %}
+    {% assign _t_label = status_type.label | t %}
+  {% else %}
+    {% assign _t_label = status_value %}
+  {% endif %}
+{% endif %}
+
+{% assign all_rows = site.data.csv.progreso_indicadores %}
+{% assign cat_rows = all_rows | where: "status", status_value %}
+
+<div id="main-content" class="container layout-progrestatus-categoria" role="main">
+
+  <!-- Cabecera: volver al informe -->
+  <nav aria-label="{{ page.t.general.back }}" style="margin-bottom: 20px;">
+    <a href="{{ site.baseurl }}/jarraipen-txostena/" class="back-link">
+      &#8592; {{ page.t.status.reporting_status }}
+    </a>
+  </nav>
+
+  <!-- Título de la categoría -->
+  <div class="categoria-header" style="display: flex; align-items: center; margin-bottom: 30px; gap: 16px;">
+    {% if status_type and status_type.image %}
+      <img src="{{ site.baseurl }}/{{ status_type.image }}" alt="{{ _t_label }}" width="48" height="48" />
+    {% endif %}
+    <div>
+      <h1 style="margin: 0;">{{ _t_label }}</h1>
+      <p style="margin: 4px 0 0; color: #555;">
+        {{ cat_rows.size }}
+        {% if page.language == 'eu' %}adierazle{% elsif page.language == 'en' %}indicators{% else %}indicadores{% endif %}
+      </p>
+    </div>
+  </div>
+
+  <!-- Indicadores agrupados por objetivo — orden numérico derivado del CSV -->
+  {% assign all_cat_goals = cat_rows | map: "goal" | uniq | sort_natural %}
+
+  {% for goal_num in all_cat_goals %}
+    {% assign goal_indicators = cat_rows | where: "goal", goal_num %}
+    {% assign goal_details = goal_num | sdg_lookup %}
+    <div class="goal reporting-status-item categoria-goal-block">
+        <!-- Cabecera del Objetivo -->
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          {% if goal_details.icon %}
+            <a href="{{ goal_details.url }}" title="{{ page.t.goal.indicators_for_goal }} {{ goal_details.number }}" style="margin-right: 15px; flex-shrink: 0;">
+              <img src="{{ goal_details.icon }}" alt="{{ goal_details.short | escape }}" width="80" height="80" class="goal-icon-{{ goal_details.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" />
+            </a>
+          {% endif %}
+          <h3 style="margin: 0;">{{ goal_details.short }}</h3>
+        </div>
+
+        <!-- Lista de indicadores -->
+        <ul class="categoria-indicator-list">
+          {% for row in goal_indicators %}
+            {% assign indicator = row.indicator | sdg_lookup %}
+            <li>
+              <span class="indicator-number">{{ indicator.number }}</span>
+              <a href="{{ indicator.url }}">{{ indicator.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <hr class="categoria-separator">
+  {% endfor %}
+
+  {% include back-to-top.html %}
+</div>
+
+{% include footer.html %}
