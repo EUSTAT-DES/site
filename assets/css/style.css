@@ -3192,6 +3192,15 @@ ul.iconillo {
   margin-bottom: 25px; }
 .layout-progrestatus #main-content .statuses strong {
   font-weight: normal; }
+.layout-progrestatus #main-content .statuses .status-category-link {
+  font-weight: normal;
+  color: #0b0c0c;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px; }
+  .layout-progrestatus #main-content .statuses .status-category-link:hover {
+    color: #0056b3;
+    text-decoration-style: solid; }
 .layout-progrestatus #main-content .statuses > div {
   display: inline-block;
   margin-bottom: 5px;
@@ -3532,3 +3541,39 @@ ul.iconillo {
 
 .leaflet-tooltip {
   pointer-events: none !important; }
+
+.layout-progrestatus-categoria {
+  padding-top: 20px; }
+  .layout-progrestatus-categoria .back-link {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 14px; }
+    .layout-progrestatus-categoria .back-link:hover {
+      text-decoration: underline; }
+  .layout-progrestatus-categoria .categoria-goal-block {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0; }
+  .layout-progrestatus-categoria .categoria-separator {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0; }
+  .layout-progrestatus-categoria .categoria-indicator-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0; }
+    .layout-progrestatus-categoria .categoria-indicator-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 14px; }
+      .layout-progrestatus-categoria .categoria-indicator-list li .indicator-number {
+        flex-shrink: 0;
+        min-width: 60px;
+        color: #555;
+        font-size: 14px; }
+      .layout-progrestatus-categoria .categoria-indicator-list li a {
+        text-decoration: underline;
+        color: #0056b3;
+        flex-grow: 1; }
+        .layout-progrestatus-categoria .categoria-indicator-list li a:hover {
+          color: #003d80; }
