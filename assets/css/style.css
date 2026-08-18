@@ -3408,6 +3408,41 @@ ul.iconillo {
 .layout-progrestatus #main-content .reporting-status-item {
   margin-bottom: 20px; }
 @media only screen and (max-width: 576px) {
+  .layout-progrestatus #main-content .goal-overall {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+  .layout-progrestatus #main-content .goal-overall .frame {
+    width: auto;
+    float: none;
+    display: inline-block;
+    margin-bottom: 5px; }
+    .layout-progrestatus #main-content .goal-overall .frame img {
+      width: 60px;
+      height: 60px; }
+  .layout-progrestatus #main-content .goal-overall .details {
+    flex: 1;
+    min-width: 0;
+    float: none;
+    margin-left: 10px; }
+    .layout-progrestatus #main-content .goal-overall .details h2 {
+      margin-top: 0;
+      margin-left: 0;
+      display: block; }
+  .layout-progrestatus #main-content .goal-overall > .summary,
+  .layout-progrestatus #main-content .goal-overall > .goal-stats {
+    width: 100%;
+    clear: both; }
+  .layout-progrestatus #main-content .goal-overall > .summary .statuses {
+    width: 100%; }
+  .layout-progrestatus #main-content .goal-overall > .statuses {
+    width: 100%;
+    box-sizing: border-box; }
+  .layout-progrestatus #main-content .goal-overall > .statuses > div,
+  .layout-progrestatus #main-content .goal-overall .statuses > div {
+    display: block;
+    margin-left: 5px;
+    margin-top: 10px; }
   .layout-progrestatus #main-content .reporting-status-item {
     display: flex;
     flex-wrap: wrap;
