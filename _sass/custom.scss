@@ -791,6 +791,30 @@ ul.iconillo {
   pointer-events: none !important;
 }
 
+// Informe de seguimiento — botón descarga progreso.csv
+.layout-progrestatus {
+  .progreso-intro-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 8px;
+    h1 { margin: 0; }
+  }
+  .progreso-download-btn-header {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .progreso-download-btn-mobile {
+    display: none;
+    margin-top: 12px;
+  }
+  @media (max-width: 992px) {
+    .progreso-download-btn-header { display: none; }
+    .progreso-download-btn-mobile { display: inline-block; }
+  }
+}
+
 // Layout de categoría de progreso (lista de indicadores por estado)
 .layout-progrestatus-categoria {
   padding-top: 20px;
