@@ -3542,6 +3542,26 @@ ul.iconillo {
 .leaflet-tooltip {
   pointer-events: none !important; }
 
+.layout-progrestatus .progreso-intro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px; }
+  .layout-progrestatus .progreso-intro-header h1 {
+    margin: 0; }
+.layout-progrestatus .progreso-download-btn-header {
+  white-space: nowrap;
+  flex-shrink: 0; }
+.layout-progrestatus .progreso-download-btn-mobile {
+  display: none;
+  margin-top: 12px; }
+@media (max-width: 992px) {
+  .layout-progrestatus .progreso-download-btn-header {
+    display: none; }
+  .layout-progrestatus .progreso-download-btn-mobile {
+    display: inline-block; } }
+
 .layout-progrestatus-categoria {
   padding-top: 20px; }
   .layout-progrestatus-categoria .back-link {
