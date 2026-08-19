@@ -1,12 +1,21 @@
 <div class="progreso-intro-header">
-  <h1>{{ page.t.status.reporting_status }}</h1>
+  <h1>
+    {% if site.reporting_status.title %}
+      {{ site.reporting_status.title | t }}
+    {% else %}
+      {{ page.t.status.reporting_status }}
+    {% endif %}
+  </h1>
   <a href="{{ site.remote_data_prefix }}progreso.csv" role="button" class="btn btn-primary btn-download progreso-download-btn-header">
     {{ page.t.status.download_progress_csv }}
   </a>
 </div>
+
+{% if site.reporting_status.description %}
 <div class="reporting-status-description">
-  {{ page.t.status.description }}
+  {{ site.reporting_status.description | t | markdownify }}
   <a href="{{ site.remote_data_prefix }}progreso.csv" role="button" class="btn btn-primary btn-download progreso-download-btn-mobile">
     {{ page.t.status.download_progress_csv }}
   </a>
 </div>
+{% endif %}
