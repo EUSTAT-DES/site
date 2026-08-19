@@ -3562,6 +3562,97 @@ ul.iconillo {
   .layout-progrestatus .progreso-download-btn-mobile {
     display: inline-block; } }
 
+@media print {
+  .layout-progrestatus {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact; }
+
+  .layout-progrestatus .progreso-download-btn-header,
+  .layout-progrestatus .progreso-download-btn-mobile,
+  .layout-progrestatus #back-to-top,
+  .layout-progrestatus .goal-bar-tooltip,
+  .header-search-bar,
+  .language-toggle-container,
+  [data-contrast-switch-to],
+  .enlaces,
+  a[href="#top"] {
+    display: none !important; }
+
+  .layout-progrestatus #main-content .reporting-status-item {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important; }
+
+  .layout-progrestatus #main-content .frame {
+    width: auto !important;
+    float: none !important;
+    display: inline-block !important;
+    margin-bottom: 4px !important; }
+
+  .layout-progrestatus #main-content .frame img {
+    width: 60px !important;
+    height: 60px !important; }
+
+  .layout-progrestatus #main-content .details {
+    flex: 1 !important;
+    min-width: 0 !important;
+    float: none !important;
+    margin-left: 8px !important;
+    width: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 6px !important; }
+
+  .layout-progrestatus #main-content .details h3 {
+    font-size: 15px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: inline !important; }
+
+  .layout-progrestatus #main-content .details .total {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    display: inline !important;
+    font-size: 11px !important; }
+
+  .layout-progrestatus #main-content .details .goal-stats {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    margin-top: 4px !important; }
+
+  .layout-progrestatus #main-content .reporting-status-item .goal-stats span {
+    padding: 4px 0 !important;
+    font-size: 11px !important; }
+
+  .layout-progrestatus #main-content .reporting-status-item > .goal-stats {
+    width: 100% !important;
+    clear: both !important;
+    margin-top: 4px !important; }
+
+  .layout-progrestatus #main-content .goal-overall {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important; }
+
+  .layout-progrestatus #main-content .goal-overall .frame img {
+    width: 48px !important;
+    height: 48px !important; }
+
+  .layout-progrestatus #main-content .goal-overall .details {
+    flex: 1 !important;
+    float: none !important;
+    margin-left: 8px !important;
+    width: auto !important; }
+
+  .layout-progrestatus #main-content .goal-overall > .goal-stats {
+    width: 100% !important;
+    clear: both !important; }
+
+  .layout-progrestatus .reporting-status-item {
+    page-break-inside: avoid;
+    break-inside: avoid; } }
 .layout-progrestatus-categoria {
   padding-top: 20px; }
   .layout-progrestatus-categoria .back-link {
