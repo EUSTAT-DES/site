@@ -433,12 +433,10 @@ ul.iconillo {
 
 // Nuevos estados (legacy)
 .alcanzado {background-color: #45ba80; background: #45ba80;}
-.progreso {background-color: #b5e61d; background: #b5e61d;}
-.retroceso {background-color: #ff7f27; background: #ff7f27;}
-.noevaluado {background-color: #ccd5dd; background: #ccd5dd;}
+.progreso {background-color: #b3d37a; background: #b3d37a;}
 // Nuevos estados (Eurostat)
 .significant-progress {background-color: #45ba80; background: #45ba80;}
-.moderate-progress {background-color: #b5e61d; background: #b5e61d;}
+.moderate-progress {background-color: #b3d37a; background: #b3d37a;}
 .no-progress {background-color: #fec329; background: #fec329;}
 .moderate-deterioration {background-color: #ff7f27; background: #ff7f27;}
 .significant-deterioration {background-color: #db405a; background: #db405a;}
@@ -512,12 +510,12 @@ ul.iconillo {
             }
 // Otros estados de progreso (legacy)
                         .alcanzado {background-color: #45ba80; background: #45ba80;}
-                        .progreso {background-color: #b5e61d; background: #b5e61d;}
+                        .progreso {background-color: #b3d37a; background: #b3d37a;}
                         .retroceso {background-color: #ff7f27; background: #ff7f27;}
                         .noevaluado {background-color: #ccd5dd; background: #ccd5dd;}
 // Otros estados de progreso (Eurostat)
                         .significant-progress {background-color: #45ba80; background: #45ba80;}
-                        .moderate-progress {background-color: #b5e61d; background: #b5e61d;}
+                        .moderate-progress {background-color: #b3d37a; background: #b3d37a;}
                         .no-progress {background-color: #fec329; background: #fec329;}
                         .moderate-deterioration {background-color: #ff7f27; background: #ff7f27;}
                         .significant-deterioration {background-color: #db405a; background: #db405a;}
