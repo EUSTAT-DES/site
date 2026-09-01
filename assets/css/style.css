@@ -3153,24 +3153,16 @@ ul.iconillo {
   background: #45ba80; }
 
 .progreso {
-  background-color: #b5e61d;
-  background: #b5e61d; }
-
-.retroceso {
-  background-color: #ff7f27;
-  background: #ff7f27; }
-
-.noevaluado {
-  background-color: #ccd5dd;
-  background: #ccd5dd; }
+  background-color: #b3d37a;
+  background: #b3d37a; }
 
 .significant-progress {
   background-color: #45ba80;
   background: #45ba80; }
 
 .moderate-progress {
-  background-color: #b5e61d;
-  background: #b5e61d; }
+  background-color: #b3d37a;
+  background: #b3d37a; }
 
 .no-progress {
   background-color: #fec329;
@@ -3281,8 +3273,8 @@ ul.iconillo {
     background-color: #45ba80;
     background: #45ba80; }
   .layout-progrestatus #main-content .goal-stats .progreso {
-    background-color: #b5e61d;
-    background: #b5e61d; }
+    background-color: #b3d37a;
+    background: #b3d37a; }
   .layout-progrestatus #main-content .goal-stats .retroceso {
     background-color: #ff7f27;
     background: #ff7f27; }
@@ -3293,8 +3285,8 @@ ul.iconillo {
     background-color: #45ba80;
     background: #45ba80; }
   .layout-progrestatus #main-content .goal-stats .moderate-progress {
-    background-color: #b5e61d;
-    background: #b5e61d; }
+    background-color: #b3d37a;
+    background: #b3d37a; }
   .layout-progrestatus #main-content .goal-stats .no-progress {
     background-color: #fec329;
     background: #fec329; }
