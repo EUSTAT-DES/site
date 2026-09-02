@@ -346,5 +346,7 @@ time_series_attributes:
     label: indicator.footnote
   - field: DATA_LAST_UPDATE
     label: metadata_fields.national_data_update_url
+  - field: Progress
+    label: ''
 use_new_config_forms: true
 
