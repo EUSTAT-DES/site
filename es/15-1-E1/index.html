@@ -123,7 +123,7 @@ var translations = {
         
         Indicador 15.1.E1 -
         
-        Babestutako lehorreko eremuen azalera (km2 eta ehunekoa) (EBren sdg_15_20 adierazlea) - Indicadores para los Objetivos de Desarrollo Sostenible
+        Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20) - Indicadores para los Objetivos de Desarrollo Sostenible
     </title>
 
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260902122009">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260902135016">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -578,7 +578,7 @@ data-event-label="high"
                         
                     
                     
-                    <span class="lead-copy">Babestutako lehorreko eremuen azalera (km2 eta ehunekoa) (EBren sdg_15_20 adierazlea)</span>
+                    <span class="lead-copy">Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)</span>
                 </h1>
             </div>
             </div>
@@ -663,7 +663,7 @@ data-event-label="high"
 
 <div class="row" id="page-content">
   <div class="col-xs-12">
-    <p><b>Nahi den norabidea:</b> Mantentzea edo igoera</p>
+    <p><b>Dirección deseada:</b> Mantenimiento o ascenso</p>
 
   </div>
 </div>
@@ -678,7 +678,7 @@ data-event-label="high"
   data-indicatorid='indicator_15-1-E1'
   data-id="15-1-E1"
   data-country="Total"
-  data-charttitle="Babestutako lehorreko eremuen azalera (km2 eta ehunekoa) (EBren sdg_15_20 adierazlea)"
+  data-charttitle="Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)"
   data-charttitles="[]"
   data-measurementunit=""
   data-xaxislabel=""
@@ -738,7 +738,7 @@ data-event-label="high"
     
     <h3>Datos principales</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Babestutako lehorreko eremuen azalera (km2 eta ehunekoa) (EBren sdg_15_20 adierazlea)</caption>
+      <caption>Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)</caption>
       <thead>
         
         
@@ -981,7 +981,7 @@ data-event-label="Change to Table tab"
       <figure role="group">
         <div id="chart-canvas">
           <h4 id="chart-heading" class="chart-title">
-            Babestutako lehorreko eremuen azalera (km2 eta ehunekoa) (EBren sdg_15_20 adierazlea)
+            Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)
           </h4>
           <div id="chart" class="plot-container">
             <canvas
@@ -1246,7 +1246,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Indicador disponible </th>
         <td>
           
-            <p>Babestutako lehorreko eremuen azalera (km2 eta ehunekoa) (EBren sdg_15_20 adierazlea)</p>
+            <p>Superficie de las áreas terrestres protegidas (km2 y porcentaje) (Indicador UE sdg_15_20)</p>
 
           
         </td>
@@ -1285,7 +1285,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Definición del indicador </th>
         <td>
           
-            <p>Eremu babestuetan (Natura 2000 Sarea eta Naturagune Babestuak) sartutako lehorreko azalera, eta lehorreko azalera osoaren gaineko ehunekoa</p>
+            <p>Superficie terrestre incluida en áreas protegidas (Red Natura 2000 y Espacios Naturales Protegidos), y porcentaje sobre el total de la superficie terrestre</p>
 
           
         </td>
@@ -1306,21 +1306,22 @@ data-event-label="Change to indicator.global_metadata tab"
             
 \[PSTP^{t} = \frac{STP^{t}}{ST^{t}} \cdot 100\]
 
-<p>non:</p>
+<p>donde:</p>
 
-<p>$STP^{t} =$ eremu babestuetan sartutako lur-azalera $t$ urtean</p>
+<p>$STP^{t} =$ superficie terrestre incluida en áreas protegidas en el año $t$</p>
 
-<p>$ST^{t} =$ lur-azalera $t$ urtean</p>
+<p>$ST^{t} =$ superficie terrestre en el año $t$</p>
 
-<p>Ekosistema motaren araberako bereizketa ekosistemaren azalera osoan egiten da, formula honen arabera:</p>
+<p>La desagregación por tipo de ecosistema se realiza sobre la superficie total del ecosistema, según
+la siguiente fórmula:</p>
 
-\[PSTP_{ekosistema}^{t} = \frac{STP_{ekosistema}^{t}}{ST_{ekosistema}^{t}} \cdot 100\]
+\[PSTP_{ecosistema}^{t} = \frac{STP_{ecosistema}^{t}}{ST_{ecosistema}^{t}} \cdot 100\]
 
-<p>non:</p>
+<p>donde:</p>
 
-<p>$STP_{ekosistema}^{t} =$ ekosistema jakin baten azalera, eremu babestuetan dagoena $t$ urtean</p>
+<p>$STP_{ecosistema}^{t} =$ superficie de un ecosistema determinado incluida en áreas protegidas en el año $t$</p>
 
-<p>$ST_{ekosistema}^{t} =$ ekosistema jakin baten guztizko azalera $t$ urtean</p>
+<p>$ST_{ecosistema}^{t} =$ superficie total de un ecosistema determinado en el año $t$</p>
 
           
         </td>
@@ -1338,7 +1339,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Desagregaciones </th>
         <td>
           
-            <p>Ekosistema</p>
+            <p>Ecosistema</p>
 
           
         </td>
@@ -1356,7 +1357,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Periodicidad </th>
         <td>
           
-            <p>Hirurtekoa</p>
+            <p>Trienal</p>
 
           
         </td>
@@ -1538,21 +1539,21 @@ data-event-label="Change to indicator.global_metadata tab"
             
             
             <tr>
-                <td colspan="2"><img alt="Industria, Trantsizio Energetiko eta Jasangarritasun Saila" src="/site/assets/img/fuentes/Euskadi.png" /></td>
+                <td colspan="2"><img alt="Departamento de Industria, Transición Energética y Sostenibilidad" src="/site/assets/img/fuentes/Euskadi.png" /></td>
             </tr>
             
             
             
             <tr>
                 <th scope="row">Organización</th>
-                <td>Industria, Trantsizio Energetiko eta Jasangarritasun Saila</td>
+                <td>Departamento de Industria, Transición Energética y Sostenibilidad</td>
             </tr>
             
             
             
             <tr>
                 <th scope="row">Periodicidad</th>
-                <td>Urtekoa</td>
+                <td>Anual</td>
             </tr>
             
             
@@ -1566,7 +1567,7 @@ data-event-label="Change to indicator.global_metadata tab"
             <tr>
                 <th scope="row">Enlace a la fuente de datos</th>
                 
-                <td><a href="https://www.euskadi.eus/informazioa/ingurumen-adierazleak-090207/web01-a2inguru/eu/" target="_blank" rel="noopener noreferrer">Ingurumen adierazleak</a></td>
+                <td><a href="https://www.euskadi.eus/informacion/indicadores-ambientales-090207/web01-a2inguru/es/" target="_blank" rel="noopener noreferrer">Estadística de Indicadores Ambientales</a></td>
                 
             </tr>
             
@@ -1616,7 +1617,7 @@ data-event-label="Change to indicator.global_metadata tab"
             <tr>
                 <th scope="row">Enlace a la fuente de datos</th>
                 
-                <td><a href="https://www.geo.euskadi.eus/hasiera/" target="_blank" rel="noopener noreferrer">Geoeuskadi</a></td>
+                <td><a href="https://www.geo.euskadi.eus/inicio/" target="_blank" rel="noopener noreferrer">Geoeuskadi</a></td>
                 
             </tr>
             
@@ -1701,14 +1702,14 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Justificación </th>
         <td>
           
-            <p>Adierazle honek babestutako lur-eremuen hedadura neurtzen du, maila nazionalean izendatutakoak 
-eta Natura 2000 guneak barne. Nazio-mailan izendatutako eremu bat legeria nazionalak babestutako 
-eremua da.</p>
+            <p>Este indicador mide la extensión de las áreas terrestres protegidas, que incluyen las designadas 
+a nivel nacional y los espacios Natura 2000. Un área designada a nivel nacional es un 
+área protegida por la legislación nacional.</p>
 
-<p>Natura 2000 guneak Europako espezieak eta habitatak babesteko izendatzen dira, EBren Habitatei 
-eta Hegaztiei buruzko Zuzentarauetan sartuta daudenak.</p>
+<p>Los espacios Natura 2000 se designan para salvaguardar las especies y los hábitats de 
+Europa, incluidos en las Directivas de Hábitats y de Aves de la UE.</p>
 
-<p>Iturria: Eurostat</p>
+<p>Fuente: Eurostat</p>
 
           
         </td>
@@ -1726,7 +1727,7 @@ eta Hegaztiei buruzko Zuzentarauetan sartuta daudenak.</p>
         <th scope="row">Comparabilidad entre el indicador disponible en la C.A. de Euskadi y el indicador de Naciones Unidas/Unión Europea </th>
         <td>
           
-            <p>EAEn eskuragarri dagoen adierazlea Europako adierazlearekin aldera daiteke.</p>
+            <p>El indicador disponible es comparable con el indicador europeo.</p>
 
           
         </td>
@@ -1746,7 +1747,7 @@ eta Hegaztiei buruzko Zuzentarauetan sartuta daudenak.</p>
           
             
 <p><a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_15_20/default/table?lang=en&amp;category=sdg.sdg_15">
-Lurreko eremu babestuen azalera (sdg_15_20)</a> Eurostat</p>
+Superficie de las áreas terrestres protegidas(sdg_15_20)</a> Eurostat</p>
 
           
         </td>
@@ -1771,7 +1772,7 @@ Lurreko eremu babestuen azalera (sdg_15_20)</a> Eurostat</p>
         <th scope="row">Metadatos del indicador de Naciones Unidas/Unión Europea </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_15_20_esmsip2.htm">Metadatuak Eurostat (sdg_15_20)</a> (ingelesez bakarrik)</p>
+            <p><a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_15_20_esmsip2.htm">Metadatos Eurostat (sdg_15_20)</a> (solo en inglés)</p>
 
           
         </td>
@@ -2004,7 +2005,7 @@ Lurreko eremu babestuen azalera (sdg_15_20)</a> Eurostat</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260902122009'></script>
+<script src='/site/assets/js/sdg.js?v=20260902135016'></script>
 
 
 <script>
@@ -2024,7 +2025,7 @@ Lurreko eremu babestuen azalera (sdg_15_20)</a> Eurostat</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260902122009"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260902135016"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
