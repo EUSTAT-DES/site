@@ -3645,6 +3645,18 @@ ul.iconillo {
   .layout-progrestatus .reporting-status-item {
     page-break-inside: avoid;
     break-inside: avoid; } }
+.progress-status-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+  .progress-status-inline .progress-status-image {
+    flex-shrink: 0;
+    max-width: 136px; }
+    .progress-status-inline .progress-status-image img {
+      max-width: 100%; }
+  .progress-status-inline .progress-status-label {
+    line-height: 1.3; }
+
 .layout-progrestatus-categoria {
   padding-top: 20px; }
   .layout-progrestatus-categoria .back-link {
