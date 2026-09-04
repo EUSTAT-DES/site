@@ -16,18 +16,20 @@
             {% assign _t_label = progress_status.label | t %}
         {% endif %}
         <div class="progress-status">
-            {% if page.indicator %}
-                {% if progress_status.label and progress_status.label != '' %}
-                <div class="progress-status-label">
-                    {{ _t_label }}
-                </div>
-                {% endif %}
-            {% endif %}
-            {% if progress_status.image and progress_status.image != '' %}
+            <div class="progress-status-inline">
+                {% if progress_status.image and progress_status.image != '' %}
                 <div class="progress-status-image">
                     <img src="{{ site.baseurl }}/{{ progress_status.image }}" alt="{{ _t_label }}" />
                 </div>
-            {% endif %}
+                {% endif %}
+                {% if page.indicator %}
+                    {% if progress_status.label and progress_status.label != '' %}
+                    <div class="progress-status-label">
+                        {{ _t_label }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+            </div>
         </div>
     {% endif %}
 {% endif %}

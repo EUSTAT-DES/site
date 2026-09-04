@@ -917,6 +917,25 @@ ul.iconillo {
   }
 }
 
+// Detalle de indicador — icono de progreso a la izquierda de la descripción
+.progress-status-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .progress-status-image {
+        flex-shrink: 0;
+        max-width: 136px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .progress-status-label {
+        line-height: 1.3;
+    }
+}
+
 // Layout de categoría de progreso (lista de indicadores por estado)
 .layout-progrestatus-categoria {
   padding-top: 20px;
