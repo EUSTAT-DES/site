@@ -607,7 +607,7 @@ ul.iconillo {
                 position: relative;
                 cursor: default;
                 font-weight: normal;
-                padding: 12px 0;
+                padding: 4px 0;
                 .status-inner {
                     padding: 0 2px;
                     border-radius: 5px;
@@ -789,27 +789,54 @@ ul.iconillo {
   pointer-events: none !important;
 }
 
-// Informe de seguimiento — botón descarga progreso.csv
+// Informe de seguimiento — iconos descarga e impresión
+.progreso-intro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  h1 { margin: 0; }
+}
+
 .layout-progrestatus {
-  .progreso-intro-header {
+  .progreso-action-icons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 8px;
-    h1 { margin: 0; }
-  }
-  .progreso-download-btn-header {
-    white-space: nowrap;
+    gap: 8px;
     flex-shrink: 0;
   }
-  .progreso-download-btn-mobile {
+  .progreso-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 0;
+    border: none;
+    background: #00703c;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    box-shadow: 0 2px 0 #002d18;
+    &:hover {
+      background: #005a30;
+      color: white;
+    }
+    &:focus {
+      background: #fd0;
+      color: #0b0c0c;
+      outline: none;
+    }
+  }
+  .progreso-action-icons-mobile {
     display: none;
     margin-top: 12px;
   }
   @media (max-width: 992px) {
-    .progreso-download-btn-header { display: none; }
-    .progreso-download-btn-mobile { display: inline-block; }
+    .progreso-intro-header .progreso-action-icons { display: none; }
+    .progreso-action-icons-mobile { display: flex; }
   }
 }
 
@@ -822,8 +849,8 @@ ul.iconillo {
   }
 
   // Ocultar elementos no útiles al imprimir
-  .layout-progrestatus .progreso-download-btn-header,
-  .layout-progrestatus .progreso-download-btn-mobile,
+  .layout-progrestatus .progreso-action-icons,
+  .layout-progrestatus .progreso-action-icons-mobile,
   .layout-progrestatus #back-to-top,
   .layout-progrestatus .goal-bar-tooltip,
   .header-search-bar,
