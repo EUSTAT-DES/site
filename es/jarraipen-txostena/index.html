@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260904100740">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260904120408">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -403,9 +403,29 @@ data-event-label="high"
       Informe de seguimiento
     
   </h1>
-  <a href="https://eustat-des.github.io/data/progreso.csv" role="button" class="btn btn-primary btn-download progreso-download-btn-header">
-    Descargar datos del informe de seguimiento (.csv)
-  </a>
+  <div class="progreso-action-icons">
+    <a href="https://eustat-des.github.io/data/progreso.csv"
+       class="progreso-icon-btn progreso-download-btn-header"
+       title="Descargar datos del informe de seguimiento (.csv)"
+       aria-label="Descargar datos del informe de seguimiento (.csv)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+    <button type="button"
+            class="progreso-icon-btn progreso-print-btn"
+            title="Imprimir informe de seguimiento"
+            aria-label="Imprimir informe de seguimiento"
+            onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+    </button>
+  </div>
 </div>
 
 
@@ -414,9 +434,29 @@ data-event-label="high"
 
 <p>Para saber más sobre el procedimiento para evaluar el progreso, ver <a href="https://sdg.eustat.eus/es/metodologia">Medición del progreso en los Objetivos de Desarrollo Sostenible</a>.</p>
 
-  <a href="https://eustat-des.github.io/data/progreso.csv" role="button" class="btn btn-primary btn-download progreso-download-btn-mobile">
-    Descargar datos del informe de seguimiento (.csv)
-  </a>
+  <div class="progreso-action-icons progreso-action-icons-mobile">
+    <a href="https://eustat-des.github.io/data/progreso.csv"
+       class="progreso-icon-btn progreso-download-btn-mobile"
+       title="Descargar datos del informe de seguimiento (.csv)"
+       aria-label="Descargar datos del informe de seguimiento (.csv)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+    <button type="button"
+            class="progreso-icon-btn progreso-print-btn"
+            title="Imprimir informe de seguimiento"
+            aria-label="Imprimir informe de seguimiento"
+            onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+    </button>
+  </div>
 </div>
 
 
@@ -2420,7 +2460,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260904100740'></script>
+<script src='/site/assets/js/sdg.js?v=20260904120408'></script>
 
 
 <script>
@@ -2440,7 +2480,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260904100740"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260904120408"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

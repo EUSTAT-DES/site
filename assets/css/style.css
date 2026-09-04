@@ -3368,7 +3368,7 @@ ul.iconillo {
   position: relative;
   cursor: default;
   font-weight: normal;
-  padding: 12px 0; }
+  padding: 4px 0; }
   .layout-progrestatus #main-content .reporting-status-item .goal-stats span .status-inner {
     padding: 0 2px;
     border-radius: 5px;
@@ -3534,33 +3534,57 @@ ul.iconillo {
 .leaflet-tooltip {
   pointer-events: none !important; }
 
-.layout-progrestatus .progreso-intro-header {
+.progreso-intro-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 8px; }
-  .layout-progrestatus .progreso-intro-header h1 {
+  .progreso-intro-header h1 {
     margin: 0; }
-.layout-progrestatus .progreso-download-btn-header {
-  white-space: nowrap;
+
+.layout-progrestatus .progreso-action-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   flex-shrink: 0; }
-.layout-progrestatus .progreso-download-btn-mobile {
+.layout-progrestatus .progreso-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  border: none;
+  background: #00703c;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  box-shadow: 0 2px 0 #002d18; }
+  .layout-progrestatus .progreso-icon-btn:hover {
+    background: #005a30;
+    color: white; }
+  .layout-progrestatus .progreso-icon-btn:focus {
+    background: #fd0;
+    color: #0b0c0c;
+    outline: none; }
+.layout-progrestatus .progreso-action-icons-mobile {
   display: none;
   margin-top: 12px; }
 @media (max-width: 992px) {
-  .layout-progrestatus .progreso-download-btn-header {
+  .layout-progrestatus .progreso-intro-header .progreso-action-icons {
     display: none; }
-  .layout-progrestatus .progreso-download-btn-mobile {
-    display: inline-block; } }
+  .layout-progrestatus .progreso-action-icons-mobile {
+    display: flex; } }
 
 @media print {
   .layout-progrestatus {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact; }
 
-  .layout-progrestatus .progreso-download-btn-header,
-  .layout-progrestatus .progreso-download-btn-mobile,
+  .layout-progrestatus .progreso-action-icons,
+  .layout-progrestatus .progreso-action-icons-mobile,
   .layout-progrestatus #back-to-top,
   .layout-progrestatus .goal-bar-tooltip,
   .header-search-bar,
