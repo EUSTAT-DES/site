@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260904120408">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260907084443">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -620,6 +620,12 @@ data-event-label="high"
   
 
   
+<div class="row metadata-available-indicator">
+  <div class="col-xs-12">
+    <h2></h2>
+  </div>
+</div>
+
 
   
 
@@ -642,13 +648,13 @@ data-event-label="high"
             <div class="progress-status-inline">
                 
                 <div class="progress-status-image">
-                    <img src="/site/assets/img/progress/no_evaluado.png" alt="Datos no disponibles" />
+                    <img src="/site/assets/img/progress/alcanzado.png" alt="Meta alcanzada o en vías de alcanzarla" />
                 </div>
                 
                 
                     
                     <div class="progress-status-label">
-                        Datos no disponibles
+                        Meta alcanzada o en vías de alcanzarla
                     </div>
                     
                 
@@ -663,6 +669,13 @@ data-event-label="high"
 
   
 
+<div class="row" id="page-content">
+  <div class="col-xs-12">
+    <p><b>Meta:</b> Reducir en un 55% el número de muertes prematuras debidas a PM2,5 respecto a los niveles de 2005</p>
+
+  </div>
+</div>
+
 
   
 
@@ -673,30 +686,710 @@ data-event-label="high"
   data-indicatorid='indicator_3-9-1'
   data-id="3-9-1"
   data-country="Total"
-  data-charttitle="Tasa de mortalidad atribuida a la contaminación de los hogares y del aire ambiente"
+  data-charttitle="Muertes prematuras por exposición a partículas finas (PM2,5) (Indicador UE sdg_11_52)"
   data-charttitles="[]"
   data-measurementunit=""
   data-xaxislabel=""
-  data-showdata="false"
+  data-showdata="true"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[]"
+  data-startvalues="&quot;&quot;"
   data-graphlimits="[]"
   data-stackeddisaggregation=""
   data-graphannotations="[]"
-  data-graphtargetlines="null"
+  data-graphtargetlines="[{&quot;series&quot;:&quot;Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes&quot;,&quot;unit&quot;:&quot;&quot;,&quot;label_content&quot;:&quot;Objetivo del indicador para 2030&quot;,&quot;value&quot;:30.5,&quot;graph_target_lines&quot;:null},{&quot;series&quot;:&quot;Número de muertes prematuras por exposición a partículas finas&quot;,&quot;unit&quot;:&quot;&quot;,&quot;label_content&quot;:&quot;Objetivo del indicador para 2030&quot;,&quot;value&quot;:645}]"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes&quot;,&quot;Número de muertes prematuras por exposición a partículas finas&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Serie&quot;},{&quot;name&quot;:&quot;Sexo&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Mujer&quot;,&quot;Hombre&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sexo&quot;},{&quot;name&quot;:&quot;Territorio&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Araba/Álava&quot;,&quot;Bizkaia&quot;,&quot;Gipuzkoa&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Territorio histórico&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Por 100.000&quot;,&quot;Número&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Unidad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Valor&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
   data-proxy=""
-  data-proxyseries="null"
+  data-proxyseries="[]"
 >
   
-  <div id="indicator-main" class="indicator-main col-md-12">
+  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
+  <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
+    <div id="serieses"></div>
+<div id="units"></div>
+<div id="toolbar">
+  <span id="series-help">
+    <h4>Subcategorías</h4>
+    <p>Elija categorías de las listas desplegables a continuación para ver diferentes desgloses de los datos. Algunos no estarán disponibles hasta que se elija un nivel superior.</p>
+  </span>
+  <div id="fields">
+    <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+  </div>
+</div>
+
+  </div>
+  <div id="indicator-main" class="indicator-main col-md-9">
+    
+
+
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    
+    <a role="button" href="https://eustat-des.github.io/data/es/headline/3-9-1.csv" class="btn btn-primary btn-download" download="indicator_3-9-1.csv" tabindex="0" role="button">Descargar los datos de los titulares (.csv)</a>
+    
+    <a role="button" href="https://eustat-des.github.io/data/es/data/3-9-1.csv" class="btn btn-primary btn-download" download='indicator_3-9-1.csv' tabindex='0' role='button'>Descargar datos de origen (.csv)</a>
+
+    <p class="no-js-disaggregation-hint">Descargar los datos de origen para los desgloses (.csv)</p>
+
+    
+    <h3>Datos principales</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Muertes prematuras por exposición a partículas finas (PM2,5) (Indicador UE sdg_11_52)</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">Series</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>31.3</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>29.0</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>27.2</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>39.5</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>29.9</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>30.0</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>27.8</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>41.1</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>37.1</td>
+          
+          
+          
+          <td>Por 100.000</td>
+          
+          
+          
+          <td class="table-value">Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>569.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>607.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>560.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>606.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>836.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>636.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>821.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>594.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>750.0</td>
+          
+          
+          
+          <td>Número</td>
+          
+          
+          
+          <td class="table-value">Número de muertes prematuras por exposición a partículas finas</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    
+  </div>
+
+  
+  <div id="datatableFooter">
+    
+    
+    <p>Área geográfica: </p>
+    
+    
+    <p>Unidad de medida: </p>
+    
+    
+    <p>Nota: </p>
+    
+  </div>
+  
+
+</div>
+
+
+<section>
+
+  <p class="async-loading" data-img="/site/assets/img/loading-small.gif"></p>
+
+  <div class="async-loaded mt-4" style="display:none;">
+
+    <div style="display: none;">
+    <span id="table-alternative">Para la alternativa de datos en forma de tabla, véase la pestaña Tabla.</span>
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+
+        
+      >Gráfico</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+
+        
+      >Tabla</button>
+    </li>
+    
+  </ul>
+  
+    <div class="tab-content data-view">
+    
+      
+        <div role="tabpanel" class="tab-pane active" id="chartview">
+          
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only">Advertencia:</span></i>
+      Hay demasiados conjuntos de datos para mostrar en el gráfico. No todo se mostrará hasta que elimine algunas selecciones.
+    </div>
+
+    
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">
+            Muertes prematuras por exposición a partículas finas (PM2,5) (Indicador UE sdg_11_52)
+          </h4>
+          <div id="chart" class="plot-container">
+            <canvas
+    role="img"
+    aria-labelledby="chart-heading"
+    aria-describedby="table-alternative chart-annotations"
+    tabindex="0"
+ ></canvas>
+
+          </div>
+          <div id="plotLegend"></div>
+          
+
+
+
+<div id="selectionChartFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unidad de medida:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Nota:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Fecha última actualización datos:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="Progress"
+        >:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="Progress"
+        ></dd>
+        
+        
+    </dl>
+    
+    <dl class="observation-attribute-list"></dl>
+    
+</div>
+
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button
+          id="btnSave"
+          title="Descargar la imagen del gráfico como PNG"
+          aria-label="Descargar la imagen del gráfico como PNG"
+          class='btn btn-primary btn-download'>
+          Descargar la imagen del gráfico (.png)
+        </button><!--
+   --></div>
+    </div>
+
+
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="tableview">
+          <div style="display: none;">
+            <span id="column-sort-info">Pulse para ordenar por esta columna</span>
+          </div>
+          <div id="selectionsTable"></div>
+<dl id="tableTargetLines" class="clearfix"></dl>
+
+
+
+
+<div id="selectionTableFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unidad de medida:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Nota:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        >Fecha última actualización datos:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="Progress"
+        >:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="Progress"
+        ></dd>
+        
+        
+    </dl>
+    
+    <dl class="observation-attribute-list"></dl>
+    
+</div>
+
+<div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+  </div>
+  
+
+  </div>
+
+</section>
+
   
   <div class="mt-4">
 <ul class="nav nav-tabs" role="tablist">
@@ -801,7 +1494,7 @@ data-event-label="Change to indicator.global_metadata tab"
         <th scope="row">Indicador disponible </th>
         <td>
           
-            <p>La CA de Euskadi no elabora estadísticas oficiales continuas con la metodología del indicador</p>
+            <p>Muertes prematuras por exposición a partículas finas (PM2,5) (Indicador UE sdg_11_52)</p>
 
           
         </td>
@@ -821,50 +1514,142 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Meta </th>
+        <td>
           
-    
-    
-      
-      
-      
-        
+            <p>3.9- De aquí a 2030, reducir considerablemente el número de muertes y enfermedades causadas por productos químicos peligrosos y por la polución y contaminación del aire, el agua y el suelo</p>
+
           
-    
-    
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+    
+    
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Objetivo </th>
+        <td>
           
-    
-    
-      
-      
-      
+            <p>3- Garantizar una vida sana y promover el bienestar de todos a todas las edades</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+    
+    
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definición del indicador </th>
+        <td>
           
-    
-    
-      
-      
-      
+            <p>Tasa de mortalidad prematura por cada 100.000 habitantes y número de muertes prematuras atribuibles a  exposiciones prolongadas de concentraciones de partículas finas (PM2,5) superiores a 5 $\mu\mathrm{g}/\mathrm{m}^3$</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+    
+    
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Fórmula teórica </th>
+        <td>
           
-    
-    
-      
-      
-      
+            
+<p><b>Tasa de mortalidad prematura por exposición a partículas finas por 100.000 habitantes</b></p>
+
+\[TM_{particulas }^{t} = \frac{D_{particulas }^{t}}{PA^{t}} \cdot 100.000\]
+
+<p><b>Número de muertes prematuras por exposición a partículas finas</b></p>
+
+\[D_{particulas }^{t}\]
+
+<p>donde:</p>
+
+<p>$D_{particulas }^{t} =$ defunciones prematuras estimadas atribuidas a exposición de partículas en el año $t$</p>
+
+<p>$PA^{t} =$ población en el año $t$</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+    
+    
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Desagregaciones </th>
+        <td>
           
-    
-    
-      
-      
-      
+            <p>Sexo</p>
+
+<p>Territorio histórico</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+    
+    
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Periodicidad </th>
+        <td>
           
+            <p>Anual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+    
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Observaciones </th>
+        <td>
+          
+            <p>El número de muertes prematuras se ha calculado según la metodología descrita en las directrices globales de  calidad del aire de la OMS (2021) y en la sesión informativa de 2025 de la Agencia Europea del Medio Ambiente  sobre los impactos en la salud de la contaminación del aire</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
     
     
       
@@ -893,13 +1678,6 @@ data-event-label="Change to indicator.global_metadata tab"
     
     
   
-    
-    
-      
-      
-      
-        
-          
     
     
       
@@ -977,10 +1755,27 @@ data-event-label="Change to indicator.global_metadata tab"
       
       
       <tr>
+        <th scope="row">Fecha última actualización datos </th>
+        <td>
+          
+            04/09/2026
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+    
+      
+      
+      
+      
+      <tr>
         <th scope="row">Fecha última actualización metadatos </th>
         <td>
           
-            10/10/2025
+            04/09/2026
           
         </td>
         </tr>
@@ -1004,10 +1799,70 @@ data-event-label="Change to indicator.global_metadata tab"
         <div role="tabpanel" class="tab-pane " id="sources_alt">
             <article>
                 
-
                 
 
-    
+
+
+
+
+<div class="row">
+
+    <div class="col-md-6">
+        
+        <h4 class="sr-only">Fuente 1</h4>
+        
+        
+        <table class="table indicator-source-table">
+            
+            
+            
+            <tr>
+                <td colspan="2"><img alt="FUENTE.EEA" src="/siteFUENTE.EEA_logo" /></td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Organización</th>
+                <td>FUENTE.EEA</td>
+            </tr>
+            
+            
+            
+            <tr>
+                <th scope="row">Periodicidad</th>
+                <td>Anual</td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <tr>
+                <th scope="row">Enlace a la fuente de datos</th>
+                
+                <td><a href="FUENTE.EEA_muertes_url" target="_blank" rel="noopener noreferrer">FUENTE.EEA_muertes</a></td>
+                
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </table>
+    </div>
+
+</div>
 
 
             </article>
@@ -1106,8 +1961,21 @@ los países de ingresos bajos y medios.</p>
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Comparabilidad entre el indicador disponible en la C.A. de Euskadi y el indicador de Naciones Unidas/Unión Europea </th>
+        <td>
           
+            
+<p>El indicador disponible no cumple con los metadatos del indicador de Naciones Unidas, pero aporta información similar.
+El indicador disponible es comparable con el indicador europeo.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
     
     
       
@@ -1118,7 +1986,8 @@ los países de ingresos bajos y medios.</p>
         <th scope="row">Resultados internacionales </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.9.1&amp;seriesCode=SH_STA_ASAIRP&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Tasa de mortalidad estandarizada por edad atribuida a la contaminación de los hogares y del aire ambiente (muertes por cada 100.000 habitantes) SH_STA_ASAIRP</a> UNSTATS</p>
+            <p><a href="https://unstats.un.org/sdgs/dataportal/analytics/SingleSeries?indicators=3.9.1&amp;seriesCode=SH_STA_ASAIRP&amp;areaCode=276,40,56,100,196,191,208,703,705,724,233,246,250,300,528,348,372,380,428,440,442,470,616,620,203,642,752,1,202,14,17,18,11,747,15,145,62,143,34,753,30,35,419,29,13,5,9,54,57,61,53,513,150,21,432,199,722&amp;period=3&amp;table=Total">Tasa de mortalidad estandarizada por edad atribuida a la contaminación de los hogares y del aire ambiente (muertes por cada 100.000 habitantes) SH_STA_ASAIRP</a> UNSTATS<br />
+<a href="https://ec.europa.eu/eurostat/databrowser/view/sdg_11_52/default/table?lang=en&amp;category=sdg.sdg_03">Muertes prematuras por exposición a partículas finas (PM2,5)</a> Eurostat</p>
 
           
         </td>
@@ -1143,7 +2012,8 @@ los países de ingresos bajos y medios.</p>
         <th scope="row">Metadatos del indicador de Naciones Unidas/Unión Europea </th>
         <td>
           
-            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-09-01.pdf">Metadatos 3-9-1.pdf</a> (solo en inglés)</p>
+            <p><a href="https://unstats.un.org/sdgs/metadata/files/Metadata-03-09-01.pdf">Metadatos 3-9-1.pdf</a> (solo en inglés)<br />
+<a href="https://ec.europa.eu/eurostat/cache/metadata/en/sdg_11_52_esmsip2.htm">Metadatos sdg_11_52</a> (solo en inglés)</p>
 
           
         </td>
@@ -1376,7 +2246,7 @@ los países de ingresos bajos y medios.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260904120408'></script>
+<script src='/site/assets/js/sdg.js?v=20260907084443'></script>
 
 
 <script>
@@ -1396,7 +2266,7 @@ los países de ingresos bajos y medios.</p>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260904120408"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260907084443"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
