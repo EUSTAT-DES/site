@@ -3247,6 +3247,10 @@ ul.iconillo {
         background: rgba(255, 255, 255, 0.8); }
     .layout-progrestatus #main-content .statuses > div .status.notapplicable {
       border: none; }
+    .layout-progrestatus #main-content .statuses > div .status.not-available {
+      background-color: #ccd5dd;
+      background: #ccd5dd;
+      border-color: #ccd5dd; }
     .layout-progrestatus #main-content .statuses > div .status .status-inner {
       padding: 0 2px;
       border-radius: 5px;
@@ -3486,6 +3490,9 @@ ul.iconillo {
   .layout-progrestatus.contrast-high #main-content .goal-stats .complete {
     background-color: white;
     background: white; }
+  .layout-progrestatus.contrast-high #main-content .goal-stats .not-available {
+    background-color: #ccd5dd !important;
+    background: #ccd5dd !important; }
 .layout-progrestatus.contrast-high #main-content .statuses strong {
   color: white; }
 .layout-progrestatus.contrast-high #main-content .statuses .value {
@@ -3530,6 +3537,10 @@ ul.iconillo {
       color: black !important; }
   .layout-progrestatus.contrast-high #main-content .statuses .status.notstarted {
     border: 1px solid white !important; }
+  .layout-progrestatus.contrast-high #main-content .statuses .status.not-available {
+    background-color: #ccd5dd !important;
+    background: #ccd5dd !important;
+    border-color: #ccd5dd !important; }
 
 .leaflet-tooltip {
   pointer-events: none !important; }
