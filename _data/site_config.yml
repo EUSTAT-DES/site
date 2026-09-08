@@ -285,7 +285,7 @@ progress_status:
       hide_on_goal_pages: false
     - value: not_available
       label: status.no_evaluado
-      image: assets/img/progress/no_evaluado.png
+      image: assets/img/progress/no_evaluable.png
       alt: status.no_evaluado
       hide_on_goal_pages: false
     # === Estados legacy (compatibilidad con progress_status manual) ===
@@ -306,12 +306,12 @@ progress_status:
       hide_on_goal_pages: false
     - value: noevaluado
       label: status.no_evaluado
-      image: assets/img/progress/no_evaluado.png
+      image: assets/img/progress/no_evaluable.png
       alt: status.no_evaluado
       hide_on_goal_pages: false
     - value: notstarted
       label: status.no_data_available
-      image: assets/img/progress/no_evaluado.png
+      image: assets/img/progress/sin_datos_disponibles.png
       alt: status.no_data_available
       hide_on_goal_pages: false
     - value: notapplicable

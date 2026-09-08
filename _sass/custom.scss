@@ -482,6 +482,11 @@ ul.iconillo {
                     &.notapplicable {
                         border: none;
                     }
+                    &.not-available {
+                        background-color: #ccd5dd;
+                        background: #ccd5dd;
+                        border-color: #ccd5dd;
+                    }
                     .status-inner {
                         padding: 0 2px;
                         border-radius: 5px;
@@ -765,6 +770,10 @@ ul.iconillo {
                     background-color: $status-backgroundColor-complete-highContrast;
                     background: $status-backgroundColor-complete-highContrast;
                 }
+                .not-available {
+                    background-color: #ccd5dd !important;
+                    background: #ccd5dd !important;
+                }
             }
 
             .statuses {
@@ -779,6 +788,11 @@ ul.iconillo {
                     border: none !important;
                     &.notstarted {
                         border: $status-border-notstarted-highContrast !important;
+                    }
+                    &.not-available {
+                        background-color: #ccd5dd !important;
+                        background: #ccd5dd !important;
+                        border-color: #ccd5dd !important;
                     }
                 }
             }
