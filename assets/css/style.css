@@ -3737,3 +3737,11 @@ ul.iconillo {
         flex-grow: 1; }
         .layout-progrestatus-categoria .categoria-indicator-list li a:hover {
           color: #003d80; }
+
+/* Goldilocks — ocultar columna Progress del footer del indicador.
+   Open SDG la registra como time_series_attribute y muestra su valor
+   numérico (resultado de la fórmula goldilocks) bajo la leyenda de unidades.
+   La columna es solo para cálculo interno; no debe ser visible. */
+dt[data-ts-attribute="Progress"],
+dd[data-ts-attribute="Progress"] {
+  display: none !important; }
