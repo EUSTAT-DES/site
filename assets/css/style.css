@@ -3087,11 +3087,18 @@ ul.iconillo {
   border-color: transparent;
   margin-bottom: 5px; }
 
+.ods-navigation-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease; }
+  .ods-navigation-wrapper.is-sticky {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
+
 .ods-navigation {
   background-color: transparent;
-  /* Fondo transparente */
-  padding: 10px 0;
-  /* Espacio vertical */
+  padding: 8px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

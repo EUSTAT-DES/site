@@ -21,4 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
       a.setAttribute('rel', 'noopener noreferrer');
     }
   });
+
+  // Añade la clase is-sticky al wrapper de la barra ODS cuando está pegado al top,
+  // para activar la sombra y el efecto visual de barra fija.
+  var odsWrapper = document.querySelector('.ods-navigation-wrapper');
+  if (odsWrapper) {
+    var wrapperTop = odsWrapper.offsetTop;
+    window.addEventListener('scroll', function () {
+      odsWrapper.classList.toggle('is-sticky', window.scrollY >= wrapperTop);
+    }, { passive: true });
+  }
 });
