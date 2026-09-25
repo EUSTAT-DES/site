@@ -11,3 +11,12 @@ Gemfile.lock
 deploy_key*
 deploy_key*.pub
 *.keybase
+
+# Kiro IDE
+.kiro/
+
+# Docker
+Dockerfile
+docker-serve.sh
+.dockerignore
+docker-compose.override.yml
