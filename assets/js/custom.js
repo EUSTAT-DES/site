@@ -17,7 +17,7 @@
  * Aplica target="_blank" a un enlace externo (URL absoluta que no sea eustat.eus).
  */
 function applyExternalLinkTarget(a) {
-  var href = a.getAttribute('href');
+  var href = (a.getAttribute('href') || '').trim();
   if (href && /^https?:\/\//i.test(href) && href.indexOf('eustat.eus') === -1) {
     a.setAttribute('target', '_blank');
     a.setAttribute('rel', 'noopener noreferrer');
