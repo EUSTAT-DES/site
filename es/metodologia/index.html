@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260929103349">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260930094625">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -392,36 +392,58 @@ data-event-label="high"
         
 
 
-    <h2 id="1-medición-del-progreso">1. Medición del progreso</h2>
+    <h2 id="índice">Índice</h2>
 
-<p>Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.</p>
+<ul>
+  <li><a href="#medicion">1. Medición del progreso</a></li>
+  <li><a href="#metodologia">2. Metodología</a>
+    <ul>
+      <li><a href="#con-objetivo">2.1 Indicadores con valores objetivo para 2030</a></li>
+      <li><a href="#sin-objetivo">2.2 Indicadores sin valores objetivo numéricos</a></li>
+      <li><a href="#categorias">2.3 Categorías de progreso</a></li>
+      <li><a href="#consideraciones">2.4 Consideraciones y excepciones</a></li>
+    </ul>
+  </li>
+</ul>
 
-<p>Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar los esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.</p>
+<hr />
 
-<h2 id="2-metodología">2. Metodología</h2>
+<details id="medicion" open="">
+<summary>1. Medición del progreso</summary>
 
-<p>Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la 
-<a href="https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf">nota técnica sobre la medición del progreso de 2023</a> utilizada por la División de Estadística de Naciones Unidas.</p>
+Medir y hacer el seguimiento del progreso con información confiable es clave para comprender cómo avanza la Comunidad Autónoma de Euskadi hacia el logro de los ODS.  
 
-<p>Al evaluar el progreso de los ODS, la dirección normativa de una serie de datos indica el resultado deseable para su valor. Un valor más alto es deseable para series de datos con una dirección normativa creciente; lo contrario ocurre con aquellas con una dirección normativa decreciente. La dirección deseada para cada indicador o serie se ha tomado de la <a href="https://unstats.un.org/sdgs/files/report/2024/Technical_Note_for_Progress_Assessment_2024.pdf">nota técnica sobre la medición del progreso de 2024</a></p>
+Medir de cerca el progreso de cada indicador no solo ilustra dónde se está progresando, o en qué áreas no se están logrando avances y se pueden concentrar los esfuerzos, sino que además permite comunicar cómo le está yendo a la Comunidad Autónoma de Euskadi en la ejecución de la Agenda 2030 de una manera abierta y transparente. El informe de seguimiento puede constituir una herramienta para comprender mejor el éxito de las políticas y acciones para alcanzar las distintas metas. También puede actuar como una señal clara para que se puedan reajustar o desarrollar políticas efectivas basadas en evidencia para ayudar a garantizar que se alcancen los objetivos.
 
-<p>Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.</p>
+</details>
 
-<p>Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas para el conjunto del mundo.</p>
+<details id="metodologia">
+<summary>2. Metodología</summary>
 
-<p>La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.</p>
+Con la intención de realizar una evaluación simple y transparente, se ha desarrollado una metodología basada en la
+[nota técnica sobre la medición del progreso de 2023](https://unstats.un.org/sdgs/files/report/2023/Progress_Chart_Technical_Note_2023.pdf) utilizada por la División de Estadística de Naciones Unidas.
 
-<h3 id="21-indicadores-con-valores-objetivo-para-2030">2.1 Indicadores con valores objetivo para 2030</h3>
+Al evaluar el progreso de los ODS, la dirección normativa de una serie de datos indica el resultado deseable para su valor. Un valor más alto es deseable para series de datos con una dirección normativa creciente; lo contrario ocurre con aquellas con una dirección normativa decreciente. La dirección deseada para cada indicador o serie se ha tomado de la [nota técnica sobre la medición del progreso de 2024](https://unstats.un.org/sdgs/files/report/2024/Technical_Note_for_Progress_Assessment_2024.pdf)
 
-<p>Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:</p>
+Un indicador puede contener múltiples series de datos y/o desgloses por diferentes dimensiones (como edad, sexo, ubicación, etc.). En estos casos, para la evaluación del progreso solo se seleccionan los datos de las series y desgloses que mejor representan a toda la población de de la Comunidad Autónoma de Euskadi.
 
-\[CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1\]
+Se aplica a nivel de C.A. de Euskadi el objetivo marcado por Naciones Unidas para el conjunto del mundo. 
+
+La evaluación otorga una puntuación a cada uno de los indicadores. Se distingue entre indicadores que tienen objetivos numéricos para 2030 y aquellos que no los tienen.  
+
+<details id="con-objetivo">
+<summary>2.1 Indicadores con valores objetivo para 2030</summary>
+
+Para los indicadores que tienen valores objetivo para 2030 y al menos dos puntos de datos diferentes (uno para la línea de base, normalmente 2015, y otro para el último año), se asigna una puntuación mediante el cálculo de tasas de crecimiento. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre el año de referencia (b) y el último año (t) para el cual hay datos disponibles:
+
+$$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t-b}} - 1$$
 
 <p>A continuación, se utiliza la 𝐶𝐴𝐺𝑅𝑎 del paso anterior para extrapolar el valor esperado (𝑣2030𝑒) para la serie en 2030, suponiendo que se mantenga el ritmo de progreso actual:</p>
 
-\[v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}\]
+$$v_{2030}^{e} = v_{t} \times (1 + CAGR_{a})^{2030 - t}$$
 
-<p>Por último, se asigna una puntuación a la serie según los siguientes criterios:</p>
+Por último, se asigna una puntuación a la serie según los siguientes criterios:
+
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -432,7 +454,6 @@ data-event-label="high"
 .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
-
 <table class="tg">
 <thead>
   <tr>
@@ -455,7 +476,7 @@ data-event-label="high"
   </tr>
 </tbody>
 </table>
-<p><br /><br /><br />
+<br /><br />  
 Donde:
 <br /><br /> 
 $𝑏$ es el año base (normalmente 2015)<br />
@@ -464,14 +485,17 @@ $𝑣_{b}$ es el valor base en el año b<br />
 $𝑣_{𝑡}$ es el valor del último año 𝑡<br />
 $𝑣_{2030}$ es el valor objetivo para 2030<br />
 $𝑣_{2030}^{e}$ es el valor esperado para 2030
-<br /><br /></p>
-<h3 id="22-indicadores-sin-valores-objetivo-numéricos">2.2 Indicadores sin valores objetivo numéricos</h3>
+<br /><br />
+</details>
 
-<p>Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:</p>
+<details id="sin-objetivo">
+<summary>2.2 Indicadores sin valores objetivo numéricos</summary>
 
-\[CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1\]
+Se asigna una puntuación a los indicadores que no tienen valores objetivo para 2030, y que cuentan con al menos dos puntos de datos, mediante el cálculo de la tasa de crecimiento anual compuesta. Primero, se calcula la tasa de crecimiento anual compuesta real (𝐶𝐴𝐺𝑅𝑎) entre la línea de base (b) y el último año (t) para el cual hay datos disponibles:
 
-<p>A continuación, se asigna una puntuación al indicador según los siguientes criterios:</p>
+$$CAGR_{a} = \left( \frac{v_{t}}{v_{b}} \right)^{\frac{1}{t - b}} - 1$$
+
+A continuación, se asigna una puntuación al indicador según los siguientes criterios:
 
 <p>Si el aumento es deseable:</p>
 
@@ -498,7 +522,7 @@ $𝑣_{2030}^{e}$ es el valor esperado para 2030
 </tbody>
 </table>
 
-<p><br /><br /></p>
+<br /><br /> 
 <p>Si el descenso es deseable:</p>
 
 <table class="tg">
@@ -524,12 +548,15 @@ $𝑣_{2030}^{e}$ es el valor esperado para 2030
 </tbody>
 </table>
 
-<p><br /><br />
-En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.</p>
+<br /><br />
+En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo, Indicador 8.1.1: Tasa de crecimiento anual del PIB per cápita). Calcular la CAGR de las tasas de crecimiento no tendría sentido y se utiliza el criterio experto para asignar la puntuación.
 
-<h3 id="23-categorías-de-progreso">2.3 Categorías de progreso</h3>
+</details>
 
-<p>Las categorías de progreso asignadas se describen a continuación:</p>
+<details id="categorias">
+<summary>2.3 Categorías de progreso</summary>
+
+Las categorías de progreso asignadas se describen a continuación:
 
 <table class="tg">
 <thead>
@@ -563,59 +590,60 @@ En algunos casos, los valores de la serie son tasas de crecimiento (por ejemplo,
 </tbody>
 </table>
 
-<p><br /></p>
-<h4 id="231-meta-alcanzada-o-en-vías-de-alcanzarla">2.3.1 Meta alcanzada o en vías de alcanzarla</h4>
-<p>La meta está alcanzada o está en vías de alcanzarla para 2030.</p>
+<br />
 
-<h4 id="232-progreso-razonable-pero-es-necesario-acelerarlo">2.3.2 Progreso razonable, pero es necesario acelerarlo</h4>
-<p>Ha habido un progreso en el indicador, pero para alcanzar la meta en 2030 es necesario acelerar el progreso</p>
+**2.3.1 Meta alcanzada o en vías de alcanzarla**
 
-<h4 id="233-estancamiento-o-retroceso">2.3.3 Estancamiento o retroceso</h4>
-<p>No ha habido progreso o se ha retrocedido y es improbable que se alcance la meta en 2030.</p>
+La meta está alcanzada o está en vías de alcanzarla para 2030.
 
-<h4 id="234-no-evaluado">2.3.4 No evaluado</h4>
+**2.3.2 Progreso razonable, pero es necesario acelerarlo**
 
-<p>En algunos casos no es posible medir el progreso de manera fiable u objetiva:</p>
+Ha habido un progreso en el indicador, pero para alcanzar la meta en 2030 es necesario acelerar el progreso.
 
-<ul>
-  <li>Cuando el indicador disponible para la CA de Euskadi no está alineado con la metodología del indicador oficial de las Naciones Unidas. En estos casos se utiliza un proxy o medición sustitutiva, pero en ocasiones no mide lo mismo.</li>
-  <li>Cuando no existe una serie temporal suficiente para evaluar el progreso.</li>
-  <li>Cuando la evaluación descontextualizada no es posible, dada la complejidad del tema. Por ejemplo, es el caso del indicador 2.c.1 Indicador de anomalías en los precios de los alimentos. Este indicador pretende medir la actuación de un país para mantener estables los precios de los mercados, pero cuando los precios aumentan mucho por la situación internacional (por ejemplo, en 2023-2024), el país no tiene gran capacidad para mantener los precios.</li>
-</ul>
+**2.3.3 Estancamiento o retroceso**
 
-<h4 id="235-datos-no-disponibles">2.3.5 Datos no disponibles</h4>
+No ha habido progreso o se ha retrocedido y es improbable que se alcance la meta en 2030.
 
-<p>Actualmente no existen datos para este indicador, pero se están estudiando distintas fuentes para ofrecer datos próximamente.</p>
+**2.3.4 No evaluado**
 
-<h4 id="236-no-aplicable">2.3.6 No aplicable</h4>
+En algunos casos no es posible medir el progreso de manera fiable u objetiva:
 
-<p>Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:</p>
+- Cuando el indicador disponible para la CA de Euskadi no está alineado con la metodología del indicador oficial de las Naciones Unidas. En estos casos se utiliza un proxy o medición sustitutiva, pero en ocasiones no mide lo mismo.
+- Cuando no existe una serie temporal suficiente para evaluar el progreso.
+- Cuando la evaluación descontextualizada no es posible, dada la complejidad del tema. Por ejemplo, es el caso del indicador 2.c.1 Indicador de anomalías en los precios de los alimentos. Este indicador pretende medir la actuación de un país para mantener estables los precios de los mercados, pero cuando los precios aumentan mucho por la situación internacional (por ejemplo, en 2023-2024), el país no tiene gran capacidad para mantener los precios.
 
-<ul>
-  <li>No corresponde, por su nivel de desarrollo: Por ejemplo, el indicador 10.6.1 Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales no es adecuado para Euskadi, ya que no es un país en desarrollo.</li>
-  <li>Se refiere a una norma o estructura institucional que no corresponde a Euskadi: por ejemplo, el indicador 12.4.1 Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos, se refiere a un acuerdo internacional suscrito por los estados, por lo que no se puede aplicar a Euskadi.</li>
-  <li>Se trata de indicadores de medición global: por ejemplo, el indicador 17.10.1 Promedio arancelario mundial ponderado.</li>
-</ul>
+**2.3.5 Datos no disponibles**
 
-<p><br /><br /></p>
+Actualmente no existen datos para este indicador, pero se están estudiando distintas fuentes para ofrecer datos próximamente.
 
-<h3 id="24-consideraciones-y-excepciones">2.4 Consideraciones y excepciones</h3>
-<p>Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:</p>
+**2.3.6 No aplicable**
 
-<ol>
-  <li>Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.</li>
-  <li>Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta.</li>
-  <li>Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.</li>
-  <li>A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.</li>
-  <li>Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (<em>y</em>).</li>
-  <li>Se requiere un mínimo de dos años de datos para calcular la medida de progreso.</li>
-  <li>Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.</li>
-  <li>Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.</li>
-  <li>A los indicadores binarios se les asignará una de estas 2 categorías:<br />
-a. “Meta alcanzada” en caso afirmativo. <br />
-b. “Estancamiento o retroceso” si es “no”.</li>
-  <li>Excepciones específicas:</li>
-</ol>
+Ciertos indicadores no se pueden aplicar a la CA de Euskadi, por distintos motivos:
+
+-	No corresponde, por su nivel de desarrollo: Por ejemplo, el indicador 10.6.1 Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales no es adecuado para Euskadi, ya que no es un país en desarrollo.
+-	Se refiere a una norma o estructura institucional que no corresponde a Euskadi: por ejemplo, el indicador 12.4.1 Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos, se refiere a un acuerdo internacional suscrito por los estados, por lo que no se puede aplicar a Euskadi.
+-	Se trata de indicadores de medición global: por ejemplo, el indicador 17.10.1 Promedio arancelario mundial ponderado.
+<br /><br />  
+</details>
+
+<details id="consideraciones">
+<summary>2.4 Consideraciones y excepciones</summary>
+
+Debido a la naturaleza de los datos, se han definido una serie de consideraciones y excepciones:
+
+1. Cuando el valor del último año cumple con el objetivo, se considera que se ha alcanzado la meta, independientemente de la tendencia en los últimos años.
+2. Cuando el valor del último año es cercano (diferencia máxima de 1%) al 0% o 100%, siendo éste el objetivo, se considera que se ha alcanzado la meta. 
+3. Cuando no hay datos en 2015, se utiliza el primer año disponible después o antes de 2015 que permita tener al menos 2 valores.   
+4. A falta de una fecha objetivo especificada, se supone que 2030 es el período objetivo.   
+5. Si el año objetivo fuera pasado, se evalua utilizando la metodología con meta hasta el año de la meta (*y*).  
+6. Se requiere un mínimo de dos años de datos para calcular la medida de progreso. 
+7. Las estimaciones de progreso simplifican demasiado la realidad. Es necesario dar contexto al progreso con otra información relevante.  
+8. Se necesita tiempo para que los datos reflejen el impacto de las políticas; cuanto más larga sea la serie temporal, mejor será la metodología para medir el progreso.  
+9. A los indicadores binarios se les asignará una de estas 2 categorías:  
+   a. “Meta alcanzada” en caso afirmativo.   
+   b. “Estancamiento o retroceso” si es “no”.  
+10. Excepciones específicas:
+
 
 <table class="tg">
 <thead>
@@ -639,6 +667,9 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 </tbody>
 </table>
 
+</details>
+
+</details>
 
 
 
@@ -783,7 +814,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260929103349'></script>
+<script src='/site/assets/js/sdg.js?v=20260930094625'></script>
 
 
 <script>
@@ -803,7 +834,7 @@ b. “Estancamiento o retroceso” si es “no”.</li>
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260929103349"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260930094625"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
