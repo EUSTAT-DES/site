@@ -442,6 +442,36 @@ ul.iconillo {
     .ods-item {
         flex: 0 0 11%; /* Aproximadamente 9 íconos por línea en pantallas pequeñas */
     }
+    .ods-item img {
+        width: 50px; /* >510px */
+    }
+    .ods-navigation {
+        padding: 4px 0;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .ods-item img {
+        width: 40px; /* 431px–510px */
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .ods-item img {
+        width: 35px; /* ≤430px */
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .ods-item {
+        flex: 0 0 6%; /* Una sola fila en landscape */
+    }
+    .ods-item img {
+        width: 32px;
+    }
+    .ods-navigation {
+        padding: 2px 0;
+    }
 }
 
 
