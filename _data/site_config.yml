@@ -217,12 +217,12 @@ menu:
   - path: /
     translation_key: general.home
     dropdown: []
-  - path: /jarraipen-txostena
-    translation_key: menu.reporting_status
-    dropdown: []
-  - path: /meta-jarraipen-txostena
-    translation_key: menu.reporting_status_metas
-    dropdown: []
+  - translation_key: menu.reporting_status
+    dropdown:
+      - path: /jarraipen-txostena
+        translation_key: menu.reporting_status_indicadores
+      - path: /meta-jarraipen-txostena
+        translation_key: menu.reporting_status_metas
   - translation_key: menu.desagregaciones
     dropdown:
       - path: /lurraldea/
