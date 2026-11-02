@@ -63,7 +63,7 @@ var OBJETIVO_MEDIDOR_CONFIG = {
     <div class="om-col-selector">
       <div class="ods-selector-grid" role="group" aria-label="{{ _lbl_select }}">
         {% for i in (1..17) %}
-          {% assign goal_details = i | sdg_lookup %}
+          {% assign goal_details = i | append: '' | sdg_lookup %}
           <button class="ods-selector-btn"
                   data-goal="{{ i }}"
                   aria-pressed="false"
