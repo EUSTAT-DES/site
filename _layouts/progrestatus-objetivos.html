@@ -1,0 +1,241 @@
+{% include head.html %}
+{% include header.html %}
+
+{% comment %}
+  Datos de score-o por objetivo, incrustados desde Jekyll para evitar fetch asíncrono.
+  progreso_objetivos.csv: goal, status, score  (solo ODS 1-17, sin OCECA)
+{% endcomment %}
+{% assign objetivo_data = site.data.csv.progreso_objetivos %}
+
+{% comment %} Etiquetas i18n inline {% endcomment %}
+{% if page.language == 'eu' %}
+  {% assign _lbl_select     = 'Hautatu helburu bat' %}
+  {% assign _lbl_score      = 'Puntuazioa' %}
+  {% assign _lbl_status     = 'Egoera' %}
+  {% assign _lbl_no_eval    = 'Ez ebaluagarria' %}
+  {% assign _lbl_score_info = 'Puntuazioa -5etik +5era doa. Balio positiboek aurrerapen esanguratsua adierazten dute; negatiboak, atzerakada.' %}
+  {% assign _lbl_goal       = 'Helburua' %}
+{% elsif page.language == 'en' %}
+  {% assign _lbl_select     = 'Select a goal' %}
+  {% assign _lbl_score      = 'Score' %}
+  {% assign _lbl_status     = 'Status' %}
+  {% assign _lbl_no_eval    = 'Not evaluable' %}
+  {% assign _lbl_score_info = 'The score ranges from -5 to +5. Positive values indicate progress; negative values indicate regression.' %}
+  {% assign _lbl_goal       = 'Goal' %}
+{% else %}
+  {% assign _lbl_select     = 'Selecciona un objetivo' %}
+  {% assign _lbl_score      = 'Puntuación' %}
+  {% assign _lbl_status     = 'Estado' %}
+  {% assign _lbl_no_eval    = 'No evaluable' %}
+  {% assign _lbl_score_info = 'La puntuación va de -5 a +5. Los valores positivos indican progreso; los negativos, retroceso.' %}
+  {% assign _lbl_goal       = 'Objetivo' %}
+{% endif %}
+
+{% comment %} Construir objeto JS con los datos de los 17 ODS (excluye OCECA, ya filtrado en el build) {% endcomment %}
+<script>
+var OBJETIVO_SCORES = {
+{% for row in objetivo_data %}{% assign _first_char = row.goal | slice: 0 %}{% if _first_char == '1' or _first_char == '2' or _first_char == '3' or _first_char == '4' or _first_char == '5' or _first_char == '6' or _first_char == '7' or _first_char == '8' or _first_char == '9' %}  "{{ row.goal }}": { status: "{{ row.status }}", score: {% if row.score and row.score != '' %}{{ row.score }}{% else %}null{% endif %} }{% unless forloop.last %},{% endunless %}
+{% endif %}{% endfor %}};
+
+var STATUS_TYPES = {
+{% for st in site.progress_status.status_types %}  "{{ st.value }}": { label: {{ st.label | t | jsonify }}, image: "{{ st.image }}" }{% unless forloop.last %},{% endunless %}
+{% endfor %}};
+
+var OBJETIVO_MEDIDOR_CONFIG = {
+  baseurl: "{{ site.baseurl }}",
+  lbl_no_eval: {{ _lbl_no_eval | jsonify }},
+  lbl_score:   {{ _lbl_score | jsonify }},
+  lbl_status:  {{ _lbl_status | jsonify }},
+  lbl_goal:    {{ _lbl_goal | jsonify }}
+};
+</script>
+
+<div id="main-content" class="container layout-progrestatus-objetivos" role="main">
+
+  <h1>{% if page.title %}{{ page.title }}{% else %}{{ _lbl_select }}{% endif %}</h1>
+
+  <p class="objetivo-medidor-intro">{{ _lbl_score_info }}</p>
+
+  <!-- ── Layout dos columnas: selector izq / panel dcha ────────────────── -->
+  <div class="om-two-col">
+
+    <!-- Columna izquierda: selector de 17 ODS (6 por fila) -->
+    <div class="om-col-selector">
+      <div class="ods-selector-grid" role="group" aria-label="{{ _lbl_select }}">
+        {% for i in (1..17) %}
+          {% assign goal_details = i | sdg_lookup %}
+          <button class="ods-selector-btn"
+                  data-goal="{{ i }}"
+                  aria-pressed="false"
+                  title="{{ _lbl_goal }} {{ i }}: {{ goal_details.short | escape }}">
+            <img src="{{ goal_details.icon }}"
+                 alt="{{ _lbl_goal }} {{ i }}: {{ goal_details.short | escape }}"
+                 width="80" height="80"
+                 class="goal-icon-{{ i }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" />
+            <span class="ods-selector-num">{{ i }}</span>
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Columna derecha: panel del medidor (siempre visible, cargado con ODS 1) -->
+    <div class="om-col-panel">
+      <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
+
+    <!-- Cabecera: icono + título + estado -->
+    <div class="objetivo-panel-header">
+      <div class="objetivo-panel-icon-wrap">
+        <img id="om-goal-icon" src="" alt="" width="100" height="100" class="goal-icon-image" />
+      </div>
+      <div class="objetivo-panel-info">
+        <p class="objetivo-panel-num" id="om-goal-num"></p>
+        <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
+        <div class="objetivo-panel-status" id="om-goal-status-wrap">
+          <img id="om-status-icon" src="" alt="" width="36" height="36" class="om-status-img" />
+          <span id="om-status-label" class="om-status-label"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gauge -->
+    <div class="om-gauge-section">
+      <div class="om-gauge-track" role="presentation">
+        <div class="om-gauge-bar" aria-hidden="true">
+          <!-- Marcador -->
+          <div class="om-gauge-marker" id="om-marker" aria-hidden="true">
+            <span class="om-marker-arrow"></span>
+          </div>
+        </div>
+        <!-- Etiquetas numéricas del eje -->
+        <div class="om-gauge-axis" aria-hidden="true">
+          <span>-5</span>
+          <span>-4</span>
+          <span>-3</span>
+          <span>-2</span>
+          <span>-1</span>
+          <span>0</span>
+          <span>+1</span>
+          <span>+2</span>
+          <span>+3</span>
+          <span>+4</span>
+          <span>+5</span>
+        </div>
+        <!-- Línea central de referencia (0) -->
+        <div class="om-gauge-zero-line" aria-hidden="true"></div>
+      </div>
+
+      <!-- Valor numérico del score (accesibilidad: información no depende solo del color) -->
+      <div class="om-score-display">
+        <span class="om-score-label" id="om-score-label-text"></span>
+        <span class="om-score-value" id="om-score-value" aria-live="polite"></span>
+      </div>
+    </div>
+
+    </div><!-- /.objetivo-medidor-panel -->
+    </div><!-- /.om-col-panel -->
+  </div><!-- /.om-two-col -->
+
+  {% include back-to-top.html %}
+</div>
+
+<script>
+(function () {
+  var cfg     = OBJETIVO_MEDIDOR_CONFIG;
+  var scores  = OBJETIVO_SCORES;
+  var types   = STATUS_TYPES;
+
+  var panel      = document.getElementById('objetivo-medidor-panel');
+  var marker     = document.getElementById('om-marker');
+  var scoreVal   = document.getElementById('om-score-value');
+  var scoreLabel = document.getElementById('om-score-label-text');
+  var goalIcon   = document.getElementById('om-goal-icon');
+  var goalNum    = document.getElementById('om-goal-num');
+  var goalTitle  = document.getElementById('om-goal-title');
+  var statusIcon  = document.getElementById('om-status-icon');
+  var statusLabel = document.getElementById('om-status-label');
+
+  function scoreToPercent(s) {
+    // -5 → 0%, +5 → 100%
+    return Math.min(100, Math.max(0, (s + 5) / 10 * 100));
+  }
+
+  function selectGoal(btn) {
+    // Deseleccionar todos
+    document.querySelectorAll('.ods-selector-btn').forEach(function (b) {
+      b.setAttribute('aria-pressed', 'false');
+      b.classList.remove('ods-selector-btn--active');
+    });
+    btn.setAttribute('aria-pressed', 'true');
+    btn.classList.add('ods-selector-btn--active');
+
+    var goalNumVal = btn.getAttribute('data-goal');
+    var data = scores[goalNumVal];
+    var goalImg = btn.querySelector('img');
+    var goalTitleTxt = btn.getAttribute('title').replace(cfg.lbl_goal + ' ' + goalNumVal + ': ', '');
+
+    // Actualizar cabecera
+    goalIcon.src = goalImg ? goalImg.src : '';
+    goalIcon.alt = goalImg ? goalImg.alt : '';
+    goalNum.textContent  = cfg.lbl_goal + ' ' + goalNumVal;
+    goalTitle.textContent = goalTitleTxt;
+
+    // Actualizar score y status
+    scoreLabel.textContent = cfg.lbl_score + ':';
+
+    if (!data || data.score === null || data.score === undefined) {
+      scoreVal.textContent = cfg.lbl_no_eval;
+      scoreVal.className = 'om-score-value om-score-no-eval';
+      marker.classList.add('om-marker--hidden');
+      statusIcon.src = cfg.baseurl + '/assets/img/progress/no_evaluable.png';
+      statusIcon.alt = cfg.lbl_no_eval;
+      statusIcon.style.display = '';
+      statusLabel.textContent = cfg.lbl_no_eval;
+    } else {
+      var sc = parseFloat(data.score);
+      var pct = scoreToPercent(sc);
+      scoreVal.textContent = (sc > 0 ? '+' : '') + sc.toFixed(2);
+      scoreVal.className = 'om-score-value';
+      marker.style.left = pct + '%';
+      marker.classList.remove('om-marker--hidden');
+
+      var st = types[data.status];
+      if (st) {
+        if (st.image) {
+          statusIcon.src = cfg.baseurl + '/' + st.image;
+          statusIcon.alt = st.label;
+          statusIcon.style.display = '';
+        } else {
+          statusIcon.style.display = 'none';
+        }
+        statusLabel.textContent = st.label;
+      } else {
+        statusIcon.style.display = 'none';
+        statusLabel.textContent = data.status;
+      }
+    }
+
+    panel.removeAttribute('hidden');
+      }
+
+  document.querySelectorAll('.ods-selector-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () { selectGoal(btn); });
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectGoal(btn); }
+    });
+  });
+
+  // Hash en URL tipo #goal-3 → seleccionar ese objetivo al cargar
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#goal-(\d+)$/)) {
+    var n = hash.replace('#goal-', '');
+    var btn = document.querySelector('.ods-selector-btn[data-goal="' + n + '"]');
+    if (btn) selectGoal(btn);
+  } else {
+    // Sin hash: seleccionar ODS 1 por defecto
+    var btn1 = document.querySelector('.ods-selector-btn[data-goal="1"]');
+    if (btn1) selectGoal(btn1);
+  }
+})();
+</script>
+
+{% include footer.html %}

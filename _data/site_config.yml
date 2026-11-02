@@ -223,6 +223,8 @@ menu:
         translation_key: menu.reporting_status_indicadores
       - path: /meta-jarraipen-txostena
         translation_key: menu.reporting_status_metas
+      - path: /helburu-jarraipen-txostena
+        translation_key: menu.reporting_status_objetivos
   - translation_key: menu.desagregaciones
     dropdown:
       - path: /lurraldea/

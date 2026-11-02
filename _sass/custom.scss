@@ -1275,3 +1275,355 @@ div.goal-target {
     break-inside: avoid;
   }
 }
+
+// ============================================================
+// Layout: progrestatus-objetivos — Informe de seguimiento de objetivos (medidor visual)
+// ============================================================
+
+.layout-progrestatus-objetivos {
+  padding-bottom: 60px;
+
+  h1 {
+    font-size: 1.8rem;
+    color: #1a3a5c;
+    margin-bottom: 8px;
+  }
+
+  .objetivo-medidor-intro {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+    max-width: 700px;
+  }
+
+  // ── Layout de dos columnas ─────────────────────────────────
+  .om-two-col {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 24px;
+    }
+  }
+
+  .om-col-selector {
+    flex-shrink: 0;
+    max-width: 460px; // 6 × 70px + 5 × 4px gaps + bordes
+  }
+
+  .om-col-panel {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // ── Selector de ODS ──────────────────────────────────────
+  .ods-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 0;
+  }
+
+  .ods-selector-btn {
+    background: none;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    padding: 3px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+    outline: none;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 70px;
+    }
+
+    .ods-selector-num {
+      display: none; // el número ya está en el alt/title
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: #1a3a5c;
+      box-shadow: 0 0 0 2px rgba(26, 58, 92, 0.25);
+      transform: scale(1.05);
+    }
+
+    &--active,
+    &[aria-pressed="true"] {
+      border-color: #1a3a5c;
+      box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.35);
+      transform: scale(1.08);
+
+      img {
+        opacity: 1;
+      }
+    }
+
+    // Los no activos se atenúan cuando hay uno activo
+    .ods-selector-grid:has(.ods-selector-btn--active) &:not(.ods-selector-btn--active) {
+      opacity: 0.55;
+      filter: grayscale(20%);
+    }
+  }
+
+  // ── Panel del medidor ──────────────────────────────────────
+  .objetivo-medidor-panel {
+    padding: 28px 32px;
+    background: #f7fafd;
+    border: 1px solid #d0dce9;
+    border-radius: 10px;
+  }
+
+  .objetivo-panel-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+
+    .objetivo-panel-icon-wrap img {
+      width: 90px;
+      height: 90px;
+    }
+
+    .objetivo-panel-info {
+      flex: 1;
+    }
+
+    .objetivo-panel-num {
+      font-size: 0.85rem;
+      color: #666;
+      margin: 0 0 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .objetivo-panel-title {
+      font-size: 1.3rem;
+      color: #1a3a5c;
+      margin: 0 0 10px;
+      line-height: 1.3;
+    }
+
+    .objetivo-panel-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+
+      .om-status-img {
+        width: 110px;
+        height: auto;
+        flex-shrink: 0;
+      }
+
+      .om-status-label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #222;
+      }
+    }
+  }
+
+  // ── Gauge ──────────────────────────────────────────────────
+  .om-gauge-section {
+    margin-top: 8px;
+  }
+
+  .om-gauge-track {
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .om-gauge-bar {
+    position: relative;
+    height: 32px;
+    background: linear-gradient(to right,
+      #db405a   0%,    #db405a  25%,
+      #ff7f27  25%,    #ff7f27  47.5%,
+      #fec329  47.5%,  #fec329  52.5%,
+      #b3d37a  52.5%,  #b3d37a  75%,
+      #45ba80  75%,    #45ba80  100%
+    );
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+
+  // Marcador (triángulo + línea vertical)
+  .om-gauge-marker {
+    position: absolute;
+    top: -6px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.4s ease;
+    pointer-events: none;
+
+    &.om-marker--hidden {
+      display: none;
+    }
+
+    .om-marker-arrow {
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-top: 12px solid #1a3a5c;
+    }
+  }
+
+  // Línea de referencia en el 0 (posición 50%)
+  .om-gauge-zero-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.35);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  // Eje numérico debajo de la barra
+  .om-gauge-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    padding: 0 0;
+    font-size: 0.75rem;
+    color: #666;
+    user-select: none;
+  }
+
+  // Valor numérico del score
+  .om-score-display {
+    margin-top: 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    .om-score-label {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .om-score-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a3a5c;
+      line-height: 1;
+
+      &.om-score-no-eval {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #777;
+      }
+    }
+  }
+
+  // ── Responsive móvil ──────────────────────────────────────
+  @media (max-width: 576px) {
+    .ods-selector-grid {
+      gap: 0;
+    }
+
+    .ods-selector-btn img {
+      width: 12vw;
+      height: 12vw;
+      max-width: none;
+    }
+
+    .objetivo-medidor-panel {
+      padding: 18px 16px;
+    }
+
+    .objetivo-panel-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .objetivo-panel-status {
+        justify-content: center;
+      }
+    }
+
+    .om-gauge-axis {
+      font-size: 0.65rem;
+    }
+
+    .om-score-display .om-score-value {
+      font-size: 1.6rem;
+    }
+  }
+
+  body.contrast-high & {
+    .ods-selector-btn {
+      &:hover,
+      &:focus-visible,
+      &--active,
+      &[aria-pressed="true"] {
+        border-color: #fff;
+        box-shadow: 0 0 0 3px #fff;
+      }
+    }
+
+    .objetivo-medidor-panel {
+      background: #000;
+      border-color: #fff;
+    }
+
+    .objetivo-panel-title,
+    .objetivo-panel-num,
+    .om-score-display .om-score-value {
+      color: #fff;
+    }
+
+    .om-gauge-axis,
+    .om-score-display .om-score-label,
+    .om-status-label {
+      color: #ccc;
+    }
+
+    .om-gauge-bar {
+      outline: 2px solid #fff;
+    }
+
+    .om-gauge-zero-line {
+      background: #fff;
+    }
+
+    .om-gauge-marker .om-marker-arrow {
+      border-top-color: #fff;
+    }
+  }
+
+  // ── Impresión ─────────────────────────────────────────────
+  @media print {
+    .ods-selector-grid {
+      gap: 4px;
+    }
+
+    .ods-selector-btn img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .objetivo-medidor-panel {
+      border: 1px solid #ccc;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .om-gauge-bar {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+}
