@@ -1150,7 +1150,34 @@ dd[data-ts-attribute="Progress"] {
 }
 
 
-// ─── Informe de seguimiento de METAS — hereda estilos del informe de indicadores ─
+// ─── Colapso de indicadores por meta en páginas de objetivo ────────────────
+// La fila de meta actúa como botón que colapsa/expande sus indicadores.
+.goal-page-target-name .target-name {
+    font-size: 1.1em;
+}
+.goal-page-target-number .target-number {
+    font-size: 1.15em;
+}
+div.goal-target {
+    cursor: pointer;
+    user-select: none;
+    &:hover { opacity: 0.85; }
+    &:focus { outline: none !important; }
+}
+.target-chevron {
+    font-size: 0.9em;
+    color: #444;
+    margin-right: 6px;
+    display: inline;
+    vertical-align: middle;
+}
+
+// En móvil, la columna de status de la meta se indenta igual que la del indicador
+.layout-goal .goal-page-target-progress {
+    margin-left: 60px;
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
 // @extend propaga todos los selectores .layout-progrestatus[*] al layout de metas,
 // incluidos selectores compuestos como .layout-progrestatus #main-content .xyz
 // Limitación conocida de SASS: las reglas dentro de @media print no se propagan.
