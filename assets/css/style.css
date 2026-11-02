@@ -3823,6 +3823,32 @@ dd[data-ts-attribute="Progress"] {
       font-size: 1em;
       padding: 10px 0; }
 
+.goal-page-target-name .target-name {
+  font-size: 1.1em; }
+
+.goal-page-target-number .target-number {
+  font-size: 1.15em; }
+
+div.goal-target {
+  cursor: pointer;
+  user-select: none; }
+  div.goal-target:hover {
+    opacity: 0.85; }
+  div.goal-target:focus {
+    outline: none !important; }
+
+.target-chevron {
+  font-size: 0.9em;
+  color: #444;
+  margin-right: 6px;
+  display: inline;
+  vertical-align: middle; }
+
+.layout-goal .goal-page-target-progress {
+  margin-left: 60px;
+  margin-top: 6px;
+  margin-bottom: 2px; }
+
 @media print {
   .layout-progrestatus-metas {
     -webkit-print-color-adjust: exact;
