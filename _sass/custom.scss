@@ -1,4 +1,4 @@
-// Enter any custom Sass in this file.
+﻿// Enter any custom Sass in this file.
 
 body {
   background: white;
@@ -226,7 +226,7 @@ ul.iconillo {
 
 // Otros custom (por US)
 
-// Navegación
+// NavegaciÃ³n
 
 .btn-label {
   color: white;
@@ -368,9 +368,9 @@ ul.iconillo {
   border-color: transparent;
   margin-bottom: 5px;}
 
-// Barra con iconos de los objetivos para las páginas de objetivos
+// Barra con iconos de los objetivos para las pÃ¡ginas de objetivos
 
-// Wrapper sticky que ocupa todo el ancho de la página
+// Wrapper sticky que ocupa todo el ancho de la pÃ¡gina
 .ods-navigation-wrapper {
     position: sticky;
     top: 0;
@@ -388,22 +388,22 @@ ul.iconillo {
     padding: 8px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los íconos */
+    justify-content: center; /* Centra los Ã­conos */
 }
 
 .ods-item {
     text-align: center;
     opacity: 0.5;
-    flex: 0 0 auto; /* Ajuste para que los íconos ocupen solo el espacio necesario */
+    flex: 0 0 auto; /* Ajuste para que los Ã­conos ocupen solo el espacio necesario */
     transition: opacity 0.3s ease, border 0.3s ease; /* Transiciones suaves */
     border: 2px solid transparent; /* Borde invisible por defecto */
 }
 
 .ods-item img {
-    width: 60px; /* Tamaño del ícono */
+    width: 60px; /* TamaÃ±o del Ã­cono */
     height: auto;
     filter: grayscale(100%); /* Aplica un filtro gris */
-    transition: filter 0.3s ease; /* Transición suave para el color */
+    transition: filter 0.3s ease; /* TransiciÃ³n suave para el color */
 }
 
 .ods-item:hover {
@@ -419,28 +419,28 @@ ul.iconillo {
 }
 
 .ods-selected img {
-    filter: grayscale(0); /* Mantiene el color original del ícono seleccionado */
+    filter: grayscale(0); /* Mantiene el color original del Ã­cono seleccionado */
 }
 
 @media only screen and (min-width: 1200px) {
     .ods-navigation {
-        justify-content: space-between; /* Asegura que todos los íconos se distribuyan en una línea en pantallas grandes */
+        justify-content: space-between; /* Asegura que todos los Ã­conos se distribuyan en una lÃ­nea en pantallas grandes */
     }
     .ods-item {
-        flex: 1; /* Asegura que los íconos ocupen todo el ancho disponible */
-        max-width: 6%; /* Aproximadamente 20 íconos por línea en pantallas grandes */
+        flex: 1; /* Asegura que los Ã­conos ocupen todo el ancho disponible */
+        max-width: 6%; /* Aproximadamente 20 Ã­conos por lÃ­nea en pantallas grandes */
     }
 }
 
 @media only screen and (min-width: 1400px) {
     .ods-item {
-        max-width: 5%; /* Aproximadamente 20 íconos por línea en pantallas grandes */
+        max-width: 5%; /* Aproximadamente 20 Ã­conos por lÃ­nea en pantallas grandes */
     }
 }
 
 @media only screen and (max-width: 768px) {
     .ods-item {
-        flex: 0 0 11%; /* Aproximadamente 9 íconos por línea en pantallas pequeñas */
+        flex: 0 0 11%; /* Aproximadamente 9 Ã­conos por lÃ­nea en pantallas pequeÃ±as */
     }
     .ods-item img {
         width: 50px; /* >510px */
@@ -452,13 +452,13 @@ ul.iconillo {
 
 @media only screen and (max-width: 510px) {
     .ods-item img {
-        width: 40px; /* 431px–510px */
+        width: 40px; /* 431pxâ€“510px */
     }
 }
 
 @media only screen and (max-width: 430px) {
     .ods-item img {
-        width: 35px; /* ≤430px */
+        width: 35px; /* â‰¤430px */
     }
 }
 
@@ -847,7 +847,7 @@ ul.iconillo {
   pointer-events: none !important;
 }
 
-// Informe de seguimiento — iconos descarga e impresión
+// Informe de seguimiento â€” iconos descarga e impresiÃ³n
 .progreso-intro-header {
   display: flex;
   align-items: center;
@@ -898,7 +898,7 @@ ul.iconillo {
   }
 }
 
-// Estilos de impresión — informe de seguimiento
+// Estilos de impresiÃ³n â€” informe de seguimiento
 @media print {
   .layout-progrestatus {
     // Forzar colores de fondo (imprescindible para las barras y status-inner)
@@ -906,7 +906,7 @@ ul.iconillo {
     print-color-adjust: exact;
   }
 
-  // Ocultar elementos no útiles al imprimir
+  // Ocultar elementos no Ãºtiles al imprimir
   .layout-progrestatus .progreso-action-icons,
   .layout-progrestatus .progreso-action-icons-mobile,
   .layout-progrestatus #back-to-top,
@@ -919,7 +919,7 @@ ul.iconillo {
     display: none !important;
   }
 
-  // Layout compacto tipo móvil: icono pequeño + título en fila, barra debajo al 100%
+  // Layout compacto tipo mÃ³vil: icono pequeÃ±o + tÃ­tulo en fila, barra debajo al 100%
   .layout-progrestatus #main-content .reporting-status-item {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -965,7 +965,7 @@ ul.iconillo {
     flex-basis: 100% !important;
     margin-top: 4px !important;
   }
-  // Barra más baja en print
+  // Barra mÃ¡s baja en print
   .layout-progrestatus #main-content .reporting-status-item .goal-stats span {
     padding: 4px 0 !important;
     font-size: 11px !important;
@@ -995,14 +995,14 @@ ul.iconillo {
     width: 100% !important;
     clear: both !important;
   }
-  // Evitar que un objetivo se corte entre páginas
+  // Evitar que un objetivo se corte entre pÃ¡ginas
   .layout-progrestatus .reporting-status-item {
     page-break-inside: avoid;
     break-inside: avoid;
   }
 }
 
-// Detalle de indicador — icono de progreso a la izquierda de la descripción
+// Detalle de indicador â€” icono de progreso a la izquierda de la descripciÃ³n
 .progress-status-inline {
     display: flex;
     align-items: center;
@@ -1021,7 +1021,7 @@ ul.iconillo {
     }
 }
 
-// Layout de categoría de progreso (lista de indicadores por estado)
+// Layout de categorÃ­a de progreso (lista de indicadores por estado)
 .layout-progrestatus-categoria {
   padding-top: 20px;
 
@@ -1083,16 +1083,16 @@ ul.iconillo {
   }
 }
 
-/* Goldilocks — ocultar columna Progress del footer del indicador.
+/* Goldilocks â€” ocultar columna Progress del footer del indicador.
    Open SDG la registra como time_series_attribute y muestra su valor
-   numérico (resultado de la fórmula goldilocks) bajo la leyenda de unidades.
-   La columna es solo para cálculo interno; no debe ser visible. */
+   numÃ©rico (resultado de la fÃ³rmula goldilocks) bajo la leyenda de unidades.
+   La columna es solo para cÃ¡lculo interno; no debe ser visible. */
 dt[data-ts-attribute="Progress"],
 dd[data-ts-attribute="Progress"] {
   display: none !important;
 }
 
-// Acordeones <details> en páginas de contenido (.main-content-pages)
+// Acordeones <details> en pÃ¡ginas de contenido (.main-content-pages)
 .main-content-pages {
   details {
     border-top: 2px solid #013161;
@@ -1130,7 +1130,7 @@ dd[data-ts-attribute="Progress"] {
       &:hover { color: #0056b3; }
     }
 
-    &[open] > summary::before { content: '−'; }
+    &[open] > summary::before { content: 'âˆ’'; }
 
     & > *:not(summary) {
       padding: 0 0 16px 24px;
@@ -1150,8 +1150,8 @@ dd[data-ts-attribute="Progress"] {
 }
 
 
-// ─── Colapso de indicadores por meta en páginas de objetivo ────────────────
-// La fila de meta actúa como botón que colapsa/expande sus indicadores.
+// â”€â”€â”€ Colapso de indicadores por meta en pÃ¡ginas de objetivo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// La fila de meta actÃºa como botÃ³n que colapsa/expande sus indicadores.
 .goal-page-target-name .target-name {
     font-size: 1.1em;
 }
@@ -1172,7 +1172,7 @@ div.goal-target {
     vertical-align: middle;
 }
 
-// En móvil, la columna de status de la meta se indenta igual que la del indicador
+// En mÃ³vil, la columna de status de la meta se indenta igual que la del indicador
 .layout-goal .goal-page-target-progress {
     margin-left: 60px;
     margin-top: 6px;
@@ -1180,11 +1180,11 @@ div.goal-target {
 }
 // @extend propaga todos los selectores .layout-progrestatus[*] al layout de metas,
 // incluidos selectores compuestos como .layout-progrestatus #main-content .xyz
-// Limitación conocida de SASS: las reglas dentro de @media print no se propagan.
+// LimitaciÃ³n conocida de SASS: las reglas dentro de @media print no se propagan.
 .layout-progrestatus-metas          { @extend .layout-progrestatus          !optional; }
 .layout-progrestatus-metas-categoria { @extend .layout-progrestatus-categoria !optional; }
 
-// Estilos de impresión para el informe de metas (equivalente al bloque print de indicadores)
+// Estilos de impresiÃ³n para el informe de metas (equivalente al bloque print de indicadores)
 @media print {
   .layout-progrestatus-metas {
     -webkit-print-color-adjust: exact;
@@ -1277,423 +1277,21 @@ div.goal-target {
 }
 
 // ============================================================
-// Layout: progrestatus-objetivos — Informe de seguimiento de objetivos (medidor visual)
+// Layout: progrestatus-objetivos — Informe de seguimiento (nueva versión unificada)
 // ============================================================
 
 .layout-progrestatus-objetivos {
   padding-bottom: 60px;
 
-
-  // ── Layout de dos columnas ─────────────────────────────────
-  .om-two-col {
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
-    margin-bottom: 20px;
-
-    @media (max-width: 991px) {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 24px;
-    }
-  }
-
-  .om-col-selector {
-    flex-shrink: 0;
-    max-width: 460px; // 6 × 70px + 5 × 4px gaps + bordes
-  }
-
-  .om-col-panel {
-    flex: 1;
-    min-width: 0;
-  }
-
-  // ── Selector de ODS ──────────────────────────────────────
-  .ods-selector-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin-bottom: 0;
-  }
-
-  .ods-selector-btn {
-    background: none;
-    border: 3px solid transparent;
-    border-radius: 8px;
-    padding: 3px;
-    cursor: pointer;
-    width: 100%;
-    position: relative;
-    transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
-    outline: none;
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 70px;
-    }
-
-    .ods-selector-num {
-      display: none; // el número ya está en el alt/title
-    }
-
-    &:hover,
-    &:focus-visible {
-      border-color: #1a3a5c;
-      box-shadow: 0 0 0 2px rgba(26, 58, 92, 0.25);
-      transform: scale(1.05);
-    }
-
-    &--active,
-    &[aria-pressed="true"] {
-      border-color: #1a3a5c;
-      box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.35);
-      transform: scale(1.08);
-
-      img {
-        opacity: 1;
-      }
-    }
-
-    // Los no activos se atenúan cuando hay uno activo
-    .ods-selector-grid:has(.ods-selector-btn--active) &:not(.ods-selector-btn--active) {
-      opacity: 0.55;
-      filter: grayscale(20%);
-    }
-  }
-
-  // ── Panel del medidor ──────────────────────────────────────
-  .objetivo-medidor-panel {
-    position: relative;
-    padding: 28px 32px;
-    background: #f7fafd;
-    border: 1px solid #d0dce9;
-    border-radius: 10px;
-  }
-
-  .objetivo-panel-header {
-    display: flex;
-    align-items: stretch;
-    gap: 20px;
-
-    .objetivo-panel-icon-wrap img {
-      width: 90px;
-      height: 90px;
-    }
-
-    .objetivo-panel-info {
-      flex: 1;
-    }
-
-    .objetivo-panel-num {
-      font-size: 0.85rem;
-      color: #666;
-      margin: 0 0 2px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .objetivo-panel-icon-wrap a {
-      display: block;
-      border-radius: 4px;
-      outline-offset: 3px;
-
-      &:focus-visible {
-        outline: 2px solid #1a3a5c;
-      }
-    }
-
-    .objetivo-panel-title {
-      font-size: 1.3rem;
-      color: #1a3a5c;
-      margin: 0 0 10px;
-      line-height: 1.3;
-    }
-
-    a#om-goal-link-title {
-      text-decoration: none;
-      color: inherit;
-
-      &:hover .objetivo-panel-title,
-      &:focus-visible .objetivo-panel-title {
-        text-decoration: underline;
-      }
-
-      &:focus-visible {
-        outline: 2px solid #1a3a5c;
-        outline-offset: 2px;
-        border-radius: 2px;
-      }
-    }
-
-    .objetivo-panel-status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-
-      .om-status-img {
-        width: 110px;
-        height: auto;
-        flex-shrink: 0;
-      }
-
-      .om-status-label {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #222;
-      }
-    }
-
-    // Columna derecha: puntuación arriba, botón abajo-derecha
-    .objetivo-panel-score {
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 12px;
-      min-width: 110px;
-    }
-  }
-
-  // ── Gauge ──────────────────────────────────────────────────
-  .om-gauge-section {
-    margin-top: 8px;
-  }
-
-  .om-gauge-track {
-    position: relative;
-    margin-bottom: 6px;
-  }
-
-  .om-gauge-bar {
-    position: relative;
-    height: 32px;
-    background: linear-gradient(to right,
-      #db405a   0%,    #db405a  25%,
-      #ff7f27  25%,    #ff7f27  47.5%,
-      #fec329  47.5%,  #fec329  52.5%,
-      #b3d37a  52.5%,  #b3d37a  75%,
-      #45ba80  75%,    #45ba80  100%
-    );
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
-  }
-
-  // Marcador (triángulo + línea vertical)
-  .om-gauge-marker {
-    position: absolute;
-    top: -6px;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: left 0.4s ease;
-    pointer-events: none;
-
-    &.om-marker--hidden {
-      display: none;
-    }
-
-    .om-marker-arrow {
-      display: block;
-      width: 0;
-      height: 0;
-      border-left: 9px solid transparent;
-      border-right: 9px solid transparent;
-      border-top: 12px solid #1a3a5c;
-    }
-  }
-
-  // Línea de referencia en el 0 (posición 50%)
-  .om-gauge-zero-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 32px;
-    background: rgba(0, 0, 0, 0.35);
-    transform: translateX(-50%);
-    pointer-events: none;
-  }
-
-  // Eje numérico debajo de la barra
-  .om-gauge-axis {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4px;
-    padding: 0 0;
-    font-size: 0.75rem;
-    color: #666;
-    user-select: none;
-  }
-
-  // Valor numérico del score
-  .om-score-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 16px;
-    gap: 12px;
-  }
-
-  .om-score-display {
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    gap: 8px;
-
-    .om-score-label {
-      font-size: 1rem;
-      color: #555;
-    }
-
-    .om-score-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #1a3a5c;
-      line-height: 1;
-
-      &.om-score-no-eval {
-        font-size: 1.1rem;
-        font-weight: 400;
-        color: #777;
-      }
-    }
-  }
-
-  // Botón "Ver objetivo" — pegado a la derecha, sin ancho forzado
-  .om-goal-btn {
-    align-self: flex-end;
-    width: auto;
-    font-size: 0.9rem;
-  }
-
-  // ── Responsive móvil ──────────────────────────────────────
-  @media (max-width: 576px) {
-    .ods-selector-grid {
-      gap: 0;
-    }
-
-    .ods-selector-btn img {
-      width: 12vw;
-      height: 12vw;
-      max-width: none;
-    }
-
-    .objetivo-medidor-panel {
-      padding: 18px 16px;
-    }
-
-    .objetivo-panel-header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-
-      .objetivo-panel-status {
-        justify-content: center;
-      }
-
-      .objetivo-panel-score {
-        align-items: center;
-      }
-    }
-
-    .om-gauge-axis {
-      font-size: 0.65rem;
-    }
-
-    .om-score-display .om-score-value {
-      font-size: 1.6rem;
-    }
-
-    // Ticks en móvil: mismo ancho que desktop (2px base, 4px activo)
-    .om-tick { width: 2px; }
-    .om-tick--active { width: 4px !important; }
-  }
-
-  body.contrast-high & {
-    .ods-selector-btn {
-      &:hover,
-      &:focus-visible,
-      &--active,
-      &[aria-pressed="true"] {
-        border-color: #fff;
-        box-shadow: 0 0 0 3px #fff;
-      }
-    }
-
-    .objetivo-medidor-panel {
-      background: #000;
-      border-color: #fff;
-    }
-
-    .objetivo-panel-title,
-    .objetivo-panel-num,
-    .om-score-display .om-score-value {
-      color: #fff;
-    }
-
-    .om-gauge-axis,
-    .om-score-display .om-score-label,
-    .om-status-label {
-      color: #ccc;
-    }
-
-    .om-gauge-bar {
-      outline: 2px solid #fff;
-    }
-
-    .om-gauge-zero-line {
-      background: #fff;
-    }
-
-    .om-gauge-marker .om-marker-arrow {
-      border-top-color: #fff;
-    }
-  }
-
-  // ── Impresión ─────────────────────────────────────────────
-  @media print {
-    .ods-selector-grid {
-      gap: 4px;
-    }
-
-    .ods-selector-btn img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .objetivo-medidor-panel {
-      border: 1px solid #ccc;
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-
-    .om-gauge-bar {
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
-    }
-  }
-
-  // ── Barras panorámicas ─────────────────────────────────────
+  // ── Barra panorámica ──────────────────────────────────────
   .om-overview-section {
-    margin-top: 36px;
-    padding-top: 15px;
-  }
-
-  .om-overview-title {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #555;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 16px;
+    margin-top: 16px;
+    padding-top: 8px;
   }
 
   .om-overview-track {
     position: relative;
-    height: 40px;
+    height: 60px;
     background: linear-gradient(to right,
       #db405a   0%,    #db405a  25%,
       #ff7f27  25%,    #ff7f27  47.5%,
@@ -1701,86 +1299,183 @@ div.goal-target {
       #b3d37a  52.5%,  #b3d37a  75%,
       #45ba80  75%,    #45ba80  100%
     );
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
-    margin-bottom: 4px;
-    overflow: visible;
-
-    .om-gauge-zero-line {
-      height: 40px;
-    }
-  }
-
-  .om-overview-track--icons {
-    margin-top: 40px; // espacio para los iconos superiores (ajustado por JS)
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    border-radius: 30px;
+    border: 4px solid #ddd;
     overflow: visible;
   }
 
-  // Tick (línea vertical en la barra panorámica)
+  // Zonas de color con tooltip (hover muestra etiqueta del estado)
+  .om-bar-zone {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    cursor: default;
+  }
+  .om-bar-zone:hover .om-zone-label { display: block; }
+
+  // Tooltip de zona y de icono (mismo estilo para ambos)
+  .om-zone-label {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    padding: 1px 8px;
+    border-radius: 3px;
+    font-size: .85rem;
+    font-weight: normal;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 200;
+    line-height: 1.5;
+  }
+
+  // Tick (línea vertical: del icono hasta la mitad de la barra)
   .om-tick {
     position: absolute;
-    bottom: 0;
     width: 2px;
-    height: 40px;
     transform: translateX(-50%);
-    transition: width 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
     opacity: 0.9;
-    border-left: 1px solid rgba(255,255,255,0.25);
-    border-right: 1px solid rgba(255,255,255,0.25);
     z-index: 1;
+    transition: width .25s ease, height .25s ease, top .25s ease;
   }
-
   .om-tick--active {
     width: 4px !important;
     opacity: 1 !important;
     z-index: 5 !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,.4) !important;
   }
 
-  // Tooltip del tick (mostrado por JS; el :hover vía CSS está desactivado)
-  .om-tick-label {
-    display: none;
+  // Círculo en la mitad de la barra (top = barH/2 - dotRadius = 30 - 4 = 26px)
+  .om-tick-dot {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background: #1a3a5c;
-    color: #fff;
-    font-size: 0.7rem;
-    padding: 3px 6px;
-    border-radius: 3px;
-    white-space: nowrap;
+    width: 8px;
+    height: 8px;
+    top: 26px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
     pointer-events: none;
-    z-index: 10;
+    transition: width .15s ease, height .15s ease, top .15s ease;
+  }
+  .om-tick-dot--active {
+    width: 12px !important;
+    height: 12px !important;
+    top: 24px !important;
+    z-index: 6 !important;
   }
 
-  // Asegura que CSS no muestre el tooltip en hover (el JS lo controla al 100%)
-  .om-tick:hover .om-tick-label {
-    display: none;
-  }
-
-  // Icono de la barra 2 (hijo directo del track, z-index independiente del tick)
+  // Icono de objetivo (encima/debajo de la barra)
   .om-tick-icon {
     position: absolute;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     display: block;
     cursor: pointer;
     z-index: 2;
-    transition: width 0.25s ease, height 0.25s ease, top 0.25s ease;
+    transition: width .25s ease, height .25s ease, top .25s ease;
   }
-
-  // Icono activo: borde/outline resaltado, z-index y tamaño persistentes
   .om-icon--active {
     outline: 3px solid #1a3a5c;
     outline-offset: 1px;
     border-radius: 4px;
     z-index: 6;
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
   }
 
-  // Eje numérico pegado a la barra (margen gestionado por JS en la barra de iconos)
-  .om-gauge-axis--tight {
-    margin-top: 0;
+  // ── Panel del objetivo seleccionado ──────────────────────
+  .objetivo-medidor-panel {
+    padding: 24px 28px;
+    background: #f7fafd;
+    border: 1px solid #d0dce9;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .objetivo-panel-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    .objetivo-panel-icon-wrap img  { width: 90px; height: 90px; }
+    .objetivo-panel-icon-wrap a    {
+      display: block; border-radius: 4px; outline-offset: 3px;
+      &:focus-visible { outline: 2px solid #1a3a5c; }
+    }
+    .objetivo-panel-info { flex: 1; min-width: 0; }
+    .objetivo-panel-num  {
+      font-size: .85rem; color: #666; margin: 0 0 2px;
+      text-transform: uppercase; letter-spacing: .05em;
+    }
+    .objetivo-panel-title {
+      font-size: 1.3rem; color: #1a3a5c; margin: 0 0 10px; line-height: 1.3;
+    }
+    #om-goal-link-title {
+      text-decoration: none; color: inherit;
+      &:hover .objetivo-panel-title { text-decoration: underline; }
+    }
+    .objetivo-panel-status {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      .om-status-img   { width: 110px; height: auto; flex-shrink: 0; }
+      .om-status-label { font-size: 1rem; font-weight: 600; color: #222; }
+    }
+  }
+
+  .om-goal-btn {
+    align-self: flex-start;
+    width: auto;
+    font-size: .9rem;
+    flex-shrink: 0;
+  }
+
+  // Secciones Metas / Indicadores
+  .om-panel-section {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #d0dce9;
+  }
+  .om-panel-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3a5c;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .om-panel-section-body { min-height: 32px; }
+  .om-section-placeholder {
+    color: #aaa; font-style: italic; margin: 0; font-size: .9rem;
+  }
+
+  // ── Responsive ───────────────────────────────────────────
+  @media (max-width: 768px) {
+    .objetivo-medidor-panel { padding: 16px; }
+    .objetivo-panel-header  { flex-wrap: wrap; gap: 12px; }
+    .om-goal-btn            { width: 100%; text-align: center; }
+  }
+  @media (max-width: 576px) {
+    .om-tick       { width: 2px; }
+    .om-tick--active { width: 4px !important; }
+    .objetivo-panel-icon-wrap img { width: 70px; height: 70px; }
+  }
+
+  // ── Alto contraste ────────────────────────────────────────
+  body.contrast-high & {
+    .objetivo-medidor-panel {
+      background: #000;
+      border-color: #fff;
+    }
+    .objetivo-panel-title,
+    .objetivo-panel-num,
+    .om-panel-section-title {
+      color: #fff;
+    }
+    .om-status-label { color: #ccc; }
+    .om-icon--active { outline-color: #fff; }
   }
 }
