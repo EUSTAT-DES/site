@@ -1283,24 +1283,13 @@ div.goal-target {
 .layout-progrestatus-objetivos {
   padding-bottom: 60px;
 
-  h1 {
-    font-size: 1.8rem;
-    color: #1a3a5c;
-    margin-bottom: 8px;
-  }
-
-  .objetivo-medidor-intro {
-    color: #555;
-    font-size: 0.95rem;
-    margin-bottom: 28px;
-    max-width: 700px;
-  }
 
   // ── Layout de dos columnas ─────────────────────────────────
   .om-two-col {
     display: flex;
     gap: 32px;
     align-items: flex-start;
+    margin-bottom: 20px;
 
     @media (max-width: 991px) {
       flex-direction: column;
@@ -1375,6 +1364,7 @@ div.goal-target {
 
   // ── Panel del medidor ──────────────────────────────────────
   .objetivo-medidor-panel {
+    position: relative;
     padding: 28px 32px;
     background: #f7fafd;
     border: 1px solid #d0dce9;
@@ -1383,9 +1373,8 @@ div.goal-target {
 
   .objetivo-panel-header {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 20px;
-    margin-bottom: 28px;
 
     .objetivo-panel-icon-wrap img {
       width: 90px;
@@ -1404,11 +1393,37 @@ div.goal-target {
       letter-spacing: 0.05em;
     }
 
+    .objetivo-panel-icon-wrap a {
+      display: block;
+      border-radius: 4px;
+      outline-offset: 3px;
+
+      &:focus-visible {
+        outline: 2px solid #1a3a5c;
+      }
+    }
+
     .objetivo-panel-title {
       font-size: 1.3rem;
       color: #1a3a5c;
       margin: 0 0 10px;
       line-height: 1.3;
+    }
+
+    a#om-goal-link-title {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover .objetivo-panel-title,
+      &:focus-visible .objetivo-panel-title {
+        text-decoration: underline;
+      }
+
+      &:focus-visible {
+        outline: 2px solid #1a3a5c;
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
     }
 
     .objetivo-panel-status {
@@ -1428,6 +1443,17 @@ div.goal-target {
         font-weight: 600;
         color: #222;
       }
+    }
+
+    // Columna derecha: puntuación arriba, botón abajo-derecha
+    .objetivo-panel-score {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      min-width: 110px;
     }
   }
 
@@ -1503,19 +1529,27 @@ div.goal-target {
   }
 
   // Valor numérico del score
-  .om-score-display {
+  .om-score-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 16px;
+    gap: 12px;
+  }
+
+  .om-score-display {
     display: flex;
     align-items: baseline;
+    justify-content: flex-end;
     gap: 8px;
 
     .om-score-label {
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #555;
     }
 
     .om-score-value {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: #1a3a5c;
       line-height: 1;
@@ -1526,6 +1560,13 @@ div.goal-target {
         color: #777;
       }
     }
+  }
+
+  // Botón "Ver objetivo" — pegado a la derecha, sin ancho forzado
+  .om-goal-btn {
+    align-self: flex-end;
+    width: auto;
+    font-size: 0.9rem;
   }
 
   // ── Responsive móvil ──────────────────────────────────────
@@ -1552,6 +1593,10 @@ div.goal-target {
       .objetivo-panel-status {
         justify-content: center;
       }
+
+      .objetivo-panel-score {
+        align-items: center;
+      }
     }
 
     .om-gauge-axis {
@@ -1561,6 +1606,10 @@ div.goal-target {
     .om-score-display .om-score-value {
       font-size: 1.6rem;
     }
+
+    // Ticks en móvil: mismo ancho que desktop (2px base, 4px activo)
+    .om-tick { width: 2px; }
+    .om-tick--active { width: 4px !important; }
   }
 
   body.contrast-high & {
@@ -1625,5 +1674,113 @@ div.goal-target {
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
     }
+  }
+
+  // ── Barras panorámicas ─────────────────────────────────────
+  .om-overview-section {
+    margin-top: 36px;
+    padding-top: 15px;
+  }
+
+  .om-overview-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+
+  .om-overview-track {
+    position: relative;
+    height: 40px;
+    background: linear-gradient(to right,
+      #db405a   0%,    #db405a  25%,
+      #ff7f27  25%,    #ff7f27  47.5%,
+      #fec329  47.5%,  #fec329  52.5%,
+      #b3d37a  52.5%,  #b3d37a  75%,
+      #45ba80  75%,    #45ba80  100%
+    );
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 4px;
+    overflow: visible;
+
+    .om-gauge-zero-line {
+      height: 40px;
+    }
+  }
+
+  .om-overview-track--icons {
+    margin-top: 40px; // espacio para los iconos superiores (ajustado por JS)
+    overflow: visible;
+  }
+
+  // Tick (línea vertical en la barra panorámica)
+  .om-tick {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    height: 40px;
+    transform: translateX(-50%);
+    transition: width 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    opacity: 0.9;
+    border-left: 1px solid rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255,255,255,0.25);
+    z-index: 1;
+  }
+
+  .om-tick--active {
+    width: 4px !important;
+    opacity: 1 !important;
+    z-index: 5 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+  }
+
+  // Tooltip del tick (mostrado por JS; el :hover vía CSS está desactivado)
+  .om-tick-label {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #1a3a5c;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 3px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  // Asegura que CSS no muestre el tooltip en hover (el JS lo controla al 100%)
+  .om-tick:hover .om-tick-label {
+    display: none;
+  }
+
+  // Icono de la barra 2 (hijo directo del track, z-index independiente del tick)
+  .om-tick-icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+    transition: width 0.25s ease, height 0.25s ease, top 0.25s ease;
+  }
+
+  // Icono activo: borde/outline resaltado, z-index y tamaño persistentes
+  .om-icon--active {
+    outline: 3px solid #1a3a5c;
+    outline-offset: 1px;
+    border-radius: 4px;
+    z-index: 6;
+    width: 55px;
+    height: 55px;
+  }
+
+  // Eje numérico pegado a la barra (margen gestionado por JS en la barra de iconos)
+  .om-gauge-axis--tight {
+    margin-top: 0;
   }
 }

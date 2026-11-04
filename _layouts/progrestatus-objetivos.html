@@ -2,68 +2,122 @@
 {% include header.html %}
 
 {% comment %}
-  Datos de score-o por objetivo, incrustados desde Jekyll para evitar fetch asíncrono.
-  progreso_objetivos.csv: goal, status, score  (solo ODS 1-17, sin OCECA)
+  Datos de score-o por objetivo (progreso_objetivos.csv: goal, status, score).
+  Solo ODS 1-17, sin OCECA (filtrado en el build).
 {% endcomment %}
 {% assign objetivo_data = site.data.csv.progreso_objetivos %}
 
-{% comment %} Etiquetas i18n inline {% endcomment %}
+{% comment %} Etiquetas i18n {% endcomment %}
 {% if page.language == 'eu' %}
   {% assign _lbl_select     = 'Hautatu helburu bat' %}
   {% assign _lbl_score      = 'Puntuazioa' %}
-  {% assign _lbl_status     = 'Egoera' %}
   {% assign _lbl_no_eval    = 'Ez ebaluagarria' %}
   {% assign _lbl_score_info = 'Puntuazioa -5etik +5era doa. Balio positiboek aurrerapen esanguratsua adierazten dute; negatiboak, atzerakada.' %}
   {% assign _lbl_goal       = 'Helburua' %}
+  {% assign _lbl_view_goal  = 'Helburua ikusi' %}
+  {% assign _lbl_overview   = '17 helburuen ikuspegi orokorra' %}
+  {% assign _lbl_overview2  = '17 helburuen ikuspegi orokorra — 2. proposamena' %}
 {% elsif page.language == 'en' %}
   {% assign _lbl_select     = 'Select a goal' %}
   {% assign _lbl_score      = 'Score' %}
-  {% assign _lbl_status     = 'Status' %}
   {% assign _lbl_no_eval    = 'Not evaluable' %}
   {% assign _lbl_score_info = 'The score ranges from -5 to +5. Positive values indicate progress; negative values indicate regression.' %}
   {% assign _lbl_goal       = 'Goal' %}
+  {% assign _lbl_view_goal  = 'View goal' %}
+  {% assign _lbl_overview   = 'Overview of all 17 goals' %}
+  {% assign _lbl_overview2  = 'Overview of all 17 goals — alternative' %}
 {% else %}
   {% assign _lbl_select     = 'Selecciona un objetivo' %}
   {% assign _lbl_score      = 'Puntuación' %}
-  {% assign _lbl_status     = 'Estado' %}
   {% assign _lbl_no_eval    = 'No evaluable' %}
   {% assign _lbl_score_info = 'La puntuación va de -5 a +5. Los valores positivos indican progreso; los negativos, retroceso.' %}
   {% assign _lbl_goal       = 'Objetivo' %}
+  {% assign _lbl_view_goal  = 'Ver objetivo' %}
+  {% assign _lbl_overview   = 'Visión general de los 17 objetivos' %}
+  {% assign _lbl_overview2  = 'Visión general de los 17 objetivos — propuesta alternativa' %}
 {% endif %}
 
-{% comment %} Construir objeto JS con los datos de los 17 ODS (excluye OCECA, ya filtrado en el build) {% endcomment %}
 <script>
+/* ── Datos incrustados por Jekyll ── */
 var OBJETIVO_SCORES = {
-{% for row in objetivo_data %}{% assign _first_char = row.goal | slice: 0 %}{% if _first_char == '1' or _first_char == '2' or _first_char == '3' or _first_char == '4' or _first_char == '5' or _first_char == '6' or _first_char == '7' or _first_char == '8' or _first_char == '9' %}  "{{ row.goal }}": { status: "{{ row.status }}", score: {% if row.score and row.score != '' %}{{ row.score }}{% else %}null{% endif %} }{% unless forloop.last %},{% endunless %}
+{% for row in objetivo_data %}{% assign _fc = row.goal | slice: 0 %}{% if _fc == '1' or _fc == '2' or _fc == '3' or _fc == '4' or _fc == '5' or _fc == '6' or _fc == '7' or _fc == '8' or _fc == '9' %}  "{{ row.goal }}": { status: "{{ row.status }}", score: {% if row.score and row.score != '' %}{{ row.score }}{% else %}null{% endif %} }{% unless forloop.last %},{% endunless %}
 {% endif %}{% endfor %}};
 
 var STATUS_TYPES = {
 {% for st in site.progress_status.status_types %}  "{{ st.value }}": { label: {{ st.label | t | jsonify }}, image: "{{ st.image }}" }{% unless forloop.last %},{% endunless %}
 {% endfor %}};
 
-var OBJETIVO_MEDIDOR_CONFIG = {
-  baseurl: "{{ site.baseurl }}",
-  lbl_no_eval: {{ _lbl_no_eval | jsonify }},
-  lbl_score:   {{ _lbl_score | jsonify }},
-  lbl_status:  {{ _lbl_status | jsonify }},
-  lbl_goal:    {{ _lbl_goal | jsonify }}
+var OBJETIVO_CFG = {
+  baseurl:       "{{ site.baseurl }}",
+  lbl_no_eval:   {{ _lbl_no_eval | jsonify }},
+  lbl_score:     {{ _lbl_score | jsonify }},
+  lbl_goal:      {{ _lbl_goal | jsonify }},
+  lbl_view_goal: {{ _lbl_view_goal | jsonify }}
+};
+
+/* URLs de los 17 objetivos */
+var GOAL_URLS = {
+{% for i in (1..17) %}  "{{ i }}": "{{ site.baseurl }}/{{ i }}/"{% unless forloop.last %},{% endunless %}
+{% endfor %}};
+
+/* Colores oficiales ODS 1-17 */
+var GOAL_COLORS = {
+  "1":"#e5243b","2":"#dda63a","3":"#4c9f38","4":"#c5192d","5":"#ff3a21",
+  "6":"#26bde2","7":"#fcc30b","8":"#a21942","9":"#fd6925","10":"#dd1367",
+  "11":"#fd9d24","12":"#bf8b2e","13":"#3f7e44","14":"#0a97d9","15":"#56c02b",
+  "16":"#00689d","17":"#19486a"
 };
 </script>
 
 <div id="main-content" class="container layout-progrestatus-objetivos" role="main">
 
-  <h1>{% if page.title %}{{ page.title }}{% else %}{{ _lbl_select }}{% endif %}</h1>
+  <div class="progreso-intro-header">
+    <h1>{% if page.title %}{{ page.title }}{% else %}{{ _lbl_select }}{% endif %}</h1>
+    <div class="progreso-action-icons">
+      <a href="{{ site.remote_data_prefix }}progreso_objetivos.csv"
+         class="progreso-icon-btn progreso-download-btn-header"
+         title="{{ page.t.status.download_progress_csv }}"
+         aria-label="{{ page.t.status.download_progress_csv }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      </a>
+      <button type="button"
+              class="progreso-icon-btn progreso-print-btn"
+              title="{{ page.t.status.print_page }}"
+              aria-label="{{ page.t.status.print_page }}"
+              onclick="window.print()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <polyline points="6 9 6 2 18 2 18 9"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <p>{{ _lbl_score_info }}</p>
 
-  <p class="objetivo-medidor-intro">{{ _lbl_score_info }}</p>
+  <!-- ── Barra panorámica: iconos escalonados ── -->
+  <div class="om-overview-section">
+    <div class="om-overview-track om-overview-track--icons" id="om-overview-track-2" aria-hidden="true">
+      <div class="om-gauge-zero-line"></div>
+    </div>
+    <div class="om-gauge-axis om-gauge-axis--tight" aria-hidden="true">
+      <span>-5</span><span>-4</span><span>-3</span><span>-2</span><span>-1</span>
+      <span>0</span><span>+1</span><span>+2</span><span>+3</span><span>+4</span><span>+5</span>
+    </div>
+  </div>
 
-  <!-- ── Layout dos columnas: selector izq / panel dcha ────────────────── -->
+  <!-- ── Layout dos columnas: selector (izq) / panel medidor (dcha) ──────── -->
   <div class="om-two-col">
 
-    <!-- Columna izquierda: selector de 17 ODS (6 por fila) -->
+    <!-- Columna izquierda: 17 ODS, 6 por fila -->
     <div class="om-col-selector">
       <div class="ods-selector-grid" role="group" aria-label="{{ _lbl_select }}">
         {% for i in (1..17) %}
-          {% assign goal_details = i | append: '' | sdg_lookup %}
+          {% assign goal_details = i | sdg_lookup %}
           <button class="ods-selector-btn"
                   data-goal="{{ i }}"
                   aria-pressed="false"
@@ -78,89 +132,260 @@ var OBJETIVO_MEDIDOR_CONFIG = {
       </div>
     </div>
 
-    <!-- Columna derecha: panel del medidor (siempre visible, cargado con ODS 1) -->
+    <!-- Columna derecha: panel del medidor individual -->
     <div class="om-col-panel">
       <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
 
-    <!-- Cabecera: icono + título + estado -->
-    <div class="objetivo-panel-header">
-      <div class="objetivo-panel-icon-wrap">
-        <img id="om-goal-icon" src="" alt="" width="100" height="100" class="goal-icon-image" />
-      </div>
-      <div class="objetivo-panel-info">
-        <p class="objetivo-panel-num" id="om-goal-num"></p>
-        <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
-        <div class="objetivo-panel-status" id="om-goal-status-wrap">
-          <img id="om-status-icon" src="" alt="" width="36" height="36" class="om-status-img" />
-          <span id="om-status-label" class="om-status-label"></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Gauge -->
-    <div class="om-gauge-section">
-      <div class="om-gauge-track" role="presentation">
-        <div class="om-gauge-bar" aria-hidden="true">
-          <!-- Marcador -->
-          <div class="om-gauge-marker" id="om-marker" aria-hidden="true">
-            <span class="om-marker-arrow"></span>
+        <!-- Cabecera: icono + título + estado + puntuación -->
+        <div class="objetivo-panel-header">
+          <div class="objetivo-panel-icon-wrap">
+            <a id="om-goal-link-icon" href="#" aria-label="">
+              <img id="om-goal-icon" src="" alt="" width="100" height="100" class="goal-icon-image" />
+            </a>
+          </div>
+          <div class="objetivo-panel-info">
+            <p class="objetivo-panel-num" id="om-goal-num"></p>
+            <a id="om-goal-link-title" href="#">
+              <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
+            </a>
+            <div class="objetivo-panel-status">
+              <img id="om-status-icon" src="" alt="" class="om-status-img" />
+              <span id="om-status-label" class="om-status-label"></span>
+            </div>
+          </div>
+          <!-- Puntuación y enlace al objetivo (columna derecha del header) -->
+          <div class="objetivo-panel-score">
+            <div class="om-score-display">
+              <span class="om-score-label" id="om-score-label-text"></span>
+              <span class="om-score-value" id="om-score-value" aria-live="polite"></span>
+            </div>
+            <a id="om-goal-btn" href="#" class="btn btn-primary btn-download om-goal-btn"
+               role="button" aria-label="">
+            </a>
           </div>
         </div>
-        <!-- Etiquetas numéricas del eje -->
-        <div class="om-gauge-axis" aria-hidden="true">
-          <span>-5</span>
-          <span>-4</span>
-          <span>-3</span>
-          <span>-2</span>
-          <span>-1</span>
-          <span>0</span>
-          <span>+1</span>
-          <span>+2</span>
-          <span>+3</span>
-          <span>+4</span>
-          <span>+5</span>
-        </div>
-        <!-- Línea central de referencia (0) -->
-        <div class="om-gauge-zero-line" aria-hidden="true"></div>
-      </div>
 
-      <!-- Valor numérico del score (accesibilidad: información no depende solo del color) -->
-      <div class="om-score-display">
-        <span class="om-score-label" id="om-score-label-text"></span>
-        <span class="om-score-value" id="om-score-value" aria-live="polite"></span>
-      </div>
-    </div>
-
-    </div><!-- /.objetivo-medidor-panel -->
+      </div><!-- /.objetivo-medidor-panel -->
     </div><!-- /.om-col-panel -->
+
   </div><!-- /.om-two-col -->
 
   {% include back-to-top.html %}
-</div>
+</div><!-- /#main-content -->
 
 <script>
 (function () {
-  var cfg     = OBJETIVO_MEDIDOR_CONFIG;
   var scores  = OBJETIVO_SCORES;
   var types   = STATUS_TYPES;
+  var cfg     = OBJETIVO_CFG;
+  var colors  = GOAL_COLORS;
+  var goalUrls = GOAL_URLS;
 
-  var panel      = document.getElementById('objetivo-medidor-panel');
-  var marker     = document.getElementById('om-marker');
-  var scoreVal   = document.getElementById('om-score-value');
-  var scoreLabel = document.getElementById('om-score-label-text');
-  var goalIcon   = document.getElementById('om-goal-icon');
-  var goalNum    = document.getElementById('om-goal-num');
-  var goalTitle  = document.getElementById('om-goal-title');
+  /* Referencias al panel del medidor individual */
+  var panel       = document.getElementById('objetivo-medidor-panel');
+  var marker      = document.getElementById('om-marker');
+  var scoreVal    = document.getElementById('om-score-value');
+  var scoreLabel  = document.getElementById('om-score-label-text');
+  var goalIcon    = document.getElementById('om-goal-icon');
+  var goalNumEl   = document.getElementById('om-goal-num');
+  var goalTitle   = document.getElementById('om-goal-title');
   var statusIcon  = document.getElementById('om-status-icon');
   var statusLabel = document.getElementById('om-status-label');
+  var goalLinkIcon  = document.getElementById('om-goal-link-icon');
+  var goalLinkTitle = document.getElementById('om-goal-link-title');
+  var goalBtn       = document.getElementById('om-goal-btn');
 
+  /* Referencias a las barras panorámicas */
+  var track2 = document.getElementById('om-overview-track-2');
+
+  /* ── Utilidades ── */
   function scoreToPercent(s) {
-    // -5 → 0%, +5 → 100%
     return Math.min(100, Math.max(0, (s + 5) / 10 * 100));
   }
 
+  /* Devuelve la URL del icono de un objetivo a partir del botón selector */
+  function goalIconSrc(g) {
+    var btn = document.querySelector('.ods-selector-btn[data-goal="' + g + '"]');
+    return btn ? btn.querySelector('img').src : '';
+  }
+
+  /* ── Hover: aplica/quita efecto en ticks e iconos de un objetivo ── */
+  function tickHover(g, on) {
+    document.querySelectorAll('.om-tick[data-goal="' + g + '"]').forEach(function (t) {
+      if (on) {
+        t.style.width = '3px'; t.style.opacity = '1';
+        t.style.zIndex = '3'; t.style.boxShadow = '0 0 6px rgba(0,0,0,.5)';
+      } else {
+        /* Siempre limpiar estilos hover; CSS !important mantiene el estado activo */
+        t.style.width = ''; t.style.opacity = '';
+        t.style.zIndex = ''; t.style.boxShadow = '';
+      }
+      /* Tooltip: mostrar en hover, ocultar siempre al salir */
+      var lbl = t.querySelector('.om-tick-label');
+      if (lbl) lbl.style.display = on ? 'block' : '';
+    });
+    /* Icono de la barra 2 */
+    var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
+    if (ico) {
+      if (on) {
+        /* Si ya es el activo, no sobreescribir su tamaño (55px) */
+        if (!ico.classList.contains('om-icon--active')) {
+          ico.style.width = '45px'; ico.style.height = '45px'; ico.style.zIndex = '4';
+        }
+      } else if (!ico.classList.contains('om-icon--active')) {
+        ico.style.width = '';  ico.style.height = ''; ico.style.zIndex = '';
+      }
+    }
+  }
+
+  /* ── buildTicks: crea ticks (+ iconos opcionales como hermanos en el track) ── */
+  function buildTicks(track, cls, showIcons) {
+    if (!track) return;
+    Object.keys(scores).sort(function (a, b) { return parseInt(a) - parseInt(b); })
+      .forEach(function (g) {
+        var data = scores[g];
+        if (data.score === null || data.score === undefined) return;
+        var pct = scoreToPercent(parseFloat(data.score));
+        var sc  = parseFloat(data.score);
+
+        /* Tick (línea vertical) */
+        var tick = document.createElement('div');
+        tick.className = cls;
+        tick.setAttribute('data-goal', g);
+        tick.style.left = pct + '%';
+        tick.style.backgroundColor = colors[g] || '#666';
+
+        /* Tooltip centrado en la barra (posicionado por staggerIcons para barra 2) */
+        var lbl = document.createElement('span');
+        lbl.className = 'om-tick-label';
+        lbl.textContent = (sc > 0 ? '+' : '') + sc.toFixed(2);
+        tick.appendChild(lbl);
+        tick.setAttribute('title', cfg.lbl_goal + ' ' + g + ': ' + (sc > 0 ? '+' : '') + sc.toFixed(2));
+
+        /* Click → seleccionar objetivo */
+        (function (_g) {
+          tick.addEventListener('click', function () {
+            var btn = document.querySelector('.ods-selector-btn[data-goal="' + _g + '"]');
+            if (btn) selectGoal(btn);
+          });
+          /* Hover en el propio tick */
+          tick.addEventListener('mouseenter', function () { tickHover(_g, true); });
+          tick.addEventListener('mouseleave', function () { tickHover(_g, false); });
+        }(g));
+
+        track.appendChild(tick);
+
+        /* Icono (barra 2): hijo directo del track para z-index independiente */
+        if (showIcons) {
+          var icon = document.createElement('img');
+          icon.src = goalIconSrc(g);
+          icon.alt = cfg.lbl_goal + ' ' + g;
+          icon.className = 'om-tick-icon';
+          icon.setAttribute('data-goal', g);
+          icon.style.left = pct + '%';
+          (function (_g, _track) {
+            icon.addEventListener('mouseenter', function () { tickHover(_g, true); });
+            icon.addEventListener('mouseleave', function () { tickHover(_g, false); });
+            icon.addEventListener('click', function () {
+              var btn = document.querySelector('.ods-selector-btn[data-goal="' + _g + '"]');
+              if (btn) selectGoal(btn);
+            });
+          }(g, track));
+          track.appendChild(icon);
+        }
+      });
+  }
+
+  /* ── staggerIcons: escalonado anti-solapamiento (iconos arriba/abajo) ── */
+  function staggerIcons(track) {
+    var ICON = 45, GAP = 3;
+    var barH = track.offsetHeight || 40;
+    var w    = track.offsetWidth  || 800;
+
+    /* Deshabilitar transiciones durante el recálculo de posiciones */
+    track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+      el.style.transition = 'none';
+    });
+
+    var items = [];
+    track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+      var pct = parseFloat(el.style.left) / 100;
+      items.push({ el: el, cx: pct * w });
+    });
+    items.sort(function (a, b) { return a.cx - b.cx; });
+
+    var aRows = [], bRows = [], maxA = -1, maxB = -1;
+    items.forEach(function (ic) {
+      var left  = ic.cx - ICON / 2 - 2;
+      var right = ic.cx + ICON / 2 + 2;
+      var ra = 0; while (ra < aRows.length && aRows[ra] > left) ra++;
+      var rb = 0; while (rb < bRows.length && bRows[rb] > left) rb++;
+      var above = (ra <= rb);
+      var g    = ic.el.getAttribute('data-goal');
+      var tick = track.querySelector('.om-tick-b2[data-goal="' + g + '"]');
+
+      if (above) {
+        aRows[ra] = right; maxA = Math.max(maxA, ra);
+        var bp = GAP + ra * (ICON + GAP);
+        /* Icono arriba del bar */
+        ic.el.style.top    = '-' + (bp + ICON) + 'px';
+        ic.el.style.bottom = 'auto';
+        ic.el.style.transform = 'translateX(-50%)';
+        /* Tick desde debajo del icono hasta fondo de barra */
+        if (tick) {
+          tick.style.top    = '-' + bp + 'px';
+          tick.style.bottom = 'auto';
+          tick.style.height = (barH + bp) + 'px';
+        }
+      } else {
+        bRows[rb] = right; maxB = Math.max(maxB, rb);
+        var tp = GAP + rb * (ICON + GAP) + 24;
+        /* Icono debajo del bar */
+        ic.el.style.top    = (barH + tp) + 'px';
+        ic.el.style.bottom = 'auto';
+        ic.el.style.transform = 'translateX(-50%)';
+        /* Tick desde top hasta debajo del icono */
+        if (tick) {
+          tick.style.top    = '0';
+          tick.style.bottom = 'auto';
+          tick.style.height = (barH + tp) + 'px';
+        }
+      }
+    });
+
+    /* Tooltip centrado en la barra para cada tick b2 */
+    track.querySelectorAll('.om-tick-b2').forEach(function (tick) {
+      var lbl = tick.querySelector('.om-tick-label');
+      if (lbl) {
+        var tt  = parseFloat(tick.style.top) || 0;
+        var mid = -tt + barH / 2;
+        lbl.style.top       = mid + 'px';
+        lbl.style.bottom    = 'auto';
+        lbl.style.transform = 'translateX(-50%) translateY(-50%)';
+      }
+    });
+
+    /* Ajustar márgenes del track para acomodar los iconos */
+    var topSpace = maxA >= 0 ? (maxA + 1) * (ICON + GAP) + 10 : 10;
+    var botSpace = maxB >= 0 ? (maxB + 1) * (ICON + GAP) + ICON + 16 : 0;
+    track.style.marginTop = topSpace + 'px';
+    /* El eje va pegado al track; la sección absorbe el espacio inferior */
+    var axisEl = track.nextElementSibling;
+    if (axisEl) axisEl.style.marginTop = '0';
+    var section = track.parentElement;
+    if (section) section.style.paddingBottom = (botSpace > 0 ? botSpace + 12 : 0) + 'px';
+
+    /* Re-habilitar transiciones tras el layout (en el siguiente frame) */
+    requestAnimationFrame(function () {
+      track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+        el.style.transition = '';
+      });
+    });
+  }
+
+  /* ── selectGoal: actualiza panel, ticks activos y estilos ── */
   function selectGoal(btn) {
-    // Deseleccionar todos
+    /* Deseleccionar todos los botones */
     document.querySelectorAll('.ods-selector-btn').forEach(function (b) {
       b.setAttribute('aria-pressed', 'false');
       b.classList.remove('ods-selector-btn--active');
@@ -168,73 +393,118 @@ var OBJETIVO_MEDIDOR_CONFIG = {
     btn.setAttribute('aria-pressed', 'true');
     btn.classList.add('ods-selector-btn--active');
 
-    var goalNumVal = btn.getAttribute('data-goal');
-    var data = scores[goalNumVal];
-    var goalImg = btn.querySelector('img');
-    var goalTitleTxt = btn.getAttribute('title').replace(cfg.lbl_goal + ' ' + goalNumVal + ': ', '');
+    var g    = btn.getAttribute('data-goal');
+    var data = scores[g];
+    var img  = btn.querySelector('img');
 
-    // Actualizar cabecera
-    goalIcon.src = goalImg ? goalImg.src : '';
-    goalIcon.alt = goalImg ? goalImg.alt : '';
-    goalNum.textContent  = cfg.lbl_goal + ' ' + goalNumVal;
-    goalTitle.textContent = goalTitleTxt;
-
-    // Actualizar score y status
+    /* Actualizar cabecera del panel */
+    var url = goalUrls[g] || (cfg.baseurl + '/' + g + '/');
+    goalIcon.src  = img ? img.src : '';
+    goalIcon.alt  = img ? img.alt : '';
+    goalNumEl.textContent  = cfg.lbl_goal + ' ' + g;
+    goalTitle.textContent  = img ? btn.getAttribute('title').replace(cfg.lbl_goal + ' ' + g + ': ', '') : '';
+    /* Enlace del icono: aria-label descriptivo */
+    if (goalLinkIcon) {
+      goalLinkIcon.href = url;
+      goalLinkIcon.setAttribute('aria-label', cfg.lbl_view_goal + ': ' + cfg.lbl_goal + ' ' + g);
+    }
+    /* Enlace del título */
+    if (goalLinkTitle) goalLinkTitle.href = url;
+    /* Botón verde */
+    if (goalBtn) {
+      goalBtn.href = url;
+      goalBtn.textContent = cfg.lbl_view_goal;
+      goalBtn.setAttribute('aria-label', cfg.lbl_view_goal + ' ' + g + ': ' + goalTitle.textContent);
+    }
     scoreLabel.textContent = cfg.lbl_score + ':';
 
     if (!data || data.score === null || data.score === undefined) {
       scoreVal.textContent = cfg.lbl_no_eval;
-      scoreVal.className = 'om-score-value om-score-no-eval';
-      marker.classList.add('om-marker--hidden');
+      scoreVal.className   = 'om-score-value om-score-no-eval';
+      if (marker) marker.classList.add('om-marker--hidden');
       statusIcon.src = cfg.baseurl + '/assets/img/progress/no_evaluable.png';
-      statusIcon.alt = cfg.lbl_no_eval;
+      statusIcon.alt = statusLabel.textContent = cfg.lbl_no_eval;
       statusIcon.style.display = '';
-      statusLabel.textContent = cfg.lbl_no_eval;
     } else {
-      var sc = parseFloat(data.score);
+      var sc  = parseFloat(data.score);
       var pct = scoreToPercent(sc);
       scoreVal.textContent = (sc > 0 ? '+' : '') + sc.toFixed(2);
-      scoreVal.className = 'om-score-value';
-      marker.style.left = pct + '%';
-      marker.classList.remove('om-marker--hidden');
-
+      scoreVal.className   = 'om-score-value';
+      if (marker) { marker.style.left = pct + '%'; marker.classList.remove('om-marker--hidden'); }
       var st = types[data.status];
       if (st) {
-        if (st.image) {
-          statusIcon.src = cfg.baseurl + '/' + st.image;
-          statusIcon.alt = st.label;
-          statusIcon.style.display = '';
-        } else {
-          statusIcon.style.display = 'none';
-        }
-        statusLabel.textContent = st.label;
+        if (st.image) { statusIcon.src = cfg.baseurl + '/' + st.image; statusIcon.style.display = ''; }
+        else           { statusIcon.style.display = 'none'; }
+        statusIcon.alt = statusLabel.textContent = st.label;
       } else {
         statusIcon.style.display = 'none';
-        statusLabel.textContent = data.status;
+        statusLabel.textContent  = data.status;
       }
     }
-
     panel.removeAttribute('hidden');
-      }
 
+    /* Deseleccionar ticks anteriores: quitar clase + resetear tooltip */
+    /* Para iconos sobre la barra, restaurar posición antes de quitar la clase */
+    var prevActiveIco = document.querySelector('.om-tick-icon.om-icon--active');
+    if (prevActiveIco && parseFloat(prevActiveIco.style.top || '0') < 0) {
+      prevActiveIco.style.top = (parseFloat(prevActiveIco.style.top) + 10) + 'px';
+    }
+    document.querySelectorAll('.om-tick-icon').forEach(function (i) {
+      i.classList.remove('om-icon--active');
+      i.style.width = ''; i.style.height = ''; i.style.zIndex = '';
+    });
+    document.querySelectorAll('.om-tick').forEach(function (t) {
+      t.classList.remove('om-tick--active');
+      var lbl = t.querySelector('.om-tick-label');
+      if (lbl) lbl.style.display = '';
+    });
+    /* Activar ticks del objetivo seleccionado */
+    document.querySelectorAll('.om-tick[data-goal="' + g + '"]').forEach(function (t) {
+      t.classList.add('om-tick--active');
+      t.style.width = '4px'; t.style.opacity = '1'; t.style.zIndex = '5';
+      t.style.boxShadow = '0 2px 8px rgba(0,0,0,.4)';
+    });
+    /* Icono activo: borde resaltado (sin tooltip permanente) */
+    var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
+    if (ico) {
+      ico.classList.add('om-icon--active'); ico.style.width = '55px'; ico.style.height = '55px'; ico.style.zIndex = '6';
+      /* Sobre la barra: crecer hacia arriba (ajustar top para anclar borde inferior) */
+      if (parseFloat(ico.style.top || '0') < 0) {
+        ico.style.top = (parseFloat(ico.style.top) - 10) + 'px';
+      }
+    }
+  }
+
+  /* ── Inicialización ── */
+  buildTicks(track2, 'om-tick om-tick-b2', true);
+  staggerIcons(track2);
+  window.addEventListener('resize', function () { staggerIcons(track2); });
+
+  /* Hover en los botones del selector */
   document.querySelectorAll('.ods-selector-btn').forEach(function (btn) {
     btn.addEventListener('click', function () { selectGoal(btn); });
     btn.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectGoal(btn); }
     });
+    btn.addEventListener('mouseenter', function () {
+      tickHover(btn.getAttribute('data-goal'), true);
+    });
+    btn.addEventListener('mouseleave', function () {
+      tickHover(btn.getAttribute('data-goal'), false);
+    });
   });
 
-  // Hash en URL tipo #goal-3 → seleccionar ese objetivo al cargar
+  /* Hash en URL tipo #goal-3 → seleccionar ese objetivo; sino ODS 1 */
   var hash = window.location.hash;
   if (hash && hash.match(/^#goal-(\d+)$/)) {
     var n = hash.replace('#goal-', '');
-    var btn = document.querySelector('.ods-selector-btn[data-goal="' + n + '"]');
-    if (btn) selectGoal(btn);
+    var bh = document.querySelector('.ods-selector-btn[data-goal="' + n + '"]');
+    if (bh) selectGoal(bh);
   } else {
-    // Sin hash: seleccionar ODS 1 por defecto
-    var btn1 = document.querySelector('.ods-selector-btn[data-goal="1"]');
-    if (btn1) selectGoal(btn1);
+    var b1 = document.querySelector('.ods-selector-btn[data-goal="1"]');
+    if (b1) selectGoal(b1);
   }
+
 })();
 </script>
 
