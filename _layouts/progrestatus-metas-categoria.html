@@ -55,7 +55,7 @@
   {% for goal_num in goals_ordered %}
     {% assign goal_metas = cat_rows | where: "goal", goal_num %}
     {% if goal_metas.size > 0 %}
-    {% assign goal_details = goal_num | sdg_lookup %}
+    {% assign goal_details = goal_num | append: '' | sdg_lookup %}
     <div class="goal reporting-status-item categoria-goal-block">
         <!-- Cabecera del Objetivo -->
         <div style="display: flex; align-items: center; margin-bottom: 15px;">
