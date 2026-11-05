@@ -61,9 +61,9 @@ var STATUS_TYPES = {
 {% for st in site.progress_status.status_types %}  "{{ st.value }}": { label: {{ st.label | t | jsonify }}, image: "{{ st.image }}" }{% unless forloop.last %},{% endunless %}
 {% endfor %}};
 
-/* URLs de los 17 objetivos */
+/* URLs de los 17 objetivos (con prefijo de idioma) */
 var GOAL_URLS = {
-{% for i in (1..17) %}  "{{ i }}": "{{ site.baseurl }}/{{ i }}/"{% unless forloop.last %},{% endunless %}
+{% for i in (1..17) %}  "{{ i }}": "{{ site.baseurl }}{{ _cat_prefix }}{{ i }}/"{% unless forloop.last %},{% endunless %}
 {% endfor %}};
 
 /* Colores oficiales ODS 1-17 */
