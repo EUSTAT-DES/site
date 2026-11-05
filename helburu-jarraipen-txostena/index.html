@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261104132431">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261105104352">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -402,7 +402,15 @@ data-event-label="high"
 
 
 
+
+
+
+
+
 <script>
+/* â”€â”€ Datos incrustados por Jekyll â”€â”€ */
+
+/* Puntuaciones y estado por objetivo (progreso_objetivos.csv) */
 var OBJETIVO_SCORES = {
   "1": { status: "moderate_progress", score: 0.7345415913 },
   "2": { status: "moderate_progress", score: 0.9045363891 },
@@ -423,6 +431,7 @@ var OBJETIVO_SCORES = {
   "17": { status: "significant_progress", score: 3.9190873913 }
 };
 
+/* Tipos de estado (site.progress_status.status_types + | t) */
 var STATUS_TYPES = {
   "significant_progress": { label: "Aurrerapen nabarmena helburuen aldera", image: "assets/img/progress/alcanzado.png" },
   "moderate_progress": { label: "Aurrerapen moderatua helburuen aldera", image: "assets/img/progress/en_progreso.png" },
@@ -438,392 +447,2064 @@ var STATUS_TYPES = {
   "notapplicable": { label: "Ez aplikagarria", image: "" }
 };
 
-var OBJETIVO_MEDIDOR_CONFIG = {
-  baseurl: "/site",
-  lbl_no_eval: "Ez ebaluagarria",
-  lbl_score:   "Puntuazioa",
-  lbl_status:  "Egoera",
-  lbl_goal:    "Helburua"
+/* URLs de los 17 objetivos */
+var GOAL_URLS = {
+  "1": "/site/1/",
+  "2": "/site/2/",
+  "3": "/site/3/",
+  "4": "/site/4/",
+  "5": "/site/5/",
+  "6": "/site/6/",
+  "7": "/site/7/",
+  "8": "/site/8/",
+  "9": "/site/9/",
+  "10": "/site/10/",
+  "11": "/site/11/",
+  "12": "/site/12/",
+  "13": "/site/13/",
+  "14": "/site/14/",
+  "15": "/site/15/",
+  "16": "/site/16/",
+  "17": "/site/17/"
+};
+
+/* Colores oficiales ODS 1-17 */
+var GOAL_COLORS = {
+  "1":"#e5243b","2":"#dda63a","3":"#4c9f38","4":"#c5192d","5":"#ff3a21",
+  "6":"#26bde2","7":"#fcc30b","8":"#a21942","9":"#fd6925","10":"#dd1367",
+  "11":"#fd9d24","12":"#bf8b2e","13":"#3f7e44","14":"#0a97d9","15":"#56c02b",
+  "16":"#00689d","17":"#19486a"
+};
+
+/* Nombres cortos de los objetivos (sdg_lookup) */
+var GOAL_NAMES = {
+  "1": "Pobreziaren amaiera",
+  "2": "Goserik ez",
+  "3": "Osasuna eta ongizatea",
+  "4": "Kalitatezko hezkuntza",
+  "5": "Genero berdintasuna",
+  "6": "Ur garbia eta saneamendua",
+  "7": "Energia eskuragarria eta garbia",
+  "8": "Lan duina eta hazkunde ekonomikoa",
+  "9": "Industria, berrikuntza eta azpiegiturak",
+  "10": "Desberdintasunak murriztea",
+  "11": "Hiri eta komunitate jasangarriak",
+  "12": "Ekoizpen eta kontsumo arduratsuak",
+  "13": "Klimaren aldeko ekintza",
+  "14": "Itsaspeko bizitza",
+  "15": "Lehorreko ekosistemetako bizitza",
+  "16": "Bakea, justizia eta instituzio sendoak",
+  "17": "Helburuak lortzeko aliantzak"
+};
+
+/* URLs de los iconos (sdg_lookup) */
+var GOAL_ICONS = {
+  "1": "https://eustat-des.github.io/site/assets/img/goals/eu/1.png",
+  "2": "https://eustat-des.github.io/site/assets/img/goals/eu/2.png",
+  "3": "https://eustat-des.github.io/site/assets/img/goals/eu/3.png",
+  "4": "https://eustat-des.github.io/site/assets/img/goals/eu/4.png",
+  "5": "https://eustat-des.github.io/site/assets/img/goals/eu/5.png",
+  "6": "https://eustat-des.github.io/site/assets/img/goals/eu/6.png",
+  "7": "https://eustat-des.github.io/site/assets/img/goals/eu/7.png",
+  "8": "https://eustat-des.github.io/site/assets/img/goals/eu/8.png",
+  "9": "https://eustat-des.github.io/site/assets/img/goals/eu/9.png",
+  "10": "https://eustat-des.github.io/site/assets/img/goals/eu/10.png",
+  "11": "https://eustat-des.github.io/site/assets/img/goals/eu/11.png",
+  "12": "https://eustat-des.github.io/site/assets/img/goals/eu/12.png",
+  "13": "https://eustat-des.github.io/site/assets/img/goals/eu/13.png",
+  "14": "https://eustat-des.github.io/site/assets/img/goals/eu/14.png",
+  "15": "https://eustat-des.github.io/site/assets/img/goals/eu/15.png",
+  "16": "https://eustat-des.github.io/site/assets/img/goals/eu/16.png",
+  "17": "https://eustat-des.github.io/site/assets/img/goals/eu/17.png"
+};
+
+/* ConfiguraciÃ³n general */
+var OBJETIVO_CFG = {
+  baseurl:       "/site",
+  lbl_no_eval:   "Ez ebaluagarria",
+  lbl_goal:      "Helburua",
+  lbl_view_goal: "Helburua ikusi"
+};
+
+/* Datos de indicadores por objetivo (site.data.csv.progreso, sin overall) */
+var IND_SCORES_BY_GOAL = {
+
+"1": [{"status":"significant_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"no_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"moderate_progress","count":1,"percentage":7.6923076923076925,"total":13},{"status":"significant_progress","count":5,"percentage":38.46153846153847,"total":13},{"status":"moderate_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":2,"percentage":15.384615384615385,"total":13}],
+"2": [{"status":"moderate_progress","count":1,"percentage":5.555555555555555,"total":18},{"status":"significant_progress","count":4,"percentage":22.22222222222222,"total":18},{"status":"moderate_deterioration","count":5,"percentage":27.77777777777778,"total":18},{"status":"not_available","count":2,"percentage":11.11111111111111,"total":18},{"status":"no_progress","count":1,"percentage":5.555555555555555,"total":18},{"status":"notstarted","count":5,"percentage":27.77777777777778,"total":18}],
+"3": [{"status":"significant_progress","count":13,"percentage":43.333333333333336,"total":30},{"status":"not_available","count":2,"percentage":6.666666666666667,"total":30},{"status":"moderate_deterioration","count":7,"percentage":23.333333333333332,"total":30},{"status":"significant_deterioration","count":2,"percentage":6.666666666666667,"total":30},{"status":"moderate_progress","count":1,"percentage":3.3333333333333335,"total":30},{"status":"no_progress","count":1,"percentage":3.3333333333333335,"total":30},{"status":"notstarted","count":4,"percentage":13.333333333333334,"total":30}],
+"4": [{"status":"moderate_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"significant_progress","count":5,"percentage":38.46153846153847,"total":13},{"status":"moderate_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"not_available","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":3,"percentage":23.076923076923077,"total":13}],
+"5": [{"status":"significant_progress","count":5,"percentage":35.714285714285715,"total":14},{"status":"significant_deterioration","count":3,"percentage":21.428571428571427,"total":14},{"status":"moderate_progress","count":1,"percentage":7.142857142857142,"total":14},{"status":"moderate_deterioration","count":1,"percentage":7.142857142857142,"total":14},{"status":"notstarted","count":4,"percentage":28.57142857142857,"total":14}],
+"6": [{"status":"significant_progress","count":6,"percentage":54.54545454545454,"total":11},{"status":"not_available","count":1,"percentage":9.090909090909092,"total":11},{"status":"notstarted","count":4,"percentage":36.36363636363637,"total":11}],
+"7": [{"status":"significant_progress","count":4,"percentage":66.66666666666666,"total":6},{"status":"moderate_progress","count":1,"percentage":16.666666666666664,"total":6},{"status":"notstarted","count":1,"percentage":16.666666666666664,"total":6}],
+"8": [{"status":"moderate_progress","count":2,"percentage":11.11111111111111,"total":18},{"status":"significant_deterioration","count":1,"percentage":5.555555555555555,"total":18},{"status":"significant_progress","count":8,"percentage":44.44444444444444,"total":18},{"status":"moderate_deterioration","count":1,"percentage":5.555555555555555,"total":18},{"status":"not_available","count":2,"percentage":11.11111111111111,"total":18},{"status":"notstarted","count":4,"percentage":22.22222222222222,"total":18}],
+"9": [{"status":"significant_progress","count":7,"percentage":53.84615384615385,"total":13},{"status":"moderate_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"significant_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"moderate_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":2,"percentage":15.384615384615385,"total":13}],
+"10": [{"status":"significant_deterioration","count":2,"percentage":14.285714285714285,"total":14},{"status":"moderate_deterioration","count":1,"percentage":7.142857142857142,"total":14},{"status":"significant_progress","count":1,"percentage":7.142857142857142,"total":14},{"status":"no_progress","count":1,"percentage":7.142857142857142,"total":14},{"status":"not_available","count":1,"percentage":7.142857142857142,"total":14},{"status":"notstarted","count":7,"percentage":50.0,"total":14},{"status":"notapplicable","count":1,"percentage":7.142857142857142,"total":14}],
+"11": [{"status":"significant_progress","count":11,"percentage":68.75,"total":16},{"status":"significant_deterioration","count":1,"percentage":6.25,"total":16},{"status":"notstarted","count":4,"percentage":25.0,"total":16}],
+"12": [{"status":"significant_progress","count":5,"percentage":38.46153846153847,"total":13},{"status":"moderate_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"not_available","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":4,"percentage":30.76923076923077,"total":13},{"status":"notapplicable","count":1,"percentage":7.6923076923076925,"total":13}],
+"13": [{"status":"significant_progress","count":5,"percentage":62.5,"total":8},{"status":"notapplicable","count":2,"percentage":25.0,"total":8},{"status":"notstarted","count":1,"percentage":12.5,"total":8}],
+"14": [{"status":"significant_progress","count":1,"percentage":10.0,"total":10},{"status":"no_progress","count":1,"percentage":10.0,"total":10},{"status":"notstarted","count":8,"percentage":80.0,"total":10}],
+"15": [{"status":"not_available","count":2,"percentage":13.333333333333334,"total":15},{"status":"no_progress","count":2,"percentage":13.333333333333334,"total":15},{"status":"significant_progress","count":3,"percentage":20.0,"total":15},{"status":"moderate_progress","count":1,"percentage":6.666666666666667,"total":15},{"status":"notstarted","count":7,"percentage":46.666666666666664,"total":15}],
+"16": [{"status":"significant_deterioration","count":5,"percentage":20.0,"total":25},{"status":"moderate_deterioration","count":2,"percentage":8.0,"total":25},{"status":"significant_progress","count":4,"percentage":16.0,"total":25},{"status":"no_progress","count":1,"percentage":4.0,"total":25},{"status":"notstarted","count":12,"percentage":48.0,"total":25},{"status":"notapplicable","count":1,"percentage":4.0,"total":25}],
+"17": [{"status":"moderate_progress","count":3,"percentage":12.5,"total":24},{"status":"not_available","count":1,"percentage":4.166666666666666,"total":24},{"status":"significant_progress","count":7,"percentage":29.166666666666668,"total":24},{"status":"notapplicable","count":4,"percentage":16.666666666666664,"total":24},{"status":"notstarted","count":9,"percentage":37.5,"total":24}]
+};
+
+/* Datos de metas por objetivo (site.data.csv.progreso_metas, sin overall) */
+var MET_SCORES_BY_GOAL = {
+
+"1": [{"status":"significant_deterioration","count":2,"percentage":28.57142857142857,"total":7},{"status":"moderate_progress","count":1,"percentage":14.285714285714285,"total":7},{"status":"significant_progress","count":2,"percentage":28.57142857142857,"total":7},{"status":"no_progress","count":1,"percentage":14.285714285714285,"total":7},{"status":"notstarted","count":1,"percentage":14.285714285714285,"total":7}],
+"2": [{"status":"moderate_progress","count":3,"percentage":37.5,"total":8},{"status":"significant_progress","count":1,"percentage":12.5,"total":8},{"status":"notstarted","count":2,"percentage":25.0,"total":8},{"status":"moderate_deterioration","count":1,"percentage":12.5,"total":8},{"status":"noevaluado","count":1,"percentage":12.5,"total":8}],
+"3": [{"status":"significant_progress","count":6,"percentage":46.15384615384615,"total":13},{"status":"moderate_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"moderate_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"no_progress","count":1,"percentage":7.6923076923076925,"total":13},{"status":"significant_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"notstarted","count":1,"percentage":7.6923076923076925,"total":13}],
+"4": [{"status":"significant_progress","count":4,"percentage":40.0,"total":10},{"status":"moderate_progress","count":1,"percentage":10.0,"total":10},{"status":"moderate_deterioration","count":1,"percentage":10.0,"total":10},{"status":"noevaluado","count":2,"percentage":20.0,"total":10},{"status":"notstarted","count":2,"percentage":20.0,"total":10}],
+"5": [{"status":"significant_progress","count":4,"percentage":44.44444444444444,"total":9},{"status":"significant_deterioration","count":1,"percentage":11.11111111111111,"total":9},{"status":"moderate_progress","count":1,"percentage":11.11111111111111,"total":9},{"status":"notstarted","count":2,"percentage":22.22222222222222,"total":9},{"status":"no_progress","count":1,"percentage":11.11111111111111,"total":9}],
+"6": [{"status":"significant_progress","count":5,"percentage":62.5,"total":8},{"status":"noevaluado","count":1,"percentage":12.5,"total":8},{"status":"notstarted","count":2,"percentage":25.0,"total":8}],
+"7": [{"status":"significant_progress","count":3,"percentage":60.0,"total":5},{"status":"no_progress","count":1,"percentage":20.0,"total":5},{"status":"notstarted","count":1,"percentage":20.0,"total":5}],
+"8": [{"status":"significant_deterioration","count":1,"percentage":8.333333333333332,"total":12},{"status":"significant_progress","count":6,"percentage":50.0,"total":12},{"status":"notstarted","count":2,"percentage":16.666666666666664,"total":12},{"status":"moderate_progress","count":2,"percentage":16.666666666666664,"total":12},{"status":"moderate_deterioration","count":1,"percentage":8.333333333333332,"total":12}],
+"9": [{"status":"significant_progress","count":4,"percentage":50.0,"total":8},{"status":"no_progress","count":1,"percentage":12.5,"total":8},{"status":"significant_deterioration","count":1,"percentage":12.5,"total":8},{"status":"notstarted","count":1,"percentage":12.5,"total":8},{"status":"moderate_progress","count":1,"percentage":12.5,"total":8}],
+"10": [{"status":"noevaluado","count":2,"percentage":20.0,"total":10},{"status":"no_progress","count":1,"percentage":10.0,"total":10},{"status":"significant_deterioration","count":1,"percentage":10.0,"total":10},{"status":"moderate_deterioration","count":1,"percentage":10.0,"total":10},{"status":"notstarted","count":4,"percentage":40.0,"total":10},{"status":"notapplicable","count":1,"percentage":10.0,"total":10}],
+"11": [{"status":"significant_progress","count":7,"percentage":70.0,"total":10},{"status":"notstarted","count":2,"percentage":20.0,"total":10},{"status":"significant_deterioration","count":1,"percentage":10.0,"total":10}],
+"12": [{"status":"significant_progress","count":5,"percentage":45.45454545454545,"total":11},{"status":"noevaluado","count":2,"percentage":18.181818181818183,"total":11},{"status":"moderate_deterioration","count":1,"percentage":9.090909090909092,"total":11},{"status":"notstarted","count":3,"percentage":27.27272727272727,"total":11}],
+"13": [{"status":"significant_progress","count":2,"percentage":40.0,"total":5},{"status":"notstarted","count":1,"percentage":20.0,"total":5},{"status":"notapplicable","count":2,"percentage":40.0,"total":5}],
+"14": [{"status":"notstarted","count":8,"percentage":80.0,"total":10},{"status":"no_progress","count":1,"percentage":10.0,"total":10},{"status":"noevaluado","count":1,"percentage":10.0,"total":10}],
+"15": [{"status":"no_progress","count":2,"percentage":16.666666666666664,"total":12},{"status":"significant_progress","count":3,"percentage":25.0,"total":12},{"status":"notstarted","count":7,"percentage":58.333333333333336,"total":12}],
+"16": [{"status":"moderate_deterioration","count":2,"percentage":16.666666666666664,"total":12},{"status":"significant_progress","count":2,"percentage":16.666666666666664,"total":12},{"status":"noevaluado","count":2,"percentage":16.666666666666664,"total":12},{"status":"notstarted","count":3,"percentage":25.0,"total":12},{"status":"moderate_progress","count":1,"percentage":8.333333333333332,"total":12},{"status":"notapplicable","count":1,"percentage":8.333333333333332,"total":12},{"status":"significant_deterioration","count":1,"percentage":8.333333333333332,"total":12}],
+"17": [{"status":"moderate_progress","count":2,"percentage":10.526315789473683,"total":19},{"status":"notapplicable","count":4,"percentage":21.052631578947366,"total":19},{"status":"noevaluado","count":1,"percentage":5.263157894736842,"total":19},{"status":"notstarted","count":7,"percentage":36.84210526315789,"total":19},{"status":"significant_progress","count":5,"percentage":26.31578947368421,"total":19}]
 };
 </script>
 
-<div id="main-content" class="container layout-progrestatus-objetivos" role="main">
+<div id="main-content" class="container layout-progrestatus-objetivos layout-progrestatus" role="main">
 
-  <h1>Helburuen jarraipen txostena</h1>
+  <div class="progreso-intro-header">
+  <h1>
+    
+      Jarraipen txostena
+    
+  </h1>
+  <div class="progreso-action-icons">
+    <a href="https://eustat-des.github.io/data/progreso.csv"
+       class="progreso-icon-btn progreso-download-btn-header"
+       title="Jarraipen txostenaren datuak deskargatu (.csv)"
+       aria-label="Jarraipen txostenaren datuak deskargatu (.csv)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+    <button type="button"
+            class="progreso-icon-btn progreso-print-btn"
+            title="Jarraipen txostena inprimatu"
+            aria-label="Jarraipen txostena inprimatu"
+            onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+    </button>
+  </div>
+</div>
 
-  <p class="objetivo-medidor-intro">Puntuazioa -5etik +5era doa. Balio positiboek aurrerapen esanguratsua adierazten dute; negatiboak, atzerakada.</p>
 
-  <!-- ── Layout dos columnas: selector izq / panel dcha ────────────────── -->
-  <div class="om-two-col">
+<div class="reporting-status-description">
+  <p>Jarraipen txostenak Euskal Autonomia Erkidegoan Garapen Jasangarrirako Helburuak (GJH) lortzeko egindako aurrerapenaren deskribapen orokorra ematen du.</p>
 
-    <!-- Columna izquierda: selector de 17 ODS (6 por fila) -->
-    <div class="om-col-selector">
-      <div class="ods-selector-grid" role="group" aria-label="Hautatu helburu bat">
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="1"
-                  aria-pressed="false"
-                  title="Helburua 1: Pobreziaren amaiera">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/1.png"
-                 alt="Helburua 1: Pobreziaren amaiera"
-                 width="80" height="80"
-                 class="goal-icon-1 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">1</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="2"
-                  aria-pressed="false"
-                  title="Helburua 2: Goserik ez">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/2.png"
-                 alt="Helburua 2: Goserik ez"
-                 width="80" height="80"
-                 class="goal-icon-2 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">2</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="3"
-                  aria-pressed="false"
-                  title="Helburua 3: Osasuna eta ongizatea">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/3.png"
-                 alt="Helburua 3: Osasuna eta ongizatea"
-                 width="80" height="80"
-                 class="goal-icon-3 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">3</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="4"
-                  aria-pressed="false"
-                  title="Helburua 4: Kalitatezko hezkuntza">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/4.png"
-                 alt="Helburua 4: Kalitatezko hezkuntza"
-                 width="80" height="80"
-                 class="goal-icon-4 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">4</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="5"
-                  aria-pressed="false"
-                  title="Helburua 5: Genero berdintasuna">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/5.png"
-                 alt="Helburua 5: Genero berdintasuna"
-                 width="80" height="80"
-                 class="goal-icon-5 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">5</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="6"
-                  aria-pressed="false"
-                  title="Helburua 6: Ur garbia eta saneamendua">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/6.png"
-                 alt="Helburua 6: Ur garbia eta saneamendua"
-                 width="80" height="80"
-                 class="goal-icon-6 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">6</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="7"
-                  aria-pressed="false"
-                  title="Helburua 7: Energia eskuragarria eta garbia">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/7.png"
-                 alt="Helburua 7: Energia eskuragarria eta garbia"
-                 width="80" height="80"
-                 class="goal-icon-7 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">7</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="8"
-                  aria-pressed="false"
-                  title="Helburua 8: Lan duina eta hazkunde ekonomikoa">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/8.png"
-                 alt="Helburua 8: Lan duina eta hazkunde ekonomikoa"
-                 width="80" height="80"
-                 class="goal-icon-8 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">8</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="9"
-                  aria-pressed="false"
-                  title="Helburua 9: Industria, berrikuntza eta azpiegiturak">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/9.png"
-                 alt="Helburua 9: Industria, berrikuntza eta azpiegiturak"
-                 width="80" height="80"
-                 class="goal-icon-9 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">9</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="10"
-                  aria-pressed="false"
-                  title="Helburua 10: Desberdintasunak murriztea">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/10.png"
-                 alt="Helburua 10: Desberdintasunak murriztea"
-                 width="80" height="80"
-                 class="goal-icon-10 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">10</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="11"
-                  aria-pressed="false"
-                  title="Helburua 11: Hiri eta komunitate jasangarriak">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/11.png"
-                 alt="Helburua 11: Hiri eta komunitate jasangarriak"
-                 width="80" height="80"
-                 class="goal-icon-11 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">11</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="12"
-                  aria-pressed="false"
-                  title="Helburua 12: Ekoizpen eta kontsumo arduratsuak">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/12.png"
-                 alt="Helburua 12: Ekoizpen eta kontsumo arduratsuak"
-                 width="80" height="80"
-                 class="goal-icon-12 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">12</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="13"
-                  aria-pressed="false"
-                  title="Helburua 13: Klimaren aldeko ekintza">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/13.png"
-                 alt="Helburua 13: Klimaren aldeko ekintza"
-                 width="80" height="80"
-                 class="goal-icon-13 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">13</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="14"
-                  aria-pressed="false"
-                  title="Helburua 14: Itsaspeko bizitza">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/14.png"
-                 alt="Helburua 14: Itsaspeko bizitza"
-                 width="80" height="80"
-                 class="goal-icon-14 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">14</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="15"
-                  aria-pressed="false"
-                  title="Helburua 15: Lehorreko ekosistemetako bizitza">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/15.png"
-                 alt="Helburua 15: Lehorreko ekosistemetako bizitza"
-                 width="80" height="80"
-                 class="goal-icon-15 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">15</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="16"
-                  aria-pressed="false"
-                  title="Helburua 16: Bakea, justizia eta instituzio sendoak">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/16.png"
-                 alt="Helburua 16: Bakea, justizia eta instituzio sendoak"
-                 width="80" height="80"
-                 class="goal-icon-16 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">16</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="17"
-                  aria-pressed="false"
-                  title="Helburua 17: Helburuak lortzeko aliantzak">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/eu/17.png"
-                 alt="Helburua 17: Helburuak lortzeko aliantzak"
-                 width="80" height="80"
-                 class="goal-icon-17 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">17</span>
-          </button>
-        
-      </div>
+<p>Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/metodologia/">Garapen Jasangarrirako Helburuen aurrerapenaren neurketa</a>.</p>
+
+  <div class="progreso-action-icons progreso-action-icons-mobile">
+    <a href="https://eustat-des.github.io/data/progreso.csv"
+       class="progreso-icon-btn progreso-download-btn-mobile"
+       title="Jarraipen txostenaren datuak deskargatu (.csv)"
+       aria-label="Jarraipen txostenaren datuak deskargatu (.csv)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+    <button type="button"
+            class="progreso-icon-btn progreso-print-btn"
+            title="Jarraipen txostena inprimatu"
+            aria-label="Jarraipen txostena inprimatu"
+            onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+  <!-- Barra panorÃ¡mica: 17 objetivos situados segÃºn su puntuaciÃ³n -->
+  <div class="om-overview-section">
+    <div class="om-overview-track om-overview-track--icons"
+         id="om-overview-track" aria-hidden="true">
+      <!-- Zonas de color con tooltip del estado (posiciones fijas del gradiente) -->
+      <span class="om-bar-zone significant_deterioration" style="left:0%;width:25%">
+        <span class="om-zone-label">Atzerakada nabarmena</span>
+      </span>
+      <span class="om-bar-zone moderate_deterioration" style="left:25%;width:22.5%">
+        <span class="om-zone-label">Neurrizko atzerakada</span>
+      </span>
+      <span class="om-bar-zone no_progress" style="left:47.5%;width:5%">
+        <span class="om-zone-label">Geldialdia</span>
+      </span>
+      <span class="om-bar-zone moderate_progress" style="left:52.5%;width:22.5%">
+        <span class="om-zone-label">Neurrizko aurrerapena</span>
+      </span>
+      <span class="om-bar-zone significant_progress" style="left:75%;width:25%">
+        <span class="om-zone-label">Aurrerapen nabarmena</span>
+      </span>
     </div>
+  </div>
 
-    <!-- Columna derecha: panel del medidor (siempre visible, cargado con ODS 1) -->
-    <div class="om-col-panel">
-      <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
+  <!-- Panel del objetivo seleccionado -->
+  <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
 
-    <!-- Cabecera: icono + título + estado -->
     <div class="objetivo-panel-header">
       <div class="objetivo-panel-icon-wrap">
-        <img id="om-goal-icon" src="" alt="" width="100" height="100" class="goal-icon-image" />
+        <a id="om-goal-link-icon" href="#" aria-label="">
+          <img id="om-goal-icon" src="" alt="" width="90" height="90"
+               class="goal-icon-image" />
+        </a>
       </div>
       <div class="objetivo-panel-info">
         <p class="objetivo-panel-num" id="om-goal-num"></p>
-        <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
-        <div class="objetivo-panel-status" id="om-goal-status-wrap">
-          <img id="om-status-icon" src="" alt="" width="36" height="36" class="om-status-img" />
+        <a id="om-goal-link-title" href="#">
+          <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
+        </a>
+        <div class="objetivo-panel-status">
+          <img id="om-status-icon" src="" alt="" class="om-status-img" />
           <span id="om-status-label" class="om-status-label"></span>
         </div>
       </div>
+      <a id="om-goal-btn" href="#"
+         class="btn btn-primary btn-download om-goal-btn"
+         role="button" aria-label="">Helburua ikusi</a>
     </div>
 
-    <!-- Gauge -->
-    <div class="om-gauge-section">
-      <div class="om-gauge-track" role="presentation">
-        <div class="om-gauge-bar" aria-hidden="true">
-          <!-- Marcador -->
-          <div class="om-gauge-marker" id="om-marker" aria-hidden="true">
-            <span class="om-marker-arrow"></span>
+    <!-- SecciÃ³n: Metas del objetivo -->
+    <div class="om-panel-section">
+      <h3 class="om-panel-section-title">Xedeak</h3>
+      <div class="om-panel-section-body" id="om-metas-body">
+        <p class="om-section-placeholder">â€”</p>
+      </div>
+    </div>
+
+    <!-- SecciÃ³n: Indicadores del objetivo -->
+    <div class="om-panel-section">
+      <h3 class="om-panel-section-title">Adierazleak</h3>
+      <div class="om-panel-section-body" id="om-indicadores-body">
+        <p class="om-section-placeholder">â€”</p>
+      </div>
+    </div>
+
+  </div><!-- /.objetivo-medidor-panel -->
+
+  
+  <section class="om-informe-section">
+    <h2>Jomugen jarraipen txostena</h2>
+    
+    
+    <div class="goal goal-overall">
+      <div class="frame goal-tiles">
+        <img src="/site/assets/img/SDG Wheel_Transparent-01.png"
+             alt="Garapen Jasangarrirako Helburuak" width="100" height="100"
+             class="goal-icon-image goal-icon-image-" />
+      </div>
+      <div class="details">
+        <span class="total"><span>169</span> jomuga</span>
+        
+        <div class="summary"><div class="statuses">
+          
+          
+          
+          <div>
+            <span class="status significant-progress"><span class="status-inner">59</span></span>
+            <strong>Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean</strong><span class="value">34.91%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-progress"><span class="status-inner">14</span></span>
+            <strong>Neurrizko aurrerapena</strong><span class="value">8.28%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status no-progress"><span class="status-inner">9</span></span>
+            <strong>Geldialdia</strong><span class="value">5.33%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-deterioration"><span class="status-inner">8</span></span>
+            <strong>Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko</strong><span class="value">4.73%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status significant-deterioration"><span class="status-inner">10</span></span>
+            <strong>Atzerakada nabarmena / Atzerakada xedearekiko</strong><span class="value">5.92%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status noevaluado"><span class="status-inner">12</span></span>
+            <strong>Ez ebaluagarria</strong><span class="value">7.1%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notstarted"><span class="status-inner">49</span></span>
+            <strong>Ez dago daturik eskuragarri</strong><span class="value">28.99%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notapplicable"><span class="status-inner">8</span></span>
+            <strong>Ez aplikagarria</strong><span class="value">4.73%</span>
+          </div>
+          <br style="clear:both;">
+        </div></div>
+        <div class="goal-stats">
+          
+          
+          
+          <span class="significant-progress" style="width:34.9112426035503%"
+                title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 34.91%"><span class="status-inner">59</span></span>
+          
+          
+          
+          <span class="moderate-progress" style="width:8.284023668639055%"
+                title="Neurrizko aurrerapena: 8.28%"><span class="status-inner">14</span></span>
+          
+          
+          
+          <span class="no-progress" style="width:5.325443786982249%"
+                title="Geldialdia: 5.33%"><span class="status-inner">9</span></span>
+          
+          
+          
+          <span class="moderate-deterioration" style="width:4.733727810650888%"
+                title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 4.73%"><span class="status-inner">8</span></span>
+          
+          
+          
+          <span class="significant-deterioration" style="width:5.9171597633136095%"
+                title="Atzerakada nabarmena / Atzerakada xedearekiko: 5.92%"><span class="status-inner">10</span></span>
+          
+          
+          
+          <span class="noevaluado" style="width:7.100591715976331%"
+                title="Ez ebaluagarria: 7.1%"><span class="status-inner">12</span></span>
+          
+          
+          
+          <span class="notstarted" style="width:28.994082840236686%"
+                title="Ez dago daturik eskuragarri: 28.99%"><span class="status-inner">49</span></span>
+          
+          
+          
+          <span class="notapplicable" style="width:4.733727810650888%"
+                title="Ez aplikagarria: 4.73%"><span class="status-inner">8</span></span>
+          
+        </div>
+        
+      </div>
+      <br style="clear:both;">
+    </div>
+    <details class="om-goals-detail">
+      <summary>Helburuen araberako xehetasuna</summary>
+      
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/1/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/1.png" alt="Pobreziaren amaiera" width="100" height="100"
+             class="goal-icon-1 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/1/">Pobreziaren amaiera</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:28.57142857142857%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 28.57%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:14.285714285714285%"
+                  title="Neurrizko aurrerapena: 14.29%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:14.285714285714285%"
+                  title="Geldialdia: 14.29%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:28.57142857142857%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 28.57%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:14.285714285714285%"
+                  title="Ez dago daturik eskuragarri: 14.29%"><span class="status-inner">1</span></span>
+            
           </div>
         </div>
-        <!-- Etiquetas numéricas del eje -->
-        <div class="om-gauge-axis" aria-hidden="true">
-          <span>-5</span>
-          <span>-4</span>
-          <span>-3</span>
-          <span>-2</span>
-          <span>-1</span>
-          <span>0</span>
-          <span>+1</span>
-          <span>+2</span>
-          <span>+3</span>
-          <span>+4</span>
-          <span>+5</span>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/2/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/2.png" alt="Goserik ez" width="100" height="100"
+             class="goal-icon-2 goal-icon-image goal-icon-image-" /></a>
         </div>
-        <!-- Línea central de referencia (0) -->
-        <div class="om-gauge-zero-line" aria-hidden="true"></div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/2/">Goserik ez</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:12.5%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:37.5%"
+                  title="Neurrizko aurrerapena: 37.5%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:12.5%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:12.5%"
+                  title="Ez ebaluagarria: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Ez dago daturik eskuragarri: 25.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
       </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/3/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/3.png" alt="Osasuna eta ongizatea" width="100" height="100"
+             class="goal-icon-3 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/3/">Osasuna eta ongizatea</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:46.15384615384615%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 46.15%"><span class="status-inner">6</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:15.384615384615385%"
+                  title="Neurrizko aurrerapena: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:7.6923076923076925%"
+                  title="Geldialdia: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.6923076923076925%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:15.384615384615385%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:7.6923076923076925%"
+                  title="Ez dago daturik eskuragarri: 7.69%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/4/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/4.png" alt="Kalitatezko hezkuntza" width="100" height="100"
+             class="goal-icon-4 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/4/">Kalitatezko hezkuntza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:40.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 40.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:10.0%"
+                  title="Neurrizko aurrerapena: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:10.0%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:20.0%"
+                  title="Ez ebaluagarria: 20.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Ez dago daturik eskuragarri: 20.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/5/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/5.png" alt="Genero berdintasuna" width="100" height="100"
+             class="goal-icon-5 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/5/">Genero berdintasuna</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:44.44444444444444%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 44.44%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:11.11111111111111%"
+                  title="Neurrizko aurrerapena: 11.11%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:11.11111111111111%"
+                  title="Geldialdia: 11.11%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:11.11111111111111%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 11.11%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:22.22222222222222%"
+                  title="Ez dago daturik eskuragarri: 22.22%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/6/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/6.png" alt="Ur garbia eta saneamendua" width="100" height="100"
+             class="goal-icon-6 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/6/">Ur garbia eta saneamendua</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:62.5%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 62.5%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:12.5%"
+                  title="Ez ebaluagarria: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Ez dago daturik eskuragarri: 25.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/7/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/7.png" alt="Energia eskuragarria eta garbia" width="100" height="100"
+             class="goal-icon-7 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/7/">Energia eskuragarria eta garbia</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:60.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 60.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:20.0%"
+                  title="Geldialdia: 20.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Ez dago daturik eskuragarri: 20.0%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/8/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/8.png" alt="Lan duina eta hazkunde ekonomikoa" width="100" height="100"
+             class="goal-icon-8 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/8/">Lan duina eta hazkunde ekonomikoa</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:50.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 50.0%"><span class="status-inner">6</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:16.666666666666664%"
+                  title="Neurrizko aurrerapena: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:8.333333333333332%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:8.333333333333332%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:16.666666666666664%"
+                  title="Ez dago daturik eskuragarri: 16.67%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/9/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/9.png" alt="Industria, berrikuntza eta azpiegiturak" width="100" height="100"
+             class="goal-icon-9 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/9/">Industria, berrikuntza eta azpiegiturak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:50.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 50.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:12.5%"
+                  title="Neurrizko aurrerapena: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:12.5%"
+                  title="Geldialdia: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:12.5%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:12.5%"
+                  title="Ez dago daturik eskuragarri: 12.5%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/10/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/10.png" alt="Desberdintasunak murriztea" width="100" height="100"
+             class="goal-icon-10 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/10/">Desberdintasunak murriztea</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="no-progress" style="width:10.0%"
+                  title="Geldialdia: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:10.0%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:10.0%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:20.0%"
+                  title="Ez ebaluagarria: 20.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:40.0%"
+                  title="Ez dago daturik eskuragarri: 40.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:10.0%"
+                  title="Ez aplikagarria: 10.0%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/11/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/11.png" alt="Hiri eta komunitate jasangarriak" width="100" height="100"
+             class="goal-icon-11 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/11/">Hiri eta komunitate jasangarriak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:70.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 70.0%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:10.0%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Ez dago daturik eskuragarri: 20.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/12/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/12.png" alt="Ekoizpen eta kontsumo arduratsuak" width="100" height="100"
+             class="goal-icon-12 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/12/">Ekoizpen eta kontsumo arduratsuak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:45.45454545454545%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 45.45%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:9.090909090909092%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 9.09%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:18.181818181818183%"
+                  title="Ez ebaluagarria: 18.18%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:27.27272727272727%"
+                  title="Ez dago daturik eskuragarri: 27.27%"><span class="status-inner">3</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/13/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/13.png" alt="Klimaren aldeko ekintza" width="100" height="100"
+             class="goal-icon-13 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/13/">Klimaren aldeko ekintza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:40.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 40.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Ez dago daturik eskuragarri: 20.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:40.0%"
+                  title="Ez aplikagarria: 40.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/14/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/14.png" alt="Itsaspeko bizitza" width="100" height="100"
+             class="goal-icon-14 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/14/">Itsaspeko bizitza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="no-progress" style="width:10.0%"
+                  title="Geldialdia: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:10.0%"
+                  title="Ez ebaluagarria: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:80.0%"
+                  title="Ez dago daturik eskuragarri: 80.0%"><span class="status-inner">8</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/15/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/15.png" alt="Lehorreko ekosistemetako bizitza" width="100" height="100"
+             class="goal-icon-15 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/15/">Lehorreko ekosistemetako bizitza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:25.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 25.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:16.666666666666664%"
+                  title="Geldialdia: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:58.333333333333336%"
+                  title="Ez dago daturik eskuragarri: 58.33%"><span class="status-inner">7</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/16/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/16.png" alt="Bakea, justizia eta instituzio sendoak" width="100" height="100"
+             class="goal-icon-16 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/16/">Bakea, justizia eta instituzio sendoak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:16.666666666666664%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:8.333333333333332%"
+                  title="Neurrizko aurrerapena: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:16.666666666666664%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:8.333333333333332%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:16.666666666666664%"
+                  title="Ez ebaluagarria: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Ez dago daturik eskuragarri: 25.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:8.333333333333332%"
+                  title="Ez aplikagarria: 8.33%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/17/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/17.png" alt="Helburuak lortzeko aliantzak" width="100" height="100"
+             class="goal-icon-17 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/17/">Helburuak lortzeko aliantzak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:26.31578947368421%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 26.32%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:10.526315789473683%"
+                  title="Neurrizko aurrerapena: 10.53%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:5.263157894736842%"
+                  title="Ez ebaluagarria: 5.26%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:36.84210526315789%"
+                  title="Ez dago daturik eskuragarri: 36.84%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:21.052631578947366%"
+                  title="Ez aplikagarria: 21.05%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+    </details>
+  </section>
 
-      <!-- Valor numérico del score (accesibilidad: información no depende solo del color) -->
-      <div class="om-score-display">
-        <span class="om-score-label" id="om-score-label-text"></span>
-        <span class="om-score-value" id="om-score-value" aria-live="polite"></span>
+  
+  <section class="om-informe-section">
+    <h2>Adierazleen jarraipen txostena</h2>
+    
+    
+    <div class="goal goal-overall">
+      <div class="frame goal-tiles">
+        <img src="/site/assets/img/SDG Wheel_Transparent-01.png"
+             alt="Garapen Jasangarrirako Helburuak" width="100" height="100"
+             class="goal-icon-image goal-icon-image-" />
       </div>
+      <div class="details">
+        <span class="total"><span>261</span> adierazle</span>
+        
+        <div class="summary"><div class="statuses">
+          
+          
+          
+          <div>
+            <span class="status significant-progress"><span class="status-inner">94</span></span>
+            <strong>Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean</strong><span class="value">36.02%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-progress"><span class="status-inner">15</span></span>
+            <strong>Neurrizko aurrerapena</strong><span class="value">5.75%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status no-progress"><span class="status-inner">9</span></span>
+            <strong>Geldialdia</strong><span class="value">3.45%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-deterioration"><span class="status-inner">23</span></span>
+            <strong>Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko</strong><span class="value">8.81%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status significant-deterioration"><span class="status-inner">17</span></span>
+            <strong>Atzerakada nabarmena / Atzerakada xedearekiko</strong><span class="value">6.51%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status not-available"><span class="status-inner">13</span></span>
+            <strong>Ez ebaluagarria</strong><span class="value">4.98%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notstarted"><span class="status-inner">81</span></span>
+            <strong>Ez dago daturik eskuragarri</strong><span class="value">31.03%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notapplicable"><span class="status-inner">9</span></span>
+            <strong>Ez aplikagarria</strong><span class="value">3.45%</span>
+          </div>
+          <br style="clear:both;">
+        </div></div>
+        <div class="goal-stats">
+          
+          
+          
+          <span class="significant-progress" style="width:36.015325670498086%"
+                title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 36.02%"><span class="status-inner">94</span></span>
+          
+          
+          
+          <span class="moderate-progress" style="width:5.747126436781609%"
+                title="Neurrizko aurrerapena: 5.75%"><span class="status-inner">15</span></span>
+          
+          
+          
+          <span class="no-progress" style="width:3.4482758620689653%"
+                title="Geldialdia: 3.45%"><span class="status-inner">9</span></span>
+          
+          
+          
+          <span class="moderate-deterioration" style="width:8.812260536398467%"
+                title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 8.81%"><span class="status-inner">23</span></span>
+          
+          
+          
+          <span class="significant-deterioration" style="width:6.513409961685824%"
+                title="Atzerakada nabarmena / Atzerakada xedearekiko: 6.51%"><span class="status-inner">17</span></span>
+          
+          
+          
+          <span class="not-available" style="width:4.980842911877394%"
+                title="Ez ebaluagarria: 4.98%"><span class="status-inner">13</span></span>
+          
+          
+          
+          <span class="notstarted" style="width:31.03448275862069%"
+                title="Ez dago daturik eskuragarri: 31.03%"><span class="status-inner">81</span></span>
+          
+          
+          
+          <span class="notapplicable" style="width:3.4482758620689653%"
+                title="Ez aplikagarria: 3.45%"><span class="status-inner">9</span></span>
+          
+        </div>
+        
+      </div>
+      <br style="clear:both;">
     </div>
-
-    </div><!-- /.objetivo-medidor-panel -->
-    </div><!-- /.om-col-panel -->
-  </div><!-- /.om-two-col -->
+    <details class="om-goals-detail">
+      <summary>Helburuen araberako xehetasuna</summary>
+      
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/1/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/1.png" alt="Pobreziaren amaiera" width="100" height="100"
+             class="goal-icon-1 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/1/">Pobreziaren amaiera</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:38.46153846153847%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 38.46%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:7.6923076923076925%"
+                  title="Neurrizko aurrerapena: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:15.384615384615385%"
+                  title="Geldialdia: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.6923076923076925%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:15.384615384615385%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:15.384615384615385%"
+                  title="Ez dago daturik eskuragarri: 15.38%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/2/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/2.png" alt="Goserik ez" width="100" height="100"
+             class="goal-icon-2 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/2/">Goserik ez</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:22.22222222222222%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 22.22%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:5.555555555555555%"
+                  title="Neurrizko aurrerapena: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:5.555555555555555%"
+                  title="Geldialdia: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:27.77777777777778%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 27.78%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="not-available" style="width:11.11111111111111%"
+                  title="Ez ebaluagarria: 11.11%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:27.77777777777778%"
+                  title="Ez dago daturik eskuragarri: 27.78%"><span class="status-inner">5</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/3/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/3.png" alt="Osasuna eta ongizatea" width="100" height="100"
+             class="goal-icon-3 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/3/">Osasuna eta ongizatea</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:43.333333333333336%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 43.33%"><span class="status-inner">13</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:3.3333333333333335%"
+                  title="Neurrizko aurrerapena: 3.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:3.3333333333333335%"
+                  title="Geldialdia: 3.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:23.333333333333332%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 23.33%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:6.666666666666667%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 6.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:6.666666666666667%"
+                  title="Ez ebaluagarria: 6.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:13.333333333333334%"
+                  title="Ez dago daturik eskuragarri: 13.33%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/4/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/4.png" alt="Kalitatezko hezkuntza" width="100" height="100"
+             class="goal-icon-4 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/4/">Kalitatezko hezkuntza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:38.46153846153847%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 38.46%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:15.384615384615385%"
+                  title="Neurrizko aurrerapena: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:15.384615384615385%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:7.6923076923076925%"
+                  title="Ez ebaluagarria: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:23.076923076923077%"
+                  title="Ez dago daturik eskuragarri: 23.08%"><span class="status-inner">3</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/5/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/5.png" alt="Genero berdintasuna" width="100" height="100"
+             class="goal-icon-5 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/5/">Genero berdintasuna</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:35.714285714285715%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 35.71%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:7.142857142857142%"
+                  title="Neurrizko aurrerapena: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.142857142857142%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:21.428571428571427%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 21.43%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:28.57142857142857%"
+                  title="Ez dago daturik eskuragarri: 28.57%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/6/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/6.png" alt="Ur garbia eta saneamendua" width="100" height="100"
+             class="goal-icon-6 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/6/">Ur garbia eta saneamendua</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:54.54545454545454%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 54.55%"><span class="status-inner">6</span></span>
+            
+            
+            
+            <span class="not-available" style="width:9.090909090909092%"
+                  title="Ez ebaluagarria: 9.09%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:36.36363636363637%"
+                  title="Ez dago daturik eskuragarri: 36.36%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/7/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/7.png" alt="Energia eskuragarria eta garbia" width="100" height="100"
+             class="goal-icon-7 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/7/">Energia eskuragarria eta garbia</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:66.66666666666666%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 66.67%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:16.666666666666664%"
+                  title="Neurrizko aurrerapena: 16.67%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:16.666666666666664%"
+                  title="Ez dago daturik eskuragarri: 16.67%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/8/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/8.png" alt="Lan duina eta hazkunde ekonomikoa" width="100" height="100"
+             class="goal-icon-8 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/8/">Lan duina eta hazkunde ekonomikoa</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:44.44444444444444%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 44.44%"><span class="status-inner">8</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:11.11111111111111%"
+                  title="Neurrizko aurrerapena: 11.11%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:5.555555555555555%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:5.555555555555555%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="not-available" style="width:11.11111111111111%"
+                  title="Ez ebaluagarria: 11.11%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:22.22222222222222%"
+                  title="Ez dago daturik eskuragarri: 22.22%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/9/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/9.png" alt="Industria, berrikuntza eta azpiegiturak" width="100" height="100"
+             class="goal-icon-9 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/9/">Industria, berrikuntza eta azpiegiturak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:53.84615384615385%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 53.85%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:15.384615384615385%"
+                  title="Neurrizko aurrerapena: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.6923076923076925%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:7.6923076923076925%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:15.384615384615385%"
+                  title="Ez dago daturik eskuragarri: 15.38%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/10/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/10.png" alt="Desberdintasunak murriztea" width="100" height="100"
+             class="goal-icon-10 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/10/">Desberdintasunak murriztea</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:7.142857142857142%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:7.142857142857142%"
+                  title="Geldialdia: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.142857142857142%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:14.285714285714285%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 14.29%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:7.142857142857142%"
+                  title="Ez ebaluagarria: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:50.0%"
+                  title="Ez dago daturik eskuragarri: 50.0%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:7.142857142857142%"
+                  title="Ez aplikagarria: 7.14%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/11/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/11.png" alt="Hiri eta komunitate jasangarriak" width="100" height="100"
+             class="goal-icon-11 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/11/">Hiri eta komunitate jasangarriak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:68.75%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 68.75%"><span class="status-inner">11</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:6.25%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 6.25%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Ez dago daturik eskuragarri: 25.0%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/12/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/12.png" alt="Ekoizpen eta kontsumo arduratsuak" width="100" height="100"
+             class="goal-icon-12 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/12/">Ekoizpen eta kontsumo arduratsuak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:38.46153846153847%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 38.46%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:15.384615384615385%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:7.6923076923076925%"
+                  title="Ez ebaluagarria: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:30.76923076923077%"
+                  title="Ez dago daturik eskuragarri: 30.77%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:7.6923076923076925%"
+                  title="Ez aplikagarria: 7.69%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/13/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/13.png" alt="Klimaren aldeko ekintza" width="100" height="100"
+             class="goal-icon-13 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/13/">Klimaren aldeko ekintza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:62.5%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 62.5%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:12.5%"
+                  title="Ez dago daturik eskuragarri: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:25.0%"
+                  title="Ez aplikagarria: 25.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/14/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/14.png" alt="Itsaspeko bizitza" width="100" height="100"
+             class="goal-icon-14 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/14/">Itsaspeko bizitza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:10.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:10.0%"
+                  title="Geldialdia: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:80.0%"
+                  title="Ez dago daturik eskuragarri: 80.0%"><span class="status-inner">8</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/15/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/15.png" alt="Lehorreko ekosistemetako bizitza" width="100" height="100"
+             class="goal-icon-15 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/15/">Lehorreko ekosistemetako bizitza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:20.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 20.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:6.666666666666667%"
+                  title="Neurrizko aurrerapena: 6.67%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:13.333333333333334%"
+                  title="Geldialdia: 13.33%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:13.333333333333334%"
+                  title="Ez ebaluagarria: 13.33%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:46.666666666666664%"
+                  title="Ez dago daturik eskuragarri: 46.67%"><span class="status-inner">7</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/16/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/16.png" alt="Bakea, justizia eta instituzio sendoak" width="100" height="100"
+             class="goal-icon-16 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/16/">Bakea, justizia eta instituzio sendoak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:16.0%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 16.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:4.0%"
+                  title="Geldialdia: 4.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:8.0%"
+                  title="Neurrizko atzerakada / Aurrerapen eskasegia xedea lortzeko: 8.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:20.0%"
+                  title="Atzerakada nabarmena / Atzerakada xedearekiko: 20.0%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:48.0%"
+                  title="Ez dago daturik eskuragarri: 48.0%"><span class="status-inner">12</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:4.0%"
+                  title="Ez aplikagarria: 4.0%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/17/"><img src="https://eustat-des.github.io/site/assets/img/goals/eu/17.png" alt="Helburuak lortzeko aliantzak" width="100" height="100"
+             class="goal-icon-17 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/17/">Helburuak lortzeko aliantzak</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:29.166666666666668%"
+                  title="Aurrerapen nabarmena / Xedea lortuta edo lortzeko bidean: 29.17%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:12.5%"
+                  title="Neurrizko aurrerapena: 12.5%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="not-available" style="width:4.166666666666666%"
+                  title="Ez ebaluagarria: 4.17%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:37.5%"
+                  title="Ez dago daturik eskuragarri: 37.5%"><span class="status-inner">9</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:16.666666666666664%"
+                  title="Ez aplikagarria: 16.67%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+    </details>
+  </section>
 
   <a href="#top">Gora itzuli</a>
-</div>
+</div><!-- /#main-content -->
 
 <script>
 (function () {
-  var cfg     = OBJETIVO_MEDIDOR_CONFIG;
-  var scores  = OBJETIVO_SCORES;
-  var types   = STATUS_TYPES;
+  var scores    = OBJETIVO_SCORES;
+  var types     = STATUS_TYPES;
+  var cfg       = OBJETIVO_CFG;
+  var colors    = GOAL_COLORS;
+  var goalUrls  = GOAL_URLS;
+  var goalNames = GOAL_NAMES;
+  var goalIcons = GOAL_ICONS;
+  var indData   = IND_SCORES_BY_GOAL;
+  var metData   = MET_SCORES_BY_GOAL;
 
-  var panel      = document.getElementById('objetivo-medidor-panel');
-  var marker     = document.getElementById('om-marker');
-  var scoreVal   = document.getElementById('om-score-value');
-  var scoreLabel = document.getElementById('om-score-label-text');
-  var goalIcon   = document.getElementById('om-goal-icon');
-  var goalNum    = document.getElementById('om-goal-num');
-  var goalTitle  = document.getElementById('om-goal-title');
+  /* Referencias DOM â€” panel */
+  var panel       = document.getElementById('objetivo-medidor-panel');
+  var goalIcon    = document.getElementById('om-goal-icon');
+  var goalNumEl   = document.getElementById('om-goal-num');
+  var goalTitle   = document.getElementById('om-goal-title');
   var statusIcon  = document.getElementById('om-status-icon');
   var statusLabel = document.getElementById('om-status-label');
+  var goalLinkIco = document.getElementById('om-goal-link-icon');
+  var goalLinkTit = document.getElementById('om-goal-link-title');
+  var goalBtn     = document.getElementById('om-goal-btn');
+  var track       = document.getElementById('om-overview-track');
 
+  /* â”€â”€ scoreToPercent: [-5..+5] â†’ 0-100% â”€â”€ */
   function scoreToPercent(s) {
-    // -5 → 0%, +5 → 100%
     return Math.min(100, Math.max(0, (s + 5) / 10 * 100));
   }
 
-  function selectGoal(btn) {
-    // Deseleccionar todos
-    document.querySelectorAll('.ods-selector-btn').forEach(function (b) {
-      b.setAttribute('aria-pressed', 'false');
-      b.classList.remove('ods-selector-btn--active');
+  /* â”€â”€ buildTicks â”€â”€ */
+  function buildTicks(track) {
+    if (!track) return;
+    Object.keys(scores).sort(function (a, b) { return parseInt(a) - parseInt(b); })
+      .forEach(function (g) {
+        var data = scores[g];
+        if (data.score === null || data.score === undefined) return;
+        var pct = scoreToPercent(parseFloat(data.score));
+
+        /* Tick */
+        var tick = document.createElement('div');
+        tick.className = 'om-tick om-tick-b2';
+        tick.setAttribute('data-goal', g);
+        tick.style.left = pct + '%';
+        tick.style.backgroundColor = colors[g] || '#666';
+        (function (_g) {
+          tick.addEventListener('click', function () { selectGoal(_g); });
+        }(g));
+        track.appendChild(tick);
+
+        /* CÃ­rculo en la mitad de la barra */
+        var dot = document.createElement('div');
+        dot.className = 'om-tick-dot';
+        dot.setAttribute('data-goal', g);
+        dot.style.left = pct + '%';
+        dot.style.backgroundColor = colors[g] || '#666';
+        track.appendChild(dot);
+
+        /* Icono */
+        var icon = document.createElement('img');
+        icon.src = goalIcons[g] || '';
+        icon.alt = cfg.lbl_goal + ' ' + g + ': ' + (goalNames[g] || '');
+        icon.className = 'om-tick-icon goal-icon-image';
+        icon.setAttribute('data-goal', g);
+        icon.style.left = pct + '%';
+        (function (_g) {
+          icon.addEventListener('mouseenter', function () { tickHover(_g, true); });
+          icon.addEventListener('mouseleave', function () { tickHover(_g, false); });
+          icon.addEventListener('click', function () { selectGoal(_g); });
+        }(g));
+        track.appendChild(icon);
+      });
+  }
+
+  /* â”€â”€ staggerIcons â”€â”€ */
+  function staggerIcons(track) {
+    var ICON = 60, GAP = 10;
+    var barH = track.offsetHeight || 60;
+    var MID  = barH / 2;
+    var w    = track.offsetWidth  || 800;
+
+    track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+      el.style.transition = 'none';
     });
-    btn.setAttribute('aria-pressed', 'true');
-    btn.classList.add('ods-selector-btn--active');
 
-    var goalNumVal = btn.getAttribute('data-goal');
-    var data = scores[goalNumVal];
-    var goalImg = btn.querySelector('img');
-    var goalTitleTxt = btn.getAttribute('title').replace(cfg.lbl_goal + ' ' + goalNumVal + ': ', '');
+    var items = [];
+    track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+      var pct = parseFloat(el.style.left) / 100;
+      items.push({ el: el, cx: pct * w });
+    });
+    items.sort(function (a, b) { return a.cx - b.cx; });
 
-    // Actualizar cabecera
-    goalIcon.src = goalImg ? goalImg.src : '';
-    goalIcon.alt = goalImg ? goalImg.alt : '';
-    goalNum.textContent  = cfg.lbl_goal + ' ' + goalNumVal;
-    goalTitle.textContent = goalTitleTxt;
+    var aRows = [], bRows = [], maxA = -1, maxB = -1;
+    items.forEach(function (ic) {
+      var left  = ic.cx - ICON / 2 - 2;
+      var right = ic.cx + ICON / 2 + 2;
+      var ra = 0; while (ra < aRows.length && aRows[ra] > left) ra++;
+      var rb = 0; while (rb < bRows.length && bRows[rb] > left) rb++;
+      var above = (ra <= rb);
+      var g    = ic.el.getAttribute('data-goal');
+      var tick = track.querySelector('.om-tick-b2[data-goal="' + g + '"]');
 
-    // Actualizar score y status
-    scoreLabel.textContent = cfg.lbl_score + ':';
-
-    if (!data || data.score === null || data.score === undefined) {
-      scoreVal.textContent = cfg.lbl_no_eval;
-      scoreVal.className = 'om-score-value om-score-no-eval';
-      marker.classList.add('om-marker--hidden');
-      statusIcon.src = cfg.baseurl + '/assets/img/progress/no_evaluable.png';
-      statusIcon.alt = cfg.lbl_no_eval;
-      statusIcon.style.display = '';
-      statusLabel.textContent = cfg.lbl_no_eval;
-    } else {
-      var sc = parseFloat(data.score);
-      var pct = scoreToPercent(sc);
-      scoreVal.textContent = (sc > 0 ? '+' : '') + sc.toFixed(2);
-      scoreVal.className = 'om-score-value';
-      marker.style.left = pct + '%';
-      marker.classList.remove('om-marker--hidden');
-
-      var st = types[data.status];
-      if (st) {
-        if (st.image) {
-          statusIcon.src = cfg.baseurl + '/' + st.image;
-          statusIcon.alt = st.label;
-          statusIcon.style.display = '';
-        } else {
-          statusIcon.style.display = 'none';
+      if (above) {
+        aRows[ra] = right; maxA = Math.max(maxA, ra);
+        var bp = GAP + ra * (ICON + GAP);
+        ic.el.style.top       = '-' + (bp + ICON) + 'px';
+        ic.el.style.bottom    = 'auto';
+        ic.el.style.transform = 'translateX(-50%)';
+        if (tick) {
+          tick.style.top    = '-' + bp + 'px';
+          tick.style.bottom = 'auto';
+          tick.style.height = (MID + bp) + 'px';
         }
-        statusLabel.textContent = st.label;
       } else {
-        statusIcon.style.display = 'none';
-        statusLabel.textContent = data.status;
+        bRows[rb] = right; maxB = Math.max(maxB, rb);
+        var tp = GAP + rb * (ICON + GAP);
+        ic.el.style.top       = (barH + tp) + 'px';
+        ic.el.style.bottom    = 'auto';
+        ic.el.style.transform = 'translateX(-50%)';
+        if (tick) {
+          tick.style.top    = MID + 'px';
+          tick.style.bottom = 'auto';
+          tick.style.height = (tp + MID) + 'px';
+        }
+      }
+    });
+
+    var topSpace = maxA >= 0 ? GAP + maxA * (ICON + GAP) + ICON + 5 : 5;
+    var botSpace = maxB >= 0 ? GAP + maxB * (ICON + GAP) + ICON + 8 : 0;
+    track.style.marginTop = topSpace + 'px';
+    var section = track.parentElement;
+    if (section) section.style.paddingBottom = botSpace + 'px';
+
+    requestAnimationFrame(function () {
+      track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+        el.style.transition = '';
+      });
+    });
+  }
+
+  /* â”€â”€ Tooltip flotante (mismo estilo que .om-zone-label) â”€â”€ */
+  var omHoverTip = document.createElement('div');
+  omHoverTip.className = 'om-zone-label';
+  omHoverTip.style.display = 'none';
+
+  function showHoverTip(g) {
+    omHoverTip.textContent = goalNames[g] || (cfg.lbl_goal + ' ' + g);
+    var ico = track ? track.querySelector('.om-tick-icon[data-goal="' + g + '"]') : null;
+    if (ico) omHoverTip.style.left = ico.style.left;
+    omHoverTip.style.display = 'block';
+  }
+  function hideHoverTip() { omHoverTip.style.display = 'none'; }
+
+  /* â”€â”€ buildGoalStats: total + barra de colores para las secciones del panel â”€â”€ */
+  function buildGoalStats(arr, unit) {
+    if (!arr || !arr.length) return '';
+    var total = arr[0].total || 0;
+    if (!total) return '';
+    var bar = '';
+    arr.forEach(function (d) {
+      var slug = d.status.replace(/_/g, '-');
+      var st   = types[d.status];
+      var lbl  = st ? st.label : d.status;
+      bar += '<span class="' + slug + '" style="width:' + d.percentage.toFixed(2) + '%"'
+           + ' title="' + lbl + ': ' + d.percentage.toFixed(2) + '%">'
+           + '<span class="status-inner">' + d.count + '</span></span>';
+    });
+    return '<span class="total"><span>' + total + '</span> ' + unit + '</span>'
+         + '<div class="goal-stats">' + bar + '</div>';
+  }
+
+  /* â”€â”€ tickHover â”€â”€ */
+  function tickHover(g, on) {
+    document.querySelectorAll('.om-tick[data-goal="' + g + '"]').forEach(function (t) {
+      if (on) {
+        t.style.width = '3px'; t.style.opacity = '1';
+        t.style.zIndex = '3'; t.style.boxShadow = '0 0 6px rgba(0,0,0,.5)';
+      } else {
+        t.style.width = ''; t.style.opacity = ''; t.style.zIndex = ''; t.style.boxShadow = '';
+      }
+    });
+    if (on) showHoverTip(g); else hideHoverTip();
+    var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
+    if (ico) {
+      if (on && !ico.classList.contains('om-icon--active')) {
+        ico.style.width = '65px'; ico.style.height = '65px'; ico.style.zIndex = '4';
+      } else if (!ico.classList.contains('om-icon--active')) {
+        ico.style.width = ''; ico.style.height = ''; ico.style.zIndex = '';
+      }
+    }
+  }
+
+  /* â”€â”€ selectGoal â”€â”€ */
+  function selectGoal(g) {
+    var data = scores[g];
+    if (!data) return;
+
+    /* Restaurar icono activo anterior (sobre barra â†’ ajustar top) */
+    var prevIco = document.querySelector('.om-tick-icon.om-icon--active');
+    if (prevIco && parseFloat(prevIco.style.top || '0') < 0) {
+      prevIco.style.top = (parseFloat(prevIco.style.top) + 10) + 'px';
+    }
+    document.querySelectorAll('.om-tick-icon').forEach(function (i) {
+      i.classList.remove('om-icon--active');
+      i.style.width = ''; i.style.height = ''; i.style.zIndex = '';
+    });
+    document.querySelectorAll('.om-tick').forEach(function (t) {
+      t.classList.remove('om-tick--active');
+      t.style.width = ''; t.style.opacity = ''; t.style.zIndex = ''; t.style.boxShadow = '';
+    });
+    document.querySelectorAll('.om-tick-dot').forEach(function (d) {
+      d.classList.remove('om-tick-dot--active');
+    });
+
+    /* Activar */
+    document.querySelectorAll('.om-tick[data-goal="' + g + '"]').forEach(function (t) {
+      t.classList.add('om-tick--active');
+      t.style.width = '4px'; t.style.opacity = '1'; t.style.zIndex = '5';
+      t.style.boxShadow = '0 2px 8px rgba(0,0,0,.4)';
+    });
+    document.querySelectorAll('.om-tick-dot[data-goal="' + g + '"]').forEach(function (d) {
+      d.classList.add('om-tick-dot--active');
+    });
+    var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
+    if (ico) {
+      ico.classList.add('om-icon--active');
+      ico.style.width = '70px'; ico.style.height = '70px'; ico.style.zIndex = '6';
+      if (parseFloat(ico.style.top || '0') < 0) {
+        ico.style.top = (parseFloat(ico.style.top) - 10) + 'px';
       }
     }
 
+    /* Actualizar panel */
+    var url = goalUrls[g] || (cfg.baseurl + '/' + g + '/');
+    goalIcon.src = goalIcons[g] || '';
+    goalIcon.alt = cfg.lbl_goal + ' ' + g + ': ' + (goalNames[g] || '');
+    goalNumEl.textContent = cfg.lbl_goal + ' ' + g;
+    goalTitle.textContent = goalNames[g] || '';
+    if (goalLinkIco) {
+      goalLinkIco.href = url;
+      goalLinkIco.setAttribute('aria-label',
+        cfg.lbl_view_goal + ': ' + cfg.lbl_goal + ' ' + g);
+    }
+    if (goalLinkTit) goalLinkTit.href = url;
+    if (goalBtn) {
+      goalBtn.href = url;
+      goalBtn.setAttribute('aria-label',
+        cfg.lbl_view_goal + ' ' + g + ': ' + (goalNames[g] || ''));
+    }
+
+    /* Estado */
+    var st = types[data.status];
+    if (st) {
+      statusIcon.src  = st.image ? (cfg.baseurl + '/' + st.image) : '';
+      statusIcon.alt  = statusLabel.textContent = st.label;
+      statusIcon.style.display = st.image ? '' : 'none';
+    } else {
+      statusIcon.style.display = 'none';
+      statusLabel.textContent  = data.status || cfg.lbl_no_eval;
+    }
+
     panel.removeAttribute('hidden');
-      }
 
-  document.querySelectorAll('.ods-selector-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () { selectGoal(btn); });
-    btn.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectGoal(btn); }
-    });
-  });
+    /* Secciones Metas / Indicadores */
+    var metaBody = document.getElementById('om-metas-body');
+    var indBody  = document.getElementById('om-indicadores-body');
+    if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], "jomuga");
+    if (indBody)  indBody.innerHTML  = buildGoalStats(indData[g], "adierazle");
+  }
 
-  // Hash en URL tipo #goal-3 → seleccionar ese objetivo al cargar
+  /* â”€â”€ Init â”€â”€ */
+  buildTicks(track);
+
+  /* El tooltip flotante se aÃ±ade al final del track (encima de ticks en DOM) */
+  if (track) track.appendChild(omHoverTip);
+
+  staggerIcons(track);
+  window.addEventListener('resize', function () { staggerIcons(track); });
+
+  /* SelecciÃ³n inicial: hash URL o primer objetivo */
   var hash = window.location.hash;
   if (hash && hash.match(/^#goal-(\d+)$/)) {
     var n = hash.replace('#goal-', '');
-    var btn = document.querySelector('.ods-selector-btn[data-goal="' + n + '"]');
-    if (btn) selectGoal(btn);
-  } else {
-    // Sin hash: seleccionar ODS 1 por defecto
-    var btn1 = document.querySelector('.ods-selector-btn[data-goal="1"]');
-    if (btn1) selectGoal(btn1);
+    if (scores[n]) { selectGoal(n); return; }
   }
+  var firstGoal = Object.keys(scores)
+    .sort(function (a, b) { return parseInt(a) - parseInt(b); })[0];
+  if (firstGoal) selectGoal(firstGoal);
+
 })();
 </script>
 
@@ -966,7 +2647,7 @@ var OBJETIVO_MEDIDOR_CONFIG = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20261104132431'></script>
+<script src='/site/assets/js/sdg.js?v=20261105104352'></script>
 
 
 <script>
@@ -986,7 +2667,7 @@ var OBJETIVO_MEDIDOR_CONFIG = {
 
     
     
-    <script src="/site/assets/js/custom.js?v=20261104132431"></script><script>
+    <script src="/site/assets/js/custom.js?v=20261105104352"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -994,4 +2675,6 @@ var OBJETIVO_MEDIDOR_CONFIG = {
 
 </body>
 </html>
+
+
 

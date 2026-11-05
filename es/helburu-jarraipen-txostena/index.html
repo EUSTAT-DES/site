@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261104132431">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261105104352">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -402,7 +402,15 @@ data-event-label="high"
 
 
 
+
+
+
+
+
 <script>
+/* â”€â”€ Datos incrustados por Jekyll â”€â”€ */
+
+/* Puntuaciones y estado por objetivo (progreso_objetivos.csv) */
 var OBJETIVO_SCORES = {
   "1": { status: "moderate_progress", score: 0.7345415913 },
   "2": { status: "moderate_progress", score: 0.9045363891 },
@@ -423,6 +431,7 @@ var OBJETIVO_SCORES = {
   "17": { status: "significant_progress", score: 3.9190873913 }
 };
 
+/* Tipos de estado (site.progress_status.status_types + | t) */
 var STATUS_TYPES = {
   "significant_progress": { label: "Avance significativo hacia los objetivos", image: "assets/img/progress/alcanzado.png" },
   "moderate_progress": { label: "Avance moderado hacia los objetivos", image: "assets/img/progress/en_progreso.png" },
@@ -438,392 +447,2064 @@ var STATUS_TYPES = {
   "notapplicable": { label: "No aplicable", image: "" }
 };
 
-var OBJETIVO_MEDIDOR_CONFIG = {
-  baseurl: "/site",
-  lbl_no_eval: "No evaluable",
-  lbl_score:   "Puntuación",
-  lbl_status:  "Estado",
-  lbl_goal:    "Objetivo"
+/* URLs de los 17 objetivos */
+var GOAL_URLS = {
+  "1": "/site/1/",
+  "2": "/site/2/",
+  "3": "/site/3/",
+  "4": "/site/4/",
+  "5": "/site/5/",
+  "6": "/site/6/",
+  "7": "/site/7/",
+  "8": "/site/8/",
+  "9": "/site/9/",
+  "10": "/site/10/",
+  "11": "/site/11/",
+  "12": "/site/12/",
+  "13": "/site/13/",
+  "14": "/site/14/",
+  "15": "/site/15/",
+  "16": "/site/16/",
+  "17": "/site/17/"
+};
+
+/* Colores oficiales ODS 1-17 */
+var GOAL_COLORS = {
+  "1":"#e5243b","2":"#dda63a","3":"#4c9f38","4":"#c5192d","5":"#ff3a21",
+  "6":"#26bde2","7":"#fcc30b","8":"#a21942","9":"#fd6925","10":"#dd1367",
+  "11":"#fd9d24","12":"#bf8b2e","13":"#3f7e44","14":"#0a97d9","15":"#56c02b",
+  "16":"#00689d","17":"#19486a"
+};
+
+/* Nombres cortos de los objetivos (sdg_lookup) */
+var GOAL_NAMES = {
+  "1": "Fin de la Pobreza",
+  "2": "Hambre Cero",
+  "3": "Salud y Bienestar",
+  "4": "Educación de Calidad",
+  "5": "Igualdad de Género",
+  "6": "Agua Limpia y Saneamiento",
+  "7": "Energía Asequible y No Contaminante",
+  "8": "Trabajo decente y crecimiento económico",
+  "9": "Industria, Innovación e Infraestructura",
+  "10": "Reducción de las Desigualdades",
+  "11": "Ciudades y comunidades sostenibles",
+  "12": "Producción y Consumo Responsables",
+  "13": "Acción por el Clima",
+  "14": "Vida Submarina",
+  "15": "Vida de Ecosistemas Terrestres",
+  "16": "Paz, justicia e instituciones fuertes",
+  "17": "Alianzas para Lograr los Objetivos"
+};
+
+/* URLs de los iconos (sdg_lookup) */
+var GOAL_ICONS = {
+  "1": "https://eustat-des.github.io/site/assets/img/goals/es/1.png",
+  "2": "https://eustat-des.github.io/site/assets/img/goals/es/2.png",
+  "3": "https://eustat-des.github.io/site/assets/img/goals/es/3.png",
+  "4": "https://eustat-des.github.io/site/assets/img/goals/es/4.png",
+  "5": "https://eustat-des.github.io/site/assets/img/goals/es/5.png",
+  "6": "https://eustat-des.github.io/site/assets/img/goals/es/6.png",
+  "7": "https://eustat-des.github.io/site/assets/img/goals/es/7.png",
+  "8": "https://eustat-des.github.io/site/assets/img/goals/es/8.png",
+  "9": "https://eustat-des.github.io/site/assets/img/goals/es/9.png",
+  "10": "https://eustat-des.github.io/site/assets/img/goals/es/10.png",
+  "11": "https://eustat-des.github.io/site/assets/img/goals/es/11.png",
+  "12": "https://eustat-des.github.io/site/assets/img/goals/es/12.png",
+  "13": "https://eustat-des.github.io/site/assets/img/goals/es/13.png",
+  "14": "https://eustat-des.github.io/site/assets/img/goals/es/14.png",
+  "15": "https://eustat-des.github.io/site/assets/img/goals/es/15.png",
+  "16": "https://eustat-des.github.io/site/assets/img/goals/es/16.png",
+  "17": "https://eustat-des.github.io/site/assets/img/goals/es/17.png"
+};
+
+/* ConfiguraciÃ³n general */
+var OBJETIVO_CFG = {
+  baseurl:       "/site",
+  lbl_no_eval:   "No evaluable",
+  lbl_goal:      "Objetivo",
+  lbl_view_goal: "Ver objetivo"
+};
+
+/* Datos de indicadores por objetivo (site.data.csv.progreso, sin overall) */
+var IND_SCORES_BY_GOAL = {
+
+"1": [{"status":"significant_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"no_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"moderate_progress","count":1,"percentage":7.6923076923076925,"total":13},{"status":"significant_progress","count":5,"percentage":38.46153846153847,"total":13},{"status":"moderate_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":2,"percentage":15.384615384615385,"total":13}],
+"2": [{"status":"moderate_progress","count":1,"percentage":5.555555555555555,"total":18},{"status":"significant_progress","count":4,"percentage":22.22222222222222,"total":18},{"status":"moderate_deterioration","count":5,"percentage":27.77777777777778,"total":18},{"status":"not_available","count":2,"percentage":11.11111111111111,"total":18},{"status":"no_progress","count":1,"percentage":5.555555555555555,"total":18},{"status":"notstarted","count":5,"percentage":27.77777777777778,"total":18}],
+"3": [{"status":"significant_progress","count":13,"percentage":43.333333333333336,"total":30},{"status":"not_available","count":2,"percentage":6.666666666666667,"total":30},{"status":"moderate_deterioration","count":7,"percentage":23.333333333333332,"total":30},{"status":"significant_deterioration","count":2,"percentage":6.666666666666667,"total":30},{"status":"moderate_progress","count":1,"percentage":3.3333333333333335,"total":30},{"status":"no_progress","count":1,"percentage":3.3333333333333335,"total":30},{"status":"notstarted","count":4,"percentage":13.333333333333334,"total":30}],
+"4": [{"status":"moderate_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"significant_progress","count":5,"percentage":38.46153846153847,"total":13},{"status":"moderate_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"not_available","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":3,"percentage":23.076923076923077,"total":13}],
+"5": [{"status":"significant_progress","count":5,"percentage":35.714285714285715,"total":14},{"status":"significant_deterioration","count":3,"percentage":21.428571428571427,"total":14},{"status":"moderate_progress","count":1,"percentage":7.142857142857142,"total":14},{"status":"moderate_deterioration","count":1,"percentage":7.142857142857142,"total":14},{"status":"notstarted","count":4,"percentage":28.57142857142857,"total":14}],
+"6": [{"status":"significant_progress","count":6,"percentage":54.54545454545454,"total":11},{"status":"not_available","count":1,"percentage":9.090909090909092,"total":11},{"status":"notstarted","count":4,"percentage":36.36363636363637,"total":11}],
+"7": [{"status":"significant_progress","count":4,"percentage":66.66666666666666,"total":6},{"status":"moderate_progress","count":1,"percentage":16.666666666666664,"total":6},{"status":"notstarted","count":1,"percentage":16.666666666666664,"total":6}],
+"8": [{"status":"moderate_progress","count":2,"percentage":11.11111111111111,"total":18},{"status":"significant_deterioration","count":1,"percentage":5.555555555555555,"total":18},{"status":"significant_progress","count":8,"percentage":44.44444444444444,"total":18},{"status":"moderate_deterioration","count":1,"percentage":5.555555555555555,"total":18},{"status":"not_available","count":2,"percentage":11.11111111111111,"total":18},{"status":"notstarted","count":4,"percentage":22.22222222222222,"total":18}],
+"9": [{"status":"significant_progress","count":7,"percentage":53.84615384615385,"total":13},{"status":"moderate_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"significant_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"moderate_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":2,"percentage":15.384615384615385,"total":13}],
+"10": [{"status":"significant_deterioration","count":2,"percentage":14.285714285714285,"total":14},{"status":"moderate_deterioration","count":1,"percentage":7.142857142857142,"total":14},{"status":"significant_progress","count":1,"percentage":7.142857142857142,"total":14},{"status":"no_progress","count":1,"percentage":7.142857142857142,"total":14},{"status":"not_available","count":1,"percentage":7.142857142857142,"total":14},{"status":"notstarted","count":7,"percentage":50.0,"total":14},{"status":"notapplicable","count":1,"percentage":7.142857142857142,"total":14}],
+"11": [{"status":"significant_progress","count":11,"percentage":68.75,"total":16},{"status":"significant_deterioration","count":1,"percentage":6.25,"total":16},{"status":"notstarted","count":4,"percentage":25.0,"total":16}],
+"12": [{"status":"significant_progress","count":5,"percentage":38.46153846153847,"total":13},{"status":"moderate_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"not_available","count":1,"percentage":7.6923076923076925,"total":13},{"status":"notstarted","count":4,"percentage":30.76923076923077,"total":13},{"status":"notapplicable","count":1,"percentage":7.6923076923076925,"total":13}],
+"13": [{"status":"significant_progress","count":5,"percentage":62.5,"total":8},{"status":"notapplicable","count":2,"percentage":25.0,"total":8},{"status":"notstarted","count":1,"percentage":12.5,"total":8}],
+"14": [{"status":"significant_progress","count":1,"percentage":10.0,"total":10},{"status":"no_progress","count":1,"percentage":10.0,"total":10},{"status":"notstarted","count":8,"percentage":80.0,"total":10}],
+"15": [{"status":"not_available","count":2,"percentage":13.333333333333334,"total":15},{"status":"no_progress","count":2,"percentage":13.333333333333334,"total":15},{"status":"significant_progress","count":3,"percentage":20.0,"total":15},{"status":"moderate_progress","count":1,"percentage":6.666666666666667,"total":15},{"status":"notstarted","count":7,"percentage":46.666666666666664,"total":15}],
+"16": [{"status":"significant_deterioration","count":5,"percentage":20.0,"total":25},{"status":"moderate_deterioration","count":2,"percentage":8.0,"total":25},{"status":"significant_progress","count":4,"percentage":16.0,"total":25},{"status":"no_progress","count":1,"percentage":4.0,"total":25},{"status":"notstarted","count":12,"percentage":48.0,"total":25},{"status":"notapplicable","count":1,"percentage":4.0,"total":25}],
+"17": [{"status":"moderate_progress","count":3,"percentage":12.5,"total":24},{"status":"not_available","count":1,"percentage":4.166666666666666,"total":24},{"status":"significant_progress","count":7,"percentage":29.166666666666668,"total":24},{"status":"notapplicable","count":4,"percentage":16.666666666666664,"total":24},{"status":"notstarted","count":9,"percentage":37.5,"total":24}]
+};
+
+/* Datos de metas por objetivo (site.data.csv.progreso_metas, sin overall) */
+var MET_SCORES_BY_GOAL = {
+
+"1": [{"status":"significant_deterioration","count":2,"percentage":28.57142857142857,"total":7},{"status":"moderate_progress","count":1,"percentage":14.285714285714285,"total":7},{"status":"significant_progress","count":2,"percentage":28.57142857142857,"total":7},{"status":"no_progress","count":1,"percentage":14.285714285714285,"total":7},{"status":"notstarted","count":1,"percentage":14.285714285714285,"total":7}],
+"2": [{"status":"moderate_progress","count":3,"percentage":37.5,"total":8},{"status":"significant_progress","count":1,"percentage":12.5,"total":8},{"status":"notstarted","count":2,"percentage":25.0,"total":8},{"status":"moderate_deterioration","count":1,"percentage":12.5,"total":8},{"status":"noevaluado","count":1,"percentage":12.5,"total":8}],
+"3": [{"status":"significant_progress","count":6,"percentage":46.15384615384615,"total":13},{"status":"moderate_progress","count":2,"percentage":15.384615384615385,"total":13},{"status":"moderate_deterioration","count":1,"percentage":7.6923076923076925,"total":13},{"status":"no_progress","count":1,"percentage":7.6923076923076925,"total":13},{"status":"significant_deterioration","count":2,"percentage":15.384615384615385,"total":13},{"status":"notstarted","count":1,"percentage":7.6923076923076925,"total":13}],
+"4": [{"status":"significant_progress","count":4,"percentage":40.0,"total":10},{"status":"moderate_progress","count":1,"percentage":10.0,"total":10},{"status":"moderate_deterioration","count":1,"percentage":10.0,"total":10},{"status":"noevaluado","count":2,"percentage":20.0,"total":10},{"status":"notstarted","count":2,"percentage":20.0,"total":10}],
+"5": [{"status":"significant_progress","count":4,"percentage":44.44444444444444,"total":9},{"status":"significant_deterioration","count":1,"percentage":11.11111111111111,"total":9},{"status":"moderate_progress","count":1,"percentage":11.11111111111111,"total":9},{"status":"notstarted","count":2,"percentage":22.22222222222222,"total":9},{"status":"no_progress","count":1,"percentage":11.11111111111111,"total":9}],
+"6": [{"status":"significant_progress","count":5,"percentage":62.5,"total":8},{"status":"noevaluado","count":1,"percentage":12.5,"total":8},{"status":"notstarted","count":2,"percentage":25.0,"total":8}],
+"7": [{"status":"significant_progress","count":3,"percentage":60.0,"total":5},{"status":"no_progress","count":1,"percentage":20.0,"total":5},{"status":"notstarted","count":1,"percentage":20.0,"total":5}],
+"8": [{"status":"significant_deterioration","count":1,"percentage":8.333333333333332,"total":12},{"status":"significant_progress","count":6,"percentage":50.0,"total":12},{"status":"notstarted","count":2,"percentage":16.666666666666664,"total":12},{"status":"moderate_progress","count":2,"percentage":16.666666666666664,"total":12},{"status":"moderate_deterioration","count":1,"percentage":8.333333333333332,"total":12}],
+"9": [{"status":"significant_progress","count":4,"percentage":50.0,"total":8},{"status":"no_progress","count":1,"percentage":12.5,"total":8},{"status":"significant_deterioration","count":1,"percentage":12.5,"total":8},{"status":"notstarted","count":1,"percentage":12.5,"total":8},{"status":"moderate_progress","count":1,"percentage":12.5,"total":8}],
+"10": [{"status":"noevaluado","count":2,"percentage":20.0,"total":10},{"status":"no_progress","count":1,"percentage":10.0,"total":10},{"status":"significant_deterioration","count":1,"percentage":10.0,"total":10},{"status":"moderate_deterioration","count":1,"percentage":10.0,"total":10},{"status":"notstarted","count":4,"percentage":40.0,"total":10},{"status":"notapplicable","count":1,"percentage":10.0,"total":10}],
+"11": [{"status":"significant_progress","count":7,"percentage":70.0,"total":10},{"status":"notstarted","count":2,"percentage":20.0,"total":10},{"status":"significant_deterioration","count":1,"percentage":10.0,"total":10}],
+"12": [{"status":"significant_progress","count":5,"percentage":45.45454545454545,"total":11},{"status":"noevaluado","count":2,"percentage":18.181818181818183,"total":11},{"status":"moderate_deterioration","count":1,"percentage":9.090909090909092,"total":11},{"status":"notstarted","count":3,"percentage":27.27272727272727,"total":11}],
+"13": [{"status":"significant_progress","count":2,"percentage":40.0,"total":5},{"status":"notstarted","count":1,"percentage":20.0,"total":5},{"status":"notapplicable","count":2,"percentage":40.0,"total":5}],
+"14": [{"status":"notstarted","count":8,"percentage":80.0,"total":10},{"status":"no_progress","count":1,"percentage":10.0,"total":10},{"status":"noevaluado","count":1,"percentage":10.0,"total":10}],
+"15": [{"status":"no_progress","count":2,"percentage":16.666666666666664,"total":12},{"status":"significant_progress","count":3,"percentage":25.0,"total":12},{"status":"notstarted","count":7,"percentage":58.333333333333336,"total":12}],
+"16": [{"status":"moderate_deterioration","count":2,"percentage":16.666666666666664,"total":12},{"status":"significant_progress","count":2,"percentage":16.666666666666664,"total":12},{"status":"noevaluado","count":2,"percentage":16.666666666666664,"total":12},{"status":"notstarted","count":3,"percentage":25.0,"total":12},{"status":"moderate_progress","count":1,"percentage":8.333333333333332,"total":12},{"status":"notapplicable","count":1,"percentage":8.333333333333332,"total":12},{"status":"significant_deterioration","count":1,"percentage":8.333333333333332,"total":12}],
+"17": [{"status":"moderate_progress","count":2,"percentage":10.526315789473683,"total":19},{"status":"notapplicable","count":4,"percentage":21.052631578947366,"total":19},{"status":"noevaluado","count":1,"percentage":5.263157894736842,"total":19},{"status":"notstarted","count":7,"percentage":36.84210526315789,"total":19},{"status":"significant_progress","count":5,"percentage":26.31578947368421,"total":19}]
 };
 </script>
 
-<div id="main-content" class="container layout-progrestatus-objetivos" role="main">
+<div id="main-content" class="container layout-progrestatus-objetivos layout-progrestatus" role="main">
 
-  <h1>Informe de seguimiento de objetivos</h1>
+  <div class="progreso-intro-header">
+  <h1>
+    
+      Informe de seguimiento
+    
+  </h1>
+  <div class="progreso-action-icons">
+    <a href="https://eustat-des.github.io/data/progreso.csv"
+       class="progreso-icon-btn progreso-download-btn-header"
+       title="Descargar datos del informe de seguimiento (.csv)"
+       aria-label="Descargar datos del informe de seguimiento (.csv)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+    <button type="button"
+            class="progreso-icon-btn progreso-print-btn"
+            title="Imprimir informe de seguimiento"
+            aria-label="Imprimir informe de seguimiento"
+            onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+    </button>
+  </div>
+</div>
 
-  <p class="objetivo-medidor-intro">La puntuación va de -5 a +5. Los valores positivos indican progreso; los negativos, retroceso.</p>
 
-  <!-- ── Layout dos columnas: selector izq / panel dcha ────────────────── -->
-  <div class="om-two-col">
+<div class="reporting-status-description">
+  <p>El informe de seguimiento proporciona una descripción general del progreso en la consecución de los Objetivos de Desarrollo Sostenible (ODS) en la Comunidad Autónoma de Euskadi.</p>
 
-    <!-- Columna izquierda: selector de 17 ODS (6 por fila) -->
-    <div class="om-col-selector">
-      <div class="ods-selector-grid" role="group" aria-label="Selecciona un objetivo">
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="1"
-                  aria-pressed="false"
-                  title="Objetivo 1: Fin de la Pobreza">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/1.png"
-                 alt="Objetivo 1: Fin de la Pobreza"
-                 width="80" height="80"
-                 class="goal-icon-1 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">1</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="2"
-                  aria-pressed="false"
-                  title="Objetivo 2: Hambre Cero">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/2.png"
-                 alt="Objetivo 2: Hambre Cero"
-                 width="80" height="80"
-                 class="goal-icon-2 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">2</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="3"
-                  aria-pressed="false"
-                  title="Objetivo 3: Salud y Bienestar">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/3.png"
-                 alt="Objetivo 3: Salud y Bienestar"
-                 width="80" height="80"
-                 class="goal-icon-3 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">3</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="4"
-                  aria-pressed="false"
-                  title="Objetivo 4: Educación de Calidad">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/4.png"
-                 alt="Objetivo 4: Educación de Calidad"
-                 width="80" height="80"
-                 class="goal-icon-4 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">4</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="5"
-                  aria-pressed="false"
-                  title="Objetivo 5: Igualdad de Género">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/5.png"
-                 alt="Objetivo 5: Igualdad de Género"
-                 width="80" height="80"
-                 class="goal-icon-5 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">5</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="6"
-                  aria-pressed="false"
-                  title="Objetivo 6: Agua Limpia y Saneamiento">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/6.png"
-                 alt="Objetivo 6: Agua Limpia y Saneamiento"
-                 width="80" height="80"
-                 class="goal-icon-6 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">6</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="7"
-                  aria-pressed="false"
-                  title="Objetivo 7: Energía Asequible y No Contaminante">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/7.png"
-                 alt="Objetivo 7: Energía Asequible y No Contaminante"
-                 width="80" height="80"
-                 class="goal-icon-7 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">7</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="8"
-                  aria-pressed="false"
-                  title="Objetivo 8: Trabajo decente y crecimiento económico">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/8.png"
-                 alt="Objetivo 8: Trabajo decente y crecimiento económico"
-                 width="80" height="80"
-                 class="goal-icon-8 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">8</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="9"
-                  aria-pressed="false"
-                  title="Objetivo 9: Industria, Innovación e Infraestructura">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/9.png"
-                 alt="Objetivo 9: Industria, Innovación e Infraestructura"
-                 width="80" height="80"
-                 class="goal-icon-9 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">9</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="10"
-                  aria-pressed="false"
-                  title="Objetivo 10: Reducción de las Desigualdades">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/10.png"
-                 alt="Objetivo 10: Reducción de las Desigualdades"
-                 width="80" height="80"
-                 class="goal-icon-10 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">10</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="11"
-                  aria-pressed="false"
-                  title="Objetivo 11: Ciudades y comunidades sostenibles">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/11.png"
-                 alt="Objetivo 11: Ciudades y comunidades sostenibles"
-                 width="80" height="80"
-                 class="goal-icon-11 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">11</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="12"
-                  aria-pressed="false"
-                  title="Objetivo 12: Producción y Consumo Responsables">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/12.png"
-                 alt="Objetivo 12: Producción y Consumo Responsables"
-                 width="80" height="80"
-                 class="goal-icon-12 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">12</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="13"
-                  aria-pressed="false"
-                  title="Objetivo 13: Acción por el Clima">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/13.png"
-                 alt="Objetivo 13: Acción por el Clima"
-                 width="80" height="80"
-                 class="goal-icon-13 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">13</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="14"
-                  aria-pressed="false"
-                  title="Objetivo 14: Vida Submarina">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/14.png"
-                 alt="Objetivo 14: Vida Submarina"
-                 width="80" height="80"
-                 class="goal-icon-14 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">14</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="15"
-                  aria-pressed="false"
-                  title="Objetivo 15: Vida de Ecosistemas Terrestres">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/15.png"
-                 alt="Objetivo 15: Vida de Ecosistemas Terrestres"
-                 width="80" height="80"
-                 class="goal-icon-15 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">15</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="16"
-                  aria-pressed="false"
-                  title="Objetivo 16: Paz, justicia e instituciones fuertes">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/16.png"
-                 alt="Objetivo 16: Paz, justicia e instituciones fuertes"
-                 width="80" height="80"
-                 class="goal-icon-16 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">16</span>
-          </button>
-        
-          
-          <button class="ods-selector-btn"
-                  data-goal="17"
-                  aria-pressed="false"
-                  title="Objetivo 17: Alianzas para Lograr los Objetivos">
-            <img src="https://eustat-des.github.io/site/assets/img/goals/es/17.png"
-                 alt="Objetivo 17: Alianzas para Lograr los Objetivos"
-                 width="80" height="80"
-                 class="goal-icon-17 goal-icon-image goal-icon-image-" />
-            <span class="ods-selector-num">17</span>
-          </button>
-        
-      </div>
+<p>Para saber más sobre el procedimiento para evaluar el progreso, ver <a href="/site/es/metodologia/">Medición del progreso en los Objetivos de Desarrollo Sostenible</a>.</p>
+
+  <div class="progreso-action-icons progreso-action-icons-mobile">
+    <a href="https://eustat-des.github.io/data/progreso.csv"
+       class="progreso-icon-btn progreso-download-btn-mobile"
+       title="Descargar datos del informe de seguimiento (.csv)"
+       aria-label="Descargar datos del informe de seguimiento (.csv)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+    <button type="button"
+            class="progreso-icon-btn progreso-print-btn"
+            title="Imprimir informe de seguimiento"
+            aria-label="Imprimir informe de seguimiento"
+            onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+  <!-- Barra panorÃ¡mica: 17 objetivos situados segÃºn su puntuaciÃ³n -->
+  <div class="om-overview-section">
+    <div class="om-overview-track om-overview-track--icons"
+         id="om-overview-track" aria-hidden="true">
+      <!-- Zonas de color con tooltip del estado (posiciones fijas del gradiente) -->
+      <span class="om-bar-zone significant_deterioration" style="left:0%;width:25%">
+        <span class="om-zone-label">Retroceso significativo</span>
+      </span>
+      <span class="om-bar-zone moderate_deterioration" style="left:25%;width:22.5%">
+        <span class="om-zone-label">Retroceso moderado</span>
+      </span>
+      <span class="om-bar-zone no_progress" style="left:47.5%;width:5%">
+        <span class="om-zone-label">Estancamiento</span>
+      </span>
+      <span class="om-bar-zone moderate_progress" style="left:52.5%;width:22.5%">
+        <span class="om-zone-label">Progreso moderado</span>
+      </span>
+      <span class="om-bar-zone significant_progress" style="left:75%;width:25%">
+        <span class="om-zone-label">Progreso significativo</span>
+      </span>
     </div>
+  </div>
 
-    <!-- Columna derecha: panel del medidor (siempre visible, cargado con ODS 1) -->
-    <div class="om-col-panel">
-      <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
+  <!-- Panel del objetivo seleccionado -->
+  <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
 
-    <!-- Cabecera: icono + título + estado -->
     <div class="objetivo-panel-header">
       <div class="objetivo-panel-icon-wrap">
-        <img id="om-goal-icon" src="" alt="" width="100" height="100" class="goal-icon-image" />
+        <a id="om-goal-link-icon" href="#" aria-label="">
+          <img id="om-goal-icon" src="" alt="" width="90" height="90"
+               class="goal-icon-image" />
+        </a>
       </div>
       <div class="objetivo-panel-info">
         <p class="objetivo-panel-num" id="om-goal-num"></p>
-        <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
-        <div class="objetivo-panel-status" id="om-goal-status-wrap">
-          <img id="om-status-icon" src="" alt="" width="36" height="36" class="om-status-img" />
+        <a id="om-goal-link-title" href="#">
+          <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
+        </a>
+        <div class="objetivo-panel-status">
+          <img id="om-status-icon" src="" alt="" class="om-status-img" />
           <span id="om-status-label" class="om-status-label"></span>
         </div>
       </div>
+      <a id="om-goal-btn" href="#"
+         class="btn btn-primary btn-download om-goal-btn"
+         role="button" aria-label="">Ver objetivo</a>
     </div>
 
-    <!-- Gauge -->
-    <div class="om-gauge-section">
-      <div class="om-gauge-track" role="presentation">
-        <div class="om-gauge-bar" aria-hidden="true">
-          <!-- Marcador -->
-          <div class="om-gauge-marker" id="om-marker" aria-hidden="true">
-            <span class="om-marker-arrow"></span>
+    <!-- SecciÃ³n: Metas del objetivo -->
+    <div class="om-panel-section">
+      <h3 class="om-panel-section-title">Metas</h3>
+      <div class="om-panel-section-body" id="om-metas-body">
+        <p class="om-section-placeholder">â€”</p>
+      </div>
+    </div>
+
+    <!-- SecciÃ³n: Indicadores del objetivo -->
+    <div class="om-panel-section">
+      <h3 class="om-panel-section-title">Indicadores</h3>
+      <div class="om-panel-section-body" id="om-indicadores-body">
+        <p class="om-section-placeholder">â€”</p>
+      </div>
+    </div>
+
+  </div><!-- /.objetivo-medidor-panel -->
+
+  
+  <section class="om-informe-section">
+    <h2>Informe de metas</h2>
+    
+    
+    <div class="goal goal-overall">
+      <div class="frame goal-tiles">
+        <img src="/site/assets/img/SDG Wheel_Transparent-01.png"
+             alt="Objetivos de Desarrollo Sostenible" width="100" height="100"
+             class="goal-icon-image goal-icon-image-" />
+      </div>
+      <div class="details">
+        <span class="total"><span>169</span> metas</span>
+        
+        <div class="summary"><div class="statuses">
+          
+          
+          
+          <div>
+            <span class="status significant-progress"><span class="status-inner">59</span></span>
+            <strong>Progreso significativo / Meta alcanzada o en vías de alcanzarla</strong><span class="value">34.91%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-progress"><span class="status-inner">14</span></span>
+            <strong>Progreso moderado</strong><span class="value">8.28%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status no-progress"><span class="status-inner">9</span></span>
+            <strong>Estancamiento</strong><span class="value">5.33%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-deterioration"><span class="status-inner">8</span></span>
+            <strong>Retroceso moderado / Progreso insuficiente para alcanzar meta</strong><span class="value">4.73%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status significant-deterioration"><span class="status-inner">10</span></span>
+            <strong>Retroceso significativo / Retroceso con respecto a la meta</strong><span class="value">5.92%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status noevaluado"><span class="status-inner">12</span></span>
+            <strong>No evaluable</strong><span class="value">7.1%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notstarted"><span class="status-inner">49</span></span>
+            <strong>Datos no disponibles</strong><span class="value">28.99%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notapplicable"><span class="status-inner">8</span></span>
+            <strong>No aplicable</strong><span class="value">4.73%</span>
+          </div>
+          <br style="clear:both;">
+        </div></div>
+        <div class="goal-stats">
+          
+          
+          
+          <span class="significant-progress" style="width:34.9112426035503%"
+                title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 34.91%"><span class="status-inner">59</span></span>
+          
+          
+          
+          <span class="moderate-progress" style="width:8.284023668639055%"
+                title="Progreso moderado: 8.28%"><span class="status-inner">14</span></span>
+          
+          
+          
+          <span class="no-progress" style="width:5.325443786982249%"
+                title="Estancamiento: 5.33%"><span class="status-inner">9</span></span>
+          
+          
+          
+          <span class="moderate-deterioration" style="width:4.733727810650888%"
+                title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 4.73%"><span class="status-inner">8</span></span>
+          
+          
+          
+          <span class="significant-deterioration" style="width:5.9171597633136095%"
+                title="Retroceso significativo / Retroceso con respecto a la meta: 5.92%"><span class="status-inner">10</span></span>
+          
+          
+          
+          <span class="noevaluado" style="width:7.100591715976331%"
+                title="No evaluable: 7.1%"><span class="status-inner">12</span></span>
+          
+          
+          
+          <span class="notstarted" style="width:28.994082840236686%"
+                title="Datos no disponibles: 28.99%"><span class="status-inner">49</span></span>
+          
+          
+          
+          <span class="notapplicable" style="width:4.733727810650888%"
+                title="No aplicable: 4.73%"><span class="status-inner">8</span></span>
+          
+        </div>
+        
+      </div>
+      <br style="clear:both;">
+    </div>
+    <details class="om-goals-detail">
+      <summary>Detalle por objetivo</summary>
+      
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/1/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/1.png" alt="Fin de la Pobreza" width="100" height="100"
+             class="goal-icon-1 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/1/">Fin de la Pobreza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:28.57142857142857%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 28.57%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:14.285714285714285%"
+                  title="Progreso moderado: 14.29%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:14.285714285714285%"
+                  title="Estancamiento: 14.29%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:28.57142857142857%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 28.57%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:14.285714285714285%"
+                  title="Datos no disponibles: 14.29%"><span class="status-inner">1</span></span>
+            
           </div>
         </div>
-        <!-- Etiquetas numéricas del eje -->
-        <div class="om-gauge-axis" aria-hidden="true">
-          <span>-5</span>
-          <span>-4</span>
-          <span>-3</span>
-          <span>-2</span>
-          <span>-1</span>
-          <span>0</span>
-          <span>+1</span>
-          <span>+2</span>
-          <span>+3</span>
-          <span>+4</span>
-          <span>+5</span>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/2/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/2.png" alt="Hambre Cero" width="100" height="100"
+             class="goal-icon-2 goal-icon-image goal-icon-image-" /></a>
         </div>
-        <!-- Línea central de referencia (0) -->
-        <div class="om-gauge-zero-line" aria-hidden="true"></div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/2/">Hambre Cero</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:12.5%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:37.5%"
+                  title="Progreso moderado: 37.5%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:12.5%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:12.5%"
+                  title="No evaluable: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Datos no disponibles: 25.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
       </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/3/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/3.png" alt="Salud y Bienestar" width="100" height="100"
+             class="goal-icon-3 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/3/">Salud y Bienestar</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:46.15384615384615%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 46.15%"><span class="status-inner">6</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:15.384615384615385%"
+                  title="Progreso moderado: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:7.6923076923076925%"
+                  title="Estancamiento: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.6923076923076925%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:15.384615384615385%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:7.6923076923076925%"
+                  title="Datos no disponibles: 7.69%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/4/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/4.png" alt="Educación de Calidad" width="100" height="100"
+             class="goal-icon-4 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/4/">Educación de Calidad</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:40.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 40.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:10.0%"
+                  title="Progreso moderado: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:10.0%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:20.0%"
+                  title="No evaluable: 20.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Datos no disponibles: 20.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/5/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/5.png" alt="Igualdad de Género" width="100" height="100"
+             class="goal-icon-5 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/5/">Igualdad de Género</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:44.44444444444444%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 44.44%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:11.11111111111111%"
+                  title="Progreso moderado: 11.11%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:11.11111111111111%"
+                  title="Estancamiento: 11.11%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:11.11111111111111%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 11.11%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:22.22222222222222%"
+                  title="Datos no disponibles: 22.22%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/6/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/6.png" alt="Agua Limpia y Saneamiento" width="100" height="100"
+             class="goal-icon-6 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/6/">Agua Limpia y Saneamiento</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:62.5%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 62.5%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:12.5%"
+                  title="No evaluable: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Datos no disponibles: 25.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/7/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/7.png" alt="Energía Asequible y No Contaminante" width="100" height="100"
+             class="goal-icon-7 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/7/">Energía Asequible y No Contaminante</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:60.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 60.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:20.0%"
+                  title="Estancamiento: 20.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Datos no disponibles: 20.0%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/8/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/8.png" alt="Trabajo decente y crecimiento económico" width="100" height="100"
+             class="goal-icon-8 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/8/">Trabajo decente y crecimiento económico</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:50.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 50.0%"><span class="status-inner">6</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:16.666666666666664%"
+                  title="Progreso moderado: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:8.333333333333332%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:8.333333333333332%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:16.666666666666664%"
+                  title="Datos no disponibles: 16.67%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/9/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/9.png" alt="Industria, Innovación e Infraestructura" width="100" height="100"
+             class="goal-icon-9 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/9/">Industria, Innovación e Infraestructura</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:50.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 50.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:12.5%"
+                  title="Progreso moderado: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:12.5%"
+                  title="Estancamiento: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:12.5%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:12.5%"
+                  title="Datos no disponibles: 12.5%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/10/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/10.png" alt="Reducción de las Desigualdades" width="100" height="100"
+             class="goal-icon-10 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/10/">Reducción de las Desigualdades</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="no-progress" style="width:10.0%"
+                  title="Estancamiento: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:10.0%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:10.0%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:20.0%"
+                  title="No evaluable: 20.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:40.0%"
+                  title="Datos no disponibles: 40.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:10.0%"
+                  title="No aplicable: 10.0%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/11/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/11.png" alt="Ciudades y comunidades sostenibles" width="100" height="100"
+             class="goal-icon-11 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/11/">Ciudades y comunidades sostenibles</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:70.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 70.0%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:10.0%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Datos no disponibles: 20.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/12/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/12.png" alt="Producción y Consumo Responsables" width="100" height="100"
+             class="goal-icon-12 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/12/">Producción y Consumo Responsables</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:45.45454545454545%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 45.45%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:9.090909090909092%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 9.09%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:18.181818181818183%"
+                  title="No evaluable: 18.18%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:27.27272727272727%"
+                  title="Datos no disponibles: 27.27%"><span class="status-inner">3</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/13/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/13.png" alt="Acción por el Clima" width="100" height="100"
+             class="goal-icon-13 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/13/">Acción por el Clima</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:40.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 40.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:20.0%"
+                  title="Datos no disponibles: 20.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:40.0%"
+                  title="No aplicable: 40.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/14/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/14.png" alt="Vida Submarina" width="100" height="100"
+             class="goal-icon-14 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/14/">Vida Submarina</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="no-progress" style="width:10.0%"
+                  title="Estancamiento: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:10.0%"
+                  title="No evaluable: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:80.0%"
+                  title="Datos no disponibles: 80.0%"><span class="status-inner">8</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/15/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/15.png" alt="Vida de Ecosistemas Terrestres" width="100" height="100"
+             class="goal-icon-15 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/15/">Vida de Ecosistemas Terrestres</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:25.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 25.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:16.666666666666664%"
+                  title="Estancamiento: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:58.333333333333336%"
+                  title="Datos no disponibles: 58.33%"><span class="status-inner">7</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/16/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/16.png" alt="Paz, justicia e instituciones fuertes" width="100" height="100"
+             class="goal-icon-16 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/16/">Paz, justicia e instituciones fuertes</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:16.666666666666664%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:8.333333333333332%"
+                  title="Progreso moderado: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:16.666666666666664%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:8.333333333333332%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 8.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:16.666666666666664%"
+                  title="No evaluable: 16.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Datos no disponibles: 25.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:8.333333333333332%"
+                  title="No aplicable: 8.33%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/17/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/17.png" alt="Alianzas para Lograr los Objetivos" width="100" height="100"
+             class="goal-icon-17 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/17/">Alianzas para Lograr los Objetivos</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:26.31578947368421%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 26.32%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:10.526315789473683%"
+                  title="Progreso moderado: 10.53%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="noevaluado" style="width:5.263157894736842%"
+                  title="No evaluable: 5.26%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:36.84210526315789%"
+                  title="Datos no disponibles: 36.84%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:21.052631578947366%"
+                  title="No aplicable: 21.05%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+    </details>
+  </section>
 
-      <!-- Valor numérico del score (accesibilidad: información no depende solo del color) -->
-      <div class="om-score-display">
-        <span class="om-score-label" id="om-score-label-text"></span>
-        <span class="om-score-value" id="om-score-value" aria-live="polite"></span>
+  
+  <section class="om-informe-section">
+    <h2>Informe de indicadores</h2>
+    
+    
+    <div class="goal goal-overall">
+      <div class="frame goal-tiles">
+        <img src="/site/assets/img/SDG Wheel_Transparent-01.png"
+             alt="Objetivos de Desarrollo Sostenible" width="100" height="100"
+             class="goal-icon-image goal-icon-image-" />
       </div>
+      <div class="details">
+        <span class="total"><span>261</span> indicadores</span>
+        
+        <div class="summary"><div class="statuses">
+          
+          
+          
+          <div>
+            <span class="status significant-progress"><span class="status-inner">94</span></span>
+            <strong>Progreso significativo / Meta alcanzada o en vías de alcanzarla</strong><span class="value">36.02%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-progress"><span class="status-inner">15</span></span>
+            <strong>Progreso moderado</strong><span class="value">5.75%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status no-progress"><span class="status-inner">9</span></span>
+            <strong>Estancamiento</strong><span class="value">3.45%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status moderate-deterioration"><span class="status-inner">23</span></span>
+            <strong>Retroceso moderado / Progreso insuficiente para alcanzar meta</strong><span class="value">8.81%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status significant-deterioration"><span class="status-inner">17</span></span>
+            <strong>Retroceso significativo / Retroceso con respecto a la meta</strong><span class="value">6.51%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status not-available"><span class="status-inner">13</span></span>
+            <strong>No evaluable</strong><span class="value">4.98%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notstarted"><span class="status-inner">81</span></span>
+            <strong>Datos no disponibles</strong><span class="value">31.03%</span>
+          </div>
+          
+          
+          <div>
+            <span class="status notapplicable"><span class="status-inner">9</span></span>
+            <strong>No aplicable</strong><span class="value">3.45%</span>
+          </div>
+          <br style="clear:both;">
+        </div></div>
+        <div class="goal-stats">
+          
+          
+          
+          <span class="significant-progress" style="width:36.015325670498086%"
+                title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 36.02%"><span class="status-inner">94</span></span>
+          
+          
+          
+          <span class="moderate-progress" style="width:5.747126436781609%"
+                title="Progreso moderado: 5.75%"><span class="status-inner">15</span></span>
+          
+          
+          
+          <span class="no-progress" style="width:3.4482758620689653%"
+                title="Estancamiento: 3.45%"><span class="status-inner">9</span></span>
+          
+          
+          
+          <span class="moderate-deterioration" style="width:8.812260536398467%"
+                title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 8.81%"><span class="status-inner">23</span></span>
+          
+          
+          
+          <span class="significant-deterioration" style="width:6.513409961685824%"
+                title="Retroceso significativo / Retroceso con respecto a la meta: 6.51%"><span class="status-inner">17</span></span>
+          
+          
+          
+          <span class="not-available" style="width:4.980842911877394%"
+                title="No evaluable: 4.98%"><span class="status-inner">13</span></span>
+          
+          
+          
+          <span class="notstarted" style="width:31.03448275862069%"
+                title="Datos no disponibles: 31.03%"><span class="status-inner">81</span></span>
+          
+          
+          
+          <span class="notapplicable" style="width:3.4482758620689653%"
+                title="No aplicable: 3.45%"><span class="status-inner">9</span></span>
+          
+        </div>
+        
+      </div>
+      <br style="clear:both;">
     </div>
-
-    </div><!-- /.objetivo-medidor-panel -->
-    </div><!-- /.om-col-panel -->
-  </div><!-- /.om-two-col -->
+    <details class="om-goals-detail">
+      <summary>Detalle por objetivo</summary>
+      
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/1/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/1.png" alt="Fin de la Pobreza" width="100" height="100"
+             class="goal-icon-1 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/1/">Fin de la Pobreza</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:38.46153846153847%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 38.46%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:7.6923076923076925%"
+                  title="Progreso moderado: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:15.384615384615385%"
+                  title="Estancamiento: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.6923076923076925%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:15.384615384615385%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:15.384615384615385%"
+                  title="Datos no disponibles: 15.38%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/2/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/2.png" alt="Hambre Cero" width="100" height="100"
+             class="goal-icon-2 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/2/">Hambre Cero</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:22.22222222222222%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 22.22%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:5.555555555555555%"
+                  title="Progreso moderado: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:5.555555555555555%"
+                  title="Estancamiento: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:27.77777777777778%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 27.78%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="not-available" style="width:11.11111111111111%"
+                  title="No evaluable: 11.11%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:27.77777777777778%"
+                  title="Datos no disponibles: 27.78%"><span class="status-inner">5</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/3/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/3.png" alt="Salud y Bienestar" width="100" height="100"
+             class="goal-icon-3 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/3/">Salud y Bienestar</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:43.333333333333336%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 43.33%"><span class="status-inner">13</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:3.3333333333333335%"
+                  title="Progreso moderado: 3.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:3.3333333333333335%"
+                  title="Estancamiento: 3.33%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:23.333333333333332%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 23.33%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:6.666666666666667%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 6.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:6.666666666666667%"
+                  title="No evaluable: 6.67%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:13.333333333333334%"
+                  title="Datos no disponibles: 13.33%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/4/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/4.png" alt="Educación de Calidad" width="100" height="100"
+             class="goal-icon-4 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/4/">Educación de Calidad</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:38.46153846153847%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 38.46%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:15.384615384615385%"
+                  title="Progreso moderado: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:15.384615384615385%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:7.6923076923076925%"
+                  title="No evaluable: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:23.076923076923077%"
+                  title="Datos no disponibles: 23.08%"><span class="status-inner">3</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/5/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/5.png" alt="Igualdad de Género" width="100" height="100"
+             class="goal-icon-5 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/5/">Igualdad de Género</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:35.714285714285715%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 35.71%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:7.142857142857142%"
+                  title="Progreso moderado: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.142857142857142%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:21.428571428571427%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 21.43%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:28.57142857142857%"
+                  title="Datos no disponibles: 28.57%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/6/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/6.png" alt="Agua Limpia y Saneamiento" width="100" height="100"
+             class="goal-icon-6 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/6/">Agua Limpia y Saneamiento</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:54.54545454545454%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 54.55%"><span class="status-inner">6</span></span>
+            
+            
+            
+            <span class="not-available" style="width:9.090909090909092%"
+                  title="No evaluable: 9.09%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:36.36363636363637%"
+                  title="Datos no disponibles: 36.36%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/7/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/7.png" alt="Energía Asequible y No Contaminante" width="100" height="100"
+             class="goal-icon-7 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/7/">Energía Asequible y No Contaminante</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:66.66666666666666%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 66.67%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:16.666666666666664%"
+                  title="Progreso moderado: 16.67%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:16.666666666666664%"
+                  title="Datos no disponibles: 16.67%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/8/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/8.png" alt="Trabajo decente y crecimiento económico" width="100" height="100"
+             class="goal-icon-8 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/8/">Trabajo decente y crecimiento económico</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:44.44444444444444%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 44.44%"><span class="status-inner">8</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:11.11111111111111%"
+                  title="Progreso moderado: 11.11%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:5.555555555555555%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:5.555555555555555%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 5.56%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="not-available" style="width:11.11111111111111%"
+                  title="No evaluable: 11.11%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:22.22222222222222%"
+                  title="Datos no disponibles: 22.22%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/9/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/9.png" alt="Industria, Innovación e Infraestructura" width="100" height="100"
+             class="goal-icon-9 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/9/">Industria, Innovación e Infraestructura</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:53.84615384615385%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 53.85%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:15.384615384615385%"
+                  title="Progreso moderado: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.6923076923076925%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:7.6923076923076925%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:15.384615384615385%"
+                  title="Datos no disponibles: 15.38%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/10/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/10.png" alt="Reducción de las Desigualdades" width="100" height="100"
+             class="goal-icon-10 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/10/">Reducción de las Desigualdades</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:7.142857142857142%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:7.142857142857142%"
+                  title="Estancamiento: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:7.142857142857142%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:14.285714285714285%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 14.29%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:7.142857142857142%"
+                  title="No evaluable: 7.14%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:50.0%"
+                  title="Datos no disponibles: 50.0%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:7.142857142857142%"
+                  title="No aplicable: 7.14%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/11/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/11.png" alt="Ciudades y comunidades sostenibles" width="100" height="100"
+             class="goal-icon-11 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/11/">Ciudades y comunidades sostenibles</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:68.75%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 68.75%"><span class="status-inner">11</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:6.25%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 6.25%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:25.0%"
+                  title="Datos no disponibles: 25.0%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/12/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/12.png" alt="Producción y Consumo Responsables" width="100" height="100"
+             class="goal-icon-12 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/12/">Producción y Consumo Responsables</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:38.46153846153847%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 38.46%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:15.384615384615385%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 15.38%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:7.6923076923076925%"
+                  title="No evaluable: 7.69%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:30.76923076923077%"
+                  title="Datos no disponibles: 30.77%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:7.6923076923076925%"
+                  title="No aplicable: 7.69%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/13/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/13.png" alt="Acción por el Clima" width="100" height="100"
+             class="goal-icon-13 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/13/">Acción por el Clima</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:62.5%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 62.5%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:12.5%"
+                  title="Datos no disponibles: 12.5%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:25.0%"
+                  title="No aplicable: 25.0%"><span class="status-inner">2</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/14/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/14.png" alt="Vida Submarina" width="100" height="100"
+             class="goal-icon-14 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/14/">Vida Submarina</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:10.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:10.0%"
+                  title="Estancamiento: 10.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:80.0%"
+                  title="Datos no disponibles: 80.0%"><span class="status-inner">8</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/15/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/15.png" alt="Vida de Ecosistemas Terrestres" width="100" height="100"
+             class="goal-icon-15 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/15/">Vida de Ecosistemas Terrestres</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:20.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 20.0%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:6.666666666666667%"
+                  title="Progreso moderado: 6.67%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:13.333333333333334%"
+                  title="Estancamiento: 13.33%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="not-available" style="width:13.333333333333334%"
+                  title="No evaluable: 13.33%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:46.666666666666664%"
+                  title="Datos no disponibles: 46.67%"><span class="status-inner">7</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/16/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/16.png" alt="Paz, justicia e instituciones fuertes" width="100" height="100"
+             class="goal-icon-16 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/16/">Paz, justicia e instituciones fuertes</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:16.0%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 16.0%"><span class="status-inner">4</span></span>
+            
+            
+            
+            <span class="no-progress" style="width:4.0%"
+                  title="Estancamiento: 4.0%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="moderate-deterioration" style="width:8.0%"
+                  title="Retroceso moderado / Progreso insuficiente para alcanzar meta: 8.0%"><span class="status-inner">2</span></span>
+            
+            
+            
+            <span class="significant-deterioration" style="width:20.0%"
+                  title="Retroceso significativo / Retroceso con respecto a la meta: 20.0%"><span class="status-inner">5</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:48.0%"
+                  title="Datos no disponibles: 48.0%"><span class="status-inner">12</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:4.0%"
+                  title="No aplicable: 4.0%"><span class="status-inner">1</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="/site/es/17/"><img src="https://eustat-des.github.io/site/assets/img/goals/es/17.png" alt="Alianzas para Lograr los Objetivos" width="100" height="100"
+             class="goal-icon-17 goal-icon-image goal-icon-image-" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="/site/es/17/">Alianzas para Lograr los Objetivos</a></h3>
+          <div class="goal-stats">
+            
+            
+            
+            <span class="significant-progress" style="width:29.166666666666668%"
+                  title="Progreso significativo / Meta alcanzada o en vías de alcanzarla: 29.17%"><span class="status-inner">7</span></span>
+            
+            
+            
+            <span class="moderate-progress" style="width:12.5%"
+                  title="Progreso moderado: 12.5%"><span class="status-inner">3</span></span>
+            
+            
+            
+            <span class="not-available" style="width:4.166666666666666%"
+                  title="No evaluable: 4.17%"><span class="status-inner">1</span></span>
+            
+            
+            
+            <span class="notstarted" style="width:37.5%"
+                  title="Datos no disponibles: 37.5%"><span class="status-inner">9</span></span>
+            
+            
+            
+            <span class="notapplicable" style="width:16.666666666666664%"
+                  title="No aplicable: 16.67%"><span class="status-inner">4</span></span>
+            
+          </div>
+        </div>
+        <br style="clear:both;">
+      </div>
+      
+    </details>
+  </section>
 
   <a href="#top">Volver arriba</a>
-</div>
+</div><!-- /#main-content -->
 
 <script>
 (function () {
-  var cfg     = OBJETIVO_MEDIDOR_CONFIG;
-  var scores  = OBJETIVO_SCORES;
-  var types   = STATUS_TYPES;
+  var scores    = OBJETIVO_SCORES;
+  var types     = STATUS_TYPES;
+  var cfg       = OBJETIVO_CFG;
+  var colors    = GOAL_COLORS;
+  var goalUrls  = GOAL_URLS;
+  var goalNames = GOAL_NAMES;
+  var goalIcons = GOAL_ICONS;
+  var indData   = IND_SCORES_BY_GOAL;
+  var metData   = MET_SCORES_BY_GOAL;
 
-  var panel      = document.getElementById('objetivo-medidor-panel');
-  var marker     = document.getElementById('om-marker');
-  var scoreVal   = document.getElementById('om-score-value');
-  var scoreLabel = document.getElementById('om-score-label-text');
-  var goalIcon   = document.getElementById('om-goal-icon');
-  var goalNum    = document.getElementById('om-goal-num');
-  var goalTitle  = document.getElementById('om-goal-title');
+  /* Referencias DOM â€” panel */
+  var panel       = document.getElementById('objetivo-medidor-panel');
+  var goalIcon    = document.getElementById('om-goal-icon');
+  var goalNumEl   = document.getElementById('om-goal-num');
+  var goalTitle   = document.getElementById('om-goal-title');
   var statusIcon  = document.getElementById('om-status-icon');
   var statusLabel = document.getElementById('om-status-label');
+  var goalLinkIco = document.getElementById('om-goal-link-icon');
+  var goalLinkTit = document.getElementById('om-goal-link-title');
+  var goalBtn     = document.getElementById('om-goal-btn');
+  var track       = document.getElementById('om-overview-track');
 
+  /* â”€â”€ scoreToPercent: [-5..+5] â†’ 0-100% â”€â”€ */
   function scoreToPercent(s) {
-    // -5 → 0%, +5 → 100%
     return Math.min(100, Math.max(0, (s + 5) / 10 * 100));
   }
 
-  function selectGoal(btn) {
-    // Deseleccionar todos
-    document.querySelectorAll('.ods-selector-btn').forEach(function (b) {
-      b.setAttribute('aria-pressed', 'false');
-      b.classList.remove('ods-selector-btn--active');
+  /* â”€â”€ buildTicks â”€â”€ */
+  function buildTicks(track) {
+    if (!track) return;
+    Object.keys(scores).sort(function (a, b) { return parseInt(a) - parseInt(b); })
+      .forEach(function (g) {
+        var data = scores[g];
+        if (data.score === null || data.score === undefined) return;
+        var pct = scoreToPercent(parseFloat(data.score));
+
+        /* Tick */
+        var tick = document.createElement('div');
+        tick.className = 'om-tick om-tick-b2';
+        tick.setAttribute('data-goal', g);
+        tick.style.left = pct + '%';
+        tick.style.backgroundColor = colors[g] || '#666';
+        (function (_g) {
+          tick.addEventListener('click', function () { selectGoal(_g); });
+        }(g));
+        track.appendChild(tick);
+
+        /* CÃ­rculo en la mitad de la barra */
+        var dot = document.createElement('div');
+        dot.className = 'om-tick-dot';
+        dot.setAttribute('data-goal', g);
+        dot.style.left = pct + '%';
+        dot.style.backgroundColor = colors[g] || '#666';
+        track.appendChild(dot);
+
+        /* Icono */
+        var icon = document.createElement('img');
+        icon.src = goalIcons[g] || '';
+        icon.alt = cfg.lbl_goal + ' ' + g + ': ' + (goalNames[g] || '');
+        icon.className = 'om-tick-icon goal-icon-image';
+        icon.setAttribute('data-goal', g);
+        icon.style.left = pct + '%';
+        (function (_g) {
+          icon.addEventListener('mouseenter', function () { tickHover(_g, true); });
+          icon.addEventListener('mouseleave', function () { tickHover(_g, false); });
+          icon.addEventListener('click', function () { selectGoal(_g); });
+        }(g));
+        track.appendChild(icon);
+      });
+  }
+
+  /* â”€â”€ staggerIcons â”€â”€ */
+  function staggerIcons(track) {
+    var ICON = 60, GAP = 10;
+    var barH = track.offsetHeight || 60;
+    var MID  = barH / 2;
+    var w    = track.offsetWidth  || 800;
+
+    track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+      el.style.transition = 'none';
     });
-    btn.setAttribute('aria-pressed', 'true');
-    btn.classList.add('ods-selector-btn--active');
 
-    var goalNumVal = btn.getAttribute('data-goal');
-    var data = scores[goalNumVal];
-    var goalImg = btn.querySelector('img');
-    var goalTitleTxt = btn.getAttribute('title').replace(cfg.lbl_goal + ' ' + goalNumVal + ': ', '');
+    var items = [];
+    track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+      var pct = parseFloat(el.style.left) / 100;
+      items.push({ el: el, cx: pct * w });
+    });
+    items.sort(function (a, b) { return a.cx - b.cx; });
 
-    // Actualizar cabecera
-    goalIcon.src = goalImg ? goalImg.src : '';
-    goalIcon.alt = goalImg ? goalImg.alt : '';
-    goalNum.textContent  = cfg.lbl_goal + ' ' + goalNumVal;
-    goalTitle.textContent = goalTitleTxt;
+    var aRows = [], bRows = [], maxA = -1, maxB = -1;
+    items.forEach(function (ic) {
+      var left  = ic.cx - ICON / 2 - 2;
+      var right = ic.cx + ICON / 2 + 2;
+      var ra = 0; while (ra < aRows.length && aRows[ra] > left) ra++;
+      var rb = 0; while (rb < bRows.length && bRows[rb] > left) rb++;
+      var above = (ra <= rb);
+      var g    = ic.el.getAttribute('data-goal');
+      var tick = track.querySelector('.om-tick-b2[data-goal="' + g + '"]');
 
-    // Actualizar score y status
-    scoreLabel.textContent = cfg.lbl_score + ':';
-
-    if (!data || data.score === null || data.score === undefined) {
-      scoreVal.textContent = cfg.lbl_no_eval;
-      scoreVal.className = 'om-score-value om-score-no-eval';
-      marker.classList.add('om-marker--hidden');
-      statusIcon.src = cfg.baseurl + '/assets/img/progress/no_evaluable.png';
-      statusIcon.alt = cfg.lbl_no_eval;
-      statusIcon.style.display = '';
-      statusLabel.textContent = cfg.lbl_no_eval;
-    } else {
-      var sc = parseFloat(data.score);
-      var pct = scoreToPercent(sc);
-      scoreVal.textContent = (sc > 0 ? '+' : '') + sc.toFixed(2);
-      scoreVal.className = 'om-score-value';
-      marker.style.left = pct + '%';
-      marker.classList.remove('om-marker--hidden');
-
-      var st = types[data.status];
-      if (st) {
-        if (st.image) {
-          statusIcon.src = cfg.baseurl + '/' + st.image;
-          statusIcon.alt = st.label;
-          statusIcon.style.display = '';
-        } else {
-          statusIcon.style.display = 'none';
+      if (above) {
+        aRows[ra] = right; maxA = Math.max(maxA, ra);
+        var bp = GAP + ra * (ICON + GAP);
+        ic.el.style.top       = '-' + (bp + ICON) + 'px';
+        ic.el.style.bottom    = 'auto';
+        ic.el.style.transform = 'translateX(-50%)';
+        if (tick) {
+          tick.style.top    = '-' + bp + 'px';
+          tick.style.bottom = 'auto';
+          tick.style.height = (MID + bp) + 'px';
         }
-        statusLabel.textContent = st.label;
       } else {
-        statusIcon.style.display = 'none';
-        statusLabel.textContent = data.status;
+        bRows[rb] = right; maxB = Math.max(maxB, rb);
+        var tp = GAP + rb * (ICON + GAP);
+        ic.el.style.top       = (barH + tp) + 'px';
+        ic.el.style.bottom    = 'auto';
+        ic.el.style.transform = 'translateX(-50%)';
+        if (tick) {
+          tick.style.top    = MID + 'px';
+          tick.style.bottom = 'auto';
+          tick.style.height = (tp + MID) + 'px';
+        }
+      }
+    });
+
+    var topSpace = maxA >= 0 ? GAP + maxA * (ICON + GAP) + ICON + 5 : 5;
+    var botSpace = maxB >= 0 ? GAP + maxB * (ICON + GAP) + ICON + 8 : 0;
+    track.style.marginTop = topSpace + 'px';
+    var section = track.parentElement;
+    if (section) section.style.paddingBottom = botSpace + 'px';
+
+    requestAnimationFrame(function () {
+      track.querySelectorAll('.om-tick-icon').forEach(function (el) {
+        el.style.transition = '';
+      });
+    });
+  }
+
+  /* â”€â”€ Tooltip flotante (mismo estilo que .om-zone-label) â”€â”€ */
+  var omHoverTip = document.createElement('div');
+  omHoverTip.className = 'om-zone-label';
+  omHoverTip.style.display = 'none';
+
+  function showHoverTip(g) {
+    omHoverTip.textContent = goalNames[g] || (cfg.lbl_goal + ' ' + g);
+    var ico = track ? track.querySelector('.om-tick-icon[data-goal="' + g + '"]') : null;
+    if (ico) omHoverTip.style.left = ico.style.left;
+    omHoverTip.style.display = 'block';
+  }
+  function hideHoverTip() { omHoverTip.style.display = 'none'; }
+
+  /* â”€â”€ buildGoalStats: total + barra de colores para las secciones del panel â”€â”€ */
+  function buildGoalStats(arr, unit) {
+    if (!arr || !arr.length) return '';
+    var total = arr[0].total || 0;
+    if (!total) return '';
+    var bar = '';
+    arr.forEach(function (d) {
+      var slug = d.status.replace(/_/g, '-');
+      var st   = types[d.status];
+      var lbl  = st ? st.label : d.status;
+      bar += '<span class="' + slug + '" style="width:' + d.percentage.toFixed(2) + '%"'
+           + ' title="' + lbl + ': ' + d.percentage.toFixed(2) + '%">'
+           + '<span class="status-inner">' + d.count + '</span></span>';
+    });
+    return '<span class="total"><span>' + total + '</span> ' + unit + '</span>'
+         + '<div class="goal-stats">' + bar + '</div>';
+  }
+
+  /* â”€â”€ tickHover â”€â”€ */
+  function tickHover(g, on) {
+    document.querySelectorAll('.om-tick[data-goal="' + g + '"]').forEach(function (t) {
+      if (on) {
+        t.style.width = '3px'; t.style.opacity = '1';
+        t.style.zIndex = '3'; t.style.boxShadow = '0 0 6px rgba(0,0,0,.5)';
+      } else {
+        t.style.width = ''; t.style.opacity = ''; t.style.zIndex = ''; t.style.boxShadow = '';
+      }
+    });
+    if (on) showHoverTip(g); else hideHoverTip();
+    var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
+    if (ico) {
+      if (on && !ico.classList.contains('om-icon--active')) {
+        ico.style.width = '65px'; ico.style.height = '65px'; ico.style.zIndex = '4';
+      } else if (!ico.classList.contains('om-icon--active')) {
+        ico.style.width = ''; ico.style.height = ''; ico.style.zIndex = '';
+      }
+    }
+  }
+
+  /* â”€â”€ selectGoal â”€â”€ */
+  function selectGoal(g) {
+    var data = scores[g];
+    if (!data) return;
+
+    /* Restaurar icono activo anterior (sobre barra â†’ ajustar top) */
+    var prevIco = document.querySelector('.om-tick-icon.om-icon--active');
+    if (prevIco && parseFloat(prevIco.style.top || '0') < 0) {
+      prevIco.style.top = (parseFloat(prevIco.style.top) + 10) + 'px';
+    }
+    document.querySelectorAll('.om-tick-icon').forEach(function (i) {
+      i.classList.remove('om-icon--active');
+      i.style.width = ''; i.style.height = ''; i.style.zIndex = '';
+    });
+    document.querySelectorAll('.om-tick').forEach(function (t) {
+      t.classList.remove('om-tick--active');
+      t.style.width = ''; t.style.opacity = ''; t.style.zIndex = ''; t.style.boxShadow = '';
+    });
+    document.querySelectorAll('.om-tick-dot').forEach(function (d) {
+      d.classList.remove('om-tick-dot--active');
+    });
+
+    /* Activar */
+    document.querySelectorAll('.om-tick[data-goal="' + g + '"]').forEach(function (t) {
+      t.classList.add('om-tick--active');
+      t.style.width = '4px'; t.style.opacity = '1'; t.style.zIndex = '5';
+      t.style.boxShadow = '0 2px 8px rgba(0,0,0,.4)';
+    });
+    document.querySelectorAll('.om-tick-dot[data-goal="' + g + '"]').forEach(function (d) {
+      d.classList.add('om-tick-dot--active');
+    });
+    var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
+    if (ico) {
+      ico.classList.add('om-icon--active');
+      ico.style.width = '70px'; ico.style.height = '70px'; ico.style.zIndex = '6';
+      if (parseFloat(ico.style.top || '0') < 0) {
+        ico.style.top = (parseFloat(ico.style.top) - 10) + 'px';
       }
     }
 
+    /* Actualizar panel */
+    var url = goalUrls[g] || (cfg.baseurl + '/' + g + '/');
+    goalIcon.src = goalIcons[g] || '';
+    goalIcon.alt = cfg.lbl_goal + ' ' + g + ': ' + (goalNames[g] || '');
+    goalNumEl.textContent = cfg.lbl_goal + ' ' + g;
+    goalTitle.textContent = goalNames[g] || '';
+    if (goalLinkIco) {
+      goalLinkIco.href = url;
+      goalLinkIco.setAttribute('aria-label',
+        cfg.lbl_view_goal + ': ' + cfg.lbl_goal + ' ' + g);
+    }
+    if (goalLinkTit) goalLinkTit.href = url;
+    if (goalBtn) {
+      goalBtn.href = url;
+      goalBtn.setAttribute('aria-label',
+        cfg.lbl_view_goal + ' ' + g + ': ' + (goalNames[g] || ''));
+    }
+
+    /* Estado */
+    var st = types[data.status];
+    if (st) {
+      statusIcon.src  = st.image ? (cfg.baseurl + '/' + st.image) : '';
+      statusIcon.alt  = statusLabel.textContent = st.label;
+      statusIcon.style.display = st.image ? '' : 'none';
+    } else {
+      statusIcon.style.display = 'none';
+      statusLabel.textContent  = data.status || cfg.lbl_no_eval;
+    }
+
     panel.removeAttribute('hidden');
-      }
 
-  document.querySelectorAll('.ods-selector-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () { selectGoal(btn); });
-    btn.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectGoal(btn); }
-    });
-  });
+    /* Secciones Metas / Indicadores */
+    var metaBody = document.getElementById('om-metas-body');
+    var indBody  = document.getElementById('om-indicadores-body');
+    if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], "metas");
+    if (indBody)  indBody.innerHTML  = buildGoalStats(indData[g], "indicadores");
+  }
 
-  // Hash en URL tipo #goal-3 → seleccionar ese objetivo al cargar
+  /* â”€â”€ Init â”€â”€ */
+  buildTicks(track);
+
+  /* El tooltip flotante se aÃ±ade al final del track (encima de ticks en DOM) */
+  if (track) track.appendChild(omHoverTip);
+
+  staggerIcons(track);
+  window.addEventListener('resize', function () { staggerIcons(track); });
+
+  /* SelecciÃ³n inicial: hash URL o primer objetivo */
   var hash = window.location.hash;
   if (hash && hash.match(/^#goal-(\d+)$/)) {
     var n = hash.replace('#goal-', '');
-    var btn = document.querySelector('.ods-selector-btn[data-goal="' + n + '"]');
-    if (btn) selectGoal(btn);
-  } else {
-    // Sin hash: seleccionar ODS 1 por defecto
-    var btn1 = document.querySelector('.ods-selector-btn[data-goal="1"]');
-    if (btn1) selectGoal(btn1);
+    if (scores[n]) { selectGoal(n); return; }
   }
+  var firstGoal = Object.keys(scores)
+    .sort(function (a, b) { return parseInt(a) - parseInt(b); })[0];
+  if (firstGoal) selectGoal(firstGoal);
+
 })();
 </script>
 
@@ -966,7 +2647,7 @@ var OBJETIVO_MEDIDOR_CONFIG = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20261104132431'></script>
+<script src='/site/assets/js/sdg.js?v=20261105104352'></script>
 
 
 <script>
@@ -986,7 +2667,7 @@ var OBJETIVO_MEDIDOR_CONFIG = {
 
     
     
-    <script src="/site/assets/js/custom.js?v=20261104132431"></script><script>
+    <script src="/site/assets/js/custom.js?v=20261105104352"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -994,4 +2675,6 @@ var OBJETIVO_MEDIDOR_CONFIG = {
 
 </body>
 </html>
+
+
 
