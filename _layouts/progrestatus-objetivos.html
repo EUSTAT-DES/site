@@ -105,7 +105,7 @@ var MET_SCORES_BY_GOAL = {
 {% endfor %}};
 </script>
 
-<div id="main-content" class="container layout-progrestatus-objetivos layout-progrestatus" role="main">
+<div id="main-content" class="container layout-progrestatus-objetivos" role="main">
 
   {% include components/reporting-status-introduction.html %}
 
@@ -193,9 +193,19 @@ var MET_SCORES_BY_GOAL = {
           {% for st in status_types %}{% assign _ss = _met_overall | where: "status", st.value | first %}{% if _ss %}
           {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
           {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+          {% assign _cs = nil %}
+          {% if st.value == 'significant_progress' %}{% assign _cs = 'meta-progreso-nabarmena' %}
+          {% elsif st.value == 'moderate_progress' %}{% assign _cs = 'meta-progreso-moderatua' %}
+          {% elsif st.value == 'no_progress' %}{% assign _cs = 'meta-geldialdia' %}
+          {% elsif st.value == 'moderate_deterioration' %}{% assign _cs = 'meta-atzerakada-moderatua' %}
+          {% elsif st.value == 'significant_deterioration' %}{% assign _cs = 'meta-atzerakada-nabarmena' %}
+          {% elsif st.value == 'noevaluado' or st.value == 'not_available' %}{% assign _cs = 'meta-ez-ebaluagarria' %}
+          {% elsif st.value == 'notstarted' %}{% assign _cs = 'meta-hasieratu-gabe' %}
+          {% elsif st.value == 'notapplicable' %}{% assign _cs = 'meta-ez-aplikagarria' %}{% endif %}
           <div>
             <span class="status {{ st.value | slugify }}"><span class="status-inner">{{ _ss.count }}</span></span>
-            <strong>{{ _tl }}</strong><span class="value">{{ _ss.percentage | round: 2 }}%</span>
+            {% if _cs %}<a href="{{ site.baseurl }}{{ _cat_prefix }}{{ _cs }}/" class="status-category-link">{{ _tl }}</a>{% else %}<strong>{{ _tl }}</strong>{% endif %}
+            <span class="value">{{ _ss.percentage | round: 2 }}%</span>
           </div>{% endif %}{% endfor %}
           <br style="clear:both;">
         </div></div>
@@ -255,9 +265,19 @@ var MET_SCORES_BY_GOAL = {
           {% for st in status_types %}{% assign _ss = _ind_overall | where: "status", st.value | first %}{% if _ss %}
           {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
           {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+          {% assign _cs = nil %}
+          {% if st.value == 'significant_progress' %}{% assign _cs = 'progreso-nabarmena' %}
+          {% elsif st.value == 'moderate_progress' %}{% assign _cs = 'progreso-moderatua' %}
+          {% elsif st.value == 'no_progress' %}{% assign _cs = 'geldialdia' %}
+          {% elsif st.value == 'moderate_deterioration' %}{% assign _cs = 'atzerakada-moderatua' %}
+          {% elsif st.value == 'significant_deterioration' %}{% assign _cs = 'atzerakada-nabarmena' %}
+          {% elsif st.value == 'not_available' or st.value == 'noevaluado' %}{% assign _cs = 'ez-ebaluagarria' %}
+          {% elsif st.value == 'notstarted' %}{% assign _cs = 'hasieratu-gabe' %}
+          {% elsif st.value == 'notapplicable' %}{% assign _cs = 'ez-aplikagarria' %}{% endif %}
           <div>
             <span class="status {{ st.value | slugify }}"><span class="status-inner">{{ _ss.count }}</span></span>
-            <strong>{{ _tl }}</strong><span class="value">{{ _ss.percentage | round: 2 }}%</span>
+            {% if _cs %}<a href="{{ site.baseurl }}{{ _cat_prefix }}{{ _cs }}/" class="status-category-link">{{ _tl }}</a>{% else %}<strong>{{ _tl }}</strong>{% endif %}
+            <span class="value">{{ _ss.percentage | round: 2 }}%</span>
           </div>{% endif %}{% endfor %}
           <br style="clear:both;">
         </div></div>
