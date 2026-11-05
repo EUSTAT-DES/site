@@ -479,17 +479,52 @@ var MET_SCORES_BY_GOAL = {
     if (!arr || !arr.length) return '';
     var total = arr[0].total || 0;
     if (!total) return '';
+    var byStatus = {};
+    arr.forEach(function (d) { byStatus[d.status] = d; });
     var bar = '';
-    arr.forEach(function (d) {
-      var slug = d.status.replace(/_/g, '-');
-      var st   = types[d.status];
-      var lbl  = st ? st.label : d.status;
-      bar += '<span class="' + slug + '" style="width:' + d.percentage.toFixed(2) + '%"'
-           + ' title="' + lbl + ': ' + d.percentage.toFixed(2) + '%">'
-           + '<span class="status-inner">' + d.count + '</span></span>';
+    Object.keys(types).forEach(function (status) {
+      var d = byStatus[status];
+      if (d && d.count > 0) {
+        var slug = status.replace(/_/g, '-');
+        var lbl  = (types[status] && types[status].label) || status;
+        var pct  = d.percentage.toFixed(2);
+        bar += '<span class="' + slug + '" style="width:' + pct + '%"'
+             + ' title="' + lbl + ': ' + pct + '%">'
+             + '<span class="status-inner">' + d.count + '</span>'
+             + '<span class="goal-bar-tooltip">' + lbl + ': ' + pct + '%</span>'
+             + '</span>';
+      }
     });
     return '<span class="total"><span>' + total + '</span> ' + unit + '</span>'
          + '<div class="goal-stats">' + bar + '</div>';
+  }
+
+  function initBarTooltips(root) {
+    (root || document).querySelectorAll('.goal-stats span[title]').forEach(function (span) {
+      if (span.dataset.tipInit) return;
+      span.dataset.tipInit = '1';
+      var tip = span.querySelector('.goal-bar-tooltip');
+      if (!tip) {
+        tip = document.createElement('span');
+        tip.className = 'goal-bar-tooltip';
+        tip.textContent = span.getAttribute('title');
+        span.appendChild(tip);
+      }
+      span.addEventListener('mouseenter', function () {
+        if (window.innerWidth <= 576) {
+          var barRect = span.parentNode.getBoundingClientRect();
+          var spanRect = span.getBoundingClientRect();
+          tip.style.left = (barRect.left - spanRect.left) + 'px';
+          tip.style.width = barRect.width + 'px';
+          tip.style.transform = 'none';
+        } else {
+          tip.style.left = '50%';
+          tip.style.width = '';
+          tip.style.transform = 'translateX(-50%)';
+          tip.style.setProperty('--arrow-offset', '50%');
+        }
+      });
+    });
   }
 
   /* â”€â”€ tickHover â”€â”€ */
@@ -589,6 +624,9 @@ var MET_SCORES_BY_GOAL = {
     var indBody  = document.getElementById('om-indicadores-body');
     if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], {{ _lbl_met_unit | jsonify }});
     if (indBody)  indBody.innerHTML  = buildGoalStats(indData[g], {{ _lbl_ind_unit | jsonify }});
+    /* Inicializar tooltips de las barras generadas dinámicamente */
+    if (metaBody) initBarTooltips(metaBody);
+    if (indBody)  initBarTooltips(indBody);
   }
 
   /* â”€â”€ Init â”€â”€ */
@@ -609,6 +647,9 @@ var MET_SCORES_BY_GOAL = {
   var firstGoal = Object.keys(scores)
     .sort(function (a, b) { return parseInt(a) - parseInt(b); })[0];
   if (firstGoal) selectGoal(firstGoal);
+
+  /* Inicializar tooltips de los informes estáticos */
+  initBarTooltips();
 
 })();
 </script>
