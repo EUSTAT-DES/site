@@ -3,26 +3,49 @@
 
 {% comment %} ── Datos CSV ── {% endcomment %}
 {% assign objetivo_data = site.data.csv.progreso_objetivos %}
+{% assign ind_data      = site.data.csv.progreso %}
+{% assign metas_data    = site.data.csv.progreso_metas %}
+{% assign status_types  = site.progress_status.status_types %}
+
+{% comment %} Prefijo de idioma para links de categoría {% endcomment %}
+{% if page.language == 'es' %}{% assign _cat_prefix = '/es/' %}
+{% elsif page.language == 'en' %}{% assign _cat_prefix = '/en/' %}
+{% else %}{% assign _cat_prefix = '/' %}{% endif %}
 
 {% comment %} ── Etiquetas i18n ── {% endcomment %}
 {% if page.language == 'eu' %}
-  {% assign _lbl_goal       = 'Helburua' %}
-  {% assign _lbl_view_goal  = 'Helburua ikusi' %}
-  {% assign _lbl_no_eval    = 'Ez ebaluagarria' %}
-  {% assign _lbl_targets    = 'Xedeak' %}
-  {% assign _lbl_indicators = 'Adierazleak' %}
+  {% assign _lbl_goal         = 'Helburua' %}
+  {% assign _lbl_view_goal    = 'Helburua ikusi' %}
+  {% assign _lbl_no_eval      = 'Ez ebaluagarria' %}
+  {% assign _lbl_targets      = 'Xedeak' %}
+  {% assign _lbl_indicators   = 'Adierazleak' %}
+  {% assign _lbl_ind_report   = 'Adierazleen jarraipen txostena' %}
+  {% assign _lbl_met_report   = 'Jomugen jarraipen txostena' %}
+  {% assign _lbl_detail_goals = 'Helburuen araberako xehetasuna' %}
+  {% assign _lbl_ind_unit     = 'adierazle' %}
+  {% assign _lbl_met_unit     = 'jomuga' %}
 {% elsif page.language == 'en' %}
-  {% assign _lbl_goal       = 'Goal' %}
-  {% assign _lbl_view_goal  = 'View goal' %}
-  {% assign _lbl_no_eval    = 'Not evaluable' %}
-  {% assign _lbl_targets    = 'Targets' %}
-  {% assign _lbl_indicators = 'Indicators' %}
+  {% assign _lbl_goal         = 'Goal' %}
+  {% assign _lbl_view_goal    = 'View goal' %}
+  {% assign _lbl_no_eval      = 'Not evaluable' %}
+  {% assign _lbl_targets      = 'Targets' %}
+  {% assign _lbl_indicators   = 'Indicators' %}
+  {% assign _lbl_ind_report   = 'Indicators reporting status' %}
+  {% assign _lbl_met_report   = 'Targets reporting status' %}
+  {% assign _lbl_detail_goals = 'Detail by goal' %}
+  {% assign _lbl_ind_unit     = 'indicators' %}
+  {% assign _lbl_met_unit     = 'targets' %}
 {% else %}
-  {% assign _lbl_goal       = 'Objetivo' %}
-  {% assign _lbl_view_goal  = 'Ver objetivo' %}
-  {% assign _lbl_no_eval    = 'No evaluable' %}
-  {% assign _lbl_targets    = 'Metas' %}
-  {% assign _lbl_indicators = 'Indicadores' %}
+  {% assign _lbl_goal         = 'Objetivo' %}
+  {% assign _lbl_view_goal    = 'Ver objetivo' %}
+  {% assign _lbl_no_eval      = 'No evaluable' %}
+  {% assign _lbl_targets      = 'Metas' %}
+  {% assign _lbl_indicators   = 'Indicadores' %}
+  {% assign _lbl_ind_report   = 'Informe de indicadores' %}
+  {% assign _lbl_met_report   = 'Informe de metas' %}
+  {% assign _lbl_detail_goals = 'Detalle por objetivo' %}
+  {% assign _lbl_ind_unit     = 'indicadores' %}
+  {% assign _lbl_met_unit     = 'metas' %}
 {% endif %}
 
 <script>
@@ -70,7 +93,7 @@ var OBJETIVO_CFG = {
 };
 </script>
 
-<div id="main-content" class="container layout-progrestatus-objetivos" role="main">
+<div id="main-content" class="container layout-progrestatus-objetivos layout-progrestatus" role="main">
 
   {% include components/reporting-status-introduction.html %}
 
@@ -139,6 +162,130 @@ var OBJETIVO_CFG = {
     </div>
 
   </div><!-- /.objetivo-medidor-panel -->
+
+  {% comment %} ── Informe de indicadores ── {% endcomment %}
+  <section class="om-informe-section">
+    <h2>{{ _lbl_ind_report }}</h2>
+    {% assign _ind_overall = ind_data | where: "goal", "overall" %}
+    {% assign _ind_total   = _ind_overall | map: "total" | first | times: 1 %}
+    <div class="goal goal-overall">
+      <div class="frame goal-tiles">
+        <img src="{{ site.baseurl }}/assets/img/SDG Wheel_Transparent-01.png"
+             alt="{{ page.t.general.sdg }}" width="100" height="100"
+             class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" />
+      </div>
+      <div class="details">
+        <span class="total"><span>{{ _ind_total }}</span> {{ _lbl_ind_unit }}</span>
+        {% if _ind_total > 0 %}
+        <div class="summary"><div class="statuses">
+          {% for st in status_types %}{% assign _ss = _ind_overall | where: "status", st.value | first %}{% if _ss %}
+          {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
+          {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+          <div>
+            <span class="status {{ st.value | slugify }}"><span class="status-inner">{{ _ss.count }}</span></span>
+            <strong>{{ _tl }}</strong><span class="value">{{ _ss.percentage | round: 2 }}%</span>
+          </div>{% endif %}{% endfor %}
+          <br style="clear:both;">
+        </div></div>
+        <div class="goal-stats">
+          {% for st in status_types %}{% assign _ss = _ind_overall | where: "status", st.value | first %}{% if _ss %}
+          {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
+          {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+          <span class="{{ st.value | slugify }}" style="width:{{ _ss.percentage }}%"
+                title="{{ _tl }}: {{ _ss.percentage | round: 2 }}%"><span class="status-inner">{{ _ss.count }}</span></span>
+          {% endif %}{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <br style="clear:both;">
+    </div>
+    <details class="om-goals-detail">
+      <summary>{{ _lbl_detail_goals }}</summary>
+      {% assign _ind_grouped = ind_data | where_exp: "item", "item.goal != 'overall'" | group_by: "goal" %}
+      {% for _grp in _ind_grouped %}{% assign _gd = _grp.name | sdg_lookup %}{% assign _gt = _grp.items | first %}
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="{{ _gd.url }}"><img src="{{ _gd.icon }}" alt="{{ _gd.short | escape }}" width="100" height="100"
+             class="goal-icon-{{ _gd.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="{{ _gd.url }}">{{ _gd.short }}</a></h3>
+          {% if _gt.total > 0 %}<div class="goal-stats">
+            {% for st in status_types %}{% assign _ss = _grp.items | where: "status", st.value | first %}{% if _ss %}
+            {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
+            {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+            <span class="{{ st.value | slugify }}" style="width:{{ _ss.percentage }}%"
+                  title="{{ _tl }}: {{ _ss.percentage | round: 2 }}%"><span class="status-inner">{{ _ss.count }}</span></span>
+            {% endif %}{% endfor %}
+          </div>{% endif %}
+        </div>
+        <br style="clear:both;">
+      </div>
+      {% endfor %}
+    </details>
+  </section>
+
+  {% comment %} ── Informe de metas ── {% endcomment %}
+  <section class="om-informe-section">
+    <h2>{{ _lbl_met_report }}</h2>
+    {% assign _met_overall = metas_data | where: "goal", "overall" %}
+    {% assign _met_total   = _met_overall | map: "total" | first | times: 1 %}
+    <div class="goal goal-overall">
+      <div class="frame goal-tiles">
+        <img src="{{ site.baseurl }}/assets/img/SDG Wheel_Transparent-01.png"
+             alt="{{ page.t.general.sdg }}" width="100" height="100"
+             class="goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" />
+      </div>
+      <div class="details">
+        <span class="total"><span>{{ _met_total }}</span> {{ _lbl_met_unit }}</span>
+        {% if _met_total > 0 %}
+        <div class="summary"><div class="statuses">
+          {% for st in status_types %}{% assign _ss = _met_overall | where: "status", st.value | first %}{% if _ss %}
+          {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
+          {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+          <div>
+            <span class="status {{ st.value | slugify }}"><span class="status-inner">{{ _ss.count }}</span></span>
+            <strong>{{ _tl }}</strong><span class="value">{{ _ss.percentage | round: 2 }}%</span>
+          </div>{% endif %}{% endfor %}
+          <br style="clear:both;">
+        </div></div>
+        <div class="goal-stats">
+          {% for st in status_types %}{% assign _ss = _met_overall | where: "status", st.value | first %}{% if _ss %}
+          {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
+          {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+          <span class="{{ st.value | slugify }}" style="width:{{ _ss.percentage }}%"
+                title="{{ _tl }}: {{ _ss.percentage | round: 2 }}%"><span class="status-inner">{{ _ss.count }}</span></span>
+          {% endif %}{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <br style="clear:both;">
+    </div>
+    <details class="om-goals-detail">
+      <summary>{{ _lbl_detail_goals }}</summary>
+      {% assign _met_grouped = metas_data | where_exp: "item", "item.goal != 'overall'" | group_by: "goal" %}
+      {% for _grp in _met_grouped %}{% assign _gd = _grp.name | sdg_lookup %}{% assign _gt = _grp.items | first %}
+      <div class="goal reporting-status-item">
+        <div class="frame goal-tiles">
+          <a href="{{ _gd.url }}"><img src="{{ _gd.icon }}" alt="{{ _gd.short | escape }}" width="100" height="100"
+             class="goal-icon-{{ _gd.number }} goal-icon-image goal-icon-image-{{ site.goal_image_extension }}" /></a>
+        </div>
+        <div class="details">
+          <h3 class="status-goal"><a href="{{ _gd.url }}">{{ _gd.short }}</a></h3>
+          {% if _gt.total > 0 %}<div class="goal-stats">
+            {% for st in status_types %}{% assign _ss = _grp.items | where: "status", st.value | first %}{% if _ss %}
+            {% assign _tk = 'status.' | append: st.value | append: '_mixto' %}{% assign _tl = _tk | t %}
+            {% if _tl == _tk %}{% assign _tl = st.label | t %}{% endif %}
+            <span class="{{ st.value | slugify }}" style="width:{{ _ss.percentage }}%"
+                  title="{{ _tl }}: {{ _ss.percentage | round: 2 }}%"><span class="status-inner">{{ _ss.count }}</span></span>
+            {% endif %}{% endfor %}
+          </div>{% endif %}
+        </div>
+        <br style="clear:both;">
+      </div>
+      {% endfor %}
+    </details>
+  </section>
 
   {% include back-to-top.html %}
 </div><!-- /#main-content -->

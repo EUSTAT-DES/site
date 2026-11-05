@@ -1464,6 +1464,49 @@ div.goal-target {
     .objetivo-panel-icon-wrap img { width: 70px; height: 70px; }
   }
 
+  // Secciones de informes embebidos (indicadores / metas)
+  .om-informe-section {
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 2px solid #e0e0e0;
+
+    > h2 {
+      margin-bottom: 24px;
+    }
+  }
+
+  // Desplegable por objetivos dentro de cada sección
+  .om-goals-detail {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+
+    > summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 14px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #013161;
+      user-select: none;
+
+      &::-webkit-details-marker { display: none; }
+
+      &::before {
+        content: '▶';
+        font-size: .75em;
+        margin-right: 8px;
+        display: inline-block;
+        transition: transform .2s;
+      }
+
+      &:hover { color: #0056b3; }
+    }
+
+    &[open] > summary::before {
+      transform: rotate(90deg);
+    }
+  }
+
   // ── Alto contraste ────────────────────────────────────────
   body.contrast-high & {
     .objetivo-medidor-panel {
