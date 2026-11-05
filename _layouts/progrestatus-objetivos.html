@@ -499,34 +499,6 @@ var MET_SCORES_BY_GOAL = {
          + '<div class="goal-stats">' + bar + '</div>';
   }
 
-  function initBarTooltips(root) {
-    (root || document).querySelectorAll('.goal-stats span[title]').forEach(function (span) {
-      if (span.dataset.tipInit) return;
-      span.dataset.tipInit = '1';
-      var tip = span.querySelector('.goal-bar-tooltip');
-      if (!tip) {
-        tip = document.createElement('span');
-        tip.className = 'goal-bar-tooltip';
-        tip.textContent = span.getAttribute('title');
-        span.appendChild(tip);
-      }
-      span.addEventListener('mouseenter', function () {
-        if (window.innerWidth <= 576) {
-          var barRect = span.parentNode.getBoundingClientRect();
-          var spanRect = span.getBoundingClientRect();
-          tip.style.left = (barRect.left - spanRect.left) + 'px';
-          tip.style.width = barRect.width + 'px';
-          tip.style.transform = 'none';
-        } else {
-          tip.style.left = '50%';
-          tip.style.width = '';
-          tip.style.transform = 'translateX(-50%)';
-          tip.style.setProperty('--arrow-offset', '50%');
-        }
-      });
-    });
-  }
-
   /* â”€â”€ tickHover â”€â”€ */
   function tickHover(g, on) {
     document.querySelectorAll('.om-tick[data-goal="' + g + '"]').forEach(function (t) {
@@ -624,9 +596,6 @@ var MET_SCORES_BY_GOAL = {
     var indBody  = document.getElementById('om-indicadores-body');
     if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], {{ _lbl_met_unit | jsonify }});
     if (indBody)  indBody.innerHTML  = buildGoalStats(indData[g], {{ _lbl_ind_unit | jsonify }});
-    /* Inicializar tooltips de las barras generadas dinámicamente */
-    if (metaBody) initBarTooltips(metaBody);
-    if (indBody)  initBarTooltips(indBody);
   }
 
   /* â”€â”€ Init â”€â”€ */
@@ -647,9 +616,6 @@ var MET_SCORES_BY_GOAL = {
   var firstGoal = Object.keys(scores)
     .sort(function (a, b) { return parseInt(a) - parseInt(b); })[0];
   if (firstGoal) selectGoal(firstGoal);
-
-  /* Inicializar tooltips de los informes estáticos */
-  initBarTooltips();
 
 })();
 </script>
