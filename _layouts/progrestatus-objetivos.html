@@ -490,9 +490,7 @@ var MET_SCORES_BY_GOAL = {
         var pct  = d.percentage.toFixed(2);
         bar += '<span class="' + slug + '" style="width:' + pct + '%"'
              + ' title="' + lbl + ': ' + pct + '%">'
-             + '<span class="status-inner">' + d.count + '</span>'
-             + '<span class="goal-bar-tooltip">' + lbl + ': ' + pct + '%</span>'
-             + '</span>';
+             + '<span class="status-inner">' + d.count + '</span></span>';
       }
     });
     return '<span class="total"><span>' + total + '</span> ' + unit + '</span>'
