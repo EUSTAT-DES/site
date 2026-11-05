@@ -615,6 +615,46 @@ var MET_SCORES_BY_GOAL = {
     .sort(function (a, b) { return parseInt(a) - parseInt(b); })[0];
   if (firstGoal) selectGoal(firstGoal);
 
+  /* ── Tooltips bocadillo en las barras de los informes ──
+     Mismo código que progrestatus.html — crea .goal-bar-tooltip y maneja hover ── */
+  document.querySelectorAll('.reporting-status-item .goal-stats span[title]').forEach(function (span) {
+    var text = span.getAttribute('title');
+    if (!text) return;
+    var tip = document.createElement('span');
+    tip.className = 'goal-bar-tooltip';
+    tip.textContent = text;
+    span.appendChild(tip);
+
+    span.addEventListener('mouseenter', function () {
+      var spanRect  = span.getBoundingClientRect();
+      var spanCenter = spanRect.left + spanRect.width / 2;
+
+      if (window.innerWidth <= 576) {
+        var barRect = span.parentNode.getBoundingClientRect();
+        tip.style.left      = (barRect.left - spanRect.left) + 'px';
+        tip.style.right     = '';
+        tip.style.transform = 'none';
+        tip.style.width     = barRect.width + 'px';
+        tip.style.whiteSpace = 'normal';
+        tip.style.textAlign  = 'center';
+        requestAnimationFrame(function () {
+          var newTipRect = tip.getBoundingClientRect();
+          var arrowPct = (spanCenter - newTipRect.left) / newTipRect.width * 100;
+          arrowPct = Math.max(5, Math.min(95, arrowPct));
+          tip.style.setProperty('--arrow-offset', arrowPct + '%');
+        });
+      } else {
+        tip.style.left       = '50%';
+        tip.style.right      = '';
+        tip.style.transform  = 'translateX(-50%)';
+        tip.style.width      = '';
+        tip.style.whiteSpace = 'nowrap';
+        tip.style.textAlign  = '';
+        tip.style.setProperty('--arrow-offset', '50%');
+      }
+    });
+  });
+
 })();
 </script>
 
