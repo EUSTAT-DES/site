@@ -1,4 +1,4 @@
-﻿{% include head.html %}
+{% include head.html %}
 {% include header.html %}
 
 {% comment %} â”€â”€ Datos CSV â”€â”€ {% endcomment %}
@@ -135,46 +135,35 @@ var MET_SCORES_BY_GOAL = {
   <!-- Panel del objetivo seleccionado -->
   <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
 
-    <div class="objetivo-panel-header">
+    <div class="objetivo-panel-layout">
       <div class="objetivo-panel-icon-wrap">
         <a id="om-goal-link-icon" href="#" aria-label="">
-          <img id="om-goal-icon" src="" alt="" width="90" height="90"
+          <img id="om-goal-icon" src="" alt="" width="120" height="120"
                class="goal-icon-image" />
         </a>
       </div>
-      <div class="objetivo-panel-info">
-        <p class="objetivo-panel-num" id="om-goal-num"></p>
-        <a id="om-goal-link-title" href="#">
-          <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
-        </a>
-        <div class="objetivo-panel-status">
-          <img id="om-status-icon" src="" alt="" class="om-status-img" />
-          <span id="om-status-label" class="om-status-label"></span>
+      <div class="objetivo-panel-right">
+        <div class="objetivo-panel-title-row">
+          <a id="om-goal-link-title" href="#">
+            <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
+          </a>
+          <div class="objetivo-panel-status">
+            <span id="om-status-label" class="om-status-label"></span>
+            <img id="om-status-icon" src="" alt="" class="om-status-img" />
+          </div>
         </div>
-      </div>
-      <a id="om-goal-btn" href="#"
-         class="btn btn-primary btn-download om-goal-btn"
-         role="button" aria-label="">{{ _lbl_view_goal }}</a>
-    </div>
-
-    <!-- SecciÃ³n: Metas del objetivo -->
-    <div class="om-panel-section">
-      <h3 class="om-panel-section-title">{{ _lbl_targets }}</h3>
-      <div class="om-panel-section-body" id="om-metas-body">
-        <p class="om-section-placeholder">â€”</p>
-      </div>
-    </div>
-
-    <!-- SecciÃ³n: Indicadores del objetivo -->
-    <div class="om-panel-section">
-      <h3 class="om-panel-section-title">{{ _lbl_indicators }}</h3>
-      <div class="om-panel-section-body" id="om-indicadores-body">
-        <p class="om-section-placeholder">â€”</p>
+        <div class="om-panel-section-compact">
+          <span class="om-section-label">{{ _lbl_targets }}</span>
+          <div class="om-panel-section-body" id="om-metas-body"></div>
+        </div>
+        <div class="om-panel-section-compact">
+          <span class="om-section-label">{{ _lbl_indicators }}</span>
+          <div class="om-panel-section-body" id="om-indicadores-body"></div>
+        </div>
       </div>
     </div>
 
   </div><!-- /.objetivo-medidor-panel -->
-
   {% comment %} â”€â”€ Informe de metas â”€â”€ {% endcomment %}
   <section class="om-informe-section">
     <h2>{{ _lbl_met_report }}</h2>
@@ -337,13 +326,11 @@ var MET_SCORES_BY_GOAL = {
   /* Referencias DOM â€” panel */
   var panel       = document.getElementById('objetivo-medidor-panel');
   var goalIcon    = document.getElementById('om-goal-icon');
-  var goalNumEl   = document.getElementById('om-goal-num');
   var goalTitle   = document.getElementById('om-goal-title');
   var statusIcon  = document.getElementById('om-status-icon');
   var statusLabel = document.getElementById('om-status-label');
   var goalLinkIco = document.getElementById('om-goal-link-icon');
   var goalLinkTit = document.getElementById('om-goal-link-title');
-  var goalBtn     = document.getElementById('om-goal-btn');
   var track       = document.getElementById('om-overview-track');
 
   /* â”€â”€ scoreToPercent: [-5..+5] â†’ 0-100% â”€â”€ */
@@ -562,15 +549,9 @@ var MET_SCORES_BY_GOAL = {
     var url = goalUrls[g] || (cfg.baseurl + '/' + g + '/');
     goalIcon.src = goalIcons[g] || '';
     goalIcon.alt = cfg.lbl_goal + ' ' + g + ': ' + (goalNames[g] || '');
-    goalNumEl.textContent = cfg.lbl_goal + ' ' + g;
     goalTitle.textContent = goalNames[g] || '';
-    if (goalLinkIco) {
-      goalLinkIco.href = url;
-      goalLinkIco.setAttribute('aria-label',
-        cfg.lbl_view_goal + ': ' + cfg.lbl_goal + ' ' + g);
-    }
+    if (goalLinkIco) { goalLinkIco.href = url; }
     if (goalLinkTit) goalLinkTit.href = url;
-    if (goalBtn) {
       goalBtn.href = url;
       goalBtn.setAttribute('aria-label',
         cfg.lbl_view_goal + ' ' + g + ': ' + (goalNames[g] || ''));
