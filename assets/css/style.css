@@ -4059,17 +4059,14 @@ div.goal-target {
       display: flex;
       align-items: center;
       gap: 8px;
-      flex-shrink: 0;
-      flex-wrap: nowrap; }
+      flex-wrap: wrap; }
       .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-img {
         width: 130px;
-        height: auto;
-        flex-shrink: 0; }
+        height: auto; }
       .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
         font-size: 1rem;
         font-weight: 600;
-        color: #222;
-        white-space: nowrap; }
+        color: #222; }
   .layout-progrestatus-objetivos .om-panel-section-compact {
     display: flex;
     align-items: center;
