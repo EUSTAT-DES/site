@@ -1443,7 +1443,7 @@ div.goal-target {
       flex-shrink: 0;
       flex-wrap: nowrap;
       .om-status-img   { width: 130px; height: auto; flex-shrink: 0; }
-      .om-status-label { font-size: 1.1rem; font-weight: 600; color: #222; white-space: nowrap; }
+      .om-status-label { font-size: 1rem; font-weight: 600; color: #222; white-space: nowrap; }
     }
   }
 
@@ -1452,7 +1452,7 @@ div.goal-target {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 16px;  // compensa el margin-top: 10px del goal-stats que quitamos aquí
   }
 
   .om-section-label {
@@ -1487,8 +1487,9 @@ div.goal-target {
       border: 1px solid $color-dark;
       font-size: 0;
       overflow: hidden;
-      white-space: nowrap;  // evita que los spans pequeños bajen de línea
+      white-space: nowrap;
       min-width: 0;
+      margin-top: 0;  // el margen lo da om-panel-section-compact
 
       span {
         display: inline-block;
@@ -1547,10 +1548,6 @@ div.goal-target {
 
   // Secciones de informes embebidos (indicadores / metas)
   .om-informe-section {
-    margin-top: 48px;
-    padding-top: 36px;
-    border-top: 2px solid #e0e0e0;
-
     > h2 {
       margin-bottom: 24px;
       display: flex;
@@ -1571,10 +1568,9 @@ div.goal-target {
     vertical-align: middle;
   }
 
-  // Desplegable por objetivos — una sola línea de separación
+  // Desplegable por objetivos — sin border-top propio
   .om-goals-detail {
     margin-top: 20px;
-    border-top: 1px solid #ccc;
 
     > summary {
       cursor: pointer;
