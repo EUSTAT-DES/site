@@ -166,9 +166,9 @@ var MET_SCORES_BY_GOAL = {
   </div><!-- /.objetivo-medidor-panel -->
   {% comment %} â”€â”€ Informe de metas â”€â”€ {% endcomment %}
   <section class="om-informe-section">
-    <h2>{{ _lbl_met_report }} <span class="total-inline"><span>{{ _met_total }}</span></span></h2>
     {% assign _met_overall = metas_data | where: "goal", "overall" %}
     {% assign _met_total   = _met_overall | map: "total" | first | times: 1 %}
+    <h2>{{ _lbl_met_report }} <span class="total-inline"><span>{{ _met_total }}</span></span></h2>
     <div class="goal goal-overall">
       <div class="frame goal-tiles">
         <img src="{{ site.baseurl }}/assets/img/SDG Wheel_Transparent-01.png"
@@ -237,9 +237,9 @@ var MET_SCORES_BY_GOAL = {
 
   {% comment %} â”€â”€ Informe de indicadores â”€â”€ {% endcomment %}
   <section class="om-informe-section">
-    <h2>{{ _lbl_ind_report }} <span class="total-inline"><span>{{ _ind_total }}</span></span></h2>
     {% assign _ind_overall = ind_data | where: "goal", "overall" %}
     {% assign _ind_total   = _ind_overall | map: "total" | first | times: 1 %}
+    <h2>{{ _lbl_ind_report }} <span class="total-inline"><span>{{ _ind_total }}</span></span></h2>
     <div class="goal goal-overall">
       <div class="frame goal-tiles">
         <img src="{{ site.baseurl }}/assets/img/SDG Wheel_Transparent-01.png"
