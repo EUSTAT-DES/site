@@ -4062,11 +4062,11 @@ div.goal-target {
       flex-shrink: 0;
       flex-wrap: nowrap; }
       .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-img {
-        width: 90px;
+        width: 130px;
         height: auto;
         flex-shrink: 0; }
       .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
-        font-size: .9rem;
+        font-size: 1.1rem;
         font-weight: 600;
         color: #222;
         white-space: nowrap; }
@@ -4101,6 +4101,7 @@ div.goal-target {
       border: 1px solid #0b0c0c;
       font-size: 0;
       overflow: hidden;
+      white-space: nowrap;
       min-width: 0; }
       @media (-ms-high-contrast: active), (forced-colors: active) {
         .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
@@ -4145,7 +4146,19 @@ div.goal-target {
     padding-top: 36px;
     border-top: 2px solid #e0e0e0; }
     .layout-progrestatus-objetivos .om-informe-section > h2 {
-      margin-bottom: 24px; }
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px; }
+  .layout-progrestatus-objetivos .total-inline {
+    font-size: .85rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+    vertical-align: middle; }
   .layout-progrestatus-objetivos .om-goals-detail {
     margin-top: 20px;
     border-top: 1px solid #ccc; }
@@ -4169,6 +4182,11 @@ div.goal-target {
         color: #0056b3; }
     .layout-progrestatus-objetivos .om-goals-detail[open] > summary::before {
       transform: rotate(90deg); }
+    .layout-progrestatus-objetivos .om-goals-detail .reporting-status-item:first-child,
+    .layout-progrestatus-objetivos .om-goals-detail .goal:first-child {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0; }
   body.contrast-high .layout-progrestatus-objetivos .objetivo-medidor-panel {
     background: #000;
     border-color: #fff; }
