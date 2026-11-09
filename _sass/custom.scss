@@ -1537,8 +1537,8 @@ div.goal-target {
     .objetivo-medidor-panel    { padding: 16px; }
     .objetivo-panel-layout     { gap: 14px; }
     .objetivo-panel-title-row  { flex-wrap: wrap; }
-    // Status puede hacer wrap en tablet
-    .objetivo-panel-status {
+    // Misma especificidad que el desktop para que el override funcione
+    .objetivo-panel-title-row .objetivo-panel-status {
       flex-wrap: wrap;
       .om-status-label { white-space: normal; }
     }
