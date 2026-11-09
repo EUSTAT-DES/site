@@ -4145,9 +4145,9 @@ div.goal-target {
       gap: 14px; }
     .layout-progrestatus-objetivos .objetivo-panel-title-row {
       flex-wrap: wrap; }
-    .layout-progrestatus-objetivos .objetivo-panel-status {
+    .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status {
       flex-wrap: wrap; }
-      .layout-progrestatus-objetivos .objetivo-panel-status .om-status-label {
+      .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
         white-space: normal; } }
   @media (max-width: 576px) {
     .layout-progrestatus-objetivos .om-tick {
