@@ -4103,7 +4103,7 @@ div.goal-target {
       overflow: hidden;
       white-space: nowrap;
       min-width: 0;
-      margin-top: 0; }
+      margin-top: 0 !important; }
       @media (-ms-high-contrast: active), (forced-colors: active) {
         .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
           -ms-high-contrast-adjust: none;
