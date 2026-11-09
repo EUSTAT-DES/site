@@ -4120,6 +4120,23 @@ div.goal-target {
           border-radius: 5px;
           position: relative;
           z-index: 2; }
+        .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span .goal-bar-tooltip {
+          display: none;
+          position: absolute;
+          bottom: calc(100% + 4px);
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(0, 0, 0, 0.85);
+          color: #fff;
+          padding: 2px 6px;
+          border-radius: 3px;
+          font-size: .7rem;
+          white-space: nowrap;
+          pointer-events: none;
+          z-index: 100;
+          line-height: 1.5; }
+        .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span:hover .goal-bar-tooltip {
+          display: block; }
   @media (max-width: 768px) {
     .layout-progrestatus-objetivos .objetivo-medidor-panel {
       padding: 16px; }
