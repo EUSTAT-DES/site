@@ -552,10 +552,6 @@ var MET_SCORES_BY_GOAL = {
     goalTitle.textContent = goalNames[g] || '';
     if (goalLinkIco) { goalLinkIco.href = url; }
     if (goalLinkTit) goalLinkTit.href = url;
-      goalBtn.href = url;
-      goalBtn.setAttribute('aria-label',
-        cfg.lbl_view_goal + ' ' + g + ': ' + (goalNames[g] || ''));
-    }
 
     /* Estado */
     var st = types[data.status];
