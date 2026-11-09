@@ -4066,7 +4066,7 @@ div.goal-target {
         height: auto;
         flex-shrink: 0; }
       .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
         color: #222;
         white-space: nowrap; }
@@ -4074,7 +4074,7 @@ div.goal-target {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 10px; }
+    margin-top: 16px; }
   .layout-progrestatus-objetivos .om-section-label {
     font-size: .78rem;
     font-weight: 700;
@@ -4102,7 +4102,8 @@ div.goal-target {
       font-size: 0;
       overflow: hidden;
       white-space: nowrap;
-      min-width: 0; }
+      min-width: 0;
+      margin-top: 0; }
       @media (-ms-high-contrast: active), (forced-colors: active) {
         .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
           -ms-high-contrast-adjust: none;
@@ -4158,15 +4159,11 @@ div.goal-target {
     .layout-progrestatus-objetivos .om-section-label {
       min-width: 72px;
       font-size: .72rem; } }
-  .layout-progrestatus-objetivos .om-informe-section {
-    margin-top: 48px;
-    padding-top: 36px;
-    border-top: 2px solid #e0e0e0; }
-    .layout-progrestatus-objetivos .om-informe-section > h2 {
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 10px; }
+  .layout-progrestatus-objetivos .om-informe-section > h2 {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px; }
   .layout-progrestatus-objetivos .total-inline {
     font-size: .85rem;
     display: inline-flex;
@@ -4177,8 +4174,7 @@ div.goal-target {
     font-weight: normal;
     vertical-align: middle; }
   .layout-progrestatus-objetivos .om-goals-detail {
-    margin-top: 20px;
-    border-top: 1px solid #ccc; }
+    margin-top: 20px; }
     .layout-progrestatus-objetivos .om-goals-detail > summary {
       cursor: pointer;
       list-style: none;
