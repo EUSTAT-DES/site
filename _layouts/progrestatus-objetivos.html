@@ -571,6 +571,17 @@ var MET_SCORES_BY_GOAL = {
     var indBody  = document.getElementById('om-indicadores-body');
     if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], {{ _lbl_met_unit | jsonify }});
     if (indBody)  indBody.innerHTML  = buildGoalStats(indData[g], {{ _lbl_ind_unit | jsonify }});
+    /* Inicializar tooltips de las barras del panel (generadas dinámicamente) */
+    [metaBody, indBody].forEach(function(b) {
+      if (!b) return;
+      b.querySelectorAll('.goal-stats span[title]').forEach(function (span) {
+        if (span.querySelector('.goal-bar-tooltip')) return;
+        var tip = document.createElement('span');
+        tip.className = 'goal-bar-tooltip';
+        tip.textContent = span.getAttribute('title');
+        span.appendChild(tip);
+      });
+    });
   }
 
   /* â”€â”€ Init â”€â”€ */

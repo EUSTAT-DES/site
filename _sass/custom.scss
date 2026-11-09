@@ -1487,6 +1487,7 @@ div.goal-target {
       border: 1px solid $color-dark;
       font-size: 0;
       overflow: hidden;
+      white-space: nowrap;  // evita que los spans pequeños bajen de línea
       min-width: 0;
 
       span {
