@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261105151247">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261109091118">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -664,46 +664,35 @@ var MET_SCORES_BY_GOAL = {
   <!-- Panel del objetivo seleccionado -->
   <div id="objetivo-medidor-panel" class="objetivo-medidor-panel" hidden>
 
-    <div class="objetivo-panel-header">
+    <div class="objetivo-panel-layout">
       <div class="objetivo-panel-icon-wrap">
         <a id="om-goal-link-icon" href="#" aria-label="">
-          <img id="om-goal-icon" src="" alt="" width="90" height="90"
+          <img id="om-goal-icon" src="" alt="" width="120" height="120"
                class="goal-icon-image" />
         </a>
       </div>
-      <div class="objetivo-panel-info">
-        <p class="objetivo-panel-num" id="om-goal-num"></p>
-        <a id="om-goal-link-title" href="#">
-          <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
-        </a>
-        <div class="objetivo-panel-status">
-          <img id="om-status-icon" src="" alt="" class="om-status-img" />
-          <span id="om-status-label" class="om-status-label"></span>
+      <div class="objetivo-panel-right">
+        <div class="objetivo-panel-title-row">
+          <a id="om-goal-link-title" href="#">
+            <h2 class="objetivo-panel-title" id="om-goal-title"></h2>
+          </a>
+          <div class="objetivo-panel-status">
+            <span id="om-status-label" class="om-status-label"></span>
+            <img id="om-status-icon" src="" alt="" class="om-status-img" />
+          </div>
         </div>
-      </div>
-      <a id="om-goal-btn" href="#"
-         class="btn btn-primary btn-download om-goal-btn"
-         role="button" aria-label="">View goal</a>
-    </div>
-
-    <!-- SecciÃ³n: Metas del objetivo -->
-    <div class="om-panel-section">
-      <h3 class="om-panel-section-title">Targets</h3>
-      <div class="om-panel-section-body" id="om-metas-body">
-        <p class="om-section-placeholder">â€”</p>
-      </div>
-    </div>
-
-    <!-- SecciÃ³n: Indicadores del objetivo -->
-    <div class="om-panel-section">
-      <h3 class="om-panel-section-title">Indicators</h3>
-      <div class="om-panel-section-body" id="om-indicadores-body">
-        <p class="om-section-placeholder">â€”</p>
+        <div class="om-panel-section-compact">
+          <span class="om-section-label">Targets</span>
+          <div class="om-panel-section-body" id="om-metas-body"></div>
+        </div>
+        <div class="om-panel-section-compact">
+          <span class="om-section-label">Indicators</span>
+          <div class="om-panel-section-body" id="om-indicadores-body"></div>
+        </div>
       </div>
     </div>
 
   </div><!-- /.objetivo-medidor-panel -->
-
   
   <section class="om-informe-section">
     <h2>Targets reporting status</h2>
@@ -2281,13 +2270,11 @@ var MET_SCORES_BY_GOAL = {
   /* Referencias DOM â€” panel */
   var panel       = document.getElementById('objetivo-medidor-panel');
   var goalIcon    = document.getElementById('om-goal-icon');
-  var goalNumEl   = document.getElementById('om-goal-num');
   var goalTitle   = document.getElementById('om-goal-title');
   var statusIcon  = document.getElementById('om-status-icon');
   var statusLabel = document.getElementById('om-status-label');
   var goalLinkIco = document.getElementById('om-goal-link-icon');
   var goalLinkTit = document.getElementById('om-goal-link-title');
-  var goalBtn     = document.getElementById('om-goal-btn');
   var track       = document.getElementById('om-overview-track');
 
   /* â”€â”€ scoreToPercent: [-5..+5] â†’ 0-100% â”€â”€ */
@@ -2506,15 +2493,9 @@ var MET_SCORES_BY_GOAL = {
     var url = goalUrls[g] || (cfg.baseurl + '/' + g + '/');
     goalIcon.src = goalIcons[g] || '';
     goalIcon.alt = cfg.lbl_goal + ' ' + g + ': ' + (goalNames[g] || '');
-    goalNumEl.textContent = cfg.lbl_goal + ' ' + g;
     goalTitle.textContent = goalNames[g] || '';
-    if (goalLinkIco) {
-      goalLinkIco.href = url;
-      goalLinkIco.setAttribute('aria-label',
-        cfg.lbl_view_goal + ': ' + cfg.lbl_goal + ' ' + g);
-    }
+    if (goalLinkIco) { goalLinkIco.href = url; }
     if (goalLinkTit) goalLinkTit.href = url;
-    if (goalBtn) {
       goalBtn.href = url;
       goalBtn.setAttribute('aria-label',
         cfg.lbl_view_goal + ' ' + g + ': ' + (goalNames[g] || ''));
@@ -2741,7 +2722,7 @@ var MET_SCORES_BY_GOAL = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20261105151247'></script>
+<script src='/site/assets/js/sdg.js?v=20261109091118'></script>
 
 
 <script>
@@ -2761,7 +2742,7 @@ var MET_SCORES_BY_GOAL = {
 
     
     
-    <script src="/site/assets/js/custom.js?v=20261105151247"></script><script>
+    <script src="/site/assets/js/custom.js?v=20261109091118"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

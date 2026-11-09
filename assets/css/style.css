@@ -4020,123 +4020,126 @@ div.goal-target {
     width: 70px;
     height: 70px; }
   .layout-progrestatus-objetivos .objetivo-medidor-panel {
-    padding: 24px 28px;
+    padding: 20px 24px;
     background: #f7fafd;
     border: 1px solid #d0dce9;
     border-radius: 10px;
     margin-top: 20px; }
-  .layout-progrestatus-objetivos .objetivo-panel-header {
+  .layout-progrestatus-objetivos .objetivo-panel-layout {
     display: flex;
     align-items: flex-start;
     gap: 20px; }
-    .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-icon-wrap img {
-      width: 90px;
-      height: 90px; }
-    .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-icon-wrap a {
+    .layout-progrestatus-objetivos .objetivo-panel-layout .objetivo-panel-icon-wrap img {
+      width: 120px;
+      height: 120px; }
+    .layout-progrestatus-objetivos .objetivo-panel-layout .objetivo-panel-icon-wrap a {
       display: block;
       border-radius: 4px;
       outline-offset: 3px; }
-      .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-icon-wrap a:focus-visible {
-        outline: 2px solid #1a3a5c; }
-    .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-info {
-      flex: 1;
-      min-width: 0; }
-    .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-num {
-      font-size: .85rem;
-      color: #666;
-      margin: 0 0 2px;
-      text-transform: uppercase;
-      letter-spacing: .05em; }
-    .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-title {
-      font-size: 1.3rem;
+  .layout-progrestatus-objetivos .objetivo-panel-right {
+    flex: 1;
+    min-width: 0; }
+  .layout-progrestatus-objetivos .objetivo-panel-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px; }
+    .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-title {
+      font-size: 1.2rem;
       color: #1a3a5c;
-      margin: 0 0 10px;
+      margin: 0;
       line-height: 1.3; }
-    .layout-progrestatus-objetivos .objetivo-panel-header #om-goal-link-title {
+    .layout-progrestatus-objetivos .objetivo-panel-title-row #om-goal-link-title {
       text-decoration: none;
       color: inherit; }
-      .layout-progrestatus-objetivos .objetivo-panel-header #om-goal-link-title:hover .objetivo-panel-title {
+      .layout-progrestatus-objetivos .objetivo-panel-title-row #om-goal-link-title:hover .objetivo-panel-title {
         text-decoration: underline; }
-    .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-status {
+    .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status {
       display: flex;
       align-items: center;
       gap: 8px;
-      flex-wrap: wrap; }
-      .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-status .om-status-img {
-        width: 110px;
+      flex-shrink: 0;
+      flex-wrap: nowrap; }
+      .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-img {
+        width: 90px;
         height: auto;
         flex-shrink: 0; }
-      .layout-progrestatus-objetivos .objetivo-panel-header .objetivo-panel-status .om-status-label {
-        font-size: 1rem;
+      .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
+        font-size: .9rem;
         font-weight: 600;
-        color: #222; }
-  .layout-progrestatus-objetivos .om-goal-btn {
-    align-self: flex-start;
-    width: auto;
-    font-size: .9rem;
-    flex-shrink: 0; }
-  .layout-progrestatus-objetivos .om-panel-section {
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px solid #d0dce9; }
-  .layout-progrestatus-objetivos .om-panel-section-title {
-    font-size: 1rem;
-    font-weight: 600;
+        color: #222;
+        white-space: nowrap; }
+  .layout-progrestatus-objetivos .om-panel-section-compact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px; }
+  .layout-progrestatus-objetivos .om-section-label {
+    font-size: .78rem;
+    font-weight: 700;
     color: #1a3a5c;
-    margin: 0 0 12px;
     text-transform: uppercase;
-    letter-spacing: .05em; }
+    letter-spacing: .05em;
+    flex-shrink: 0;
+    min-width: 88px; }
   .layout-progrestatus-objetivos .om-panel-section-body {
-    min-height: 32px; }
-  .layout-progrestatus-objetivos .om-section-placeholder {
-    color: #aaa;
-    font-style: italic;
-    margin: 0;
-    font-size: .9rem; }
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0; }
+    .layout-progrestatus-objetivos .om-panel-section-body .total {
+      font-size: 16px;
+      display: inline-block;
+      padding: 1px 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      flex-shrink: 0; }
+    .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
+      flex: 1;
+      border: 1px solid #0b0c0c;
+      font-size: 0;
+      overflow: hidden;
+      min-width: 0; }
+      @media (-ms-high-contrast: active), (forced-colors: active) {
+        .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
+          -ms-high-contrast-adjust: none;
+          forced-color-adjust: none; } }
+      .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span {
+        display: inline-block;
+        padding: 3px 0;
+        font-size: 16px;
+        text-align: center;
+        color: #000;
+        position: relative;
+        cursor: default; }
+        .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span .status-inner {
+          padding: 0 2px;
+          border-radius: 5px;
+          position: relative;
+          z-index: 2; }
   @media (max-width: 768px) {
     .layout-progrestatus-objetivos .objetivo-medidor-panel {
       padding: 16px; }
-    .layout-progrestatus-objetivos .objetivo-panel-header {
-      flex-wrap: wrap;
-      gap: 12px; }
-    .layout-progrestatus-objetivos .om-goal-btn {
+    .layout-progrestatus-objetivos .objetivo-panel-layout {
+      gap: 14px; }
+    .layout-progrestatus-objetivos .objetivo-panel-title-row {
+      flex-wrap: wrap; }
+    .layout-progrestatus-objetivos .objetivo-panel-status {
       width: 100%;
-      text-align: center; } }
+      order: 3; } }
   @media (max-width: 576px) {
     .layout-progrestatus-objetivos .om-tick {
       width: 2px; }
     .layout-progrestatus-objetivos .om-tick--active {
       width: 4px !important; }
     .layout-progrestatus-objetivos .objetivo-panel-icon-wrap img {
-      width: 70px;
-      height: 70px; } }
-  .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
-    border: 1px solid #0b0c0c;
-    font-size: 0;
-    margin-top: 6px; }
-    @media (-ms-high-contrast: active), (forced-colors: active) {
-      .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
-        -ms-high-contrast-adjust: none;
-        forced-color-adjust: none; } }
-    .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span {
-      display: inline-block;
-      font-size: 16px;
-      text-align: center;
-      color: #000;
-      position: relative;
-      padding: 3px 0; }
-      .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span .status-inner {
-        padding: 0 2px;
-        border-radius: 5px;
-        position: relative;
-        z-index: 2; }
-  .layout-progrestatus-objetivos .om-panel-section-body .total {
-    font-size: 16px;
-    display: inline-block;
-    margin-top: 4px;
-    padding: 2px 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc; }
+      width: 80px;
+      height: 80px; }
+    .layout-progrestatus-objetivos .om-section-label {
+      min-width: 72px;
+      font-size: .72rem; } }
   .layout-progrestatus-objetivos .om-informe-section {
     margin-top: 48px;
     padding-top: 36px;
