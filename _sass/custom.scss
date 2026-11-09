@@ -1462,7 +1462,7 @@ div.goal-target {
     text-transform: uppercase;
     letter-spacing: .05em;
     flex-shrink: 0;
-    min-width: 88px;
+    width: 7.5rem;   // ancho fijo: cabe "INDICADORES" y alinea con "METAS"
   }
 
   .om-panel-section-body {
