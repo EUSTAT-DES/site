@@ -1442,8 +1442,8 @@ div.goal-target {
       gap: 8px;
       flex-shrink: 0;
       flex-wrap: nowrap;
-      .om-status-img   { width: 90px; height: auto; flex-shrink: 0; }
-      .om-status-label { font-size: .9rem; font-weight: 600; color: #222; white-space: nowrap; }
+      .om-status-img   { width: 130px; height: auto; flex-shrink: 0; }
+      .om-status-label { font-size: 1.1rem; font-weight: 600; color: #222; white-space: nowrap; }
     }
   }
 
@@ -1530,10 +1530,25 @@ div.goal-target {
 
     > h2 {
       margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
   }
 
-  // Desplegable por objetivos dentro de cada sección
+  // Badge inline junto al h2 del informe
+  .total-inline {
+    font-size: .85rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid $horizontalRule-color;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+
+  // Desplegable por objetivos — una sola línea de separación
   .om-goals-detail {
     margin-top: 20px;
     border-top: 1px solid #ccc;
@@ -1562,6 +1577,14 @@ div.goal-target {
 
     &[open] > summary::before {
       transform: rotate(90deg);
+    }
+
+    // Eliminar línea extra entre summary y el primer item
+    .reporting-status-item:first-child,
+    .goal:first-child {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
     }
   }
 
