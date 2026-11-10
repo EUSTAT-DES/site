@@ -1541,32 +1541,23 @@ div.goal-target {
       flex-wrap: wrap;
       .om-status-label { white-space: normal; }
     }
-  }
-
-  @media (max-width: 576px) {
-    .om-tick               { width: 2px; }
-    .om-tick--active       { width: 4px !important; }
-
-    // Panel: icono arriba a la izquierda, columna derecha ocupa todo el ancho
-    .objetivo-panel-layout {
-      flex-wrap: wrap;
-    }
-    .objetivo-panel-icon-wrap img { width: 80px; height: 80px; }
-
-    // Secciones: label+badge encima de la barra (columna)
+    // Secciones: label+badge encima de la barra
     .om-panel-section-compact {
       flex-direction: column;
       align-items: flex-start;
       gap: 4px;
       margin-top: 12px;
     }
-    .om-section-label {
-      width: auto;          // no ancho fijo en móvil
-      font-size: .75rem;
-    }
-    .om-panel-section-body {
-      width: 100%;
-    }
+    .om-section-label { width: auto; }
+    .om-panel-section-body { width: 100%; }
+  }
+
+  @media (max-width: 576px) {
+    .om-tick               { width: 2px; }
+    .om-tick--active       { width: 4px !important; }
+    // Panel: icono arriba a la izquierda, columna derecha ocupa todo el ancho
+    .objetivo-panel-layout { flex-wrap: wrap; }
+    .objetivo-panel-icon-wrap img { width: 80px; height: 80px; }
   }
 
   // Secciones de informes embebidos (indicadores / metas)
