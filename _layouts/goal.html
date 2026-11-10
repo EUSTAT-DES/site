@@ -34,8 +34,15 @@
         <h2 class="goal-page-heading">{{ page.t.general.targets_and_indicators }}</h2>
       </div>
       {% if show_progress %}
+      {% if page.language == 'es' %}{% assign _met_path = '/es/metodologia/' %}
+      {% elsif page.language == 'en' %}{% assign _met_path = '/en/metodologia/' %}
+      {% else %}{% assign _met_path = '/metodologia/' %}{% endif %}
       <div class="col-lg-2 d-none d-lg-block progress-column-header">
         <span aria-hidden="true">{{ site.progress_status.status_help | t | default: page.t.status.progress_help }}</span>
+        <a href="{{ site.baseurl }}{{ _met_path }}"
+           class="progress-info-link"
+           title="{{ page.t.status.progress_help }}"
+           aria-label="{{ page.t.status.progress_help }}">i</a>
       </div>
       {% endif %}
     </div>
