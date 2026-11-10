@@ -3734,6 +3734,11 @@ ul.iconillo {
   .progress-status-inline .progress-status-label {
     line-height: 1.3; }
 
+.goal-page-indicator-progress .progress-status-image {
+  max-width: 90px; }
+  .goal-page-indicator-progress .progress-status-image img {
+    max-width: 100%; }
+
 .layout-progrestatus-categoria, .layout-progrestatus-metas-categoria {
   padding-top: 20px; }
   .layout-progrestatus-categoria .back-link, .layout-progrestatus-metas-categoria .back-link {
@@ -4145,7 +4150,16 @@ div.goal-target {
     .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status {
       flex-wrap: wrap; }
       .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
-        white-space: normal; } }
+        white-space: normal; }
+    .layout-progrestatus-objetivos .om-panel-section-compact {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      margin-top: 12px; }
+    .layout-progrestatus-objetivos .om-section-label {
+      width: auto; }
+    .layout-progrestatus-objetivos .om-panel-section-body {
+      width: 100%; } }
   @media (max-width: 576px) {
     .layout-progrestatus-objetivos .om-tick {
       width: 2px; }
@@ -4155,17 +4169,7 @@ div.goal-target {
       flex-wrap: wrap; }
     .layout-progrestatus-objetivos .objetivo-panel-icon-wrap img {
       width: 80px;
-      height: 80px; }
-    .layout-progrestatus-objetivos .om-panel-section-compact {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 4px;
-      margin-top: 12px; }
-    .layout-progrestatus-objetivos .om-section-label {
-      width: auto;
-      font-size: .75rem; }
-    .layout-progrestatus-objetivos .om-panel-section-body {
-      width: 100%; } }
+      height: 80px; } }
   .layout-progrestatus-objetivos .om-informe-section > h2 {
     margin-bottom: 24px;
     display: flex;
