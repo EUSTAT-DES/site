@@ -4031,25 +4031,27 @@ div.goal-target {
     border-radius: 10px;
     margin-top: 20px; }
   .layout-progrestatus-objetivos .objetivo-panel-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px; }
-    .layout-progrestatus-objetivos .objetivo-panel-layout .objetivo-panel-icon-wrap img {
-      width: 120px;
-      height: 120px; }
-    .layout-progrestatus-objetivos .objetivo-panel-layout .objetivo-panel-icon-wrap a {
-      display: block;
-      border-radius: 4px;
-      outline-offset: 3px; }
-  .layout-progrestatus-objetivos .objetivo-panel-right {
-    flex: 1;
-    min-width: 0; }
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "icon  title" "icon  sections";
+    gap: 12px 20px;
+    align-items: start; }
+    .layout-progrestatus-objetivos .objetivo-panel-layout .objetivo-panel-icon-wrap {
+      grid-area: icon; }
+      .layout-progrestatus-objetivos .objetivo-panel-layout .objetivo-panel-icon-wrap img {
+        width: 120px;
+        height: 120px; }
+      .layout-progrestatus-objetivos .objetivo-panel-layout .objetivo-panel-icon-wrap a {
+        display: block;
+        border-radius: 4px;
+        outline-offset: 3px; }
   .layout-progrestatus-objetivos .objetivo-panel-title-row {
+    grid-area: title;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 14px; }
+    gap: 16px; }
     .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-title {
       font-size: 1.2rem;
       color: #1a3a5c;
@@ -4072,6 +4074,8 @@ div.goal-target {
         font-size: 1rem;
         font-weight: 600;
         color: #222; }
+  .layout-progrestatus-objetivos .om-panel-sections {
+    grid-area: sections; }
   .layout-progrestatus-objetivos .om-panel-section-compact {
     display: flex;
     align-items: center;
@@ -4144,13 +4148,10 @@ div.goal-target {
     .layout-progrestatus-objetivos .objetivo-medidor-panel {
       padding: 16px; }
     .layout-progrestatus-objetivos .objetivo-panel-layout {
-      gap: 14px; }
-    .layout-progrestatus-objetivos .objetivo-panel-title-row {
-      flex-wrap: wrap; }
-    .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status {
-      flex-wrap: wrap; }
-      .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
-        white-space: normal; }
+      grid-template-columns: auto 1fr;
+      grid-template-areas: "icon   title" "sections sections"; }
+    .layout-progrestatus-objetivos .om-panel-sections {
+      width: 100%; }
     .layout-progrestatus-objetivos .om-panel-section-compact {
       flex-direction: column;
       align-items: flex-start;
@@ -4159,17 +4160,23 @@ div.goal-target {
     .layout-progrestatus-objetivos .om-section-label {
       width: auto; }
     .layout-progrestatus-objetivos .om-panel-section-body {
-      width: 100%; } }
+      width: 100%; }
+    .layout-progrestatus-objetivos .objetivo-panel-title-row {
+      flex-wrap: wrap; }
+    .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status {
+      flex-wrap: wrap; }
+      .layout-progrestatus-objetivos .objetivo-panel-title-row .objetivo-panel-status .om-status-label {
+        white-space: normal; } }
   @media (max-width: 576px) {
     .layout-progrestatus-objetivos .om-tick {
       width: 2px; }
     .layout-progrestatus-objetivos .om-tick--active {
       width: 4px !important; }
     .layout-progrestatus-objetivos .objetivo-panel-layout {
-      flex-wrap: wrap; }
+      grid-template-columns: 80px 1fr; }
     .layout-progrestatus-objetivos .objetivo-panel-icon-wrap img {
-      width: 80px;
-      height: 80px; } }
+      width: 80px !important;
+      height: 80px !important; } }
   .layout-progrestatus-objetivos .om-informe-section > h2 {
     margin-bottom: 24px;
     display: flex;
