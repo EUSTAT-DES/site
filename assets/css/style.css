@@ -3722,6 +3722,41 @@ ul.iconillo {
   .layout-progrestatus .reporting-status-item, .layout-progrestatus-metas .reporting-status-item, .layout-progrestatus-objetivos .reporting-status-item {
     page-break-inside: avoid;
     break-inside: avoid; } }
+.progress-column-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: .85rem;
+  color: #555;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; }
+
+.progress-info-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid #888;
+  font-size: .7rem;
+  font-weight: 700;
+  color: #555;
+  text-decoration: none;
+  line-height: 1;
+  flex-shrink: 0; }
+  .progress-info-link:hover {
+    border-color: #0056b3;
+    color: #0056b3; }
+
+.goal-page-target-progress,
+.goal-page-indicator-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .progress-status-inline {
   display: flex;
   align-items: center;
