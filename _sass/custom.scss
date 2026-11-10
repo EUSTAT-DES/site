@@ -1021,6 +1021,16 @@ ul.iconillo {
     }
 }
 
+// Icono de progreso en indicadores: más pequeño que el de metas (90px vs 136px)
+// .goal-page-target-progress → metas (136px, el default)
+// .goal-page-indicator-progress → indicadores (más compacto)
+.goal-page-indicator-progress {
+    .progress-status-image {
+        max-width: 90px;
+        img { max-width: 100%; }
+    }
+}
+
 // Layout de categorÃ­a de progreso (lista de indicadores por estado)
 .layout-progrestatus-categoria {
   padding-top: 20px;
