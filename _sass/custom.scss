@@ -1412,28 +1412,30 @@ div.goal-target {
     margin-top: 20px;
   }
 
-  // Layout: icono izq + columna dcha (título, estado, secciones)
+  // Layout: CSS Grid — icono izq, título+estado dcha, secciones abajo del icono en tablet
   .objetivo-panel-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "icon  title"
+      "icon  sections";
+    gap: 12px 20px;
+    align-items: start;
 
-    .objetivo-panel-icon-wrap img { width: 120px; height: 120px; }
-    .objetivo-panel-icon-wrap a   { display: block; border-radius: 4px; outline-offset: 3px; }
+    .objetivo-panel-icon-wrap {
+      grid-area: icon;
+      img { width: 120px; height: 120px; }
+      a   { display: block; border-radius: 4px; outline-offset: 3px; }
+    }
   }
 
-  .objetivo-panel-right {
-    flex: 1;
-    min-width: 0;
-  }
-
-  // Fila: título (izq) + estado (dcha)
   .objetivo-panel-title-row {
+    grid-area: title;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 16px;
-    margin-bottom: 14px;
 
     .objetivo-panel-title {
       font-size: 1.2rem;
@@ -1454,6 +1456,10 @@ div.goal-target {
       .om-status-img   { width: 130px; height: auto; }
       .om-status-label { font-size: 1rem; font-weight: 600; color: #222; }
     }
+  }
+
+  .om-panel-sections {
+    grid-area: sections;
   }
 
   // Secciones compactas: LABEL — [total] — [barra]
@@ -1544,14 +1550,15 @@ div.goal-target {
   // ── Responsive ───────────────────────────────────────────
   @media (max-width: 768px) {
     .objetivo-medidor-panel    { padding: 16px; }
-    .objetivo-panel-layout     { gap: 14px; }
-    .objetivo-panel-title-row  { flex-wrap: wrap; }
-    // Misma especificidad que el desktop para que el override funcione
-    .objetivo-panel-title-row .objetivo-panel-status {
-      flex-wrap: wrap;
-      .om-status-label { white-space: normal; }
+    // Grid: secciones pasan a ancho completo debajo del icono
+    .objetivo-panel-layout {
+      grid-template-columns: auto 1fr;
+      grid-template-areas:
+        "icon   title"
+        "sections sections";
     }
-    // Secciones: label+badge encima de la barra
+    .om-panel-sections         { width: 100%; }
+    // Secciones en columna (label+badge encima de la barra)
     .om-panel-section-compact {
       flex-direction: column;
       align-items: flex-start;
@@ -1560,14 +1567,19 @@ div.goal-target {
     }
     .om-section-label { width: auto; }
     .om-panel-section-body { width: 100%; }
+    // Title row wrapping y status con wrap
+    .objetivo-panel-title-row  { flex-wrap: wrap; }
+    .objetivo-panel-title-row .objetivo-panel-status {
+      flex-wrap: wrap;
+      .om-status-label { white-space: normal; }
+    }
   }
 
   @media (max-width: 576px) {
     .om-tick               { width: 2px; }
     .om-tick--active       { width: 4px !important; }
-    // Panel: icono arriba a la izquierda, columna derecha ocupa todo el ancho
-    .objetivo-panel-layout { flex-wrap: wrap; }
-    .objetivo-panel-icon-wrap img { width: 80px; height: 80px; }
+    .objetivo-panel-layout { grid-template-columns: 80px 1fr; }
+    .objetivo-panel-icon-wrap img { width: 80px !important; height: 80px !important; }
   }
 
   // Secciones de informes embebidos (indicadores / metas)
