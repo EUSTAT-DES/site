@@ -1544,7 +1544,7 @@ div.goal-target {
       flex: 1;
       border: 1px solid $color-dark;
       font-size: 0;
-      overflow: hidden;
+      overflow: visible;  // antes hidden: recortaba el tooltip que sale por arriba
       white-space: nowrap;
       min-width: 0;
       margin-top: 0 !important;  // override al 10px heredado del @extend (lo compensa om-panel-section-compact)
@@ -1565,22 +1565,34 @@ div.goal-target {
           z-index: 2;
         }
 
-        // Tooltip: oculto por defecto, visible en hover
+        // Tooltip: EXACTAMENTE el mismo que el de las barras de los informes
+        // (.reporting-status-item .goal-stats span .goal-bar-tooltip), flecha
+        // incluida. Antes era un tooltip propio más pequeño y sin flecha.
         .goal-bar-tooltip {
           display: none;
           position: absolute;
-          bottom: calc(100% + 4px);
+          bottom: calc(100% + 12px);
           left: 50%;
           transform: translateX(-50%);
-          background: rgba(0,0,0,.85);
+          background: rgba(0, 0, 0, 0.85);
           color: #fff;
-          padding: 2px 6px;
-          border-radius: 3px;
-          font-size: .7rem;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: normal;
           white-space: nowrap;
           pointer-events: none;
           z-index: 100;
-          line-height: 1.5;
+          line-height: 25px;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: var(--arrow-offset, 50%);
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.85);
+          }
         }
 
         &:hover .goal-bar-tooltip {

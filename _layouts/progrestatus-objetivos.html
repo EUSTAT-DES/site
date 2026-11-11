@@ -538,41 +538,19 @@ var MET_SCORES_BY_GOAL = {
     var indBody  = document.getElementById('om-indicadores-body');
     if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], {{ 'general.targets' | t | downcase | jsonify }});
     if (indBody)  indBody.innerHTML  = buildGoalStats(indData[g], {{ 'general.indicators' | t | downcase | jsonify }});
-    /* Inicializar tooltips de las barras del panel (generadas dinámicamente) */
+    /* Tooltips de las barras del panel (generadas dinámicamente): el MISMO
+       tooltip que las barras de los informes, vía attachBarTooltip. */
     [metaBody, indBody].forEach(function(b) {
       if (!b) return;
-      b.querySelectorAll('.goal-stats span[title]').forEach(function (span) {
-        if (span.querySelector('.goal-bar-tooltip')) return;
-        var tip = document.createElement('span');
-        tip.className = 'goal-bar-tooltip';
-        tip.textContent = span.getAttribute('title');
-        span.appendChild(tip);
-      });
+      b.querySelectorAll('.goal-stats span[title]').forEach(attachBarTooltip);
     });
   }
 
-  /* â”€â”€ Init â”€â”€ */
-  buildTicks(track);
-
-  /* El tooltip flotante se aÃ±ade al final del track (encima de ticks en DOM) */
-  if (track) track.appendChild(omHoverTip);
-
-  staggerIcons(track);
-  window.addEventListener('resize', function () { staggerIcons(track); });
-
-  /* SelecciÃ³n inicial: hash URL o primer objetivo */
-  var hash = window.location.hash;
-  if (hash && hash.match(/^#goal-(\d+)$/)) {
-    var n = hash.replace('#goal-', '');
-    if (scores[n]) { selectGoal(n); return; }
-  }
-  var firstGoal = Object.keys(scores)
-    .sort(function (a, b) { return parseInt(a) - parseInt(b); })[0];
-  if (firstGoal) selectGoal(firstGoal);
-
-  /* ── Tooltips bocadillo en las barras de los informes ──
-     Mismo código que progrestatus.html — crea .goal-bar-tooltip y maneja hover ── */
-  document.querySelectorAll('.reporting-status-item .goal-stats span[title]').forEach(function (span) {
+  /* ── Tooltip bocadillo de las barras ──
+     Código único usado por las barras de los informes y por las barras del
+     panel. Crea .goal-bar-tooltip y posiciona en mouseenter. */
+  function attachBarTooltip(span) {
+    if (span.querySelector('.goal-bar-tooltip')) return;
     var text = span.getAttribute('title');
     if (!text) return;
     var tip = document.createElement('span');
@@ -608,7 +586,30 @@ var MET_SCORES_BY_GOAL = {
         tip.style.setProperty('--arrow-offset', '50%');
       }
     });
-  });
+  }
+
+  /* â”€â”€ Init â”€â”€ */
+  buildTicks(track);
+
+  /* El tooltip flotante se aÃ±ade al final del track (encima de ticks en DOM) */
+  if (track) track.appendChild(omHoverTip);
+
+  staggerIcons(track);
+  window.addEventListener('resize', function () { staggerIcons(track); });
+
+  /* SelecciÃ³n inicial: hash URL o primer objetivo */
+  var hash = window.location.hash;
+  if (hash && hash.match(/^#goal-(\d+)$/)) {
+    var n = hash.replace('#goal-', '');
+    if (scores[n]) { selectGoal(n); return; }
+  }
+  var firstGoal = Object.keys(scores)
+    .sort(function (a, b) { return parseInt(a) - parseInt(b); })[0];
+  if (firstGoal) selectGoal(firstGoal);
+
+  /* Tooltips bocadillo en las barras de los informes (mismo attachBarTooltip). */
+  document.querySelectorAll('.reporting-status-item .goal-stats span[title]')
+    .forEach(attachBarTooltip);
 
 })();
 </script>
