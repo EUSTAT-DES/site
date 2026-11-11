@@ -4140,8 +4140,8 @@ div.goal-target {
       border: 1px solid #ccc;
       flex-shrink: 0;
       box-sizing: border-box;
-      min-width: 3.2rem;
-      text-align: right; }
+      min-width: 2rem;
+      text-align: center; }
     .layout-progrestatus-objetivos .om-panel-section-body .goal-stats {
       flex: 1;
       border: 1px solid #0b0c0c;
