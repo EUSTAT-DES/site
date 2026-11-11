@@ -4274,3 +4274,6 @@ div.goal-target {
     color: #ccc; }
   body.contrast-high .layout-progrestatus-objetivos .om-icon--active {
     outline-color: #fff; }
+
+.goal-target {
+  scroll-margin-top: 100px; }

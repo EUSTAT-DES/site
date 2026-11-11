@@ -144,7 +144,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261111130215">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261111133211">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -532,7 +532,7 @@ data-event-label="high"
     <hr class="goal-page-column-header-rule">
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.1">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.1</span>
@@ -616,7 +616,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.2">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.2</span>
@@ -713,7 +713,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.3">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.3</span>
@@ -863,7 +863,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.4">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.4</span>
@@ -947,7 +947,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.5">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.5</span>
@@ -1150,7 +1150,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.6">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.6</span>
@@ -1287,7 +1287,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.7">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.7</span>
@@ -1424,7 +1424,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.a">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.a</span>
@@ -1508,7 +1508,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.b">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.b</span>
@@ -1645,7 +1645,7 @@ data-event-label="high"
         <hr class="goal-page-target-rule" />
     
       
-      <div class="row align-items-start goal-target">
+      <div class="row align-items-start goal-target" id="11.c">
           <div class="col-auto goal-page-target-number">
             <h3 class="goal-target">
               <span class="target-number"><span class="visually-hidden">Xedea</span> 11.c</span>
@@ -1779,8 +1779,28 @@ data-event-label="high"
     r.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(!r._col); }
     });
+    r._toggle = toggle;
     toggle(true); // colapsado al cargar
   });
+
+  // Si la URL trae un ancla de meta (p.ej. #1.5), solo abrimos ese acordeón.
+  // El scroll hasta el ancla lo hace el navegador de forma nativa (la fila de
+  // la meta no se mueve al expandir, solo aparece contenido debajo), con el
+  // hueco del sticky resuelto vía scroll-margin-top en CSS. El id de la fila
+  // es el número de meta con punto, así que usamos getElementById (no
+  // querySelector('#1.5'), donde el punto se interpretaría como clase).
+  function openTargetFromHash() {
+    var raw = window.location.hash;
+    if (!raw) return;
+    var id = decodeURIComponent(raw.slice(1));
+    if (!id) return;
+    var row = document.getElementById(id);
+    if (!row || !row.classList.contains('goal-target') || typeof row._toggle !== 'function') return;
+    row._toggle(false); // expandir
+  }
+
+  openTargetFromHash();
+  window.addEventListener('hashchange', openTargetFromHash);
 })();
 </script>
 
@@ -1923,7 +1943,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20261111130215'></script>
+<script src='/site/assets/js/sdg.js?v=20261111133211'></script>
 
 
 <script>
@@ -1943,7 +1963,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20261111130215"></script><script>
+    <script src="/site/assets/js/custom.js?v=20261111133211"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
