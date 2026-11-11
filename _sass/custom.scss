@@ -1740,28 +1740,22 @@ div.goal-target {
 // ── Informe de metas/indicadores: hueco del círculo ampliado ──
 // El theme fija .details a calc(100% - 125px), pensado para un icono de ~100px.
 // Como aquí el icono es 120px + márgenes, ampliamos el hueco reservado a 170px
-// para que la lista de categorías no caiga debajo del círculo.
-.layout-progrestatus #main-content .details,
-.layout-progrestatus-metas #main-content .details,
-.layout-progrestatus-objetivos #main-content .details {
+// para que la lista de categorías no caiga debajo del círculo. Solo la cabecera
+// overall (icono grande de 120px); los .details de "Detalle por objetivo" no
+// se tocan.
+.layout-progrestatus-objetivos #main-content .goal-overall .details {
   width: calc(100% - 170px);
   float: left;
 }
-.layout-progrestatus #main-content .reporting-status-item,
-.layout-progrestatus-metas #main-content .reporting-status-item,
 .layout-progrestatus-objetivos #main-content .reporting-status-item {
   margin-bottom: 20px;
   margin-left: 37px;
 }
 
-// A 576px hacia abajo: .details pierde el ancho fijo y el float para ocupar
-// todo el ancho y saltar de línea (la lista de categorías cae debajo del
-// círculo). Mismo scope (los tres layouts) que la regla de arriba, para
-// ganar sobre el calc(100% - 170px).
+// A 576px hacia abajo: .details de la cabecera overall ocupa todo el ancho y
+// salta de línea (la lista de categorías cae debajo del círculo).
 @media only screen and (max-width: 576px) {
-  .layout-progrestatus #main-content .details,
-  .layout-progrestatus-metas #main-content .details,
-  .layout-progrestatus-objetivos #main-content .details {
+  .layout-progrestatus-objetivos #main-content .goal-overall .details {
     width: 100%;
     min-width: 0;
     float: none;
