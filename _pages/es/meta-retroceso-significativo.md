@@ -1,4 +1,4 @@
-﻿---
+---
 title: Retroceso significativo
 language: es
 permalink: /es/meta-atzerakada-nabarmena/

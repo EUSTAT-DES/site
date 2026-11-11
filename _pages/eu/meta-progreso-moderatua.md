@@ -1,4 +1,4 @@
-﻿---
+---
 title: Aurrerapen moderatua
 language: eu
 permalink: /meta-progreso-moderatua/

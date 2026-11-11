@@ -1,4 +1,4 @@
-﻿---
+---
 title: Stagnation
 language: en
 permalink: /en/meta-geldialdia/

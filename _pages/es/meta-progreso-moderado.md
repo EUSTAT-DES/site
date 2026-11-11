@@ -1,4 +1,4 @@
-﻿---
+---
 title: Progreso moderado
 language: es
 permalink: /es/meta-progreso-moderatua/

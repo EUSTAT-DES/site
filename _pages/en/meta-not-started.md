@@ -1,4 +1,4 @@
-﻿---
+---
 title: No data available
 language: en
 permalink: /en/meta-hasieratu-gabe/

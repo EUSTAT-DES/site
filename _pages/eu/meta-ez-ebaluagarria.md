@@ -1,4 +1,4 @@
-﻿---
+---
 title: Ez ebaluagarria
 language: eu
 permalink: /meta-ez-ebaluagarria/

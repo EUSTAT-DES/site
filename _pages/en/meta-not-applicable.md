@@ -1,4 +1,4 @@
-﻿---
+---
 title: Not applicable
 language: en
 permalink: /en/meta-ez-aplikagarria/

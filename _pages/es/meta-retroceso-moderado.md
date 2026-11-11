@@ -1,4 +1,4 @@
-﻿---
+---
 title: Retroceso moderado
 language: es
 permalink: /es/meta-atzerakada-moderatua/

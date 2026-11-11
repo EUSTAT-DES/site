@@ -1,4 +1,4 @@
-﻿---
+---
 title: Significant regression
 language: en
 permalink: /en/meta-atzerakada-nabarmena/

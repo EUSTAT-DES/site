@@ -1,4 +1,4 @@
-﻿---
+---
 title: Datuak ez daude eskuragarri
 language: eu
 permalink: /meta-hasieratu-gabe/

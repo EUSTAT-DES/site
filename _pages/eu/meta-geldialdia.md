@@ -1,4 +1,4 @@
-﻿---
+---
 title: Geldialdi edo aurrerapenik eza
 language: eu
 permalink: /meta-geldialdia/

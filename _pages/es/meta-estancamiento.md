@@ -1,4 +1,4 @@
-﻿---
+---
 title: Estancamiento
 language: es
 permalink: /es/meta-geldialdia/

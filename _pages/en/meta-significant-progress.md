@@ -1,4 +1,4 @@
-﻿---
+---
 title: Significant progress / Target met or on track
 language: en
 permalink: /en/meta-progreso-nabarmena/

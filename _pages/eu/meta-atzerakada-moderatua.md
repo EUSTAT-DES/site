@@ -1,4 +1,4 @@
-﻿---
+---
 title: Atzerakada moderatua
 language: eu
 permalink: /meta-atzerakada-moderatua/

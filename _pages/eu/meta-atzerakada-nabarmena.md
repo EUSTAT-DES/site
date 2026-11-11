@@ -1,4 +1,4 @@
-﻿---
+---
 title: Atzerakada nabarmena
 language: eu
 permalink: /meta-atzerakada-nabarmena/
