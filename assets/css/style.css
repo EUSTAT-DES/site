@@ -3774,51 +3774,49 @@ ul.iconillo {
   .goal-page-indicator-progress .progress-status-image img {
     max-width: 100%; }
 
-.layout-progrestatus-categoria, .layout-progrestatus-metas-categoria {
-  padding-top: 20px; }
-  .layout-progrestatus-categoria .back-link, .layout-progrestatus-metas-categoria .back-link {
-    color: #0056b3;
-    text-decoration: none;
-    font-size: 14px; }
-    .layout-progrestatus-categoria .back-link:hover, .layout-progrestatus-metas-categoria .back-link:hover {
-      text-decoration: underline; }
-  .layout-progrestatus-categoria .total, .layout-progrestatus-metas-categoria .total {
-    line-height: 1.2;
-    font-size: 16px;
-    width: auto;
-    padding-left: 4px;
-    padding-right: 4px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #ccc; }
-  .layout-progrestatus-categoria .categoria-goal-block, .layout-progrestatus-metas-categoria .categoria-goal-block {
-    padding-bottom: 0;
-    border-bottom: none;
-    margin-bottom: 0; }
-  .layout-progrestatus-categoria .categoria-separator, .layout-progrestatus-metas-categoria .categoria-separator {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 20px 0; }
-  .layout-progrestatus-categoria .categoria-indicator-list, .layout-progrestatus-metas-categoria .categoria-indicator-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0; }
-    .layout-progrestatus-categoria .categoria-indicator-list li, .layout-progrestatus-metas-categoria .categoria-indicator-list li {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 14px; }
-      .layout-progrestatus-categoria .categoria-indicator-list li .indicator-number, .layout-progrestatus-metas-categoria .categoria-indicator-list li .indicator-number {
-        flex-shrink: 0;
-        min-width: 60px;
-        color: #555;
-        font-size: 14px; }
-      .layout-progrestatus-categoria .categoria-indicator-list li a, .layout-progrestatus-metas-categoria .categoria-indicator-list li a {
-        text-decoration: underline;
-        color: #0056b3;
-        flex-grow: 1; }
-        .layout-progrestatus-categoria .categoria-indicator-list li a:hover, .layout-progrestatus-metas-categoria .categoria-indicator-list li a:hover {
-          color: #003d80; }
+.layout-progrestatus-categoria .back-link, .layout-progrestatus-metas-categoria .back-link {
+  color: #0056b3;
+  text-decoration: none;
+  font-size: 14px; }
+  .layout-progrestatus-categoria .back-link:hover, .layout-progrestatus-metas-categoria .back-link:hover {
+    text-decoration: underline; }
+.layout-progrestatus-categoria .total, .layout-progrestatus-metas-categoria .total {
+  line-height: 1.2;
+  font-size: 16px;
+  width: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #ccc; }
+.layout-progrestatus-categoria .categoria-goal-block, .layout-progrestatus-metas-categoria .categoria-goal-block {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0; }
+.layout-progrestatus-categoria .categoria-separator, .layout-progrestatus-metas-categoria .categoria-separator {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0; }
+.layout-progrestatus-categoria .categoria-indicator-list, .layout-progrestatus-metas-categoria .categoria-indicator-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0; }
+  .layout-progrestatus-categoria .categoria-indicator-list li, .layout-progrestatus-metas-categoria .categoria-indicator-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px; }
+    .layout-progrestatus-categoria .categoria-indicator-list li .indicator-number, .layout-progrestatus-metas-categoria .categoria-indicator-list li .indicator-number {
+      flex-shrink: 0;
+      min-width: 60px;
+      color: #555;
+      font-size: 14px; }
+    .layout-progrestatus-categoria .categoria-indicator-list li a, .layout-progrestatus-metas-categoria .categoria-indicator-list li a {
+      text-decoration: underline;
+      color: #0056b3;
+      flex-grow: 1; }
+      .layout-progrestatus-categoria .categoria-indicator-list li a:hover, .layout-progrestatus-metas-categoria .categoria-indicator-list li a:hover {
+        color: #003d80; }
 
 /* Goldilocks â€” ocultar columna Progress del footer del indicador.
    Open SDG la registra como time_series_attribute y muestra su valor
@@ -4227,6 +4225,10 @@ div.goal-target {
   .layout-progrestatus-objetivos .om-informe-section .goal-overall .frame.goal-tiles img {
     width: 120px !important;
     height: 120px !important; }
+  .layout-progrestatus-objetivos .om-informe-section .goal-overall .frame.goal-tiles {
+    width: 144px; }
+  .layout-progrestatus-objetivos .om-informe-section .goal-overall > .details {
+    width: calc(100% - 150px); }
   .layout-progrestatus-objetivos .total-inline {
     font-size: .85rem;
     display: inline-flex;
