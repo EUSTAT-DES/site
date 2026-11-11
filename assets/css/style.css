@@ -4144,7 +4144,7 @@ div.goal-target {
       flex: 1;
       border: 1px solid #0b0c0c;
       font-size: 0;
-      overflow: hidden;
+      overflow: visible;
       white-space: nowrap;
       min-width: 0;
       margin-top: 0 !important; }
@@ -4168,18 +4168,27 @@ div.goal-target {
         .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span .goal-bar-tooltip {
           display: none;
           position: absolute;
-          bottom: calc(100% + 4px);
+          bottom: calc(100% + 12px);
           left: 50%;
           transform: translateX(-50%);
           background: rgba(0, 0, 0, 0.85);
           color: #fff;
-          padding: 2px 6px;
-          border-radius: 3px;
-          font-size: .7rem;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: normal;
           white-space: nowrap;
           pointer-events: none;
           z-index: 100;
-          line-height: 1.5; }
+          line-height: 25px; }
+          .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span .goal-bar-tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: var(--arrow-offset, 50%);
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.85); }
         .layout-progrestatus-objetivos .om-panel-section-body .goal-stats span:hover .goal-bar-tooltip {
           display: block; }
   @media (max-width: 768px) {
@@ -4277,22 +4286,16 @@ div.goal-target {
 .goal-target {
   scroll-margin-top: 100px; }
 
-.layout-progrestatus #main-content .details, .layout-progrestatus-metas #main-content .details, .layout-progrestatus-objetivos #main-content .details,
-.layout-progrestatus-metas #main-content .details,
-.layout-progrestatus-objetivos #main-content .details {
+.layout-progrestatus-objetivos #main-content .goal-overall .details {
   width: calc(100% - 170px);
   float: left; }
 
-.layout-progrestatus #main-content .reporting-status-item, .layout-progrestatus-metas #main-content .reporting-status-item, .layout-progrestatus-objetivos #main-content .reporting-status-item,
-.layout-progrestatus-metas #main-content .reporting-status-item,
 .layout-progrestatus-objetivos #main-content .reporting-status-item {
   margin-bottom: 20px;
   margin-left: 37px; }
 
 @media only screen and (max-width: 576px) {
-  .layout-progrestatus #main-content .details, .layout-progrestatus-metas #main-content .details, .layout-progrestatus-objetivos #main-content .details,
-  .layout-progrestatus-metas #main-content .details,
-  .layout-progrestatus-objetivos #main-content .details {
+  .layout-progrestatus-objetivos #main-content .goal-overall .details {
     width: 100%;
     min-width: 0;
     float: none;
