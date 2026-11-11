@@ -119,7 +119,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Informe de seguimiento - Indicadores para los Objetivos de Desarrollo Sostenible</title>
+    <title>Estadísticas de progreso - Indicadores para los Objetivos de Desarrollo Sostenible</title>
 
 
 
@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261110124902">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261111112617">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -400,14 +400,14 @@ data-event-label="high"
     <div class="progreso-intro-header">
   <h1>
     
-      Informe de seguimiento
+      Estadísticas de progreso
     
   </h1>
   <div class="progreso-action-icons">
     <a href="https://eustat-des.github.io/data/progreso.csv"
        class="progreso-icon-btn progreso-download-btn-header"
-       title="Descargar datos del informe de seguimiento (.csv)"
-       aria-label="Descargar datos del informe de seguimiento (.csv)">
+       title="Descargar datos de estadísticas de progreso (.csv)"
+       aria-label="Descargar datos de estadísticas de progreso (.csv)">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
         <polyline points="7 10 12 15 17 10"/>
@@ -416,8 +416,8 @@ data-event-label="high"
     </a>
     <button type="button"
             class="progreso-icon-btn progreso-print-btn"
-            title="Imprimir informe de seguimiento"
-            aria-label="Imprimir informe de seguimiento"
+            title="Imprimir estadísticas de progreso"
+            aria-label="Imprimir estadísticas de progreso"
             onclick="window.print()">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
         <polyline points="6 9 6 2 18 2 18 9"/>
@@ -430,15 +430,23 @@ data-event-label="high"
 
 
 <div class="reporting-status-description">
-  <p>El informe de seguimiento proporciona una descripción general del progreso en la consecución de los Objetivos de Desarrollo Sostenible (ODS) en la Comunidad Autónoma de Euskadi.</p>
+  <p>El progreso de los indicadores y las metas de la Agenda 2030 se evalúa de forma continua y el resultado de este seguimiento está accesible en la página correspondiente a cada uno de los 17 Objetivos.</p>
 
-<p>Para saber más sobre el procedimiento para evaluar el progreso, ver <a href="/site/es/metodologia/">Medición del progreso en los Objetivos de Desarrollo Sostenible</a>.</p>
+<p>En este apartado, resumiendo los resultados de esa evaluación continua, se describe el avance realizado en la consecución de los Objetivos de Desarrollo Sostenible en la Comunidad Autónoma del País Vasco.</p>
+
+<p>El apartado “Progreso de objetivos” presenta el grado de progreso de cada uno de los 17 Objetivos de Desarrollo Sostenible, y haciendo clic en la imagen de cada objetivo se pueden ver los datos de avance de las metas y los indicadores del objetivo.</p>
+
+<p>El apartado “Progreso de metas” muestra el número de metas, de entre las 169 que componen la Agenda 2030, que se encuentran en los diferentes estados de progreso y, yendo al detalle, permite visualizar los datos por objetivo.</p>
+
+<p>El apartado “Progreso de indicadores” muestra el número de indicadores que se encuentran en los diferentes estados de progreso y permite visualizar datos por objetivos, yendo al detalle.</p>
+
+<p>Para saber más sobre el procedimiento de evaluación del progreso, ver <a href="/site/es/metodologia/">Medición del progreso en los Objetivos de Desarrollo Sostenible</a>.</p>
 
   <div class="progreso-action-icons progreso-action-icons-mobile">
     <a href="https://eustat-des.github.io/data/progreso.csv"
        class="progreso-icon-btn progreso-download-btn-mobile"
-       title="Descargar datos del informe de seguimiento (.csv)"
-       aria-label="Descargar datos del informe de seguimiento (.csv)">
+       title="Descargar datos de estadísticas de progreso (.csv)"
+       aria-label="Descargar datos de estadísticas de progreso (.csv)">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
         <polyline points="7 10 12 15 17 10"/>
@@ -447,8 +455,8 @@ data-event-label="high"
     </a>
     <button type="button"
             class="progreso-icon-btn progreso-print-btn"
-            title="Imprimir informe de seguimiento"
-            aria-label="Imprimir informe de seguimiento"
+            title="Imprimir estadísticas de progreso"
+            aria-label="Imprimir estadísticas de progreso"
             onclick="window.print()">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
         <polyline points="6 9 6 2 18 2 18 9"/>
@@ -2445,7 +2453,7 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = '';</script>
 
-<script src='/site/assets/js/sdg.js?v=20261110124902'></script>
+<script src='/site/assets/js/sdg.js?v=20261111112617'></script>
 
 
 <script>
@@ -2465,7 +2473,7 @@ data-event-label="high"
 
     
     
-    <script src="/site/assets/js/custom.js?v=20261110124902"></script><script>
+    <script src="/site/assets/js/custom.js?v=20261111112617"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

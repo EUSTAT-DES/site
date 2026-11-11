@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261110124902">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261111112617">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -397,8 +397,6 @@ data-event-label="high"
 
 
 
-
-
 <script>
 /* â”€â”€ Datos incrustados por Jekyll â”€â”€ */
 
@@ -423,13 +421,16 @@ var OBJETIVO_SCORES = {
   "17": { status: "significant_progress", score: 3.9190873913 }
 };
 
-/* Tipos de estado (site.progress_status.status_types + | t) */
+/* Tipos de estado (site.progress_status.status_types + | t)
+   label: se prefiere la variante "_sin_target" (texto corto, igual que las
+   etiquetas de las zonas de color de la barra superior); si no existe
+   traducción, se usa el label por defecto del status_type. */
 var STATUS_TYPES = {
-  "significant_progress": { label: "Aurrerapen nabarmena helburuen aldera", image: "assets/img/progress/alcanzado.png" },
-  "moderate_progress": { label: "Aurrerapen moderatua helburuen aldera", image: "assets/img/progress/en_progreso.png" },
-  "no_progress": { label: "Ez aurrerapen ez atzerakadarik", image: "assets/img/progress/sin_progreso.png" },
-  "moderate_deterioration": { label: "Atzerakada moderatua helburuen aldera", image: "assets/img/progress/retroceso.png" },
-  "significant_deterioration": { label: "Atzerakada nabarmena helburuen aldera", image: "assets/img/progress/retroceso_significativo.png" },
+  "significant_progress": { label: "Aurrerapen nabarmena", image: "assets/img/progress/alcanzado.png" },
+  "moderate_progress": { label: "Neurrizko aurrerapena", image: "assets/img/progress/en_progreso.png" },
+  "no_progress": { label: "Geldialdia", image: "assets/img/progress/sin_progreso.png" },
+  "moderate_deterioration": { label: "Neurrizko atzerakada", image: "assets/img/progress/retroceso.png" },
+  "significant_deterioration": { label: "Atzerakada nabarmena", image: "assets/img/progress/retroceso_significativo.png" },
   "not_available": { label: "Ez ebaluagarria", image: "assets/img/progress/no_evaluable.png" },
   "alcanzado": { label: "Aurrerapen nabarmena helburuen aldera", image: "assets/img/progress/alcanzado.png" },
   "progreso": { label: "Aurrerapen moderatua helburuen aldera", image: "assets/img/progress/en_progreso.png" },
@@ -515,7 +516,7 @@ var OBJETIVO_CFG = {
   baseurl:       "/site",
   lbl_no_eval:   "Ez ebaluagarria",
   lbl_goal:      "Helburua",
-  lbl_view_goal: "Helburua ikusi"
+  lbl_view_goal: "status.view_goal"
 };
 
 /* Datos de indicadores por objetivo (site.data.csv.progreso, sin overall) */
@@ -598,12 +599,17 @@ var MET_SCORES_BY_GOAL = {
 
 
 <div class="reporting-status-description">
-  <p>2030 Agendako adierazleen eta xedeen aurrerapena modu jarraian ebaluatzen da eta jarraipen horren emaitza une oro ikus daiteke 17 Helburuetako bakoitzari dagokion orrian. 
-Atal honetan, ebaluazio jarrai horren emaitzak laburbilduz,  Euskal Autonomia Erkidegoan Garapen Jasangarrirako Helburuak lortzeko egindako aurrerapena deskribatzen da.
-Helburuen aurrerapena atalak Garapen Jasangarrirako 17 helburuetako bakoitza zein aurrerapen mailatan dagoen aurkezten du, eta helburu bakoitzaren irudian klik eginda, helburuko xede eta adierazleen aurrerapen datuak ikus daitezke.
-Xedeen aurrerapena atalak 2030 Agendako 169 xedeen artean aurrerapen egoera desberdinetan dauden xedeen kopuruak azaltzen ditu eta helburukako datuak ikus daitezke   xehetasunetara jota.
-Adierazleen aurrerapena atalak 2030 Agendan barneratutako adierazle guztien artean aurrerapen egoera desberdinetan dauden adierazleen kopuruak eskaintzen ditu eta helburukako datuak ikus daitezke xehetasunetara jota.
-Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/metodologia/">Garapen Jasangarrirako Helburuen aurrerapenaren neurketa</a>.</p>
+  <p>2030 Agendako adierazleen eta xedeen aurrerapena modu jarraian ebaluatzen da eta jarraipen horren emaitza une oro ikus daiteke 17 Helburuetako bakoitzari dagokion orrian.</p>
+
+<p>Atal honetan, ebaluazio jarrai horren emaitzak laburbilduz,  Euskal Autonomia Erkidegoan Garapen Jasangarrirako Helburuak lortzeko egindako aurrerapena deskribatzen da.</p>
+
+<p>“Helburuen aurrerapena” atalak Garapen Jasangarrirako 17 helburuetako bakoitza zein aurrerapen mailatan dagoen aurkezten du, eta helburu bakoitzaren irudian klik eginda, helburuko xede eta adierazleen aurrerapen datuak ikus daitezke.</p>
+
+<p>“Xedeen aurrerapena” atalak 2030 Agendako 169 xedeen artean aurrerapen egoera desberdinetan dauden xedeen kopuruak azaltzen ditu eta helburukako datuak ikus daitezke   xehetasunetara jota.</p>
+
+<p>“Adierazleen aurrerapena” atalak 2030 Agendan barneratutako adierazle guztien artean aurrerapen egoera desberdinetan dauden adierazleen kopuruak eskaintzen ditu eta helburukako datuak ikus daitezke xehetasunetara jota.</p>
+
+<p>Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/metodologia/">Garapen Jasangarrirako Helburuen aurrerapenaren neurketa</a>.</p>
 
   <div class="progreso-action-icons progreso-action-icons-mobile">
     <a href="https://eustat-des.github.io/data/progreso.csv"
@@ -633,6 +639,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
 
 
   <!-- Barra panorÃ¡mica: 17 objetivos situados segÃºn su puntuaciÃ³n -->
+  <h2 class="om-overview-title">status.goals_report</h2>
   <div class="om-overview-section">
     <div class="om-overview-track om-overview-track--icons"
          id="om-overview-track" aria-hidden="true">
@@ -680,7 +687,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
           <div class="om-panel-section-body" id="om-metas-body"></div>
         </div>
         <div class="om-panel-section-compact">
-          <span class="om-section-label">Adierazleak</span>
+          <span class="om-section-label">Adierazle</span>
           <div class="om-panel-section-body" id="om-indicadores-body"></div>
         </div>
       </div>
@@ -691,7 +698,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
   <section class="om-informe-section">
     
     
-    <h2>Jomugen jarraipen txostena <span class="total-inline"><span>169</span></span></h2>
+    <h2>status.targets_report <span class="total-inline"><span>169</span></span></h2>
     <div class="goal goal-overall">
       <div class="frame goal-tiles">
         <img src="/site/assets/img/SDG Wheel_Transparent-01.png"
@@ -824,7 +831,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
       <br style="clear:both;">
     </div>
     <details class="om-goals-detail">
-      <summary>Helburuen araberako xehetasuna</summary>
+      <summary>status.detail_by_goal</summary>
       
       
       <div class="goal reporting-status-item">
@@ -1452,7 +1459,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
   <section class="om-informe-section">
     
     
-    <h2>Adierazleen jarraipen txostena <span class="total-inline"><span>261</span></span></h2>
+    <h2>status.indicators_report <span class="total-inline"><span>261</span></span></h2>
     <div class="goal goal-overall">
       <div class="frame goal-tiles">
         <img src="/site/assets/img/SDG Wheel_Transparent-01.png"
@@ -1585,7 +1592,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
       <br style="clear:both;">
     </div>
     <details class="om-goals-detail">
-      <summary>Helburuen araberako xehetasuna</summary>
+      <summary>status.detail_by_goal</summary>
       
       
       <div class="goal reporting-status-item">
@@ -2320,7 +2327,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
 
   /* â”€â”€ staggerIcons â”€â”€ */
   function staggerIcons(track) {
-    var ICON = 60, GAP = 10;
+    var ICON = 72, GAP = 10;
     var barH = track.offsetHeight || 60;
     var MID  = barH / 2;
     var w    = track.offsetWidth  || 800;
@@ -2434,7 +2441,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
     var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
     if (ico) {
       if (on && !ico.classList.contains('om-icon--active')) {
-        ico.style.width = '65px'; ico.style.height = '65px'; ico.style.zIndex = '4';
+        ico.style.width = '78px'; ico.style.height = '78px'; ico.style.zIndex = '4';
       } else if (!ico.classList.contains('om-icon--active')) {
         ico.style.width = ''; ico.style.height = ''; ico.style.zIndex = '';
       }
@@ -2475,7 +2482,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
     var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
     if (ico) {
       ico.classList.add('om-icon--active');
-      ico.style.width = '70px'; ico.style.height = '70px'; ico.style.zIndex = '6';
+      ico.style.width = '82px'; ico.style.height = '82px'; ico.style.zIndex = '6';
       if (parseFloat(ico.style.top || '0') < 0) {
         ico.style.top = (parseFloat(ico.style.top) - 10) + 'px';
       }
@@ -2505,7 +2512,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
     /* Secciones Metas / Indicadores */
     var metaBody = document.getElementById('om-metas-body');
     var indBody  = document.getElementById('om-indicadores-body');
-    if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], "jomuga");
+    if (metaBody) metaBody.innerHTML = buildGoalStats(metData[g], "xedeak");
     if (indBody)  indBody.innerHTML  = buildGoalStats(indData[g], "adierazle");
     /* Inicializar tooltips de las barras del panel (generadas dinámicamente) */
     [metaBody, indBody].forEach(function(b) {
@@ -2721,7 +2728,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20261110124902'></script>
+<script src='/site/assets/js/sdg.js?v=20261111112617'></script>
 
 
 <script>
@@ -2741,7 +2748,7 @@ Aurrerapena ebaluatzeko prozedurari buruz gehiago jakiteko, ikus <a href="/site/
 
     
     
-    <script src="/site/assets/js/custom.js?v=20261110124902"></script><script>
+    <script src="/site/assets/js/custom.js?v=20261111112617"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
