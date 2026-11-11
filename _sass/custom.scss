@@ -1649,6 +1649,16 @@ div.goal-target {
       width: 120px !important;
       height: 120px !important;
     }
+    // El theme fija .frame a 115px y .details a calc(100% - 125px), medidas
+    // pensadas para un icono de ~100px. Como aquí el icono es 120px + 24px de
+    // margen, hay que ensanchar el hueco del frame (144px) y recortar .details
+    // en la misma proporción; si no, .details no cabe y cae debajo del icono.
+    .goal-overall .frame.goal-tiles {
+      width: 144px;
+    }
+    .goal-overall > .details {
+      width: calc(100% - 150px);
+    }
   }
 
   // Badge inline junto al h2 del informe
