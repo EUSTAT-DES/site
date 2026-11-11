@@ -73,7 +73,7 @@
             {% assign meta = row.meta | replace: '-', '.' | sdg_lookup %}
             <li>
               <span class="indicator-number">{{ meta.number }}</span>
-              {{ meta.name }}
+              <a href="{{ goal_details.url }}#{{ meta.number }}">{{ meta.name }}</a>
             </li>
           {% endfor %}
         </ul>

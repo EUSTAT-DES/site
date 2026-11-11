@@ -1717,3 +1717,9 @@ div.goal-target {
     .om-icon--active { outline-color: #fff; }
   }
 }
+
+// Al saltar a una meta por ancla (#1.5), dejar hueco para el sticky de
+// navegación de ODS (.ods-navigation-wrapper) y que la fila no quede tapada.
+.goal-target {
+  scroll-margin-top: 100px;
+}
