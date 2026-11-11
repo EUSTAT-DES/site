@@ -1742,12 +1742,18 @@ div.goal-target {
   margin-left: 37px;
 }
 
-// A 577px hacia abajo: la lista de categorías pasa debajo del círculo
-// (ancho completo) en lugar de intentar caber a su derecha.
-@media only screen and (max-width: 577px) {
-  .layout-progrestatus-objetivos .om-informe-section .goal-overall > .details {
+// A 576px hacia abajo: .details pierde el ancho fijo y el float para ocupar
+// todo el ancho y saltar de línea (la lista de categorías cae debajo del
+// círculo). Mismo scope (los tres layouts) que la regla de arriba, para
+// ganar sobre el calc(100% - 170px).
+@media only screen and (max-width: 576px) {
+  .layout-progrestatus #main-content .details,
+  .layout-progrestatus-metas #main-content .details,
+  .layout-progrestatus-objetivos #main-content .details {
     width: 100%;
+    min-width: 0;
     float: none;
+    margin-left: 10px;
   }
   .layout-progrestatus-objetivos .om-informe-section .goal-overall .frame.goal-tiles {
     float: none;
