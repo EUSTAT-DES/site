@@ -4289,10 +4289,14 @@ div.goal-target {
   margin-bottom: 20px;
   margin-left: 37px; }
 
-@media only screen and (max-width: 577px) {
-  .layout-progrestatus-objetivos .om-informe-section .goal-overall > .details {
+@media only screen and (max-width: 576px) {
+  .layout-progrestatus #main-content .details, .layout-progrestatus-metas #main-content .details, .layout-progrestatus-objetivos #main-content .details,
+  .layout-progrestatus-metas #main-content .details,
+  .layout-progrestatus-objetivos #main-content .details {
     width: 100%;
-    float: none; }
+    min-width: 0;
+    float: none;
+    margin-left: 10px; }
 
   .layout-progrestatus-objetivos .om-informe-section .goal-overall .frame.goal-tiles {
     float: none;
