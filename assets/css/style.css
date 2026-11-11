@@ -4222,6 +4222,8 @@ div.goal-target {
     display: flex;
     align-items: center;
     gap: 10px; }
+  .layout-progrestatus-objetivos .om-informe-section .goal-overall .frame.goal-tiles {
+    margin-left: 24px; }
   .layout-progrestatus-objetivos .om-informe-section .goal-overall .frame.goal-tiles img {
     width: 120px !important;
     height: 120px !important; }
