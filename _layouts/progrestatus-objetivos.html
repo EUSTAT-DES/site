@@ -22,11 +22,13 @@ var OBJETIVO_SCORES = {
 {% endif %}{% endfor %}};
 
 /* Tipos de estado (site.progress_status.status_types + | t)
-   label: se prefiere la variante "_sin_target" (texto corto, igual que las
-   etiquetas de las zonas de color de la barra superior); si no existe
-   traducción, se usa el label por defecto del status_type. */
+   label: variante "_sin_target" (texto corto, igual que las etiquetas de las
+   zonas de color de la barra superior); se usa en la pastilla de estado del panel.
+   label_mixto: variante "_mixto" (texto largo); se usa en el tooltip de las
+   barras, igual que en los informes de metas/indicadores de abajo.
+   Si no hay traducción, cae al label por defecto del status_type. */
 var STATUS_TYPES = {
-{% for st in site.progress_status.status_types %}{% assign _st_key = 'status.' | append: st.value | append: '_sin_target' %}{% assign _st_label = _st_key | t %}{% if _st_label == _st_key %}{% assign _st_label = st.label | t %}{% endif %}  "{{ st.value }}": { label: {{ _st_label | jsonify }}, image: "{{ st.image }}" }{% unless forloop.last %},{% endunless %}
+{% for st in site.progress_status.status_types %}{% assign _st_key = 'status.' | append: st.value | append: '_sin_target' %}{% assign _st_label = _st_key | t %}{% if _st_label == _st_key %}{% assign _st_label = st.label | t %}{% endif %}{% assign _st_key_m = 'status.' | append: st.value | append: '_mixto' %}{% assign _st_label_m = _st_key_m | t %}{% if _st_label_m == _st_key_m %}{% assign _st_label_m = st.label | t %}{% endif %}  "{{ st.value }}": { label: {{ _st_label | jsonify }}, label_mixto: {{ _st_label_m | jsonify }}, image: "{{ st.image }}" }{% unless forloop.last %},{% endunless %}
 {% endfor %}};
 
 /* URLs de los 17 objetivos (con prefijo de idioma) */
@@ -440,7 +442,8 @@ var MET_SCORES_BY_GOAL = {
       var d = byStatus[status];
       if (d && d.count > 0) {
         var slug = status.replace(/_/g, '-');
-        var lbl  = (types[status] && types[status].label) || status;
+        // Tooltip: texto largo (_mixto), el mismo que las barras de los informes.
+        var lbl  = (types[status] && (types[status].label_mixto || types[status].label)) || status;
         var pct  = d.percentage.toFixed(2);
         bar += '<span class="' + slug + '" style="width:' + pct + '%"'
              + ' title="' + lbl + ': ' + pct + '%">'
