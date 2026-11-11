@@ -1639,23 +1639,16 @@ div.goal-target {
     // encuadrado a la misma posición horizontal: el icono del panel de
     // objetivo arranca a 24px del borde (padding del recuadro), así que
     // desplazamos el círculo 24px para que quede alineado con él.
+    // Círculo encuadrado con el icono del recuadro: margen a ambos lados
+    // para separarlo de la lista de categorías que fluye a su derecha.
     .goal-overall .frame.goal-tiles {
-      margin-left: 24px;
+      margin-left: 27px;
+      margin-right: 23px;
     }
     // !important para ganar a las reglas #main-content .frame img de otros layouts.
     .goal-overall .frame.goal-tiles img {
       width: 120px !important;
       height: 120px !important;
-    }
-    // El theme fija .frame a 115px y .details a calc(100% - 125px), medidas
-    // pensadas para un icono de ~100px. Como aquí el icono es 120px + 24px de
-    // margen, hay que ensanchar el hueco del frame (144px) y recortar .details
-    // en la misma proporción; si no, .details no cabe y cae debajo del icono.
-    .goal-overall .frame.goal-tiles {
-      width: 144px;
-    }
-    .goal-overall > .details {
-      width: calc(100% - 150px);
     }
   }
 
@@ -1730,4 +1723,35 @@ div.goal-target {
 // navegación de ODS (.ods-navigation-wrapper) y que la fila no quede tapada.
 .goal-target {
   scroll-margin-top: 100px;
+}
+
+// ── Informe de metas/indicadores: hueco del círculo ampliado ──
+// El theme fija .details a calc(100% - 125px), pensado para un icono de ~100px.
+// Como aquí el icono es 120px + márgenes, ampliamos el hueco reservado a 170px
+// para que la lista de categorías no caiga debajo del círculo.
+.layout-progrestatus #main-content .details,
+.layout-progrestatus-metas #main-content .details,
+.layout-progrestatus-objetivos #main-content .details {
+  width: calc(100% - 170px);
+  float: left;
+}
+.layout-progrestatus #main-content .reporting-status-item,
+.layout-progrestatus-metas #main-content .reporting-status-item,
+.layout-progrestatus-objetivos #main-content .reporting-status-item {
+  margin-bottom: 20px;
+  margin-left: 37px;
+}
+
+// A 577px hacia abajo: la lista de categorías pasa debajo del círculo
+// (ancho completo) en lugar de intentar caber a su derecha.
+@media only screen and (max-width: 577px) {
+  .layout-progrestatus-objetivos .om-informe-section .goal-overall > .details {
+    width: 100%;
+    float: none;
+  }
+  .layout-progrestatus-objetivos .om-informe-section .goal-overall .frame.goal-tiles {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
