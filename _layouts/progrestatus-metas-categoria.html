@@ -70,13 +70,11 @@
         <!-- Lista de metas -->
         <ul class="categoria-indicator-list">
           {% for row in goal_metas %}
-            {% assign _t_meta_key = row.meta | append: '-title' %}
-            {% assign _t_meta_name = _t_meta_key | t %}
+            {% assign _meta_id = row.meta | replace: '-', '.' %}
+            {% assign meta = _meta_id | sdg_lookup %}
             <li>
-              <span class="indicator-number">{{ row.meta }}</span>
-              {% if _t_meta_name != _t_meta_key %}
-                {{ _t_meta_name }}
-              {% endif %}
+              <span class="indicator-number">{{ meta.number }}</span>
+              {{ meta.name }}
             </li>
           {% endfor %}
         </ul>

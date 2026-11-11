@@ -1534,12 +1534,11 @@ div.goal-target {
       border-radius: 4px;
       border: 1px solid $horizontalRule-color;
       flex-shrink: 0;
-      // Ancho fijo con contenido alineado a la derecha: así la barra
-      // siempre arranca en la misma posición, aunque el número tenga
-      // distinto número de dígitos (p. ej. 8 metas vs. 18 indicadores).
+      // Ancho fijo para que la barra siempre arranque en la misma posición,
+      // aunque el número tenga distinto número de dígitos (8 metas vs. 18 indicadores).
       box-sizing: border-box;
-      min-width: 3.2rem;
-      text-align: right;
+      min-width: 2rem;
+      text-align: center;
     }
 
     .goal-stats {
