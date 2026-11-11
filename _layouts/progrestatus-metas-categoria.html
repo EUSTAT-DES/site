@@ -23,7 +23,7 @@
   <!-- Cabecera: volver al informe de metas -->
   <nav aria-label="{{ page.t.general.back }}" style="margin-bottom: 20px;">
     {% if page.language == 'es' %}{% assign _lang_prefix = '/es/' %}{% assign _back_label = 'Informe de metas' %}
-    {% elsif page.language == 'en' %}{% assign _lang_prefix = '/en/' %}{% assign _back_label = 'Meta reporting status' %}
+    {% elsif page.language == 'en' %}{% assign _lang_prefix = '/en/' %}{% assign _back_label = 'Targets reporting status' %}
     {% else %}{% assign _lang_prefix = '/' %}{% assign _back_label = 'Jomugen jarraipen txostena' %}{% endif %}
     <a href="{{ site.baseurl }}{{ _lang_prefix }}meta-jarraipen-txostena/" class="back-link">
       &#8592; {{ _back_label }}
@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  <!-- Orden de goals desde progreso_metas.csv -->
+  <!-- Orden de goals: sacado de progreso_metas.csv que ya viene ordenado numéricamente por el build -->
   {% assign progreso_data = site.data.csv.progreso_metas %}
   {% assign goals_ordered = progreso_data | where_exp: "item", "item.goal != 'overall'" | map: "goal" | uniq %}
 
@@ -70,8 +70,7 @@
         <!-- Lista de metas -->
         <ul class="categoria-indicator-list">
           {% for row in goal_metas %}
-            {% assign _meta_id = row.meta | replace: '-', '.' %}
-            {% assign meta = _meta_id | sdg_lookup %}
+            {% assign meta = row.meta | replace: '-', '.' | sdg_lookup %}
             <li>
               <span class="indicator-number">{{ meta.number }}</span>
               {{ meta.name }}

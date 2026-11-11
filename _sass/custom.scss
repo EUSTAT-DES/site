@@ -1637,8 +1637,13 @@ div.goal-target {
     }
 
     // Círculo de colores (rueda ODS) de la cabecera "overall":
-    // mismo tamaño que el icono del objetivo del recuadro (120px),
-    // para mantener la estética coherente con la sección de objetivos.
+    // mismo tamaño que el icono del objetivo del recuadro (120px) y
+    // encuadrado a la misma posición horizontal: el icono del panel de
+    // objetivo arranca a 24px del borde (padding del recuadro), así que
+    // desplazamos el círculo 24px para que quede alineado con él.
+    .goal-overall .frame.goal-tiles {
+      margin-left: 24px;
+    }
     // !important para ganar a las reglas #main-content .frame img de otros layouts.
     .goal-overall .frame.goal-tiles img {
       width: 120px !important;
