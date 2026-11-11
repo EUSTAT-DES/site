@@ -20,13 +20,13 @@
 
 <div id="main-content" class="container layout-progrestatus-categoria" role="main">
 
-  <!-- Cabecera: volver al informe de metas -->
+  <!-- Cabecera: volver al informe principal (objetivos) -->
   <nav aria-label="{{ page.t.general.back }}" style="margin-bottom: 20px;">
-    {% if page.language == 'es' %}{% assign _lang_prefix = '/es/' %}{% assign _back_label = 'Informe de metas' %}
-    {% elsif page.language == 'en' %}{% assign _lang_prefix = '/en/' %}{% assign _back_label = 'Targets reporting status' %}
-    {% else %}{% assign _lang_prefix = '/' %}{% assign _back_label = 'Jomugen jarraipen txostena' %}{% endif %}
-    <a href="{{ site.baseurl }}{{ _lang_prefix }}meta-jarraipen-txostena/" class="back-link">
-      &#8592; {{ _back_label }}
+    {% if page.language == 'es' %}{% assign _lang_prefix = '/es/' %}
+    {% elsif page.language == 'en' %}{% assign _lang_prefix = '/en/' %}
+    {% else %}{% assign _lang_prefix = '/' %}{% endif %}
+    <a href="{{ site.baseurl }}{{ _lang_prefix }}helburu-jarraipen-txostena/" class="back-link">
+      &#8592; {{ page.t.status.reporting_status }}
     </a>
   </nav>
 
