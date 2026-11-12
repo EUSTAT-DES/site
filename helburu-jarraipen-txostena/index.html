@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261111161105">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20261112075400">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -2327,9 +2327,13 @@ var MET_SCORES_BY_GOAL = {
       });
   }
 
+  /* Tamaño base del icono de la barra: 70px en móvil, 90px en escritorio.
+     El apilamiento (staggerIcons) y los estados hover/activo derivan de aquí. */
+  function iconSize() { return window.innerWidth <= 576 ? 70 : 90; }
+
   /* â”€â”€ staggerIcons â”€â”€ */
   function staggerIcons(track) {
-    var ICON = 72, GAP = 10;
+    var ICON = iconSize(), GAP = 10;
     var barH = track.offsetHeight || 60;
     var MID  = barH / 2;
     var w    = track.offsetWidth  || 800;
@@ -2444,7 +2448,8 @@ var MET_SCORES_BY_GOAL = {
     var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
     if (ico) {
       if (on && !ico.classList.contains('om-icon--active')) {
-        ico.style.width = '78px'; ico.style.height = '78px'; ico.style.zIndex = '4';
+        var hs = (iconSize() + 6) + 'px';
+        ico.style.width = hs; ico.style.height = hs; ico.style.zIndex = '4';
       } else if (!ico.classList.contains('om-icon--active')) {
         ico.style.width = ''; ico.style.height = ''; ico.style.zIndex = '';
       }
@@ -2485,7 +2490,8 @@ var MET_SCORES_BY_GOAL = {
     var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
     if (ico) {
       ico.classList.add('om-icon--active');
-      ico.style.width = '82px'; ico.style.height = '82px'; ico.style.zIndex = '6';
+      var as = (iconSize() + 10) + 'px';
+      ico.style.width = as; ico.style.height = as; ico.style.zIndex = '6';
       if (parseFloat(ico.style.top || '0') < 0) {
         ico.style.top = (parseFloat(ico.style.top) - 10) + 'px';
       }
@@ -2732,7 +2738,7 @@ var MET_SCORES_BY_GOAL = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Bilatu';</script>
 
-<script src='/site/assets/js/sdg.js?v=20261111161105'></script>
+<script src='/site/assets/js/sdg.js?v=20261112075400'></script>
 
 
 <script>
@@ -2752,7 +2758,7 @@ var MET_SCORES_BY_GOAL = {
 
     
     
-    <script src="/site/assets/js/custom.js?v=20261111161105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20261112075400"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
