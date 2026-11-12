@@ -1403,12 +1403,12 @@ div.goal-target {
     box-shadow: 0 2px 8px rgba(0,0,0,.4) !important;
   }
 
-  // Círculo en la mitad de la barra (top = barH/2 - dotRadius = 30 - 4 = 26px)
+  // Círculo en la mitad de la barra (barra ahora a 70px de alto)
   .om-tick-dot {
     position: absolute;
     width: 8px;
     height: 8px;
-    top: 26px;
+    top: 28px;
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -1418,7 +1418,7 @@ div.goal-target {
   .om-tick-dot--active {
     width: 12px !important;
     height: 12px !important;
-    top: 24px !important;
+    top: 26px !important;
     z-index: 6 !important;
   }
 
