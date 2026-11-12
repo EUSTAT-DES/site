@@ -4033,7 +4033,7 @@ div.goal-target {
     position: absolute;
     width: 8px;
     height: 8px;
-    top: 26px;
+    top: 28px;
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -4042,7 +4042,7 @@ div.goal-target {
   .layout-progrestatus-objetivos .om-tick-dot--active {
     width: 12px !important;
     height: 12px !important;
-    top: 24px !important;
+    top: 26px !important;
     z-index: 6 !important; }
   .layout-progrestatus-objetivos .om-tick-icon {
     position: absolute;
