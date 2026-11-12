@@ -351,9 +351,13 @@ var MET_SCORES_BY_GOAL = {
       });
   }
 
+  /* Tamaño base del icono de la barra: 70px en móvil, 90px en escritorio.
+     El apilamiento (staggerIcons) y los estados hover/activo derivan de aquí. */
+  function iconSize() { return window.innerWidth <= 576 ? 70 : 90; }
+
   /* â”€â”€ staggerIcons â”€â”€ */
   function staggerIcons(track) {
-    var ICON = 72, GAP = 10;
+    var ICON = iconSize(), GAP = 10;
     var barH = track.offsetHeight || 60;
     var MID  = barH / 2;
     var w    = track.offsetWidth  || 800;
@@ -468,7 +472,8 @@ var MET_SCORES_BY_GOAL = {
     var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
     if (ico) {
       if (on && !ico.classList.contains('om-icon--active')) {
-        ico.style.width = '78px'; ico.style.height = '78px'; ico.style.zIndex = '4';
+        var hs = (iconSize() + 6) + 'px';
+        ico.style.width = hs; ico.style.height = hs; ico.style.zIndex = '4';
       } else if (!ico.classList.contains('om-icon--active')) {
         ico.style.width = ''; ico.style.height = ''; ico.style.zIndex = '';
       }
@@ -509,7 +514,8 @@ var MET_SCORES_BY_GOAL = {
     var ico = document.querySelector('.om-tick-icon[data-goal="' + g + '"]');
     if (ico) {
       ico.classList.add('om-icon--active');
-      ico.style.width = '82px'; ico.style.height = '82px'; ico.style.zIndex = '6';
+      var as = (iconSize() + 10) + 'px';
+      ico.style.width = as; ico.style.height = as; ico.style.zIndex = '6';
       if (parseFloat(ico.style.top || '0') < 0) {
         ico.style.top = (parseFloat(ico.style.top) - 10) + 'px';
       }

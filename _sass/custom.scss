@@ -1005,14 +1005,14 @@ ul.iconillo {
 // Detalle de indicador â€” icono de progreso a la izquierda de la descripciÃ³n
 // Columna de progreso en páginas de objetivo
 .progress-column-header {
-    text-align: center;
+    text-align: right;
     font-weight: 600;
     font-size: .85rem;
     color: #555;
     padding-bottom: 4px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 6px;
 }
 .progress-info-link {
@@ -1034,7 +1034,7 @@ ul.iconillo {
 .goal-page-target-progress,
 .goal-page-indicator-progress {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -1061,7 +1061,7 @@ ul.iconillo {
 // .goal-page-indicator-progress → indicadores (más compacto)
 .goal-page-indicator-progress {
     .progress-status-image {
-        max-width: 90px;
+        max-width: 110px;
         img { max-width: 100%; }
     }
 }
@@ -1344,7 +1344,7 @@ div.goal-target {
 
   .om-overview-track {
     position: relative;
-    height: 60px;
+    height: 70px;
     background: linear-gradient(to right,
       #db405a   0%,    #db405a  25%,
       #ff7f27  25%,    #ff7f27  47.5%,
@@ -1353,7 +1353,7 @@ div.goal-target {
       #45ba80  75%,    #45ba80  100%
     );
     box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
-    border-radius: 30px;
+    border-radius: 50px;
     border: 4px solid #ddd;
     overflow: visible;
   }
@@ -1425,8 +1425,8 @@ div.goal-target {
   // Icono de objetivo (encima/debajo de la barra)
   .om-tick-icon {
     position: absolute;
-    width: 72px;
-    height: 72px;
+    width: 90px;
+    height: 90px;
     display: block;
     cursor: pointer;
     z-index: 2;
@@ -1437,8 +1437,8 @@ div.goal-target {
     outline-offset: 1px;
     border-radius: 4px;
     z-index: 6;
-    width: 82px;
-    height: 82px;
+    width: 100px;
+    height: 100px;
   }
 
   // ── Panel del objetivo seleccionado ──────────────────────
@@ -1505,7 +1505,7 @@ div.goal-target {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 16px;  // compensa el margin-top: 10px del goal-stats que quitamos aquí
+    margin-top: 11px;  // barras un poco más arriba
   }
 
   .om-section-label {
@@ -1635,10 +1635,15 @@ div.goal-target {
     .om-tick--active       { width: 4px !important; }
     .objetivo-panel-layout { grid-template-columns: 80px 1fr; }
     .objetivo-panel-icon-wrap img { width: 80px !important; height: 80px !important; }
+    // Iconos de la barra más pequeños en móvil (el JS usa iconSize()=70 para
+    // apilar y para hover/activo; esto fija el reposo).
+    .om-tick-icon { width: 70px; height: 70px; }
   }
 
   // Secciones de informes embebidos (indicadores / metas)
   .om-informe-section {
+    margin-top: 100px;
+
     > h2 {
       margin-bottom: 24px;
       display: flex;
